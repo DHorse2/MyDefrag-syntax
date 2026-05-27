@@ -1,0 +1,64 @@
+{
+    "name": "mydc-syntax",
+    "displayName": "MyDefrag Script (.MyDc / .MyD)",
+    "description": "Syntax highlighting for MyDefrag scripting language",
+    "version": "0.1.0",
+    "publisher": "local",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "mydc",
+                "aliases": [
+                    "MyDefrag Script",
+                    "mydc"
+                ],
+                "extensions": [
+                    ".MyDc",
+                    ".MyD",
+                    ".mydc",
+                    ".myd"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mydc",
+                "scopeName": "source.mydc",
+                "path": "./mydc.tmLanguage.json"
+            }
+        ],
+        "definitionProvider": true,
+        "referencesProvider": true,
+        "documentLinkeProvider": true,
+        "commands": [
+            {
+                "command": "mydc.openPreview",
+                "title": "Open Preview"
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "command": "mydc.openPreview",
+                    "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd",
+                    "group": "navigation"
+                }
+            ],
+            "editor/title/context": [
+                {
+                    "command": "mydc.openPreview",
+                    "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "main": "./extension.js"
+}

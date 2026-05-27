@@ -1,0 +1,22 @@
+// This is a sample only. SEE UpdateLive.ps1 to make changes.
+// Enter <Ctrl>+<Shift>+P and chose Preferences: Open User Settings (JSON)
+// if you do want to manually edit them.
+{
+"editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "constant.other.macro.mydc",
+                "settings": {
+                    "foreground": "#4EC9B0"
+                }
+            },
+            {
+                "scope": "variable.other.mydc",
+                "settings": {
+                    "foreground": "#4EC9B0"
+                }
+            }            
+        ]
+    }
+    // ,
+}

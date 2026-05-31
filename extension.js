@@ -1,8 +1,8 @@
 'use strict';
-import * as path from 'path';
-import * as vscode from 'vscode';
-const vscode = require('vscode');
+const fs = require("fs");
 const path = require('path');
+const vscode = require('vscode');
+const cp = require('child_process');
 
 // Search all .MyDc / .MyD files in the workspace for a regex pattern.
 // Returns an array of vscode.Location objects.
@@ -34,8 +34,10 @@ async function searchWorkspace(pattern) {
 }
 
 function activate(context) {
+    console.log("MYDC EXTENSION ACTIVATED");
 
     const log = vscode.window.createOutputChannel('MyDefrag Preview');
+    log.show(true);
 
     // ── Go to Definition ────────────────────────────────────────────────────
     // Triggered by F12 or right-click → Go to Definition.
@@ -89,18 +91,16 @@ function activate(context) {
 
             provideDocumentLinks(document) {
                 const links = [];
+                const currentDir = path.dirname(document.uri.fsPath);
 
-                const pattern = /!include\\s+\"[^\"]*\"!/
-                // const pattern = /!include\s*"([^"]+)"!/gi;
-                // const pattern = /!include\s+"([^"]+)"!/g;
+                const pattern = /!include\s+"([^"]+)"!/g;
                 const text = document.getText();
                 let match;
-
-                const currentDir = path.dirname(document.uri.fsPath);
+                let linkSet = false;
 
                 while ((match = pattern.exec(text)) !== null) {
                     const includePath = match[1];
-
+                    // console.log("MATCH:", match[1]);
                     const quoteStart = match.index + match[0].indexOf('"') + 1;
                     const start = document.positionAt(quoteStart);
                     const end = document.positionAt(quoteStart + includePath.length);
@@ -110,13 +110,202 @@ function activate(context) {
                     const normalised = includePath.replace(/\\/g, path.sep);
 
                     // resolve relative OR absolute
-                    const absolutePath = path.isAbsolute(normalised)
-                        ? normalised
-                        : path.join(currentDir, normalised);
+                    const absolutePath = path.resolve(currentDir, includePath);
+                    // const absolutePath = path.isAbsolute(normalised)
+                    //     ? normalised
+                    //     : path.join(currentDir, normalised);
 
                     const targetUri = vscode.Uri.file(absolutePath);
-
+                    console.log("MATCH:", "index: ", match.index, "range: ", range, match[0], match[1], match);
                     links.push(new vscode.DocumentLink(range, targetUri));
+                    linkSet = true;
+                }
+                console.log('Number of include links: ', links.length)
+
+                const lineRe = /file:\/\/\/([^:\s]+):(\d+):(\d+)/g;
+                for (let i = 0; i < document.lineCount; i++) {
+                    const line = document.lineAt(i);
+                    let match;
+                    lineRe.lastIndex = 0;
+                    while ((match = lineRe.exec(line.text)) !== null) {
+                        const fullMatch = match[0];
+                        const filePath = match[1];
+                        const lineNo = parseInt(match[2]) - 1; // 0-based
+                        const colNo = parseInt(match[3]) - 1; // 0-based
+
+                        const start = new vscode.Position(i, match.index);
+                        const end = new vscode.Position(i, match.index + fullMatch.length);
+                        const range = new vscode.Range(start, end);
+
+                        // vscode.Uri.file() handles the path correctly on Windows
+                        const target = vscode.Uri.parse(
+                            `command:mdm.openFileAtPosition?${encodeURIComponent(
+                                JSON.stringify({ path: filePath, line: lineNo, col: colNo })
+                            )}`
+                        );
+
+                        const isDuplicate = links.some(link =>
+                            link.range.start.line === i &&
+                            link.range.start.character === start &&
+                            link.range.end.character === end
+                        );
+                        if (!isDuplicate) { links.push(new vscode.DocumentLink(range, target)); }
+                    }
+                }
+
+                const execPattern = /\s*"([^"]*\.(?:bat|My\w+|cmd|exe|com)[^"]*)"\s*/gi;
+                while ((match = execPattern.exec(text)) !== null) {
+                    const filePath = match[1];
+                    const quoteStart = text.indexOf('"', match.index) + 1; // skip past opening quote
+                    const start = document.positionAt(quoteStart);
+                    const end = document.positionAt(quoteStart + filePath.length);
+                    const range = new vscode.Range(start, end);
+                    const absolutePath = path.resolve(currentDir, filePath);
+                    links.push(new vscode.DocumentLink(range, vscode.Uri.file(absolutePath)));
+                }
+
+                console.log('Number of links: ', links.length)
+                return links;
+            }
+        }
+    );
+
+    // ─────────────────────────────────────────────────────────────────────────────────
+    // ── Open Preview Provider  ───────────────────────────────────────────────────────
+    function generatePreview(sourcePath) {
+        const preprocessScript = path.join(
+            __dirname,
+            'mydefrag-preprocess.js'
+        );
+
+        try {
+            const result = cp.spawnSync(
+                process.execPath,
+                [preprocessScript, sourcePath],
+                {
+                    cwd: path.dirname(sourcePath),
+                    encoding: 'utf8',
+                    maxBuffer: 1024 * 1024 * 50
+                }
+            );
+            // result.stdout
+            // result.stderr
+            // result.error
+            // result.status
+
+            // Send stderr to OUTPUT window
+            if (result.stderr.length) {
+                log?.append(result.stderr);
+            } else {
+                log?.append(`Error, did not recieve preview summary!`)
+            }
+            if (result.error) { return `ERROR: Preview generation failed:\n\n${result.error.message}`; }
+            return result.stdout.toString();
+        } catch (err) {
+            return `Preview generation failed:\n\n${err.message}`;
+        }
+    }
+    class MyPreviewProvider {
+        provideTextDocumentContent(uri) {
+            const mergedPath = uri.fsPath;
+            const sourcePath = mergedPath.replace(/\.merged(\.\w+)$/, '$1');
+            log?.append(`Preview source: ${sourcePath}\n`);
+            return generatePreview(sourcePath);
+            // return generatePreview(uri.fsPath);
+        }
+    }
+
+    const previewProvider = new MyPreviewProvider(log);
+    const providerRegistration =
+        vscode.workspace.registerTextDocumentContentProvider(
+            'mydc-preview',
+            previewProvider
+        );
+    context.subscriptions.push(providerRegistration);
+
+    // ── Open Preview Function ───────────────────────────────────────────────────────
+    const openPreviewCommand = vscode.commands.registerCommand(
+        'mydc.openPreview',
+        async (uri) => {
+            const editor = vscode.window.activeTextEditor;
+            const sourceUri = uri || (editor && editor.document.uri);
+            if (!sourceUri) {
+                vscode.window.showWarningMessage('No MyDefrag document is active.');
+                return;
+            }
+            const mergedPath = sourceUri.fsPath.replace(/(\.\w+)$/, '.merged$1');
+            const previewUri = vscode.Uri.parse(`mydc-preview:${mergedPath}`);
+            const doc = await vscode.workspace.openTextDocument(previewUri);
+            await vscode.window.showTextDocument(
+                doc,
+                vscode.ViewColumn.Active
+            );
+        }
+    );
+
+    // Command that actually opens the file at line/col
+    const openCmd = vscode.commands.registerCommand(
+        "mdm.openFileAtPosition",
+        async ({ path: filePath, line, col }) => {
+            const uri = vscode.Uri.file(filePath);
+            const doc = await vscode.workspace.openTextDocument(uri);
+            const editor = await vscode.window.showTextDocument(doc);
+            const pos = new vscode.Position(line, col);
+            editor.selection = new vscode.Selection(pos, pos);
+            editor.revealRange(new vscode.Range(pos, pos));
+        }
+    );
+
+    // ─────────────────────────────────────────────────────────────────────────────────
+    // ── BAT Link Provider ───────────────────────────────────────────────────────
+    const batLinkProvider = vscode.languages.registerDocumentLinkProvider(
+        { language: 'bat' },
+        {
+            provideDocumentLinks(document) {
+                const links = [];
+                const text = document.getText();
+                const currentDir = path.dirname(document.uri.fsPath);
+
+                // const execPattern = /\s*"([^"]*\.(?:bat|My\w+|cmd|exe|com)[^"]*)"\s*/gi;
+                // const execPattern = /\s*"([^"]*\.(?:bat|My\w+|cmd|exe|com))([^"]*)"\s*/gi;
+                const execPattern = /\s*"([^"\s]*\.(?:bat|My\w+|cmd|exe|com))([^"]*)"\s*/gi;
+                let match;
+
+                while ((match = execPattern.exec(text)) !== null) {
+                    const filePath = match[1];
+                    const quoteStart = text.indexOf('"', match.index) + 1;
+                    const start = document.positionAt(quoteStart);
+                    const end = document.positionAt(quoteStart + filePath.length);
+                    const range = new vscode.Range(start, end);
+                    // const absolutePath = path.resolve(currentDir, filePath).replace(/\\/g, '/');
+                    const absolutePath = path.resolve(currentDir, filePath).replace(/\//g, '\\');
+                    const absoluteUri = vscode.Uri.file(absolutePath);
+                    // const absolutePath = path.resolve(currentDir, filePath);
+                    // const absoluteUri = vscode.Uri.file(absolutePath);
+                    const dir = path.dirname(absolutePath);
+                    const base = path.basename(absolutePath);
+                    const actual = fs.readdirSync(dir).find(f => f.toLowerCase() === base.toLowerCase());
+                    console.log(`File name is: (`, filePath, ')')
+                    if (fs.existsSync(absolutePath)) {
+                        console.log('  Link target exists:', absolutePath);
+                    } else {
+                        console.log('  Link target not found:', absolutePath);
+                    }
+                    console.log('  dir:', dir)
+                    console.log('  base:', base)
+                    console.log('  actual:', actual);
+                    console.log('  our filename:', base);
+                    console.log('  currentDir:', currentDir);
+                    console.log('  absolutePath: (', absolutePath, ')')
+                    console.log('  absoluteUri:', absoluteUri);
+                    console.log('      match.index:', match.index);
+                    console.log('      filePath:', filePath);
+                    console.log('      quoteStart:', quoteStart);
+                    console.log('      start:', start);
+                    console.log('      end:', end);
+                    console.log('      absolutePath:', absolutePath);
+                    console.log('      range:', range);
+                    links.push(new vscode.DocumentLink(range, vscode.Uri.file(absolutePath)));
                 }
 
                 return links;
@@ -124,83 +313,13 @@ function activate(context) {
         }
     );
 
-    // ── Open Preview ───────────────────────────────────────────────────────
-    const openPreviewCommand = vscode.commands.registerCommand(
-        'mydc.openPreview',
-        async (uri) => {
-            log.show(true); // true = don't steal focus
-            log.appendLine('--- openPreview triggered ---');
 
-            const editor = vscode.window.activeTextEditor;
-            const sourceUri = uri || (editor && editor.document.uri);
-            log.appendLine(`sourceUri: ${sourceUri}`);
 
-            if (!sourceUri) {
-                log.appendLine('ERROR: no active document');
-                vscode.window.showWarningMessage('No MyDefrag document is active.');
-                return;
-            }
-
-            const sourcePath = sourceUri.fsPath;
-            const ext = sourcePath.match(/\.(MyD|MyDc|myd|mydc)$/i)?.[1] ?? 'MyDc';
-            const previewPath = sourcePath.replace(/\.(MyD|MyDc|myd|mydc)$/i, `.merged.${ext}`);
-            log.appendLine(`sourcePath:  "${sourcePath}"`);
-            log.appendLine(`previewPath: "${previewPath}"`);
-
-            const preprocessScript = vscode.Uri.joinPath(
-                context.extensionUri, 'mydefrag-preprocess.js'
-            ).fsPath;
-            log.appendLine(`preprocessScript: "${preprocessScript}"`);
-
-            const result = await new Promise((resolve) => {
-                const cp = require('child_process');
-                const fs = require('fs');
-
-                cp.execFile(
-                    process.execPath,
-                    [preprocessScript, sourcePath, previewPath],
-                    { cwd: require('path').dirname(sourcePath) },
-                    (err, stdout, stderr) => {
-                        const hasOutput = fs.existsSync(previewPath);
-
-                        if (err && !hasOutput) {
-                            // Hard failure: no preview file was created
-                            log.appendLine(`PREPROCESS ERROR: ${err.message}`);
-                            log.appendLine(`stderr: ${stderr}`);
-                            vscode.window.showErrorMessage(`Preprocess failed: ${stderr || err.message}`);
-                            resolve(false);
-                            return;
-                        }
-
-                        // Soft failure: process complained, but preview file exists
-                        if (err && hasOutput) {
-                            log.appendLine(`PREPROCESS WARNING (non-fatal): ${err.message}`);
-                        }
-
-                        log.appendLine('Preprocess OK (preview file present)');
-                        log.appendLine(`stdout: ${stdout}`);
-                        if (stderr) log.appendLine(`stderr (warnings?): ${stderr}`);
-                        resolve(true);
-                    }
-                );
-            });
-
-            if (!result) return;
-            const previewUri = vscode.Uri.file(previewPath);
-            try {
-                await vscode.workspace.fs.stat(previewUri);
-                log.appendLine('Preview file exists, opening...');
-                const doc = await vscode.workspace.openTextDocument(previewUri);
-                await vscode.window.showTextDocument(doc, vscode.ViewColumn.Active);
-                log.appendLine('Done.');
-            } catch (e) {
-                log.appendLine(`ERROR stating/opening preview file: ${e.message}`);
-                vscode.window.showWarningMessage(`Preview file not found: ${previewPath}`);
-            }
-        }
-    );
-
-    context.subscriptions.push(definitionProvider, referenceProvider, linkProvider, openPreviewCommand);
+    context.subscriptions.push(definitionProvider);
+    context.subscriptions.push(referenceProvider);
+    context.subscriptions.push(openPreviewCommand);
+    context.subscriptions.push(linkProvider, openCmd);
+    context.subscriptions.push(batLinkProvider);
 }
 
 function deactivate() { }

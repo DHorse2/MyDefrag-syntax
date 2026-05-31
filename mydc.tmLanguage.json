@@ -96,18 +96,24 @@
         "comments": {
             "patterns": [
                 {
+                    "name": "comment.line.number-sign.mydc",
+                    "match": "^\\s*#.*$"
+                },
+                {
                     "name": "comment.block.mydc",
                     "begin": "/\\*",
                     "end": "\\*/"
                 },
                 {
                     "name": "comment.line.double-slash.mydc",
-                    "match": "//.*$"
+                    "begin": "//",
+                    "end": "$"
                 },
                 {
-                    "name": "comment.line.number-sign.mydc",
-                    "begin": "#",
-                    "end": "$"
+                    "name": "comment.line.number-sign.preview.mydc",
+                    "begin": "^(?:\\s*\\|\\s*\\d*\\s*)*\\s*#",
+                    "end": "$",
+                    "patterns": []
                 }
             ]
         },
@@ -118,6 +124,10 @@
                     "begin": "'",
                     "end": "'",
                     "patterns": [
+                        {
+                            "name": "meta.preprocessor.include.mydc",
+                            "match": "!include\\s+\"[^\"]*\"!"
+                        },
                         {
                             "name": "constant.other.macro.mydc",
                             "match": "!\\w+!"
@@ -130,8 +140,21 @@
                     "end": "\"",
                     "patterns": [
                         {
+                            "name": "meta.preprocessor.include.mydc",
+                            "match": "!include\\s+\"[^\"]*\"!"
+                        },
+                        {
                             "name": "constant.other.macro.mydc",
                             "match": "!\\w+!"
+                        },
+                        {
+                            "name": "entity.name.function.shell.mydc",
+                            "match": "[^\\\\/\"]+\\.(?:bat|cmd|exe|com)(?=\")",
+                            "captures": {
+                                "0": {
+                                    "name": "entity.name.function.shell.mydc"
+                                }
+                            }
                         }
                     ]
                 }
@@ -173,7 +196,7 @@
             "patterns": [
                 {
                     "name": "keyword.other.setting.mydc",
-                    "match": "\\b(Title|Description|Slowdown|MaxRunTime|ExitIfTimeout|WriteLogfile|AppendLogfile|RunScript|SetStatisticsWindowText|ExcludeVolumes|WhenFinished|SetScreenSaver|SetScreenPowerSaver|PreventScreenSaving|PreventPowerSaving|DismountVolume|PlaceNtfsSystemFiles)\\b"
+                    "match": "\\b(Title|Description|Slowdown|MaxRunTime|ExitIfTimeout|WriteLogfile|AppendLogfile|RunScript|RunProgram|SetStatisticsWindowText|ExcludeVolumes|WhenFinished|SetScreenSaver|SetScreenPowerSaver|PreventScreenSaving|PreventPowerSaving|DismountVolume|PlaceNtfsSystemFiles)\\b"
                 }
             ]
         },

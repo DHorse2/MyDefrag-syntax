@@ -14,16 +14,14 @@
 "use strict";
 const fs = require("fs");
 const path = require("path");
+const { pathToFileURL, fileURLToPath } = require("url");
 
-// ---------------------------------------------------------------------------
 // Debug logger — writes to stderr so it doesn't pollute stdout/output file
 // ---------------------------------------------------------------------------
 // const DBG = (...args) => process.stderr.write("[MyDefrag] [DBG] " + args.join(" ") + "\n");
 let DebugOn = true;
 const DBG = (...args) => {
-  if (!DebugOn) {
-    return;
-  }
+  if (!DebugOn) { return; }
   process.stderr.write(
     "[MyDefrag] [DBG] " +
     args.join(" ") +
@@ -50,9 +48,9 @@ function readIni(filePath) {
   const result = {};
   if (!fs.existsSync(filePath)) {
     DBG(`  "${filePath}" ini file not found`);
-    return result;
+    return result; // ini file not found
   }
-  DBG(`  "${filePath}" ini file exists`);
+  // DBG(`  "${filePath}" ini file exists`);
 
   const raw = fs.readFileSync(filePath, "utf8");
   const lines = raw.split(/\r?\n/);
@@ -80,10 +78,10 @@ function readIni(filePath) {
     const key = line.substring(0, eqPos).trim();
     const value = line.substring(eqPos + 1).trim();
     result[key] = value;
-    DBG(`  ini: ${key}="${value}"`);
+    LogToConsole(`  ini: ${key}="${value}"`);
   }
 
-  return result;
+  return result; // ini key value pairs
 }
 
 // ---------------------------------------------------------------------------
@@ -92,37 +90,33 @@ function readIni(filePath) {
 
 /** Matches  !include "some/path"!  */
 const INCLUDE_RE = /!include\s+"([^"]+)"!/g;
-
 // Width of each numeric column (padded). Increase if you have >9999 lines.
 const COL_W = 6;
 
 // ---------------------------------------------------------------------------
 // Formatting helpers
 // ---------------------------------------------------------------------------
-
-function col(n) {
-  return String(n).padStart(COL_W);
-}
-
-const BLANK = " ".repeat(COL_W);
-
-function contentLine(outLine, srcLine, text) {
-  return `${col(outLine)}${col(srcLine)} ${text}\n`;
-}
-
-function annotLine(indent, text) {
-  return `${BLANK}${BLANK} ${indent}${text}\n`;
-}
+// Format value in a column
+function col(n) { return ("|" + String(n).padStart(COL_W-2) + " "); } // formats string in a strand column
+// Empty column cell
+// const BLANK = " ".repeat(COL_W);
+const BLANK = col(" ");
+// Fully formatted source code line with columns. Format: 
+// TotalLines CurrentLine ..........SourceCodeText.................
+function contentLine(outLine, srcLine, text, indent = "") { return `${col(outLine)}${col(srcLine)}${indent}${text}\n`; } // formats a CODE content line
+// Annotation text without line numbers in first two columns
+// function annotLine(indent, text) { return `${BLANK}${BLANK} ${indent}${text}\n`; } // formats an ANNOTATION
+function annotLine(indent, text) { return contentLine("", ">>>", text, indent); } // formats an ANNOTATION
 
 // ---------------------------------------------------------------------------
 // Logical merged-line helpers
 // ---------------------------------------------------------------------------
-
 function ensureLineOpen(state) {
   if (!state.open) {
+    // We MUST be on the next line
     state.line++;
+    // only a real CRLF terminate a line, else it stays open.
     state.open = true;
-
     // DBG(`         ensureLineOpen() -> OPENED logical line ${state.line}`);
   } else {
     // DBG(`         ensureLineOpen() -> logical line already open (${state.line})`);
@@ -133,102 +127,71 @@ function ensureLineOpen(state) {
 // Core processor
 // ---------------------------------------------------------------------------
 
-function processFile(filePath,
-  stack,
-  visited,
-  visitedMissing,
-  depth,
-  state,
-  parentFilePath = null,
-  parentSrcLineNo = null
-) {
-
-  const absPath = path.resolve(filePath);
-  const indent = "| ".repeat(depth);
+function processFile(filePath, stack, visited, visitedMissing, depth, state, parentFilePath = null, parentSrcLineNo = 0, parentSrcColNo = 1) {
+  // const absPath = filePath;
+  const indent = " ".repeat(depth);
 
   DBG(`----`);
   DBG(`  --- processFile called: depth=${depth} state.line=${state.line} state.open=${state.open} ---`);
-  DBG(`    absPath="${absPath}"`);
+  DBG(`    filePath="${filePath}"`);
   // DBG(`    stack=[${stack.join(", ")}]`);
 
   // ── Circular include guard ────────────────────────────────────────────────
-  if (stack.includes(absPath)) {
-    const cycle = [...stack, absPath].map(p => path.basename(p)).join(" → ");
+  if (stack.includes(filePath)) {
+    const cycle = [...stack, filePath].map(p => path.basename(p)).join(" → ");
     const msg = `ERROR: Circular include: ${cycle}`;
-
-    console.error(`[MyDefrag] ${msg}`);
-
-    DBG(`  CIRCULAR INCLUDE DETECTED, returning error annotation`);
-
-    return {
-      lines: [annotLine(indent, `; *** ${msg} ***`)],
-      outStart: state.line + 1,
-      outEnd: state.line,
-      srcTotal: 0,
-      hasFinalNewline: false,
-      contributesPhysicalLine: false
-    };
+    LogToConsole(`[MyDefrag] ${msg}`);
+    DBG(`  CIRCULAR INCLUDE DETECTED!!!`);
+    return { lines: [annotLine(indent, `*** ${msg} ***`)], outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // CIRCULAR FILE REFERENCE
   }
+
+  const { pathToFileURL } = require("url");
+  const parentFile = parentFilePath ?? (stack.length > 0 ? stack[stack.length - 1] : filePath);
+  const parentUri = pathToFileURL(parentFile).href;
+  const missingUri = pathToFileURL(filePath).href;
+  const parentUriWithLine = `${parentUri}:${parentSrcLineNo}:${parentSrcColNo}`;
+  let match = ["", ""];
+  const includeDir = path.dirname(filePath);
+  const includePath = match[1]
+  const includePathResolved = path.resolve(includeDir, includePath);
+  const includePathResolvedUri = pathToFileURL(includePathResolved).href;
+
+  DBG("parentFilePath =", parentFilePath);
+  DBG("filePath =", filePath);
+  DBG("stack =", stack);
 
   // ── File existence check ──────────────────────────────────────────────────
-  // DBG(`    checking existence: "${absPath}"`);
-  if (!fs.existsSync(absPath)) {
-
-    visitedMissing.add(absPath);
-
-    // const msg = `WARNING:  Missing include: "${absPath}"`;
-    const parentFile = stack.length > 0
-      ? stack[stack.length - 1]
-      : filePath;
-
-    const parentUri = "file:///" + encodeURI(parentFilePath.replace(/\\/g, "/"));
-
-    const missingUri = "file:///" + encodeURI(absPath.replace(/\\/g, "/"));
-
-    const parentUriWithLine = `${parentUri}:${parentSrcLineNo}:1`;
-
-    const msg = `WARNING: Missing: ${missingUri}\n` +
-      `               Referenced from: ${parentUri}:${parentSrcLineNo}:1`;
-
-    console.error(`[MyDefrag] ${msg}`);
-    console.error(`[MyDefrag]                Continuing...`);
-
-    DBG(`    FILE NOT FOUND!!!, returning error annotation`);
-
-    return {
-      lines: [annotLine(indent, `; *** WARNING: Missing include ("${absPath}") ***`)],
-      outStart: state.line + 1,
-      outEnd: state.line,
-      srcTotal: 0,
-      hasFinalNewline: false,
-      contributesPhysicalLine: false
-    };
+  // DBG(`    checking existence: "${filePath}"`);
+  if (!fs.existsSync(filePath)) {
+    // const msg = `ERROR:  Missing include: "${filePath}"`;
+    visitedMissing.set(filePath, { parentFile, parentSrcLineNo, parentSrcColNo, depth, missingFile: filePath, OutputLine: state.line });
+    DBG(`ERROR!!! Missing: ${missingUri}\n`)
+    DBG(`         At: ${parentUri}:${parentSrcLineNo}:${parentSrcColNo}`);
+    DBG(`         Continuing...`);
+    DBG(`    ERROR: FILE NOT FOUND!!!, returning error annotation`);
+    return { lines: [annotLine(indent, `*** WARNING: Missing include ("${missingUri}") ***`)], filePath, outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // FILE NOT FOUND
   }
-
   DBG(`    File exists OK`);
-
-  visited.add(absPath);
+  visited.add(filePath);
 
   // ── Read and split into logical lines ────────────────────────────────────
-  DBG(`      Read and split into logical lines:`);
-  const raw = fs.readFileSync(absPath, "utf8");
-  DBG(`         raw file read: ${raw.length} bytes`);
-
-  // Detect whether file physically ends with newline
-  const hasFinalNewline = /\r?\n$/.test(raw);
-  DBG(`         hasFinalNewline=${hasFinalNewline}`);
-
+  const raw = fs.readFileSync(filePath, "utf8");
   // Split on either LF or CRLF
   const srcLines = raw.split(/\r?\n/);
-  DBG(`         split produced: ${srcLines.length} entries`);
-
-  const contributesPhysicalLine = hasFinalNewline || srcLines.length > 1;
-
   if (srcLines.length > 0) {
     DBG(`         first line preview="${srcLines[0].substring(0, 60)}"`);
     DBG(`         last line preview="${srcLines[srcLines.length - 1].substring(0, 60)}"`);
   }
 
+  // ── Line number control and CRLF detection ───────────────────────────────
+  // Detect whether file physically ends with newline
+  const hasFinalNewline = /\r?\n$/.test(raw);
+  // Should the line number be incremented because a CRLF is present or more lines follow.
+  const contributesPhysicalLine = hasFinalNewline || srcLines.length > 1;
+  DBG(`      Read and split into logical lines:`);
+  DBG(`         raw file read: ${raw.length} bytes`);
+  DBG(`         hasFinalNewline=${hasFinalNewline}`);
+  DBG(`         split produced: ${srcLines.length} entries`);
   // If the file ended with a newline, split() produces an extra empty entry.
   // Remove ONLY that synthetic entry.
   if (hasFinalNewline) {
@@ -238,64 +201,51 @@ function processFile(filePath,
     DBG(`         file does NOT end with newline; keeping final entry`);
   }
 
+  // ── Source Total Line number ─────────────────────────────────────────────
   // Source line accounting semantics:
   //   terminated lines count
   //   unterminated trailing fragments do not
-  let srcTotal =
-    (raw.length === 0)
-      ? 0
-      : srcLines.length;
-
-  // if (!hasFinalNewline && srcTotal > 0) {
-  //   srcTotal--;
-  // }
-
-  if (raw.length === 0) {
-    DBG(`         file is physically empty`);
-  }
-
+  let srcTotal = (raw.length === 0) ? 0 : srcLines.length;
+  if (raw.length === 0) { DBG(`         file is physically empty`); }
   // Determine if multiple lines allowing that
   // any last line might not end in a CRLF
-
   DBG(`         logical line count finalized, srcTotal=${srcTotal}`);
 
-  const outLines = [];
+  // ────────────────────────────────────────────────────────────────────────
+  // ── Walk source lines ─────────────────────────────────────────────────────
+  // ────────────────────────────────────────────────────────────────────────
+  let outLines = [];
   const outStart = state.line + 1;
   DBG(`         outStart=${outStart}`);
-
   let srcIdx = 0;
-
-  // ── Walk source lines ─────────────────────────────────────────────────────
+  let srcLineNo = 1
+  DBG(`         srcLines=${srcLines.length}`);
   while (srcIdx < srcLines.length) {
     const rawLine = srcLines[srcIdx];
-    const srcLineNo = srcIdx + 1;
-
+    srcLineNo = srcIdx + 1;
     // DBG(``);
     // DBG(`      processing srcLine ${srcLineNo}/${srcLines.length}`);
     // DBG(`  rawLine="${rawLine.substring(0, 80)}"`);
 
+    // ────────────────────────────────────────────────────────────────────────
+    // INCLUDE DIRECTIVE detected. Process it or issue an error.
+    // ────────────────────────────────────────────────────────────────────────
     INCLUDE_RE.lastIndex = 0;
-
     const match = INCLUDE_RE.exec(rawLine);
-
-    // ────────────────────────────────────────────────────────────────────────
-    // INCLUDE DIRECTIVE
-    // ────────────────────────────────────────────────────────────────────────
     if (match) {
-
       DBG(`  rawLine="${rawLine.substring(0, 80)}"`);
-      DBG(`         -> INCLUDE directive found: "${match[1]}"`);
-
+      const srcColNo = match.index + 1;
       // Ensure a logical merged line exists
       ensureLineOpen(state);
-
-      DBG(`         emitting INCLUDE directive on logical line ${state.line}`);
+      DBG(`         -> INCLUDE directive found "${match[1]}" on logical line ${state.line}`);
 
       // Emit directive line itself
-      outLines.push(contentLine(state.line, srcLineNo, rawLine));
+      outLines.push(contentLine(state.line, srcLineNo, rawLine, indent));
 
       // The include directive itself is a full physical line.
       // Child content therefore starts on NEXT logical merged line.
+      // However that depends on the contents of the disk file.
+      // In short, how the file ends. With a CRLF or not.
       state.open = false;
       // IMPORTANT:
       // If child lacks final newline, the logical merged line remains open.
@@ -304,36 +254,21 @@ function processFile(filePath,
       // state.open = contributesPhysicalLine;
 
       const includePath = match[1];
-      const includeDir = path.dirname(absPath);
-      const resolvedPath = path.resolve(includeDir, includePath);
+      const includePathResolved = path.resolve(includeDir, includePath);
+      const includePathResolvedUri = pathToFileURL(includePathResolved).href;
 
       DBG(`         includeDir="${includeDir}"`);
-      DBG(`         resolvedPath="${resolvedPath}"`);
-
-      // Recurse
+      DBG(`         includePathResolved="${includePathResolved}"`);
       DBG(`         recursing into child depth=${depth + 1}, hasFileNewLine=${hasFinalNewline}`);
 
-      const child = processFile(
-        resolvedPath,
-        [...stack, absPath],
-        visited,
-        visitedMissing,
-        depth + 1,
-        state,
-        absPath,
-        srcLineNo
-      );
-
-      DBG(`         child returned:`);
-      DBG(`            child.outStart=${child.outStart}`);
-      DBG(`            child.outEnd=${child.outEnd}`);
-      DBG(`            child.srcTotal=${child.srcTotal}`);
-      DBG(`            child.hasFinalNewline=${child.hasFinalNewline}`);
+      // RECURSE Process child file
+      const child = processFile(includePathResolved, [...stack, filePath], visited, visitedMissing, depth + 1, state, filePath, srcLineNo, srcColNo);
+      DBG(`         child returned: outStart=${child.outStart}, outEnd=${child.outEnd}, child.srcTotal=${child.srcTotal}, child.hasFinalNewline=${child.hasFinalNewline}`);
 
       // BEGIN annotation — inserted before child lines
       const beginAnnot = annotLine(
         indent,
-        `; >>> BEGIN [d:${depth + 1}] ${resolvedPath}` +
+        `BEGIN [depth:${depth + 1}] ${includePathResolvedUri}` +
         `  src:${child.srcTotal}` +
         `  out:${child.outStart}-${child.outEnd}`
       );
@@ -341,7 +276,7 @@ function processFile(filePath,
       // END annotation — inserted after child lines
       const endAnnot = annotLine(
         indent,
-        `; <<< END   [d:${depth + 1}] ${resolvedPath}` +
+        `END   [depth:${depth + 1}] ${includePathResolvedUri}` +
         `  src:${child.srcTotal}` +
         `  out:${child.outStart}-${child.outEnd}`
       );
@@ -361,18 +296,16 @@ function processFile(filePath,
       // NORMAL CONTENT LINE
       // ────────────────────────────────────────────────────────────────────────
     } else {
-
       // DBG(`         -> normal content line`);
-
       // Ensure logical merged line exists
       ensureLineOpen(state);
-
       // DBG(`         emitting normal line on logical line ${state.line}`);
-      outLines.push(contentLine(state.line, srcLineNo, rawLine));
-
+      outLines.push(contentLine(state.line, srcLineNo, rawLine, indent));
       // A normal physical source line always terminates
-      state.open = false;
-      // DBG(`         normal line terminated logical line`);
+      if (contributesPhysicalLine) {
+        state.open = false;
+        // DBG(`         normal line terminated logical line`);
+      }
     }
 
     srcIdx++;
@@ -386,20 +319,12 @@ function processFile(filePath,
   DBG(`     outLines.length=${outLines.length}`);
   DBG(`     hasFinalNewline=${hasFinalNewline}`);
 
-  return {
-    lines: outLines,
-    outStart,
-    outEnd,
-    srcTotal,
-    hasFinalNewline,
-    contributesPhysicalLine
-  };
+  return { lines: outLines, outStart, outEnd, srcTotal, hasFinalNewline, contributesPhysicalLine }; // Process Output of Code
 }
 
-// ---------------------------------------------------------------------------
+// ──────────────────────────────────────────────────────────────────────────
 // Main
-// ---------------------------------------------------------------------------
-
+// ──────────────────────────────────────────────────────────────────────────
 function main() {
 
   // ---- Initialization ----
@@ -418,24 +343,27 @@ function main() {
   const args = process.argv.slice(2);
   DBG(`args = ${JSON.stringify(args)}`);
 
+  // ──────────────────────────────────────────────────────────────────────────
   // ---- Help ----
   if (args.length === 0 || args[0] === "--help" || args[0] === "-h") {
-    console.log([
+    LogToConsole([
       "[MyDefrag]",
       "",
       "  MyDefrag Script Preprocessor",
       "  ──────────────────────────────────────────────────────────────",
-      "  Usage:  node mydefrag-preprocess.js <entryFile> [outputFile]",
+      "  Usage:  node mydefrag-preprocess.js <entryFile> [outputFile] [-w]",
       "",
       "  <entryFile>   Path to the root .MyDc script.",
       "  [outputFile]  Optional output path.",
-      "                Defaults to <entryFile>.merged.MyDc",
+      "                Defaults to <entryFileName>.merged.MyDc .",
+      "  [-w]          Write the preview file to disk rather than memory.",
       "",
       "  Output columns per content line:",
-      `  ${"<outLine>".padStart(COL_W)}${"<srcLine>".padStart(COL_W)} <content>`,
+      `  <CompiledScriptLine> <ActualFileScriptLine> <Content>`,
       "",
-      "  outLine  running logical merged line number",
-      "  srcLine  line number within the owning source file",
+      "  CompiledScriptLine: running logical merged line number",
+      "  ActualFileScriptLine:  line number within the owning source file",
+      "  Content: the contents of the script file ",
       "",
       "  BEGIN / END annotations are unnumbered single lines.",
       "",
@@ -443,162 +371,217 @@ function main() {
     process.exit(0);
   }
 
+  // ──────────────────────────────────────────────────────────────────────────
   // ---- File to prepare preview ----
-  const entryFile = path.resolve(args[0]);
-  DBG(`entryFile resolved to: "${entryFile}"`);
+  const writeToFile = args.includes("-w");
+  // remove flags
+  const cleanArgs = args.filter(a => a !== "-w");
+  const entryFile = path.resolve(cleanArgs[0]);
+
   if (!fs.existsSync(entryFile)) {
-    console.error(`[MyDefrag] ERROR: Entry file not found: ${entryFile}`);
-
+    LogToConsole(`[MyDefrag] ERROR: Entry file not found: ${entryFile}`);
     DBG(`Entry file does not exist — aborting`);
-
     process.exit(1);
   }
 
-  DBG(`Entry file exists OK`);
-
-  const outputFile = args[1]
-    ? path.resolve(args[1])
+  const outputFile = cleanArgs[1]
+    ? path.resolve(cleanArgs[1])
     : entryFile.replace(/(\.[^.]+)?$/, ".merged$1");
 
+  DBG(`Entry file exists OK`);
   DBG(`outputFile = "${outputFile}"`);
-
+  DBG(`writeToFile = "${writeToFile}"`);
+  const entryUri = pathToFileURL(entryFile).href;
   LogToConsole(`Entry  : "${entryFile}"`);
   LogToConsole(`Output : "${outputFile}"`);
 
+  // ──────────────────────────────────────────────────────────────────────────
+  // Script Maps of includes, missing includes. In the order encountered.
   const visited = new Set();
-  const visitedMissing = new Set();
-
+  const visitedMissing = new Map();
   const state = {
     line: 0,
     open: false
   };
 
+  // ──────────────────────────────────────────────────────────────────────────
   // ── Process File ──────────────────────────────────────────────────────────
   DBG(`calling processFile on entry...`);
+  const root = processFile(entryFile, [], visited, visitedMissing, 0, state, entryFile, 0, 1);
 
-  const root = processFile(
-    entryFile,
-    [],
-    visited,
-    visitedMissing,
-    0,
-    state
-  );
-
-  DBG(`processFile returned:`);
+  DBG(`processFile for source file returned:`);
   DBG(`   root.outStart=${root.outStart}`);
   DBG(`   root.outEnd=${root.outEnd}`);
   DBG(`   root.srcTotal=${root.srcTotal}`);
   DBG(`   root.hasFinalNewline=${root.hasFinalNewline}`);
-
   DBG(`   visited set size: ${visited.size}`);
   DBG(`   visitedMissing set size: ${visitedMissing.size}`);
   DBG(`   state.line after processing: ${state.line}`);
 
+  // ──────────────────────────────────────────────────────────────────────────
   // ── Header ────────────────────────────────────────────────────────────────
   const header = [
-    `; ${"═".repeat(72)}`,
-    `; MyDefrag Preprocessor — Merged Output`,
-    `; Generated  : ${new Date().toISOString()}`,
-    `; Entry      : ${entryFile}`,
-    `; Output lines: ${state.line}  (logical merged lines)`,
-    `; ${"═".repeat(72)}`,
-    `; ${"<outLine>".padStart(COL_W)}${"<srcLine>".padStart(COL_W)} <content>`,
-    `; ${"═".repeat(72)}`,
-    "",
+    `|${"═".repeat(72)}`,
+    `|MyDefrag Preprocessor — Merged Output`,
+    `|Generated    : ${new Date().toISOString()}`,
+    `|Entry        : ${entryUri}`,
+    `|Output file  : ${outputFile}`,
+    `|Output lines : ${state.line}  (logical merged lines)`,
+    `|${"<outLine>".padStart(COL_W)}${"<srcLine>".padStart(COL_W)} <content>`,
+    `|${"═".repeat(72)}`,
   ].join("\n");
-
+  const headerOutput = [
+    `|${"═".repeat(72)}`,
+    `|MyDefrag Preprocessor — Merged Output`,
+    `|Generated  : ${new Date().toISOString()}`,
+    `|Entry      : ${entryFile}`,
+    `|Output lines: ${state.line}  (logical merged lines)`,
+    `|${"<outLine>".padStart(COL_W)}${"<srcLine>".padStart(COL_W)} <content>`,
+    `|${"═".repeat(72)}`,
+  ].join("\n");
+  // ──────────────────────────────────────────────────────────────────────────
   // ── Footer / include map ──────────────────────────────────────────────────
   DBG(`building footer maps...`);
-  // Map of include files
-  // DBG(`building file map (${visited.size} files)`);
-  const mapLines = [
-    "",
-    `; ${"═".repeat(72)}`,
-    `; Include Files (${visited.size} file(s) processed)`,
-    `; ${"═".repeat(72)}`,
+  // ── Map of INCLUDE files  ─────────────────────────────────────────────────
+  const visitedMapLines = [
+    `|Include Files. (${visited.size} file(s) processed`,
+    `|${"═".repeat(72)}`,
   ];
+  const visitedMapOutPut = [];
+  visitedMapOutPut.push(...visitedMapLines);
 
   let idx = 1;
   for (const f of visited) {
-    const uri = "file:///" + f.replace(/\\/g, "/");
-    mapLines.push(
-      `; [${String(idx).padStart(3, "0")}]  ${uri}`
-    );
-    DBG(`Include file URI=${uri}`);
+    const { pathToFileURL } = require("url");
+    const uri = pathToFileURL(f).href;
+    visitedMapLines.push(`|[${String(idx).padStart(3, "0")}]  ${uri}`);
+    visitedMapOutPut.push(`|[${String(idx).padStart(3, "0")}]  "${f}"`);
+    // DBG(`Include file URI=${uri}`);
     idx++;
   }
-  mapLines.push(`; ${"═".repeat(72)}`);
+  visitedMapLines.push(`| `);
+  visitedMapOutPut.push(`| `);
+  visitedMapLines.push(`|${"═".repeat(72)}`);
+  visitedMapOutPut.push(`|${"═".repeat(72)}`);
 
-  // Map of MISSING include files
+  // ── Map of MISSING include files ─────────────────────────────────────────
   const missingMapLines = [];
+  const missingMapOutput = [];
   if (visitedMissing.size > 0) {
     // DBG(`building missing file map (${visitedMissing.size} files)`);
-    missingMapLines.push(
-      "",
-      `; ${"═".repeat(72)}`,
-      `; MISSING FILES (${visitedMissing.size} file(s) missing)`,
-      `; ${"═".repeat(72)}`
-    );
+    const SCRIPT_HEADER_LINES = 10; // Seen at top of output
+    const MISSING_BLOCK_LINES = 3; // Number of line per detail ouput
+    const MISSING_HEADER_LINES = 5; // Number of lines in this header here.
 
+    const startLineOfCode = SCRIPT_HEADER_LINES + (visitedMissing.size * MISSING_BLOCK_LINES) + MISSING_HEADER_LINES + visitedMapLines.length;
+
+    const msg = [
+      ``,
+      `|MISSING FILE ERRORS!!! (${visitedMissing.size} file(s) missing)`,
+      `|Script starts at line ${startLineOfCode}.`,
+      `|${"═".repeat(72)}`,
+    ];
+    missingMapLines.push(...msg);
+    missingMapOutput.push(...msg);
+    // ──────────────────────────────────────────────────────────────────────────
     idx = 1;
-    for (const f of visitedMissing) {
-      const uri = "file:///" + f.replace(/\\/g, "/");
+    for (const [filePath, info] of visitedMissing) {
+      const {
+        parentFile,
+        parentSrcLineNo,
+        parentSrcColNo,
+        depth,
+        missingFile,
+        OutputLine
+      } = info;
+      // visitedMissing.set(filePath, { parentFile, parentSrcLineNo, parentSrcColNo, depth, missingFile });
+      const parentUri = pathToFileURL(parentFile).href;
+      const missingUri = pathToFileURL(filePath).href;
+      const parentUriWithLine = `${parentUri}:${parentSrcLineNo}:${parentSrcColNo}`;
+      const parentPathWithLine = `${parentFile}:${parentSrcLineNo}:${parentSrcColNo}`;
+      // DBG(`${parentUri}:${parentSrcLineNo}`);
       missingMapLines.push(
-        `; [${String(idx).padStart(3, "0")}]  ${uri}`
+        `|[${String(idx).padStart(3, "0")}]  ${missingUri}`,
+        `|    At line ${OutputLine}, file "${parentUri}", line ${parentSrcLineNo}, col ${parentSrcColNo}`,
+        `| `
       );
-      // DBG(`Missing file URI=${uri}`);
+      missingMapOutput.push(
+        `|[${String(idx).padStart(3, "0")}]  ${missingFile}`,
+        `|    At line ${OutputLine}, file "${parentPathWithLine}"`,
+        `| `
+      );
       idx++;
     }
-    missingMapLines.push(`; ${"═".repeat(72)}`);
+    missingMapLines.push(`|${"═".repeat(72)}`);
+    missingMapOutput.push(`|${"═".repeat(72)}`);
 
   } else {
+    // ──────────────────────────────────────────────────────────────────────────
     DBG(`no missing include files`);
     missingMapLines.push(
-      "",
-      `; ${"═".repeat(72)}`,
-      `; MISSING FILES`,
-      `; ${"═".repeat(72)}`,
-      `; No missing files.`,
-      `; ${"═".repeat(72)}`
+      " ",
+      `|${"═".repeat(72)}`,
+      `MISSING FILES`,
+      `|${"═".repeat(72)}`,
+      `No missing files.`,
+      `|${"═".repeat(72)}`
     );
+    missingMapOutput.push(...missingMapLines);
   }
 
-  // Build final footer
-  const footer =
-    mapLines.join("\n") +
+  // ── Build final footer ────────────────────────────────────────────────────────
+  const footerOutput =
+    missingMapOutput.join("\n") +
     "\n" +
-    missingMapLines.join("\n");
-  DBG(`footer length=${footer.length}`);
-  LogToConsole(`${footer}`);
+    visitedMapOutPut.join("\n") +
+    "\n";
+  footerOutput.split(/\r?\n/).forEach(line => { LogToConsole(line); });
 
-  // ── Write ─────────────────────────────────────────────────────────────────
+  const footer =
+    missingMapLines.join("\n") +
+    "\n" +
+    visitedMapLines.join("\n") +
+    "\n";
+  DBG(`Console footer length=${footerOutput.length} and in document=${footer.length}`);
+  
   const body = root.lines.join("");
-  const fullOutput = header + body + footer;
-  DBG(`writing to: "${outputFile}"`);
 
-  try {
-    fs.writeFileSync(outputFile, fullOutput, "utf8");
+  const fullOutput = header + footer + body;
 
-  } catch (err) {
-    DBG(`writeFileSync FAILED: ${err.message}`);
-    console.error(`[MyDefrag] ERROR writing output: ${err.message}`);
-    process.exit(1);
-  }
+  // ──────────────────────────────────────────────────────────────────────────
+  // ── Write ─────────────────────────────────────────────────────────────────
+  if (writeToFile) {
+    DBG(`writing to: "${outputFile}"`);
+    try {
+      fs.writeFileSync(outputFile, fullOutput, "utf8");
 
-  // Verify the file was written
-  if (fs.existsSync(outputFile)) {
-    const writtenSize = fs.statSync(outputFile).size;
-    DBG(`output file confirmed on disk: ${writtenSize} bytes`);
+    } catch (err) {
+      DBG(`writeFileSync FAILED: ${err.message}`);
+      LogToConsole(`[MyDefrag] ERROR writing output: ${err.message}`);
+      process.exit(1);
+    }
+
+    // Verify the file was written
+    if (fs.existsSync(outputFile)) {
+      const writtenSize = fs.statSync(outputFile).size;
+      DBG(`output file confirmed on disk: ${writtenSize} bytes`);
+    } else {
+      DBG(`output file NOT found after write — something is very wrong`);
+    }
   } else {
-
-    DBG(`output file NOT found after write — something is very wrong`);
+    // ── Write to memory ──────────────────────────────────────────────────────
+    DBG(`creating memory resident preview: "${outputFile}"`);
+    process.stdout.write(fullOutput);
   }
 
+  // ──────────────────────────────────────────────────────────────────────────
   LogToConsole(`Done. ${visited.size} file(s), ${state.line} logical merged lines.`);
   LogToConsole(`${visitedMissing.size} file(s) are missing.`);
-  LogToConsole(`Output written to: "${outputFile}"`);
-
+  if (writeToFile) {
+    LogToConsole(`Output written to: "${outputFile}"`);
+  } else {
+    LogToConsole(`Output written to stdout (preview mode)`);
+  }
   LogToConsole(`main() done`);
 }
 

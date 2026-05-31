@@ -62,7 +62,7 @@ Include boundaries are marked with unnumbered `BEGIN` / `END` annotations that s
       ; <<< END   [d:1] C:\Scripts\Includes\Passes.MyDc  src:42  out:10-51
 ```
 
-A header and include map are written at the top and bottom of the output file listing every file processed.
+A header, include map, and missing files map are written at the bottom of the output file listing every file processed.
 
 ### CLI Usage
 
@@ -87,7 +87,7 @@ To install or update the extension into VSCodium, run from the project folder:
 The script:
 
 1. Locates your VSCodium installation and extensions folder automatically
-2. Creates / updates `local.mydc-syntax-0.1.0` in the extensions folder
+2. Creates / updates `local.mydc-0.1.0` in the extensions folder
 3. Backs up and patches your user `settings.json` with the default token colour rules
 
 After running, restart VSCodium for changes to take effect.
@@ -98,10 +98,10 @@ After running, restart VSCodium for changes to take effect.
 
 | Extension | Recognised as |
 | --- | --- |
-| `.MyDc` | MyDefrag Script |
 | `.MyD` | MyDefrag Script |
-| `.mydc` | MyDefrag Script |
 | `.myd` | MyDefrag Script |
+| `.MyDc` | MyDefrag Script Include |
+| `.mydc` | MyDefrag Script Include |
 
 ---
 
@@ -109,7 +109,7 @@ After running, restart VSCodium for changes to take effect.
 
 | Feature | Value |
 | --- | --- |
-| Line comment | `//` |
+| Line comment | `#` |
 | Block comment | `/* ... */` |
 | Auto-closing brackets | `( )` |
 | Auto-closing quotes | `" "` and `' '` |

@@ -44,9 +44,9 @@ Write-Host "Extensions: $ExtensionsPath"
 Write-Host
 
 Copy-Item "$env:APPDATA\VSCodium\User\settings.json" "$env:APPDATA\VSCodium\User\settings.json.bak" -Force
-New-Item -ItemType Directory -Path "$ExtensionsPath\local.mydc-syntax-0.1.0" -Force | Out-Null
-# Copy-Item -Path "$PSScriptRoot\*" -Destination "$ExtensionsPath\local.mydc-syntax-0.1.0" -Recurse -Force
-Copy-Item -Path "$PSScriptRoot\*" -Destination "$ExtensionsPath\local.mydc-syntax-0.1.0" -Recurse -Force -Exclude "Preferences Open User Settings (JSON)", "*.ps1", "*.bat", "temp.txt"
+New-Item -ItemType Directory -Path "$ExtensionsPath\local.mydc-0.1.0" -Force | Out-Null
+# Copy-Item -Path "$PSScriptRoot\*" -Destination "$ExtensionsPath\local.mydc-0.1.0" -Recurse -Force
+Copy-Item -Path "$PSScriptRoot\*" -Destination "$ExtensionsPath\local.mydc-0.1.0" -Recurse -Force -Exclude "Preferences Open User Settings (JSON)", "*.ps1", "*.bat", "temp.txt"
 
 # Read, parse, update, write back
 $settings = Get-Content "$env:APPDATA\VSCodium\User\settings.json" -Raw | ConvertFrom-Json
@@ -61,5 +61,5 @@ $json = $settings | ConvertTo-Json -Depth 10
 [System.IO.File]::WriteAllText("$env:APPDATA\VSCodium\User\settings.json", $json, [System.Text.UTF8Encoding]::new($false))
 
 Write-Host
-Write-Host "Extensions: mydc-syntax (local.mydc-syntax-0.1.0) updated to $ExtensionsPath"
+Write-Host "Extensions: mydc (local.mydc-0.1.0) updated to $ExtensionsPath"
 Write-Host

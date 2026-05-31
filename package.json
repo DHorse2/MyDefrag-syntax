@@ -1,9 +1,12 @@
 {
-    "name": "mydc-syntax",
+    "name": "mydc",
     "displayName": "MyDefrag Script (.MyDc / .MyD)",
     "description": "Syntax highlighting for MyDefrag scripting language",
     "version": "0.1.0",
     "publisher": "local",
+    "activationEvents": [
+        "onLanguage:mydc"
+    ],
     "engines": {
         "vscode": "^1.0.0"
     },
@@ -34,13 +37,14 @@
                 "path": "./mydc.tmLanguage.json"
             }
         ],
-        "definitionProvider": true,
-        "referencesProvider": true,
-        "documentLinkeProvider": true,
         "commands": [
             {
                 "command": "mydc.openPreview",
                 "title": "Open Preview"
+            },
+            {
+                "command": "mdm.openFileAtPosition",
+                "title": "Open File at Position"
             }
         ],
         "menus": {
@@ -58,7 +62,12 @@
                     "group": "navigation"
                 }
             ]
-        }
+        },
+        "links": [
+            {
+                "enablement": "true"
+            }
+        ]
     },
     "main": "./extension.js"
 }

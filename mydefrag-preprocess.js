@@ -18,39 +18,40 @@ const { pathToFileURL, fileURLToPath } = require("url");
 
 // Debug logger — writes to stderr so it doesn't pollute stdout/output file
 // ---------------------------------------------------------------------------
-// const DBG = (...args) => process.stderr.write("[MyDefrag] [DBG] " + args.join(" ") + "\n");
-let DebugOn = true;
-const DBG = (...args) => {
-  if (!DebugOn) { return; }
-  process.stderr.write(
-    "[MyDefrag] [DBG] " +
-    args.join(" ") +
-    "\n"
-  );
-};
+let debugOn = true;
+const logger = require('./common/logger');
+const IniReader = require('./common/ini')
 
-const LogToConsole = (...args) => {
-  process.stderr.write(
-    "[MyDefrag] " +
-    args.join(" ") +
-    "\n"
-  );
-};
+// const DBG = (...args) => process.stderr.write("[MyDefrag] [DBG] " + args.join(" ") + "\n");
+// let debugOn = true;
+// const DBG = (...args) => {
+//   if (!debugOn) { return; }
+//   process.stderr.write(
+//     "[MyDefrag] [DBG] " +
+//     args.join(" ") +
+//     "\n"
+//   );
+// };
+
+// const LogToConsole = (...args) => {
+//   process.stderr.write(
+//     "[MyDefrag] " +
+//     args.join(" ") +
+//     "\n"
+//   );
+// };
 
 // ---------------------------------------------------------------------------
 // INI configuration
 // ---------------------------------------------------------------------------
 
-const SCRIPT_DIR = __dirname;
-const INI_PATH = path.join(SCRIPT_DIR, "mydefrag-preprocess.ini");
-
 function readIni(filePath) {
   const result = {};
   if (!fs.existsSync(filePath)) {
-    DBG(`  "${filePath}" ini file not found`);
+    logger.dbg(`  "${filePath}" ini file not found`);
     return result; // ini file not found
   }
-  // DBG(`  "${filePath}" ini file exists`);
+  // logger.dbg(`  "${filePath}" ini file exists`);
 
   const raw = fs.readFileSync(filePath, "utf8");
   const lines = raw.split(/\r?\n/);
@@ -71,14 +72,14 @@ function readIni(filePath) {
 
     const eqPos = line.indexOf("=");
     if (eqPos < 0) {
-      DBG(`  ignoring malformed line: "${line}"`);
+      logger.dbg(`  ignoring malformed line: "${line}"`);
       continue;
     }
 
     const key = line.substring(0, eqPos).trim();
     const value = line.substring(eqPos + 1).trim();
     result[key] = value;
-    LogToConsole(`  ini: ${key}="${value}"`);
+    // logger.info(`  ini: ${key}="${value}"`);
   }
 
   return result; // ini key value pairs
@@ -117,9 +118,9 @@ function ensureLineOpen(state) {
     state.line++;
     // only a real CRLF terminate a line, else it stays open.
     state.open = true;
-    // DBG(`         ensureLineOpen() -> OPENED logical line ${state.line}`);
+    // logger.dbg(`         ensureLineOpen() -> OPENED logical line ${state.line}`);
   } else {
-    // DBG(`         ensureLineOpen() -> logical line already open (${state.line})`);
+    // logger.dbg(`         ensureLineOpen() -> logical line already open (${state.line})`);
   }
 }
 
@@ -131,17 +132,17 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
   // const absPath = filePath;
   const indent = " ".repeat(depth);
 
-  DBG(`----`);
-  DBG(`  --- processFile called: depth=${depth} state.line=${state.line} state.open=${state.open} ---`);
-  DBG(`    filePath="${filePath}"`);
-  // DBG(`    stack=[${stack.join(", ")}]`);
+  logger.dbg(`----`);
+  logger.dbg(`  --- processFile called: depth=${depth} state.line=${state.line} state.open=${state.open} ---`);
+  logger.dbg(`    filePath="${filePath}"`);
+  // logger.dbg(`    stack=[${stack.join(", ")}]`);
 
   // ── Circular include guard ────────────────────────────────────────────────
   if (stack.includes(filePath)) {
     const cycle = [...stack, filePath].map(p => path.basename(p)).join(" → ");
     const msg = `ERROR: Circular include: ${cycle}`;
-    LogToConsole(`[MyDefrag] ${msg}`);
-    DBG(`  CIRCULAR INCLUDE DETECTED!!!`);
+    logger.info(msg);
+    logger.dbg(`  CIRCULAR INCLUDE DETECTED!!!`);
     return { lines: [annotLine(indent, `*** ${msg} ***`)], outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // CIRCULAR FILE REFERENCE
   }
 
@@ -156,22 +157,22 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
   const includePathResolved = path.resolve(includeDir, includePath);
   const includePathResolvedUri = pathToFileURL(includePathResolved).href;
 
-  DBG("parentFilePath =", parentFilePath);
-  DBG("filePath =", filePath);
-  DBG("stack =", stack);
+  logger.dbg("parentFilePath =", parentFilePath);
+  logger.dbg("filePath =", filePath);
+  logger.dbg("stack =", stack);
 
   // ── File existence check ──────────────────────────────────────────────────
-  // DBG(`    checking existence: "${filePath}"`);
+  // logger.dbg(`    checking existence: "${filePath}"`);
   if (!fs.existsSync(filePath)) {
     // const msg = `ERROR:  Missing include: "${filePath}"`;
     visitedMissing.set(filePath, { parentFile, parentSrcLineNo, parentSrcColNo, depth, missingFile: filePath, OutputLine: state.line });
-    DBG(`ERROR!!! Missing: ${missingUri}\n`)
-    DBG(`         At: ${parentUri}:${parentSrcLineNo}:${parentSrcColNo}`);
-    DBG(`         Continuing...`);
-    DBG(`    ERROR: FILE NOT FOUND!!!, returning error annotation`);
+    logger.dbg(`ERROR!!! Missing: ${missingUri}\n`)
+    logger.dbg(`         At: ${parentUri}:${parentSrcLineNo}:${parentSrcColNo}`);
+    logger.dbg(`         Continuing...`);
+    logger.dbg(`    ERROR: FILE NOT FOUND!!!, returning error annotation`);
     return { lines: [annotLine(indent, `*** WARNING: Missing include ("${missingUri}") ***`)], filePath, outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // FILE NOT FOUND
   }
-  DBG(`    File exists OK`);
+  logger.dbg(`    File exists OK`);
   visited.add(filePath);
 
   // ── Read and split into logical lines ────────────────────────────────────
@@ -179,8 +180,8 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
   // Split on either LF or CRLF
   const srcLines = raw.split(/\r?\n/);
   if (srcLines.length > 0) {
-    DBG(`         first line preview="${srcLines[0].substring(0, 60)}"`);
-    DBG(`         last line preview="${srcLines[srcLines.length - 1].substring(0, 60)}"`);
+    logger.dbg(`         first line preview="${srcLines[0].substring(0, 60)}"`);
+    logger.dbg(`         last line preview="${srcLines[srcLines.length - 1].substring(0, 60)}"`);
   }
 
   // ── Line number control and CRLF detection ───────────────────────────────
@@ -188,17 +189,17 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
   const hasFinalNewline = /\r?\n$/.test(raw);
   // Should the line number be incremented because a CRLF is present or more lines follow.
   const contributesPhysicalLine = hasFinalNewline || srcLines.length > 1;
-  DBG(`      Read and split into logical lines:`);
-  DBG(`         raw file read: ${raw.length} bytes`);
-  DBG(`         hasFinalNewline=${hasFinalNewline}`);
-  DBG(`         split produced: ${srcLines.length} entries`);
+  logger.dbg(`      Read and split into logical lines:`);
+  logger.dbg(`         raw file read: ${raw.length} bytes`);
+  logger.dbg(`         hasFinalNewline=${hasFinalNewline}`);
+  logger.dbg(`         split produced: ${srcLines.length} entries`);
   // If the file ended with a newline, split() produces an extra empty entry.
   // Remove ONLY that synthetic entry.
   if (hasFinalNewline) {
-    DBG(`         removing synthetic trailing empty line caused by final newline`);
+    logger.dbg(`         removing synthetic trailing empty line caused by final newline`);
     srcLines.pop();
   } else {
-    DBG(`         file does NOT end with newline; keeping final entry`);
+    logger.dbg(`         file does NOT end with newline; keeping final entry`);
   }
 
   // ── Source Total Line number ─────────────────────────────────────────────
@@ -206,26 +207,26 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
   //   terminated lines count
   //   unterminated trailing fragments do not
   let srcTotal = (raw.length === 0) ? 0 : srcLines.length;
-  if (raw.length === 0) { DBG(`         file is physically empty`); }
+  if (raw.length === 0) { logger.dbg(`         file is physically empty`); }
   // Determine if multiple lines allowing that
   // any last line might not end in a CRLF
-  DBG(`         logical line count finalized, srcTotal=${srcTotal}`);
+  logger.dbg(`         logical line count finalized, srcTotal=${srcTotal}`);
 
   // ────────────────────────────────────────────────────────────────────────
   // ── Walk source lines ─────────────────────────────────────────────────────
   // ────────────────────────────────────────────────────────────────────────
   let outLines = [];
   const outStart = state.line + 1;
-  DBG(`         outStart=${outStart}`);
+  logger.dbg(`         outStart=${outStart}`);
   let srcIdx = 0;
   let srcLineNo = 1
-  DBG(`         srcLines=${srcLines.length}`);
+  logger.dbg(`         srcLines=${srcLines.length}`);
   while (srcIdx < srcLines.length) {
     const rawLine = srcLines[srcIdx];
     srcLineNo = srcIdx + 1;
-    // DBG(``);
-    // DBG(`      processing srcLine ${srcLineNo}/${srcLines.length}`);
-    // DBG(`  rawLine="${rawLine.substring(0, 80)}"`);
+    // logger.dbg(``);
+    // logger.dbg(`      processing srcLine ${srcLineNo}/${srcLines.length}`);
+    // logger.dbg(`  rawLine="${rawLine.substring(0, 80)}"`);
 
     // ────────────────────────────────────────────────────────────────────────
     // INCLUDE DIRECTIVE detected. Process it or issue an error.
@@ -233,11 +234,11 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
     INCLUDE_RE.lastIndex = 0;
     const match = INCLUDE_RE.exec(rawLine);
     if (match) {
-      DBG(`  rawLine="${rawLine.substring(0, 80)}"`);
+      logger.dbg(`  rawLine="${rawLine.substring(0, 80)}"`);
       const srcColNo = match.index + 1;
       // Ensure a logical merged line exists
       ensureLineOpen(state);
-      DBG(`         -> INCLUDE directive found "${match[1]}" on logical line ${state.line}`);
+      logger.dbg(`         -> INCLUDE directive found "${match[1]}" on logical line ${state.line}`);
 
       // Emit directive line itself
       outLines.push(contentLine(state.line, srcLineNo, rawLine, indent));
@@ -257,13 +258,13 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
       const includePathResolved = path.resolve(includeDir, includePath);
       const includePathResolvedUri = pathToFileURL(includePathResolved).href;
 
-      DBG(`         includeDir="${includeDir}"`);
-      DBG(`         includePathResolved="${includePathResolved}"`);
-      DBG(`         recursing into child depth=${depth + 1}, hasFileNewLine=${hasFinalNewline}`);
+      logger.dbg(`         includeDir="${includeDir}"`);
+      logger.dbg(`         includePathResolved="${includePathResolved}"`);
+      logger.dbg(`         recursing into child depth=${depth + 1}, hasFileNewLine=${hasFinalNewline}`);
 
       // RECURSE Process child file
       const child = processFile(includePathResolved, [...stack, filePath], visited, visitedMissing, depth + 1, state, filePath, srcLineNo, srcColNo);
-      DBG(`         child returned: outStart=${child.outStart}, outEnd=${child.outEnd}, child.srcTotal=${child.srcTotal}, child.hasFinalNewline=${child.hasFinalNewline}`);
+      logger.dbg(`         child returned: outStart=${child.outStart}, outEnd=${child.outEnd}, child.srcTotal=${child.srcTotal}, child.hasFinalNewline=${child.hasFinalNewline}`);
 
       // BEGIN annotation — inserted before child lines
       const beginAnnot = annotLine(
@@ -281,7 +282,7 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
         `  out:${child.outStart}-${child.outEnd}`
       );
 
-      DBG(`         pushing beginAnnot + child.lines + endAnnot`);
+      logger.dbg(`         pushing beginAnnot + child.lines + endAnnot`);
 
       outLines.push(beginAnnot, ...child.lines, endAnnot);
 
@@ -290,21 +291,21 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
       // Otherwise the logical merged line terminates.
       // state.open = !child.hasFinalNewline;
       // state.open = contributesPhysicalLine;
-      DBG(`         state.open now ${state.open} after child include`);
+      logger.dbg(`         state.open now ${state.open} after child include`);
 
       // ────────────────────────────────────────────────────────────────────────
       // NORMAL CONTENT LINE
       // ────────────────────────────────────────────────────────────────────────
     } else {
-      // DBG(`         -> normal content line`);
+      // logger.dbg(`         -> normal content line`);
       // Ensure logical merged line exists
       ensureLineOpen(state);
-      // DBG(`         emitting normal line on logical line ${state.line}`);
+      // logger.dbg(`         emitting normal line on logical line ${state.line}`);
       outLines.push(contentLine(state.line, srcLineNo, rawLine, indent));
       // A normal physical source line always terminates
       if (contributesPhysicalLine) {
         state.open = false;
-        // DBG(`         normal line terminated logical line`);
+        // logger.dbg(`         normal line terminated logical line`);
       }
     }
 
@@ -313,11 +314,11 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
 
   const outEnd = state.line;
 
-  DBG(`  finished file:`);
-  DBG(`     outStart=${outStart}`);
-  DBG(`     outEnd=${outEnd}`);
-  DBG(`     outLines.length=${outLines.length}`);
-  DBG(`     hasFinalNewline=${hasFinalNewline}`);
+  logger.dbg(`  finished file:`);
+  logger.dbg(`     outStart=${outStart}`);
+  logger.dbg(`     outEnd=${outEnd}`);
+  logger.dbg(`     outLines.length=${outLines.length}`);
+  logger.dbg(`     hasFinalNewline=${hasFinalNewline}`);
 
   return { lines: outLines, outStart, outEnd, srcTotal, hasFinalNewline, contributesPhysicalLine }; // Process Output of Code
 }
@@ -325,28 +326,31 @@ function processFile(filePath, stack, visited, visitedMissing, depth, state, par
 // ──────────────────────────────────────────────────────────────────────────
 // Main
 // ──────────────────────────────────────────────────────────────────────────
+const SCRIPT_DIR = __dirname;
+const INI_PATH = path.join(SCRIPT_DIR, "mydefrag-preprocess.ini");
+
 function main() {
 
   // ---- Initialization ----
   // ── Read INI configuration ────
-  LogToConsole('--- Preview processing triggered ---');
-  LogToConsole(`  Debug Path=${INI_PATH}`)
+  logger.info('--- Preview processing triggered ---');
+  logger.info(`  Debug Path=${INI_PATH}`)
   const ini = readIni(INI_PATH);
-  DebugOn = String(ini.DebugOn || "true").toLowerCase() === "true";
-  LogToConsole(`  Debug=${DebugOn}`)
-  DBG(`INI_PATH="${INI_PATH}"`);
-  DBG(`DebugOn=${DebugOn}`);
+  debugOn = String(ini.debugOn || "true").toLowerCase() === "true";
+  logger.info(`  Debug=${debugOn}`)
+  logger.dbg(`INI_PATH="${INI_PATH}"`);
+  logger.dbg(`debugOn=${debugOn}`);
 
-  DBG(`main() started`);
+  logger.dbg(`main() started`);
   // ---- Arguments ----
-  DBG(`process.argv = ${JSON.stringify(process.argv)}`);
+  logger.dbg(`process.argv = ${JSON.stringify(process.argv)}`);
   const args = process.argv.slice(2);
-  DBG(`args = ${JSON.stringify(args)}`);
+  logger.dbg(`args = ${JSON.stringify(args)}`);
 
   // ──────────────────────────────────────────────────────────────────────────
   // ---- Help ----
   if (args.length === 0 || args[0] === "--help" || args[0] === "-h") {
-    LogToConsole([
+    logger.info([
       "[MyDefrag]",
       "",
       "  MyDefrag Script Preprocessor",
@@ -379,8 +383,8 @@ function main() {
   const entryFile = path.resolve(cleanArgs[0]);
 
   if (!fs.existsSync(entryFile)) {
-    LogToConsole(`[MyDefrag] ERROR: Entry file not found: ${entryFile}`);
-    DBG(`Entry file does not exist — aborting`);
+    logger.error(`Entry file not found: ${entryFile}`);
+    logger.dbg(`Entry file does not exist — aborting`);
     process.exit(1);
   }
 
@@ -388,12 +392,12 @@ function main() {
     ? path.resolve(cleanArgs[1])
     : entryFile.replace(/(\.[^.]+)?$/, ".merged$1");
 
-  DBG(`Entry file exists OK`);
-  DBG(`outputFile = "${outputFile}"`);
-  DBG(`writeToFile = "${writeToFile}"`);
+  logger.dbg(`Entry file exists OK`);
+  logger.dbg(`outputFile = "${outputFile}"`);
+  logger.dbg(`writeToFile = "${writeToFile}"`);
   const entryUri = pathToFileURL(entryFile).href;
-  LogToConsole(`Entry  : "${entryFile}"`);
-  LogToConsole(`Output : "${outputFile}"`);
+  logger.info(`Entry  : "${entryFile}"`);
+  logger.info(`Output : "${outputFile}"`);
 
   // ──────────────────────────────────────────────────────────────────────────
   // Script Maps of includes, missing includes. In the order encountered.
@@ -406,17 +410,17 @@ function main() {
 
   // ──────────────────────────────────────────────────────────────────────────
   // ── Process File ──────────────────────────────────────────────────────────
-  DBG(`calling processFile on entry...`);
+  logger.dbg(`calling processFile on entry...`);
   const root = processFile(entryFile, [], visited, visitedMissing, 0, state, entryFile, 0, 1);
 
-  DBG(`processFile for source file returned:`);
-  DBG(`   root.outStart=${root.outStart}`);
-  DBG(`   root.outEnd=${root.outEnd}`);
-  DBG(`   root.srcTotal=${root.srcTotal}`);
-  DBG(`   root.hasFinalNewline=${root.hasFinalNewline}`);
-  DBG(`   visited set size: ${visited.size}`);
-  DBG(`   visitedMissing set size: ${visitedMissing.size}`);
-  DBG(`   state.line after processing: ${state.line}`);
+  logger.dbg(`processFile for source file returned:`);
+  logger.dbg(`   root.outStart=${root.outStart}`);
+  logger.dbg(`   root.outEnd=${root.outEnd}`);
+  logger.dbg(`   root.srcTotal=${root.srcTotal}`);
+  logger.dbg(`   root.hasFinalNewline=${root.hasFinalNewline}`);
+  logger.dbg(`   visited set size: ${visited.size}`);
+  logger.dbg(`   visitedMissing set size: ${visitedMissing.size}`);
+  logger.dbg(`   state.line after processing: ${state.line}`);
 
   // ──────────────────────────────────────────────────────────────────────────
   // ── Header ────────────────────────────────────────────────────────────────
@@ -441,7 +445,7 @@ function main() {
   ].join("\n");
   // ──────────────────────────────────────────────────────────────────────────
   // ── Footer / include map ──────────────────────────────────────────────────
-  DBG(`building footer maps...`);
+  logger.dbg(`building footer maps...`);
   // ── Map of INCLUDE files  ─────────────────────────────────────────────────
   const visitedMapLines = [
     `|Include Files. (${visited.size} file(s) processed`,
@@ -456,7 +460,7 @@ function main() {
     const uri = pathToFileURL(f).href;
     visitedMapLines.push(`|[${String(idx).padStart(3, "0")}]  ${uri}`);
     visitedMapOutPut.push(`|[${String(idx).padStart(3, "0")}]  "${f}"`);
-    // DBG(`Include file URI=${uri}`);
+    // logger.dbg(`Include file URI=${uri}`);
     idx++;
   }
   visitedMapLines.push(`| `);
@@ -468,7 +472,7 @@ function main() {
   const missingMapLines = [];
   const missingMapOutput = [];
   if (visitedMissing.size > 0) {
-    // DBG(`building missing file map (${visitedMissing.size} files)`);
+    // logger.dbg(`building missing file map (${visitedMissing.size} files)`);
     const SCRIPT_HEADER_LINES = 10; // Seen at top of output
     const MISSING_BLOCK_LINES = 3; // Number of line per detail ouput
     const MISSING_HEADER_LINES = 5; // Number of lines in this header here.
@@ -499,7 +503,7 @@ function main() {
       const missingUri = pathToFileURL(filePath).href;
       const parentUriWithLine = `${parentUri}:${parentSrcLineNo}:${parentSrcColNo}`;
       const parentPathWithLine = `${parentFile}:${parentSrcLineNo}:${parentSrcColNo}`;
-      // DBG(`${parentUri}:${parentSrcLineNo}`);
+      // logger.dbg(`${parentUri}:${parentSrcLineNo}`);
       missingMapLines.push(
         `|[${String(idx).padStart(3, "0")}]  ${missingUri}`,
         `|    At line ${OutputLine}, file "${parentUri}", line ${parentSrcLineNo}, col ${parentSrcColNo}`,
@@ -517,7 +521,7 @@ function main() {
 
   } else {
     // ──────────────────────────────────────────────────────────────────────────
-    DBG(`no missing include files`);
+    logger.dbg(`no missing include files`);
     missingMapLines.push(
       " ",
       `|${"═".repeat(72)}`,
@@ -535,14 +539,14 @@ function main() {
     "\n" +
     visitedMapOutPut.join("\n") +
     "\n";
-  footerOutput.split(/\r?\n/).forEach(line => { LogToConsole(line); });
+  footerOutput.split(/\r?\n/).forEach(line => { logger.info(line); });
 
   const footer =
     missingMapLines.join("\n") +
     "\n" +
     visitedMapLines.join("\n") +
     "\n";
-  DBG(`Console footer length=${footerOutput.length} and in document=${footer.length}`);
+  logger.dbg(`Console footer length=${footerOutput.length} and in document=${footer.length}`);
   
   const body = root.lines.join("");
 
@@ -551,38 +555,38 @@ function main() {
   // ──────────────────────────────────────────────────────────────────────────
   // ── Write ─────────────────────────────────────────────────────────────────
   if (writeToFile) {
-    DBG(`writing to: "${outputFile}"`);
+    logger.dbg(`writing to: "${outputFile}"`);
     try {
       fs.writeFileSync(outputFile, fullOutput, "utf8");
 
     } catch (err) {
-      DBG(`writeFileSync FAILED: ${err.message}`);
-      LogToConsole(`[MyDefrag] ERROR writing output: ${err.message}`);
+      logger.dbg(`writeFileSync FAILED: ${err.message}`);
+      logger.error(`writeFileSync ERROR writing output: ${err.message}`);
       process.exit(1);
     }
 
     // Verify the file was written
     if (fs.existsSync(outputFile)) {
       const writtenSize = fs.statSync(outputFile).size;
-      DBG(`output file confirmed on disk: ${writtenSize} bytes`);
+      logger.dbg(`output file confirmed on disk: ${writtenSize} bytes`);
     } else {
-      DBG(`output file NOT found after write — something is very wrong`);
+      logger.error(`output file NOT found after write — something is very wrong`);
     }
   } else {
     // ── Write to memory ──────────────────────────────────────────────────────
-    DBG(`creating memory resident preview: "${outputFile}"`);
+    logger.dbg(`creating memory resident preview: "${outputFile}"`);
     process.stdout.write(fullOutput);
   }
 
   // ──────────────────────────────────────────────────────────────────────────
-  LogToConsole(`Done. ${visited.size} file(s), ${state.line} logical merged lines.`);
-  LogToConsole(`${visitedMissing.size} file(s) are missing.`);
+  logger.info(`Done. ${visited.size} file(s), ${state.line} logical merged lines.`);
+  logger.warn(`${visitedMissing.size} file(s) are missing.`);
   if (writeToFile) {
-    LogToConsole(`Output written to: "${outputFile}"`);
+    logger.info(`Output written to: "${outputFile}"`);
   } else {
-    LogToConsole(`Output written to stdout (preview mode)`);
+    logger.info(`Output written to stdout (preview mode)`);
   }
-  LogToConsole(`main() done`);
+  logger.info(`main() done`);
 }
 
 main();

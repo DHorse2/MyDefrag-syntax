@@ -82,8 +82,14 @@ Trigger via either:
 
 * Right-click the ***editor tab*** → ***Open Preview***
 * The toolbar icon in the editor title bar
+* Via the command line. Usage: node mydefrag-preprocess.js \<entryFile\> [outputFile]
 
-The preview file is written alongside the source with a ***.merged*** infix, e.g. ***MyScript.merged.MyDc***.
+If outputFile is omitted, output is written alongside the entry file with a .merged.MyDc extension. The preview file is written alongside the source with a ***.merged*** infix, e.g. ***MyScript.merged.MyDc***.
+
+Preview processing recursively resolves !include "..."! directives in MyDefrag scripts, producing a merged output file with:
+
+* Two line-number columns on every content line
+* Single-line BEGIN / END annotations (not numbered) at each include boundary
 
 ---
 
@@ -122,7 +128,7 @@ The preprocessor recursively resolves ***!include "..."!*** directives and produ
 
 Include boundaries are marked with unnumbered ***BEGIN*** / ***END*** annotations that show the depth, file path, source line count, and output line range:
 
-```mydc
+```mydfrg
       ; >>> BEGIN [d:1] C:\Scripts\Includes\Passes.MyDc  src:42  out:10-51
    10    1 ; --- Passes ---
    11    2 FastDisk
@@ -161,26 +167,30 @@ To install or update the extension into VSCodium, download the project and run (
 The script:
 
 1. Locates your VSCodium installation and extensions folder automatically
-2. Creates / updates ***local.mydc-0.1.0*** in the extensions folder
+2. Creates / updates ***local.mydfrg-0.1.0*** in the extensions folder
 3. Backs up and patches your user ***settings.json*** with the default token colour rules
 
 After running, restart VSCodium for changes to take effect.
 
 ### Project Files
 
-| File                   | Purpose                                                      |
-| ---------------------- | ------------------------------------------------------------ |
-| extension.js           | Extension entry point — registers all providers and commands |
-| server.js              | Language Server Protocol (LSP) host and Lexical analyzer     |
-| parser.js              | MyDefrag parser and validation engine                        |
-| mydefrag-preprocess.js | Preprocessor — resolves includes and produces merged output  |
-| logger.js              | Common logging and error reporting                           |
-| mydc.tmLanguage.json   | Grammar definition for the language server                   |
-| ini.js                 | Initialization for the language server                       |
-| package.json           | for the extension                                            |
-| setting.json           | User Settings (Json) to store highlight colors               |
-| setting.json           | User Setting (.vscode) has ignores in "mydc.batLink.exclude"[|
-| readme.md              | for the language server                                      |
+| File | Purpose |
+| --- | --- |
+| extension.js | Extension entry point — registers all providers and commands |
+| mydefrag-preprocess.js | Preprocessor — resolves includes and produces merged output |
+| syntaxes | Grammar for mydfrg scripts and bat links |
+| mydfrg.tmLanguage.json | TextMate grammar for syntax highlighting |
+| common | Extension common or shared |
+| logger.js | Extension logging of diagnostics, errors, warnings and information. |
+| configuration | Extension configuration and package |
+| package.json | Extension manifest |
+| language-configuration.json | Bracket / comment / autoclosing rules |
+| scripts | Commands for mydfrg scripts and bat links |
+| mydefrag-preprocess.ps1 | PowerShell wrapper for the preprocessor |
+| MyDefragUpdateLive.ps1 | Deploy script — copies extension into VSCodium |
+| AddVsCodiumToExplorer.ps1 | Adds VSCodium to the Windows Explorer right-click menu |
+| MyDefragUpdateLive.ps1 | Deploy script — copies extension into VSCodium |
+| AddVsCodiumToExplorer.ps1 | Adds VSCodium to the Windows Explorer right-click menu |
 
 ---
 
@@ -195,9 +205,156 @@ After running, restart VSCodium for changes to take effect.
 
 ---
 
-## Language Configuration
+## DEVELOPER settings
 
-| Feature | Value |
+### Open design
+
+These values are important depending on the project context and methodology (paradigm/desigh pattern).
+With resonable defaults the usage and meaning of realitve paths varies.
+***Defaults:***
+
+| Key | Value |
+| --- | --- |
+| referenceRelativePathLevel | Warning |
+| referenceContainsMacrosLevel | Hint |
+| fileReferenceFoundLevel | Information |
+| fileReferenceNotFoundLevel | Error |
+
+The ambiguos presence of macros (variables) in paths might have different importance.
+File found/Not found can be independently handled. The regular defaults can be overriden by *mode="strict"*.
+***Strict mode has these defaults:***
+
+| Key | Value |
+| --- | --- |
+| referenceRelativePathLevel | severity.Error |
+| referenceContainsMacrosLevel | severity.Warning |
+| fileReferenceFoundLevel | severity.Information |
+| fileReferenceNotFoundLevel | severity.Error |
+
+### Inline ini customization
+
+***Topic 1 - Using the generic readIni in this and other projects. In the project you can edit the "ini.js" file.***
+
+There are two ways to add to built in .ini file. The quickest way is directly (inline) in the file.
+
+```json
+// place your ini value substitution mappings here (quick)
+// const inlineIniMap = {
+    // maxVerbose is a synonym fo 7 (it isn't)
+    maxVerbose: 7,
+    // allow 12 to be used
+    // 12: "12"
+// };
+```
+
+### Starndard INI file usage
+
+A more robust, standardized approach is to edit the "channelName+`Map.ini`" (so the MyDefrag LanguageMap.ini) file and add your ini settings there. channelName (in OUTPUT) is passed to initialization and used throughout the language server.
+
+The "ini.js" readIni function is a general purpose tool. It takes these inputs:
+function initialize(
+
+| Value | Purpose | Optional |
+| --- | --- | --- |
+| iniPath | ToDo | NO |
+| channelName | ToDo | NO |
+| debugEnabled | ToDo | Yes |
+| verbose | ToDo | Yes |
+| logEnabled | ToDo | Yes |
+| useStrict | ToDo | Yes |
+| referenceRelativePath | ToDo | Yes |
+| referenceContainsMacros | ToDo | Yes |
+| referenceFound | ToDo | Yes |
+| referenceNotFound | ToDo | Yes |
+
+### Configuration variables
+
+Initialization provides several outputs:
+
+| Variable | Purpose |
+| --- | --- |
+| ini | ToDo |
+| debugOn | ToDo |
+| verboseLevel | ToDo |
+| logOn | ToDo |
+| referenceRelativePathLevel | ToDo |
+| referenceContainsMacrosLevel | ToDo |
+| fileReferenceFoundLevel | ToDo |
+| fileReferenceNotFoundLevel | ToDo |
+| iniErrors | ToDo |
+
+### Logger features
+
+The logger exports the following intuitive functions:
+
+```json
+module.exports = {
+    initialize,
+    logToConsole,
+    dbg,
+    warn,
+    info,
+    err,
+    msg
+};
+```
+
+### VERBOSE
+
+verboseLevel:
+
+| Value | Meaning |
+| --- | --- |
+| 0 | silent |
+| 1 | errors |
+| 2 | warnings |
+| 3 | information |
+| 4 | hint |
+| 5... | debug basic with higher values (currently < 10). Default value |
+
+### Debug On/Off
+
+Debug (debugOn) must be on or logger.dbg messages will be ignored. It is a true/false value.
+
+### verboseLevel
+
+ToDo
+
+### logOn
+
+ToDo
+
+### referenceRelativePathLevel
+
+ToDo
+
+### referenceContainsMacrosLevel
+
+ToDo
+
+### fileReferenceFoundLevel
+
+ToDo
+
+### fileReferenceNotFoundLevel
+
+ToDo
+
+### iniErrors
+
+ToDo
+
+### initialize
+
+ToDo
+
+### readIni
+
+ToDo
+
+## Comments in scripts
+
+| Value | Meaning |
 | --- | --- |
 | Line comment | # |
 | Block comment | /\* ... /*/ |
@@ -205,23 +362,3 @@ After running, restart VSCodium for changes to take effect.
 | Auto-closing quotes | " " and ' ' |
 
 ---
-
-## Project Files
-
-| File | Purpose |
-| --- | --- |
-| extension.js | Extension entry point — registers all providers and commands |
-| mydefrag-preprocess.js | Preprocessor — resolves includes and produces merged output |
-| syntaxes | Grammar for mydc scripts and bat links |
-| mydc.tmLanguage.json | TextMate grammar for syntax highlighting |
-| common | Extension common or shared |
-| logger.js | Extension logging of diagnostics, errors, warnings and information. |
-| configuration | Extension configuration and package |
-| package.json | Extension manifest |
-| language-configuration.json | Bracket / comment / autoclosing rules |
-| scripts | Commands for mydc scripts and bat links |
-| mydefrag-preprocess.ps1 | PowerShell wrapper for the preprocessor |
-| MyDefragUpdateLive.ps1 | Deploy script — copies extension into VSCodium |
-| AddVsCodiumToExplorer.ps1 | Adds VSCodium to the Windows Explorer right-click menu |
-| MyDefragUpdateLive.ps1 | Deploy script — copies extension into VSCodium |
-| AddVsCodiumToExplorer.ps1 | Adds VSCodium to the Windows Explorer right-click menu |

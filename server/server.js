@@ -1,43 +1,48 @@
 'use strict';
 // server.js
-// Debug logger — writes to stderr so it doesn't pollute stdout/output file
-// ---------------------------------------------------------------------------
-// let debugOn = true;
-// let VerboseLevel = 1;
-const logger = require('./common/logger');
-const IniReader = require('./common/ini')
+//#region Initialize server .Parse
 const {
     createConnection,
     TextDocuments,
     DiagnosticSeverity,
     ProposedFeatures,
     TextDocumentSyncKind,
+    Diagnostic,
 } = require('vscode-languageserver/node');
 const { TextDocument } = require('vscode-languageserver-textdocument');
-
 const path = require('path');
-const { warn } = require('console');
-const URI = require('vscode-uri').URI;
-
+const console = require('console');
+const { URI } = require('vscode-languageserver/node');
+// const URI = require('vscode-uri').URI;
+const { URL, fileURLToPath, pathToFileURL } = require('url');
+let parserState;
+const SCRIPT_DIR = __dirname;
+const channelName = 'MyDefrag Language Validation';
+const INI_PATH = path.join(SCRIPT_DIR, "mydefrag-syntax.ini");
 const connection = createConnection(ProposedFeatures.all);
 const documents = new TextDocuments(TextDocument);
+// const connection = createConnection(ProposedFeatures.all);
+const Logger = require('../common/loggerServer');
+const Ini = require('../common/ini')
+const channelName = 'MyDefrag Issues';
 
-connection.onInitialize(() => {
-    return {
-        capabilities: {
-            textDocumentSync: TextDocumentSyncKind.Incremental,
-            completionProvider: { resolveProvider: true },
-            hoverProvider: true,
-            definitionProvider: true,
-            referencesProvider: true,
-        }
-    };
-});
+const {
+    ini,
+    debugOn,
+    verboseLevel,
+    logOn,
+    referenceRelativePathLevel,
+    referenceContainsMacrosLevel,
+    fileReferenceFoundLevel,
+    fileReferenceNotFoundLevel,
+    iniErrors
+} = Ini.initialize(INI_PATH, channelName, null, Ini.severity.Verbose, null, false);
 
-connection.onInitialized(() => {
-    connection.console.log('MyDefrag Language Server initialized');
-});
-
+const isServer = true;
+Logger.initialize(connection, isServer, debugOn, verboseLevel, ini);
+if (iniErrors.length) { Logger.logArrayToConsole(channelName, iniErrors) }
+//#endregion
+//#region Events for server
 documents.onDidChangeContent(change => {
     connection.console.log('MyDefrag document changed');
     validateDocument(change.document);
@@ -51,11 +56,13 @@ documents.onDidOpen(change => {
 documents.onDidSave(change => {
     validateDocument(change.document);
 });
+//#endregion
+// ─────────────────────────────────────────────────────────────────────────────────
+//#region .Parse TOKENIZER
+// ─────────────────────────────────────────────────────────────────────────────────
 
-// =============================================================================
-// TOKENIZER
-// =============================================================================
-
+// ─────────────────────────────────────────────────────────────────────────────────
+// Token Type
 const TT = {
     KEYWORD: 'KEYWORD',
     IDENT: 'IDENT',
@@ -78,6 +85,7 @@ const TT = {
     EOF: 'EOF',
 };
 
+// ─────────────────────────────────────────────────────────────────────────────────
 // All keywords from the grammar (case-insensitive)
 const KEYWORDS = new Set([
     'maxruntime', 'description', 'excludevolumes', 'excludefiles',
@@ -130,155 +138,167 @@ const KEYWORDS = new Set([
     'ask', 'allow', 'kill',
     'fragmented', 'movable', 'selected', 'processed',
 ]);
-
+// ─────────────────────────────────────────────────────────────────────────────────
+// Tokenize Text
 function tokenize(text) {
     const tokens = [];
     let i = 0;
     const len = text.length;
-
+    // ─────────────────────────────────────────────────────────────────────────────────
     while (i < len) {
-        // Skip whitespace
-        if (/\s/.test(text[i])) { i++; continue; }
-
-        // Skip line comments: //, #, --, REM
-        if (text[i] === '/' && text[i + 1] === '/') {
-            while (i < len && text[i] !== '\n') i++;
-            continue;
-        }
-        if (text[i] === '#' || (text[i] === '-' && text[i + 1] === '-')) {
-            while (i < len && text[i] !== '\n') i++;
-            continue;
-        }
-        // REM comment (only at word boundary)
-        if (/[Rr]/.test(text[i]) &&
-            text.slice(i, i + 3).toUpperCase() === 'REM' &&
-            (i + 3 >= len || /\W/.test(text[i + 3]))) {
-            while (i < len && text[i] !== '\n') i++;
-            continue;
-        }
-
-        // Skip block comments /* ... */
-        if (text[i] === '/' && text[i + 1] === '*') {
-            i += 2;
-            while (i < len && !(text[i] === '*' && text[i + 1] === '/')) {
-                i++;
+        try { // ─────────────────── Process Next Token ──────────────────────────────────────
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // Skip whitespace
+            if (/\s/.test(text[i])) { i++; continue; }
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // Skip line comments: //, #, --, REM
+            if (text[i] === '/' && text[i + 1] === '/') {
+                while (i < len && text[i] !== '\n') i++;
+                continue;
             }
-            // Skip closing */
-            if (i < len) {
+            if (text[i] === '#' || (text[i] === '-' && text[i + 1] === '-')) {
+                while (i < len && text[i] !== '\n') i++;
+                continue;
+            }
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // REM comment (only at word boundary)
+            if (/[Rr]/.test(text[i]) &&
+                text.slice(i, i + 3).toUpperCase() === 'REM' &&
+                (i + 3 >= len || /\W/.test(text[i + 3]))) {
+                while (i < len && text[i] !== '\n') i++;
+                continue;
+            }
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // Skip block comments /* ... */
+            if (text[i] === '/' && text[i + 1] === '*') {
                 i += 2;
-            }
-            continue;
-        }
-        const start = i;
-
-        // Macro !word!
-        if (text[i] === '!') {
-            i++;
-            while (i < len && text[i] !== '!' && text[i] !== '\n') i++;
-            if (text[i] === '!') i++;
-            tokens.push({ type: TT.MACRO, value: text.slice(start, i), start, end: i });
-            continue;
-        }
-
-        // String " ... " or ' ... '
-        if (text[i] === '"' || text[i] === "'") {
-            const q = text[i]; i++;
-            while (i < len && text[i] !== q) i++;
-            if (i < len) i++; // closing quote
-            tokens.push({ type: TT.STRING, value: text.slice(start, i), start, end: i });
-            continue;
-        }
-
-        // Number (decimal or float)
-        if (/[0-9]/.test(text[i])) {
-            while (i < len && /[0-9]/.test(text[i])) i++;
-            if (i < len && text[i] === '.') {
-                i++;
-                while (i < len && /[0-9]/.test(text[i])) i++;
-                if (i < len && /[deDE]/.test(text[i])) {
+                while (i < len && !(text[i] === '*' && text[i + 1] === '/')) {
                     i++;
-                    if (i < len && /[+\-]/.test(text[i])) i++;
-                    while (i < len && /[0-9]/.test(text[i])) i++;
                 }
+                // Skip closing */
+                if (i < len) {
+                    i += 2;
+                }
+                continue;
             }
-            tokens.push({ type: TT.NUMBER, value: text.slice(start, i), start, end: i });
-            continue;
-        }
-
-        // Identifier or keyword
-        if (/[a-zA-Z_]/.test(text[i])) {
-            while (i < len && /[a-zA-Z0-9_]/.test(text[i])) i++;
-            const value = text.slice(start, i);
-            const lower = value.toLowerCase();
-            const type = KEYWORDS.has(lower) ? TT.KEYWORD : TT.IDENT;
-            tokens.push({ type, value, lower, start, end: i });
-            continue;
-        }
-
-        // Punctuation
-        switch (text[i]) {
-            case '(': tokens.push({ type: TT.LPAREN, value: '(', start, end: i + 1 }); i++; break;
-            case ')': tokens.push({ type: TT.RPAREN, value: ')', start, end: i + 1 }); i++; break;
-            case ',': tokens.push({ type: TT.COMMA, value: ',', start, end: i + 1 }); i++; break;
-            case '/': tokens.push({ type: TT.SLASH, value: '/', start, end: i + 1 }); i++; break;
-            case '-': tokens.push({ type: TT.DASH, value: '-', start, end: i + 1 }); i++; break;
-            case ':': tokens.push({ type: TT.COLON, value: ':', start, end: i + 1 }); i++; break;
-            case '+': tokens.push({ type: TT.PLUS, value: '+', start, end: i + 1 }); i++; break;
-            case '*': tokens.push({ type: TT.STAR, value: '*', start, end: i + 1 }); i++; break;
-            case '%': tokens.push({ type: TT.PERCENT, value: '%', start, end: i + 1 }); i++; break;
-            case '|':
-                if (text[i + 1] === '|') {
-                    tokens.push({ type: TT.DPIPE, value: '||', start, end: i + 2 }); i += 2;
-                } else {
-                    tokens.push({ type: TT.PIPE, value: '|', start, end: i + 1 }); i++;
+            const start = i;
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // Macro !word!
+            if (text[i] === '!') {
+                i++;
+                while (i < len && text[i] !== '!' && text[i] !== '\n') i++;
+                if (text[i] === '!') i++;
+                tokens.push({ type: TT.MACRO, value: text.slice(start, i), start, end: i });
+                continue;
+            }
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // String " ... " or ' ... '
+            if (text[i] === '"' || text[i] === "'") {
+                const q = text[i]; i++;
+                while (i < len && text[i] !== q) i++;
+                if (i < len) i++; // closing quote
+                tokens.push({ type: TT.STRING, value: text.slice(start, i), start, end: i });
+                continue;
+            }
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // Number (decimal or float)
+            if (/[0-9]/.test(text[i])) {
+                while (i < len && /[0-9]/.test(text[i])) i++;
+                if (i < len && text[i] === '.') {
+                    i++;
+                    while (i < len && /[0-9]/.test(text[i])) i++;
+                    if (i < len && /[deDE]/.test(text[i])) {
+                        i++;
+                        if (i < len && /[+\-]/.test(text[i])) i++;
+                        while (i < len && /[0-9]/.test(text[i])) i++;
+                    }
                 }
-                break;
-            case '&':
-                if (text[i + 1] === '&') {
-                    tokens.push({ type: TT.DAMP, value: '&&', start, end: i + 2 }); i += 2;
-                } else {
-                    tokens.push({ type: TT.AMP, value: '&', start, end: i + 1 }); i++;
-                }
-                break;
-            default:
-                i++; // skip unknown char
-                break;
+                tokens.push({ type: TT.NUMBER, value: text.slice(start, i), start, end: i });
+                continue;
+            }
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // Identifier or keyword
+            if (/[a-zA-Z_]/.test(text[i])) {
+                while (i < len && /[a-zA-Z0-9_]/.test(text[i])) i++;
+                const value = text.slice(start, i);
+                const lower = value.toLowerCase();
+                const type = KEYWORDS.has(lower) ? TT.KEYWORD : TT.IDENT;
+                tokens.push({ type, value, lower, start, end: i });
+                continue;
+            }
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // Punctuation
+            switch (text[i]) {
+                case '(': tokens.push({ type: TT.LPAREN, value: '(', start, end: i + 1 }); i++; break;
+                case ')': tokens.push({ type: TT.RPAREN, value: ')', start, end: i + 1 }); i++; break;
+                case ',': tokens.push({ type: TT.COMMA, value: ',', start, end: i + 1 }); i++; break;
+                case '/': tokens.push({ type: TT.SLASH, value: '/', start, end: i + 1 }); i++; break;
+                case '-': tokens.push({ type: TT.DASH, value: '-', start, end: i + 1 }); i++; break;
+                case ':': tokens.push({ type: TT.COLON, value: ':', start, end: i + 1 }); i++; break;
+                case '+': tokens.push({ type: TT.PLUS, value: '+', start, end: i + 1 }); i++; break;
+                case '*': tokens.push({ type: TT.STAR, value: '*', start, end: i + 1 }); i++; break;
+                case '%': tokens.push({ type: TT.PERCENT, value: '%', start, end: i + 1 }); i++; break;
+                case '|':
+                    if (text[i + 1] === '|') {
+                        tokens.push({ type: TT.DPIPE, value: '||', start, end: i + 2 }); i += 2;
+                    } else {
+                        tokens.push({ type: TT.PIPE, value: '|', start, end: i + 1 }); i++;
+                    }
+                    break;
+                case '&':
+                    if (text[i + 1] === '&') {
+                        tokens.push({ type: TT.DAMP, value: '&&', start, end: i + 2 }); i += 2;
+                    } else {
+                        tokens.push({ type: TT.AMP, value: '&', start, end: i + 1 }); i++;
+                    }
+                    break;
+                default:
+                    i++; // skip unknown char
+                    break;
+            }
+        } catch (errResult) {
+            // tokenize ERROR
+            Logger.err(`writeFileSync ERROR writing output: ${errResult.message}`);
+            // iniErrors.push('unexpected error in tokenize text');
+            return result;
         }
     }
-
+    // ─────────────────────────────────────────────────────────────────────────────────
     tokens.push({ type: TT.EOF, value: '', start: len, end: len });
     return tokens;
 }
+//#endregion
+// ─────────────────────────────────────────────────────────────────────────────────
+//#region .Parse PARSER ─────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────────
 
-// =============================================================================
-// .Parse PARSER ─────────────────────────────────────────────────────────
-// =============================================================================
-
-const ParseState = {
+const parseState = {
     SCRIPT_FULL: 0,
     SCRIPT_FRAGMENT: 1,
     SCRIPT_UNKNOWN: 2
 };
 
 class Parser {
-    constructor(tokens, text, state = ParseState.SCRIPT_UNKNOWN) {
+    constructor(tokens, text, state = parseState.SCRIPT_UNKNOWN) {
         this.tokens = tokens;
         this.text = text;
         this.state = state;
         this.pos = 0;
         this.errors = [];
+        // todo Logger.dbg("stuff")
     }
 
-    peek() { return this.tokens[this.pos]; }
+    peek() { return this.curr[this.pos]; }
+    curr() { return this.tokens[this.pos]; }
     next() { return this.tokens[this.pos++]; }
     prev() { return this.tokens[this.pos - 1]; }
-    atEof() { return this.peek().type === TT.EOF; }
+    atEof() { return this.curr().type === TT.EOF; }
 
     // ────── .Parse (Primitives) Cross-cutting functions ───────────────
     // Yes or No?
     parseYesNo() {
         if (!this.isAnyKw('yes', 'no')) {
-            this.error(errorSeverity = DiagnosticSeverity.Error, `Expected 'yes' or 'no'`);
+            this.error(severity.Error, `Expected 'yes' or 'no'`);
         } else this.next();
     }
 
@@ -291,8 +311,9 @@ class Parser {
         return { line, character: offset - lastNl - 1 };
     }
 
-    error(errorSeverity = DiagnosticSeverity.Error, msg, token) {
-        token = token || this.peek();
+    // ─────────────────────────────────────────────────────────────────────────────────
+    error = (errorSeverity, msg, token) => {
+        token = token || this.curr();
         const s = this.offsetToPos(token.start);
         const e = this.offsetToPos(token.end);
         this.errors.push({
@@ -305,30 +326,31 @@ class Parser {
         });
     }
 
-    warning(msg, token) {
-        token = token || this.peek();
+    warning = (errorSeverity, msg, token) => {
+        token = token || this.curr();
         const s = this.offsetToPos(token.start);
         const e = this.offsetToPos(token.end);
         this.errors.push({
             message: msg,
             range: { start: s, end: e },
-            severity: DiagnosticSeverity.Warning,
+            severity: severity.Warning,
         });
     }
 
+    // ─────────────────────────────────────────────────────────────────────────────────
     // Match a keyword (case-insensitive)
     expectKw(kw) {
-        const t = this.peek();
+        const t = this.curr();
         if ((t.type === TT.KEYWORD || t.type === TT.IDENT) && t.value.toLowerCase() === kw.toLowerCase()) {
             return this.next();
         }
-        this.error(errorSeverity = DiagnosticSeverity.Error, `Expected '${kw}' but found '${t.value}'`, t);
+        this.error(severity.Error, `Expected '${kw}' but found '${t.value}'`, t);
         return null;
     }
 
     // Try to match a keyword without consuming on failure
     tryKw(kw) {
-        const t = this.peek();
+        const t = this.curr();
         if ((t.type === TT.KEYWORD || t.type === TT.IDENT) && t.value.toLowerCase() === kw.toLowerCase()) {
             this.next(); return true;
         }
@@ -336,25 +358,25 @@ class Parser {
     }
 
     isKw(kw) {
-        const t = this.peek();
+        const t = this.curr();
         return (t.type === TT.KEYWORD || t.type === TT.IDENT) && t.value.toLowerCase() === kw.toLowerCase();
     }
 
     isAnyKw(...kws) {
-        const t = this.peek();
+        const t = this.curr();
         if (t.type !== TT.KEYWORD && t.type !== TT.IDENT) return false;
         return kws.some(k => k.toLowerCase() === t.value.toLowerCase());
     }
 
     expect(type, desc) {
-        const t = this.peek();
+        const t = this.curr();
         if (t.type === type) return this.next();
-        this.error(errorSeverity = DiagnosticSeverity.Error, `Expected ${desc || type} but found '${t.value}'`, t);
+        this.error(severity.Error, `Expected ${desc || type} but found '${t.value}'`, t);
         return null;
     }
 
     tryType(type) {
-        if (this.peek().type === type) { this.next(); return true; }
+        if (this.curr().type === type) { this.next(); return true; }
         return false;
     }
 
@@ -373,7 +395,7 @@ class Parser {
     }
     // .parseStatement
     parseStatement() {
-        const t = this.peek();
+        const t = this.curr();
 
         // Skip preprocessor !include "..."! directives
         if (t.type === TT.MACRO ||
@@ -463,7 +485,7 @@ class Parser {
         this.errors.length = errorCount;
 
         // Try file boolean
-        if (this.parseFileBoolean(reportErrors = false)) {
+        if (this.parseFileBoolean(false)) {
             if (this.atEof()) return true;
         }
         this.pos = start;
@@ -482,7 +504,7 @@ class Parser {
         this.errors.length = errorCount;
 
         // Nothing matched
-        this.error(errorSeverity = DiagnosticSeverity.Error, `Unrecognized SCRIPT_FRAGMENT starting with '${this.peek().value}'`);
+        this.error(severity.Error, `Unrecognized SCRIPT_FRAGMENT starting with '${this.curr().value}'`);
         return false;
     }
 
@@ -492,8 +514,8 @@ class Parser {
         this.parseVolumeBoolean();
         while (!this.atEof() && !this.isKw('VolumeActions') && !this.isKw('VolumeEnd')) {
             if (this.isAnyKw('or', 'and') ||
-                this.peek().type === TT.PIPE || this.peek().type === TT.DPIPE ||
-                this.peek().type === TT.AMP || this.peek().type === TT.DAMP) {
+                this.curr().type === TT.PIPE || this.curr().type === TT.DPIPE ||
+                this.curr().type === TT.AMP || this.curr().type === TT.DAMP) {
                 this.next();
                 this.parseVolumeBoolean();
             } else {
@@ -503,7 +525,7 @@ class Parser {
     }
 
     parseVolumeBoolean() {
-        const t = this.peek();
+        const t = this.curr();
         const kw = (t.type === TT.KEYWORD || t.type === TT.IDENT) ? t.value.toLowerCase() : '';
 
         if (t.type === TT.LPAREN) {
@@ -563,12 +585,12 @@ class Parser {
                 this.next();
                 this.expect(TT.LPAREN, '(');
                 if (!this.isAnyKw('ntfs', 'fat', 'fat12', 'fat16', 'fat32')) {
-                    this.error(errorSeverity = DiagnosticSeverity.Error, `Expected filesystem type (NTFS, FAT, FAT12, FAT16, FAT32)`);
+                    this.error(severity.Error, `Expected filesystem type (NTFS, FAT, FAT12, FAT16, FAT32)`);
                 } else this.next();
                 this.expect(TT.RPAREN, ')');
                 break;
             default:
-                this.error(errorSeverity = DiagnosticSeverity.Error, `Unexpected token '${t.value}' in volume boolean`, t);
+                this.error(severity.Error, `Unexpected token '${t.value}' in volume boolean`, t);
                 this.next(); // skip to avoid infinite loop
         }
     }
@@ -576,15 +598,15 @@ class Parser {
     // ── .Parse File Booleans ─────────────────────────────────────────────────────────
 
     parseFileBooleans() {
-        connection.console.log('parseFileBooleans: ' + this.peek().value);
-        this.parseFileBoolean(reportErrors = true);
-        connection.console.log('after first boolean: ' + this.peek().value);
+        connection.console.log('parseFileBooleans: ' + this.curr().value);
+        this.parseFileBoolean(true);
+        connection.console.log('after first boolean: ' + this.curr().value);
         while (!this.atEof() && !this.isKw('FileActions') && !this.isKw('FileEnd') && !this.isKw('VolumeEnd')) {
             if (this.isAnyKw('or', 'and') ||
-                this.peek().type === TT.PIPE || this.peek().type === TT.DPIPE ||
-                this.peek().type === TT.AMP || this.peek().type === TT.DAMP) {
+                this.curr().type === TT.PIPE || this.curr().type === TT.DPIPE ||
+                this.curr().type === TT.AMP || this.curr().type === TT.DAMP) {
                 this.next();
-                this.parseFileBoolean(reportErrors = true);
+                this.parseFileBoolean(true);
             } else {
                 break;
             }
@@ -592,7 +614,7 @@ class Parser {
     }
 
     parseFileBoolean(reportErrors = true) {
-        const t = this.peek();
+        const t = this.curr();
         const kw = (t.type === TT.KEYWORD || t.type === TT.IDENT) ? t.value.toLowerCase() : '';
 
         if (t.type === TT.LPAREN) {
@@ -670,10 +692,10 @@ class Parser {
                 break;
             default:
                 if (reportErrors) {
-                    this.error(errorSeverity = DiagnosticSeverity.Error, `Unexpected token '${t.value}' in file boolean`, t);
+                    this.error(severity.Error, `Unexpected token '${t.value}' in file boolean`, t);
                     this.next();
                 } else {
-                    this.error(errorSeverity = DiagnosticSeverity.Warning, `Unexpected token '${t.value}' in file boolean, continuing...`, t);
+                    this.error(severity.Warning, `Unexpected token '${t.value}' in file boolean, continuing...`, t);
                     this.next();
                 }
         }
@@ -681,7 +703,7 @@ class Parser {
 
     parseFileLocationOption() {
         if (!this.isAnyKw('beginoffile', 'endoffile', 'entirefile', 'anypart', 'anycompletefragment')) {
-            this.error(errorSeverity = DiagnosticSeverity.Error, `Expected file location option`);
+            this.error(severity.Error, `Expected file location option`);
         } else this.next();
     }
 
@@ -700,7 +722,7 @@ class Parser {
     }
 
     parseVolumeAction() {
-        const t = this.peek();
+        const t = this.curr();
         const kw = (t.type === TT.KEYWORD || t.type === TT.IDENT) ? t.value.toLowerCase() : '';
 
         switch (kw) {
@@ -764,7 +786,7 @@ class Parser {
     }
 
     parseFileAction() {
-        const t = this.peek();
+        const t = this.curr();
         const kw = (t.type === TT.KEYWORD || t.type === TT.IDENT) ? t.value.toLowerCase() : '';
 
         switch (kw) {
@@ -832,7 +854,7 @@ class Parser {
     }
 
     parseMakeGapOptions() {
-        if (this.peek().type === TT.COMMA) {
+        if (this.curr().type === TT.COMMA) {
             this.next();
             this.expectKw('DoNotVacate');
         }
@@ -840,7 +862,7 @@ class Parser {
 
     parseAscDesc() {
         if (!this.isAnyKw('ascending', 'descending')) {
-            this.error(errorSeverity = DiagnosticSeverity.Error, `Expected 'Ascending' or 'Descending'`);
+            this.error(severity.Error, `Expected 'Ascending' or 'Descending'`);
         } else this.next();
     }
 
@@ -857,7 +879,7 @@ class Parser {
     // ── .Parse Settings ──────────────────────────────────────────────────────────────
 
     isSetting() {
-        const kw = this.peek().value ? this.peek().value.toLowerCase() : '';
+        const kw = this.curr().value ? this.curr().value.toLowerCase() : '';
         return [
             'message', 'language', 'title', 'windowsize', 'diskmapflip', 'statusbar',
             'zoomlevel', 'setcolor', 'slowdown', 'pause', 'whenfinished', 'otherinstances',
@@ -875,7 +897,7 @@ class Parser {
     }
 
     parseSetting() {
-        const t = this.peek();
+        const t = this.curr();
         const kw = t.value.toLowerCase();
         this.next();
 
@@ -900,7 +922,7 @@ class Parser {
             case 'windowsize':
                 this.expect(TT.LPAREN, '(');
                 if (!this.isAnyKw('fixed', 'minimized', 'maximized', 'invisible', 'restore')) {
-                    this.error(errorSeverity = DiagnosticSeverity.Error, `Expected window size option`);
+                    this.error(severity.Error, `Expected window size option`);
                 } else this.next();
                 this.expect(TT.RPAREN, ')');
                 break;
@@ -944,21 +966,21 @@ class Parser {
             case 'otherinstances':
                 this.expect(TT.LPAREN, '(');
                 if (!this.isAnyKw('ask', 'allow', 'exit', 'kill')) {
-                    this.error(errorSeverity = DiagnosticSeverity.Error, `Expected 'ask', 'allow', 'exit', or 'kill'`);
+                    this.error(severity.Error, `Expected 'ask', 'allow', 'exit', or 'kill'`);
                 } else this.next();
                 this.expect(TT.RPAREN, ')');
                 break;
             case 'batterypower':
                 this.expect(TT.LPAREN, '(');
                 if (!this.isAnyKw('ask', 'allow', 'exit')) {
-                    this.error(errorSeverity = DiagnosticSeverity.Error, `Expected 'ask', 'allow', or 'exit'`);
+                    this.error(severity.Error, `Expected 'ask', 'allow', or 'exit'`);
                 } else this.next();
                 this.expect(TT.RPAREN, ')');
                 break;
             case 'setscreensaver': case 'setscreenpowersaver':
                 this.expect(TT.LPAREN, '(');
                 if (!this.isAnyKw('off', 'reset')) {
-                    this.error(errorSeverity = DiagnosticSeverity.Error, `Expected 'off' or 'reset'`);
+                    this.error(severity.Error, `Expected 'off' or 'reset'`);
                 } else this.next();
                 this.expect(TT.RPAREN, ')');
                 break;
@@ -972,19 +994,19 @@ class Parser {
             case 'processpriority':
                 this.expect(TT.LPAREN, '(');
                 if (!this.isAnyKw('normal', 'belownormal', 'low', 'abovenormal', 'high', 'background')) {
-                    this.error(errorSeverity = DiagnosticSeverity.Error, `Expected process priority`);
+                    this.error(severity.Error, `Expected process priority`);
                 } else this.next();
                 this.expect(TT.RPAREN, ')');
                 break;
             case 'setvariable':
                 this.expect(TT.LPAREN, '(');
                 // variable name
-                if (this.peek().type !== TT.IDENT && this.peek().type !== TT.KEYWORD) {
-                    this.error(errorSeverity = DiagnosticSeverity.Error, `Expected variable name`);
+                if (this.curr().type !== TT.IDENT && this.curr().type !== TT.KEYWORD) {
+                    this.error(severity.Error, `Expected variable name`);
                 } else this.next();
                 this.expect(TT.COMMA, ',');
                 // value can be number or string
-                if (this.peek().type === TT.STRING) {
+                if (this.curr().type === TT.STRING) {
                     this.next();
                 } else {
                     this.parseNumber();
@@ -992,7 +1014,7 @@ class Parser {
                 this.expect(TT.RPAREN, ')');
                 break;
             default:
-                this.error(errorSeverity = DiagnosticSeverity.Error, `Unknown setting '${t.value}'`, t);
+                this.error(severity.Error, `Unknown setting '${t.value}'`, t);
         }
     }
 
@@ -1014,29 +1036,29 @@ class Parser {
             this.tryKw('Forced');
             return;
         }
-        this.error(errorSeverity = DiagnosticSeverity.Error, `Expected WhenFinished option`);
+        this.error(severity.Error, `Expected WhenFinished option`);
     }
 
     // ── .Parse Color Features ───────────────────────────────────────────────────
 
     parseColorName() {
         if (!this.isAnyKw('empty', 'allocated', 'busyread', 'busywrite', 'text')) {
-            this.error(errorSeverity = DiagnosticSeverity.Error, `Expected color name`);
+            this.error(severity.Error, `Expected color name`);
         } else this.next();
     }
 
     parseFileColorBooleans() {
         this.parseFileColorBoolean();
         while (this.isAnyKw('or', 'and') ||
-            this.peek().type === TT.PIPE || this.peek().type === TT.DPIPE ||
-            this.peek().type === TT.AMP || this.peek().type === TT.DAMP) {
+            this.curr().type === TT.PIPE || this.curr().type === TT.DPIPE ||
+            this.curr().type === TT.AMP || this.curr().type === TT.DAMP) {
             this.next();
             this.parseFileColorBoolean();
         }
     }
 
     parseFileColorBoolean() {
-        const t = this.peek();
+        const t = this.curr();
         if (t.type === TT.LPAREN) {
             this.next();
             this.parseFileColorBooleans();
@@ -1053,7 +1075,7 @@ class Parser {
         if (this.isAnyKw('fragmented', 'movable', 'selected', 'processed', 'all')) {
             this.next(); return;
         }
-        this.error(errorSeverity = DiagnosticSeverity.Error, `Unexpected token '${t.value}' in file color boolean`, t);
+        this.error(severity.Error, `Unexpected token '${t.value}' in file color boolean`, t);
         this.next();
     }
 
@@ -1061,8 +1083,8 @@ class Parser {
 
     parseNumber() {
         this.parseMultiplyDivide();
-        while (this.peek().type === TT.PLUS ||
-            (this.peek().type === TT.DASH && this.peek().value === '-')) {
+        while (this.curr().type === TT.PLUS ||
+            (this.curr().type === TT.DASH && this.curr().value === '-')) {
             this.next();
             this.parseMultiplyDivide();
         }
@@ -1070,9 +1092,9 @@ class Parser {
 
     parseMultiplyDivide() {
         this.parseValue();
-        while (this.peek().type === TT.STAR ||
-            this.peek().type === TT.SLASH ||
-            this.peek().type === TT.PERCENT) {
+        while (this.curr().type === TT.STAR ||
+            this.curr().type === TT.SLASH ||
+            this.curr().type === TT.PERCENT) {
             this.next();
             this.parseValue();
         }
@@ -1084,7 +1106,7 @@ class Parser {
             'kb', 'mb', 'gb', 'tb', 'pb', 'eb', 'zb', 'yb',
             'ki', 'mi', 'gi', 'ti', 'pi', 'ei', 'zi', 'yi',
         ];
-        const t = this.peek();
+        const t = this.curr();
         if ((t.type === TT.KEYWORD || t.type === TT.IDENT) &&
             multiples.includes(t.value.toLowerCase())) {
             this.next();
@@ -1093,7 +1115,7 @@ class Parser {
 
     parseNumbers() {
         this.parseNumber();
-        while (this.peek().type === TT.COMMA) {
+        while (this.curr().type === TT.COMMA) {
             this.next();
             this.parseNumber();
         }
@@ -1101,7 +1123,7 @@ class Parser {
 
     // ── .Parse Values ───────────────────────────────────────────────────────────────
     parseValue() {
-        const t = this.peek();
+        const t = this.curr();
 
         if (t.type === TT.NUMBER) {
             this.next();
@@ -1119,10 +1141,10 @@ class Parser {
         if (t.type === TT.DASH) {
             this.next();
             // negative variable
-            if (this.peek().type === TT.IDENT || this.peek().type === TT.KEYWORD) {
+            if (this.curr().type === TT.IDENT || this.curr().type === TT.KEYWORD) {
                 this.next();
             } else {
-                this.error(errorSeverity = DiagnosticSeverity.Error, `Expected variable after '-'`);
+                this.error(severity.Error, `Expected variable after '-'`);
             }
             return;
         }
@@ -1158,7 +1180,7 @@ class Parser {
             return;
         }
 
-        this.error(errorSeverity = DiagnosticSeverity.Error, `Expected number or variable but found '${t.value}'`, t);
+        this.error(severity.Error, `Expected number or variable but found '${t.value}'`, t);
         this.next();
     }
 
@@ -1166,7 +1188,7 @@ class Parser {
     // ── .Parse Strings ───────────────────────────────────────────────────────────────
     parseStrings() {
         this.expect(TT.STRING, 'string');
-        while (this.peek().type === TT.COMMA) {
+        while (this.curr().type === TT.COMMA) {
             this.next();
             this.expect(TT.STRING, 'string');
         }
@@ -1175,8 +1197,8 @@ class Parser {
     // ── . Parse DateTime ──────────────────────────────────────────────────────────────
     parseDateTime() {
         // Empty is valid — return if next token is ) or ,
-        if (this.peek().type === TT.RPAREN ||
-            this.peek().type === TT.COMMA) return;
+        if (this.curr().type === TT.RPAREN ||
+            this.curr().type === TT.COMMA) return;
         // now
         if (this.tryKw('now')) return;
 
@@ -1185,17 +1207,17 @@ class Parser {
         this.parseValue();
 
         // Check for date separators / or -
-        if (this.peek().type === TT.SLASH || this.peek().type === TT.DASH) {
+        if (this.curr().type === TT.SLASH || this.curr().type === TT.DASH) {
             this.next(); this.parseValue();
-            if (this.peek().type === TT.SLASH || this.peek().type === TT.DASH) {
+            if (this.curr().type === TT.SLASH || this.curr().type === TT.DASH) {
                 this.next(); this.parseValue();
             }
         }
 
         // Check for time hh:mm:ss
-        if (this.peek().type === TT.COLON) {
+        if (this.curr().type === TT.COLON) {
             this.next(); this.parseValue();
-            if (this.peek().type === TT.COLON) {
+            if (this.curr().type === TT.COLON) {
                 this.next(); this.parseValue();
             }
         }
@@ -1209,44 +1231,50 @@ class Parser {
         this.tryKw('AGO');
     }
 }
-
-
-// =============================================================================
-// .Parse VALIDATE DOCUMENT ───────────────────────────────────────────────────────────
-// =============================================================================
-
-let parserState;
+//#endregion
+// ─────────────────────────────────────────────────────────────────────────────────
+//#region .Parse VALIDATE DOCUMENT ───────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────────
 async function validateDocument(document) {
-    const filePath = URI.parse(document.uri).fsPath;
-    const ext = path.extname(filePath).toLowerCase();
-    const text = document.getText();
-    const diagnostics = [];
-    try {
+    try { // ── Validate Document ─────────────────────────────────────────────────────────
+        const filePath = fileURLToPath(document.uri);
+        const ext = path.extname(filePath).toLowerCase();
+        const text = document.getText();
+        const diagnostics = [];
+        const log = {
+            appendLine: (...args) => console.log(...args),
+            append: (...args) => process.stdout.write(args.join('')),
+            show: () => { }
+        };
+        Logger.info(`MYDC SERVER ACTIVATED for ${filePath}`);
+
         switch (ext) {
-            case '.mydc':
-                parserState = ParseState.SCRIPT_FULL;
+            case '.mydfrg':
+                parserState = parseState.SCRIPT_FULL;
                 break;
             case '.myd':
-                parserState = ParseState.SCRIPT_FRAGMENT;
+                parserState = parseState.SCRIPT_FRAGMENT;
                 break;
             default:
-                parserState = ParseState.SCRIPT_UNKNOWN;
+                parserState = parseState.SCRIPT_UNKNOWN;
                 break;
         }
 
         const tokens = tokenize(text);
 
         // First attempt: full script
+        let parser;
+        let fragParser;
         let bestParser = new Parser(tokens, text, parserState);
-        if (parserState !== ParseState.SCRIPT_FRAGMENT) {
-            const parser = new Parser(tokens, text, parserState);
+        if (parserState !== parseState.SCRIPT_FRAGMENT) {
+            parser = new Parser(tokens, text, parserState);
             parser.parseStatements();
             bestParser = parser;
         }
         // If full-script parse failed, try fragment mode
-        let parserState = parseState.SCRIPT_FRAGMENT
+        parserState = parseState.SCRIPT_FRAGMENT
         if (!bestParser.atEof() || bestParser.errors.length > 0) {
-            const fragParser = new Parser(tokens, text, parserState);
+            fragParser = new Parser(tokens, text, parserState);
             fragParser.parseFragment();
             // Choose the parser with fewer errors
             if (
@@ -1257,22 +1285,22 @@ async function validateDocument(document) {
         }
 
         parser = bestParser;
-        let parserState = bestParser.state;
+        parserState = bestParser.state;
         // Report any remaining tokens as unexpected
         if (!bestParser.atEof()) {
-            const t = bestParser.peek();
+            const t = bestParser.curr();
             if (bestParser.state === parseState.SCRIPT_FRAGMENT) {
-                warn(`Unexpected token '${t.value}' — fragment may be incomplete`, t);
+                bestParser.warning(severity.Warning, `Unexpected token '${t.value}' — fragment may be incomplete`, t);
             } else {
-                error(`Unexpected token '${t.value}' — expected end of file`, t);
+                bestParser.error(severity.Error, `Unexpected token '${t.value}' — expected end of file`, t);
             }
         }
 
-        for (const err of bestParser.errors) {
+        for (const errResult of bestParser.errors) {
             diagnostics.push({
-                severity: err.severity,
-                range: err.range,
-                message: err.message,
+                severity: errResult.severity,
+                range: errResult.range,
+                message: errResult.message,
                 source: 'MyDefrag',
             });
         }
@@ -1281,18 +1309,35 @@ async function validateDocument(document) {
         connection.console.error('Parser exception: ' + e.message);
     }
 
-    connection.sendNotification('mydc/parserState', { uri: document.uri, state: parserState });
+    connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
 
     connection.sendDiagnostics({
         uri: document.uri,
         diagnostics
     });
 }
-
-// =============================================================================
-// .Parse On Completion and Hover ──────────────────────────────────────────────────────
+//#endregion
+// ─────────────────────────────────────────────────────────────────────────────────
+//#region .Parse connection Management.
+//  On Completion and Hover ──────────────────────────────────────────────────────
 // (ToDo On Completion and Hover are stubs for now)
-// =============================================================================
+// ─────────────────────────────────────────────────────────────────────────────────
+
+connection.onInitialize(() => {
+    return {
+        capabilities: {
+            textDocumentSync: TextDocumentSyncKind.Incremental,
+            completionProvider: { resolveProvider: true },
+            hoverProvider: true,
+            definitionProvider: true,
+            referencesProvider: true,
+        }
+    };
+});
+
+connection.onInitialized(() => {
+    connection.console.log('MyDefrag Language Server initialized');
+});
 
 connection.onCompletion(() => {
     return [];
@@ -1302,6 +1347,26 @@ connection.onHover(() => {
     return null;
 });
 
+connection.onInitialized(() => {
+    // Request the client to watch all MyDefrag files
+    connection.client.register(
+        require('vscode-languageserver/node').DidChangeWatchedFilesNotification.type,
+        {
+            watchers: [
+                { globPattern: '**/*.MyDc' },
+                { globPattern: '**/*.MyD' }
+            ]
+        }
+    );
+    connection.console.log('MyDefrag Language Server initialized');
+});
+
+connection.onDidChangeWatchedFiles(() => {
+    // Re-validate all open documents when files change
+    documents.all().forEach(validateDocument);
+});
+//#endregion
+// .Parse Server Open Document and Connection ──────────────────────────────────────────────────────────────
 documents.listen(connection);
 connection.listen();
 // .Parse END of document ──────────────────────────────────────────────────────────────

@@ -1,6 +1,6 @@
 {
     "name": "MyDefrag Script",
-    "scopeName": "source.mydc",
+    "scopeName": "source.mydfrg",
     "fileTypes": [
         "MyDc",
         "MyD"
@@ -56,7 +56,7 @@
         "macros": {
             "patterns": [
                 {
-                    "name": "constant.other.macro.mydc",
+                    "name": "constant.other.macro.mydfrg",
                     "match": "!\\w+!"
                 }
             ]
@@ -64,11 +64,11 @@
         "preprocessor": {
             "patterns": [
                 {
-                    "name": "meta.preprocessor.include.mydc",
+                    "name": "meta.preprocessor.include.mydfrg",
                     "match": "!include\\s+\"[^\"]*\"!",
                     "captures": {
                         "0": {
-                            "name": "keyword.control.include.mydc"
+                            "name": "keyword.control.include.mydfrg"
                         }
                     }
                 }
@@ -80,13 +80,13 @@
                     "begin": "\\b(SetVariable)\\s*\\(\\s*",
                     "beginCaptures": {
                         "1": {
-                            "name": "keyword.other.setting.mydc"
+                            "name": "keyword.other.setting.mydfrg"
                         }
                     },
                     "end": "(?=[,)])",
                     "patterns": [
                         {
-                            "name": "variable.other.mydc",
+                            "name": "variable.other.mydfrg",
                             "match": "\\w+"
                         }
                     ]
@@ -96,21 +96,21 @@
         "comments": {
             "patterns": [
                 {
-                    "name": "comment.line.number-sign.mydc",
+                    "name": "comment.line.number-sign.mydfrg",
                     "match": "^\\s*#.*$"
                 },
                 {
-                    "name": "comment.block.mydc",
+                    "name": "comment.block.mydfrg",
                     "begin": "/\\*",
                     "end": "\\*/"
                 },
                 {
-                    "name": "comment.line.double-slash.mydc",
+                    "name": "comment.line.double-slash.mydfrg",
                     "begin": "//",
                     "end": "$"
                 },
                 {
-                    "name": "comment.line.number-sign.preview.mydc",
+                    "name": "comment.line.number-sign.preview.mydfrg",
                     "begin": "^(?:\\s*\\|\\s*\\d*\\s*)*\\s*#",
                     "end": "$",
                     "patterns": []
@@ -120,39 +120,39 @@
         "strings": {
             "patterns": [
                 {
-                    "name": "string.quoted.single.mydc",
+                    "name": "string.quoted.single.mydfrg",
                     "begin": "'",
                     "end": "'",
                     "patterns": [
                         {
-                            "name": "meta.preprocessor.include.mydc",
+                            "name": "meta.preprocessor.include.mydfrg",
                             "match": "!include\\s+\"[^\"]*\"!"
                         },
                         {
-                            "name": "constant.other.macro.mydc",
+                            "name": "constant.other.macro.mydfrg",
                             "match": "!\\w+!"
                         }
                     ]
                 },
                 {
-                    "name": "string.quoted.double.mydc",
+                    "name": "string.quoted.double.mydfrg",
                     "begin": "\"",
                     "end": "\"",
                     "patterns": [
                         {
-                            "name": "meta.preprocessor.include.mydc",
+                            "name": "meta.preprocessor.include.mydfrg",
                             "match": "!include\\s+\"[^\"]*\"!"
                         },
                         {
-                            "name": "constant.other.macro.mydc",
+                            "name": "constant.other.macro.mydfrg",
                             "match": "!\\w+!"
                         },
                         {
-                            "name": "entity.name.function.shell.mydc",
+                            "name": "entity.name.function.shell.mydfrg",
                             "match": "[^\\\\/\"]+\\.(?:bat|cmd|exe|com)(?=\")",
                             "captures": {
                                 "0": {
-                                    "name": "entity.name.function.shell.mydc"
+                                    "name": "entity.name.function.shell.mydfrg"
                                 }
                             }
                         }
@@ -163,7 +163,7 @@
         "numbers": {
             "patterns": [
                 {
-                    "name": "constant.numeric.mydc",
+                    "name": "constant.numeric.mydfrg",
                     "match": "\\b[0-9]+(\\.[0-9]+)?([KkMmGgTt]i?)?\\b"
                 }
             ]
@@ -171,7 +171,7 @@
         "constants": {
             "patterns": [
                 {
-                    "name": "constant.language.mydc",
+                    "name": "constant.language.mydfrg",
                     "match": "\\b(yes|no|all|SKIP|Ascending|Descending|Fast|WithShuffling|DoNotVacate|ChunkSize|now)\\b"
                 }
             ]
@@ -179,7 +179,7 @@
         "volume_keywords": {
             "patterns": [
                 {
-                    "name": "keyword.control.volume.mydc",
+                    "name": "keyword.control.volume.mydfrg",
                     "match": "\\b(VolumeSelect|VolumeActions|VolumeEnd)\\b"
                 }
             ]
@@ -187,7 +187,7 @@
         "file_keywords": {
             "patterns": [
                 {
-                    "name": "keyword.control.file.mydc",
+                    "name": "keyword.control.file.mydfrg",
                     "match": "\\b(FileSelect|FileActions|FileEnd)\\b"
                 }
             ]
@@ -195,7 +195,7 @@
         "settings": {
             "patterns": [
                 {
-                    "name": "keyword.other.setting.mydc",
+                    "name": "keyword.other.setting.mydfrg",
                     "match": "\\b(Title|Description|Slowdown|MaxRunTime|ExitIfTimeout|WriteLogfile|AppendLogfile|RunScript|RunProgram|SetStatisticsWindowText|ExcludeVolumes|WhenFinished|SetScreenSaver|SetScreenPowerSaver|PreventScreenSaving|PreventPowerSaving|DismountVolume|PlaceNtfsSystemFiles)\\b"
                 }
             ]
@@ -203,7 +203,7 @@
         "fileactions": {
             "patterns": [
                 {
-                    "name": "support.function.fileaction.mydc",
+                    "name": "support.function.fileaction.mydfrg",
                     "match": "\\b(Defragment|FastDefrag|FastFill|FastFillWithShuffling|SortByName|SortBySize|SortByDate|SortByAccess|SortByCreation|SortByExtension|MoveToEndOfDisk|MoveUpToZone|AddGap|MakeGap|PlaceNtfsSystemFiles)\\b"
                 }
             ]
@@ -211,7 +211,7 @@
         "filebooleans": {
             "patterns": [
                 {
-                    "name": "support.function.fileboolean.mydc",
+                    "name": "support.function.fileboolean.mydfrg",
                     "match": "\\b(Name|Filename|Path|Extension|Directory|ReadOnly|Hidden|System|Archive|Compressed|Encrypted|Temporary|SparseFile|ReparsePoint|NotIndexed|Attribute|MinSize|MaxSize|MinFragments|MaxFragments|CreatedBefore|CreatedAfter|ModifiedBefore|ModifiedAfter|AccessedBefore|AccessedAfter|LastAccess|LastAccessEnabled|SelectNtfsSystemFiles|SelectBootOptimizeFiles|ImportListFromProgramHints|CommandlineVolumes|Remote|Removable|Writable|Mounted|Fixed|Network|CDRom|Ram)\\b"
                 }
             ]
@@ -219,7 +219,7 @@
         "variables": {
             "patterns": [
                 {
-                    "name": "variable.language.mydc",
+                    "name": "variable.language.mydfrg",
                     "match": "\\b(VolumeSize|VolumeFree|VolumeUsed|MftSize|ZoneBegin|ZoneEnd|SystemFilesPosition)\\b"
                 }
             ]
@@ -227,15 +227,15 @@
         "operators": {
             "patterns": [
                 {
-                    "name": "keyword.operator.logical.mydc",
+                    "name": "keyword.operator.logical.mydfrg",
                     "match": "\\b(and|or|not|AND|OR|NOT)\\b"
                 },
                 {
-                    "name": "keyword.operator.arithmetic.mydc",
+                    "name": "keyword.operator.arithmetic.mydfrg",
                     "match": "[+\\-*/]"
                 },
                 {
-                    "name": "keyword.operator.comparison.mydc",
+                    "name": "keyword.operator.comparison.mydfrg",
                     "match": "[<>=]"
                 }
             ]
@@ -243,11 +243,11 @@
         "functions": {
             "patterns": [
                 {
-                    "name": "support.function.math.mydc",
+                    "name": "support.function.math.mydfrg",
                     "match": "\\b(RoundUp|RoundDown|Minimum|Maximum|Percentage)\\b"
                 },
                 {
-                    "name": "keyword.other.time.mydc",
+                    "name": "keyword.other.time.mydfrg",
                     "match": "\\b(days?|hours?|minutes?|weeks?|months?|years?|ago)\\b"
                 }
             ]

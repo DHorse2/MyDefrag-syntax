@@ -44,16 +44,16 @@ Write-Host "Extensions: $ExtensionsPath"
 Write-Host
 
 Copy-Item "$env:APPDATA\VSCodium\User\settings.json" "$env:APPDATA\VSCodium\User\settings.json.bak" -Force
-New-Item -ItemType Directory -Path "$ExtensionsPath\local.mydc-0.1.0" -Force | Out-Null
-# Copy-Item -Path "$PSScriptRoot\*" -Destination "$ExtensionsPath\local.mydc-0.1.0" -Recurse -Force
-Copy-Item -Path "$PSScriptRoot\*" -Destination "$ExtensionsPath\local.mydc-0.1.0" -Recurse -Force -Exclude "Preferences Open User Settings (JSON)", "*.ps1", "*.bat", "temp.txt"
+New-Item -ItemType Directory -Path "$ExtensionsPath\local.mydfrg-0.1.0" -Force | Out-Null
+# Copy-Item -Path "$PSScriptRoot\*" -Destination "$ExtensionsPath\local.mydfrg-0.1.0" -Recurse -Force
+Copy-Item -Path "$PSScriptRoot\*" -Destination "$ExtensionsPath\local.mydfrg-0.1.0" -Recurse -Force -Exclude "Preferences Open User Settings (JSON)", "*.ps1", "*.bat", "temp.txt"
 
 # Read, parse, update, write back
 $settings = Get-Content "$env:APPDATA\VSCodium\User\settings.json" -Raw | ConvertFrom-Json
 $settings | Add-Member -Force -NotePropertyName "editor.tokenColorCustomizations" -NotePropertyValue @{
     textMateRules = @(
-        @{ scope = "constant.other.macro.mydc"; settings = @{ foreground = "#C2EDE7" } },
-        @{ scope = "variable.other.mydc"; settings = @{ foreground = "#4EC9B0" } }
+        @{ scope = "constant.other.macro.mydfrg"; settings = @{ foreground = "#C2EDE7" } },
+        @{ scope = "variable.other.mydfrg"; settings = @{ foreground = "#4EC9B0" } }
     )
 }
 
@@ -61,5 +61,5 @@ $json = $settings | ConvertTo-Json -Depth 10
 [System.IO.File]::WriteAllText("$env:APPDATA\VSCodium\User\settings.json", $json, [System.Text.UTF8Encoding]::new($false))
 
 Write-Host
-Write-Host "Extensions: mydc (local.mydc-0.1.0) updated to $ExtensionsPath"
+Write-Host "Extensions: mydfrg (local.mydfrg-0.1.0) updated to $ExtensionsPath"
 Write-Host

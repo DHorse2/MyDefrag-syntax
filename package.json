@@ -1,11 +1,15 @@
 {
-    "name": "mydc",
+    "name": "mydefrag-syntax",
     "displayName": "MyDefrag Script (.MyDc / .MyD)",
     "description": "Syntax highlighting for MyDefrag scripting language",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "local",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DHorse2/MyDefrag-syntax"
+    },
     "activationEvents": [
-        "onLanguage:mydc"
+        "onLanguage:mydfrg"
     ],
     "engines": {
         "vscode": "^1.0.0"
@@ -16,10 +20,10 @@
     "contributes": {
         "languages": [
             {
-                "id": "mydc",
+                "id": "mydfrg",
                 "aliases": [
                     "MyDefrag Script",
-                    "mydc"
+                    "mydfrg"
                 ],
                 "extensions": [
                     ".MyDc",
@@ -32,14 +36,14 @@
         ],
         "grammars": [
             {
-                "language": "mydc",
-                "scopeName": "source.mydc",
-                "path": "./mydc.tmLanguage.json"
+                "language": "mydfrg",
+                "scopeName": "source.mydfrg",
+                "path": "./syntaxes/mydfrg.tmLanguage.json"
             }
         ],
         "commands": [
             {
-                "command": "mydc.openPreview",
+                "command": "mydfrg.openPreview",
                 "title": "Open Preview"
             },
             {
@@ -50,14 +54,14 @@
         "menus": {
             "editor/title": [
                 {
-                    "command": "mydc.openPreview",
+                    "command": "mydfrg.openPreview",
                     "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd",
                     "group": "navigation"
                 }
             ],
             "editor/title/context": [
                 {
-                    "command": "mydc.openPreview",
+                    "command": "mydfrg.openPreview",
                     "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd",
                     "group": "navigation"
                 }
@@ -69,7 +73,7 @@
             }
         ]
     },
-    "main": "./extension.js",
+    "main": "./client/extension.js",
     "dependencies": {
         "vscode-languageclient": "^9.0.1",
         "vscode-languageserver": "^9.0.1",

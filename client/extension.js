@@ -7,22 +7,56 @@ const vscode = require('vscode');
 const cp = require('child_process');
 // language server
 const { LanguageClient, TransportKind } = require('vscode-languageclient/node');
-const Ini = require('../common/ini')
-const Logger = require('../common/loggerExtension');
-let Client;
-let ParserStateBar;
+const ini = require('../common/ini')
+const logger = require('../common/loggerExtension');
+const { config } = require("process");
+const channelName = 'MyDefrag Syntax';
+var isServer = false;
+var ParserStateBar;
+var diagnostics = [];
 
 // ─────────────────────────────────────────────────────────────────────────────────
-let links = [];
-let batchFileCommandLinks = [];
-let includeLinks = [];
-let fileLinks = [];
-let commandLinks = [];
+var links = [];
+var batchFileCommandLinks = [];
+var includeLinks = [];
+var fileLinks = [];
+var commandLinks = [];
+//#endregion
+// ─────────────────────────────────────────────────────────────────────────────────
+//#region Utility Functions: Escape special regex characters
+function escapeRegex(str) {
+    try {
+        return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    } catch { return null; }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────────
+function findFileWalkingUp(startDir, filePath) {
+    let dir = startDir;
+    const root = path.parse(dir).root; // e.g. "D:\"
+    let directLinkValid = true;
+    let stepsUpward = 0;
+    while (true) {
+        logger.info(`Next candidate: ${dir}, and ${filePath}`); // Debug only
+        const candidate = path.resolve(dir, filePath).replace(/\//g, '\\');
+        if (fs.existsSync(candidate)) {
+            return { foundPath: candidate, directLinkValid, stepsUpward };
+        }
+        // Stop if we've reached the root
+        if (dir === root || dir === path.dirname(dir)) {
+            return { foundPath: null, directLinkValid: false, stepsUpward };
+        }
+        // Walk up one level
+        dir = path.dirname(dir);
+        stepsUpward++
+        directLinkValid = false;
+    }
+}
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
 // Search all .MyDc / .MyD files in the workspace for a regex pattern.
-// Returns an array of vscode.Location objects.
 async function searchWorkspace(pattern) {
+    // Returns an array of vscode.Location objects.
     const locations = [];
 
     // Find every MyDefrag script file on disk
@@ -51,58 +85,85 @@ async function searchWorkspace(pattern) {
 // ─────────────────────────────────────────────────────────────────────────────────
 //#region Extension activate/deactivate .Parse
 async function activate(context) {
+    let iniData;
+    let connection;
+    let extensionConfig;
+    let debugOn;
+    let verboseLevel;
+    let logOn;
+    let referenceRelativePathLevel;
+    let referenceContainsMacrosLevel;
+    let fileReferenceFoundLevel;
+    let fileReferenceNotFoundLevel;
+    let iniErrors;
+    const SCRIPT_DIR = __dirname;
+    const PARENT_DIR = path.dirname(SCRIPT_DIR);
+    // const channelName = 'MyDefrag Syntax';
+    let batLinkDebounceTimer = null;
+    let batLinkDebounceValue = 15000;
+
+    const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
     try { // ---- Initialization ----
-        const isServer = false;
-        const SCRIPT_DIR = __dirname;
-        const channelName = 'MyDefag Syntax';
-        let batLinkDebounceTimer = null;
-        let batLinkDebounceValue = 15000;
-
-        const INI_PATH = path.join(SCRIPT_DIR, "mydefrag-syntax.ini");
-        const {
-            ini,
-            debugOn,
-            verboseLevel,
-            logOn,
-            referenceRelativePathLevel,
-            referenceContainsMacrosLevel,
-            fileReferenceFoundLevel,
-            fileReferenceNotFoundLevel,
-            iniErrors
-        } = Ini.initialize(INI_PATH, channelName, null, Ini.severity.Verbose, null, false);
-
-        const log = vscode.window.createOutputChannel(channelName);
-        const loggedMessages = [];
-        let headingDone = false;
-        Logger.initialize(log, isServer, debugOn, verboseLevel, ini);
-
-        if (iniErrors.length) { Logger.logArrayToConsole(channelName, Ini.severity.Warning, loggedMessages, iniErrors) }
-        Logger.info("MYDC EXTENSION ACTIVATED");
-
-        ParserStateBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
-        ParserStateBar.text = `MyDefrag Uknown document type`;
-        ParserStateBar.show();
-        context.subscriptions.push(ParserStateBar);
-        Logger.dbg(3, `  Debug Path=${INI_PATH}, Debug=${debugOn}`)
-        Logger.dbg(3, `INI_PATH="${INI_PATH}"`);
-        Logger.dbg(3, `main() started`);
+        try { // Ini Init
+            console.log(process.config);
+            extensionConfig = ini.initialize(INI_PATH, channelName, isServer, true, ini.severity.Verbose);
+            ({
+                iniData,
+                debugOn,
+                verboseLevel,
+                logOn,
+                referenceRelativePathLevel,
+                referenceContainsMacrosLevel,
+                fileReferenceFoundLevel,
+                fileReferenceNotFoundLevel,
+                iniErrors
+            } = extensionConfig);
+        } catch (errResult) {
+            const message = `extension.js:activate:ini:initialize Error returned from initialization: ${errResult.message}`;
+            console.error(message);
+            throw new Error(message);
+        }
+        console.log("init done")
+        console.log(`result: ${iniData}`)
+        try { // Logging Channel and Status Bar
+            // ─────────────────────────────────────────────────────────────────────────────────
+            connection = vscode.window.createOutputChannel(channelName);
+            // ─────────────────────────────────────────────────────────────────────────────────
+            const loggedMessages = new Set();
+            let headingDone = false;
+            logger.initialize(connection, isServer, diagnostics, iniData, extensionConfig, debugOn, verboseLevel)
+            if (iniErrors.length) { logger.logArrayToConsole(channelName, ini.severity.Warning, loggedMessages, iniErrors) }
+            console.log(iniData);
+            logger.info("MYDC EXTENSION INITIALIZED");
+            // ─────────────────────────────────────────────────────────────────────────────────
+            ParserStateBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
+            ParserStateBar.text = `MyDefrag Unknown document type`;
+            ParserStateBar.show();
+            context.subscriptions.push(ParserStateBar);
+            logger.dbg(3, `  Debug Path=${INI_PATH}, Debug=${debugOn}`)
+            logger.dbg(3, `INI_PATH="${INI_PATH}"`);
+            logger.dbg(3, `main() started`);
+        } catch (errResult) {
+            const message = `extension.js:activate Unexpected error in Logging Channel and Status Bar initialization: ${errResult.message}`;
+            console.error(message);
+            throw new Error(message);
+        }
+        console.log("Channel, Status Bar done")
     } catch (errResult) {
-        Logger.err(`extension.js:activate Unexpect error activating extension: ${errResult.message}`);
+        const message = `extension.js:activate Unexpected error activating extension: ${errResult.message}`;
+        console.error(message);
+        throw new Error(message);
     }
-
     // ─────────────────────────────────────────────────────────────────────────────────
-    try { // Activate Create, Register ────────────────────────────────────────────────────────────────────────────
-
+    try { // Activate Create, Register ──────────────────────────────────────────────────
         // log
-        log.show(true);
-
+        connection.show(true);
+        // ── Diagnostics ────────────────────────────────────────────────────────────────
         const diagnosticCollection = vscode.languages.createDiagnosticCollection('bat-links');
         context.subscriptions.push(diagnosticCollection);
-
         // ── Link detection and analysis ─────────────────────────────────────────────────
         const linkChangeEmitter = new vscode.EventEmitter();
-
-        // ── Go to Definition ────────────────────────────────────────────────────
+        // ── Go to Definition ──────────────────────────────────────────────────────────────
         // Triggered by F12 or right-click → Go to Definition.
         // Finds the SetVariable(VarName, ...) declaration for the word under cursor.
         const definitionProvider = vscode.languages.registerDefinitionProvider(
@@ -124,8 +185,7 @@ async function activate(context) {
                 }
             }
         );
-
-        // ── Find All References ─────────────────────────────────────────────────
+        // ── Find All References ───────────────────────────────────────────────────────────
         // Triggered by Shift+F12 or right-click → Find All References.
         // Finds every place VarName appears: in SetVariable() and anywhere else it's used.
         const referenceProvider = vscode.languages.registerReferenceProvider(
@@ -144,7 +204,6 @@ async function activate(context) {
                 }
             }
         );
-
         // ── Document Links (Ctrl+Click on includes) ─────────────────────────────
         // Triggered by Ctrl+Click or hovering the path in an !include "..."! line.
         // Resolves the relative path to an absolute URI so VSCodium can open it.
@@ -158,115 +217,117 @@ async function activate(context) {
                     commandLinks = [];
                     let isDuplicate = false;
                     const toZeroBased = (s) => parseInt(s) - 1;
+                    const text = document.getText();
+                    const docLine = (i) => document.lineAt(i);
                     const fullMatch = (match) => match[0];
                     const filePath = (match) => match[1];
                     const line = (match) => toZeroBased(match[2]);
                     const col = (match) => toZeroBased(match[3]);
+                    const currentDir = () => path.dirname(document.uri.fsPath);
+                    const absolutePath = (currentDir, filePath) => path.resolve(document.fileName, filePath);
 
-                    const currentDir = path.dirname(document.uri.fsPath);
-                    const absolutePath = (currentDir, filePath) => path.resolve(currentDir, filePath);
                     // vscode.Uri.file() handles the path correctly on Windows
                     const target = (filePath, line, col) => vscode.Uri.parse(
                         `command:mdm.openFileAtPosition?${encodeURIComponent(
                             JSON.stringify({ path: filePath, line, col })
                         )}`
                     );
-
-
+                    const displayLine = (text, line) => {
+                        try {
+                            console.log(`${text[line]}`);
+                        } catch {
+                            console.error(`Invalid format: line: ${line}, text: ${text}`);
+                        }
+                    }
+                    const displayMatch = (text, range) => {
+                        try {
+                            const line = range.start.line;
+                            const textOut = text[range.start.line + range.start.character, range.end.line + range.end.character];
+                            // const textOut = displayMatch(text, range);
+                            // const textOut2 = `INCLUDE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`;
+                            const message = (`Match found: ${textOut} range[${range.start.line}::${range.start.character}], in line: ${displayLine(text, line)}`);
+                            console.log(message);
+                        } catch {
+                            console.error(`Invalid format: range[${range.start.line}::${range.start.character}], text: ${text}`);
+                        }
+                    }
+                    // ── Document INCLUDE Links ─────────────────────────────
                     const pattern = /!include\s+"([^"]+)"!/g;
-                    const text = document.getText();
                     let match;
                     let linkSet = false;
 
                     while ((match = pattern.exec(text)) !== null) {
                         const includePath = match[1];
-                        Logger.dbg(5, "MATCH:", match[1]); // Debug only
+                        logger.dbg(5, "MATCH:", match[1]); // Debug only
                         const quoteStart = match.index + match[0].indexOf('"') + 1;
                         const start = document.positionAt(quoteStart);
-                        const end = new vscode.Position(i, match.index + fullMatch(match).length);
+                        const end = new vscode.Position(start.line, match.index + fullMatch(match).length);
                         const range = new vscode.Range(start, end);
-
                         // normalize slashes
                         const normalised = includePath.replace(/\\/g, path.sep);
-
                         // resolve relative OR absolute
-                        const absolutePath = path.resolve(currentDir, filePath(match));
-                        const targetUri = vscode.Uri.file(absolutePath);
-                        Logger.dbg(3, `INCLUDE file match: index: ${match.index}, range: ${range}, ${match[0]}, ${match[1]}, ${match}`);
+                        const targetUri = vscode.Uri.file(absolutePath(currentDir, includePath));
+                        logger.dbg(3, `INCLUDE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`);
+
                         isDuplicate = includeLinks.some(link =>
-                            link.range.start.line === match.index &&
+                            link.range.start.line === start.line &&
                             link.range.start.character === start &&
                             link.range.end.character === end
                         );
                         if (!isDuplicate) {
-                            includeLinks.push(new vscode.DocumentLink(range, targetUri));
+                            includeLinks.push(new vscode.DocumentLink(range, target(targetUri, start.line, start)));
                         }
                         linkSet = true;
                     }
-                    Logger.info(`Number of INCLUDE links: ${includeLinks.length}`);
+                    logger.info(`Number of INCLUDE links: ${includeLinks.length}`);
 
+                    // ── Document FILE Links ─────────────────────────────
                     const lineRe = /file:\/\/\/([^:\s]+):(\d+):(\d+)/g;
                     for (let i = 0; i < document.lineCount; i++) {
-                        const docLine = document.lineAt(i);
+                        const lineText = docLine(i).text;
                         let match;
                         lineRe.lastIndex = 0;
-                        while ((match = lineRe.exec(docLine.text)) !== null) {
-                            // const fullMatch = match[0];
-                            // const filePath = match[1];
-                            // const line = parseInt(match[2]) - 1; // 0-based
-                            // const col = parseInt(match[3]) - 1; // 0-based
-
+                        while ((match = lineRe.exec(lineText)) !== null) {
+                            const includePath = match[1];
                             const start = new vscode.Position(i, match.index);
                             const end = new vscode.Position(i, match.index + fullMatch(match).length);
-                            const absolutePath = path.resolve(currentDir, filePath(match));
-                            // const absolutePath = path.resolve(currentDir, filePath);
-                            // vscode.Uri.file() handles the path correctly on Windows
-                            // const target = vscode.Uri.parse(
-                            //     `command:mdm.openFileAtPosition?${encodeURIComponent(
-                            //         JSON.stringify({ path: filePath, line: docLine, col: col })
-                            //     )}`
-                            // );
-
+                            const range = new vscode.Range(start, end);
+                            const targetUri = vscode.Uri.file(absolutePath(currentDir, includePath));
+                            logger.dbg(3, `FILE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`);
                             isDuplicate = fileLinks.some(link =>
                                 link.range.start.line === i &&
                                 link.range.start.character === start &&
                                 link.range.end.character === end
                             );
-                            if (!isDuplicate) { fileLinks.push(new vscode.DocumentLink(range, target)); }
+                            if (!isDuplicate) { fileLinks.push(new vscode.DocumentLink(range, target(targetUri, i, start))); }
                         }
                     }
-                    Logger.info(`Number of FILE links: ${fileLinks.length}`);
+                    logger.info(`Number of FILE links: ${fileLinks.length}`);
 
+                    // ── Document BATCH/Command Links ─────────────────────────────
                     const execPattern = /\s*"([^"]*\.(?:bat|My\w+|cmd|exe|com)[^"]*)"\s*/gi;
                     while ((match = execPattern.exec(text)) !== null) {
-                        // const filePath = match[1];
+                        const execPath = filePath(match);
                         const quoteStart = text.indexOf('"', match.index) + 1; // skip past opening quote
                         const start = document.positionAt(quoteStart);
-                        const end = document.positionAt(quoteStart + filePath.length);
+                        const end = document.positionAt(quoteStart + execPath.length);
                         const range = new vscode.Range(start, end);
-                        // const absolutePath = path.resolve(currentDir, filePath);
-                        // vscode.Uri.file() handles the path correctly on Windows
-                        // const target = vscode.Uri.parse(
-                        //     `command:mdm.openFileAtPosition?${encodeURIComponent(
-                        //         JSON.stringify({ path: filePath, line, col })
-                        //     )}`
-                        // );
-
+                        const targetUri = vscode.Uri.file(absolutePath(currentDir, execPath));
+                        logger.dbg(3, `BATCH/Command file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`);
                         isDuplicate = commandLinks.some(link =>
-                            link.range.start.line === line &&
+                            link.range.start.line === start.line &&
                             link.range.start.character === start &&
                             link.range.end.character === end
                         );
-                        if (!isDuplicate) { commandLinks.push(new vscode.DocumentLink(range, vscode.Uri.file(absolutePath))); }
+                        if (!isDuplicate) { commandLinks.push(new vscode.DocumentLink(range, target(targetUri, start.line, start))); }
                     }
-                    Logger.info(`Number of BATCH & command links: ${commandLinks.length}`);
-
+                    logger.info(`Number of BATCH & command links: ${commandLinks.length}`);
+                    // Finish 
                     return [...includeLinks, ...fileLinks, ...commandLinks];
                     // return links;
                 }
             }
         );
-
         // ─────────────────────────────────────────────────────────────────────────────────
         //#region Open Preview Provider  ───────────────────────────────────────────────────────
         function generatePreview(sourcePath) {
@@ -274,11 +335,15 @@ async function activate(context) {
                 __dirname,
                 'mydefrag-preprocess.js'
             );
-
-            try { // ── Open Preview Provider  
+            try { // ── Open Preview Provider  ───────────────────────────────────────────────────────
                 const result = cp.spawnSync(
                     process.execPath,
-                    [preprocessScript, sourcePath],
+                    [
+                        preprocessScript,
+                        sourcePath,
+                        '--config',
+                        JSON.stringify(config)
+                    ],
                     {
                         cwd: path.dirname(sourcePath),
                         encoding: 'utf8',
@@ -289,43 +354,49 @@ async function activate(context) {
                 // result.stderr
                 // result.error
                 // result.status
-
-                // Send stderr to OUTPUT window
+                // ─────────────────────────────────────────────────────────────────────────────────
+                // Send stderr to OUTPUT window  ───────────────────────────────────────────────────
                 if (result.stderr.length) {
-                    Logger.err(`Error, in preparing preview summary!`, result.stderr);
+                    logger.err(null, `Error, in preparing preview summary!`, result.stderr);
                 } else {
-                    Logger.info(`Finished preview summary!`)
+                    logger.info(`Finished preview summary!`)
                 }
+                // ─────────────────────────────────────────────────────────────────────────────────
+                // Error Handling  ─────────────────────────────────────────────────────────────────
                 if (result.error) {
-                    const nextMsg = `ERROR: Preview generation failed:\n\n${result.error.message}`;
-                    Logger.err(nextMsg)
-                    return `${nextMsg}`;
+                    const nextMessage = `ERROR: Preview generation failed:\n\n${result.error.msg}`;
+                    logger.err(null, nextMessage)
+                    return `${nextMessage}`;
                 }
+                // ─────────────────────────────────────────────────────────────────────────────────
                 return result.stdout.toString();
+                // ─────────────────────────────────────────────────────────────────────────────────
             } catch (errResult) {
-                const message = `extension.js:activate:generatePreview: Unexpect error Generating Preview of document: ${errResult.message}`;
-                Logger.err(message);
+                const message = `extension.js:activate:generatePreview: Unexpected error Generating Preview of document: ${errResult.message}`;
+                logger.err(errResult, message);
                 return message;
             }
         }
+        // ─────────────────────────────────────────────────────────────────────────────────
+        // ───────────────── MyPreviewProvider ─────────────────────────────────────────────
         class MyPreviewProvider {
             provideTextDocumentContent(uri) {
                 const mergedPath = uri.fsPath;
                 const sourcePath = mergedPath.replace(/\.merged(\.\w+)$/, '$1');
-                Logger.info(`Preview source: ${sourcePath}\n`);
+                logger.info(`Preview source: ${sourcePath}\n`);
                 return generatePreview(sourcePath);
                 // return generatePreview(uri.fsPath);
             }
         }
-
         const previewProvider = new MyPreviewProvider();
+        // ─────────────────────────────────────────────────────────────────────────────────
+        // Text Document Content Provider
         const providerRegistration =
             vscode.workspace.registerTextDocumentContentProvider(
                 'mydfrg-preview',
                 previewProvider
             );
         context.subscriptions.push(providerRegistration);
-
         // ── Open Preview Function ───────────────────────────────────────────────────────
         const openPreviewCommand = vscode.commands.registerCommand(
             'mydfrg.openPreview',
@@ -366,7 +437,7 @@ async function activate(context) {
                 onDidChangeDocumentLinks: linkChangeEmitter.event,
                 provideDocumentLinks(document) {
                     batchFileCommandLinks = [];
-                    const diagnostics = [];
+                    let diagnostics = [];
                     const text = document.getText();
                     const currentDir = path.dirname(document.uri.fsPath);
 
@@ -380,7 +451,7 @@ async function activate(context) {
                     for (const pattern of userExcludes) {
                         // Strip **/ prefix and /** suffix to get the folder/file name
                         const simplified = pattern.replace(/\*\*\//g, '').replace(/\/\*\*/g, '').replace(/\*/g, '');
-                        Logger.info(`relPath ${relPath}, USER pattern}: ${pattern}, simplified: ${simplified}`);
+                        logger.info(`relPath ${relPath}, USER pattern}: ${pattern}, simplified: ${simplified}`);
                         if (simplified && relPath.includes(simplified)) {
                             diagnosticCollection.set(document.uri, []);
                             return [];
@@ -392,7 +463,7 @@ async function activate(context) {
                     for (const pattern of Object.keys(excludes)) {
                         // Strip **/ prefix and /** suffix to get the folder/file name
                         const simplified = pattern.replace(/\*\*\//g, '').replace(/\/\*\*/g, '').replace(/\*/g, '');
-                        Logger.info(`relPath ${relPath},  IDE pattern}: ${pattern}, simplified: ${simplified}`);
+                        logger.info(`relPath ${relPath},  IDE pattern}: ${pattern}, simplified: ${simplified}`);
                         if (simplified && relPath.includes(simplified)) {
                             diagnosticCollection.set(document.uri, []);
                             return [];
@@ -407,7 +478,7 @@ async function activate(context) {
 
                     while ((match = execPattern.exec(text)) !== null) {
                         if (!headingDone) {
-                            Logger.info(headingText + '\n.\n');
+                            logger.info(headingText + '\n.\n');
                             headingDone = true;
                         }
                         const filePath = match[1];
@@ -419,31 +490,31 @@ async function activate(context) {
                         const absoluteUri = vscode.Uri.file(absolutePath);
                         const dir = path.dirname(absolutePath);
                         const base = path.basename(absolutePath);
-                        Logger.dbg(3, `File name is: (`, filePath, `)`);
-                        Logger.info(`BATCH file match: index: ${match.index}, range: ${range}, ${match[0]}, ${match[1]}, ${match}`);
+                        logger.dbg(3, `File name is: (`, filePath, `)`);
+                        logger.info(`BATCH file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`);
                         const lineNum = start.line + 1;
                         const colNum = start.character + 1;
                         const hasMacro = (filePath.match(/!/g) || []).length >= 2;
 
                         // Validate file (and search upward when missing)
                         const { foundPath, directLinkValid, stepsUpward } = findFileWalkingUp(currentDir, filePath);
-                        let batMsg = "No message available";
+                        let batMessage = "No message available";
                         let severity = 4;
                         if (foundPath) {
-                            Logger.dbg(5, ` referenceRelativePathLevel: ${referenceRelativePathLevel}`)
+                            logger.dbg(5, ` referenceRelativePathLevel: ${referenceRelativePathLevel}`)
                             if (!directLinkValid) {
-                                batMsg = `BAT Link: Found in PARENT ${stepsUpward} steps up, possibly invalid.`
+                                batMessage = `BAT Link: Found in PARENT ${stepsUpward} steps up, possibly invalid.`
                                 severity = referenceRelativePathLevel;
                             } else {
-                                batMsg = `${document.uri.fsPath}:${lineNum}:${colNum}: Link target found: ${foundPath}`;
+                                batMessage = `${document.uri.fsPath}:${lineNum}:${colNum}: Link target found: ${foundPath}`;
                                 severity = fileReferenceFoundLevel;
                             }
                         } else {
                             if (hasMacro) {
-                                batMsg = `BAT Link: Contains execution time macros: ${filePath}`;
+                                batMessage = `BAT Link: Contains execution time macros: ${filePath}`;
                                 severity = referenceContainsMacrosLevel;
                             } else {
-                                batMsg = `BAT Link: File not found: ${filePath}`;
+                                batMessage = `BAT Link: File not found: ${filePath}`;
                                 severity = fileReferenceNotFoundLevel;
                             }
                         }
@@ -453,36 +524,36 @@ async function activate(context) {
                         if (thisSeverity > 0) {
                             const diagnostic = new vscode.Diagnostic(
                                 range,
-                                batMsg,
+                                batMessage,
                                 thisSeverity
                             );
                             diagnostics.push(diagnostic);
                         }
                         if (thisSeverity >= 0) {
-                            if (!loggedMessages.has(batMsg)) {
-                                loggedMessages.add(batMsg);
-                                Logger.msg(thisSeverity, batMsg)
-                                // Logger.info(batMsg + '\n.\n');
+                            if (!loggedMessages.has(batMessage)) {
+                                loggedMessages.add(batMessage);
+                                logger.message(thisSeverity, batMessage)
+                                // logger.info(batMessage + '\n.\n');
                             }
                         }
-                        // For debugging only, formmatted for console.log
-                        Logger.dbg(5, '  dir:', dir);
-                        Logger.dbg(5, '  base:', base);
-                        Logger.dbg(5, '  our filename:', base);
-                        Logger.dbg(5, '  currentDir:', currentDir);
-                        Logger.dbg(5, '  absolutePath: (', absolutePath, ')');
-                        Logger.dbg(5, '  absoluteUri:', absoluteUri);
-                        Logger.dbg(6, '      match.index:', match.index);
-                        Logger.dbg(6, '      filePath:', filePath);
-                        Logger.dbg(6, '      quoteStart:', quoteStart);
-                        Logger.dbg(6, '      start:', start);
-                        Logger.dbg(6, '      end:', end);
-                        Logger.dbg(6, '      absolutePath:', absolutePath);
-                        Logger.dbg(6, '      range:', range);
+                        // For debugging only, formatted for console.log
+                        logger.dbg(5, '  dir:', dir);
+                        logger.dbg(5, '  base:', base);
+                        logger.dbg(5, '  our filename:', base);
+                        logger.dbg(5, '  currentDir:', currentDir);
+                        logger.dbg(5, '  absolutePath: (', absolutePath, ')');
+                        logger.dbg(5, '  absoluteUri:', absoluteUri);
+                        logger.dbg(6, '      match.index:', match.index);
+                        logger.dbg(6, '      filePath:', filePath);
+                        logger.dbg(6, '      quoteStart:', quoteStart);
+                        logger.dbg(6, '      start:', start);
+                        logger.dbg(6, '      end:', end);
+                        logger.dbg(6, '      absolutePath:', absolutePath);
+                        logger.dbg(6, '      range:', range);
                         batchFileCommandLinks.push(new vscode.DocumentLink(range, vscode.Uri.file(absolutePath)));
                     }
 
-                    Logger.info(`Number of BATCH FILE internaL command batchFileCommandLinks: ${commandLinks.length}`);
+                    logger.info(`Number of BATCH FILE internaL command batchFileCommandLinks: ${commandLinks.length}`);
                     diagnosticCollection.set(document.uri, diagnostics);
                     return batchFileCommandLinks;
                 }
@@ -490,8 +561,9 @@ async function activate(context) {
         );
         //#endregion
     } catch (errResult) {
-        Logger.err(`extension.js:activate Unexpect error activating extension: ${errResult.message}`);
+        console.error(`extension.js:activate Unexpected error activating extension: ${errResult.message}`);
     }
+    console.log("init done, Creating and Registering Objects")
 
     // ─────────────────────────────────────────────────────────────────────────────────
     // Listen for document changes and fire the emitter
@@ -524,31 +596,19 @@ async function activate(context) {
         documentSelector: [{ scheme: 'file', language: 'mydfrg' }],
         synchronize: {
             fileEvents: vscode.workspace.createFileSystemWatcher('**/*.{MyDc,MyD}')
-        }
+        },
+        configuration: config
     };
 
-    Client = new LanguageClient('mydfrg', 'MyDefrag Language Server', serverOptions, clientOptions);
-    await Client.start();
-
-    Client.onNotification('mydfrg/parseState', params => {
-        const fileName = params.uri ? path.basename(params.uri) : '';
-
-        let stateText = 'Unknown (Not recognized as script)';
-
-        switch (params.state) {
-            case 0:
-            case 'FULL':
-                stateText = 'Full (Complete valid script)';
-                break;
-
-            case 1:
-            case 'FRAGMENT':
-                stateText = 'Fragment (partially complete or an include file)';
-                break;
-        }
-
-        ParserStateBar.text = `MyDefrag File State: ${stateText}${fileName ? ` (${fileName})` : ''}`;
-    });
+    const { LanguageClient } = require('vscode-languageclient/node');
+    const Server = new LanguageClient(
+        'mydfrg',
+        'MyDefrag Language Server',
+        serverOptions,
+        clientOptions
+    );
+    logger.dbg(3, `Starting server ${channelName}`)
+    await Server.start({ logger, iniData, extensionConfig });
 
     // ─────────────────────────────────────────────────────────────────────────────────
     // Push Subscriptions
@@ -558,48 +618,18 @@ async function activate(context) {
     context.subscriptions.push(linkProvider, openCmd);
     context.subscriptions.push(batLinkProvider);
     context.subscriptions.push(docChangeListener, linkChangeEmitter);
-    context.subscriptions.push(Client);
+    context.subscriptions.push(Server);
 
-    connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
+    // connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
 
-    connection.sendDiagnostics({
-        uri: document.uri,
-        diagnostics
-    });
+    // connection.sendDiagnostics({
+    //     uri: document.uri,
+    //     diagnostics
+    // });
 }
-
+// ─────────────────────────────────────────────────────────────────────────────────
 function deactivate() {
-    if (Client) return Client.stop();
-}
-//#endregion
-// ─────────────────────────────────────────────────────────────────────────────────
-// ─────────────────────────────────────────────────────────────────────────────────
-//#region Utility Functions: Escape special regex characters
-function escapeRegex(str) {
-    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-// ─────────────────────────────────────────────────────────────────────────────────
-function findFileWalkingUp(startDir, filePath) {
-    let dir = startDir;
-    const root = path.parse(dir).root; // e.g. "D:\"
-    let directLinkValid = true;
-    let stepsUpward = 0;
-    while (true) {
-        Logger.info(`Next candidate: ${dir}, and ${filePath}`); // Debug only
-        const candidate = path.resolve(dir, filePath).replace(/\//g, '\\');
-        if (fs.existsSync(candidate)) {
-            return { foundPath: candidate, directLinkValid, stepsUpward };
-        }
-        // Stop if we've reached the root
-        if (dir === root || dir === path.dirname(dir)) {
-            return { foundPath: null, directLinkValid: false, stepsUpward };
-        }
-        // Walk up one level
-        dir = path.dirname(dir);
-        stepsUpward++
-        directLinkValid = false;
-    }
+    if (Server) return Server.stop();
 }
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────

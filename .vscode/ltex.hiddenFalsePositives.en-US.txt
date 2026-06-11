@@ -1,0 +1,10 @@
+{"rule":"A_INFINITIVE","sentence":"^\\QCritically, when a script runs, the include directives are inserted into the script recursively creating a merged script.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QUsage: node mydefrag-preprocess.js \\<entryFile\\> outputFile\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QTopic 1 - Using the generic readIni in this and other projects.\\E$"}
+{"rule":"TO_DO_HYPHEN","sentence":"^\\QiniPath ToDo NO\nchannelName ToDo NO\ndebugEnabled ToDo Yes\nverbose ToDo Yes\nlogEnabled ToDo Yes\nuseStrict ToDo Yes\nreferenceRelativePath ToDo Yes\nreferenceContainsMacros ToDo Yes\nreferenceFound ToDo Yes\nreferenceNotFound ToDo Yes\\E$"}
+{"rule":"TO_DO_HYPHEN","sentence":"^\\Qini ToDo\ndebugOn ToDo\nverboseLevel ToDo\nlogOn ToDo\niniErrors ToDo\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QiniPath ToDo NO\nchannelName ToDo NO\ndebugEnabled ToDo Yes\nverbose ToDo Yes\nlogEnabled ToDo Yes\nuseStrict ToDo Yes\nreferenceRelativePath ToDo Yes\nreferenceContainsMacros ToDo Yes\nreferenceFound ToDo Yes\nreferenceNotFound ToDo Yes\\E$"}
+{"rule":"ONE_PLURAL","sentence":"^\\Q0 silent\n1 errors\n2 warnings\n3 information\n4 hint\n5... debug basic with higher values (currently < 10).\\E$"}
+{"rule":"TO_DO_HYPHEN","sentence":"^\\QToDo\\E$"}
+{"rule":"NODE_JS","sentence":"^\\QDownload the LTS release from nodejs.org.\\E$"}
+{"rule":"BED_ENGLISH","sentence":"^\\Qextension.js Extension entry point — registers all providers and commands\nmydefrag-preprocess.js Preprocessor — resolves includes and produces merged output\nsyntaxes Grammar for mydfrg scripts and bat links\nmydfrg.tmLanguage.json TextMate grammar for syntax highlighting\ncommon Extension common or shared\nlogger.js Extension logging of diagnostics, errors, warnings and information.\\E$"}

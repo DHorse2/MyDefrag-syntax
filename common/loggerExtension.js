@@ -3,146 +3,159 @@
 //#region Initialize Initialize loggerExtension.js .Parse
 const fs = require("fs");
 const path = require('path');
-const Ini = require('./ini');
+const utilCommon = require('./util');
+var severity;
 // language server
-let connection; // <- Log
-let debugOn = false;
-let verboseLevel = 0;
-let ini = {}
-let extensionName = "[MyDefrag]"
-let lastSeverity;
-let isServer;
-let severity = Ini.severity;
-let diagnostics = [];
+var connection; // <- Log
+var iniData;
+var extensionConfig;
+var debugOn = false;
+var verboseLevel = 0;
+var extensionName = "[MyDefrag]"
+var lastSeverity;
+var isServer;
+var diagnostics = [];
+var referenceRelativePathLevel;
+var referenceContainsMacrosLevel;
+var fileReferenceFoundLevel;
+var fileReferenceNotFoundLevel;
+var iniErrors = [];
+var loggedMessages;
+
 //#endregion
 // ──────────────────────────────────────────────────────────────────────────
-function initialize(outputChannel, channelDiagnostics = null, isServerRun = false, debugEnabled = false, verbose = 0, inheritIni = {}) {
+function initialize(outputChannel, isServerRun = false, channelDiagnostics = null, inheritIni = null, thisExtensionConfig = null, debugEnabled = false, verbose = 0) {
     try { // ──Logger initialize ─────────────────────────────────────────────────────────────────
         connection = outputChannel;
         isServer = isServerRun;
         debugOn = debugEnabled;
         verboseLevel = verbose;
-        ini = inheritIni;
-        if (ini !== null && ini !== undefined) {
-            if (ini.severity !== null && ini.severity !== undefined) {
-                severity = ini.severity;
+        iniData = inheritIni;
+        if (inheritIni !== null && iniData !== undefined) {
+            iniData = inheritIni;
+            if (inheritIni.severity !== null && inheritIni.severity !== undefined) {
+                severity = iniData.severity;
             } else {
-                // todo error Information severity is not present in ini file
+                const message = `LoggerExtension.js:initialize Unexpected error: INI SEVERITY information not supplied to logger`;
+                iniErrors.push(message);
+                throw new Error(message);
             }
         } else {
-            ini = {};
-            // todo error Error INI file data is not present
+            const message = `LoggerExtension.js:initialize INFORMATION: INI information not supplied to logger`
+            iniErrors.push(message);
+            throw new Error(message);
         }
 
         diagnostics = channelDiagnostics;
         if (diagnostics === null || diagnostics === undefined) { diagnostics = []; } else {
-            // ToDo error Invalid Channel Diagnostic definition
+            console.log(`LoggerExtension.js:initialize Channel Diagnostic logs supplied to logger`);
         }
 
         isServer = isServerRun;
-        if (isServer === null || isServer === undefined) {
-            isServer = true;
-        } else {
-            isServer = true;
-            // todo error Error: IsServer is a true/false value
-        }
+        if (isServer === null || isServer === undefined) { isServer = true; }
+
     } catch (errResult) {
-        // IniFile not found
-        iniErrors.push('Error Opening INI File');
-        return result;
+        const message = `LoggerExtension.js:initialize Unexpected ERROR during initialization: ${errResult.message} `
+        iniErrors.push(message);
+        // return -1001;
+        throw new Error(message);
     }
 }
 // ──────────────────────────────────────────────────────────────────────────
 //#region Functions
-try { // Define Standard Log Functions
-    function logToConsole(thisExtensionName, ...args) {
-        connection?.console.log(` [${thisExtensionName}] ` + args.join(` `));
+// try { // Define Standard Log Functions
+function logToConsole(thisExtensionName, ...args) {
+    let newLineString = "";
+    if (!isServer) { newLineString = `\n`; }
+    const message = ` ${thisExtensionName} ${args.join(' ')}${newLineString}`;
+    if (connection.console !== null && connection.console !== undefined) {
+        connection?.console?.log(message);
+    } else {
+        connection?.append(message);
+        connection?.show();
     }
-    function logToConsole(thisExtensionName, ...args) {
-        connection?.append(` [${thisExtensionName}] ` + args.join(` `) + `\n`); // <- Log
+}
+function dbg(thisSeverity = verboseLevel, ...args) {
+    if (debugOn && thisSeverity <= verboseLevel) { logToConsole(extensionName, `[DEBUG ${thisSeverity}]`, ...args); }
+}
+function err(errResult, ...args) {
+    logToConsole(extensionName, `[ERROR!!!]`, errResult, ...args);
+    lastSeverity = iniData.severity.Error
+}
+function warn(...args) {
+    logToConsole(extensionName, `[WARNING]`, ...args);
+    lastSeverity = iniData.severity.Warning;
+}
+function hint(...args) {
+    logToConsole(extensionName, `[HINT]`, ...args);
+    lastSeverity = iniData.severity.Hint;
+}
+function info(...args) {
+    logToConsole(extensionName, `[INFO]`, ...args);
+    lastSeverity = iniData.severity.Information;
+}
+function message(thisSeverity = iniData.severity.info, ...args) {
+    lastSeverity = thisSeverity;
+    switch (thisSeverity) {
+        case iniData.severity.Error:
+            err(...args);
+            break;
+        case iniData.severity.Warning:
+            warn(...args);
+            break;
+        case iniData.severity.Information:
+            info(...args);
+            break;
+        case iniData.severity.Hint:
+            hint(...args);
+            break;
+        default:
+            info(...args);
+            break;
     }
-    function dbg(severity = verboseLevel, ...args) {
-        if (debugOn && severity >= verboseLevel) { logToConsole(extensionName, `[DEBUG]`, ...args); }
-    }
-    function err(...args) {
-        logToConsole(extensionName, `[ERROR!!!]`, ...args);
-        lastSeverity = severity.Error
-    }
-    function warn(...args) {
-        logToConsole(extensionName, `[WARNING]`, ...args);
-        lastSeverity = severity.Warning;
-    }
-    function hint(...args) {
-        logToConsole(extensionName, `[HINT]`, ...args);
-        lastSeverity = severity.Hint;
-    }
-    function info(...args) {
-        logToConsole(extensionName, `[INFO]`, ...args);
-        lastSeverity = severity.Information;
-    }
-    function msg(severity = severity.info, ...args) {
-        lastSeverity = severity;
-        switch (severity) {
-            case severity.Error:
-                err(...args);
-                break;
-            case severity.Warning:
-                warn(...args);
-                break;
-            case severity.Information:
-                info(...args);
-                break;
-            case severity.Hint:
-                hint(...args);
-                break;
-            default:
-                info(...args);
-                break;
-        }
-    }
-} catch (errResult) {
-    // todo error UNEXPECTED ERROR in Logger Initialization
 }
 //#endregion
 // ──────────────────────────────────────────────────────────────────────────
-function logArrayToConsole(thisExtensionName, thisSeverity = severity.Error, thisLoggedMessages = null, logArray, ...args) {
+function logArrayToConsole(thisExtensionName, thisSeverity = iniData.severity.Error, thisLoggedMessages = null, logArray, ...args) {
     try { // ── Log Array To Console ─────────────────────────────────────────────────────────
-        let loggedMessages;
         if (thisLoggedMessages === null || thisLoggedMessages === undefined) {
             loggedMessages = [];
         } else { loggedMessages = thisLoggedMessages; }
 
         let i = 0;
-        while (i <= logArray.length) {
-            const nextMsg = logArray[i];
+        while (i < logArray.length) {
+            const nextMessage = logArray[i];
             if (i === 0) { err(`INITIALIZATION ERRORS`); }
             if (thisSeverity >= 0) {
-                if (!loggedMessages.has(nextMsg)) {
-                    loggedMessages.add(nextMsg);
-                    msg(thisSeverity, nextMsg);
-                    // Logger.info(nextMsg + '\n.\n');
+                if (!loggedMessages.has(nextMessage)) {
+                    loggedMessages.add(nextMessage);
+                    message(thisSeverity, nextMessage);
+                    // logger.info(nextMessage + '\n.\n');
                 }
             }
-            if (thisSeverity < 0 || thisSeverity > 4) { thisSeverity = severity.Warning }
-            const range = Ini.createRange(1, 1, 1, 1);
+            if (thisSeverity < 0 || thisSeverity > 4) { thisSeverity = iniData.severity.Warning }
+            const range = utilCommon.createRange(1, 1, 1, 1);
             const diagnostic = {
                 severity: thisSeverity,
                 range: range,
-                message: nextMsg,
+                message: nextMessage,
                 source: 'MyDefrag'
             };
             // const diagnostic = new vscode.Diagnostic(
             //     range = new vscode.Range(start, end),
-            //     nextMsg,
+            //     nextMessage,
             //     vscode.severity[thisSeverity]
             // );
             diagnostics.push(diagnostic);
             i++;
         }
     } catch (errResult) {
-        // todo error UNEXPECTED ERROR in Logger FUNCTION Initialization
+        // IniFile processing error
+        // iniErrors.push(`Array processing error logging the Array: ${errResult.message}`);
+        console.error(`Array processing error logging the Array: ${errResult.message}`);
     } finally {
         logArray.length = 0;
+        return;
     }
 }
 // ──────────────────────────────────────────────────────────────────────────
@@ -153,12 +166,8 @@ module.exports = {
     warn,
     info,
     err,
-    msg,
+    message,
     logArrayToConsole,
     lastSeverity,
     connection,
-    debugOn,
-    verboseLevel,
-    ini,
-    isServer
 };

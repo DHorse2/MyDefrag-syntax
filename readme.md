@@ -21,7 +21,7 @@ The MyDefrag Syntax Extension has the expected features:
 
 ### Syntax Highlighting
 
-MyDefrag script files are recognised and coloured automatically. Token colours can be customised via ***editor.tokenColorCustomizations*** in your user settings (the update script applies defaults for macros and variables).
+MyDefrag script files are recognized and colored automatically. Token colors can be customized via ***editor.tokenColorCustomizations*** in your user settings (the update script applies defaults for macros and variables).
 
 ### Go to Definition — F12
 
@@ -76,7 +76,7 @@ Parser modes may automatically change during validation when the detected conten
 
 Open Preview will run the preprocessor on the current file and attempt to create a preview of what MyDefrag will assemble and execute. If successful it opens the merged output beside current tab, similar to the Markdown preview workflow. However, there are two columns for line number. First the current total line processed. Then the current line number within the include directive.
 
-This is used in debugging MyDefrag scripts. Critically, when a script runs the include directives are inserted into the script recursively creating a merged script. Errors reported use the total (merged) line number, and not the actual (script) line number.
+This is used in debugging MyDefrag scripts. Critically, when a script runs, the include directives are inserted into the script recursively creating a merged script. Errors reported use the total (merged) line number, and not the actual (script) line number.
 
 Trigger via either:
 
@@ -103,7 +103,7 @@ The scripting language has serious limitations. MyDefrag scripts use a declarati
 
 This extension was developed for (and used to maintain) the TaylorDo Disk Optimizer application. The system is implemented using MyDefrag scripts and consists of over 800 script fragments organized using a hierarchical, science-based methodology designed around the constraints of a declarative, feature-limited scripting language.
 
-Whereas custom scripts created by users tend to number from 1 to several these are all very small, managable code bases. MyDefrag is extremely hard to debug making agile development methodology extremely useful in tracking down errors. This is similarly true of Git change tracking.
+Whereas custom scripts created by users tend to number from 1 to several these are all very small, manageable code bases. MyDefrag is extremely hard to debug making agile development methodology extremely useful in tracking down errors. This is similarly true of Git change tracking.
 
 ### Solution
 
@@ -168,7 +168,7 @@ The script:
 
 1. Locates your VSCodium installation and extensions folder automatically
 2. Creates / updates ***local.mydfrg-0.1.0*** in the extensions folder
-3. Backs up and patches your user ***settings.json*** with the default token colour rules
+3. Backs up and patches your user ***settings.json*** with the default token color rules
 
 After running, restart VSCodium for changes to take effect.
 
@@ -182,8 +182,7 @@ After running, restart VSCodium for changes to take effect.
 | mydfrg.tmLanguage.json | TextMate grammar for syntax highlighting |
 | common | Extension common or shared |
 | logger.js | Extension logging of diagnostics, errors, warnings and information. |
-| configuration | Extension configuration and package |
-| package.json | Extension manifest |
+| configuration | Extension configuration and package.json (Extension manifest) |
 | language-configuration.json | Bracket / comment / autoclosing rules |
 | scripts | Commands for mydfrg scripts and bat links |
 | mydefrag-preprocess.ps1 | PowerShell wrapper for the preprocessor |
@@ -196,7 +195,7 @@ After running, restart VSCodium for changes to take effect.
 
 ## File Types
 
-| Extension | Recognised as |
+| Extension | Recognized as |
 | --- | --- |
 | .MyD | MyDefrag Script |
 | .myd | MyDefrag Script |
@@ -209,8 +208,8 @@ After running, restart VSCodium for changes to take effect.
 
 ### Open design
 
-These values are important depending on the project context and methodology (paradigm/desigh pattern).
-With resonable defaults the usage and meaning of realitve paths varies.
+These values are important depending on the project context and methodology (paradigm/design pattern).
+With reasonable defaults the usage and meaning of relative paths varies.
 ***Defaults:***
 
 | Key | Value |
@@ -220,8 +219,8 @@ With resonable defaults the usage and meaning of realitve paths varies.
 | fileReferenceFoundLevel | Information |
 | fileReferenceNotFoundLevel | Error |
 
-The ambiguos presence of macros (variables) in paths might have different importance.
-File found/Not found can be independently handled. The regular defaults can be overriden by *mode="strict"*.
+The ambiguous presence of macros (variables) in paths might have different importance.
+File found/Not found can be independently handled. The regular defaults can be overridden by *mode="strict"*.
 ***Strict mode has these defaults:***
 
 | Key | Value |
@@ -240,14 +239,16 @@ There are two ways to add to built in .ini file. The quickest way is directly (i
 ```json
 // place your ini value substitution mappings here (quick)
 // const inlineIniMap = {
-    // maxVerbose is a synonym fo 7 (it isn't)
+    // maxVerbose is a synonym for 7 (it isn't)
     maxVerbose: 7,
     // allow 12 to be used
     // 12: "12"
 // };
 ```
 
-### Starndard INI file usage
+### Standard INI file usage
+
+#### Overview
 
 A more robust, standardized approach is to edit the "channelName+`Map.ini`" (so the MyDefrag LanguageMap.ini) file and add your ini settings there. channelName (in OUTPUT) is passed to initialization and used throughout the language server.
 
@@ -277,11 +278,45 @@ Initialization provides several outputs:
 | debugOn | ToDo |
 | verboseLevel | ToDo |
 | logOn | ToDo |
-| referenceRelativePathLevel | ToDo |
-| referenceContainsMacrosLevel | ToDo |
-| fileReferenceFoundLevel | ToDo |
-| fileReferenceNotFoundLevel | ToDo |
 | iniErrors | ToDo |
+
+#### Reporting and Analysis Options
+
+These settings control how file references are analyzed and reported. The most appropriate values depend on the project's structure, coding standards, and development methodology.
+
+The default configuration provides a balanced set of diagnostics suitable for both basic and complex projects:
+
+| Setting                        | Default Severity |
+| ------------------------------ | ---------------- |
+| `referenceRelativePathLevel`   | Warning          |
+| `referenceContainsMacrosLevel` | Hint             |
+| `fileReferenceFoundLevel`      | Information      |
+| `fileReferenceNotFoundLevel`   | Error            |
+
+**`referenceRelativePathLevel`**
+Controls the severity reported when a relative path is encountered. Some projects encourage relative paths, while others require fully qualified paths.
+
+**`referenceContainsMacrosLevel`**
+Controls the severity reported when a file reference contains macros or variables. Depending on the project, macro-based paths may be expected, discouraged, or prohibited.
+
+**`fileReferenceFoundLevel`**
+Controls the severity reported when a referenced file is successfully located. This can be useful for informational diagnostics and troubleshooting.
+
+**`fileReferenceNotFoundLevel`**
+Controls the severity reported when a referenced file cannot be found. In most cases, this should remain set to **Error**.
+
+These settings can be customized independently. For example, a project may treat unresolved file references as errors while only reporting the use of macros or relative paths as informational messages.
+
+When `mode=strict` is enabled, these settings are overridden with a predefined set of strict validation rules:
+
+| Setting                        | Strict Mode Severity |
+| ------------------------------ | -------------------- |
+| `referenceRelativePathLevel`   | Error                |
+| `referenceContainsMacrosLevel` | Warning              |
+| `fileReferenceFoundLevel`      | Information          |
+| `fileReferenceNotFoundLevel`   | Error                |
+
+Strict mode is recommended when all file references must be fully validated and potential path ambiguities should be treated as diagnostic issues.
 
 ### Logger features
 
@@ -295,7 +330,7 @@ module.exports = {
     warn,
     info,
     err,
-    msg
+    message
 };
 ```
 

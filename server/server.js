@@ -12,44 +12,93 @@ const {
 const { TextDocument } = require('vscode-languageserver-textdocument');
 const path = require('path');
 const console = require('console');
-const { URI } = require('vscode-languageserver/node');
+// const { URI } = require('vscode-languageserver/node');
 // const URI = require('vscode-uri').URI;
 const { URL, fileURLToPath, pathToFileURL } = require('url');
-let parserState;
+const { start } = require('repl');
 const SCRIPT_DIR = __dirname;
-const channelName = 'MyDefrag Language Validation';
-const INI_PATH = path.join(SCRIPT_DIR, "mydefrag-syntax.ini");
+const PARENT_DIR = path.dirname(SCRIPT_DIR);
+const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
+
+const channelName = 'MyDefrag Issues';
+const isServer = true;
+var Options;
+var extensionConfig;
+var parserState;
 const connection = createConnection(ProposedFeatures.all);
 const documents = new TextDocuments(TextDocument);
-// const connection = createConnection(ProposedFeatures.all);
-const Logger = require('../common/loggerServer');
-const Ini = require('../common/ini')
-const channelName = 'MyDefrag Issues';
+var diagnostics = [];
+var logger; // = require('../common/loggerExtension');
+const ini = require('../common/ini')
+var iniData = {};
+var debugOn = false;
+var verboseLevel = 1;
+var logOn = true;
+var strictMode = false;
+var referenceRelativePathLevel = 2;
+var referenceContainsMacrosLevel = 3;
+var fileReferenceFoundLevel = 3;
+var fileReferenceNotFoundLevel = 1;
+// ─────────────────────────────────────────────────────────────────────────────────
 
-const {
-    ini,
-    debugOn,
-    verboseLevel,
-    logOn,
-    referenceRelativePathLevel,
-    referenceContainsMacrosLevel,
-    fileReferenceFoundLevel,
-    fileReferenceNotFoundLevel,
-    iniErrors
-} = Ini.initialize(INI_PATH, channelName, null, Ini.severity.Verbose, null, false);
+function start({ thisLogger, thisIni, thisExtensionConfig }) {
+    logger.info("Server starting...");
+    logger = thisLogger;
+    iniData = thisIni;
+    extensionConfig = thisExtensionConfig;
+    // all server logic here
+    ({
+        iniData,
+        debugOn,
+        verboseLevel,
+        logOn,
+        referenceRelativePathLevel,
+        referenceContainsMacrosLevel,
+        fileReferenceFoundLevel,
+        fileReferenceNotFoundLevel,
+        iniErrors
+    } = extensionConfig);
+}
 
-const isServer = true;
-Logger.initialize(connection, isServer, debugOn, verboseLevel, ini);
-if (iniErrors.length) { Logger.logArrayToConsole(channelName, iniErrors) }
+function createServer({ logger, iniData, extensionConfig }) {
+    try { // createServer top
+        ({
+            iniData,
+            debugOn,
+            verboseLevel,
+            logOn,
+            referenceRelativePathLevel,
+            referenceContainsMacrosLevel,
+            fileReferenceFoundLevel,
+            fileReferenceNotFoundLevel,
+            iniErrors
+        } = extensionConfig);
+
+        return {
+            start({ thisLogger, thisIni, thisExtensionConfig }) {
+                logger.info("Server starting...");
+                logger = thisLogger;
+                iniData = thisIni;
+                extensionConfig = thisExtensionConfig;
+                // all server logic here
+                // validateDocument(document);
+                connection.onDidChangeWatchedFiles();
+            }
+        };
+    } catch (errResult) {
+        const message = `server.js:createServer CRITICAL ERROR creating language server: ${errResult.message}`;
+        throw new Error(message);
+    }
+}
 //#endregion
 //#region Events for server
 documents.onDidChangeContent(change => {
-    connection.console.log('MyDefrag document changed');
+    console?.log('MyDefrag document changed');
     validateDocument(change.document);
 });
 
 documents.onDidOpen(change => {
-    connection.console.log('MyDefrag document opened');
+    console?.log('MyDefrag document opened');
     validateDocument(change.document);
 });
 
@@ -116,7 +165,7 @@ const KEYWORDS = new Set([
     'placentfssystemfiles', 'addgap',
     'chunksize', 'fast', 'withshuffling', 'donotvacate',
     'ascending', 'descending', 'skipblock',
-    'message', 'language', 'title', 'windowsize', 'diskmapflip', 'statusbar',
+    'msg', 'language', 'title', 'windowsize', 'diskmapflip', 'statusbar',
     'zoomlevel', 'slowdown', 'pause', 'whenfinished', 'otherinstances',
     'runscript', 'runprogram', 'batterypower', 'setscreensaver', 'setscreenpowersaver',
     'filemovechunksize', 'debug', 'writelogfile', 'appendlogfile',
@@ -258,9 +307,9 @@ function tokenize(text) {
             }
         } catch (errResult) {
             // tokenize ERROR
-            Logger.err(`writeFileSync ERROR writing output: ${errResult.message}`);
+            logger.err(errResult, `writeFileSync ERROR writing output: ${errResult.message}`);
             // iniErrors.push('unexpected error in tokenize text');
-            return result;
+            return tokens;
         }
     }
     // ─────────────────────────────────────────────────────────────────────────────────
@@ -285,10 +334,10 @@ class Parser {
         this.state = state;
         this.pos = 0;
         this.errors = [];
-        // todo Logger.dbg("stuff")
+        // todo logger.dbg("stuff")
     }
 
-    peek() { return this.curr[this.pos]; }
+    peek() { return this.curr(); }
     curr() { return this.tokens[this.pos]; }
     next() { return this.tokens[this.pos++]; }
     prev() { return this.tokens[this.pos - 1]; }
@@ -298,7 +347,7 @@ class Parser {
     // Yes or No?
     parseYesNo() {
         if (!this.isAnyKw('yes', 'no')) {
-            this.error(severity.Error, `Expected 'yes' or 'no'`);
+            this.error(iniData.severity.Error, `Expected 'yes' or 'no'`);
         } else this.next();
     }
 
@@ -312,28 +361,28 @@ class Parser {
     }
 
     // ─────────────────────────────────────────────────────────────────────────────────
-    error = (errorSeverity, msg, token) => {
+    error = (errorSeverity, message, token) => {
         token = token || this.curr();
         const s = this.offsetToPos(token.start);
         const e = this.offsetToPos(token.end);
         this.errors.push({
-            message: msg,
+            msg: message,
             range: {
                 start: s,
                 end: e,
             },
-            severity: errorSeverity,
+            severity: iniData.iniData.severity.Error,
         });
     }
 
-    warning = (errorSeverity, msg, token) => {
+    warning = (errorSeverity, message, token) => {
         token = token || this.curr();
         const s = this.offsetToPos(token.start);
         const e = this.offsetToPos(token.end);
         this.errors.push({
-            message: msg,
+            msg: message,
             range: { start: s, end: e },
-            severity: severity.Warning,
+            severity: iniData.severity.Warning,
         });
     }
 
@@ -344,7 +393,7 @@ class Parser {
         if ((t.type === TT.KEYWORD || t.type === TT.IDENT) && t.value.toLowerCase() === kw.toLowerCase()) {
             return this.next();
         }
-        this.error(severity.Error, `Expected '${kw}' but found '${t.value}'`, t);
+        this.error(iniData.severity.Error, `Expected '${kw}' but found '${t.value}'`, t);
         return null;
     }
 
@@ -371,7 +420,7 @@ class Parser {
     expect(type, desc) {
         const t = this.curr();
         if (t.type === type) return this.next();
-        this.error(severity.Error, `Expected ${desc || type} but found '${t.value}'`, t);
+        this.error(iniData.severity.Error, `Expected ${desc || type} but found '${t.value}'`, t);
         return null;
     }
 
@@ -504,7 +553,7 @@ class Parser {
         this.errors.length = errorCount;
 
         // Nothing matched
-        this.error(severity.Error, `Unrecognized SCRIPT_FRAGMENT starting with '${this.curr().value}'`);
+        this.error(iniData.severity.Error, `Unrecognized SCRIPT_FRAGMENT starting with '${this.curr().value}'`);
         return false;
     }
 
@@ -585,12 +634,12 @@ class Parser {
                 this.next();
                 this.expect(TT.LPAREN, '(');
                 if (!this.isAnyKw('ntfs', 'fat', 'fat12', 'fat16', 'fat32')) {
-                    this.error(severity.Error, `Expected filesystem type (NTFS, FAT, FAT12, FAT16, FAT32)`);
+                    this.error(iniData.severity.Error, `Expected filesystem type (NTFS, FAT, FAT12, FAT16, FAT32)`);
                 } else this.next();
                 this.expect(TT.RPAREN, ')');
                 break;
             default:
-                this.error(severity.Error, `Unexpected token '${t.value}' in volume boolean`, t);
+                this.error(iniData.severity.Error, `Unexpected token '${t.value}' in volume boolean`, t);
                 this.next(); // skip to avoid infinite loop
         }
     }
@@ -598,9 +647,9 @@ class Parser {
     // ── .Parse File Booleans ─────────────────────────────────────────────────────────
 
     parseFileBooleans() {
-        connection.console.log('parseFileBooleans: ' + this.curr().value);
+        console?.log('parseFileBooleans: ' + this.curr().value);
         this.parseFileBoolean(true);
-        connection.console.log('after first boolean: ' + this.curr().value);
+        console?.log('after first boolean: ' + this.curr().value);
         while (!this.atEof() && !this.isKw('FileActions') && !this.isKw('FileEnd') && !this.isKw('VolumeEnd')) {
             if (this.isAnyKw('or', 'and') ||
                 this.curr().type === TT.PIPE || this.curr().type === TT.DPIPE ||
@@ -692,10 +741,10 @@ class Parser {
                 break;
             default:
                 if (reportErrors) {
-                    this.error(severity.Error, `Unexpected token '${t.value}' in file boolean`, t);
+                    this.error(iniData.severity.Error, `Unexpected token '${t.value}' in file boolean`, t);
                     this.next();
                 } else {
-                    this.error(severity.Warning, `Unexpected token '${t.value}' in file boolean, continuing...`, t);
+                    this.error(iniData.severity.Warning, `Unexpected token '${t.value}' in file boolean, continuing...`, t);
                     this.next();
                 }
         }
@@ -703,7 +752,7 @@ class Parser {
 
     parseFileLocationOption() {
         if (!this.isAnyKw('beginoffile', 'endoffile', 'entirefile', 'anypart', 'anycompletefragment')) {
-            this.error(severity.Error, `Expected file location option`);
+            this.error(iniData.severity.Error, `Expected file location option`);
         } else this.next();
     }
 
@@ -862,7 +911,7 @@ class Parser {
 
     parseAscDesc() {
         if (!this.isAnyKw('ascending', 'descending')) {
-            this.error(severity.Error, `Expected 'Ascending' or 'Descending'`);
+            this.error(iniData.severity.Error, `Expected 'Ascending' or 'Descending'`);
         } else this.next();
     }
 
@@ -881,7 +930,7 @@ class Parser {
     isSetting() {
         const kw = this.curr().value ? this.curr().value.toLowerCase() : '';
         return [
-            'message', 'language', 'title', 'windowsize', 'diskmapflip', 'statusbar',
+            'msg', 'language', 'title', 'windowsize', 'diskmapflip', 'statusbar',
             'zoomlevel', 'setcolor', 'slowdown', 'pause', 'whenfinished', 'otherinstances',
             'runscript', 'runprogram', 'batterypower', 'setscreensaver', 'setscreenpowersaver',
             'filemovechunksize', 'debug', 'setstatisticswindowtext', 'writelogfile',
@@ -897,124 +946,130 @@ class Parser {
     }
 
     parseSetting() {
-        const t = this.curr();
-        const kw = t.value.toLowerCase();
-        this.next();
+        try { // Parser parseSetting
+            const t = this.curr();
+            const kw = t.value.toLowerCase();
+            this.next();
 
-        switch (kw) {
-            case 'message':
-                this.expect(TT.LPAREN, '(');
-                this.expect(TT.STRING, 'string');
-                this.expect(TT.COMMA, ',');
-                this.expect(TT.STRING, 'string');
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'language': case 'title': case 'runscript': case 'setstatisticswindowtext':
-                this.expect(TT.LPAREN, '(');
-                this.expect(TT.STRING, 'string');
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'runprogram':
-                this.expect(TT.LPAREN, '(');
-                this.parseStrings();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'windowsize':
-                this.expect(TT.LPAREN, '(');
-                if (!this.isAnyKw('fixed', 'minimized', 'maximized', 'invisible', 'restore')) {
-                    this.error(severity.Error, `Expected window size option`);
-                } else this.next();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'diskmapflip': case 'ignorewraparoundfragmentation': case 'rememberunmovables':
-                this.expect(TT.LPAREN, '(');
-                this.parseYesNo();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'statusbar':
-                this.expect(TT.LPAREN, '(');
-                this.parseStatusBars();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'zoomlevel': case 'slowdown': case 'filemovechunksize':
-            case 'debug': case 'exitiftimeout':
-                this.expect(TT.LPAREN, '(');
-                this.parseNumber();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'setcolor':
-                this.expect(TT.LPAREN, '(');
-                this.parseColorName();
-                this.expect(TT.COMMA, ',');
-                this.parseNumber();
-                this.expect(TT.COMMA, ',');
-                this.parseNumber();
-                this.expect(TT.COMMA, ',');
-                this.parseNumber();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'pause':
-                this.expect(TT.LPAREN, '(');
-                this.parseDateTime();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'whenfinished':
-                this.expect(TT.LPAREN, '(');
-                this.parseWhenFinished();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'otherinstances':
-                this.expect(TT.LPAREN, '(');
-                if (!this.isAnyKw('ask', 'allow', 'exit', 'kill')) {
-                    this.error(severity.Error, `Expected 'ask', 'allow', 'exit', or 'kill'`);
-                } else this.next();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'batterypower':
-                this.expect(TT.LPAREN, '(');
-                if (!this.isAnyKw('ask', 'allow', 'exit')) {
-                    this.error(severity.Error, `Expected 'ask', 'allow', or 'exit'`);
-                } else this.next();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'setscreensaver': case 'setscreenpowersaver':
-                this.expect(TT.LPAREN, '(');
-                if (!this.isAnyKw('off', 'reset')) {
-                    this.error(severity.Error, `Expected 'off' or 'reset'`);
-                } else this.next();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'writelogfile': case 'appendlogfile':
-                this.expect(TT.LPAREN, '(');
-                this.expect(TT.STRING, 'string');
-                this.expect(TT.COMMA, ',');
-                this.expect(TT.STRING, 'string');
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'processpriority':
-                this.expect(TT.LPAREN, '(');
-                if (!this.isAnyKw('normal', 'belownormal', 'low', 'abovenormal', 'high', 'background')) {
-                    this.error(severity.Error, `Expected process priority`);
-                } else this.next();
-                this.expect(TT.RPAREN, ')');
-                break;
-            case 'setvariable':
-                this.expect(TT.LPAREN, '(');
-                // variable name
-                if (this.curr().type !== TT.IDENT && this.curr().type !== TT.KEYWORD) {
-                    this.error(severity.Error, `Expected variable name`);
-                } else this.next();
-                this.expect(TT.COMMA, ',');
-                // value can be number or string
-                if (this.curr().type === TT.STRING) {
-                    this.next();
-                } else {
+            switch (kw) {
+                case 'msg':
+                    this.expect(TT.LPAREN, '(');
+                    this.expect(TT.STRING, 'string');
+                    this.expect(TT.COMMA, ',');
+                    this.expect(TT.STRING, 'string');
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'language': case 'title': case 'runscript': case 'setstatisticswindowtext':
+                    this.expect(TT.LPAREN, '(');
+                    this.expect(TT.STRING, 'string');
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'runprogram':
+                    this.expect(TT.LPAREN, '(');
+                    this.parseStrings();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'windowsize':
+                    this.expect(TT.LPAREN, '(');
+                    if (!this.isAnyKw('fixed', 'minimized', 'maximized', 'invisible', 'restore')) {
+                        this.error(iniData.severity.Error, `Expected window size option`);
+                    } else this.next();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'diskmapflip': case 'ignorewraparoundfragmentation': case 'rememberunmovables':
+                    this.expect(TT.LPAREN, '(');
+                    this.parseYesNo();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'statusbar':
+                    this.expect(TT.LPAREN, '(');
+                    this.parseStatusBars();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'zoomlevel': case 'slowdown': case 'filemovechunksize':
+                case 'debug': case 'exitiftimeout':
+                    this.expect(TT.LPAREN, '(');
                     this.parseNumber();
-                }
-                this.expect(TT.RPAREN, ')');
-                break;
-            default:
-                this.error(severity.Error, `Unknown setting '${t.value}'`, t);
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'setcolor':
+                    this.expect(TT.LPAREN, '(');
+                    this.parseColorName();
+                    this.expect(TT.COMMA, ',');
+                    this.parseNumber();
+                    this.expect(TT.COMMA, ',');
+                    this.parseNumber();
+                    this.expect(TT.COMMA, ',');
+                    this.parseNumber();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'pause':
+                    this.expect(TT.LPAREN, '(');
+                    this.parseDateTime();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'whenfinished':
+                    this.expect(TT.LPAREN, '(');
+                    this.parseWhenFinished();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'otherinstances':
+                    this.expect(TT.LPAREN, '(');
+                    if (!this.isAnyKw('ask', 'allow', 'exit', 'kill')) {
+                        this.error(iniData.severity.Error, `Expected 'ask', 'allow', 'exit', or 'kill'`);
+                    } else this.next();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'batterypower':
+                    this.expect(TT.LPAREN, '(');
+                    if (!this.isAnyKw('ask', 'allow', 'exit')) {
+                        this.error(iniData.severity.Error, `Expected 'ask', 'allow', or 'exit'`);
+                    } else this.next();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'setscreensaver': case 'setscreenpowersaver':
+                    this.expect(TT.LPAREN, '(');
+                    if (!this.isAnyKw('off', 'reset')) {
+                        this.error(iniData.severity.Error, `Expected 'off' or 'reset'`);
+                    } else this.next();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'writelogfile': case 'appendlogfile':
+                    this.expect(TT.LPAREN, '(');
+                    this.expect(TT.STRING, 'string');
+                    this.expect(TT.COMMA, ',');
+                    this.expect(TT.STRING, 'string');
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'processpriority':
+                    this.expect(TT.LPAREN, '(');
+                    if (!this.isAnyKw('normal', 'belownormal', 'low', 'abovenormal', 'high', 'background')) {
+                        this.error(iniData.severity.Error, `Expected process priority`);
+                    } else this.next();
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                case 'setvariable':
+                    this.expect(TT.LPAREN, '(');
+                    // variable name
+                    if (this.curr().type !== TT.IDENT && this.curr().type !== TT.KEYWORD) {
+                        this.error(iniData.severity.Error, `Expected variable name`);
+                    } else this.next();
+                    this.expect(TT.COMMA, ',');
+                    // value can be number or string
+                    if (this.curr().type === TT.STRING) {
+                        this.next();
+                    } else {
+                        this.parseNumber();
+                    }
+                    this.expect(TT.RPAREN, ')');
+                    break;
+                default:
+                    this.error(iniData.severity.Error, `Unknown setting '${t.value}'`, t);
+            }
+        } catch (errResult) {
+            const message = `server.js:ValidateDocument Unexpected error Generating Preview of document: + ${errResult.message}`;
+            logger.err(errResult, message);
+            return message;
         }
     }
 
@@ -1036,14 +1091,14 @@ class Parser {
             this.tryKw('Forced');
             return;
         }
-        this.error(severity.Error, `Expected WhenFinished option`);
+        this.error(iniData.severity.Error, `Expected WhenFinished option`);
     }
 
     // ── .Parse Color Features ───────────────────────────────────────────────────
 
     parseColorName() {
         if (!this.isAnyKw('empty', 'allocated', 'busyread', 'busywrite', 'text')) {
-            this.error(severity.Error, `Expected color name`);
+            this.error(iniData.severity.Error, `Expected color name`);
         } else this.next();
     }
 
@@ -1075,7 +1130,7 @@ class Parser {
         if (this.isAnyKw('fragmented', 'movable', 'selected', 'processed', 'all')) {
             this.next(); return;
         }
-        this.error(severity.Error, `Unexpected token '${t.value}' in file color boolean`, t);
+        this.error(iniData.severity.Error, `Unexpected token '${t.value}' in file color boolean`, t);
         this.next();
     }
 
@@ -1144,7 +1199,7 @@ class Parser {
             if (this.curr().type === TT.IDENT || this.curr().type === TT.KEYWORD) {
                 this.next();
             } else {
-                this.error(severity.Error, `Expected variable after '-'`);
+                this.error(iniData.severity.Error, `Expected variable after '-'`);
             }
             return;
         }
@@ -1180,7 +1235,7 @@ class Parser {
             return;
         }
 
-        this.error(severity.Error, `Expected number or variable but found '${t.value}'`, t);
+        this.error(iniData.severity.Error, `Expected number or variable but found '${t.value}'`, t);
         this.next();
     }
 
@@ -1240,16 +1295,17 @@ async function validateDocument(document) {
         const filePath = fileURLToPath(document.uri);
         const ext = path.extname(filePath).toLowerCase();
         const text = document.getText();
-        const diagnostics = [];
         const log = {
             appendLine: (...args) => console.log(...args),
             append: (...args) => process.stdout.write(args.join('')),
             show: () => { }
         };
-        Logger.info(`MYDC SERVER ACTIVATED for ${filePath}`);
+        logger.info(`MYDC SERVER ACTIVATED for ${filePath}`);
 
+        // ─────────────────────────────────────────────────────────────────────────────────
+        // Initial document set based on file extension
         switch (ext) {
-            case '.mydfrg':
+            case '.mydc':
                 parserState = parseState.SCRIPT_FULL;
                 break;
             case '.myd':
@@ -1260,9 +1316,23 @@ async function validateDocument(document) {
                 break;
         }
 
+        // ─────────────────────────────────────────────────────────────────────────────────
+        // tokenize document
         const tokens = tokenize(text);
 
+        // ─────────────────────────────────────────────────────────────────────────────────
         // First attempt: full script
+        // Initially treat any script as a valid (complete) script
+        // Syntax:
+        // the presence of syntax errors are always errors
+        // Missing statements:
+        // the presence of structural errors, missing ends to closures, 
+        // missing closure begin statements, similarly were if statements
+        // available (the are not). 
+        // These errors are treated as being script fragments and
+        // warnings are issued.
+        // ToDo extend functionality to add "quick fix"
+        // ToDo Add code snippets for structural code. IE Volume & FileSelect groups.
         let parser;
         let fragParser;
         let bestParser = new Parser(tokens, text, parserState);
@@ -1271,6 +1341,7 @@ async function validateDocument(document) {
             parser.parseStatements();
             bestParser = parser;
         }
+        // ─────────────────────────────────────────────────────────────────────────────────
         // If full-script parse failed, try fragment mode
         parserState = parseState.SCRIPT_FRAGMENT
         if (!bestParser.atEof() || bestParser.errors.length > 0) {
@@ -1283,30 +1354,32 @@ async function validateDocument(document) {
                     fragParser.atEof() && !bestParser.atEof())
             ) { bestParser = fragParser; }
         }
-
+        // ─────────────────────────────────────────────────────────────────────────────────
         parser = bestParser;
         parserState = bestParser.state;
         // Report any remaining tokens as unexpected
         if (!bestParser.atEof()) {
             const t = bestParser.curr();
             if (bestParser.state === parseState.SCRIPT_FRAGMENT) {
-                bestParser.warning(severity.Warning, `Unexpected token '${t.value}' — fragment may be incomplete`, t);
+                bestParser.warning(iniData.severity.Warning, `server.js:ValidateDocument Unexpected token '${t.value}' — fragment may be incomplete`, t);
             } else {
-                bestParser.error(severity.Error, `Unexpected token '${t.value}' — expected end of file`, t);
+                bestParser.error(iniData.severity.Error, `server.js:ValidateDocument Unexpected token '${t.value}' — expected end of file`, t);
             }
         }
-
+        // ─────────────────────────────────────────────────────────────────────────────────
         for (const errResult of bestParser.errors) {
             diagnostics.push({
                 severity: errResult.severity,
                 range: errResult.range,
-                message: errResult.message,
+                msg: errResult.message,
                 source: 'MyDefrag',
             });
         }
     }
-    catch (e) {
-        connection.console.error('Parser exception: ' + e.message);
+    catch (errResult) {
+        const message = `server.js:ValidateDocument Unexpected exception: ${errResult.message}`;
+        console.error(message);
+        throw new Error(message);
     }
 
     connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
@@ -1324,6 +1397,10 @@ async function validateDocument(document) {
 // ─────────────────────────────────────────────────────────────────────────────────
 
 connection.onInitialize(() => {
+    Options = params.initializationOptions;
+    config = Options.config
+    console.log(config);
+
     return {
         capabilities: {
             textDocumentSync: TextDocumentSyncKind.Incremental,
@@ -1334,20 +1411,14 @@ connection.onInitialize(() => {
         }
     };
 });
-
-connection.onInitialized(() => {
-    connection.console.log('MyDefrag Language Server initialized');
-});
-
-connection.onCompletion(() => {
+connection.onCompletion(() => { // ToDo
     return [];
 });
-
-connection.onHover(() => {
+connection.onHover(() => { // ToDo
     return null;
 });
-
 connection.onInitialized(() => {
+    console?.log('MyDefrag Language Server initialized');
     // Request the client to watch all MyDefrag files
     connection.client.register(
         require('vscode-languageserver/node').DidChangeWatchedFilesNotification.type,
@@ -1358,9 +1429,9 @@ connection.onInitialized(() => {
             ]
         }
     );
-    connection.console.log('MyDefrag Language Server initialized');
+    console?.log('MyDefrag Language Server initialized');
 });
-
+// Change File Watcher
 connection.onDidChangeWatchedFiles(() => {
     // Re-validate all open documents when files change
     documents.all().forEach(validateDocument);
@@ -1370,3 +1441,4 @@ connection.onDidChangeWatchedFiles(() => {
 documents.listen(connection);
 connection.listen();
 // .Parse END of document ──────────────────────────────────────────────────────────────
+module.exports = { createServer, start };

@@ -1,6 +1,7 @@
 // generate-vscodeignore.js
 const fs = require('fs');
 const patterns = [
+    '.user',
     'doc', 'docs', 'lib', 'build', 'coverage', 'dist', 'out', 'tmp', 'temp',
     '.user', '.git', '.github', '.vscode', '.vs', '.idea', 'node_modules',
     '.turbo', '.parcel-cache', '.yalc',

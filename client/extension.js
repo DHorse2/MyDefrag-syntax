@@ -267,7 +267,7 @@ async function activate(context) {
                         const normalised = includePath.replace(/\\/g, path.sep);
                         // resolve relative OR absolute
                         const targetUri = vscode.Uri.file(absolutePath(currentDir, includePath));
-                        logger.dbg(3, `INCLUDE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`);
+                        logger.dbg(3, `INCLUDE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${docLine(match.index)}`);
 
                         isDuplicate = includeLinks.some(link =>
                             link.range.start.line === start.line &&
@@ -293,7 +293,7 @@ async function activate(context) {
                             const end = new vscode.Position(i, match.index + fullMatch(match).length);
                             const range = new vscode.Range(start, end);
                             const targetUri = vscode.Uri.file(absolutePath(currentDir, includePath));
-                            logger.dbg(3, `FILE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`);
+                            logger.dbg(3, `FILE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${$docLine}`);
                             isDuplicate = fileLinks.some(link =>
                                 link.range.start.line === i &&
                                 link.range.start.character === start &&
@@ -313,7 +313,7 @@ async function activate(context) {
                         const end = document.positionAt(quoteStart + execPath.length);
                         const range = new vscode.Range(start, end);
                         const targetUri = vscode.Uri.file(absolutePath(currentDir, execPath));
-                        logger.dbg(3, `BATCH/Command file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`);
+                        logger.dbg(3, `BATCH/Command file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${$docLine}`);
                         isDuplicate = commandLinks.some(link =>
                             link.range.start.line === start.line &&
                             link.range.start.character === start &&

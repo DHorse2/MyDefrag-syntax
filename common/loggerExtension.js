@@ -65,18 +65,22 @@ function initialize(outputChannel, isServerRun = false, channelDiagnostics = nul
 //#region Functions
 // try { // Define Standard Log Functions
 function logToConsole(thisExtensionName, ...args) {
+    // console.log("connection =", connection);
+    // console.log("typeof connection =", typeof connection);
+    // console.log("keys =", Object.keys(connection || {}));
     let newLineString = "";
     if (!isServer) { newLineString = `\n`; }
     const message = ` ${thisExtensionName} ${args.join(' ')}${newLineString}`;
-    if (connection.console !== null && connection.console !== undefined) {
-        connection?.console?.log(message);
+    if (connection?.appendLine) {
+        connection.appendLine(message);
     } else {
-        connection?.append(message);
-        connection?.show();
+        console.log(message);
     }
 }
 function dbg(thisSeverity = verboseLevel, ...args) {
-    if (debugOn && thisSeverity <= verboseLevel) { logToConsole(extensionName, `[DEBUG ${thisSeverity}]`, ...args); }
+    if (debugOn && thisSeverity <= verboseLevel) {
+        logToConsole(extensionName, `[DEBUG ${thisSeverity}]`, ...args);
+    }
 }
 function err(errResult, ...args) {
     logToConsole(extensionName, `[ERROR!!!]`, errResult, ...args);
@@ -131,6 +135,7 @@ function logArrayToConsole(thisExtensionName, thisSeverity = iniData.severity.Er
                     loggedMessages.add(nextMessage);
                     message(thisSeverity, nextMessage);
                     // logger.info(nextMessage + '\n.\n');
+                    dbg(3, nextMessage);
                 }
             }
             if (thisSeverity < 0 || thisSeverity > 4) { thisSeverity = iniData.severity.Warning }

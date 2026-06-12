@@ -3,7 +3,7 @@
     "displayName": "MyDefrag Script (.MyDc / .MyD)",
     "description": "Syntax highlighting for MyDefrag scripting language",
     "version": "0.2.0",
-    "publisher": "local",
+    "publisher": "macrodm",
     "repository": {
         "type": "git",
         "url": "https://github.com/DHorse2/MyDefrag-syntax"
@@ -74,10 +74,23 @@
         ]
     },
     "main": "./client/extension.js",
+    "scripts": {
+        "deploy:local": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1",
+        "liveUpdate:local": "powershell -ExecutionPolicy Bypass -File ./scripts/MyDefragUpdateLive.ps1",
+        "pack:vsix": "powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1",
+        "publish:vsx": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1",
+        "clean": "rimraf dist out .vscodeignore",
+        "build": "echo 'no build step for pure Node.js extension'",
+        "prepare": "npm run build"
+    },
     "dependencies": {
         "vscode-languageclient": "^9.0.1",
         "vscode-languageserver": "^9.0.1",
         "vscode-languageserver-textdocument": "^1.0.12"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "@vscode/vsce": "^3.9.2",
+        "vsce": "^2.0.0",
+        "rimraf": "^3.0.2"
+    }
 }

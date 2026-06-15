@@ -31,11 +31,11 @@ const { URL, fileURLToPath, pathToFileURL } = require('url');
 // ─────────────────────────────────────────────────────────────────────────────────
 // Constants
 // ─────────────────────────────────────────────────────────────────────────────────
-const ini = require('../common/ini')
+const ini = require('../shared/ini')
 const channelName = 'MyDefrag Preview';
 // ─────────────────────────────────────────────────────────────────────────────────
 // Debug logger — writes to stderr so it doesn't pollute stdout/output file
-const logger = require('../common/loggerExtension');
+const Logger = require('../shared/logger');
 // ─────────────────────────────────────────────────────────────────────────────────
 const isServer = false;
 var diagnostics = [];
@@ -52,7 +52,7 @@ const connection = createConnection(ProposedFeatures.all);
 const documents = new TextDocuments(TextDocument);
 // ─────────────────────────────────────────────────────────────────────────────────
 // Initialize
-var extensionConfig;
+var config;
 var debugOn;
 var verboseLevel;
 var logOn;
@@ -60,13 +60,13 @@ var referenceRelativePathLevel;
 var referenceContainsMacrosLevel;
 var fileReferenceFoundLevel;
 var fileReferenceNotFoundLevel;
-var iniErrors;
+var iniErrors = [];
 // const channelName = 'MyDefrag Syntax';
 var batLinkDebounceTimer = null;
 var batLinkDebounceValue = 15000;
 try { // ---- Initialization ----
-  console.log(process.config);
-  extensionConfig = ini.initialize(INI_PATH, channelName, isServer, true, ini.severity.Verbose);
+  // console.log(process.config);
+  config = ini.initialize(INI_PATH, channelName, isServer, true, ini.severity.Verbose);
   ({
     iniData,
     debugOn,
@@ -77,14 +77,15 @@ try { // ---- Initialization ----
     fileReferenceFoundLevel,
     fileReferenceNotFoundLevel,
     iniErrors
-  } = extensionConfig);
+  } = config);
 } catch (errResult) {
   const message = `mydefrag-preprocess.js:activate Unexpected error in first Initialize step: ${errResult.message}`;
   console.error(message);
   throw new Error(message);
 }
-logger.initialize(connection, isServer, diagnostics, iniData, extensionConfig)
-if (iniErrors.length) { logger.logArrayToConsole(channelName, ini.severity.Information, iniErrors) }
+// logger.initialize(connection, isServer, diagnostics, iniData, config)
+logger = Logger.createLogger(config);
+if (ini.iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Information, ini.iniErrors) }
 // ─────────────────────────────────────────────────────────────────────────────────
 // Formatting helpers
 // ─────────────────────────────────────────────────────────────────────────────────
@@ -120,15 +121,18 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
   const SCRIPT_DIR = __dirname;
   const PARENT_DIR = path.dirname(SCRIPT_DIR);
   const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
-  const {
+  config = ini.initialize(INI_PATH, channelName, isServer, true, ini.severity.Verbose);
+  ({
+    iniData,
     debugOn,
     verboseLevel,
     logOn,
     referenceRelativePathLevel,
     referenceContainsMacrosLevel,
     fileReferenceFoundLevel,
-    fileReferenceNotFoundLevel
-  } = ini.initialize(INI_PATH, `MyDefrag Language`, null, 1, null, false);
+    fileReferenceNotFoundLevel,
+    iniErrors
+  } = config);
   // const absPath = filePath;
   const indent = " ".repeat(depth);
 
@@ -393,6 +397,7 @@ function main() {
 
   // ──────────────────────────────────────────────────────────────────────────
   // Json Configuration Data (from extension.js)
+  // const { config } = require("process");
   const raw = process.argv.indexOf('--config');
   const config = raw !== -1
     ? JSON.parse(process.argv[raw + 1])
@@ -406,7 +411,7 @@ function main() {
   const entryUri = pathToFileURL(entryFile).href;
   logger.info(`Entry  : "${entryFile}"`);
   logger.info(`Output : "${outputFile}"`);
-  if (iniData !== extensionConfig && iniData !== extensionConfig) {
+  if (iniData !== config && iniData !== config) {
     // ToDO ???
   }
 

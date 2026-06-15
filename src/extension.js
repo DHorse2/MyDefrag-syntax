@@ -7,9 +7,8 @@ const vscode = require('vscode');
 const cp = require('child_process');
 // language server
 const { LanguageClient, TransportKind } = require('vscode-languageclient/node');
-const ini = require('../common/ini')
-const logger = require('../common/loggerExtension');
-const { config } = require("process");
+const ini = require('./shared/ini')
+const Logger = require('./shared/logger');
 const channelName = 'MyDefrag Syntax';
 var isServer = false;
 var ParserStateBar;
@@ -85,28 +84,40 @@ async function searchWorkspace(pattern) {
 // ─────────────────────────────────────────────────────────────────────────────────
 //#region Extension activate/deactivate .Parse
 async function activate(context) {
+    //#region declarations
     let iniData;
     let connection;
-    let extensionConfig;
+    let connectionShown = false;
+    let config;
     let debugOn;
     let verboseLevel;
+    let logger;
     let logOn;
     let referenceRelativePathLevel;
     let referenceContainsMacrosLevel;
     let fileReferenceFoundLevel;
     let fileReferenceNotFoundLevel;
-    let iniErrors;
+    let iniErrors = [];
+    // let iniErrors;
     const SCRIPT_DIR = __dirname;
     const PARENT_DIR = path.dirname(SCRIPT_DIR);
-    // const channelName = 'MyDefrag Syntax';
+    const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
+
     let batLinkDebounceTimer = null;
     let batLinkDebounceValue = 15000;
 
-    const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
+    let diagnosticCollection;
+    let linkChangeEmitter;
+    let definitionProvider;
+    let referenceProvider;
+    let linkProvider;
+    let providerRegistration;
+    let openCmd;
+    let batLinkProvider;
+    //#endregion
     try { // ---- Initialization ----
         try { // Ini Init
-            console.log(process.config);
-            extensionConfig = ini.initialize(INI_PATH, channelName, isServer, true, ini.severity.Verbose);
+            config = ini.initialize(INI_PATH, channelName, isServer, true, ini.severity.Verbose);
             ({
                 iniData,
                 debugOn,
@@ -117,7 +128,7 @@ async function activate(context) {
                 fileReferenceFoundLevel,
                 fileReferenceNotFoundLevel,
                 iniErrors
-            } = extensionConfig);
+            } = config);
         } catch (errResult) {
             const message = `extension.js:activate:ini:initialize Error returned from initialization: ${errResult.message}`;
             console.error(message);
@@ -128,11 +139,14 @@ async function activate(context) {
         try { // Logging Channel and Status Bar
             // ─────────────────────────────────────────────────────────────────────────────────
             connection = vscode.window.createOutputChannel(channelName);
-            // ─────────────────────────────────────────────────────────────────────────────────
+            connection.show(true);
+            connectionShown = true;
+            //             // ─────────────────────────────────────────────────────────────────────────────────
             const loggedMessages = new Set();
             let headingDone = false;
-            logger.initialize(connection, isServer, diagnostics, iniData, extensionConfig, debugOn, verboseLevel)
-            if (iniErrors.length) { logger.logArrayToConsole(channelName, ini.severity.Warning, loggedMessages, iniErrors) }
+            // logger.initialize(connection, isServer, diagnostics, iniData, config, debugOn, verboseLevel)
+            logger = Logger.createLogger(config);
+            if (ini.iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Warning, loggedMessages, ini.iniErrors) }
             console.log(iniData);
             logger.info("MYDC EXTENSION INITIALIZED");
             // ─────────────────────────────────────────────────────────────────────────────────
@@ -150,7 +164,7 @@ async function activate(context) {
         }
         console.log("Channel, Status Bar done")
     } catch (errResult) {
-        const message = `extension.js:activate Unexpected error activating extension: ${errResult.message}`;
+        const message = `extension.js:activate Unexpected error initializing extension: ${errResult.message}`;
         console.error(message);
         throw new Error(message);
     }
@@ -159,14 +173,14 @@ async function activate(context) {
         // log
         connection.show(true);
         // ── Diagnostics ────────────────────────────────────────────────────────────────
-        const diagnosticCollection = vscode.languages.createDiagnosticCollection('bat-links');
+        diagnosticCollection = vscode.languages.createDiagnosticCollection('bat-links');
         context.subscriptions.push(diagnosticCollection);
         // ── Link detection and analysis ─────────────────────────────────────────────────
-        const linkChangeEmitter = new vscode.EventEmitter();
+        linkChangeEmitter = new vscode.EventEmitter();
         // ── Go to Definition ──────────────────────────────────────────────────────────────
         // Triggered by F12 or right-click → Go to Definition.
         // Finds the SetVariable(VarName, ...) declaration for the word under cursor.
-        const definitionProvider = vscode.languages.registerDefinitionProvider(
+        definitionProvider = vscode.languages.registerDefinitionProvider(
             { language: 'mydfrg' },
             {
                 async provideDefinition(document, position) {
@@ -188,7 +202,7 @@ async function activate(context) {
         // ── Find All References ───────────────────────────────────────────────────────────
         // Triggered by Shift+F12 or right-click → Find All References.
         // Finds every place VarName appears: in SetVariable() and anywhere else it's used.
-        const referenceProvider = vscode.languages.registerReferenceProvider(
+        referenceProvider = vscode.languages.registerReferenceProvider(
             { language: 'mydfrg' },
             {
                 async provideReferences(document, position, context) {
@@ -207,7 +221,7 @@ async function activate(context) {
         // ── Document Links (Ctrl+Click on includes) ─────────────────────────────
         // Triggered by Ctrl+Click or hovering the path in an !include "..."! line.
         // Resolves the relative path to an absolute URI so VSCodium can open it.
-        const linkProvider = vscode.languages.registerDocumentLinkProvider(
+        linkProvider = vscode.languages.registerDocumentLinkProvider(
             { language: 'mydfrg' },
             {
                 onDidChangeDocumentLinks: linkChangeEmitter.event,
@@ -218,7 +232,16 @@ async function activate(context) {
                     let isDuplicate = false;
                     const toZeroBased = (s) => parseInt(s) - 1;
                     const text = document.getText();
-                    const docLine = (i) => document.lineAt(i);
+                    const docLine = (i) => {
+                        if (i <= document.lineCount) {
+                            const line = document.lineAt(i).text;
+                            return line;
+                        } else {
+                            const message = `Line ${i} is out of range ${document.lineCount}`;
+                            console.error(message);
+                            throw new Error(message);
+                        }
+                    }
                     const fullMatch = (match) => match[0];
                     const filePath = (match) => match[1];
                     const line = (match) => toZeroBased(match[2]);
@@ -267,7 +290,8 @@ async function activate(context) {
                         const normalised = includePath.replace(/\\/g, path.sep);
                         // resolve relative OR absolute
                         const targetUri = vscode.Uri.file(absolutePath(currentDir, includePath));
-                        logger.dbg(3, `INCLUDE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${docLine(match.index)}`);
+                        const lineText = docLine(range.start.line);
+                        logger.dbg(3, `INCLUDE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${lineText}`);
 
                         isDuplicate = includeLinks.some(link =>
                             link.range.start.line === start.line &&
@@ -284,7 +308,7 @@ async function activate(context) {
                     // ── Document FILE Links ─────────────────────────────
                     const lineRe = /file:\/\/\/([^:\s]+):(\d+):(\d+)/g;
                     for (let i = 0; i < document.lineCount; i++) {
-                        const lineText = docLine(i).text;
+                        const lineText = docLine(i);
                         let match;
                         lineRe.lastIndex = 0;
                         while ((match = lineRe.exec(lineText)) !== null) {
@@ -293,7 +317,7 @@ async function activate(context) {
                             const end = new vscode.Position(i, match.index + fullMatch(match).length);
                             const range = new vscode.Range(start, end);
                             const targetUri = vscode.Uri.file(absolutePath(currentDir, includePath));
-                            logger.dbg(3, `FILE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${$docLine}`);
+                            logger.dbg(3, `FILE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${docLine(range.start.line)}`);
                             isDuplicate = fileLinks.some(link =>
                                 link.range.start.line === i &&
                                 link.range.start.character === start &&
@@ -313,7 +337,7 @@ async function activate(context) {
                         const end = document.positionAt(quoteStart + execPath.length);
                         const range = new vscode.Range(start, end);
                         const targetUri = vscode.Uri.file(absolutePath(currentDir, execPath));
-                        logger.dbg(3, `BATCH/Command file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${$docLine}`);
+                        logger.dbg(3, `BATCH/Command file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${docLine(range.start.line)}`);
                         isDuplicate = commandLinks.some(link =>
                             link.range.start.line === start.line &&
                             link.range.start.character === start &&
@@ -328,97 +352,9 @@ async function activate(context) {
                 }
             }
         );
-        // ─────────────────────────────────────────────────────────────────────────────────
-        //#region Open Preview Provider  ───────────────────────────────────────────────────────
-        function generatePreview(sourcePath) {
-            const preprocessScript = path.join(
-                __dirname,
-                'mydefrag-preprocess.js'
-            );
-            try { // ── Open Preview Provider  ───────────────────────────────────────────────────────
-                const result = cp.spawnSync(
-                    process.execPath,
-                    [
-                        preprocessScript,
-                        sourcePath,
-                        '--config',
-                        JSON.stringify(config)
-                    ],
-                    {
-                        cwd: path.dirname(sourcePath),
-                        encoding: 'utf8',
-                        maxBuffer: 1024 * 1024 * 50
-                    }
-                );
-                // result.stdout
-                // result.stderr
-                // result.error
-                // result.status
-                // ─────────────────────────────────────────────────────────────────────────────────
-                // Send stderr to OUTPUT window  ───────────────────────────────────────────────────
-                if (result.stderr.length) {
-                    logger.err(null, `Error, in preparing preview summary!`, result.stderr);
-                } else {
-                    logger.info(`Finished preview summary!`)
-                }
-                // ─────────────────────────────────────────────────────────────────────────────────
-                // Error Handling  ─────────────────────────────────────────────────────────────────
-                if (result.error) {
-                    const nextMessage = `ERROR: Preview generation failed:\n\n${result.error.msg}`;
-                    logger.err(null, nextMessage)
-                    return `${nextMessage}`;
-                }
-                // ─────────────────────────────────────────────────────────────────────────────────
-                return result.stdout.toString();
-                // ─────────────────────────────────────────────────────────────────────────────────
-            } catch (errResult) {
-                const message = `extension.js:activate:generatePreview: Unexpected error Generating Preview of document: ${errResult.message}`;
-                logger.err(errResult, message);
-                return message;
-            }
-        }
-        // ─────────────────────────────────────────────────────────────────────────────────
-        // ───────────────── MyPreviewProvider ─────────────────────────────────────────────
-        class MyPreviewProvider {
-            provideTextDocumentContent(uri) {
-                const mergedPath = uri.fsPath;
-                const sourcePath = mergedPath.replace(/\.merged(\.\w+)$/, '$1');
-                logger.info(`Preview source: ${sourcePath}\n`);
-                return generatePreview(sourcePath);
-                // return generatePreview(uri.fsPath);
-            }
-        }
-        const previewProvider = new MyPreviewProvider();
-        // ─────────────────────────────────────────────────────────────────────────────────
-        // Text Document Content Provider
-        const providerRegistration =
-            vscode.workspace.registerTextDocumentContentProvider(
-                'mydfrg-preview',
-                previewProvider
-            );
-        context.subscriptions.push(providerRegistration);
-        // ── Open Preview Function ───────────────────────────────────────────────────────
-        const openPreviewCommand = vscode.commands.registerCommand(
-            'mydfrg.openPreview',
-            async (uri) => {
-                const editor = vscode.window.activeTextEditor;
-                const sourceUri = uri || (editor && editor.document.uri);
-                if (!sourceUri) {
-                    vscode.window.showWarningMessage('No MyDefrag document is active.');
-                    return;
-                }
-                const mergedPath = sourceUri.fsPath.replace(/(\.\w+)$/, '.merged$1');
-                const previewUri = vscode.Uri.parse(`mydfrg-preview:${mergedPath}`);
-                const doc = await vscode.workspace.openTextDocument(previewUri);
-                await vscode.window.showTextDocument(
-                    doc,
-                    vscode.ViewColumn.Active
-                );
-            }
-        );
         //#endregion
         // Command that actually opens the file at line/col
-        const openCmd = vscode.commands.registerCommand(
+        openCmd = vscode.commands.registerCommand(
             "mdm.openFileAtPosition",
             async ({ path: filePath, line, col }) => {
                 const uri = vscode.Uri.file(filePath);
@@ -431,7 +367,7 @@ async function activate(context) {
         );
         // ─────────────────────────────────────────────────────────────────────────────────
         //#region BAT Link Provider ───────────────────────────────────────────────────────
-        const batLinkProvider = vscode.languages.registerDocumentLinkProvider(
+        batLinkProvider = vscode.languages.registerDocumentLinkProvider(
             { language: 'bat' },
             {
                 onDidChangeDocumentLinks: linkChangeEmitter.event,
@@ -559,12 +495,99 @@ async function activate(context) {
                 }
             }
         );
-        //#endregion
+
     } catch (errResult) {
         console.error(`extension.js:activate Unexpected error activating extension: ${errResult.message}`);
     }
-    console.log("init done, Creating and Registering Objects")
+    // ─────────────────────────────────────────────────────────────────────────────────
+    //#region Open Preview Provider  ───────────────────────────────────────────────────────
+    function generatePreview(sourcePath) {
+        const preprocessScript = path.join(
+            __dirname,
+            'preprocess',
+            'mydefrag-preprocess.js'
+        );
+        try { // ── Open Preview Provider  ───────────────────────────────────────────────────────
+            const result = cp.spawnSync(
+                process.execPath,
+                [
+                    preprocessScript,
+                    sourcePath,
+                ],
+                {
+                    cwd: path.dirname(sourcePath),
+                    encoding: 'utf8',
+                    maxBuffer: 1024 * 1024 * 50
+                }
+            );
+            // result.stdout
+            // result.stderr
+            // result.error
+            // result.status
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // Send stderr to OUTPUT window  ───────────────────────────────────────────────────
+            if (result.stderr.length) {
+                logger.err(null, `Error, in preparing preview summary!`, result.stderr);
+            } else {
+                logger.info(`Finished preview summary!`)
+            }
+            // ─────────────────────────────────────────────────────────────────────────────────
+            // Error Handling  ─────────────────────────────────────────────────────────────────
+            if (result.error) {
+                const nextMessage = `ERROR: Preview generation failed:\n\n${result.error.msg}`;
+                logger.err(null, nextMessage)
+                return `${nextMessage}`;
+            }
+            // ─────────────────────────────────────────────────────────────────────────────────
+            return result.stdout.toString();
+            // ─────────────────────────────────────────────────────────────────────────────────
+        } catch (errResult) {
+            const message = `extension.js:activate:generatePreview: Unexpected error Generating Preview of document: ${errResult.message}`;
+            logger.err(errResult, message);
+            return message;
+        }
+    }
+    // ─────────────────────────────────────────────────────────────────────────────────
+    // ───────────────── MyPreviewProvider ─────────────────────────────────────────────
+    // ── Open Preview Function ───────────────────────────────────────────────────────
+    const openPreviewCommand = vscode.commands.registerCommand(
+        'mydfrg.openPreview',
+        async (uri) => {
+            const editor = vscode.window.activeTextEditor;
+            const sourceUri = uri || (editor && editor.document.uri);
+            if (!sourceUri) {
+                vscode.window.showWarningMessage('No MyDefrag document is active.');
+                return;
+            }
+            const mergedPath = sourceUri.fsPath.replace(/(\.\w+)$/, '.merged$1');
+            const previewUri = vscode.Uri.parse(`mydfrg-preview:${mergedPath}`);
+            const doc = await vscode.workspace.openTextDocument(previewUri);
+            await vscode.window.showTextDocument(
+                doc,
+                vscode.ViewColumn.Active
+            );
+        }
+    );
+    class MyPreviewProvider {
+        provideTextDocumentContent(uri) {
+            const mergedPath = uri.fsPath;
+            const sourcePath = mergedPath.replace(/\.merged(\.\w+)$/, '$1');
+            logger.info(`Preview source: ${sourcePath}\n`);
+            return generatePreview(sourcePath);
+            // return generatePreview(uri.fsPath);
+        }
+    }
+    const previewProvider = new MyPreviewProvider();
 
+    // ─────────────────────────────────────────────────────────────────────────────────
+    // Text Document Content Provider
+    providerRegistration = vscode.workspace.registerTextDocumentContentProvider(
+        'mydfrg-preview',
+        previewProvider
+    );
+
+    console.log("Init done, Creating and Registering Client")
+    //#endregion
     // ─────────────────────────────────────────────────────────────────────────────────
     // Listen for document changes and fire the emitter
     const docChangeListener = vscode.workspace.onDidChangeTextDocument(e => {
@@ -587,41 +610,60 @@ async function activate(context) {
 
     // ─────────────────────────────────────────────────────────────────────────────────
     // Start the language server
-    const serverModule = context.asAbsolutePath(path.join('server', 'server.js'));
+    const serverModule = context.asAbsolutePath(path.join('src', 'server', 'server.js'));
     const serverOptions = {
-        run: { module: serverModule, transport: TransportKind.ipc },
-        debug: { module: serverModule, transport: TransportKind.ipc }
+        run: { 
+            module: serverModule, 
+            transport: TransportKind.ipc 
+        },
+        debug: {
+            module: serverModule,
+            transport: TransportKind.ipc,
+            // options: {
+            //     execArgv: ['--nolazy', '--inspect=6009']
+            //     // execArgv: ['--inspect-brk=6009']
+            execArgv: ['--inspect=6009']
+            // }
+        }
     };
     const clientOptions = {
         documentSelector: [{ scheme: 'file', language: 'mydfrg' }],
         synchronize: {
             fileEvents: vscode.workspace.createFileSystemWatcher('**/*.{MyDc,MyD}')
         },
-        configuration: config
+        initializationOptions: {
+            debugOn: iniData.debugOn,
+            verboseLevel: iniData.verboseLevel,
+            logOn: iniData.logOn,
+            config: config
+        }
     };
 
     const { LanguageClient } = require('vscode-languageclient/node');
-    const Server = new LanguageClient(
+    const Client = new LanguageClient(
         'mydfrg',
-        'MyDefrag Language Server',
+        'MyDefrag Language Client',
         serverOptions,
         clientOptions
     );
-    logger.dbg(3, `Starting server ${channelName}`)
-    await Server.start({ logger, iniData, extensionConfig });
-
     // ─────────────────────────────────────────────────────────────────────────────────
     // Push Subscriptions
+    context.subscriptions.push(providerRegistration);
     context.subscriptions.push(definitionProvider);
     context.subscriptions.push(referenceProvider);
     context.subscriptions.push(openPreviewCommand);
     context.subscriptions.push(linkProvider, openCmd);
     context.subscriptions.push(batLinkProvider);
     context.subscriptions.push(docChangeListener, linkChangeEmitter);
-    context.subscriptions.push(Server);
+    context.subscriptions.push(Client);
 
+    // ─────────────────────────────────────────────────────────────────────────────────
+    logger.dbg(3, `Starting server ${channelName}`)
+    // await Client.start(logger, iniData, config);
+    await Client.start();
+
+    // ─────────────────────────────────────────────────────────────────────────────────
     // connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
-
     // connection.sendDiagnostics({
     //     uri: document.uri,
     //     diagnostics
@@ -629,7 +671,7 @@ async function activate(context) {
 }
 // ─────────────────────────────────────────────────────────────────────────────────
 function deactivate() {
-    if (Server) return Server.stop();
+    if (Client) return Client.stop();
 }
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────

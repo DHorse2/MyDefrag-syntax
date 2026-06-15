@@ -1,6 +1,9 @@
 'use strict';
 // server.js
 //#region Initialize server .Parse
+const console = require('console');
+console.error('SERVER: entered server.js');
+debugger;
 const {
     createConnection,
     TextDocuments,
@@ -11,11 +14,11 @@ const {
 } = require('vscode-languageserver/node');
 const { TextDocument } = require('vscode-languageserver-textdocument');
 const path = require('path');
-const console = require('console');
 // const { URI } = require('vscode-languageserver/node');
 // const URI = require('vscode-uri').URI;
 const { URL, fileURLToPath, pathToFileURL } = require('url');
 const { start } = require('repl');
+console.error('SERVER: modules loaded');
 const SCRIPT_DIR = __dirname;
 const PARENT_DIR = path.dirname(SCRIPT_DIR);
 const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
@@ -23,13 +26,15 @@ const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
 const channelName = 'MyDefrag Issues';
 const isServer = true;
 var Options;
-var extensionConfig;
+var config;
 var parserState;
 const connection = createConnection(ProposedFeatures.all);
+console.error('SERVER: connection created');
 const documents = new TextDocuments(TextDocument);
 var diagnostics = [];
-var logger; // = require('../common/loggerExtension');
-const ini = require('../common/ini')
+const Logger = require('../shared/logger');
+let logger;
+const ini = require('../shared/ini')
 var iniData = {};
 var debugOn = false;
 var verboseLevel = 1;
@@ -39,29 +44,14 @@ var referenceRelativePathLevel = 2;
 var referenceContainsMacrosLevel = 3;
 var fileReferenceFoundLevel = 3;
 var fileReferenceNotFoundLevel = 1;
+var iniErrors = [];
+//#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
-
-function start({ thisLogger, thisIni, thisExtensionConfig }) {
-    logger.info("Server starting...");
-    logger = thisLogger;
-    iniData = thisIni;
-    extensionConfig = thisExtensionConfig;
-    // all server logic here
-    ({
-        iniData,
-        debugOn,
-        verboseLevel,
-        logOn,
-        referenceRelativePathLevel,
-        referenceContainsMacrosLevel,
-        fileReferenceFoundLevel,
-        fileReferenceNotFoundLevel,
-        iniErrors
-    } = extensionConfig);
-}
-
-function createServer({ logger, iniData, extensionConfig }) {
+//#region Events for server
+connection.onInitialize((params) => {
+    console?.log(`server.js:connection.onInitialize loading configuration`);
     try { // createServer top
+        config = params.initializationOptions || {};
         ({
             iniData,
             debugOn,
@@ -72,26 +62,42 @@ function createServer({ logger, iniData, extensionConfig }) {
             fileReferenceFoundLevel,
             fileReferenceNotFoundLevel,
             iniErrors
-        } = extensionConfig);
-
-        return {
-            start({ thisLogger, thisIni, thisExtensionConfig }) {
-                logger.info("Server starting...");
-                logger = thisLogger;
-                iniData = thisIni;
-                extensionConfig = thisExtensionConfig;
-                // all server logic here
-                // validateDocument(document);
-                connection.onDidChangeWatchedFiles();
-            }
-        };
+        } = config);
+        console?.log(`debugOn=${debugOn}`);
+        // logger = thisLogger;
+        // const log = {
+        //     appendLine: (...args) => console.log(...args),
+        //     append: (...args) => process.stdout.write(args.join('')),
+        //     show: () => { }
+        // };
+        logger = Logger.createLogger(config);
+        logger.info("Server log created.")
     } catch (errResult) {
-        const message = `server.js:createServer CRITICAL ERROR creating language server: ${errResult.message}`;
+        const message = `server.js:connection.onInitialize: CRITICAL ERROR creating language server: ${errResult.message}`;
         throw new Error(message);
     }
-}
-//#endregion
-//#region Events for server
+    // Request the client to watch all MyDefrag files
+    connection.client.register(
+        require('vscode-languageserver/node').DidChangeWatchedFilesNotification.type,
+        {
+            watchers: [
+                { globPattern: '**/*.MyDc' },
+                { globPattern: '**/*.MyD' }
+            ]
+        }
+    );
+    console?.log('MyDefrag Language Client registered');
+    return {
+        capabilities: {
+            textDocumentSync: TextDocumentSyncKind.Incremental,
+            completionProvider: { resolveProvider: true },
+            hoverProvider: true,
+            definitionProvider: true,
+            referencesProvider: true,
+        }
+    };
+});
+
 documents.onDidChangeContent(change => {
     console?.log('MyDefrag document changed');
     validateDocument(change.document);
@@ -347,7 +353,7 @@ class Parser {
     // Yes or No?
     parseYesNo() {
         if (!this.isAnyKw('yes', 'no')) {
-            this.error(iniData.severity.Error, `Expected 'yes' or 'no'`);
+            this.error(ini.severity.Error, `Expected 'yes' or 'no'`);
         } else this.next();
     }
 
@@ -371,7 +377,7 @@ class Parser {
                 start: s,
                 end: e,
             },
-            severity: iniData.iniData.severity.Error,
+            severity: errorSeverity,
         });
     }
 
@@ -382,7 +388,7 @@ class Parser {
         this.errors.push({
             msg: message,
             range: { start: s, end: e },
-            severity: iniData.severity.Warning,
+            severity: errorSeverity,
         });
     }
 
@@ -393,7 +399,7 @@ class Parser {
         if ((t.type === TT.KEYWORD || t.type === TT.IDENT) && t.value.toLowerCase() === kw.toLowerCase()) {
             return this.next();
         }
-        this.error(iniData.severity.Error, `Expected '${kw}' but found '${t.value}'`, t);
+        this.error(ini.severity.Error, `Expected '${kw}' but found '${t.value}'`, t);
         return null;
     }
 
@@ -420,7 +426,7 @@ class Parser {
     expect(type, desc) {
         const t = this.curr();
         if (t.type === type) return this.next();
-        this.error(iniData.severity.Error, `Expected ${desc || type} but found '${t.value}'`, t);
+        this.error(ini.severity.Error, `Expected ${desc || type} but found '${t.value}'`, t);
         return null;
     }
 
@@ -553,7 +559,7 @@ class Parser {
         this.errors.length = errorCount;
 
         // Nothing matched
-        this.error(iniData.severity.Error, `Unrecognized SCRIPT_FRAGMENT starting with '${this.curr().value}'`);
+        this.error(ini.severity.Error, `Unrecognized SCRIPT_FRAGMENT starting with '${this.curr().value}'`);
         return false;
     }
 
@@ -634,12 +640,12 @@ class Parser {
                 this.next();
                 this.expect(TT.LPAREN, '(');
                 if (!this.isAnyKw('ntfs', 'fat', 'fat12', 'fat16', 'fat32')) {
-                    this.error(iniData.severity.Error, `Expected filesystem type (NTFS, FAT, FAT12, FAT16, FAT32)`);
+                    this.error(ini.severity.Error, `Expected filesystem type (NTFS, FAT, FAT12, FAT16, FAT32)`);
                 } else this.next();
                 this.expect(TT.RPAREN, ')');
                 break;
             default:
-                this.error(iniData.severity.Error, `Unexpected token '${t.value}' in volume boolean`, t);
+                this.error(ini.severity.Error, `Unexpected token '${t.value}' in volume boolean`, t);
                 this.next(); // skip to avoid infinite loop
         }
     }
@@ -741,10 +747,10 @@ class Parser {
                 break;
             default:
                 if (reportErrors) {
-                    this.error(iniData.severity.Error, `Unexpected token '${t.value}' in file boolean`, t);
+                    this.error(ini.severity.Error, `Unexpected token '${t.value}' in file boolean`, t);
                     this.next();
                 } else {
-                    this.error(iniData.severity.Warning, `Unexpected token '${t.value}' in file boolean, continuing...`, t);
+                    this.error(ini.severity.Warning, `Unexpected token '${t.value}' in file boolean, continuing...`, t);
                     this.next();
                 }
         }
@@ -752,7 +758,7 @@ class Parser {
 
     parseFileLocationOption() {
         if (!this.isAnyKw('beginoffile', 'endoffile', 'entirefile', 'anypart', 'anycompletefragment')) {
-            this.error(iniData.severity.Error, `Expected file location option`);
+            this.error(ini.severity.Error, `Expected file location option`);
         } else this.next();
     }
 
@@ -911,7 +917,7 @@ class Parser {
 
     parseAscDesc() {
         if (!this.isAnyKw('ascending', 'descending')) {
-            this.error(iniData.severity.Error, `Expected 'Ascending' or 'Descending'`);
+            this.error(ini.severity.Error, `Expected 'Ascending' or 'Descending'`);
         } else this.next();
     }
 
@@ -972,7 +978,7 @@ class Parser {
                 case 'windowsize':
                     this.expect(TT.LPAREN, '(');
                     if (!this.isAnyKw('fixed', 'minimized', 'maximized', 'invisible', 'restore')) {
-                        this.error(iniData.severity.Error, `Expected window size option`);
+                        this.error(ini.severity.Error, `Expected window size option`);
                     } else this.next();
                     this.expect(TT.RPAREN, ')');
                     break;
@@ -1016,21 +1022,21 @@ class Parser {
                 case 'otherinstances':
                     this.expect(TT.LPAREN, '(');
                     if (!this.isAnyKw('ask', 'allow', 'exit', 'kill')) {
-                        this.error(iniData.severity.Error, `Expected 'ask', 'allow', 'exit', or 'kill'`);
+                        this.error(ini.severity.Error, `Expected 'ask', 'allow', 'exit', or 'kill'`);
                     } else this.next();
                     this.expect(TT.RPAREN, ')');
                     break;
                 case 'batterypower':
                     this.expect(TT.LPAREN, '(');
                     if (!this.isAnyKw('ask', 'allow', 'exit')) {
-                        this.error(iniData.severity.Error, `Expected 'ask', 'allow', or 'exit'`);
+                        this.error(ini.severity.Error, `Expected 'ask', 'allow', or 'exit'`);
                     } else this.next();
                     this.expect(TT.RPAREN, ')');
                     break;
                 case 'setscreensaver': case 'setscreenpowersaver':
                     this.expect(TT.LPAREN, '(');
                     if (!this.isAnyKw('off', 'reset')) {
-                        this.error(iniData.severity.Error, `Expected 'off' or 'reset'`);
+                        this.error(ini.severity.Error, `Expected 'off' or 'reset'`);
                     } else this.next();
                     this.expect(TT.RPAREN, ')');
                     break;
@@ -1044,7 +1050,7 @@ class Parser {
                 case 'processpriority':
                     this.expect(TT.LPAREN, '(');
                     if (!this.isAnyKw('normal', 'belownormal', 'low', 'abovenormal', 'high', 'background')) {
-                        this.error(iniData.severity.Error, `Expected process priority`);
+                        this.error(ini.severity.Error, `Expected process priority`);
                     } else this.next();
                     this.expect(TT.RPAREN, ')');
                     break;
@@ -1052,7 +1058,7 @@ class Parser {
                     this.expect(TT.LPAREN, '(');
                     // variable name
                     if (this.curr().type !== TT.IDENT && this.curr().type !== TT.KEYWORD) {
-                        this.error(iniData.severity.Error, `Expected variable name`);
+                        this.error(ini.severity.Error, `Expected variable name`);
                     } else this.next();
                     this.expect(TT.COMMA, ',');
                     // value can be number or string
@@ -1064,7 +1070,7 @@ class Parser {
                     this.expect(TT.RPAREN, ')');
                     break;
                 default:
-                    this.error(iniData.severity.Error, `Unknown setting '${t.value}'`, t);
+                    this.error(ini.severity.Error, `Unknown setting '${t.value}'`, t);
             }
         } catch (errResult) {
             const message = `server.js:ValidateDocument Unexpected error Generating Preview of document: + ${errResult.message}`;
@@ -1091,14 +1097,14 @@ class Parser {
             this.tryKw('Forced');
             return;
         }
-        this.error(iniData.severity.Error, `Expected WhenFinished option`);
+        this.error(ini.severity.Error, `Expected WhenFinished option`);
     }
 
     // ── .Parse Color Features ───────────────────────────────────────────────────
 
     parseColorName() {
         if (!this.isAnyKw('empty', 'allocated', 'busyread', 'busywrite', 'text')) {
-            this.error(iniData.severity.Error, `Expected color name`);
+            this.error(ini.severity.Error, `Expected color name`);
         } else this.next();
     }
 
@@ -1130,7 +1136,7 @@ class Parser {
         if (this.isAnyKw('fragmented', 'movable', 'selected', 'processed', 'all')) {
             this.next(); return;
         }
-        this.error(iniData.severity.Error, `Unexpected token '${t.value}' in file color boolean`, t);
+        this.error(ini.severity.Error, `Unexpected token '${t.value}' in file color boolean`, t);
         this.next();
     }
 
@@ -1199,7 +1205,7 @@ class Parser {
             if (this.curr().type === TT.IDENT || this.curr().type === TT.KEYWORD) {
                 this.next();
             } else {
-                this.error(iniData.severity.Error, `Expected variable after '-'`);
+                this.error(ini.severity.Error, `Expected variable after '-'`);
             }
             return;
         }
@@ -1235,7 +1241,7 @@ class Parser {
             return;
         }
 
-        this.error(iniData.severity.Error, `Expected number or variable but found '${t.value}'`, t);
+        this.error(ini.severity.Error, `Expected number or variable but found '${t.value}'`, t);
         this.next();
     }
 
@@ -1295,13 +1301,7 @@ async function validateDocument(document) {
         const filePath = fileURLToPath(document.uri);
         const ext = path.extname(filePath).toLowerCase();
         const text = document.getText();
-        const log = {
-            appendLine: (...args) => console.log(...args),
-            append: (...args) => process.stdout.write(args.join('')),
-            show: () => { }
-        };
         logger.info(`MYDC SERVER ACTIVATED for ${filePath}`);
-
         // ─────────────────────────────────────────────────────────────────────────────────
         // Initial document set based on file extension
         switch (ext) {
@@ -1361,9 +1361,9 @@ async function validateDocument(document) {
         if (!bestParser.atEof()) {
             const t = bestParser.curr();
             if (bestParser.state === parseState.SCRIPT_FRAGMENT) {
-                bestParser.warning(iniData.severity.Warning, `server.js:ValidateDocument Unexpected token '${t.value}' — fragment may be incomplete`, t);
+                bestParser.warning(ini.severity.Warning, `server.js:ValidateDocument Unexpected token '${t.value}' — fragment may be incomplete`, t);
             } else {
-                bestParser.error(iniData.severity.Error, `server.js:ValidateDocument Unexpected token '${t.value}' — expected end of file`, t);
+                bestParser.error(ini.severity.Error, `server.js:ValidateDocument Unexpected token '${t.value}' — expected end of file`, t);
             }
         }
         // ─────────────────────────────────────────────────────────────────────────────────
@@ -1396,49 +1396,34 @@ async function validateDocument(document) {
 // (ToDo On Completion and Hover are stubs for now)
 // ─────────────────────────────────────────────────────────────────────────────────
 
-connection.onInitialize(() => {
-    Options = params.initializationOptions;
-    config = Options.config
-    console.log(config);
-
-    return {
-        capabilities: {
-            textDocumentSync: TextDocumentSyncKind.Incremental,
-            completionProvider: { resolveProvider: true },
-            hoverProvider: true,
-            definitionProvider: true,
-            referencesProvider: true,
-        }
-    };
-});
 connection.onCompletion(() => { // ToDo
     return [];
 });
 connection.onHover(() => { // ToDo
     return null;
 });
-connection.onInitialized(() => {
-    console?.log('MyDefrag Language Server initialized');
-    // Request the client to watch all MyDefrag files
-    connection.client.register(
-        require('vscode-languageserver/node').DidChangeWatchedFilesNotification.type,
-        {
-            watchers: [
-                { globPattern: '**/*.MyDc' },
-                { globPattern: '**/*.MyD' }
-            ]
-        }
-    );
-    console?.log('MyDefrag Language Server initialized');
-});
+// connection.onInitialized(() => {
+//     console?.log('MyDefrag Language Client initialized');
+//     // Request the client to watch all MyDefrag files
+//     connection.client.register(
+//         require('vscode-languageserver/node').DidChangeWatchedFilesNotification.type,
+//         {
+//             watchers: [
+//                 { globPattern: '**/*.MyDc' },
+//                 { globPattern: '**/*.MyD' }
+//             ]
+//         }
+//     );
+//     console?.log('MyDefrag Language Client initialized');
+// });
 // Change File Watcher
 connection.onDidChangeWatchedFiles(() => {
     // Re-validate all open documents when files change
     documents.all().forEach(validateDocument);
 });
 //#endregion
-// .Parse Server Open Document and Connection ──────────────────────────────────────────────────────────────
+// .Parse Client Open Document and Connection ──────────────────────────────────────────────────────────────
 documents.listen(connection);
 connection.listen();
 // .Parse END of document ──────────────────────────────────────────────────────────────
-module.exports = { createServer, start };
+module.exports = {};

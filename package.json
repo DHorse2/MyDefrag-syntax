@@ -31,14 +31,14 @@
                     ".mydc",
                     ".myd"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./src/language-configuration.json"
             }
         ],
         "grammars": [
             {
                 "language": "mydfrg",
                 "scopeName": "source.mydfrg",
-                "path": "./syntaxes/mydfrg.tmLanguage.json"
+                "path": "./src/syntaxes/mydfrg.tmLanguage.json"
             }
         ],
         "commands": [
@@ -73,7 +73,7 @@
             }
         ]
     },
-    "main": "./client/extension.js",
+    "main": "./src/extension.js",
     "scripts": {
         "deploy:local": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1",
         "liveUpdate:local": "powershell -ExecutionPolicy Bypass -File ./scripts/MyDefragUpdateLive.ps1",

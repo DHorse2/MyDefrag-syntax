@@ -4,7 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const console = require('console');
-const { message } = require('./loggerExtension');
+const { message } = require('./logger');
 
 var isServer = false;
 var debugOn = false;

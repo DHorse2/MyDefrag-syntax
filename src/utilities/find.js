@@ -20,7 +20,7 @@
 
 // (async () => {
 //     const found = await findScriptFile('myScript.MyD'); // or 'myScript' / 'myScript.txt'
-//     console.log(found ? `Found: ${found}` : 'Not found');
+//     console?.log(found ? `Found: ${found}` : 'Not found');
 // })();
 //
 const fs = require('fs').promises;

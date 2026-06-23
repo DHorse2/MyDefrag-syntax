@@ -26,18 +26,29 @@ const fs = require("fs");
 const path = require('path');
 const console = require('console');
 const { URI } = require('vscode-languageserver/node');
-// const URI = require('vscode-uri').URI;
-const { URL, fileURLToPath, pathToFileURL } = require('url');
+const { fileURLToPath, pathToFileURL } = require('url');
 // ─────────────────────────────────────────────────────────────────────────────────
 // Constants
 // ─────────────────────────────────────────────────────────────────────────────────
 const ini = require('../shared/ini')
-const channelName = 'MyDefrag Preview';
 // ─────────────────────────────────────────────────────────────────────────────────
 // Debug logger — writes to stderr so it doesn't pollute stdout/output file
 const Logger = require('../shared/logger');
 // ─────────────────────────────────────────────────────────────────────────────────
+// Initialize
 const isServer = false;
+var source = "Preview Processor";
+const channelName = 'MyDefrag Preview';
+var config;
+var iniData;
+var isDebugOn;
+var verboseLevel;
+var isLogOn;
+var referenceRelativePathLevel;
+var referenceContainsMacrosLevel;
+var referenceFileFoundLevel;
+var referenceFileNotFoundLevel;
+var iniErrors = [];
 var diagnostics = [];
 var parserState;
 const SCRIPT_DIR = __dirname;
@@ -51,40 +62,31 @@ const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
 const connection = createConnection(ProposedFeatures.all);
 const documents = new TextDocuments(TextDocument);
 // ─────────────────────────────────────────────────────────────────────────────────
-// Initialize
-var config;
-var debugOn;
-var verboseLevel;
-var logOn;
-var referenceRelativePathLevel;
-var referenceContainsMacrosLevel;
-var fileReferenceFoundLevel;
-var fileReferenceNotFoundLevel;
-var iniErrors = [];
-// const channelName = 'MyDefrag Syntax';
 var batLinkDebounceTimer = null;
 var batLinkDebounceValue = 15000;
 try { // ---- Initialization ----
-  // console.log(process.config);
-  config = ini.initialize(INI_PATH, channelName, isServer, true, ini.severity.Verbose);
+  // console?.log(process.config);
+  config = ini.initialize(source, INI_PATH, channelName, isServer, true, ini.severity.Verbose);
   ({
+    source,
     iniData,
-    debugOn,
+    isDebugOn,
     verboseLevel,
-    logOn,
+    isLogOn,
     referenceRelativePathLevel,
     referenceContainsMacrosLevel,
-    fileReferenceFoundLevel,
-    fileReferenceNotFoundLevel,
+    referenceFileFoundLevel,
+    referenceFileNotFoundLevel,
     iniErrors
   } = config);
 } catch (errResult) {
   const message = `mydefrag-preprocess.js:activate Unexpected error in first Initialize step: ${errResult.message}`;
-  console.error(message);
+  console?.error(message);
   throw new Error(message);
 }
-// logger.initialize(connection, isServer, diagnostics, iniData, config)
-logger = Logger.createLogger(config);
+// logger.initialize(source, connection, isServer, diagnostics, iniData, config)
+let source = "Preview Processor";
+logger = Logger.createLogger(channelName, source, config);
 if (ini.iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Information, ini.iniErrors) }
 // ─────────────────────────────────────────────────────────────────────────────────
 // Formatting helpers
@@ -118,19 +120,20 @@ function ensureLineOpen(state) {
 // Core processor
 // ─────────────────────────────────────────────────────────────────────────────────
 function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, state, parentFilePath = null, parentSrcLineNo = 0, parentSrcColNo = 1) {
-  const SCRIPT_DIR = __dirname;
-  const PARENT_DIR = path.dirname(SCRIPT_DIR);
-  const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
-  config = ini.initialize(INI_PATH, channelName, isServer, true, ini.severity.Verbose);
+  // const SCRIPT_DIR = __dirname;
+  // const PARENT_DIR = path.dirname(SCRIPT_DIR);
+  // const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
+  config = ini.initialize(source, INI_PATH, channelName, isServer, true, ini.severity.Verbose);
   ({
+    source,
     iniData,
-    debugOn,
+    isDebugOn,
     verboseLevel,
-    logOn,
+    isLogOn,
     referenceRelativePathLevel,
     referenceContainsMacrosLevel,
-    fileReferenceFoundLevel,
-    fileReferenceNotFoundLevel,
+    referenceFileFoundLevel,
+    referenceFileNotFoundLevel,
     iniErrors
   } = config);
   // const absPath = filePath;
@@ -150,7 +153,6 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
     return { lines: [annotLine(indent, `*** ${message} ***`)], outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // CIRCULAR FILE REFERENCE
   }
 
-  const { pathToFileURL } = require("url");
   const parentFile = parentFilePath ?? (stack.length > 0 ? stack[stack.length - 1] : filePath);
   const parentUri = pathToFileURL(parentFile).href;
   const missingUri = pathToFileURL(filePath).href;
@@ -337,10 +339,10 @@ function main() {
   logger.info('--- Preview processing triggered ---');
   logger.dbg(5, `  Debug Path=${INI_PATH}`)
   // const iniReader = ini.readIni(INI_PATH);
-  // debugOn = String(iniData.debugOn || "true").toLowerCase() === "true";
-  logger.dbg(7, `  Debug=${debugOn}`)
+  // isDebugOn = String(iniData.isDebugOn || "true").toLowerCase() === "true";
+  logger.dbg(7, `  Debug=${isDebugOn}`)
   logger.dbg(7, `INI_PATH="${INI_PATH}"`);
-  logger.dbg(7, `debugOn=${debugOn}`);
+  logger.dbg(7, `isDebugOn=${isDebugOn}`);
 
   logger.dbg(5, `main() started`);
   // ---- Arguments ----
@@ -397,7 +399,6 @@ function main() {
 
   // ──────────────────────────────────────────────────────────────────────────
   // Json Configuration Data (from extension.js)
-  // const { config } = require("process");
   const raw = process.argv.indexOf('--config');
   const config = raw !== -1
     ? JSON.parse(process.argv[raw + 1])
@@ -411,9 +412,9 @@ function main() {
   const entryUri = pathToFileURL(entryFile).href;
   logger.info(`Entry  : "${entryFile}"`);
   logger.info(`Output : "${outputFile}"`);
-  if (iniData !== config && iniData !== config) {
-    // ToDO ???
-  }
+  // if (iniData !== config.iniData && iniData !== config) {
+  //   // ToDO ??? validate config
+  // }
 
 
   // ──────────────────────────────────────────────────────────────────────────
@@ -473,7 +474,6 @@ function main() {
 
   let idx = 1;
   for (const f of linkVisited) {
-    const { pathToFileURL } = require("url");
     const uri = pathToFileURL(f).href;
     linkVisitedMapLines.push(`|[${String(idx).padStart(3, "0")}]  ${uri}`);
     linkVisitedMapOutPut.push(`|[${String(idx).padStart(3, "0")}]  "${f}"`);

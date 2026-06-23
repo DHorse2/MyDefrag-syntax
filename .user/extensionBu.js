@@ -328,59 +328,11 @@ async function activate(context) {
                     commandLinks = [];
                     let isDuplicate = false;
                     const toZeroBased = (s) => parseInt(s) - 1;
-
-                    // Internal trace diagnostics are for extension debugging only.
-                    // They help connect extension-side failures to the active document
-                    // without presenting the issue as a MyDefrag syntax error.
-                    const internalDiagnostics = [];
-
-                    const internalTraceEnabled = () => {
-                        return Boolean(isDebugOn || verboseLevel >= 3);
-                    };
-
-                    const formatTraceContext = (traceContext = {}) => {
-                        const entries = Object.entries(traceContext)
-                            .filter(([, value]) => value !== undefined && value !== null && value !== '');
-
-                        if (!entries.length) {
-                            return '';
-                        }
-
-                        return entries
-                            .map(([key, value]) => `${key}=${String(value)}`)
-                            .join(', ');
-                    };
-
-                    const addInternalTraceDiagnostic = (message, traceContext = {}) => {
-                        if (!internalTraceEnabled()) {
-                            return;
-                        }
-
-                        const contextText = formatTraceContext(traceContext);
-                        const fullMessage = contextText
-                            ? `${message} (${contextText})`
-                            : message;
-
-                        const diagnostic = new vscode.Diagnostic(
-                            new vscode.Range(
-                                new vscode.Position(0, 0),
-                                new vscode.Position(0, 0)
-                            ),
-                            fullMessage,
-                            vscode.DiagnosticSeverity.Hint
-                        );
-
-                        diagnostic.source = 'mydfrg-internal';
-
-                        internalDiagnostics.push(diagnostic);
-                    };
-
-                    const docLine = (i, traceContext = {}) => {
+                    const docLine = (i, context = {}) => {
                         if (i >= 0 && i < document.lineCount) {
                             // valid line
                             return document.lineAt(i).text;
                         }
-
                         // error handling properties:
                         // caller
                         // source
@@ -390,21 +342,24 @@ async function activate(context) {
                         // includeFile
                         // parentFile
                         const message =
-                            `Internal trace: requested line ${i}, valid range is 0-${document.lineCount - 1}.`;
+                            `Internal trace: requested line ${i}, valid range is 0-${document.lineCount - 1}.` +
+                            ` Caller=${context.caller || "unknown"}` +
+                            ` Uri=${document.uri}`;
 
-                        const mergedContext = {
-                            source: 'DocumentLinkProvider',
-                            caller: 'docLine',
-                            uri: document.uri.toString(),
-                            requestedLine: i,
-                            lineCount: document.lineCount,
-                            ...traceContext
-                        };
+                        console?.error?.(message);
+                        logger?.err?.(null, message);
 
-                        console?.error?.(`${message} ${formatTraceContext(mergedContext)}`);
-                        logger?.err?.(null, `${message} ${formatTraceContext(mergedContext)}`);
-
-                        addInternalTraceDiagnostic(message, mergedContext);
+                        if (isDebugOn || verboseLevel >= 3) {
+                            diagnostics.push({
+                                message,
+                                range: {
+                                    start: { line: 0, character: 0 },
+                                    end: { line: 0, character: 0 }
+                                },
+                                severity: DiagnosticSeverity.Hint,
+                                source: "mydfrg-internal"
+                            });
+                        }
 
                         return "";
                     };
@@ -453,12 +408,7 @@ async function activate(context) {
                         const normalised = includePath.replace(/\\/g, path.sep);
                         // resolve relative OR absolute
                         const targetUri = vscode.Uri.file(absolutePath(currentDir, includePath));
-                        const lineText = docLine(range.start.line, {
-                            caller: 'includeLink',
-                            includeFile: includePath,
-                            parentFile: document.uri.fsPath,
-                            statement: match[0]
-                        });
+                        const lineText = docLine(range.start.line); // INCLUDE line
 
                         isDuplicate = includeLinks.some(link =>
                             link.range.start.line === start.line &&
@@ -476,11 +426,7 @@ async function activate(context) {
                     // ── Document FILE Links ─────────────────────────────
                     const lineRe = /file:\/\/\/([^:\s]+):(\d+):(\d+)/g;
                     for (let i = 0; i < document.lineCount; i++) {
-                        const lineText = docLine(i, {
-                            caller: 'fileUriLinkScan',
-                            parentFile: document.uri.fsPath,
-                            lineNumber: i
-                        });
+                        const lineText = docLine(i); // FILE line
                         let match;
                         lineRe.lastIndex = 0;
                         while ((match = lineRe.exec(lineText)) !== null) {
@@ -496,12 +442,7 @@ async function activate(context) {
                             );
                             if (!isDuplicate) {
                                 fileLinks.push(new vscode.DocumentLink(range, target(targetUri, i, start)));
-                                logger.dbg(5, `FILE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${docLine(range.start.line, {
-                                    caller: 'fileUriLinkLog',
-                                    includeFile: includePath,
-                                    parentFile: document.uri.fsPath,
-                                    statement: match[0]
-                                })}`);
+                                logger.dbg(5, `FILE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${docLine(range.start.line)}`);
                             }
                         }
                     }
@@ -523,18 +464,12 @@ async function activate(context) {
                         );
                         if (!isDuplicate) {
                             commandLinks.push(new vscode.DocumentLink(range, target(targetUri, start.line, start)));
-                            logger.dbg(5, `BATCH/Command file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${docLine(range.start.line, {
-                                caller: 'commandLinkLog',
-                                includeFile: execPath,
-                                parentFile: document.uri.fsPath,
-                                statement: match[0]
-                            })}`);
+                            logger.dbg(5, `BATCH/Command file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${docLine(range.start.line)}`);
                         }
                     }
                     // logger.info(`Number of BATCH & command links: ${commandLinks.length}`);
                     // Finish 
                     logger.info(`includeLinks ${includeLinks.length}, fileLinks ${fileLinks.length}, commandLinks ${commandLinks.length}, EXCLUDED folders ${excludeConfig.folderCount}, files ${excludeConfig.fileCount}, search ${excludeConfig.searchCount}.`);
-                    diagnosticCollection.set(document.uri, internalDiagnostics);
                     return [...includeLinks, ...fileLinks, ...commandLinks];
                     // return links;
                 }
@@ -580,7 +515,7 @@ async function activate(context) {
 
                     while ((match = execPattern.exec(text)) !== null) {
                         if (!headingDone) {
-                            logger.info(headingText + '\n.\n');
+                            logger.info(headingText);
                             headingDone = true;
                         }
                         const filePath = match[1];

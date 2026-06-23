@@ -8,9 +8,9 @@ const utilCommon = require('../utilities/util');
 
 // LSP Standard:
 // extension.js
-// const extLogger = createLogger("extension");
+// const extLogger = createLogger(channelName, source, "extension");
 // server.js
-// const serverLogger = createLogger("server");
+// const serverLogger = createLogger(channelName, source, "server");
 
 //                 OR
 // ⚠️ Option 2: forward logs over LSP(advanced)
@@ -23,121 +23,68 @@ const utilCommon = require('../utilities/util');
 // });
 
 // Extension:
-// client.onNotification("mydefrag/log", (msg) => {
+// Client.onNotification("mydefrag/log", (msg) => {
 //     logger.log(msg.message);
 // });
-
-
+var source;
+let connection; // <- Log
+var iniData;
+// var config;
+var isDebugOn = false;
+var verboseLevel = 0;
+var isLogOn = false;
+var connectionShown = false;
+var extensionName = "MyDefrag"
+var source;
+var isServer;
+var diagnostics = [];
+var referenceRelativePathLevel;
+var referenceContainsMacrosLevel;
+var referenceFileFoundLevel;
+var referenceFileNotFoundLevel;
+var iniErrors = [];
+var loggedMessages;
 //#endregion
-// ──────────────────────────────────────────────────────────────────────────
-// function initialize(outputChannel, isServerRun = false, channelDiagnostics = null, inheritIni = null, thisconfig = null, debugEnabled = false, verbose = 0) {
-//     try { // ──Logger initialize ─────────────────────────────────────────────────────────────────
-//         connection = outputChannel;
-//         isServer = isServerRun;
-//         debugOn = debugEnabled;
-//         verboseLevel = verbose;
-//         iniData = inheritIni;
-//         if (inheritIni !== null && iniData !== undefined) {
-//             iniData = inheritIni;
-//             if (inheritIni.severity !== null && inheritIni.severity !== undefined) {
-//                 severity = severity;
-//             } else {
-//                 const message = `LoggerExtension.js:initialize Unexpected error: INI SEVERITY information not supplied to logger`;
-//                 iniErrors.push(message);
-//                 throw new Error(message);
-//             }
-//         } else {
-//             const message = `LoggerExtension.js:initialize INFORMATION: INI information not supplied to logger`
-//             iniErrors.push(message);
-//             throw new Error(message);
-//         }
-
-//         diagnostics = channelDiagnostics;
-//         if (diagnostics === null || diagnostics === undefined) { diagnostics = []; } else {
-//             console.log(`LoggerExtension.js:initialize Channel Diagnostic logs supplied to logger`);
-//         }
-
-//         isServer = isServerRun;
-//         if (isServer === null || isServer === undefined) { isServer = true; }
-
-//     } catch (errResult) {
-//         const message = `LoggerExtension.js:initialize Unexpected ERROR during initialization: ${errResult.message} `
-//         iniErrors.push(message);
-//         // return -1001;
-//         throw new Error(message);
-//     }
-// }
-// ──────────────────────────────────────────────────────────────────────────
 //#region Functions
-// try { // Define Standard Log Functions
-// function logToConsole(thisExtensionName, ...args) {
-//     // console.log("connection =", connection);
-//     // console.log("typeof connection =", typeof connection);
-//     // console.log("keys =", Object.keys(connection || {}));
-//     if (!connectionShown) {
-//         connection.show();
-//         connectionShown = true;
-//     }
-//     let newLineString = "";
-//     if (!isServer) { newLineString = `\n`; }
-//     const message = ` ${thisExtensionName} ${args.join(' ')}${newLineString}`;
-//     if (connection?.appendLine) {
-//         connection.appendLine(message);
-//         connection.show();
-//         console.log(message);
-//     } else {
-//         console.log(message);
-//     }
-// }
-function createLogger(config) {
+function createLogger(channelName, thisSource = "Unknown", config) {
     // language server
-    let connection; // <- Log
-    var iniData;
-    var config;
-    var debugOn = false;
-    var verboseLevel = 0;
-    var logOn = false;
-    var connectionShown = false;
-    var extensionName = "[MyDefrag]"
-    var isServer;
-    var diagnostics = [];
-    var referenceRelativePathLevel;
-    var referenceContainsMacrosLevel;
-    var fileReferenceFoundLevel;
-    var fileReferenceNotFoundLevel;
-    var iniErrors = [];
-    var loggedMessages;
-
     ({
+        source,
         iniData,
-        debugOn,
+        isDebugOn,
         verboseLevel,
-        logOn,
+        isLogOn,
         referenceRelativePathLevel,
         referenceContainsMacrosLevel,
-        fileReferenceFoundLevel,
-        fileReferenceNotFoundLevel,
+        referenceFileFoundLevel,
+        referenceFileNotFoundLevel,
         iniErrors
     } = config);
-
+    source = thisSource; // passed shadows what config had
     let lastSeverity;
-
+    //#region Logging functions
     function logToConsole(...args) {
-        // const message = args.join(' ');
-        const message = `${extensionName} ${args.join(' ')}`;
+        try {
+            // const message = args.join(' ');
+            const message = `[${extensionName}] [${source}] ${args.join(' ')}`;
 
-        if (isServer) {
-            // server: usually forward via LSP
-            connection?.sendNotification?.('mydefrag/log', { message });
-        } else {
-            connection?.appendLine?.(message);
+            if (isServer) {
+                // server: usually forward via LSP
+                connection?.sendNotification?.('mydefrag/log', { message });
+            } else {
+                connection?.appendLine?.(message);
+            }
+            console.log(message);
+        } catch (errResult) {
+            const message = `logger.js:createLogger:logToConsole: Error handling output: ${errResult.message}`;
+            console.error(message);
+            throw new Error(message);
         }
-
-        console.log(message);
     }
+    // logToConsole(`logger.js:createLogger: Console LOGGER creation source: ${source}`)
 
     function dbg(thisSeverity = verboseLevel, ...args) {
-        if (debugOn && thisSeverity <= verboseLevel) {
+        if (isDebugOn && thisSeverity <= verboseLevel) {
             logToConsole(`[DEBUG ${thisSeverity}]`, ...args);
         }
     }
@@ -177,7 +124,8 @@ function createLogger(config) {
                 break;
         }
     }
-
+    //#endregion
+    dbg(5, `Logger ${channelName} belonging to ${source} started.`)
     return {
         dbg,
         info,
@@ -190,7 +138,7 @@ function createLogger(config) {
 }
 //#endregion
 // ──────────────────────────────────────────────────────────────────────────
-function logArrayToConsole(logger, thisExtensionName, thisSeverity = iniData.severity.Error, thisLoggedMessages = null, logArray, ...args) {
+function logArrayToConsole(logger, thisChannelName, thisSeverity = iniData.severity.Error, thisLoggedMessages = null, logArray, ...args) {
     try { // ── Log Array To Console ─────────────────────────────────────────────────────────
         if (thisLoggedMessages === null || thisLoggedMessages === undefined) {
             loggedMessages = [];
@@ -235,7 +183,7 @@ function logArrayToConsole(logger, thisExtensionName, thisSeverity = iniData.sev
 }
 // ──────────────────────────────────────────────────────────────────────────
 module.exports = {
-    // initialize,
+    source,
     createLogger,
     // logToConsole,
     // dbg,
@@ -243,7 +191,8 @@ module.exports = {
     // info,
     // err,
     // message,
-    logArrayToConsole
+    logArrayToConsole,
     // lastSeverity,
     // connection,
+    loggedMessages
 };

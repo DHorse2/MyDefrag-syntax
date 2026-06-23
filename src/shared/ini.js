@@ -6,15 +6,21 @@ const path = require('path');
 const console = require('console');
 const { message } = require('./logger');
 
-var isServer = false;
-var debugOn = false;
-var verboseLevel = 1;
-var logOn = true;
-var strictMode = false;
-var referenceRelativePathLevel = 2;
-var referenceContainsMacrosLevel = 3;
-var fileReferenceFoundLevel = 3;
-var fileReferenceNotFoundLevel = 1;
+var source; // the script name basically. server/extension/preview
+var isServer; // or extension
+var channelName; // = "LoggerOutput", // IE "MyDefrag Syntax"
+var iniPath; // default = path.join(PARENT_DIR, "shared", `${channelName}.ini`);
+// Defaults, overridden if found in file.
+// DEVELOPERS!!! Set your defaults here
+// especially if you want to skip using the ini settings.
+var isDebugOn = true; // off for production
+var verboseLevel = 5; // verbose (not detailed)
+var isLogOn = true;
+var isStrictMode = false;
+var referenceRelativePathLevel = 2; // it's a warning
+var referenceContainsMacrosLevel = 3; // it's a hint
+var referenceFileFoundLevel = 3; // hint
+var referenceFileNotFoundLevel = 1; // Error
 // ─────────────────────────────────────────────────────────────────────────────────
 var iniData = {};
 const iniErrors = [];
@@ -36,22 +42,29 @@ var severity = {
     Verbose10: 14
 };
 // Custom INI file reader handling.
+// combined ini maps
 var thisIniMap;
-var iniMap;
+// ini Dictionary
+var thisIniDictionary;
+// project level settings
+var iniDictionary;
+// channel (extension/server/preview) settings
 var channelNameMap;
 // place your ini value substitution mappings here (quick)
+// good for prototyping and development temporary stuff
 var inlineIniMap = {
     // maxVerbose is a synonym for 7 (it isn't)
-    maxVerbose: "7", // ToDo remove after testing
+    maxVerbose: "7", // ToDo remove test ini setting after testing
     // allow 12 to be used
     // 12: "12"
 };
 //#endregion
 function initialize(
-    iniPath = null,
-    channelName = null,
-    channelIsServer = null,
-    debugEnabled = null,
+    thisSource = "Unknown",
+    thisIniPath = null,
+    thisChannelName = "LoggerOutput", // IE "MyDefrag Syntax"
+    channelIsServer = false,
+    debugEnabled = null, // these all have defaults.
     verbose = null,
     logEnabled = null,
     useStrict = null,
@@ -65,33 +78,50 @@ function initialize(
         iniErrors.length = 0;  // clears without reassigning
         const SCRIPT_DIR = __dirname;
         const PARENT_DIR = path.dirname(SCRIPT_DIR);
-        if (channelName === null) { channelName = "LoggerOutput"; }
+        source = thisSource;
+        channelName = thisChannelName;
         isServer = channelIsServer;
         if (isServer === null || isServer === undefined) { isServer = false; }
         // ─────────────────────────────────────────────────────────────────────────────────
         // ini File
-        if (iniPath === null || iniPath === undefined) {
-            iniPath = path.join(PARENT_DIR, "common", `${channelName}.ini`);
-        }
+        if (thisIniPath === null || thisIniPath === undefined) {
+            iniPath = path.join(PARENT_DIR, "shared", `${channelName}.ini`);
+        } else { iniPath = thisIniPath; }
         // Custom INI file reader handling.
+        var thisIniDictionary = {};
         var thisIniMap = {};
-        var iniMap = {};
+        var iniDictionary = {};
         var channelNameMap = {};
-        try { // read "iniMap.ini" file from disk
-            iniMap = readIni(path.join(PARENT_DIR, "common", `iniMap.ini`));
+
+        try { // read "iniDictionary.ini" file from disk shared folder
+            iniDictionary = readIni(path.join(PARENT_DIR, "shared", `iniDictionary.ini`));
         } catch (errResult) {
             const message = `ini.js:initialize INFORMATION: Unable to read INI file "IniMap.ini" from disk: ${errResult.message}`;
-            console.error(message);
+            console?.error(message);
+            iniDictionary = {};
         }
-        try { // read "MyDefrag SyntaxMap.ini" file from disk
-            channelNameMap = readIni(path.join(PARENT_DIR, "common", `${channelName}Map.ini`));
+
+        try { // read "MyDefrage Settings.ini" file from disk root
+            // Read MyDefrag Syntax INI file  <---- Your language configuration is in here <----
+            iniData = readIni(iniPath, iniDictionary);
+        } catch (errResult) {
+            const message = `ini.js:initialize ERROR: Unable to read expected MyDefrag INI file "mydefrag-syntax.ini" from disk: ${errResult.message}`;
+            console?.error(message);
+            iniData = {};
+        }
+        iniData["severity"] = severity;
+
+        try { // read "{Channel Name}Map.ini" file from disk shared folder
+            channelNameMap = readIni(path.join(PARENT_DIR, "shared", `${channelName}Map.ini`), iniDictionary);
         } catch (errResult) {
             const message = `ini.js:initialize WARNING: Unable to read EXTENSION INI file "Mydefrag SyntaxMap.ini" from disk: ${errResult.message}`;
-            console.error(message);
+            console?.error(message);
+            channelNameMap = {};
         }
-        try { // read "MyDefrag SyntaxMap.ini" file from disk
-            thisIniMap = {
-                ...iniMap,
+
+        try { // combine "MyDefrag SyntaxMap.ini" file from disk
+            iniData = {
+                ...iniData,
                 ...channelNameMap,
                 ...inlineIniMap
             };
@@ -99,8 +129,8 @@ function initialize(
             const message = `ini.js:initialize ERROR: Unexpected error merging INI files read from disk: ${errResult.message}`;
             throw new Error(message);
         }
-        if (thisIniMap !== null && thisIniMap !== undefined) {
-            if (thisIniMap['ERROR'] !== null && thisIniMap['ERROR'] !== undefined) {
+        if (thisIniDictionary !== null && thisIniDictionary !== undefined) {
+            if (thisIniDictionary['ERROR'] !== null && thisIniDictionary['ERROR'] !== undefined) {
                 // ERROR value is not mapped?
                 // Check for mandtory values (on disk) here
             }
@@ -108,16 +138,12 @@ function initialize(
             const message = `ini.js:initialize ERROR: INI SETTINGS are undefined!!!\nUnable to read INI files from disk: ${errResult.message}`;
             throw new Error(message);
         }
-
-        // Read INI file
-        iniData = readIni(iniPath, thisIniMap);
-        iniData["severity"] = severity;
-
         // ─────────────────────────────────────────────────────────────────────────────────
         // DEBUG
         if (debugEnabled === null || debugEnabled === undefined) {
-            debugOn = String(iniData.debugOn ?? "true").toLowerCase() === "true";
-        } else { debugOn = debugEnabled; }
+            isDebugOn = String(iniData.isDebugOn ?? "true").toLowerCase() === "true";
+        }
+        // else { isDebugOn = debugEnabled; }
 
         // ─────────────────────────────────────────────────────────────────────────────────
         // VERBOSE
@@ -128,92 +154,96 @@ function initialize(
         //  3       - information
         //  4       - hint
         //  5...    - debug basic with higher values (currently < 10). Default value
-        //  Debug (debugOn) must be on or Logger.dbg messages will be ignored.
+        //  Debug (isDebugOn) must be on or Logger.dbg messages will be ignored.
         if (verbose === null || verbose === undefined) {
             const iniVerbose = Number(iniData.verboseLevel);
-            verboseLevel = (Number.isFinite(iniVerbose) && iniVerbose >= 0 && iniVerbose <= 10) ? iniVerbose : 5;
+            verboseLevel = (Number.isFinite(iniVerbose) && iniVerbose >= 0 && iniVerbose <= 10) ? iniVerbose : verboseLevel;
         } else {
-            verboseLevel = (Number.isFinite(verbose) && verbose >= 0 && verbose <= 10) ? verbose : 5;
+            verboseLevel = (Number.isFinite(verbose) && verbose >= 0 && verbose <= 10) ? verbose : verboseLevel;
         }
 
         // ─────────────────────────────────────────────────────────────────────────────────
         // LOGGING available
         if (logEnabled === null || logEnabled === undefined) {
-            logOn = String(iniData.logEnabled ?? "true").toLowerCase() === "true";
-        } else { logOn = logEnabled; }
+            isLogOn = String(iniData.logEnabled ?? "true").toLowerCase() === "true";
+        } else {
+            isLogOn = (logEnabled === true || logEnabled === false) ? useStrict : isLogOn;
+        }
 
         // DEVELOPER settings
         // These values are important depending on the project context and methodology (paradigm/desigh pattern).
         // With reasonable defaults the usage and meaning of realitve paths varies.
         // Defaults:
-        //      referenceRelativePathLevel  =Warning
-        //      referenceContainsMacrosLevel=Hint
-        //      fileReferenceFoundLevel         =Information
-        //      fileReferenceNotFoundLevel      =Error
+        //      referenceRelativePathLevel      = Warning
+        //      referenceContainsMacrosLevel    = Hint
+        //      referenceFileFoundLevel         = Information
+        //      referenceFileNotFoundLevel      = Error
         // The ambiguous presence of macros (variables) in paths might have different importance.
         // File found/Not found can be independently handled.
         // This is overridden by mode="strict" (see below):
-
-        // LOGGING available
         if (useStrict === null || useStrict === undefined) {
-            strictMode = String(iniData.mode ?? "strict").toLowerCase() === "strict";
-        } else { strictMode = useStrict; }
+            isStrictMode = String(iniData.mode ?? "strict").toLowerCase() === "strict";
+        } else {
+            isStrictMode = (useStrict === true || useStrict === false) ? useStrict : isStrictMode;
+        }
 
-        if (strictMode) {
+        if (isStrictMode) {
             referenceRelativePathLevel = severity.Error;
             referenceContainsMacrosLevel = severity.Warning;
-            fileReferenceFoundLevel = severity.Information;
-            fileReferenceNotFoundLevel = severity.Error;
+            referenceFileFoundLevel = severity.Information;
+            referenceFileNotFoundLevel = severity.Error;
         } else {
             if (referenceRelativePath === null || referenceRelativePath === undefined) {
                 const iniPathErrors = Number(iniData.referenceRelativePathLevel);
-                referenceRelativePathLevel = (Number.isFinite(iniPathErrors) && iniPathErrors >= 1 && iniPathErrors <= 4) ? iniPathErrors : severity.Warning;
+                referenceRelativePathLevel = (Number.isFinite(iniPathErrors) && iniPathErrors >= 1 && iniPathErrors <= 4) ? iniPathErrors : referenceRelativePathLevel;
             } else {
-                referenceRelativePathLevel = (Number.isFinite(referenceRelativePath) && referenceRelativePath >= 1 && referenceRelativePath <= 4) ? referenceRelativePath : 2;
+                referenceRelativePathLevel = (Number.isFinite(referenceRelativePath) && referenceRelativePath >= 1 && referenceRelativePath <= 4) ? referenceRelativePath : referenceRelativePathLevel;
             }
 
             if (referenceContainsMacros === null || referenceContainsMacros === undefined) {
                 const iniPathErrors = Number(iniData.referenceContainsMacros);
-                referenceContainsMacrosLevel = (Number.isFinite(iniPathErrors) && iniPathErrors >= 1 && iniPathErrors <= 4) ? iniPathErrors : severity.Warning;
+                referenceContainsMacrosLevel = (Number.isFinite(iniPathErrors) && iniPathErrors >= 1 && iniPathErrors <= 4) ? iniPathErrors : referenceContainsMacrosLevel;
             } else {
-                referenceContainsMacrosLevel = (Number.isFinite(referenceContainsMacros) && referenceContainsMacros >= 1 && referenceContainsMacros <= 4) ? referenceContainsMacros : 2;
+                referenceContainsMacrosLevel = (Number.isFinite(referenceContainsMacros) && referenceContainsMacros >= 1 && referenceContainsMacros <= 4) ? referenceContainsMacros : referenceContainsMacrosLevel;
             }
 
             if (referenceFound === null || referenceFound === undefined) {
                 const iniPathErrors = Number(iniData.referenceFound);
-                fileReferenceFoundLevel = (Number.isFinite(iniPathErrors) && iniPathErrors >= 1 && iniPathErrors <= 4) ? iniPathErrors : severity.Warning;
+                referenceFileFoundLevel = (Number.isFinite(iniPathErrors) && iniPathErrors >= 1 && iniPathErrors <= 4) ? iniPathErrors : referenceFileFoundLevel;
             } else {
-                fileReferenceFoundLevel = (Number.isFinite(referenceFound) && referenceFound >= 1 && referenceFound <= 4) ? referenceFound : severity.Warning;
+                referenceFileFoundLevel = (Number.isFinite(referenceFound) && referenceFound >= 1 && referenceFound <= 4) ? referenceFound : referenceFileFoundLevel;
             }
 
             if (referenceNotFound === null || referenceNotFound === undefined) {
                 const iniPathErrors = Number(iniData.referenceNotFound);
-                fileReferenceNotFoundLevel = (Number.isFinite(iniPathErrors) && iniPathErrors >= 1 && iniPathErrors <= 4) ? iniPathErrors : severity.Error;
+                referenceFileNotFoundLevel = (Number.isFinite(iniPathErrors) && iniPathErrors >= 1 && iniPathErrors <= 4) ? iniPathErrors : referenceFileNotFoundLevel;
             } else {
-                fileReferenceNotFoundLevel = (Number.isFinite(referenceNotFound) && referenceNotFound >= 1 && referenceNotFound <= 4) ? referenceNotFound : severity.Error;
+                referenceFileNotFoundLevel = (Number.isFinite(referenceNotFound) && referenceNotFound >= 1 && referenceNotFound <= 4) ? referenceNotFound : referenceFileNotFoundLevel;
             }
 
         }
     } catch (errResult) {
-        const message = `ini.js:initialize Unexpected error in common initialize: + ${errResult.message}`;
-        throw new Error(message);
+        const message = `ini.js:initialize Unexpected error in common initialize: ${errResult.message}`;
+        console?.error(message);
+        // throw new Error(message);
     }
 
     return {
+        source,
         iniData,
-        debugOn,
+        isDebugOn,
         verboseLevel,
-        logOn,
+        isLogOn,
         referenceRelativePathLevel,
         referenceContainsMacrosLevel,
-        fileReferenceFoundLevel,
-        fileReferenceNotFoundLevel,
+        referenceFileFoundLevel,
+        referenceFileNotFoundLevel,
         iniErrors
     };
 }
 // ──────────────────────────────────────────────────────────────────────────
 // ini Reader
-function readIni(filePath, thisIniMap = null) {
+function readIni(filePath, thisIniDictionary = null) {
     // very basic INI parser (example)
     const result = new Set();
     // ──────────────────────────────────────────────────────────────────────────
@@ -225,7 +255,8 @@ function readIni(filePath, thisIniMap = null) {
         // IniFile not found
         const message = `Error Reading INI File ${filePath}: ${errResult.message}`;
         iniErrors.push(message);
-        throw new Error(message);
+        // throw new Error(message);
+        text = "";
     }
     try { // ── Text - Process INI file ────────────────────────────────────────────────────
         for (const line of text.split(/\r?\n/)) {
@@ -241,51 +272,58 @@ function readIni(filePath, thisIniMap = null) {
                 const [key, ...rest] = trimmed.split('=');
                 value = rest.join('=').trim();
                 // Is value present in INI and therefore an Expected Value VS Unique
-                if (thisIniMap === null || thisIniMap === undefined) { thisIniMap = new Set(); }
-                if (thisIniMap[value] === null || thisIniMap[value] === undefined) {
-                    const message = `WARNING, possible invalid data (${key.trim()}=${value}) in INI file. Value is not predefined as valid in "iniMap.ini"`
-                    iniErrors.push(message);
-                    thisIniMap = new Set();
-                    if (section) result[section][key.trim() + '_Validation_'] = message;
-                    else result[key.trim() + '_Validation_'] = message;
+                if (thisIniDictionary === null || thisIniDictionary === undefined) { thisIniDictionary = new Set(); }
+                // if (thisIniDictionary !== null && thisIniDictionary !== undefined) {
+                //     // value = (thisIniDictionary[value] !== undefined ? thisIniDictionary[value] : value);
+                // }
+                if (value === key) {
+                    // Dictionary item. Value unchanged.
                 } else {
-                    value = thisIniMap[value];
-                    if (thisIniMap !== null && thisIniMap !== undefined) {
-                        // value = (thisIniMap[value] !== undefined ? thisIniMap[value] : value);
+                    if (thisIniDictionary[value] === null || thisIniDictionary[value] === undefined) {
+                        // value not defined in dictionary. Value unchanged.
+                        const message = `WARNING, possible invalid data (${key.trim()}=${value}) in INI file. Value is not predefined as valid in "iniDictionary.ini"`
+                        iniErrors.push(message);
+                        // thisIniDictionary = new Set();
+                        // if (section) result[section][key.trim() + '_Validation_'] = message;
+                        // else result[key.trim() + '_Validation_'] = message;
+                    } else {
+                        // possible substitution (true=1), value is normally unchanged. 
+                        value = thisIniDictionary[value];
                     }
+                    if (section) result[section][key.trim()] = value;
+                    else result[key.trim()] = value;
                 }
-                if (section) result[section][key.trim()] = value;
-                else result[key.trim()] = value;
             }
         }
     } catch (errResult) {
         // IniFile processing error
         const messageSimple = `Unexpected Error Processing the INI File:`;
-        console.error(messageSimple);
+        console?.error(messageSimple);
         iniErrors.push(messageSimple);
 
         message = `        ${errResult.message}`;
-        console.error(message);
+        console?.error(message);
         iniErrors.push(message);
 
         message = `        ${result}`;
-        console.log(message);
-        iniErrors.push(message);
-        throw new Error(`${messageSimple} errResult.message`)
+        console?.log(message);
+        iniErrors.push(`${messageSimple} errResult.message`);
+        // throw new Error(`${messageSimple} errResult.message`)
     }
     return result;
 }
 // ──────────────────────────────────────────────────────────────────────────
 module.exports = {
+    source,
     iniData,
-    debugOn,
+    isDebugOn,
     verboseLevel,
     severity,
-    logOn,
+    isLogOn,
     referenceRelativePathLevel,
     referenceContainsMacrosLevel,
-    fileReferenceFoundLevel,
-    fileReferenceNotFoundLevel,
+    referenceFileFoundLevel,
+    referenceFileNotFoundLevel,
     iniErrors,
     initialize,
     readIni

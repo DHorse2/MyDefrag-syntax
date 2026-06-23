@@ -1,0 +1,462 @@
+What prompt should I give cline to have it examine the project it is in and provide initial feedback?
+
+Analyze this entire workspace and provide a comprehensive project review in .md format.
+
+Do not modify any files.
+
+Please report:
+
+1. Project Overview
+
+   * Purpose of the project
+   * Main technologies used
+   * Overall architecture
+   * Important entry points
+
+2. Source Layout
+
+   * Describe the purpose of each major folder.
+   * Identify files that appear to be primary entry points.
+   * Identify generated files, build artifacts, and configuration files.
+
+3. VS Code Extension Analysis
+
+   * Explain how the extension activates.
+   * Explain how extension.js and server.js interact.
+   * Describe the Language Server Protocol architecture.
+   * Identify activation events and client/server communication paths.
+
+4. Build and Packaging
+
+   * Explain the build process.
+   * Explain npm scripts.
+   * Explain VSIX packaging.
+   * Identify any missing or questionable build configuration.
+
+5. Configuration Analysis
+
+   * package.json
+   * launch.json
+   * tasks.json
+   * language configuration
+   * TextMate grammars
+   * any custom configuration files
+
+6. Code Quality Review
+
+   * Potential bugs
+   * Error handling concerns
+   * Maintainability concerns
+   * Performance concerns
+   * Security concerns
+
+7. Project Risks
+
+   * Files that appear unfinished
+   * Dead code
+   * Duplicate code
+   * Architectural weaknesses
+   * Technical debt
+
+8. Recommendations
+
+   * Top 10 improvements
+   * Ranked by impact
+   * Include estimated effort and risk
+
+9. Questions
+
+   * List anything that appears ambiguous or requires clarification.
+
+Do not propose code changes yet.
+First produce a detailed assessment report.
+
+_________________________________________________________________________________
+
+%APPDATA%\VSCodium\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json
+
+_________________________________________________________________________________
+
+uvx search mcp powershell
+
+uv tool list
+
+I gave this to chatgpt. I need a few basic tasks sped up. I need a function modeled after parseStatement that case a case statement for each keyword in the project. It is for backward reasoning that parseFragment it trying to do as it validate fragment files included in other scripts. It will partly resemble parseStatement. try to generate the "this.???" calls within the case statement. So     parseStatements() {
+consumes tokes in the usual forward manner. parseFragment must usually determine the statement type and then where it is allowed within the syntax hierarchy.  Create a new version of server.js (serverNew.js) with these bug fixes and changes.
+
+_________________________________________________________________________________
+
+I've reviewed the `src/extension.js` file, which is the main entry point for the MyDefrag VS Code extension. This file handles the extension's activation, language server integration, document link detection, and various provider registrations.
+
+Key components I can see:
+
+1. **Extension Activation (`activate` function)**: Sets up logging, status bar, diagnostic collection, and registers multiple providers:
+   - Definition provider (F12 Go to Definition)
+   - Reference provider (Shift+F12 Find All References) 
+   - Document link providers for MyDefrag files (.myd/.mydc) and batch files (.bat)
+   - Text document content provider for previews
+   - Language server client for syntax checking
+
+2. **Document Link Providers**: 
+   - Handles `!include "file"` links in MyDefrag files
+   - Processes file:// URLs in MyDefrag files  
+   - Detects batch/command file references in both .myd and .bat files
+
+3. **Language Server Integration**: Creates and starts a LanguageClient that connects to the server.js process
+
+4. **Preview Functionality**: Provides a way to generate previews of MyDefrag documents
+
+5. **Configuration Handling**: Reads from mydefrag-syntax.ini configuration file
+
+The file is quite complex with multiple nested functions, error handling, and various utility functions. I notice there's also a `src/server/server.js` file that likely contains the actual language server implementation.
+
+To better understand what needs to be changed, I need to know:
+1. What specific functionality you'd like me to modify or add
+2. Whether you want to enhance the existing features or implement new ones
+
+Would you like me to examine the server.js file as well, or do you have a specific goal in mind for this extension?
+_________________________________________________________________________________
+
+Test-Path "C:\ProgramData\MCP-DevTools\powershell-devtools-mcp\server.mjs"
+Test-Path "C:\ProgramData\MCP-DevTools\powershell-devtools-mcp\node_modules"
+Test-Path "C:\Program Files\nodejs\node.exe"
+Test-Path "C:\Program Files\PowerShell\7\pwsh.exe"
+
+Get-Command pwsh | Select-Object -ExpandProperty Source
+
+PWSH = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+PWSH = "C:\\Users\\david\\AppData\\Local\\Microsoft\\WindowsApps\\pwsh.exe"
+PWSH = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+
+cd C:\ProgramData\MCP-DevTools\powershell-devtools-mcp
+node .\server.mjs
+
+
+_________________________________________________________________________________
+
+PowerShell MCP
+├── Clipboard
+├── File Operations
+├── Archive Operations
+├── npm
+├── Git
+├── VSIX Packaging
+├── OVSX Publishing
+├── Process Launching
+├── Explorer Integration
+└── Windows Utilities
+
+_________________________________________________________________________________
+
+cd C:\ProgramData\MCP-DevTools\powershell-devtools-mcp
+node .\server.mjs
+
+_________________________________________________________________________________
+
+I have many of my own .ps1 scripts in the project folders. How are they used?
+
+Your existing PowerShell MCP can run them through:
+
+run_powershell_dev_command
+
+Example prompts to Codex:
+
+Run .\MyDefragUpdateLive.ps1 from the project root and summarize the output.
+Run .\scripts\generate-vscodeignore.ps1 and show any errors.
+List all .ps1 files in this workspace and explain what each appears to do. Do not run them.
+
+For safety, I’d use this workflow:
+
+1. Ask Codex to find and summarize the .ps1 script.
+2. Ask Codex to inspect parameters and side effects.
+3. Ask Codex to propose the exact command.
+4. Approve the run.
+
+PowerShell command form:
+
+pwsh -NoLogo -NoProfile -ExecutionPolicy Bypass -File .\YourScript.ps1
+
+With parameters:
+
+pwsh -NoLogo -NoProfile -ExecutionPolicy Bypass -File .\YourScript.ps1 -Step -Verbose
+
+So yes: your .ps1 files are usable now, as long as run_powershell_dev_command allows pwsh and the script path is inside PROJECT_ROOT.
+_________________________________________________________________________________
+
+Use this workflow:
+
+1. Find and summarize the .ps1 script.
+2. Inspect parameters and side effects.
+3. Propose the exact command.
+4. Approve the run with the user.
+5. Run the command.
+5.1 Log the run in "D:\logs\run.log"
+5.2 Perform the run
+5.3 Capture any results to "D:\logs\run.log"
+6. Discuss the next step.
+
+_________________________________________________________________________________
+You are assisting with the MyDefrag Language Extension.
+
+General Rules
+-------------
+- Never remove comments.
+- Preserve existing comment style.
+- Prefer additive changes over rewrites.
+- Minimize diffs.
+- Do not rename public APIs unless explicitly requested.
+- Do not change formatting unrelated to the task.
+
+Code Generation
+---------------
+- Use PowerShell 7 syntax.
+- Use Node.js CommonJS unless the file already uses ESM.
+- Follow existing project conventions.
+- Generate JSDoc comments for new functions.
+- Preserve existing error handling patterns.
+
+Debugging
+---------
+- Explain root cause before proposing fixes.
+- Prefer diagnosis over speculative changes.
+- Show affected files before editing.
+
+PowerShell
+----------
+- Never use PowerShell automatic variables such as $args for custom purposes.
+- Preserve help comments.
+- Preserve existing comments.
+- Use approved PowerShell verbs.
+
+VS Code Extension Development
+-----------------------------
+- Assume VSCodium compatibility is required.
+- Preserve Open VSX compatibility.
+- Preserve existing package.json contributions.
+- Explain activation-path changes before implementing them.
+
+Parser Development
+------------------
+- Minimize parser behavior changes.
+- Explain syntax changes before implementing them.
+- Preserve backwards compatibility whenever possible.
+
+Output Format
+-------------
+When reviewing code:
+
+1. Root Cause
+2. Proposed Solution
+3. Risks
+4. Files Affected
+
+When generating code:
+
+1. Summary
+2. Code
+3. Notes
+
+_________________________________________________________________________________
+For your workflow I'd also add:
+
+Update Automation Control
+-------------------------
+
+Never automatically run:
+- git commit
+- git push
+- ovsx publish
+- vsce publish
+- npm publish
+
+without explicit approval.
+
+_________________________________________________________________________________
+I would also create a second "project context" section:
+
+Project Overview
+----------------
+
+Language:
+    MyDefrag scripting language
+
+Technologies:
+    Node.js
+    JavaScript
+    VS Code Extension API
+    Language Server Protocol
+    TextMate Grammar
+    PowerShell 7
+
+Key Files:
+    extension.js
+    server.js
+    parser.js
+    tokenizer.js
+
+Build:
+    npm
+    vsce
+    ovsx
+
+Target Editors:
+    VSCodium
+    VS Code
+_________________________________________________________________________________
+
+# MyDefrag Language Extension Instructions
+
+You are assisting with the MyDefrag Language Extension.
+
+## General Rules
+
+* Never remove comments.
+* Preserve existing comment style.
+* Prefer additive changes over rewrites.
+* Minimize diffs.
+* Do not rename public APIs unless explicitly requested.
+* Do not change formatting unrelated to the task.
+
+## Code Generation
+
+* Use PowerShell 7 syntax.
+* Use Node.js CommonJS unless the file already uses ESM.
+* Follow existing project conventions.
+* Generate JSDoc comments for new functions.
+* Preserve existing error handling patterns.
+
+## Debugging
+
+* Explain root cause before proposing fixes.
+* Prefer diagnosis over speculative changes.
+* Show affected files before editing.
+
+## PowerShell
+
+* Never use PowerShell automatic variables such as `$args` for custom purposes.
+* Preserve help comments.
+* Preserve existing comments.
+* Use approved PowerShell verbs.
+
+## VS Code Extension Development
+
+* Assume VSCodium compatibility is required.
+* Preserve Open VSX compatibility.
+* Preserve existing package.json contributions.
+* Explain activation-path changes before implementing them.
+
+## Parser Development
+
+* Minimize parser behavior changes.
+* Explain syntax changes before implementing them.
+* Preserve backwards compatibility whenever possible.
+
+## Output Format
+
+When reviewing code:
+
+1. Root Cause
+2. Proposed Solution
+3. Risks
+4. Files Affected
+
+When generating code:
+
+1. Summary
+2. Code
+3. Notes
+
+## Update Automation Control
+
+Never automatically run:
+
+* git commit
+* git push
+* ovsx publish
+* vsce publish
+* npm publish
+
+without explicit approval.
+
+Before modifying more than one file:
+
+1. Explain the plan.
+2. List files to be modified.
+3. Wait for approval.
+
+## Project Context Overview
+
+Language:
+
+* MyDefrag scripting language
+
+Technologies:
+
+* Node.js
+* JavaScript
+* VS Code Extension API
+* Language Server Protocol
+* TextMate Grammar
+* PowerShell 7
+
+Key Files:
+
+* extension.js
+* server.js
+* parser.js
+* tokenizer.js
+* languageData.js
+
+Build:
+
+* npm
+* vsce
+* ovsx
+
+Target Editors:
+
+* VSCodium
+* VS Code
+
+_________________________________________________________________________________
+Yes. I revised `extension.js` to implement that pattern.
+
+[Download revised extension.js](sandbox:/mnt/data/extension.revised.js)
+
+What changed:
+
+* Added `internalDiagnostics` inside the MyDefrag document link provider.
+* Added helper functions:
+
+  * `internalTraceEnabled()`
+  * `formatTraceContext()`
+  * `addInternalTraceDiagnostic()`
+* Reworked `docLine(i, traceContext)` so out-of-range line requests:
+
+  * log to `console.error`
+  * log to your `logger.err`
+  * add a `vscode.DiagnosticSeverity.Hint` diagnostic at the top of the current document only when debug/verbose tracing is enabled
+* Added contextual trace properties such as:
+
+  * `caller`
+  * `source`
+  * `uri`
+  * `requestedLine`
+  * `lineCount`
+  * `includeFile`
+  * `parentFile`
+  * `statement`
+* Replaced the incorrect `DiagnosticSeverity.Hint` reference with `vscode.DiagnosticSeverity.Hint`.
+* Added `diagnosticCollection.set(document.uri, internalDiagnostics)` before returning document links.
+* Syntax checked the revised file with `node -c`.
+
+The uploaded source I revised is your `extension.js` content. 
+
+_________________________________________________________________________________
+
+_________________________________________________________________________________
+
+_________________________________________________________________________________
+
+_________________________________________________________________________________
+

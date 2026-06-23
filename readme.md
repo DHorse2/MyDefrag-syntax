@@ -216,8 +216,8 @@ With reasonable defaults the usage and meaning of relative paths varies.
 | --- | --- |
 | referenceRelativePathLevel | Warning |
 | referenceContainsMacrosLevel | Hint |
-| fileReferenceFoundLevel | Information |
-| fileReferenceNotFoundLevel | Error |
+| referenceFileFoundLevel | Information |
+| referenceFileNotFoundLevel | Error |
 
 The ambiguous presence of macros (variables) in paths might have different importance.
 File found/Not found can be independently handled. The regular defaults can be overridden by *mode="strict"*.
@@ -227,8 +227,8 @@ File found/Not found can be independently handled. The regular defaults can be o
 | --- | --- |
 | referenceRelativePathLevel | severity.Error |
 | referenceContainsMacrosLevel | severity.Warning |
-| fileReferenceFoundLevel | severity.Information |
-| fileReferenceNotFoundLevel | severity.Error |
+| referenceFileFoundLevel | severity.Information |
+| referenceFileNotFoundLevel | severity.Error |
 
 ### Inline ini customization
 
@@ -277,7 +277,7 @@ Initialization provides several outputs:
 | ini | ToDo |
 | debugOn | ToDo |
 | verboseLevel | ToDo |
-| logOn | ToDo |
+| isLogOn | ToDo |
 | iniErrors | ToDo |
 
 #### Reporting and Analysis Options
@@ -290,8 +290,8 @@ The default configuration provides a balanced set of diagnostics suitable for bo
 | ------------------------------ | ---------------- |
 | `referenceRelativePathLevel`   | Warning          |
 | `referenceContainsMacrosLevel` | Hint             |
-| `fileReferenceFoundLevel`      | Information      |
-| `fileReferenceNotFoundLevel`   | Error            |
+| `referenceFileFoundLevel`      | Information      |
+| `referenceFileNotFoundLevel`   | Error            |
 
 **`referenceRelativePathLevel`**
 Controls the severity reported when a relative path is encountered. Some projects encourage relative paths, while others require fully qualified paths.
@@ -299,10 +299,10 @@ Controls the severity reported when a relative path is encountered. Some project
 **`referenceContainsMacrosLevel`**
 Controls the severity reported when a file reference contains macros or variables. Depending on the project, macro-based paths may be expected, discouraged, or prohibited.
 
-**`fileReferenceFoundLevel`**
+**`referenceFileFoundLevel`**
 Controls the severity reported when a referenced file is successfully located. This can be useful for informational diagnostics and troubleshooting.
 
-**`fileReferenceNotFoundLevel`**
+**`referenceFileNotFoundLevel`**
 Controls the severity reported when a referenced file cannot be found. In most cases, this should remain set to **Error**.
 
 These settings can be customized independently. For example, a project may treat unresolved file references as errors while only reporting the use of macros or relative paths as informational messages.
@@ -313,8 +313,8 @@ When `mode=strict` is enabled, these settings are overridden with a predefined s
 | ------------------------------ | -------------------- |
 | `referenceRelativePathLevel`   | Error                |
 | `referenceContainsMacrosLevel` | Warning              |
-| `fileReferenceFoundLevel`      | Information          |
-| `fileReferenceNotFoundLevel`   | Error                |
+| `referenceFileFoundLevel`      | Information          |
+| `referenceFileNotFoundLevel`   | Error                |
 
 Strict mode is recommended when all file references must be fully validated and potential path ambiguities should be treated as diagnostic issues.
 
@@ -355,7 +355,7 @@ Debug (debugOn) must be on or logger.dbg messages will be ignored. It is a true/
 
 ToDo
 
-### logOn
+### isLogOn
 
 ToDo
 
@@ -367,11 +367,11 @@ ToDo
 
 ToDo
 
-### fileReferenceFoundLevel
+### referenceFileFoundLevel
 
 ToDo
 
-### fileReferenceNotFoundLevel
+### referenceFileNotFoundLevel
 
 ToDo
 
@@ -397,3 +397,21 @@ ToDo
 | Auto-closing quotes | " " and ' ' |
 
 ---
+
+### What are the colors on the diskmap?
+
+The default colors are listed below. Note that colors can be customized per script, and even per section of a script, so your colors may differ.
+
+| Color | Meaning |
+| --- | --- |
+| Black | Empty space of the disk |
+| Dark-blue | Allocated. This can be NTFS reserved areas, or space that is in use on the disk but MyDefrag does not know by which file |
+| Blue | Unfragmented files |
+| Light-blue | Currently selected unfragmented files |
+| Yellow | Fragmented files |
+| Light-yellow | Currently selected fragmented files |
+| Red | Unmovable. Files that could not be moved by the Windows defragmentation API. All files are initially "movable"; a file only becomes red after MyDefrag has unsuccessfully tried to move or defragment it |
+| Light-red | Currently selected unmovable files |
+| Green | Finished files |
+| White | The file currently being read |
+| White | The file currently being written |

@@ -8,16 +8,51 @@
         "type": "git",
         "url": "https://github.com/DHorse2/MyDefrag-syntax"
     },
-    "activationEvents": [
-        "onLanguage:mydfrg"
-    ],
     "engines": {
-        "vscode": "^1.0.0"
+        "vscode": "^1.82.0"
     },
     "categories": [
         "Programming Languages"
     ],
     "contributes": {
+        "configuration": {
+            "title": "MyDefrag",
+            "properties": {
+                "mydfrg.exclude": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "**/Backup/**",
+                        "**/Bu/**",
+                        "**/MdmSysTools/**",
+                        "**/Archive/**",
+                        "**/*.tmp.MyDc",
+                        "**/Compile*",
+                        "**/*.log",
+                        "**/TaylorDoVs0_2/**",
+                        "**/TaylorDoVs0_3/**",
+                        "**/TaylorDoVs0_4/**",
+                        "**/Log/**",
+                        "**/Logs/**",
+                        "**/artifacts/**",
+                        "**/.user/**",
+                        "**/node_modules/**",
+                        "**/artifacts/**",
+                        "**/resources/",
+                        "**/dist/**",
+                        "**/.git/**",
+                        "**/.user/**",
+                        "**/.vs/**",
+                        "**/.vscode/**",
+                        "**/Download/**",
+                        "**/GithubIo/**"
+                    ],
+                    "description": "Glob patterns to exclude from MyDefrag validation"
+                }
+            }
+        },
         "languages": [
             {
                 "id": "mydfrg",
@@ -29,7 +64,9 @@
                     ".MyDc",
                     ".MyD",
                     ".mydc",
-                    ".myd"
+                    ".myd",
+                    ".MYDC",
+                    ".MYD"
                 ],
                 "configuration": "./src/language-configuration.json"
             }
@@ -55,14 +92,14 @@
             "editor/title": [
                 {
                     "command": "mydfrg.openPreview",
-                    "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd",
+                    "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
                     "group": "navigation"
                 }
             ],
             "editor/title/context": [
                 {
                     "command": "mydfrg.openPreview",
-                    "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd",
+                    "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
                     "group": "navigation"
                 }
             ]
@@ -76,12 +113,15 @@
     "main": "./src/extension.js",
     "scripts": {
         "deploy:local": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1",
-        "liveUpdate:local": "powershell -ExecutionPolicy Bypass -File ./scripts/MyDefragUpdateLive.ps1",
+        "liveUpdate:local": "powershell -ExecutionPolicy Bypass -File ./scripts/update-live-MyDefrag.ps1",
         "pack:vsix": "powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1",
         "publish:vsx": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1",
         "clean": "rimraf dist out .vscodeignore",
         "build": "echo 'no build step for pure Node.js extension'",
-        "prepare": "npm run build"
+        "prepare": "npm run build",
+        "enableNetwwork:local": "powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1",
+        "listSymLinks:local": "powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1",
+        "addVsCodiumToExplorer:local": "powershell -ExecutionPolicy Bypass -File ./scripts/add-VsCodium-ToExplorer.ps1"
     },
     "dependencies": {
         "vscode-languageclient": "^9.0.1",

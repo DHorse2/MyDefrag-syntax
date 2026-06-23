@@ -1,0 +1,30 @@
+{
+  "servers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${workspaceFolder}"
+      ]
+    },
+    "git": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-git",
+        "--repository",
+        "${workspaceFolder}"
+      ]
+    },
+    "powershell": {
+      "type": "stdio",
+      "command": "pwsh",
+      "args": [
+        "-Command",
+        "& { . $env:USERPROFILE\\Documents\\PowerShell\\Microsoft.PowerShell_profile.ps1 }"
+      ]
+    }
+  }
+}

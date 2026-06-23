@@ -23,7 +23,7 @@ const { tokenize, configureTokenizer } = require('./tokenizer');
 const { Parser, parseStates, configureParser } = require('./parser');
 const {
     KEYWORDS,
-    KEYWORDS_MAP,
+    KEYWORD_MAP,
     KEYWORDS_BY_PARENT,
     KEYWORDS_SETTINGS,
     KEYWORDS_SETTINGS_SET,
@@ -294,7 +294,7 @@ async function validateDocument(document) {
             // Check for full document errors
             parser = new Parser(tokens, text, parserState);
             logger.dbg(5, `validateDocument: Step 1 Parsing`);
-            logger.dbg(5, "validateDocument: Full Document FIRST TOKEN:", parser.curr(), "=", parser.curr().value);
+            logger.dbg(5, "validateDocument: Full Document FIRST TOKEN:", parser.curr(), "=", parser.curr().value );
 
             // ─────────────────────────────────────────────────────────────────────────────────
             parser.parseStatements();
@@ -304,7 +304,7 @@ async function validateDocument(document) {
                 parser.state = parseStates.SCRIPT_FULL;
             }
             logger.dbg(5, `validateDocument: Full Document Parse Statements ${parser.errors.length}`);
-            logger.dbg(5, "validateDocument: AFTER PARSE:", parser.curr(), "=", parser.curr().value);
+            logger.dbg(5, "validateDocument: AFTER PARSE:", parser.curr(), "=", parser.curr().value );
             bestParser = parser;
 
         } else {
@@ -320,14 +320,14 @@ async function validateDocument(document) {
             parserState = parseStates.SCRIPT_FRAGMENT;
             fragParser = new Parser(tokens, text, parserState);
             logger.dbg(5, `validateDocument: Step 2 Parsing`);
-            logger.dbg(5, "validateDocument: Document Fragment FIRST TOKEN:", fragParser.curr(), "=", fragParser.curr().value);
+                logger.dbg(5, "validateDocument: Document Fragment FIRST TOKEN:", fragParser.curr(), "=", fragParser.curr().value );
 
             // ─────────────────────────────────────────────────────────────────────────────────
             // Choose the parser with fewer errors
             fragParserResult = fragParser.parseFragment();
             t = fragParser.curr();
             logger.dbg(5, `validateDocument: Document Fragment Parse Statements. Success: ${fragParserResult} Errors: ${fragParser.errors.length}`);
-            logger.dbg(5, "validateDocument: AFTER PARSE:", fragParser.curr(), "=", fragParser.curr().value);
+            logger.dbg(5, "validateDocument: AFTER PARSE:", fragParser.curr(), "=", fragParser.curr().value );
             // Comparison
             logger.dbg(5, `validateDocument: Step Comparison. Errors, Frag: ${fragParser.errors.length}, Full: ${bestParser.errors.length} `);
             if (
@@ -364,15 +364,11 @@ async function validateDocument(document) {
                 source: 'MyDefrag',
             });
         }
-    } catch (errResult) {
-        const message = `server.js:validateDocument: Unexpected parser failure: ${errResult.message}`;
-        console?.error?.(message);           // debugger
-        logger?.err?.(errResult, message);   // output channel
-        bestParser?.warningAtStart?.(message); // document diagnostic
     }
-
-    if (bestParser?.errors?.length) {
-        diagnostics.push(...bestParser.errors);
+    catch (errResult) {
+        const message = `server.js:ValidateDocument Unexpected exception: ${errResult.message}`;
+        console?.error(message);
+        // throw new Error(message);
     }
     //ParserState Send Notification to extension.js
     connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
@@ -423,11 +419,11 @@ async function scanAllFiles(folderUri) {
 // (ToDo On Completion and Hover are stubs for now)
 // ─────────────────────────────────────────────────────────────────────────────────
 
-connection.onCompletion(() => { // ToDo onCompletion
+connection.onCompletion(() => { // ToDo
     logger.dbg(6, 'server.js:onCompletion: MyDefrag server connection on Completion');
     return [];
 });
-connection.onHover(() => { // ToDo onHover
+connection.onHover(() => { // ToDo
     logger.dbg(6, 'server.js:onHover: MyDefrag server connection on Hover');
     return null;
 });

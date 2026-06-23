@@ -1,0 +1,54 @@
+VsCode language extension development. I'm debugging the server.js parsing.
+It reports an error in script on the first valid statement.
+Documents can be complete scripts (MyD) or fragments of scripts (MyDc).
+
+ and integration with extension.js.
+
+Topic 1:
+This code had one diagnostic but it did not appear (server.js):
+    for (const errResult of bestParser.errors) {
+
+            diagnostics.push({
+
+                severity: errResult.severity,
+
+                range: errResult.range,
+
+                msg: errResult.message,
+
+                source: 'MyDefrag',
+
+            });
+
+        }
+
+    }
+
+    catch (errResult) {
+
+        const message = `server.js:ValidateDocument Unexpected exception: ${errResult.message}`;
+
+        console?.error(message);
+
+        throw new Error(message);
+
+    }
+
+
+
+    connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
+
+
+
+    connection.sendDiagnostics({
+
+        uri: document.uri,
+
+        diagnostics
+
+    });
+
+}
+
+Topic 2:
+?

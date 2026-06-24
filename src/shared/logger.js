@@ -46,8 +46,30 @@ var iniErrors = [];
 var loggedMessages;
 //#endregion
 //#region Functions
-function createLogger(channelName, thisSource = "Unknown", config) {
+function createLogger(channelName, thisSource = "Unknown", config = {}, options = {}) {
     // language server
+    const loggerConfig = config || {};
+    const localIniData = loggerConfig.iniData || {
+        severity: {
+            Error: 1,
+            Warning: 2,
+            Information: 3,
+            Hint: 4,
+        }
+    };
+    const localIsDebugOn = Boolean(loggerConfig.isDebugOn);
+    const localVerboseLevel = Number.isFinite(Number(loggerConfig.verboseLevel))
+        ? Number(loggerConfig.verboseLevel)
+        : 0;
+    const localIsLogOn = loggerConfig.isLogOn !== false;
+    const localIsServer = Boolean(loggerConfig.isServer || options.isServer);
+    const localSource = thisSource; // passed shadows what config had
+    const outputChannel = options.outputChannel || null;
+    const lspConnection = options.connection || null;
+    const logFilePath = options.filePath || null;
+    const fileEnabled = options.fileEnabled ?? localIsLogOn;
+    let lastSeverity;
+
     ({
         source,
         iniData,
@@ -59,64 +81,118 @@ function createLogger(channelName, thisSource = "Unknown", config) {
         referenceFileFoundLevel,
         referenceFileNotFoundLevel,
         iniErrors
-    } = config);
-    source = thisSource; // passed shadows what config had
-    let lastSeverity;
+    } = loggerConfig);
+    source = localSource;
+
+    /**
+     * Converts log arguments into readable single-line text.
+     *
+     * @param {*} value The value to format for log output.
+     * @returns {string} The formatted log value.
+     */
+    function formatLogValue(value) {
+        if (value === null || value === undefined) return '';
+        if (value instanceof Error) return value.stack || value.message;
+        if (typeof value === 'string') return value;
+        try {
+            return JSON.stringify(value);
+        } catch {
+            return String(value);
+        }
+    }
+
+    /**
+     * Ensures the configured log file directory exists before appending.
+     *
+     * @param {string} filePath The log file path.
+     */
+    function ensureLogFile(filePath) {
+        if (!filePath) return;
+        fs.mkdirSync(path.dirname(filePath), { recursive: true });
+    }
+
+    /**
+     * Appends a single line to the configured log file.
+     *
+     * @param {string} message The formatted log line.
+     */
+    function appendToFile(message) {
+        if (!fileEnabled || !logFilePath) return;
+        try {
+            ensureLogFile(logFilePath);
+            fs.appendFileSync(logFilePath, `${message}\n`, 'utf8');
+        } catch (errResult) {
+            console.error(`logger.js:createLogger:appendToFile: ${errResult.message}`);
+        }
+    }
+
+    /**
+     * Writes a session marker so F5 runs are easy to separate in log files.
+     */
+    function writeSessionHeader() {
+        if (!fileEnabled || !logFilePath) return;
+        appendToFile(`===== ${channelName} ${localSource} session ${new Date().toISOString()} =====`);
+    }
+
+    writeSessionHeader();
+
     //#region Logging functions
     function logToConsole(...args) {
-        try {
-            // const message = args.join(' ');
-            const message = `[${extensionName}] [${source}] ${args.join(' ')}`;
+        // const message = args.join(' ');
+        const content = args.map(formatLogValue).filter(Boolean).join(' ');
+        const message = `[${new Date().toISOString()}] [${extensionName}] [${localSource}] ${content}`;
 
-            if (isServer) {
+        try {
+            appendToFile(message);
+            if (localIsServer) {
                 // server: usually forward via LSP
-                connection?.sendNotification?.('mydefrag/log', { message });
+                lspConnection?.sendNotification?.('mydefrag/log', { message });
             } else {
-                connection?.appendLine?.(message);
+                outputChannel?.appendLine?.(message);
             }
             console.log(message);
         } catch (errResult) {
-            const message = `logger.js:createLogger:logToConsole: Error handling output: ${errResult.message}`;
-            console.error(message);
-            throw new Error(message);
+            const errorMessage = `logger.js:createLogger:logToConsole: Error handling output: ${errResult.message}`;
+            console.error(errorMessage);
+            appendToFile(errorMessage);
         }
     }
     // logToConsole(`logger.js:createLogger: Console LOGGER creation source: ${source}`)
 
-    function dbg(thisSeverity = verboseLevel, ...args) {
-        if (isDebugOn && thisSeverity <= verboseLevel) {
+    function dbg(thisSeverity = localVerboseLevel, ...args) {
+        if (localIsDebugOn && thisSeverity <= localVerboseLevel) {
             logToConsole(`[DEBUG ${thisSeverity}]`, ...args);
         }
     }
     function err(errResult, ...args) {
         logToConsole(`[ERROR!!!]`, errResult, ...args);
-        lastSeverity = iniData.severity.Error
+        lastSeverity = localIniData.severity.Error
     }
     function warn(...args) {
         logToConsole(`[WARNING]`, ...args);
-        lastSeverity = iniData.severity.Warning;
+        lastSeverity = localIniData.severity.Warning;
     }
     function hint(...args) {
         logToConsole(`[HINT]`, ...args);
-        lastSeverity = iniData.severity.Hint;
+        lastSeverity = localIniData.severity.Hint;
     }
     function info(...args) {
         logToConsole(`[INFO]`, ...args);
-        lastSeverity = iniData.severity.Information;
+        lastSeverity = localIniData.severity.Information;
     }
-    function message(thisSeverity = iniData.severity.info, ...args) {
+    function message(thisSeverity = localIniData.severity.Information, ...args) {
         lastSeverity = thisSeverity;
         switch (thisSeverity) {
-            case iniData.severity.Error:
+            case localIniData.severity.Error:
                 err(...args);
                 break;
-            case iniData.severity.Warning:
+            case localIniData.severity.Warning:
                 warn(...args);
                 break;
-            case iniData.severity.Information:
+            case localIniData.severity.Information:
                 info(...args);
                 break;
-            case iniData.severity.Hint:
+            case localIniData.severity.Hint:
                 hint(...args);
                 break;
             default:
@@ -133,7 +209,8 @@ function createLogger(channelName, thisSource = "Unknown", config) {
         warn,
         err,
         message,
-        logToConsole
+        logToConsole,
+        filePath: logFilePath
     };
 }
 //#endregion

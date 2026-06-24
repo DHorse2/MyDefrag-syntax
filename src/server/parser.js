@@ -24,7 +24,8 @@ let ini = {
         Warning: 2,
         Information: 3,
         Hint: 4,
-    }
+    },
+    fragmentParentLevel: 4,
 };
 
 function configureParser(deps = {}) {
@@ -46,6 +47,9 @@ class Parser {
         this.state = state;
         this.pos = 0;
         this.errors = [];
+        this.start = 0;
+        this.errorCount = 0;
+        this.errorFlag = false;
         // todo logger.dbg("stuff")
     }
     //#region ────── (Primitives) Cross-cutting functions .Parse ───────────────
@@ -72,44 +76,51 @@ class Parser {
     }
 
     // ─────────────────────────────────────────────────────────────────────────────────
+    /**
+     * Adds a parser diagnostic and logs it immediately for later inspection.
+     *
+     * @param {number} severity The LSP diagnostic severity.
+     * @param {string} message The diagnostic message.
+     * @param {{ line: number, character: number }} start The diagnostic start position.
+     * @param {{ line: number, character: number }} end The diagnostic end position.
+     */
+    addDiagnostic(severity, message, start, end) {
+        this.errors.push({
+            message: message,
+            range: {
+                start,
+                end,
+            },
+            severity,
+        });
+
+        logger.message(
+            severity,
+            `[diagnostic] ${message} ` +
+            `(line ${start.line + 1}, char ${start.character + 1} - ` +
+            `line ${end.line + 1}, char ${end.character + 1}; ` +
+            `state=${this.state}, pos=${this.pos})`
+        );
+    }
+
     error = (errorSeverity, message, token) => {
         token = token || this.curr();
         const s = this.offsetToPos(token.start);
         const e = this.offsetToPos(token.end);
-        this.errors.push({
-            message: message,
-            range: {
-                start: s,
-                end: e,
-            },
-            severity: errorSeverity,
-        });
-        logger.message(errorSeverity, message);
+        this.addDiagnostic(errorSeverity, message, s, e);
     }
 
     warning = (errorSeverity, message, token) => {
         token = token || this.curr();
         const s = this.offsetToPos(token.start);
         const e = this.offsetToPos(token.end);
-        this.errors.push({
-            message: message,
-            range: { start: s, end: e },
-            severity: errorSeverity,
-        });
-        logger.message(errorSeverity, message);
+        this.addDiagnostic(errorSeverity, message, s, e);
     }
 
     warningAtStart(message) {
         const pos = { line: 0, character: 0 };
 
-        this.errors.push({
-            message,
-            range: {
-                start: pos,
-                end: pos
-            },
-            severity: ini.severity.Warning
-        });
+        this.addDiagnostic(ini.severity.Warning, message, pos, pos);
     }
     //#endregion
     // ─────────────────────────────────────────────────────────────────────────────────
@@ -157,13 +168,38 @@ class Parser {
     //#endregion
     //
     //#region Grammar rules - .Parse Statements ─────────────────────────────────────────────────────────
-    parseStatements() {
+    parseStatements(options = {}) {
+        const reportUnexpected = options.reportUnexpected ?? true;
+
         while (!this.atEof()) {
-            if (!this.parseStatement()) break;
-            if (this.atEof()) {
-                // end of file reached successfully
+            const statementStart = this.pos;
+            const t = this.curr();
+            // Next statemement
+            if (!this.parseStatement()) {
+                // failed
+                this.errorCount++;
+                if (reportUnexpected) {
+                    this.error(
+                        ini.severity.Error,
+                        `Unexpected statement '${t?.value ?? ''}'`,
+                        t
+                    );
+                }
+                return false;
+            }
+
+            // Safety guard: parseStatement() must consume at least one token.
+            if (this.pos === statementStart) {
+                this.errorCount++;
+                this.error(
+                    ini.severity.Error,
+                    `Parser made no progress at '${t?.value ?? ''}'`,
+                    t
+                );
+                return false;
             }
         }
+        return true;
     }
     // .parseStatement
     parseStatement() {
@@ -203,7 +239,7 @@ class Parser {
                 case 'excludefiles':
                     this.next();
                     this.expect(TT.LPAREN, '(');
-                    this.parseFileBooleans();
+                    this.parseFileBooleans(true);
                     this.expect(TT.RPAREN, ')');
                     return true;
 
@@ -242,7 +278,7 @@ class Parser {
             const message = `server.js:Parser:parseStatement: Unexpected error parsing Token: ${t.value.toLowerCase()} NextToken: ${this.curr().value.toLowerCase()} Error: ${errResult.message}`;
             console?.error?.(message);           // debugger
             logger?.err?.(errResult, message);   // output channel
-            this.warningAtStart?.(message); // document diagnostic
+            this.error?.(message); // document diagnostic
             return message;
         }
     }
@@ -261,34 +297,97 @@ class Parser {
     // | 7    | Fragment parses successfully                 | **SCRIPT_FRAGMENT success → return true**  |
     // | 8    | Fragment parse fails                         | **return false**                           |
 
-    restoreState() {
+    restoreState(errorCount = this.errorCount) {
         // Reset and try fragment-mode parsing from beginning.
-        this.pos = start;
+        this.pos = this.start;
         this.errors.length = errorCount;
     }
 
-    noNewErrors() {
+    noNewErrors(errorCount = this.errorCount) {
         return (this.errors.length === errorCount);
     }
 
+    // Verbose fragment parser tracing.
+    // logger.dbg(5, ...) is expected to respect verboseLevel internally.
+    fragmentTrace(label, data = {}) {
+        const columns = [
+            ['event', label, 20],
+            ['step', data.step, 4],
+            ['ok', data.ok, 6],
+            ['pos', data.pos, 4],
+            ['token', data.tokenValue, 18],
+            ['type', data.tokenType, 14],
+            ['kw', data.keyword, 18],
+            ['kind', data.keywordKind ?? data.kind ?? data.fragmentKind, 20],
+            ['parent', data.keywordParent ?? data.parent ?? data.fragmentParent, 20],
+            ['allowed', data.allowed, 7],
+            ['parsed', data.parsed, 7],
+            ['stack', data.fragmentStack, 24],
+            ['errs', data.errorsAfter ?? data.errors, 4],
+            ['fragmentKind', data.fragmentKind, 24],
+            ['fragmentParent', data.fragmentParent, 24],
+            ['fragmentStack', data.fragmentStack, 24],
+        ];
+
+        const message = columns
+            .filter(column => Array.isArray(column))
+            .map(([name, value, width]) => `${name}=${this.formatTraceColumn(value, width)}`)
+            .join(' ');
+
+        logger?.dbg?.(5, `server.js:Parser:parseFragment ${message}`);
+    }
+
+    /**
+     * Formats one fragment trace value as a fixed-width single-line column.
+     *
+     * @param {*} value The value to format.
+     * @param {number} width The maximum visible column width.
+     * @returns {string} Padded or truncated column text.
+     */
+    formatTraceColumn(value, width) {
+        let text;
+
+        if (value === null || value === undefined) {
+            text = '';
+        } else if (Array.isArray(value)) {
+            text = value.join('>');
+        } else if (typeof value === 'object') {
+            text = JSON.stringify(value);
+        } else {
+            text = String(value);
+        }
+
+        text = text.replace(/\s+/g, ' ');
+        if (text.length > width) {
+            text = text.slice(0, Math.max(0, width - 1)) + '…';
+        }
+
+        return text.padEnd(width, ' ');
+    }
+
     parseFragment() {
-        const start = this.pos;
-        const errorCount = this.errors.length;
-        const errorFlag = false;
+        this.start = this.pos;
+        const fragmentErrorCount = this.errors.length;
+        this.errorCount = fragmentErrorCount;
+        this.errorFlag = false;
+        //#region First try normal full-document / full-statement parsing.
+        // ─────────────────────────────────────────────────────────────────────────────────
         // First try normal full-document / full-statement parsing.
+        // Do not report "unexpected statement" yet because this may be a valid fragment.
+        const fullParseOk = this.parseStatements({
+            reportUnexpected: false
+        });
 
-        // First try normal full-document / full-statement parsing.
-        this.parseStatements();
-
-        if (this.atEof() && this.noNewErrors()) {
+        if (fullParseOk && this.atEof() && this.noNewErrors(fragmentErrorCount)) {
             logger.dbg(3, `server.js:Parser:parseFragment: Full statement parse succeeded: ${this.errors.length}`);
             return true;
         }
 
         // ─────────────────────────────────────────────────────────────────────────────────
-        logger.dbg(5, `server.js:Parser:parseFragment: Full statement parse failed/errors: ${this.errors.length}`);
+        logger.dbg(5, `server.js:Parser:parseFragment: Full statement parse failed. Errors: ${this.errors.length}`);
 
-        this.restoreState();
+        this.restoreState(fragmentErrorCount);
+        this.errorCount = fragmentErrorCount;
 
         // Fragment Properties:
         // ok: true,
@@ -298,17 +397,42 @@ class Parser {
         // closes: null,
         // allowedParents: ['volume_block', ...]
         const fragment = {
+            ok: false,
             kind: null,
-            parentKind: null,
+            parent: null,
+            parent: null,
             stack: []
         };
-
+        //#endregion
         // ─────────────────────────────────────────────────────────────────────────────────
         // Process remaining file (or whole file)
+        let fragmentStep = 0;
+        let keywordData;
+        let parsed;
+        let canReplaceFragmentParent;
+        let t;
+        let allowed;
+
         while (!this.atEof()) {
+            fragmentStep++;
+
             const statementStart = this.pos;
             const statementErrors = this.errors.length;
-            const t = this.curr();
+            t = this.curr();
+
+            this.fragmentTrace("loop-start", {
+                step: fragmentStep,
+                pos: this.pos,
+                tokenType: t?.type,
+                tokenValue: t?.value,
+                tokenParent: t?.parent ?? null,
+                tokenPosition: t?.start !== undefined ? this.offsetToPos(t.start) : null,
+                fragmentKind: fragment.kind,
+                fragmentParent: fragment.parent,
+                fragmentStack: [...(fragment.stack ?? [])],
+                errors: this.errors.length
+            });
+
             // ─────────────────────────────────────────────────────────────────────────────────
             // Parse statement
             // MACROs
@@ -316,94 +440,228 @@ class Parser {
                 (t.type === TT.MACRO ||
                     (t.type === TT.KEYWORD && t.value.toLowerCase() === 'include'))
             ) {
+                this.fragmentTrace("macro-skip", {
+                    step: fragmentStep,
+                    pos: this.pos,
+                    tokenType: t?.type,
+                    tokenValue: t?.value
+                });
+
                 this.next();
             } else {
+                // KEYWORD
                 const keyword = (
                     t &&
                     (t.type === TT.KEYWORD || t.type === TT.IDENT)
                 ) ? String(t.value).toLowerCase() : '';
+
+                this.fragmentTrace("keyword", {
+                    step: fragmentStep,
+                    keyword,
+                    tokenType: t?.type,
+                    tokenValue: t?.value,
+                    tokenParent: t?.parent ?? null,
+                    fragmentKind: fragment.kind,
+                    fragmentParent: fragment.parent,
+                    fragmentStack: [...(fragment.stack ?? [])]
+                });
+
                 // NO KEYWORD error
                 if (!keyword) {
+                    this.fragmentTrace("no-keyword-error", {
+                        step: fragmentStep,
+                        tokenType: t?.type,
+                        tokenValue: t?.value,
+                        pos: this.pos
+                    });
+
                     this.error(
                         ini.severity.Error,
                         `server.js:Parser:parseFragment: Expected fragment keyword, got '${t?.value}'`
                     );
-                    const errorFlag = true;
+                    this.errorFlag = true;
                     break;
                 }
+
                 // Get Keyword Data
-                const info = this.parseFragmentKeywordBackward(keyword, {
+                keywordData = this.parseFragmentKeywordBackward(keyword, {
                     fragment,
                     token: t
                 });
+
+                this.fragmentTrace("keyword-data", {
+                    step: fragmentStep,
+                    keyword,
+                    ok: keywordData?.ok ?? false,
+                    kind: keywordData?.kind ?? null,
+                    parent: keywordData?.parent ?? null,
+                    opens: keywordData?.opens ?? null,
+                    closes: keywordData?.closes ?? null,
+                    allowedParents: keywordData?.allowedParents ?? [],
+                    parentHints: keywordData?.parentHints ?? null,
+                    currentFragmentKind: fragment.kind,
+                    currentFragmentParent: fragment.parent,
+                    currentFragmentStack: [...(fragment.stack ?? [])]
+                });
+
                 // Unknown fragment keyword
-                if (!info || !info.ok) {
+                if (!keywordData || !keywordData.ok) {
+                    this.fragmentTrace("unknown-keyword-error", {
+                        step: fragmentStep,
+                        keyword,
+                        tokenParent: t?.parent ?? null,
+                        keywordData
+                    });
+
                     this.error(
                         ini.severity.Error,
                         `server.js:Parser:parseFragment: Unknown fragment keyword '${keyword}' parent '${t.parent}'`
                     );
-                    const errorFlag = true;
+                    this.errorFlag = true;
                     break;
                 }
 
                 // ─────────────────────────────────────────────────────────────────────────────────
                 // Determine script category. Based on first statement
-                const canReplaceFragmentParent =
-                    !fragment.parentKind ||
-                    fragment.parentKind === 'any' ||
+                canReplaceFragmentParent =
+                    !fragment.parent ||
+                    fragment.parent === 'any' ||
                     (
-                        fragment.parentKind === 'script' &&
-                        info.parent !== 'script' &&
-                        info.parent !== 'any'
+                        fragment.parent === 'script' &&
+                        keywordData.parent !== 'script' &&
+                        keywordData.parent !== 'any'
                     );
 
+                this.fragmentTrace("parent-decision", {
+                    step: fragmentStep,
+                    keyword,
+                    canReplaceFragmentParent,
+                    oldFragmentKind: fragment.kind,
+                    oldFragmentParent: fragment.parent,
+                    keywordKind: keywordData.kind,
+                    keywordParent: keywordData.parent
+                });
+
                 if (canReplaceFragmentParent) {
-                    fragment.kind = info.kind;
-                    fragment.parentKind = info.parent;
-                    fragment.parentHints = info.parentHints || null;
+                    fragment.kind = keywordData.kind;
+                    fragment.parent = keywordData.parent;
+                    fragment.parentHints = keywordData.parentHints || null;
+
+                    this.fragmentTrace("parent-established", {
+                        step: fragmentStep,
+                        keyword,
+                        fragmentKind: fragment.kind,
+                        fragmentParent: fragment.parent,
+                        fragmentParentHints: fragment.parentHints
+                    });
                 }
 
                 // ─────────────────────────────────────────────────────────────────────────────────
                 // Later statements must be legal in the established fragment context.
-                if (!this.fragmentAllows(info, fragment)) {
+                allowed = this.fragmentAllows(keywordData, fragment);
+
+                this.fragmentTrace("fragment-allows", {
+                    step: fragmentStep,
+                    keyword,
+                    allowed,
+                    keywordKind: keywordData.kind,
+                    keywordParent: keywordData.parent,
+                    allowedParents: keywordData.allowedParents ?? [],
+                    fragmentKind: fragment.kind,
+                    fragmentParent: fragment.parent,
+                    fragmentStack: [...(fragment.stack ?? [])]
+                });
+
+                if (!allowed) {
                     this.error(
                         ini.severity.Error,
-                        `server.js:Parser:parseFragment: '${keyword}' is '${info.kind}' and belongs in '${info.parent}', ` +
-                        `but this fragment was established as '${fragment.parentKind}'`
+                        `server.js:Parser:parseFragment: '${keyword}' is '${keywordData.kind}' and belongs in '${keywordData.parent}', ` +
+                        `but this fragment was established as '${fragment.parent}'`
                     );
-                    const errorFlag = true;
+                    this.errorFlag = true;
                     break;
                 }
 
                 // ─────────────────────────────────────────────────────────────────────────────────
                 // Now actually parse the statement using the real parser.
-                if (!this.parseFragmentStatementByKind(info)) {
+                parsed = this.parseFragmentStatementByKind(keywordData);
+
+                this.fragmentTrace("parse-by-kind", {
+                    step: fragmentStep,
+                    keyword,
+                    parsed,
+                    keywordKind: keywordData.kind,
+                    startPos: statementStart,
+                    endPos: this.pos,
+                    consumedTokens: this.pos - statementStart,
+                    errorsBefore: statementErrors,
+                    errorsAfter: this.errors.length
+                });
+
+                if (!parsed) {
                     this.pos = statementStart;
                     this.errors.length = statementErrors;
 
+                    this.fragmentTrace("parse-by-kind-error", {
+                        step: fragmentStep,
+                        keyword,
+                        restoredPos: this.pos,
+                        restoredErrors: this.errors.length
+                    });
+
                     this.error(
                         ini.severity.Error,
-                        `server.js:Parser:parseFragment: Failed parsing fragment statement '${keyword}' as '${info.kind}'`
+                        `server.js:Parser:parseFragment: Failed parsing fragment statement '${keyword}' as '${keywordData.kind}'`
                     );
-                    const errorFlag = true;
+                    this.errorFlag = true;
                     break;
                 }
 
                 // Safety guard: parser must consume something.
                 if (this.pos === statementStart) {
+                    this.fragmentTrace("no-progress-error", {
+                        step: fragmentStep,
+                        keyword,
+                        pos: this.pos
+                    });
+
                     this.error(
                         ini.severity.Error,
                         `server.js:Parser:parseFragment: Parser made no progress at '${keyword}'`
                     );
-                    const errorFlag = true;
+                    this.errorFlag = true;
                     break;
                 }
 
-                if (!errorFlag) { this.updateFragmentStack(info, fragment); }
+                if (!this.errorFlag) {
+                    this.updateFragmentStack(keywordData, fragment);
+
+                    this.fragmentTrace("stack-updated", {
+                        step: fragmentStep,
+                        keyword,
+                        opens: keywordData.opens ?? null,
+                        closes: keywordData.closes ?? null,
+                        fragmentKind: fragment.kind,
+                        fragmentParent: fragment.parent,
+                        fragmentStack: [...(fragment.stack ?? [])],
+                        pos: this.pos
+                    });
+                }
             }
         }
+
+        this.fragmentTrace("loop-end", {
+            atEof: this.atEof(),
+            pos: this.pos,
+            errorFlag: this.errorFlag,
+            errors: this.errors.length,
+            fragmentKind: fragment.kind,
+            fragmentParent: fragment.parent,
+            fragmentParentHints: fragment.parentHints ?? null,
+            fragmentStack: [...(fragment.stack ?? [])]
+        });
         this.hintFragmentParent(fragment);
-        if (this.atEof() && !errorFlag) { return true; } else { return false; }
+        if (this.atEof() && !this.errorFlag) { return true; } else { return false; }
     }
     // Builds a hint to insert at the top of the document.
     hintFragmentParent(fragment) {
@@ -421,18 +679,14 @@ class Parser {
     }
     // Add a hint diagnostic at the start of the document.
     hintAtStart(message) {
-        this.errors.push({
-            message: message,
-            range: {
-                start: { line: 0, character: 0 },
-                end: { line: 0, character: 0 },
-            },
-            severity: ini.severity.Hint,
-        });
+        const start = { line: 0, character: 0 };
+        const end = { line: 0, character: 1 };
+
+        this.addDiagnostic(ini.fragmentParentLevel ?? ini.severity.Hint, message, start, end);
     }
     // Get the array of hint descriptions
     getFragmentParentHints(fragment) {
-        const parent = fragment.parentKind;
+        const parent = fragment.parent;
         const kind = fragment.kind;
 
         switch (parent) {
@@ -469,39 +723,54 @@ class Parser {
         }
     }
     // ─────────────────────────────────────────────────────────────────────────────────
+    //#region isValue
+    isNumber() {
+        return this.curr()?.type === TT.NUMBER;
+    }
+
+    isString() {
+        return this.curr()?.type === TT.STRING;
+    }
+
+    isDateTime() {
+        // This is intentionally broad.
+        // Real date/time parsing is handled later by parseDateTime().
+        return this.isNumber() || this.isKw('now');
+    }
+    //#endregion
     //#region  Backward reasoning functions.
+    parseSingleTokenFragment() {
+        if (this.atEof()) return false;
+        this.next();
+        return true;
+    }
+
+    parseWithProgress(parseFn) {
+        const start = this.pos;
+        const errorCount = this.errors.length;
+        parseFn.call(this);
+        return this.pos > start && this.errors.length === errorCount;
+    }
+
     parseFragmentKeywordBackward(keyword, ctx = {}) {
         //
         switch ((keyword || '').toLowerCase()) {
-
-            // Top-level script statements
+            //#region Top-level script statements
             case 'batterypower':
-                return this.backwardBatteryPower(ctx);
-
             case 'description':
-                return this.backwardDescription(ctx);
-
             case 'title':
-                return this.backwardTitle(ctx);
-
             case 'whenfinished':
-                return this.backwardWhenFinished(ctx);
-
             case 'appendlogfile':
-                return this.backwardAppendLogFile(ctx);
-
             case 'write':
-                return this.backwardWrite(ctx);
-
             case 'message':
-                return this.backwardMessage(ctx);
+                return this.backwardScriptStatement(ctx, keyword);
 
             case 'setvariable':
             case 'setvariabledefault':
             case 'setvariableifempty':
                 return this.backwardSetVariable(ctx);
-
-            // Volume-level blocks
+            //#endregion
+            //#region Volume-level blocks
             case 'volumeselect':
                 return this.backwardVolumeSelect(ctx);
 
@@ -513,8 +782,8 @@ class Parser {
 
             case 'excludevolumes':
                 return this.backwardExcludeVolumes(ctx);
-
-            // File-level blocks
+            //#endregion
+            //#region File-level blocks
             case 'fileselect':
                 return this.backwardFileSelect(ctx);
 
@@ -526,8 +795,8 @@ class Parser {
 
             case 'excludefiles':
                 return this.backwardExcludeFiles(ctx);
-
-            // File action statements
+            //#endregion
+            //#region  File action statements
             case 'sortbyname':
             case 'sortbyextension':
             case 'sortbysize':
@@ -542,10 +811,10 @@ class Parser {
 
             case 'moveup':
             case 'movedown':
-            case 'movetobeginofdisk':
+            case 'movedownfill':
             case 'movetoendofdisk':
             case 'movetobeginofvolume':
-            case 'movetoendofvolume':
+            case 'moveuptozone':
             case 'movetoendofdsk': // keep only if your grammar currently accepts this typo/alias
                 return this.backwardFileMoveAction(ctx);
 
@@ -557,14 +826,154 @@ class Parser {
             case 'addgap':
                 return this.backwardFileAction(ctx);
 
+            case 'placentfssystemfiles':
+                return this.backwardFileMoveAction(ctx);
+
+            case 'chunksize':
+            case 'fast':
+                return this.backwardDefragment(ctx);
+            //#endregion
+            //#region Volume conditions
+            case 'mounted':
+            case 'writable':
+            case 'removable':
+            case 'fixed':
+            case 'remote':
+            case 'cdrom':
+            case 'ramdisk':
+            case 'name':
+            case 'label':
+            case 'fragmentsize':
+            case 'checkvolume':
+            case 'commandlinevolumes':
+            case 'numberbetween':
+            case 'filesystemtype':
+                return this.backwardVolumeCondition(ctx);
+
+            case 'size':
+            case 'fragmentcount':
+                if (ctx.token?.parent === 'volume_condition') {
+                    return this.backwardVolumeCondition(ctx);
+                }
+                return this.backwardFileSelectAction(ctx);
+            //#endregion
+            //#region State
+            // yes/no - an orphan can belong to any of these:
+            case 'archive':
+            case 'compressed':
+            case 'encrypted':
+            case 'hidden':
+            case 'unmovable':
+            case 'virtual':
+            case 'diskmapflip':
+            case 'fragmented':
+            case 'lastaccessenabled':
+            case 'nottobeindexed':
+            case 'offline':
+            case 'readonly':
+            case 'selectntfssystemfiles':
+            case 'sparse':
+            case 'system':
+            case 'temporary':
+            case 'directory':
+
+            // xxx(String) - so a string or path
+            case 'directoryname':
+            case 'directorypath':
+            case 'filename':
+            case 'importlistfromfile':
+            case 'importlistfromprogramhints':
+
+            // xxx(String, String)
+            case 'fullpath':
+
+            // xxx()
+            case 'importlistfrombootoptimize':
+
+            // number xxx(1)
+            case 'largest':
+            case 'smallest':
+
+            // ranges xxx(1,2)
+            case 'lastaccess':
+            case 'lastchange':
+            case 'creationdate':
+            case 'smallestfragmentsize':
+            case 'largestfragmentsize':
+            case 'averagefragmentsize':
+                // File boolean keyword.
+                return this.backwardFileSelectAction(ctx);
+
+            case 'filelocation':
+                // FileLocation(ARGUMENT , NUMBER , NUMBER)
+                // Possible values for ARGUMENT: BeginOfFile Select files if the beginning of the file is inside the area. 
+                // EndOfFile Select files if the end of the file is inside the area. 
+                // EntireFile Select files that have all their data inside the area. 
+                // AnyPart Select files if any of their data is inside the area. 
+                // AnyCompleteFragment Select files if at least 1 complete fragment is inside the area. 
+                return this.backwardFileSortAction(ctx);
+            //#endregion
+            //#region Operators, Values and Units
+            case 'or': case 'and': case 'not':
+                // Operators
+                return this.backwardOperator(ctx);
+
+            case 'all':
+                // Operators - All can be volume or file select
+                return this.backwardAll(ctx);
+
+            case 'yes': case 'no':
+                // Operators
+                return this.backwardLiteral(ctx);
+
             // Special/simple
             case 'fastboot':
                 return this.backwardSimpleStatement(ctx);
 
+            case 'now': case 'ago':
+                // Time reference keywords
+                return this.backwardTime(ctx);
+
+            case 'year': case 'years':
+            case 'month': case 'months':
+            case 'week': case 'weeks':
+            case 'day': case 'days':
+            case 'hour': case 'hours':
+            case 'minute': case 'minutes':
+            case 'second': case 'seconds':
+                // Time units
+                return this.backwardTimeUnit(ctx);
+
+            case 'rounddown': case 'roundup':
+            case 'minimum': case 'maximum':
+                // Arithmetic functions
+                return this.backwardMath(ctx);
+
+            // Size unit suffixes (SI)
+            case 'k': case 'm': case 'g': case 't':
+            case 'p': case 'e': case 'z': case 'y':
+            // Size unit suffixes (byte labels)
+            case 'kb': case 'mb': case 'gb': case 'tb':
+            case 'pb': case 'eb': case 'zb': case 'yb':
+            // Size unit suffixes (IEC binary)
+            case 'ki': case 'mi': case 'gi': case 'ti':
+            case 'pi': case 'ei': case 'zi': case 'yi':
+                // Size unit suffixes
+                return this.backwardSizeUnit(ctx);
+            //#endregion
             default:
                 if (this.isSetting()) {
                     // this.parseSetting(); 
                     return this.backwardSetting(ctx);
+                }
+                if (this.isNumber()) {
+                    return this.backwardNumber(ctx);
+                }
+                if (this.isString()) {
+                    return this.backwardString(ctx);
+                }
+                if (this.isDateTime()) {
+                    return this.backwardDateTime(ctx);
                 }
                 return this.backwardUnknownKeyword(keyword, ctx);
         }
@@ -572,6 +981,26 @@ class Parser {
     // ─────────────────────────────────────────────────────────────────────────────────
     //#endregion
     //#region Backward Syntax Classification
+
+    // Script level statements
+    backwardScriptStatement(ctx, kind = null) {
+        const keyword = String(ctx.token?.value || '').toLowerCase();
+
+        return {
+            ok: true,
+            keyword,
+            kind: kind || keyword,
+            parent: 'script',
+            opens: null,
+            closes: null,
+            allowedParents: ['script']
+        };
+    }
+
+    backwardSetting(ctx) {
+        return this.backwardScriptStatement(ctx, 'settingInline');
+    }
+
     backwardVolumeSelect(ctx) {
         return {
             ok: true,
@@ -637,52 +1066,6 @@ class Parser {
             allowedParents: ['file_block']
         };
     }
-    // Script level statements
-    backwardScriptStatement(ctx, kind = null) {
-        const keyword = String(ctx.token?.value || '').toLowerCase();
-
-        return {
-            ok: true,
-            keyword,
-            kind: kind || keyword,
-            parent: 'script',
-            opens: null,
-            closes: null,
-            allowedParents: ['script']
-        };
-    }
-
-    backwardSetting(ctx) {
-        return this.backwardScriptStatement(ctx, 'settingInline');
-    }
-
-    backwardBatteryPower(ctx) {
-        return this.backwardScriptStatement(ctx, 'batterypower');
-    }
-
-    backwardDescription(ctx) {
-        return this.backwardScriptStatement(ctx, 'description');
-    }
-
-    backwardTitle(ctx) {
-        return this.backwardScriptStatement(ctx, 'title');
-    }
-
-    backwardWhenFinished(ctx) {
-        return this.backwardScriptStatement(ctx, 'whenfinished');
-    }
-
-    backwardAppendLogFile(ctx) {
-        return this.backwardScriptStatement(ctx, 'appendlogfile');
-    }
-
-    backwardWrite(ctx) {
-        return this.backwardScriptStatement(ctx, 'write');
-    }
-
-    backwardMessage(ctx) {
-        return this.backwardScriptStatement(ctx, 'message');
-    }
 
     backwardSetVariable(ctx) {
         return {
@@ -720,12 +1103,42 @@ class Parser {
         };
     }
 
+    /**
+     * Classifies fragments that start inside VolumeSelect(...).
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardVolumeCondition(ctx) {
+        return {
+            ok: true,
+            keyword: String(ctx.token?.value || '').toLowerCase(),
+            kind: 'volume_condition',
+            parent: 'volumeselect',
+            opens: null,
+            closes: null,
+            allowedParents: ['volumeselect']
+        };
+    }
+
+    backwardFileSelectAction(ctx) {
+        return {
+            ok: true,
+            keyword: String(ctx.token?.value || '').toLowerCase(),
+            kind: 'file_condition',
+            parent: 'fileactions',
+            opens: null,
+            closes: null,
+            allowedParents: ['fileactions', 'fileselect']
+        };
+    }
+
     backwardFileSortAction(ctx) {
         return {
             ok: true,
             keyword: String(ctx.token?.value || '').toLowerCase(),
             kind: 'sort',
-            parent: 'file_action',
+            parent: 'fileactions',
             opens: null,
             closes: null,
             allowedParents: ['fileactions', 'file_action']
@@ -753,6 +1166,143 @@ class Parser {
             opens: null,
             closes: null,
             allowedParents: ['fileactions']
+        };
+    }
+
+    /**
+     * Classifies Defragment option fragments such as Fast.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardDefragment(ctx) {
+        return {
+            ok: true,
+            keyword: String(ctx.token?.value || '').toLowerCase(),
+            kind: 'defragment_option',
+            parent: 'defragment',
+            opens: null,
+            closes: null,
+            allowedParents: ['defragment', 'file_action']
+        };
+    }
+
+    /**
+     * Classifies logical operator fragments such as and, or, and not.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardOperator(ctx) {
+        return this.backwardValueFragment(ctx, 'operator');
+    }
+
+    /**
+     * Classifies the All keyword, which can appear in multiple boolean contexts.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardAll(ctx) {
+        return this.backwardValueFragment(ctx, 'boolean_all');
+    }
+
+    /**
+     * Classifies literal fragments such as yes and no.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardLiteral(ctx) {
+        return this.backwardValueFragment(ctx, 'literal');
+    }
+
+    /**
+     * Classifies date/time keyword fragments such as now and ago.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardTime(ctx) {
+        return this.backwardValueFragment(ctx, 'time');
+    }
+
+    /**
+     * Classifies date/time unit fragments such as days and hours.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardTimeUnit(ctx) {
+        return this.backwardValueFragment(ctx, 'time_unit');
+    }
+
+    /**
+     * Classifies math function fragments such as RoundDown and Maximum.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardMath(ctx) {
+        return this.backwardValueFragment(ctx, 'value');
+    }
+
+    /**
+     * Classifies size suffix fragments such as K, MB, and Gi.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardSizeUnit(ctx) {
+        return this.backwardValueFragment(ctx, 'size_unit');
+    }
+
+    /**
+     * Classifies number fragments.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardNumber(ctx) {
+        return this.backwardValueFragment(ctx, 'value');
+    }
+
+    /**
+     * Classifies string fragments.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardString(ctx) {
+        return this.backwardValueFragment(ctx, 'string');
+    }
+
+    /**
+     * Classifies date/time value fragments.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardDateTime(ctx) {
+        return this.backwardValueFragment(ctx, 'datetime');
+    }
+
+    /**
+     * Builds common metadata for standalone value/operator fragments.
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @param {string} kind Fragment kind.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardValueFragment(ctx, kind) {
+        return {
+            ok: true,
+            keyword: String(ctx.token?.value || '').toLowerCase(),
+            kind,
+            parent: 'value',
+            opens: null,
+            closes: null,
+            allowedParents: ['value', 'file_condition', 'volume_condition', 'defragment', 'sort']
         };
     }
 
@@ -800,31 +1350,31 @@ class Parser {
     }
     //#endregion
     //#region Parse Fragment functions
-    fragmentAllows(info, fragment) {
-        if (!info || !fragment) return false;
+    fragmentAllows(keywordData, fragment) {
+        if (!keywordData || !fragment) return false;
 
         // First statement is always allowed to establish the fragment.
-        if (!fragment.parentKind) return true;
+        if (!fragment.parent) return true;
 
         // Exact parent match.
-        if (info.parent === fragment.parentKind) return true;
+        if (keywordData.parent === fragment.parent) return true;
 
         // Explicit allowed parent match.
         if (
-            Array.isArray(info.allowedParents) &&
-            info.allowedParents.includes(fragment.parentKind)
+            Array.isArray(keywordData.allowedParents) &&
+            keywordData.allowedParents.includes(fragment.parent)
         ) {
             return true;
         }
 
         // If this fragment opened a nested block, allow statements inside it.
         const currentBlock = fragment.stack?.[fragment.stack.length - 1];
-        if (currentBlock && info.parent === currentBlock) return true;
+        if (currentBlock && keywordData.parent === currentBlock) return true;
 
         if (
             currentBlock &&
-            Array.isArray(info.allowedParents) &&
-            info.allowedParents.includes(currentBlock)
+            Array.isArray(keywordData.allowedParents) &&
+            keywordData.allowedParents.includes(currentBlock)
         ) {
             return true;
         }
@@ -832,8 +1382,8 @@ class Parser {
         return false;
     }
     // ─────────────────────────────────────────────────────────────────────────────────
-    parseFragmentStatementByKind(info) {
-        switch (info.kind) {
+    parseFragmentStatementByKind(keywordData) {
+        switch (keywordData.kind) {
             // Normal statements/blocks already handled by parseStatement()
             case 'description':
             case 'title':
@@ -858,50 +1408,64 @@ class Parser {
 
             // Fragments that start inside VolumeSelect(...)
             case 'volume_condition':
-                return this.parseVolumeBooleans();
+                return this.parseWithProgress(this.parseVolumeBooleans);
 
             // Fragments that start inside VolumeActions(...)
             case 'volume_action':
             case 'filesystem':
-                return this.parseVolumeActions();
+                return this.parseWithProgress(this.parseVolumeActions);
 
             // Fragments that start inside FileSelect(...)
             case 'file_condition':
             case 'file_attribute':
-                return this.parseFileBooleans(false);
+                return this.parseWithProgress(() => this.parseFileBooleans(false));
 
             // Fragments that start inside FileActions(...)
             case 'file_action':
             case 'sort':
             case 'action_modifier':
-                return this.parseFileActions();
+                return this.parseWithProgress(this.parseFileActions);
+
+            // Fragments that start inside Defragment(...)
+            case 'defragment_option':
+                return this.parseWithProgress(this.parseDefragmentOptions);
 
             // Literal value fragment
             case 'value':
-                return this.parseNumber();
+                return this.parseWithProgress(this.parseNumber);
+
+            case 'operator':
+            case 'boolean_all':
+            case 'literal':
+            case 'time':
+            case 'time_unit':
+            case 'size_unit':
+            case 'string':
+            case 'datetime':
+                return this.parseSingleTokenFragment();
 
             default:
                 return this.parseStatement();
         }
     }
     // ─────────────────────────────────────────────────────────────────────────────────
-    updateFragmentStack(info, fragment) {
-        if (!info || !fragment) return;
+    updateFragmentStack(keywordData, fragment) {
+        if (!keywordData || !fragment) return;
 
         if (!Array.isArray(fragment.stack)) {
             fragment.stack = [];
         }
 
-        if (info.closes) {
+        if (keywordData.closes) {
             const top = fragment.stack[fragment.stack.length - 1];
 
-            if (top === info.closes) {
+            if (top === keywordData.closes) {
                 fragment.stack.pop();
             }
         }
 
-        if (info.opens) {
-            fragment.stack.push(info.opens);
+        if (keywordData.opens) {
+            fragment.stack.push(keywordData.opens);
         }
     }
     //#endregion
@@ -1003,16 +1567,16 @@ class Parser {
         }
     }
     // ── File Booleans .Parse ─────────────────────────────────────────────────────────
-    parseFileBooleans() {
+    parseFileBooleans(reportErrors = true) {
         console?.log('server.js:Parser: parseFileBooleans: ' + this.curr().value);
-        this.parseFileBoolean(true);
+        this.parseFileBoolean(reportErrors);
         console?.log('server.js:Parser: parseFileBooleans after first boolean: ' + this.curr().value);
         while (!this.atEof() && !this.isKw('FileActions') && !this.isKw('FileEnd') && !this.isKw('VolumeEnd')) {
             if (this.isAnyKw('or', 'and') ||
                 this.curr().type === TT.PIPE || this.curr().type === TT.DPIPE ||
                 this.curr().type === TT.AMP || this.curr().type === TT.DAMP) {
                 this.next();
-                this.parseFileBoolean(true);
+                this.parseFileBoolean(reportErrors);
             } else {
                 break;
             }
@@ -1024,7 +1588,7 @@ class Parser {
         if (t.type === TT.LPAREN) {
             this.next();
             // does recursive calls for nested parentheses
-            this.parseFileBooleans();
+            this.parseFileBooleans(reportErrors);
             this.expect(TT.RPAREN, ')');
             return;
         }
@@ -1042,7 +1606,7 @@ class Parser {
             case 'not':
                 this.next();
                 this.expect(TT.LPAREN, '(');
-                this.parseFileBooleans();
+                this.parseFileBooleans(reportErrors);
                 this.expect(TT.RPAREN, ')');
                 break;
             case 'all':
@@ -1070,6 +1634,13 @@ class Parser {
                 break;
             case 'size': case 'fragmentcount':
             case 'averagefragmentsize': case 'largestfragmentsize': case 'smallestfragmentsize':
+                this.next();
+                this.expect(TT.LPAREN, '(');
+                this.parseNumber();
+                this.expect(TT.COMMA, ',');
+                this.parseNumber();
+                this.expect(TT.RPAREN, ')');
+                break;
             case 'lastaccess': case 'lastchange': case 'creationdate':
                 this.next();
                 this.expect(TT.LPAREN, '(');
@@ -1154,7 +1725,7 @@ class Parser {
                 return true;
             case 'fileselect':
                 this.next();
-                this.parseFileBooleans();
+                this.parseFileBooleans(true);
                 this.expectKw('FileActions');
                 this.parseFileActions();
                 this.expectKw('FileEnd');
@@ -1174,7 +1745,7 @@ class Parser {
             case 'setfilecolor':
                 this.next();
                 this.expect(TT.LPAREN, '(');
-                this.parseFileBooleans();
+                this.parseFileBooleans(true);
                 this.expect(TT.COMMA, ',');
                 this.parseFileColorBooleans();
                 this.expect(TT.COMMA, ',');
@@ -1315,7 +1886,6 @@ class Parser {
 
             switch (kw) { // parseSetting
                 case 'maxruntime':
-                    this.next();
                     this.expect(TT.LPAREN, '(');
                     this.parseDateTime();
                     this.expect(TT.RPAREN, ')');
@@ -1444,7 +2014,7 @@ class Parser {
             const message = `server.js:ValidateDocument Unexpected error Generating Preview of document: + ${errResult.message}`;
             console?.error?.(message);           // debugger
             logger?.err?.(errResult, message);   // output channel
-            this.warningAtStart?.(message); // document diagnostic
+            this.error?.(message); // document diagnostic
             return message;
         }
     }
@@ -1534,6 +2104,7 @@ class Parser {
             'ki', 'mi', 'gi', 'ti', 'pi', 'ei', 'zi', 'yi',
         ];
         let t = this.curr();
+        // todo does this apply to predefined? no i think.
         if ((t.type === TT.KEYWORD || t.type === TT.IDENT) &&
             multiples.includes(t.value.toLowerCase())) {
             this.next();
@@ -1592,8 +2163,8 @@ class Parser {
             return;
         }
 
-        // Variable or keyword used as value (e.g. VolumeSize)
-        if (t.type === TT.IDENT || t.type === TT.KEYWORD) {
+        // Variable, predefined identifier, or keyword used as value (e.g. VolumeSize)
+        if (t.type === TT.IDENT || t.type === TT.IDENT_PREDEF || t.type === TT.KEYWORD) {
             this.next();
             this.tryDecMultiple();
             return;

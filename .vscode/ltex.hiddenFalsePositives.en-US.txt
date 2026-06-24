@@ -15,3 +15,20 @@
 {"rule":"NON_STANDARD_WORD","sentence":"^\\QOpen VS Code\nGo to the Debug view (Ctrl+Shift+D)\nSelect one of the three configurations from the dropdown\nClick the green play button or press F5 to start debugging\\E$"}
 {"rule":"PREFER_OVER_TO","sentence":"^\\QPrefer additive changes over rewrites.\\E$"}
 {"rule":"PREFER_OVER_TO","sentence":"^\\QPrefer diagnosis over speculative changes.\\E$"}
+{"rule":"TO_DO_HYPHEN","sentence":"^\\Qini ToDo\ndebugOn ToDo\nverboseLevel ToDo\nisLogOn ToDo\niniErrors ToDo\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qevent, step, pos, tokenValue, tokenType, keyword,\nkeywordKind/kind/fragmentKind,\nkeywordParent/parent/fragmentParent,\nallowed, parsed, fragmentStack, errorsAfter/errors\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qallowed\nallowedParents\natEof\ncanReplaceFragmentParent\ncloses\nconsumedTokens\ncurrentFragmentKind\ncurrentFragmentParent\ncurrentFragmentStack\nendPos\nerrorFlag\nerrors\nerrorsAfter\nerrorsBefore\nfragmentKind\nfragmentParent\nfragmentParentHints\nfragmentStack\nkeyword\nkeywordData\nkeywordKind\nkeywordParent\nkind\nok\noldFragmentKind\noldFragmentParent\nopens\nparent\nparentHints\nparsed\npos\nrestoredErrors\nrestoredPos\nstartPos\nstep\ntokenParent\ntokenPosition\ntokenType\ntokenValue\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, pos, tokenType, tokenValue, tokenParent, tokenPosition, fragmentKind, fragmentParent, fragmentStack, errors\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, pos, tokenType, tokenValue\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QatEof, pos, errorFlag, errors, fragmentKind, fragmentParent, fragmentParentHints, fragmentStack\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, keyword, parsed, keywordKind, startPos, endPos, consumedTokens, errorsBefore, errorsAfter\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, keyword, allowed, keywordKind, keywordParent, allowedParents, fragmentKind, fragmentParent, fragmentStack\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, keyword, canReplaceFragmentParent, oldFragmentKind, oldFragmentParent, keywordKind, keywordParent\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, keyword, opens, closes, fragmentKind, fragmentParent, fragmentStack, pos\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, tokenType, tokenValue, pos\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, keyword, tokenType, tokenValue, tokenParent, fragmentKind, fragmentParent, fragmentStack\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, keyword, ok, kind, parent, opens, closes, allowedParents, parentHints, currentFragmentKind, currentFragmentParent, currentFragmentStack\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, keyword, tokenParent, keywordData\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, keyword, fragmentKind, fragmentParent, fragmentParentHints\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, keyword, restoredPos, restoredErrors\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Qstep, keyword, pos\\E$"}

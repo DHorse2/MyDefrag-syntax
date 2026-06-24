@@ -1,0 +1,780 @@
+===== MyDefrag Syntax Extension session 2026-06-23T13:06:00.990Z =====
+[2026-06-23T13:06:01.002Z] [MyDefrag] [Extension] [DEBUG 5] Logger MyDefrag Syntax belonging to Extension started.
+[2026-06-23T13:06:01.003Z] [MyDefrag] [Extension] [ERROR!!!] INITIALIZATION ERRORS
+[2026-06-23T13:06:01.109Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.140Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.152Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.165Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.184Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.195Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.262Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.274Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.286Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.307Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.361Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.373Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.385Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.397Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.409Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.420Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.432Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.506Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.518Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.571Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.602Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.623Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.644Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.666Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.687Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.708Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.730Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.750Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.772Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.793Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.815Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.836Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T13:06:01.858Z] [MyDefrag] [Extension] [WARNING] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T13:06:01.889Z] [MyDefrag] [Extension] [DEBUG 3] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T13:06:01.903Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION INITIALIZED
+[2026-06-23T13:06:01.915Z] [MyDefrag] [Extension] [DEBUG 3]   Debug Path=d:\Script\MyDefrag-syntax\mydefrag-syntax.ini, Debug=true
+[2026-06-23T13:06:01.930Z] [MyDefrag] [Extension] [DEBUG 3]   Channel, Status Bar done
+[2026-06-23T13:06:01.981Z] [MyDefrag] [Extension] [DEBUG 5] Subscribing to providers
+[2026-06-23T13:06:01.998Z] [MyDefrag] [Extension] [DEBUG 5] Providers registered
+[2026-06-23T13:06:02.020Z] [MyDefrag] [Extension] [DEBUG 3] Starting server MyDefrag Syntax
+[2026-06-23T13:06:02.068Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T13:06:02.085Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T13:06:02.108Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T13:06:02.161Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T13:06:02.487Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T13:06:02.505Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T13:06:02.507Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T13:06:02.509Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T13:06:03.132Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T13:06:03.144Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T13:06:03.165Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T13:06:03.177Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T13:06:03.412Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T13:06:03.441Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T13:06:03.453Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T13:06:03.455Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T13:06:03.899Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T13:06:03.911Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T13:06:03.913Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T13:06:03.914Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T13:07:23.625Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T13:07:23.872Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc, language: mydfrg
+[2026-06-23T13:07:23.874Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc
+[2026-06-23T13:07:23.876Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T13:11:12.318Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T13:11:12.413Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T13:11:12.415Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T13:11:12.416Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T13:11:12.418Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T13:11:12.420Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T13:11:12.422Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T13:11:12.424Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+===== MyDefrag Syntax Extension session 2026-06-23T21:57:34.408Z =====
+[2026-06-23T21:57:34.421Z] [MyDefrag] [Extension] [DEBUG 5] Logger MyDefrag Syntax belonging to Extension started.
+[2026-06-23T21:57:34.423Z] [MyDefrag] [Extension] [ERROR!!!] INITIALIZATION ERRORS
+[2026-06-23T21:57:34.450Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.462Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.473Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.491Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.503Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.540Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.552Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.564Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.581Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.617Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.629Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.640Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.652Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.669Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.681Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.718Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.730Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.741Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.759Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.795Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.807Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.819Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.838Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.863Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.866Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.869Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.880Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.892Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.904Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.941Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.954Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.967Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T21:57:34.981Z] [MyDefrag] [Extension] [WARNING] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T21:57:35.019Z] [MyDefrag] [Extension] [DEBUG 3] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T21:57:35.032Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION INITIALIZED
+[2026-06-23T21:57:35.044Z] [MyDefrag] [Extension] [DEBUG 3]   Debug Path=d:\Script\MyDefrag-syntax\mydefrag-syntax.ini, Debug=true
+[2026-06-23T21:57:35.060Z] [MyDefrag] [Extension] [DEBUG 3]   Channel, Status Bar done
+[2026-06-23T21:57:35.100Z] [MyDefrag] [Extension] [DEBUG 5] Subscribing to providers
+[2026-06-23T21:57:35.112Z] [MyDefrag] [Extension] [DEBUG 5] Providers registered
+[2026-06-23T21:57:35.123Z] [MyDefrag] [Extension] [DEBUG 3] Starting server MyDefrag Syntax
+[2026-06-23T21:57:36.209Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T21:57:36.221Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T21:57:36.224Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T21:57:36.226Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T21:57:36.239Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T21:57:36.254Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T21:57:36.266Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T21:57:36.278Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T21:57:37.675Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T21:57:37.866Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T21:57:37.991Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T21:57:38.154Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T21:57:38.273Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T21:57:38.352Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T21:57:38.427Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T21:57:38.489Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T21:57:45.181Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T21:57:45.202Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T21:57:45.214Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T21:57:45.247Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T21:57:45.259Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T21:57:45.271Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T21:57:45.283Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T21:57:45.294Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T21:57:47.082Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T21:57:47.374Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T21:57:47.646Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T21:57:47.786Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T21:57:47.821Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T21:57:47.876Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T21:57:47.897Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T21:57:47.900Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T21:57:49.170Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T21:57:49.405Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T21:57:49.598Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T21:57:49.911Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T21:57:50.121Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T21:57:50.205Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T21:57:50.263Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T21:57:50.373Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+===== MyDefrag Syntax Extension session 2026-06-23T22:13:20.457Z =====
+[2026-06-23T22:13:20.468Z] [MyDefrag] [Extension] [DEBUG 5] Logger MyDefrag Syntax belonging to Extension started.
+[2026-06-23T22:13:20.469Z] [MyDefrag] [Extension] [ERROR!!!] INITIALIZATION ERRORS
+[2026-06-23T22:13:20.567Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.578Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.590Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.602Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.623Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.656Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.668Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.680Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.691Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.703Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.744Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.755Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.767Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.779Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.791Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.802Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.814Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.826Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.837Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.856Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.890Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.902Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:20.956Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:21.000Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:21.034Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:21.047Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:21.079Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:21.112Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:21.125Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:21.137Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:21.158Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:21.200Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:13:21.212Z] [MyDefrag] [Extension] [WARNING] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T22:13:21.233Z] [MyDefrag] [Extension] [DEBUG 3] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T22:13:21.247Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION INITIALIZED
+[2026-06-23T22:13:21.259Z] [MyDefrag] [Extension] [DEBUG 3]   Debug Path=d:\Script\MyDefrag-syntax\mydefrag-syntax.ini, Debug=true
+[2026-06-23T22:13:21.271Z] [MyDefrag] [Extension] [DEBUG 3]   Channel, Status Bar done
+[2026-06-23T22:13:21.289Z] [MyDefrag] [Extension] [DEBUG 5] Subscribing to providers
+[2026-06-23T22:13:21.301Z] [MyDefrag] [Extension] [DEBUG 5] Providers registered
+[2026-06-23T22:13:21.346Z] [MyDefrag] [Extension] [DEBUG 3] Starting server MyDefrag Syntax
+[2026-06-23T22:13:21.394Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:13:21.413Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T22:13:21.435Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T22:13:21.447Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:21.459Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:21.471Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:21.483Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:21.494Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:13:21.665Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:13:21.677Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T22:13:21.689Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T22:13:21.703Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:21.735Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:21.746Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:21.794Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:21.837Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:13:22.038Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:13:22.049Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T22:13:22.050Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T22:13:22.051Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:22.052Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:22.054Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:22.056Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:22.058Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:13:22.694Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:13:22.706Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T22:13:22.802Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T22:13:22.814Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:22.825Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:22.837Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:22.848Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:22.859Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:13:23.090Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:13:23.102Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T22:13:23.114Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T22:13:23.158Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:23.170Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:23.181Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:23.193Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:23.204Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:13:23.629Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:13:23.641Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc, language: mydfrg
+[2026-06-23T22:13:23.653Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsDataDynamic.MyDc
+[2026-06-23T22:13:23.664Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 75, range[3::10], !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!, !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:23.677Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 139, range[5::10], !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!, !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:23.688Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 83, range[3::10],  "..\FileSelectCategory\SelOsDataDynamic.MyDs", !include "..\FileSelectCategory\SelOsDataDynamic.MyDs"!
+[2026-06-23T22:13:23.700Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 147, range[5::10],  "..\FileSelectCategory\SelOsPageHiberDump.MyDs", !include "..\FileSelectCategory\SelOsPageHiberDump.MyDs"!
+[2026-06-23T22:13:23.711Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:28:52.919Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:28:52.932Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:28:52.934Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:28:52.947Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:31:52.181Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:31:52.183Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:31:52.186Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:31:52.188Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+===== MyDefrag Syntax Extension session 2026-06-23T22:36:18.635Z =====
+[2026-06-23T22:36:18.974Z] [MyDefrag] [Extension] [DEBUG 5] Logger MyDefrag Syntax belonging to Extension started.
+[2026-06-23T22:36:18.986Z] [MyDefrag] [Extension] [ERROR!!!] INITIALIZATION ERRORS
+[2026-06-23T22:36:19.002Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.021Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.040Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.060Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.079Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.156Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.193Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.222Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.259Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.289Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.323Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.336Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.349Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.365Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.377Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.412Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.424Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.436Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.447Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.458Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.470Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.481Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.493Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.505Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.516Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.532Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.544Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.578Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.590Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.601Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.613Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.624Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:36:19.636Z] [MyDefrag] [Extension] [WARNING] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T22:36:19.648Z] [MyDefrag] [Extension] [DEBUG 3] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T22:36:19.681Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION INITIALIZED
+[2026-06-23T22:36:19.701Z] [MyDefrag] [Extension] [DEBUG 3]   Debug Path=d:\Script\MyDefrag-syntax\mydefrag-syntax.ini, Debug=true
+[2026-06-23T22:36:19.713Z] [MyDefrag] [Extension] [DEBUG 3]   Channel, Status Bar done
+[2026-06-23T22:36:19.729Z] [MyDefrag] [Extension] [DEBUG 5] Subscribing to providers
+[2026-06-23T22:36:19.744Z] [MyDefrag] [Extension] [DEBUG 5] Providers registered
+[2026-06-23T22:36:19.756Z] [MyDefrag] [Extension] [DEBUG 3] Starting server MyDefrag Syntax
+[2026-06-23T22:36:20.806Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:36:20.824Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:36:20.837Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:36:20.849Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:36:22.326Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:36:22.344Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:36:22.356Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:36:22.367Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:36:28.603Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:36:28.615Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:36:28.628Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:36:28.716Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:36:30.680Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:36:30.692Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:36:30.703Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:36:30.952Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:36:32.427Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:36:32.784Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:36:32.979Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:36:33.171Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+===== MyDefrag Syntax Extension session 2026-06-23T22:40:59.981Z =====
+[2026-06-23T22:41:00.002Z] [MyDefrag] [Extension] [DEBUG 5] Logger MyDefrag Syntax belonging to Extension started.
+[2026-06-23T22:41:00.004Z] [MyDefrag] [Extension] [ERROR!!!] INITIALIZATION ERRORS
+[2026-06-23T22:41:00.028Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.049Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.061Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.083Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.094Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.137Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.149Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.161Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.173Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.184Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.225Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.250Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.291Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.327Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.339Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.380Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.392Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.403Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.417Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.458Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.469Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.481Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.492Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.504Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.517Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.559Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.571Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.582Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.594Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.606Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.647Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.673Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T22:41:00.684Z] [MyDefrag] [Extension] [WARNING] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T22:41:00.725Z] [MyDefrag] [Extension] [DEBUG 3] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T22:41:00.741Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION INITIALIZED
+[2026-06-23T22:41:00.754Z] [MyDefrag] [Extension] [DEBUG 3]   Debug Path=d:\Script\MyDefrag-syntax\mydefrag-syntax.ini, Debug=true
+[2026-06-23T22:41:00.766Z] [MyDefrag] [Extension] [DEBUG 3]   Channel, Status Bar done
+[2026-06-23T22:41:00.813Z] [MyDefrag] [Extension] [DEBUG 5] Subscribing to providers
+[2026-06-23T22:41:00.824Z] [MyDefrag] [Extension] [DEBUG 5] Providers registered
+[2026-06-23T22:41:00.836Z] [MyDefrag] [Extension] [DEBUG 3] Starting server MyDefrag Syntax
+[2026-06-23T22:41:00.873Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:41:00.892Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:41:00.929Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:41:00.941Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:41:01.123Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:41:01.152Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:41:01.193Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:41:01.205Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:41:01.362Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:41:01.363Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:41:01.365Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:41:01.386Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:41:02.084Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:41:02.096Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:41:02.119Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:41:02.131Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:41:02.488Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:41:02.500Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:41:02.512Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:41:02.531Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:41:02.892Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:41:02.904Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:41:02.952Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:41:02.963Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:41:38.416Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:41:38.446Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:41:38.464Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:41:38.476Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:41:43.759Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:41:43.781Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc, language: mydfrg
+[2026-06-23T22:41:43.793Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllRegular.MyDc
+[2026-06-23T22:41:43.805Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:42:01.387Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:42:01.393Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T22:42:01.577Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T22:42:01.590Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:42:29.886Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:42:29.897Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFastBoot.MyDc, language: mydfrg
+[2026-06-23T22:42:29.898Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFastBoot.MyDc
+[2026-06-23T22:42:29.900Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:42:30.915Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:42:30.927Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T22:42:30.939Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T22:42:30.956Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:42:32.249Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:42:32.261Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFastBoot.MyDc, language: mydfrg
+[2026-06-23T22:42:32.277Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFastBoot.MyDc
+[2026-06-23T22:42:32.326Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T22:42:49.188Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T22:42:49.201Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T22:42:49.213Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T22:42:49.225Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+===== MyDefrag Syntax Extension session 2026-06-23T23:19:28.532Z =====
+[2026-06-23T23:19:28.550Z] [MyDefrag] [Extension] [DEBUG 5] Logger MyDefrag Syntax belonging to Extension started.
+[2026-06-23T23:19:28.552Z] [MyDefrag] [Extension] [ERROR!!!] INITIALIZATION ERRORS
+[2026-06-23T23:19:28.578Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.629Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.679Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.729Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.767Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.817Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.856Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.867Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.917Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.928Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.940Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.951Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.967Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:28.978Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.001Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.013Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.024Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.036Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.047Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.061Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.073Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.123Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.146Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.157Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.206Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.247Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.268Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.306Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.313Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.331Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.379Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.391Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:19:29.443Z] [MyDefrag] [Extension] [WARNING] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T23:19:29.480Z] [MyDefrag] [Extension] [DEBUG 3] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T23:19:29.492Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION INITIALIZED
+[2026-06-23T23:19:29.542Z] [MyDefrag] [Extension] [DEBUG 3]   Debug Path=d:\Script\MyDefrag-syntax\mydefrag-syntax.ini, Debug=true
+[2026-06-23T23:19:29.554Z] [MyDefrag] [Extension] [DEBUG 3]   Channel, Status Bar done
+[2026-06-23T23:19:29.570Z] [MyDefrag] [Extension] [DEBUG 5] Subscribing to providers
+[2026-06-23T23:19:29.581Z] [MyDefrag] [Extension] [DEBUG 5] Providers registered
+[2026-06-23T23:19:29.593Z] [MyDefrag] [Extension] [DEBUG 3] Starting server MyDefrag Syntax
+[2026-06-23T23:19:29.619Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:19:29.642Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T23:19:29.654Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T23:19:29.666Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T23:19:30.005Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:19:30.109Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T23:19:30.150Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T23:19:30.197Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T23:19:30.853Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:19:30.968Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T23:19:30.973Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T23:19:30.978Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T23:19:31.262Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:19:31.267Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T23:19:31.269Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T23:19:31.272Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T23:19:31.597Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:19:31.676Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T23:19:31.680Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T23:19:31.682Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T23:22:11.795Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:22:11.807Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Regular\ZoneDoActionThisModeRegular.MyDc, language: mydfrg
+[2026-06-23T23:22:11.809Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Regular\ZoneDoActionThisModeRegular.MyDc
+[2026-06-23T23:22:11.811Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T23:23:44.861Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:23:44.864Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Full\ZoneDoActionTypeOsProgramHintsFixedFull.MyDc, language: mydfrg
+[2026-06-23T23:23:44.866Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Full\ZoneDoActionTypeOsProgramHintsFixedFull.MyDc
+[2026-06-23T23:23:44.869Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 119, range[2::10], !include "..\ActionVerbs\ZoneDoActionSortByCreationDateFull.MyDc"!, !include "..\ActionVerbs\ZoneDoActionSortByCreationDateFull.MyDc"!
+[2026-06-23T23:23:44.964Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 127, range[2::10],  "..\ActionVerbs\ZoneDoActionSortByCreationDateFull.MyDc", !include "..\ActionVerbs\ZoneDoActionSortByCreationDateFull.MyDc"!
+[2026-06-23T23:23:44.966Z] [MyDefrag] [Extension] [INFO] includeLinks 1, fileLinks 0, commandLinks 1, EXCLUDED folders 0, files 0, search 0.
+[2026-06-23T23:25:09.843Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:25:09.853Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T23:25:09.855Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T23:25:09.857Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 2, files 0, search 0.
+===== MyDefrag Syntax Extension session 2026-06-23T23:32:50.551Z =====
+[2026-06-23T23:32:50.562Z] [MyDefrag] [Extension] [DEBUG 5] Logger MyDefrag Syntax belonging to Extension started.
+[2026-06-23T23:32:50.563Z] [MyDefrag] [Extension] [ERROR!!!] INITIALIZATION ERRORS
+[2026-06-23T23:32:50.575Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.591Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.611Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.623Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.645Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.656Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.668Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.712Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.723Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.735Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.746Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.757Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.800Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.833Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.845Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.890Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.934Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.946Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:50.968Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.013Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.047Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.068Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.112Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.146Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.157Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.202Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.247Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.269Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.281Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.292Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.313Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.357Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:32:51.402Z] [MyDefrag] [Extension] [WARNING] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T23:32:51.424Z] [MyDefrag] [Extension] [DEBUG 3] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T23:32:51.437Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION INITIALIZED
+[2026-06-23T23:32:51.479Z] [MyDefrag] [Extension] [DEBUG 3]   Debug Path=d:\Script\MyDefrag-syntax\mydefrag-syntax.ini, Debug=true
+[2026-06-23T23:32:51.524Z] [MyDefrag] [Extension] [DEBUG 3]   Channel, Status Bar done
+[2026-06-23T23:32:51.572Z] [MyDefrag] [Extension] [DEBUG 5] Subscribing to providers
+[2026-06-23T23:32:51.590Z] [MyDefrag] [Extension] [DEBUG 5] Providers registered
+[2026-06-23T23:32:51.635Z] [MyDefrag] [Extension] [DEBUG 3] Starting server MyDefrag Syntax
+===== MyDefrag Syntax Extension session 2026-06-23T23:36:59.302Z =====
+[2026-06-23T23:36:59.314Z] [MyDefrag] [Extension] [DEBUG 5] Logger MyDefrag Syntax belonging to Extension started.
+[2026-06-23T23:36:59.315Z] [MyDefrag] [Extension] [ERROR!!!] INITIALIZATION ERRORS
+[2026-06-23T23:36:59.327Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.437Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.467Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.511Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.545Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.557Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.600Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.634Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.646Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.668Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.681Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.723Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.768Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.781Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.824Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.869Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.882Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.924Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.969Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:36:59.982Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.023Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.057Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.068Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.080Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.091Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.103Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.124Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.157Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.202Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.235Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.280Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.312Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-23T23:37:00.324Z] [MyDefrag] [Extension] [WARNING] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T23:37:00.368Z] [MyDefrag] [Extension] [DEBUG 3] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-23T23:37:00.380Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION INITIALIZED
+[2026-06-23T23:37:00.424Z] [MyDefrag] [Extension] [DEBUG 3]   Debug Path=d:\Script\MyDefrag-syntax\mydefrag-syntax.ini, Debug=true
+[2026-06-23T23:37:00.468Z] [MyDefrag] [Extension] [DEBUG 3]   Channel, Status Bar done
+[2026-06-23T23:37:00.520Z] [MyDefrag] [Extension] [DEBUG 5] Subscribing to providers
+[2026-06-23T23:37:00.557Z] [MyDefrag] [Extension] [DEBUG 5] Providers registered
+[2026-06-23T23:37:00.591Z] [MyDefrag] [Extension] [DEBUG 3] Starting server MyDefrag Syntax
+[2026-06-23T23:37:19.647Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:37:19.682Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFastBoot.MyDc, language: mydfrg
+[2026-06-23T23:37:19.693Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFastBoot.MyDc
+[2026-06-23T23:37:19.715Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 6, files 0, search 0.
+[2026-06-23T23:37:42.481Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:37:42.503Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Full\ZoneDoActionThisModeFull.MyDc, language: mydfrg
+[2026-06-23T23:37:42.506Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Full\ZoneDoActionThisModeFull.MyDc
+[2026-06-23T23:37:42.518Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 7, files 0, search 0.
+[2026-06-23T23:37:49.490Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:37:49.502Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc, language: mydfrg
+[2026-06-23T23:37:49.505Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc
+[2026-06-23T23:37:49.507Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 7, files 0, search 0.
+[2026-06-23T23:38:00.418Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:38:00.429Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc, language: mydfrg
+[2026-06-23T23:38:00.431Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFast.MyDc
+[2026-06-23T23:38:00.432Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 8, files 0, search 0.
+[2026-06-23T23:38:27.315Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:38:27.328Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFastBoot.MyDc, language: mydfrg
+[2026-06-23T23:38:27.357Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionThisModeFastBoot.MyDc
+[2026-06-23T23:38:27.359Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 8, files 0, search 0.
+[2026-06-23T23:38:30.393Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:38:30.411Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc, language: mydfrg
+[2026-06-23T23:38:30.413Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc
+[2026-06-23T23:38:30.415Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 8, files 0, search 0.
+[2026-06-23T23:38:56.736Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:38:56.838Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Regular\ZoneDoActionThisModeRegular.MyDc, language: mydfrg
+[2026-06-23T23:38:56.840Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Regular\ZoneDoActionThisModeRegular.MyDc
+[2026-06-23T23:38:56.842Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 8, files 0, search 0.
+[2026-06-23T23:39:18.891Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-23T23:39:19.231Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc, language: mydfrg
+[2026-06-23T23:39:19.310Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc
+[2026-06-23T23:39:19.322Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 8, files 0, search 0.
+===== MyDefrag Syntax Extension session 2026-06-24T00:32:33.377Z =====
+[2026-06-24T00:32:33.397Z] [MyDefrag] [Extension] [DEBUG 5] Logger MyDefrag Syntax belonging to Extension started.
+[2026-06-24T00:32:33.399Z] [MyDefrag] [Extension] [ERROR!!!] INITIALIZATION ERRORS
+[2026-06-24T00:32:33.426Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.459Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.471Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.516Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.529Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.541Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.560Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.571Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.583Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.627Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.660Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.672Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.684Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.696Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.707Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.719Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.760Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.793Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.805Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.817Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.860Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.904Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.916Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.960Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:33.994Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:34.006Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:34.049Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:34.061Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:34.072Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:34.094Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:34.106Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (fragmentParentLevel=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:34.149Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (fragmentParentLevel=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:34.171Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:34.180Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:32:34.183Z] [MyDefrag] [Extension] [WARNING] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-24T00:32:34.189Z] [MyDefrag] [Extension] [DEBUG 3] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-24T00:32:34.191Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION INITIALIZED
+[2026-06-24T00:32:34.203Z] [MyDefrag] [Extension] [DEBUG 3]   Debug Path=d:\Script\MyDefrag-syntax\mydefrag-syntax.ini, Debug=true
+[2026-06-24T00:32:34.218Z] [MyDefrag] [Extension] [DEBUG 3]   Channel, Status Bar done
+[2026-06-24T00:32:34.234Z] [MyDefrag] [Extension] [DEBUG 5] Subscribing to providers
+[2026-06-24T00:32:34.252Z] [MyDefrag] [Extension] [DEBUG 5] Providers registered
+[2026-06-24T00:32:34.285Z] [MyDefrag] [Extension] [DEBUG 3] Starting server MyDefrag Syntax
+[2026-06-24T00:32:34.352Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:32:34.374Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc, language: mydfrg
+[2026-06-24T00:32:34.396Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc
+[2026-06-24T00:32:34.407Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:32:34.453Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:32:34.507Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc, language: mydfrg
+[2026-06-24T00:32:34.541Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc
+[2026-06-24T00:32:34.585Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:32:34.602Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:32:34.641Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc, language: mydfrg
+[2026-06-24T00:32:34.685Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc
+[2026-06-24T00:32:34.697Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:32:35.095Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:32:35.123Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc, language: mydfrg
+[2026-06-24T00:32:35.135Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc
+[2026-06-24T00:32:35.146Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:32:35.777Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:32:35.857Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc, language: mydfrg
+[2026-06-24T00:32:35.862Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc
+[2026-06-24T00:32:35.867Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:32:36.129Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:32:36.188Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc, language: mydfrg
+[2026-06-24T00:32:36.190Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc
+[2026-06-24T00:32:36.192Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:32:36.631Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:32:36.722Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc, language: mydfrg
+[2026-06-24T00:32:36.734Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\ZoneDoActionSortByImportSequence.MyDc
+[2026-06-24T00:32:36.745Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:32:50.301Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:32:50.391Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc, language: mydfrg
+[2026-06-24T00:32:50.393Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc
+[2026-06-24T00:32:50.395Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+===== MyDefrag Syntax Extension session 2026-06-24T00:33:21.092Z =====
+[2026-06-24T00:33:21.103Z] [MyDefrag] [Extension] [DEBUG 5] Logger MyDefrag Syntax belonging to Extension started.
+[2026-06-24T00:33:21.140Z] [MyDefrag] [Extension] [ERROR!!!] INITIALIZATION ERRORS
+[2026-06-24T00:33:21.173Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.206Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.254Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.284Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (error=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.295Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.339Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (err=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.351Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.363Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.374Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.418Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warning=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.451Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.462Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (warn=2) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.474Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.486Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.497Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.540Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (information=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.553Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.566Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (info=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.585Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.629Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (Hint=4) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.642Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.662Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (debugOn=true) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.707Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.718Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (verboseLevel=5) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.730Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.741Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceContainsMacros=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.754Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.765Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileFoundLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.784Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.796Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (referenceFileNotFoundLevel=1) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.840Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (fragmentParentLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.851Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (fragmentParentLevel=3) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.863Z] [MyDefrag] [Extension] [WARNING] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.874Z] [MyDefrag] [Extension] [DEBUG 3] WARNING, possible invalid data (bob=Sample) in INI file. Value is not predefined as valid in "iniDictionary.ini"
+[2026-06-24T00:33:21.886Z] [MyDefrag] [Extension] [WARNING] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-24T00:33:21.929Z] [MyDefrag] [Extension] [DEBUG 3] Error Reading INI File d:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini: ENOENT: no such file or directory, open 'd:\Script\MyDefrag-syntax\src\shared\MyDefrag SyntaxMap.ini'
+[2026-06-24T00:33:21.943Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION INITIALIZED
+[2026-06-24T00:33:21.962Z] [MyDefrag] [Extension] [DEBUG 3]   Debug Path=d:\Script\MyDefrag-syntax\mydefrag-syntax.ini, Debug=true
+[2026-06-24T00:33:22.007Z] [MyDefrag] [Extension] [DEBUG 3]   Channel, Status Bar done
+[2026-06-24T00:33:22.024Z] [MyDefrag] [Extension] [DEBUG 5] Subscribing to providers
+[2026-06-24T00:33:22.063Z] [MyDefrag] [Extension] [DEBUG 5] Providers registered
+[2026-06-24T00:33:22.075Z] [MyDefrag] [Extension] [DEBUG 3] Starting server MyDefrag Syntax
+[2026-06-24T00:33:22.120Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:33:22.140Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc, language: mydfrg
+[2026-06-24T00:33:22.152Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc
+[2026-06-24T00:33:22.174Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:33:22.374Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:33:22.377Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc, language: mydfrg
+[2026-06-24T00:33:22.379Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc
+[2026-06-24T00:33:22.382Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:33:22.609Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:33:22.611Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc, language: mydfrg
+[2026-06-24T00:33:22.631Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc
+[2026-06-24T00:33:22.676Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:33:23.363Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:33:23.365Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc, language: mydfrg
+[2026-06-24T00:33:23.377Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc
+[2026-06-24T00:33:23.379Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:33:23.585Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:33:23.589Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc, language: mydfrg
+[2026-06-24T00:33:23.591Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc
+[2026-06-24T00:33:23.592Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:33:23.927Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:33:24.029Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc, language: mydfrg
+[2026-06-24T00:33:24.044Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\ActionVerbs\Fast\ZoneDoActionTypeAllFast.MyDc
+[2026-06-24T00:33:24.089Z] [MyDefrag] [Extension] [INFO] includeLinks 0, fileLinks 0, commandLinks 0, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:34:08.344Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:34:08.357Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsPrograms.MyDc, language: mydfrg
+[2026-06-24T00:34:08.359Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Zone\ZoneTypeSelect\ZoneTypeSelectOsPrograms.MyDc
+[2026-06-24T00:34:08.362Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 73, range[3::10], !include "..\FileSelectCategory\SelNotBlobsArchivesBu.MyDs"!, !include "..\FileSelectCategory\SelNotBlobsArchivesBu.MyDs"!
+[2026-06-24T00:34:08.364Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 176, range[8::10], !include "..\FileSelectCategory\SelSystemDir.MyDs"!, !include "..\FileSelectCategory\SelSystemDir.MyDs"!
+[2026-06-24T00:34:08.366Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 81, range[3::10],  "..\FileSelectCategory\SelNotBlobsArchivesBu.MyDs", !include "..\FileSelectCategory\SelNotBlobsArchivesBu.MyDs"!
+[2026-06-24T00:34:08.367Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 184, range[8::10],  "..\FileSelectCategory\SelSystemDir.MyDs", !include "..\FileSelectCategory\SelSystemDir.MyDs"!
+[2026-06-24T00:34:08.370Z] [MyDefrag] [Extension] [INFO] includeLinks 2, fileLinks 0, commandLinks 2, EXCLUDED folders 0, files 0, search 0.
+[2026-06-24T00:34:51.613Z] [MyDefrag] [Extension] [INFO] .
+[2026-06-24T00:34:51.928Z] [MyDefrag] [Extension] [INFO] MYDC EXTENSION LINKS Provider for d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Defrag\DefragZoneGroupOs.MyDc, language: mydfrg
+[2026-06-24T00:34:51.931Z] [MyDefrag] [Extension] [INFO] Processing File: d:\MdmTaylorDo20220427\MdmDefrag\TaylorDoVs0_5\src\Defrag\DefragZoneGroupOs.MyDc
+[2026-06-24T00:34:51.933Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 71, range[4::10], !include "..\Display\DisplaySetDateTimeCurrent.MyDc"!, !include "..\Display\DisplaySetDateTimeCurrent.MyDc"!
+[2026-06-24T00:34:51.935Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 557, range[12::10], !include "..\Settings\SettingsYours\SettingsYoursSysPagedfrg.MyDc"!, !include "..\Settings\SettingsYours\SettingsYoursSysPagedfrg.MyDc"!
+[2026-06-24T00:34:51.938Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 878, range[20::10], !include "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsBoot.MyDc"!, !include "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsBoot.MyDc"!
+[2026-06-24T00:34:51.941Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 1034, range[25::10], !include "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsProgramHints.MyDc"!, !include "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsProgramHints.MyDc"!
+[2026-06-24T00:34:51.943Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 1244, range[30::10], !include "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsPrograms.MyDc"!, !include "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsPrograms.MyDc"!
+[2026-06-24T00:34:51.945Z] [MyDefrag] [Extension] [DEBUG 5] INCLUDE file match: index: 1405, range[34::10], !include "..\Display\DisplaySetZoneStep.MyDc"!, !include "..\Display\DisplaySetZoneStep.MyDc"!
+[2026-06-24T00:34:51.947Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 79, range[4::10],  "..\Display\DisplaySetDateTimeCurrent.MyDc", !include "..\Display\DisplaySetDateTimeCurrent.MyDc"!
+[2026-06-24T00:34:51.949Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 565, range[12::10],  "..\Settings\SettingsYours\SettingsYoursSysPagedfrg.MyDc", !include "..\Settings\SettingsYours\SettingsYoursSysPagedfrg.MyDc"!
+[2026-06-24T00:34:51.951Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 886, range[20::10],  "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsBoot.MyDc", !include "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsBoot.MyDc"!
+[2026-06-24T00:34:51.952Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 1042, range[25::10],  "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsProgramHints.MyDc", !include "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsProgramHints.MyDc"!
+[2026-06-24T00:34:51.954Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 1252, range[30::10],  "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsPrograms.MyDc", !include "..\Zone\ZoneTypeDefrag\DefragZoneTypeOsPrograms.MyDc"!
+[2026-06-24T00:34:51.956Z] [MyDefrag] [Extension] [DEBUG 5] BATCH/Command file match: index: 1413, range[34::10],  "..\Display\DisplaySetZoneStep.MyDc", !include "..\Display\DisplaySetZoneStep.MyDc"!
+[2026-06-24T00:34:51.957Z] [MyDefrag] [Extension] [INFO] includeLinks 6, fileLinks 0, commandLinks 6, EXCLUDED folders 0, files 0, search 0.

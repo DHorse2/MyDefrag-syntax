@@ -36,10 +36,6 @@ const {
     PREDEFINED_IDENT,
     isPredefinedIdentifier,
 } = require('./languageData');
-const SCRIPT_DIR = __dirname;
-const PARENT_DIR = path.dirname(SCRIPT_DIR);
-const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
-
 const channelName = 'MyDefrag Issues';
 const isServer = true;
 var Options;
@@ -52,6 +48,7 @@ const documents = new TextDocuments(TextDocument);
 var diagnostics = [];
 const Logger = require('../shared/logger');
 let logger;
+let parserLogger;
 const ini = require('../shared/ini')
 const util = require('../utilities/util')
 var source = "Server"
@@ -64,7 +61,99 @@ var referenceRelativePathLevel = 2;
 var referenceContainsMacrosLevel = 3;
 var referenceFileFoundLevel = 3;
 var referenceFileNotFoundLevel = 1;
+var fragmentParentLevel = 4;
 var iniErrors = [];
+
+/**
+ * Converts a VSCodium setting value into an LSP diagnostic severity.
+ *
+ * @param {string|number} value The configured severity name or number.
+ * @param {number} defaultValue The severity to use when the setting is invalid.
+ * @returns {number} An LSP diagnostic severity value.
+ */
+function normalizeSeveritySetting(value, defaultValue) {
+    const severityNames = {
+        error: ini.severity.Error,
+        warning: ini.severity.Warning,
+        information: ini.severity.Information,
+        info: ini.severity.Information,
+        hint: ini.severity.Hint
+    };
+    const normalizedName = String(value ?? '').toLowerCase();
+    const numericValue = Number(value);
+
+    if (Number.isFinite(numericValue) && numericValue >= 0 && numericValue <= 4) {
+        return numericValue;
+    }
+
+    return severityNames[normalizedName] ?? defaultValue;
+}
+
+/**
+ * Builds normalized MyDefrag server configuration from VSCodium settings.
+ *
+ * @param {object} settings The mydfrg settings object sent by the client.
+ * @returns {object} Normalized MyDefrag server configuration.
+ */
+function buildMyDefragConfig(settings = {}) {
+    const configuredVerboseLevel = Number(settings.verboseLevel ?? verboseLevel);
+    const nextVerboseLevel = Number.isFinite(configuredVerboseLevel)
+        ? Math.min(Math.max(configuredVerboseLevel, 0), 10)
+        : verboseLevel;
+
+    return {
+        source: "Server",
+        iniData: {
+            severity: ini.severity
+        },
+        isDebugOn: Boolean(settings.debugOn ?? isDebugOn),
+        verboseLevel: nextVerboseLevel,
+        isLogOn,
+        referenceRelativePathLevel: normalizeSeveritySetting(
+            settings.referenceRelativePathLevel,
+            referenceRelativePathLevel
+        ),
+        referenceContainsMacrosLevel: normalizeSeveritySetting(
+            settings.referenceContainsMacros,
+            referenceContainsMacrosLevel
+        ),
+        referenceFileFoundLevel: normalizeSeveritySetting(
+            settings.referenceFileFoundLevel,
+            referenceFileFoundLevel
+        ),
+        referenceFileNotFoundLevel: normalizeSeveritySetting(
+            settings.referenceFileNotFoundLevel,
+            referenceFileNotFoundLevel
+        ),
+        fragmentParentLevel: normalizeSeveritySetting(
+            settings.fragmentParentLevel,
+            fragmentParentLevel
+        ),
+        iniErrors
+    };
+}
+
+/**
+ * Applies normalized MyDefrag configuration to the language server process.
+ *
+ * @param {object} nextConfig The normalized MyDefrag configuration.
+ */
+function applyMyDefragConfig(nextConfig) {
+    config = nextConfig;
+    ({
+        source,
+        iniData,
+        isDebugOn,
+        verboseLevel,
+        isLogOn,
+        referenceRelativePathLevel,
+        referenceContainsMacrosLevel,
+        referenceFileFoundLevel,
+        referenceFileNotFoundLevel,
+        fragmentParentLevel,
+        iniErrors
+    } = config);
+}
 
 // Module-level config cache
 let excludeConfig = {
@@ -76,6 +165,7 @@ let excludeConfig = {
 };
 let workspaceFolders = [];
 let workspaceFolderPaths = [];
+let logPaths = {};
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
 //#region Events for server - connection, documents
@@ -113,8 +203,9 @@ connection.onInitialize(async (params) => {
                 fileExcludes: {},
                 searchExcludes: {}
             };
+            logPaths = params.initializationOptions.logPaths || {};
             // config = ini.initialize(source, INI_PATH, channelName, isServer, true, ini.severity.Verbose);
-            config = params.initializationOptions.config || {};
+            applyMyDefragConfig(params.initializationOptions.config || buildMyDefragConfig());
             // console?.error(
             //     JSON.stringify(
             //         config,
@@ -122,18 +213,6 @@ connection.onInitialize(async (params) => {
             //         2
             //     )
             // );
-            ({
-                source,
-                iniData,
-                isDebugOn,
-                verboseLevel,
-                isLogOn,
-                referenceRelativePathLevel,
-                referenceContainsMacrosLevel,
-                referenceFileFoundLevel,
-                referenceFileNotFoundLevel,
-                iniErrors
-            } = config);
         } catch (errResult) {
             const message = `server.js:onInitialize: Error returned from initialization: ${errResult.message}`;
             console?.error(message);
@@ -166,18 +245,25 @@ connection.onInitialize(async (params) => {
             let headingDone = false;
             // console?.error("server.js:onInitialize: 1");
             // logger.initialize(source, connection, isServer, diagnostics, iniData, config, isDebugOn, verboseLevel)
-            logger = Logger.createLogger(channelName, source, config);
-            configureTokenizer({ logger });
-            configureParser({ logger, ini });
-
+            logger = Logger.createLogger(channelName, source, config, {
+                connection,
+                filePath: logPaths.server,
+                isServer: true
+            });
+            parserLogger = Logger.createLogger('MyDefrag Parser', 'Parser', config, {
+                connection,
+                filePath: logPaths.parser,
+                isServer: true
+            });
+            configureTokenizer({ logger: parserLogger });
+            configureParser({ logger: parserLogger, ini: { ...ini, ...config } });
             // console?.error("server.js:onInitialize: 2");
             if (ini.iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Warning, loggedMessages, ini.iniErrors) }
-
             // console?.error("server.js:onInitialize: 3");
             // console?.log(ini.severity);
             logger.info("SERVER: MYDC SERVER INITIALIZED");
             // console?.error("server.js:onInitialize: 4");
-            logger.dbg(5, `server.js:onInitialize: Ini Path=${INI_PATH}, Debug=${isDebugOn}`)
+            logger.dbg(5, `server.js:onInitialize: Settings source=VSCodium, Debug=${isDebugOn}`)
         } catch (errResult) {
             const message = `server.js:onInitialize: Unexpected error in Logging Channel initialization: ${errResult.message}`;
             console?.error(message);
@@ -199,12 +285,26 @@ connection.onInitialize(async (params) => {
 });
 // Called when client sends updated config
 connection.onDidChangeConfiguration(change => {
+    applyMyDefragConfig(buildMyDefragConfig(change.settings?.mydfrg || {}));
+    logger = Logger.createLogger(channelName, source, config, {
+        connection,
+        filePath: logPaths.server,
+        isServer: true
+    });
+    parserLogger = Logger.createLogger('MyDefrag Parser', 'Parser', config, {
+        connection,
+        filePath: logPaths.parser,
+        isServer: true
+    });
+    configureTokenizer({ logger: parserLogger });
+    configureParser({ logger: parserLogger, ini: { ...ini, ...config } });
     excludeConfig = {
         mydfrgExcludes: change.settings?.mydfrg?.exclude || [],
         fileExcludes: change.settings?.files?.exclude || {},
         searchExcludes: change.settings?.search?.exclude || {},
         fileCount: 0,
-        folderCount: 0
+        folderCount: 0,
+        searchCount: 0
     };
     // Re-validate since excludes may have changed
     // Validate document open in editors
@@ -267,6 +367,7 @@ async function validateDocument(document) {
                 parserState = parseStates.SCRIPT_UNKNOWN;
                 break;
         }
+        const initialParserState = parserState;
         // ─────────────────────────────────────────────────────────────────────────────────
         // tokenize document
         const tokens = tokenize(text);
@@ -288,7 +389,7 @@ async function validateDocument(document) {
         // warnings are issued.
         // ToDo extend functionality to add "quick fix"
         // ToDo Add code snippets for structural code. IE Volume & FileSelect groups.
-        logger.dbg(5, `validateDocument: Step 1 Parse Document`);
+        logger.dbg(5, `validateDocument: Step 1 - Parse Document`);
 
         if (parserState !== parseStates.SCRIPT_FRAGMENT) {
             // Check for full document errors
@@ -313,13 +414,13 @@ async function validateDocument(document) {
         // ─────────────────────────────────────────────────────────────────────────────────
         // If full-script parse failed, try fragment mode
         logger.dbg(5, `Parser Eof: ${bestParser.atEof()} Errors: ${bestParser.errors.length}`);
-        logger.dbg(5, `validateDocument: Step 2 Parse Fragments`);
+        logger.dbg(5, `validateDocument: Step 2 - Parse Fragments`);
         // Errors present. Check if this is a valid fragment
         if (!bestParser.atEof() || bestParser.errors.length > 0) {
             // if any errors were found or processing paused
             parserState = parseStates.SCRIPT_FRAGMENT;
             fragParser = new Parser(tokens, text, parserState);
-            logger.dbg(5, `validateDocument: Step 2 Parsing`);
+            logger.dbg(5, `validateDocument: Step 2 - Parsing`);
             logger.dbg(5, "validateDocument: Document Fragment FIRST TOKEN:", fragParser.curr(), "=", fragParser.curr().value);
 
             // ─────────────────────────────────────────────────────────────────────────────────
@@ -331,6 +432,7 @@ async function validateDocument(document) {
             // Comparison
             logger.dbg(5, `validateDocument: Step Comparison. Errors, Frag: ${fragParser.errors.length}, Full: ${bestParser.errors.length} `);
             if (
+                initialParserState !== parseStates.SCRIPT_FULL ||
                 fragParser.errors.length < bestParser.errors.length ||
                 (fragParser.errors.length === bestParser.errors.length &&
                     fragParser.atEof() && !bestParser.atEof())
@@ -354,27 +456,51 @@ async function validateDocument(document) {
                 bestParser.error(ini.severity.Error, `Unexpected token '${t.value}' — expected end of file`, t);
             }
         }
-        // ─────────────────────────────────────────────────────────────────────────────────
-        logger.dbg(5, `validateDocument: Step 4 Publish diagnostics`);
-        for (const errResult of bestParser.errors) {
-            diagnostics.push({
-                severity: errResult.severity,
-                range: errResult.range,
-                message: errResult.message,
-                source: 'MyDefrag',
-            });
-        }
-    } catch (errResult) {
-        const message = `server.js:validateDocument: Unexpected parser failure: ${errResult.message}`;
-        console?.error?.(message);           // debugger
-        logger?.err?.(errResult, message);   // output channel
-        bestParser?.warningAtStart?.(message); // document diagnostic
-    }
 
-    if (bestParser?.errors?.length) {
-        diagnostics.push(...bestParser.errors);
+    } catch (errResult) {
+        const err =
+            errResult instanceof Error
+                ? errResult
+                : new Error(String(errResult));
+
+        const parserState = bestParser
+            ? `\nParser state: pos=${bestParser.pos}, token=${JSON.stringify(bestParser.peek?.() ?? null)}`
+            : `\nParser state: unavailable`;
+
+        const message =
+            `server.js:validateDocument: Unexpected parser failure\n` +
+            `${err.name}: ${err.message}\n` +
+            `${err.stack || "(no stack available)"}` +
+            parserState;
+
+        try {
+            console.error(message);
+        } catch { }
+
+        try {
+            logger?.err?.(err, message);
+        } catch (logErr) {
+            console.error("logger.err failed:", logErr);
+        }
+
+        try {
+            bestParser?.warningAtStart?.(
+                `Internal parser failure: ${err.name}: ${err.message}`
+            );
+        } catch (diagErr) {
+            console.error("warningAtStart failed:", diagErr);
+        }
     }
-    //ParserState Send Notification to extension.js
+    // ─────────────────────────────────────────────────────────────────────────────────
+    logger.dbg(5, `validateDocument: Publish diagnostics`);
+    for (const errResult of bestParser.errors) {
+        diagnostics.push({
+            severity: errResult.severity,
+            range: errResult.range,
+            message: errResult.message,
+            source: 'MyDefrag',
+        });
+    }    //ParserState Send Notification to extension.js
     connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
 
     connection.sendDiagnostics({

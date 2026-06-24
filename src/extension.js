@@ -48,6 +48,7 @@ let referenceRelativePathLevel;
 let referenceContainsMacrosLevel;
 let referenceFileFoundLevel;
 let referenceFileNotFoundLevel;
+let fragmentParentLevel;
 let iniErrors = [];
 
 // ─────────────────────────────────────────────────────────────────────────────────
@@ -83,6 +84,97 @@ function loadExcludeConfig() {
     excludeConfig.fileCount = 0;
     excludeConfig.folderCount = 0;
     excludeConfig.searchCount = 0;
+}
+
+/**
+ * Converts a VSCodium setting value into an LSP diagnostic severity.
+ *
+ * @param {string|number} value The configured severity name or number.
+ * @param {number} defaultValue The severity to use when the setting is invalid.
+ * @returns {number} An LSP diagnostic severity value.
+ */
+function normalizeSeveritySetting(value, defaultValue) {
+    const severityNames = {
+        error: ini.severity.Error,
+        warning: ini.severity.Warning,
+        information: ini.severity.Information,
+        info: ini.severity.Information,
+        hint: ini.severity.Hint
+    };
+    const normalizedName = String(value ?? '').toLowerCase();
+    const numericValue = Number(value);
+
+    if (Number.isFinite(numericValue) && numericValue >= 0 && numericValue <= 4) {
+        return numericValue;
+    }
+
+    return severityNames[normalizedName] ?? defaultValue;
+}
+
+/**
+ * Reads MyDefrag extension settings from the VSCodium configuration API.
+ *
+ * @returns {object} Normalized MyDefrag extension configuration.
+ */
+function loadMyDefragConfig() {
+    const settings = vscode.workspace.getConfiguration('mydfrg');
+    const configuredVerboseLevel = Number(settings.get('verboseLevel'));
+    const nextVerboseLevel = Number.isFinite(configuredVerboseLevel)
+        ? Math.min(Math.max(configuredVerboseLevel, 0), 10)
+        : 5;
+
+    return {
+        source,
+        iniData: {
+            severity: ini.severity
+        },
+        isDebugOn: Boolean(settings.get('debugOn')),
+        verboseLevel: nextVerboseLevel,
+        isLogOn: true,
+        referenceRelativePathLevel: normalizeSeveritySetting(
+            settings.get('referenceRelativePathLevel'),
+            ini.severity.Warning
+        ),
+        referenceContainsMacrosLevel: normalizeSeveritySetting(
+            settings.get('referenceContainsMacros'),
+            ini.severity.Information
+        ),
+        referenceFileFoundLevel: normalizeSeveritySetting(
+            settings.get('referenceFileFoundLevel'),
+            ini.severity.Information
+        ),
+        referenceFileNotFoundLevel: normalizeSeveritySetting(
+            settings.get('referenceFileNotFoundLevel'),
+            ini.severity.Error
+        ),
+        fragmentParentLevel: normalizeSeveritySetting(
+            settings.get('fragmentParentLevel'),
+            ini.severity.Hint
+        ),
+        iniErrors
+    };
+}
+
+/**
+ * Applies normalized MyDefrag settings to this extension process.
+ *
+ * @param {object} nextConfig The normalized MyDefrag configuration.
+ */
+function applyMyDefragConfig(nextConfig) {
+    config = nextConfig;
+    ({
+        source,
+        iniData,
+        isDebugOn,
+        verboseLevel,
+        isLogOn,
+        referenceRelativePathLevel,
+        referenceContainsMacrosLevel,
+        referenceFileFoundLevel,
+        referenceFileNotFoundLevel,
+        fragmentParentLevel,
+        iniErrors
+    } = config);
 }
 // Load on startup
 loadExcludeConfig();
@@ -168,9 +260,17 @@ async function searchWorkspace(pattern) {
 
 async function activate(context) {
     //#region declarations
-    const SCRIPT_DIR = __dirname;
-    const PARENT_DIR = path.dirname(SCRIPT_DIR);
-    const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
+    const path = require('path');
+    const fs = require('fs');
+
+    const logDir = path.join(context.globalStorageUri.fsPath, "log");
+    fs.mkdirSync(logDir, { recursive: true });
+
+    const logPaths = {
+        client: path.join(logDir, "client.log"),
+        server: path.join(logDir, "server.log"),
+        parser: path.join(logDir, "parser.log")
+    };
 
     let filePath;
     let ext;
@@ -190,22 +290,10 @@ async function activate(context) {
     let batLinkProvider;
     //#endregion
     try { // ---- Initialization ----
-        try { // Ini Init
-            config = ini.initialize(source, INI_PATH, channelName, isServer);
-            ({
-                source,
-                iniData,
-                isDebugOn,
-                verboseLevel,
-                isLogOn,
-                referenceRelativePathLevel,
-                referenceContainsMacrosLevel,
-                referenceFileFoundLevel,
-                referenceFileNotFoundLevel,
-                iniErrors
-            } = config);
+        try { // VSCodium Settings Init
+            applyMyDefragConfig(loadMyDefragConfig());
         } catch (errResult) {
-            const message = `extension.js:activate:ini:initialize Error returned from initialization: ${errResult.message}`;
+            const message = `extension.js:activate:settings:initialize Error returned from initialization: ${errResult.message}`;
             console?.error(message);
             throw new Error(message);
         }
@@ -222,8 +310,11 @@ async function activate(context) {
             let headingDone = false;
             let source = "Extension";
 
-            logger = Logger.createLogger(channelName, source, config);
-            if (ini.iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Warning, loggedMessages, ini.iniErrors) }
+            logger = Logger.createLogger(channelName, source, config, {
+                outputChannel: connection,
+                filePath: logPaths.client
+            });
+            if (iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Warning, loggedMessages, iniErrors) }
             console?.log(iniData);
             logger.info("MYDC EXTENSION INITIALIZED");
             // ─────────────────────────────────────────────────────────────────────────────────
@@ -231,7 +322,7 @@ async function activate(context) {
             ParserStateBar.text = `MyDefrag Unknown document type`;
             ParserStateBar.show();
             context.subscriptions.push(ParserStateBar);
-            logger.dbg(3, `  Debug Path=${INI_PATH}, Debug=${isDebugOn}`)
+            logger.dbg(3, `  Settings source=VSCodium, Debug=${isDebugOn}`)
 
         } catch (errResult) {
             const message = `extension.js:activate Unexpected error in Logging Channel and Status Bar initialization: ${errResult.message}`;
@@ -667,6 +758,17 @@ async function activate(context) {
         console?.error(`extension.js:activate Unexpected error activating extension: ${errResult.message}`);
     }
     // ─────────────────────────────────────────────────────────────────────────────────
+    // Open Settings
+    const openSettings = vscode.commands.registerCommand(
+        'mydfrg.openSettings',
+        async () => {
+            await vscode.commands.executeCommand(
+                'workbench.action.openSettings',
+                '@ext:macrodm.mydefrag-syntax'
+            );
+        }
+    );
+    // ─────────────────────────────────────────────────────────────────────────────────
     //#region Open Preview Provider  ───────────────────────────────────────────────────────
     function generatePreview(sourcePath) {
         const preprocessScript = path.join(
@@ -804,11 +906,9 @@ async function activate(context) {
             configurationSection: ['mydfrg', 'files', 'search']
         },
         initializationOptions: {
-            isDebugOn: ini.isDebugOn,
-            verboseLevel: ini.verboseLevel,
-            isLogOn: ini.isLogOn,
             config: config,
-            excludes: excludeConfig
+            excludes: excludeConfig,
+            logPaths: logPaths
             //  {
             //     mydfrgExcludes: vscode.workspace.getConfiguration('mydfrg').get('exclude') || [],
             //     fileExcludes: vscode.workspace.getConfiguration('files').get('exclude') || {},
@@ -823,16 +923,35 @@ async function activate(context) {
         serverOptions,
         clientOptions
     );
+    Client.onNotification('mydefrag/log', (msg) => {
+        if (msg?.message) {
+            connection?.appendLine?.(msg.message);
+        }
+    });
+    const settingsChangeListener = vscode.workspace.onDidChangeConfiguration(event => {
+        if (
+            event.affectsConfiguration('mydfrg') ||
+            event.affectsConfiguration('files.exclude') ||
+            event.affectsConfiguration('search.exclude')
+        ) {
+            loadExcludeConfig();
+            applyMyDefragConfig(loadMyDefragConfig());
+            linkChangeEmitter.fire();
+        }
+    });
     // ─────────────────────────────────────────────────────────────────────────────────
     // Push Subscriptions
     logger.dbg(5, 'Subscribing to providers');
     context.subscriptions.push(providerRegistration);
     context.subscriptions.push(definitionProvider);
     context.subscriptions.push(referenceProvider);
-    context.subscriptions.push(openPreviewCommand);
-    context.subscriptions.push(linkProvider, openCmd);
+    context.subscriptions.push(linkProvider);
     context.subscriptions.push(batLinkProvider);
+    context.subscriptions.push(openPreviewCommand);
+    context.subscriptions.push(openCmd);
+    context.subscriptions.push(openSettings);
     context.subscriptions.push(docChangeListener, linkChangeEmitter);
+    context.subscriptions.push(settingsChangeListener);
     context.subscriptions.push(Client);
     logger.dbg(5, 'Providers registered');
 

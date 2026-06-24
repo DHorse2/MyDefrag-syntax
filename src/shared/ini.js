@@ -18,9 +18,10 @@ var verboseLevel = 5; // verbose (not detailed)
 var isLogOn = true;
 var isStrictMode = false;
 var referenceRelativePathLevel = 2; // it's a warning
-var referenceContainsMacrosLevel = 3; // it's a hint
-var referenceFileFoundLevel = 3; // hint
+var referenceContainsMacrosLevel = 3; // it's a info
+var referenceFileFoundLevel = 3; // Info
 var referenceFileNotFoundLevel = 1; // Error
+var fragmentParentLevel = 4; // Hint
 // ─────────────────────────────────────────────────────────────────────────────────
 var iniData = {};
 const iniErrors = [];
@@ -71,7 +72,8 @@ function initialize(
     referenceRelativePath = null,
     referenceContainsMacros = null,
     referenceFound = null,
-    referenceNotFound = null
+    referenceNotFound = null,
+    fragmentParent = null
 ) {
     try { // ini.js:initialized
         // iniErrors = [];
@@ -222,6 +224,12 @@ function initialize(
             }
 
         }
+        if (fragmentParent === null || fragmentParent === undefined) {
+            const iniPathErrors = Number(iniData.fragmentParentLevel);
+            fragmentParentLevel = (Number.isFinite(iniPathErrors) && iniPathErrors >= 1 && iniPathErrors <= 4) ? iniPathErrors : fragmentParentLevel;
+        } else {
+            fragmentParentLevel = (Number.isFinite(fragmentParent) && fragmentParent >= 1 && fragmentParent <= 4) ? fragmentParent : fragmentParentLevel;
+        }
     } catch (errResult) {
         const message = `ini.js:initialize Unexpected error in common initialize: ${errResult.message}`;
         console?.error(message);
@@ -238,6 +246,7 @@ function initialize(
         referenceContainsMacrosLevel,
         referenceFileFoundLevel,
         referenceFileNotFoundLevel,
+        fragmentParentLevel,
         iniErrors
     };
 }
@@ -324,6 +333,7 @@ module.exports = {
     referenceContainsMacrosLevel,
     referenceFileFoundLevel,
     referenceFileNotFoundLevel,
+    fragmentParentLevel,
     iniErrors,
     initialize,
     readIni

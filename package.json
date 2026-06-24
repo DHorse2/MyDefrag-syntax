@@ -50,6 +50,118 @@
                         "**/GithubIo/**"
                     ],
                     "description": "Glob patterns to exclude from MyDefrag validation"
+                },
+                "mydfrg.debugOn": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable MyDefrag extension debug logging."
+                },
+                "mydfrg.verboseLevel": {
+                    "type": "number",
+                    "default": 5,
+                    "minimum": 0,
+                    "maximum": 10,
+                    "description": "MyDefrag extension verbosity level. Debug logging requires mydfrg.debugOn."
+                },
+                "mydfrg.referenceRelativePathLevel": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "default": "Error",
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        "None",
+                        "Error",
+                        "Warning",
+                        "Information",
+                        "Hint"
+                    ],
+                    "description": "Diagnostic severity for references found only by walking up parent folders."
+                },
+                "mydfrg.referenceContainsMacros": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "default": 3,
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        "None",
+                        "Error",
+                        "Warning",
+                        "Information",
+                        "Hint"
+                    ],
+                    "description": "Diagnostic severity for references containing execution-time macros."
+                },
+                "mydfrg.referenceFileFoundLevel": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "default": 3,
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        "None",
+                        "Error",
+                        "Warning",
+                        "Information",
+                        "Hint"
+                    ],
+                    "description": "Diagnostic severity for references whose target files are found."
+                },
+                "mydfrg.referenceFileNotFoundLevel": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "default": 1,
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        "None",
+                        "Error",
+                        "Warning",
+                        "Information",
+                        "Hint"
+                    ],
+                    "description": "Diagnostic severity for references whose target files are not found."
+                },
+                "mydfrg.fragmentParentLevel": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "default": 3,
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        "None",
+                        "Error",
+                        "Warning",
+                        "Information",
+                        "Hint"
+                    ],
+                    "description": "Diagnostic severity for inferred fragment parent messages."
                 }
             }
         },
@@ -78,6 +190,12 @@
                 "path": "./src/syntaxes/mydfrg.tmLanguage.json"
             }
         ],
+        "snippets": [
+            {
+                "language": "mydfrg",
+                "path": "./snippets/mydfrg.code-snippets"
+            }
+        ],
         "commands": [
             {
                 "command": "mydfrg.openPreview",
@@ -86,6 +204,10 @@
             {
                 "command": "mdm.openFileAtPosition",
                 "title": "Open File at Position"
+            },
+            {
+                "command": "mydfrg.openSettings",
+                "title": "MyDefrag: Open Settings"
             }
         ],
         "menus": {
@@ -111,6 +233,13 @@
         ]
     },
     "main": "./src/extension.js",
+    "activationEvents": [
+        "onLanguage:mydfrg",
+        "onLanguage:bat",
+        "onCommand:mydfrg.openPreview",
+        "onCommand:mdm.openFileAtPosition",
+        "onCommand:mydfrg.openSettings"
+    ],
     "scripts": {
         "deploy:local": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1",
         "liveUpdate:local": "powershell -ExecutionPolicy Bypass -File ./scripts/update-live-MyDefrag.ps1",

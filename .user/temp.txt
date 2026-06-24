@@ -23,3 +23,8 @@ git
 
 
 Unexpected token '!include "..\Settings\SettingsAutomaticRun.MyDc"!' — fragment may be incomplete
+
+server.js:Parser:parseFragment: Failed parsing fragment statement 'makegap' as 'file_action'
+
+codium --install-extension artifacts\mydefrag-syntax-0.2.0-Debug.vsix --force
+

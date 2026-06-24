@@ -36,7 +36,7 @@ const KEYWORDS = [
     { text: 'volumeend', parent: 'volume_block' },
     // File block structure (within volumeactions)
     { text: 'file_block', parent: 'volumeactions' },
-    { text: 'fileselect', parent: 'volumeactions' },
+    { text: 'fileselect', parent: 'file_block' },
     { text: 'fileactions', parent: 'file_block' },
     { text: 'fileend', parent: 'file_block' },
     //#endregion
@@ -44,7 +44,7 @@ const KEYWORDS = [
     //#region Siblings / Child structures
     { text: 'volume_condition', parent: 'volumeselect' },
     { text: 'filesystem', parent: 'volumeactions' },
-    { text: 'volume_action', parent: 'volume_actions' },
+    { text: 'volume_action', parent: 'volumeactions' },
 
     { text: 'file_condition', parent: 'fileselect' },
     { text: 'file_attribute', parent: 'fileselect' },
@@ -333,7 +333,14 @@ const KEYWORDS = [
     { text: 'second', parent: 'time_unit' },
     { text: 'seconds', parent: 'time_unit' },
 
-    // Arithmetic functions
+    // Arithmetic 
+    // Addition Subtraction Multiplication Division
+    { text: '+', parent: 'math' },
+    { text: '-', parent: 'math' },
+    { text: '*', parent: 'math' },
+    { text: '/', parent: 'math' },
+
+    // functions
     { text: 'rounddown', parent: 'math' },
     { text: 'roundup', parent: 'math' },
     { text: 'minimum', parent: 'math' },

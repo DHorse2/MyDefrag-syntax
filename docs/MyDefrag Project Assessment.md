@@ -54,7 +54,7 @@ The project follows a typical VS Code extension architecture with:
 
 ### Generated files and build artifacts
 
-- `mydefrag-syntax-0.2.0-Release.vsix` - Built extension package
+- `mydefrag-syntax-0.4.0-Release.vsix` - Built extension package
 - Various node_modules dependencies (not shown in workspace)
 
 ## 3. VS Code Extension Analysis
@@ -108,7 +108,7 @@ The `package.json` contains npm scripts for building, testing, and packaging the
 
 ### VSIX packaging
 
-- The extension is packaged as a `.vsix` file (`mydefrag-syntax-0.2.0-Release.vsix`)
+- The extension is packaged as a `.vsix` file (`mydefrag-syntax-0.4.0-Release.vsix`)
 - Uses standard VS Code extension packaging mechanisms
 - Includes all necessary files in the package
 

@@ -156,7 +156,7 @@ function initialize(
         //  3       - information
         //  4       - hint
         //  5...    - debug basic with higher values (currently < 10). Default value
-        //  Debug (isDebugOn) must be on or Logger.dbg messages will be ignored.
+        //  Debug (isDebugOn) must be on or logger.dbg messages will be ignored.
         if (verbose === null || verbose === undefined) {
             const iniVerbose = Number(iniData.verboseLevel);
             verboseLevel = (Number.isFinite(iniVerbose) && iniVerbose >= 0 && iniVerbose <= 10) ? iniVerbose : verboseLevel;

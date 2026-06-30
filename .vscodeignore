@@ -8,13 +8,14 @@ out
 tmp
 temp
 .user
+.cline
+.codex
 .git
 .github
 .user
 .vscode
 .vs
 .idea
-node_modules
 .turbo
 .parcel-cache
 .yalc
@@ -22,6 +23,7 @@ node_modules
 *.cmd
 *.bak
 *.tmp
+*.vsix
 temp.txt
 package-lock.json
 yarn.lock

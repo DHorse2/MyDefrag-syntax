@@ -172,7 +172,7 @@
             "patterns": [
                 {
                     "name": "constant.language.mydfrg",
-                    "match": "\\b(yes|no|all|SKIP|Ascending|Descending|Fast|WithShuffling|DoNotVacate|ChunkSize|now)\\b"
+                    "match": "\\b(yes|no|all|SKIP|Ascending|Descending|SkipBlock|Fast|WithShuffling|DoNotVacate|ChunkSize|now)\\b"
                 }
             ]
         },
@@ -204,7 +204,7 @@
             "patterns": [
                 {
                     "name": "support.function.fileaction.mydfrg",
-                    "match": "\\b(Defragment|FastDefrag|FastFill|FastFillWithShuffling|SortByName|SortBySize|SortByDate|SortByAccess|SortByCreation|SortByExtension|MoveToEndOfDisk|MoveUpToZone|AddGap|MakeGap|PlaceNtfsSystemFiles)\\b"
+                    "match": "\\b(Defragment|FastDefrag|FastFill|FastFillWithShuffling|SortByName|SortBySize|SortByDate|SortByAccess|SortByCreation|SortByExtension|SortByImportSequence|MoveToEndOfDisk|MoveUpToZone|AddGap|MakeGap|PlaceNtfsSystemFiles)\\b"
                 }
             ]
         },

@@ -2,7 +2,7 @@
     "name": "mydefrag-syntax",
     "displayName": "MyDefrag Script (.MyDc / .MyD)",
     "description": "Syntax highlighting for MyDefrag scripting language",
-    "version": "0.2.0",
+    "version": "0.4.0",
     "publisher": "macrodm",
     "repository": {
         "type": "git",
@@ -187,7 +187,7 @@
             {
                 "language": "mydfrg",
                 "scopeName": "source.mydfrg",
-                "path": "./src/syntaxes/mydfrg.tmLanguage.json"
+                "path": "./syntaxes/mydfrg.tmLanguage.json"
             }
         ],
         "snippets": [
@@ -208,6 +208,46 @@
             {
                 "command": "mydfrg.openSettings",
                 "title": "MyDefrag: Open Settings"
+            },
+            {
+                "command": "mydfrg.diagnostics.next",
+                "title": "MyDefrag: Get Next Diagnostic"
+            },
+            {
+                "command": "mydfrg.diagnostics.nextFile",
+                "title": "MyDefrag: Get Next File Diagnostic"
+            },
+            {
+                "command": "mydfrg.diagnostics.fixedItem",
+                "title": "MyDefrag: File Diagnostic is Fixed"
+            },
+            {
+                "command": "mydfrg.diagnostics.ignoreItem",
+                "title": "MyDefrag: Ignore File Diagnostic"
+            },
+            {
+                "command": "mydfrg.diagnostics.skipItem",
+                "title": "MyDefrag: Skip Current File"
+            },
+            {
+                "command": "mydfrg.diagnostics.sendIt",
+                "title": "MyDefrag: Send Invalid to Agent"
+            },
+            {
+                "command": "mydfrg.diagnostics.validSyntax",
+                "title": "MyDefrag: Diagnostic points to Valid Syntax"
+            },
+            {
+                "command": "mydfrg.diagnostics.prevFile",
+                "title": "MyDefrag: Get Previous File Diagnostic"
+            },
+            {
+                "command": "mydfrg.diagnostics.top",
+                "title": "MyDefrag: Go to Top of Diagnostic list"
+            },
+            {
+                "command": "mydfrg.diagnostics.reset",
+                "title": "MyDefrag: Reset Diagnostic Navigation"
             }
         ],
         "menus": {
@@ -223,6 +263,15 @@
                     "command": "mydfrg.openPreview",
                     "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
                     "group": "navigation"
+                }
+            ]
+        },
+        "views": {
+            "explorer": [
+                {
+                    "id": "mydfrgDiagnostics",
+                    "name": "MyDefrag Diagnostics",
+                    "icon": "resources/icons/logo.svg"
                 }
             ]
         },
@@ -246,7 +295,7 @@
         "pack:vsix": "powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1",
         "publish:vsx": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1",
         "clean": "rimraf dist out .vscodeignore",
-        "build": "echo 'no build step for pure Node.js extension'",
+        "build": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1 -SkipInstall",
         "prepare": "npm run build",
         "enableNetwwork:local": "powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1",
         "listSymLinks:local": "powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1",

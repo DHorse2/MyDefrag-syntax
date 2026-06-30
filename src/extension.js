@@ -27,11 +27,16 @@ const cp = require('child_process');
 // language server
 const { LanguageClient, TransportKind } = require('vscode-languageclient/node');
 const ini = require('./shared/ini')
+const paths = require('./shared/path');
+paths.ensureDirectories();
 const util = require('./utilities/util')
 const Logger = require('./shared/logger');
+const { registerDiagnosticNavigation } = require('./diagnostics/registerDiagnosticNavigation');
+
 const channelName = 'MyDefrag Syntax';
 var isServer = false;
 var ParserStateBar;
+let client;
 var diagnostics = [];
 
 // ─────────────────────────────────────────────────────────────────────────────────
@@ -263,14 +268,16 @@ async function activate(context) {
     const path = require('path');
     const fs = require('fs');
 
-    const logDir = path.join(context.globalStorageUri.fsPath, "log");
+    // const logDir = path.join(context.globalStorageUri.fsPath, "log");
+    const logDir = paths.logDir;
+
     fs.mkdirSync(logDir, { recursive: true });
 
-    const logPaths = {
-        client: path.join(logDir, "client.log"),
-        server: path.join(logDir, "server.log"),
-        parser: path.join(logDir, "parser.log")
-    };
+    // const logPaths = {
+    //     client: path.join(logDir, "client.log"),
+    //     server: path.join(logDir, "server.log"),
+    //     parser: path.join(logDir, "parser.log")
+    // };
 
     let filePath;
     let ext;
@@ -312,7 +319,7 @@ async function activate(context) {
 
             logger = Logger.createLogger(channelName, source, config, {
                 outputChannel: connection,
-                filePath: logPaths.client
+                filePath: paths.client
             });
             if (iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Warning, loggedMessages, iniErrors) }
             console?.log(iniData);
@@ -847,7 +854,9 @@ async function activate(context) {
         }
     }
     const previewProvider = new MyPreviewProvider();
-
+    // ─────────────────────────────────────────────────────────────────────────────────
+    // Register Diagnostic Explorer
+    registerDiagnosticNavigation(context);
     // ─────────────────────────────────────────────────────────────────────────────────
     // Text Document Content Provider
     providerRegistration = vscode.workspace.registerTextDocumentContentProvider(
@@ -873,7 +882,14 @@ async function activate(context) {
             }, batLinkDebounceValue);
         } else if (e.document.languageId === 'mydfrg') {
             // loggedMessages.clear();
+            diagnosticCollection.delete(e.document.uri);
             linkChangeEmitter.fire();
+        }
+    });
+
+    const docCloseListener = vscode.workspace.onDidCloseTextDocument(document => {
+        if (document.languageId === 'mydfrg') {
+            diagnosticCollection.delete(document.uri);
         }
     });
 
@@ -908,7 +924,7 @@ async function activate(context) {
         initializationOptions: {
             config: config,
             excludes: excludeConfig,
-            logPaths: logPaths
+            paths: paths
             //  {
             //     mydfrgExcludes: vscode.workspace.getConfiguration('mydfrg').get('exclude') || [],
             //     fileExcludes: vscode.workspace.getConfiguration('files').get('exclude') || {},
@@ -917,13 +933,13 @@ async function activate(context) {
         }
     };
 
-    const Client = new LanguageClient(
+    client = new LanguageClient(
         'mydfrg',
         'MyDefrag Language Client',
         serverOptions,
         clientOptions
     );
-    Client.onNotification('mydefrag/log', (msg) => {
+    client.onNotification('mydefrag/log', (msg) => {
         if (msg?.message) {
             connection?.appendLine?.(msg.message);
         }
@@ -950,15 +966,15 @@ async function activate(context) {
     context.subscriptions.push(openPreviewCommand);
     context.subscriptions.push(openCmd);
     context.subscriptions.push(openSettings);
-    context.subscriptions.push(docChangeListener, linkChangeEmitter);
+    context.subscriptions.push(docChangeListener, docCloseListener, linkChangeEmitter);
     context.subscriptions.push(settingsChangeListener);
-    context.subscriptions.push(Client);
+    context.subscriptions.push(client);
     logger.dbg(5, 'Providers registered');
 
     // ─────────────────────────────────────────────────────────────────────────────────
     logger.dbg(3, `Starting server ${channelName}`)
-    // await Client.start(logger, iniData, config);
-    Client.start();
+    // await client.start(logger, iniData, config);
+    client.start();
 
     // ─────────────────────────────────────────────────────────────────────────────────
     // connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
@@ -966,7 +982,7 @@ async function activate(context) {
     //     uri: document.uri,
     //     diagnostics
     // });
-    Client.onNotification('mydefrag/parserStateChanged', (params) => {
+    client.onNotification('mydefrag/parserStateChanged', (params) => {
         const activeUri = vscode.window.activeTextEditor?.document.uri.toString();
         // params.uri === vscode.window.activeTextEditor?.document.uri.toString();
         if (params.uri !== activeUri) {
@@ -983,7 +999,7 @@ async function activate(context) {
 }
 // ─────────────────────────────────────────────────────────────────────────────────
 function deactivate() {
-    if (Client) return Client.stop();
+    if (client) return client.stop();
 }
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────

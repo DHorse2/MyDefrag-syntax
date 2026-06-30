@@ -32,6 +32,9 @@ const { fileURLToPath, pathToFileURL } = require('url');
 // ─────────────────────────────────────────────────────────────────────────────────
 const ini = require('../shared/ini')
 // ─────────────────────────────────────────────────────────────────────────────────
+const paths = require('../shared/path');
+paths.ensureDirectories();
+// ─────────────────────────────────────────────────────────────────────────────────
 // Debug logger — writes to stderr so it doesn't pollute stdout/output file
 const Logger = require('../shared/logger');
 // ─────────────────────────────────────────────────────────────────────────────────
@@ -85,7 +88,6 @@ try { // ---- Initialization ----
   throw new Error(message);
 }
 // logger.initialize(source, connection, isServer, diagnostics, iniData, config)
-let source = "Preview Processor";
 logger = Logger.createLogger(channelName, source, config);
 if (ini.iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Information, ini.iniErrors) }
 // ─────────────────────────────────────────────────────────────────────────────────

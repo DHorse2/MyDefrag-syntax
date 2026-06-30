@@ -8,16 +8,60 @@ Scripts can target specific file types, directories, free space, or usage patter
 
 ---
 
+## Table of Contents
+
+- [Features](#features)
+  - [Syntax Highlighting](#syntax-highlighting)
+  - [Go to Definition — F12](#go-to-definition--f12)
+  - [Find All References — Shift+F12](#find-all-references--shiftf12)
+  - [Include Navigation — Ctrl+Click](#include-navigation--ctrlclick)
+  - [Language Server](#language-server)
+  - [Snippets](#snippets)
+  - [Open Preview](#open-preview)
+- [Design](#design)
+  - [Language Summary](#language-summary)
+  - [Use Cases](#use-cases)
+  - [Solution](#solution)
+- [The Preprocessor (mydefrag-preprocess.js)](#the-preprocessor-mydefrag-preprocessjs)
+  - [CLI Usage](#cli-usage)
+- [Installation](#installation)
+  - [Quick Start using downloaded Setup executable](#quick-start-using-downloaded-setup-executable)
+  - [Installation using source code download](#installation-using-source-code-download)
+  - [Project Files](#project-files)
+- [File Types](#file-types)
+- [DEVELOPER settings](#developer-settings)
+  - [Open design](#open-design)
+  - [Inline ini customization](#inline-ini-customization)
+  - [Standard INI file usage](#standard-ini-file-usage)
+  - [Configuration variables](#configuration-variables)
+  - [Logger features](#logger-features)
+  - [VERBOSE](#verbose)
+  - [Debug On/Off](#debug-onoff)
+  - [verboseLevel](#verboselevel)
+  - [isLogOn](#islogon)
+  - [referenceRelativePathLevel](#referencerelativepathlevel)
+  - [referenceContainsMacros](#referencecontainsmacros)
+  - [referenceFileFoundLevel](#referencefilefoundlevel)
+  - [referenceFileNotFoundLevel](#referencefilenotfoundlevel)
+  - [iniErrors](#inierrors)
+  - [initialize](#initialize)
+  - [readIni](#readini)
+- [Comments in scripts](#comments-in-scripts)
+  - [What are the colors on the diskmap?](#what-are-the-colors-on-the-diskmap)
+
+---
+
 ## Features
 
 The MyDefrag Syntax Extension has the expected features:
 
-* Syntax Highlighting
-* Go to Definition — F12
-* Find All References — Shift+F12
-* Include and Command Link Navigation — Ctrl+Click
-* Open Preview - create a merged preprocessed script
-* Language Server - fully integrated with standard functionality
+- Syntax Highlighting
+- Go to Definition — F12
+- Find All References — Shift+F12
+- Include and Command Link Navigation — Ctrl+Click
+- Snippets for common MyDefrag structures, conditions, and actions
+- Open Preview - create a merged preprocessed script
+- Language Server - fully integrated with standard functionality
 
 ### Syntax Highlighting
 
@@ -35,38 +79,48 @@ Lists every occurrence of the word under the cursor across the entire workspace.
 
 Detects !include ***"relative\path"!*** directives and turns the path into a clickable link that opens the referenced file directly.
 
-A good place for the new language server section would be immediately after **Features** and before **Open Preview**, since it is now one of the extension's major capabilities.
-
-You could add:
-
 ### Language Server
 
-The extension includes a custom MyDefrag Language Server that performs real-time parsing and validation of both complete scripts (**.MyDc**) and script fragments (**.MyD**). Validation occurs as you type and reports errors, warnings, and informational messages directly through the editor and the **Problems** panel.
+The extension includes a custom MyDefrag Language Server that performs real-time parsing and validation of both complete scripts (**.MyD**) and script fragments (**.MyDc**). Validation occurs as you type and reports errors, warnings, and informational messages directly through the editor and the **Problems** panel.
 
 Current capabilities include:
 
-* **Incremental validation** while editing
-* **Script state detection** based on file type and completeness
+- **Incremental validation** while editing
+- **Script state detection** based on file type and completeness
 
-  * **.MyD** → Full Scripts that MyDefrag can
-  * **.MyDc** → Script Fragments - includes and work-in-progress
-  * **.bat, .ps1** → BATCH and Command Script's Extended Links.
-* **Fragment validation** for reusable script components and work-in-progress
-* **Parser document state tracking** displayed in the status bar
-* **Intelligent link detection** links such as !include ???! are validated and searched for and can be followed
-* **Extended link detection** run command links such as RunProcess(???), commands, and BATCH files (and contents) are validated too.
-* **Syntax error reporting** with accurate line and column locations
-* **Unexpected token detection**
-* **Workspace-wide navigation support** through integration with Definition and Reference providers
+  - **.MyD** → Full scripts
+  - **.MyDc** → Script fragments, includes, and work-in-progress
+  - **.bat** → Batch command link detection
+- **Fragment validation** for reusable script components and work-in-progress
+- **Parser document state tracking** displayed in the status bar
+- **Intelligent link detection** links such as !include ???! are validated and searched for and can be followed
+- **Extended link detection** run command links such as RunProcess(???), commands, and batch files are validated too.
+- **Syntax error reporting** with accurate line and column locations
+- **Unexpected token detection**
+- **Workspace-wide navigation support** through integration with Definition and Reference providers
 
 The language server uses the same parser infrastructure as the extension's validation tools, allowing script authors to identify problems before running MyDefrag. Validation results appear in:
 
-* Editor squiggles
-* Hover diagnostics
-* The **Problems** panel
-* Status bar parser state indicators
+- Editor squiggles
+- Hover diagnostics
+- The **Problems** panel
+- Status bar parser state indicators
 
 Parser modes may automatically change during validation when the detected content does not match the expected file type, allowing more accurate diagnostics for partially written or incomplete scripts.
+
+---
+
+### Snippets
+
+The extension contributes snippets for common MyDefrag script structures, volume and file conditions, file actions, script settings, variables, date/time expressions, and math helpers. Snippets are available in `.MyD` and `.MyDc` files through the editor's normal completion list.
+
+Common prefixes include:
+
+- `md-script` — complete script scaffold
+- `md-volume` — `VolumeSelect` / `VolumeActions` / `VolumeEnd` block
+- `md-file` — `FileSelect` / `FileActions` / `FileEnd` block
+- `md-defragment`, `md-fast-fill`, `md-sort-name` — common file actions
+- `md-set-variable-number`, `md-set-variable-string` — variable declarations
 
 ---
 
@@ -80,16 +134,16 @@ This is used in debugging MyDefrag scripts. Critically, when a script runs, the 
 
 Trigger via either:
 
-* Right-click the ***editor tab*** → ***Open Preview***
-* The toolbar icon in the editor title bar
-* Via the command line. Usage: node mydefrag-preprocess.js \<entryFile\> [outputFile]
+- Right-click the ***editor tab*** → ***Open Preview***
+- The toolbar icon in the editor title bar
+- Via the command line. Usage: node mydefrag-preprocess.js \<entryFile\> [outputFile]
 
 If outputFile is omitted, output is written alongside the entry file with a .merged.MyDc extension. The preview file is written alongside the source with a ***.merged*** infix, e.g. ***MyScript.merged.MyDc***.
 
 Preview processing recursively resolves !include "..."! directives in MyDefrag scripts, producing a merged output file with:
 
-* Two line-number columns on every content line
-* Single-line BEGIN / END annotations (not numbered) at each include boundary
+- Two line-number columns on every content line
+- Single-line BEGIN / END annotations (not numbered) at each include boundary
 
 ---
 
@@ -158,38 +212,43 @@ Click the download button. Run the MyDefragInstall.exe and select "Full" + [inst
 
 ### Installation using source code download
 
-To install or update the extension into VSCodium, download the project and run (from the project folder):
+To build and install the extension into VSCodium, download the project and run (from the project folder):
 
 ```powershell
-.\scripts\MyDefragUpdateLive.ps1
+.\scripts\build-and-deploy.ps1
 ```
 
 The script:
 
 1. Locates your VSCodium installation and extensions folder automatically
-2. Creates / updates ***local.mydfrg-0.1.0*** in the extensions folder
-3. Backs up and patches your user ***settings.json*** with the default token color rules
+2. Packages the extension with `vsce`
+3. Creates / updates ***macrodm.mydefrag-syntax-0.4.0*** in the extensions folder
 
 After running, restart VSCodium for changes to take effect.
+
+For a direct source-copy update without VSIX packaging, run:
+
+```powershell
+.\scripts\update-live-MyDefrag.ps1
+```
 
 ### Project Files
 
 | File | Purpose |
 | --- | --- |
-| extension.js | Extension entry point — registers all providers and commands |
-| mydefrag-preprocess.js | Preprocessor — resolves includes and produces merged output |
-| syntaxes | Grammar for mydfrg scripts and bat links |
-| mydfrg.tmLanguage.json | TextMate grammar for syntax highlighting |
-| common | Extension common or shared |
-| logger.js | Extension logging of diagnostics, errors, warnings and information. |
-| configuration | Extension configuration and package.json (Extension manifest) |
-| language-configuration.json | Bracket / comment / autoclosing rules |
-| scripts | Commands for mydfrg scripts and bat links |
-| mydefrag-preprocess.ps1 | PowerShell wrapper for the preprocessor |
-| MyDefragUpdateLive.ps1 | Deploy script — copies extension into VSCodium |
-| AddVsCodiumToExplorer.ps1 | Adds VSCodium to the Windows Explorer right-click menu |
-| MyDefragUpdateLive.ps1 | Deploy script — copies extension into VSCodium |
-| AddVsCodiumToExplorer.ps1 | Adds VSCodium to the Windows Explorer right-click menu |
+| src/extension.js | Extension entry point — registers providers, commands, links, and the language client |
+| src/server/server.js | Language server entry point — validation, diagnostics, and workspace scanning |
+| src/server/parser.js | MyDefrag parser |
+| src/server/tokenizer.js | MyDefrag tokenizer |
+| src/server/languageData.js | Keyword and predefined identifier data |
+| src/preprocess/mydefrag-preprocess.js | Preprocessor — resolves includes and produces merged output |
+| src/shared/ini.js | INI and diagnostic severity configuration |
+| src/shared/logger.js | Extension and server logging |
+| src/language-configuration.json | Bracket, comment, and autoclosing rules |
+| syntaxes/mydfrg.tmLanguage.json | TextMate grammar for syntax highlighting |
+| snippets/mydfrg.code-snippets | MyDefrag snippets |
+| scripts/build-and-deploy.ps1 | Builds a VSIX and optionally installs it into VSCodium |
+| scripts/update-live-MyDefrag.ps1 | Copies source files directly into a local VSCodium extension folder |
 
 ---
 
@@ -201,6 +260,8 @@ After running, restart VSCodium for changes to take effect.
 | .myd | MyDefrag Script |
 | .MyDc | MyDefrag Script Include |
 | .mydc | MyDefrag Script Include |
+| .MYD | MyDefrag Script |
+| .MYDC | MyDefrag Script Include |
 
 ---
 
@@ -214,10 +275,11 @@ With reasonable defaults the usage and meaning of relative paths varies.
 
 | Key | Value |
 | --- | --- |
-| referenceRelativePathLevel | Warning |
-| referenceContainsMacrosLevel | Hint |
+| referenceRelativePathLevel | Error |
+| referenceContainsMacros | Information |
 | referenceFileFoundLevel | Information |
 | referenceFileNotFoundLevel | Error |
+| fragmentParentLevel | Information |
 
 The ambiguous presence of macros (variables) in paths might have different importance.
 File found/Not found can be independently handled. The regular defaults can be overridden by *mode="strict"*.
@@ -226,7 +288,7 @@ File found/Not found can be independently handled. The regular defaults can be o
 | Key | Value |
 | --- | --- |
 | referenceRelativePathLevel | severity.Error |
-| referenceContainsMacrosLevel | severity.Warning |
+| referenceContainsMacros | severity.Warning |
 | referenceFileFoundLevel | severity.Information |
 | referenceFileNotFoundLevel | severity.Error |
 
@@ -257,16 +319,16 @@ function initialize(
 
 | Value | Purpose | Optional |
 | --- | --- | --- |
-| iniPath | ToDo | NO |
-| channelName | ToDo | NO |
-| debugEnabled | ToDo | Yes |
-| verbose | ToDo | Yes |
-| logEnabled | ToDo | Yes |
-| useStrict | ToDo | Yes |
-| referenceRelativePath | ToDo | Yes |
-| referenceContainsMacros | ToDo | Yes |
-| referenceFound | ToDo | Yes |
-| referenceNotFound | ToDo | Yes |
+| iniPath | Path to the extension INI configuration file | NO |
+| channelName | Logger/output channel name | NO |
+| debugEnabled | Enables debug logging | Yes |
+| verbose | Verbosity level from 0 to 10 | Yes |
+| logEnabled | Enables log output | Yes |
+| useStrict | Enables strict reference diagnostics | Yes |
+| referenceRelativePath | Severity for references found by walking parent folders | Yes |
+| referenceContainsMacros | Severity for references containing execution-time macros | Yes |
+| referenceFound | Severity for references whose target file is found | Yes |
+| referenceNotFound | Severity for references whose target file is not found | Yes |
 
 ### Configuration variables
 
@@ -274,11 +336,11 @@ Initialization provides several outputs:
 
 | Variable | Purpose |
 | --- | --- |
-| ini | ToDo |
-| debugOn | ToDo |
-| verboseLevel | ToDo |
-| isLogOn | ToDo |
-| iniErrors | ToDo |
+| ini | Parsed INI/configuration data |
+| debugOn | Whether debug logging is enabled |
+| verboseLevel | Active verbosity level |
+| isLogOn | Whether logging is enabled |
+| iniErrors | INI parsing or configuration warnings |
 
 #### Reporting and Analysis Options
 
@@ -288,15 +350,16 @@ The default configuration provides a balanced set of diagnostics suitable for bo
 
 | Setting                        | Default Severity |
 | ------------------------------ | ---------------- |
-| `referenceRelativePathLevel`   | Warning          |
-| `referenceContainsMacrosLevel` | Hint             |
+| `referenceRelativePathLevel`   | Error            |
+| `referenceContainsMacros`      | Information      |
 | `referenceFileFoundLevel`      | Information      |
 | `referenceFileNotFoundLevel`   | Error            |
+| `fragmentParentLevel`          | Information      |
 
 **`referenceRelativePathLevel`**
 Controls the severity reported when a relative path is encountered. Some projects encourage relative paths, while others require fully qualified paths.
 
-**`referenceContainsMacrosLevel`**
+**`referenceContainsMacros`**
 Controls the severity reported when a file reference contains macros or variables. Depending on the project, macro-based paths may be expected, discouraged, or prohibited.
 
 **`referenceFileFoundLevel`**
@@ -312,7 +375,7 @@ When `mode=strict` is enabled, these settings are overridden with a predefined s
 | Setting                        | Strict Mode Severity |
 | ------------------------------ | -------------------- |
 | `referenceRelativePathLevel`   | Error                |
-| `referenceContainsMacrosLevel` | Warning              |
+| `referenceContainsMacros`      | Warning              |
 | `referenceFileFoundLevel`      | Information          |
 | `referenceFileNotFoundLevel`   | Error                |
 
@@ -353,39 +416,39 @@ Debug (debugOn) must be on or logger.dbg messages will be ignored. It is a true/
 
 ### verboseLevel
 
-ToDo
+Controls logging verbosity from 0 (silent) through 10 (most detailed). Debug messages require `debugOn` to be enabled.
 
 ### isLogOn
 
-ToDo
+Controls whether logger output is emitted.
 
 ### referenceRelativePathLevel
 
-ToDo
+Controls diagnostics for references found only by walking up parent folders.
 
-### referenceContainsMacrosLevel
+### referenceContainsMacros
 
-ToDo
+Controls diagnostics for references that contain execution-time macros or variables.
 
 ### referenceFileFoundLevel
 
-ToDo
+Controls diagnostics for references whose target file is found.
 
 ### referenceFileNotFoundLevel
 
-ToDo
+Controls diagnostics for references whose target file is not found.
 
 ### iniErrors
 
-ToDo
+Contains warnings or errors collected while reading INI configuration.
 
 ### initialize
 
-ToDo
+Initializes INI-backed configuration and returns normalized logging and diagnostic settings.
 
 ### readIni
 
-ToDo
+Reads the INI file and returns parsed configuration values.
 
 ## Comments in scripts
 

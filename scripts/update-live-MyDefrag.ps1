@@ -53,7 +53,7 @@ Write-Host
 # ---------------------------------------------------------------------------
 # Extension information
 # ---------------------------------------------------------------------------
-$ExtensionFolder = "local.mydefrag-syntax-0.2.0"
+$ExtensionFolder = "local.mydefrag-syntax-0.4.0"
 $TargetPath = Join-Path $ExtensionsPath $ExtensionFolder
 
 # Source root = parent of deployment script

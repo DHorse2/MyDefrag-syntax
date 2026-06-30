@@ -44,6 +44,7 @@ var referenceFileFoundLevel;
 var referenceFileNotFoundLevel;
 var iniErrors = [];
 var loggedMessages;
+const recreatedLogFiles = new Set();
 //#endregion
 //#region Functions
 function createLogger(channelName, thisSource = "Unknown", config = {}, options = {}) {
@@ -57,6 +58,7 @@ function createLogger(channelName, thisSource = "Unknown", config = {}, options 
             Hint: 4,
         }
     };
+    // Configuration
     const localIsDebugOn = Boolean(loggerConfig.isDebugOn);
     const localVerboseLevel = Number.isFinite(Number(loggerConfig.verboseLevel))
         ? Number(loggerConfig.verboseLevel)
@@ -82,8 +84,9 @@ function createLogger(channelName, thisSource = "Unknown", config = {}, options 
         referenceFileNotFoundLevel,
         iniErrors
     } = loggerConfig);
-    source = localSource;
 
+    source = localSource;
+    //#region Utility functions
     /**
      * Converts log arguments into readable single-line text.
      *
@@ -112,6 +115,22 @@ function createLogger(channelName, thisSource = "Unknown", config = {}, options 
     }
 
     /**
+     * Recreates a configured log file once per process session.
+     *
+     * @param {string} filePath The log file path.
+     */
+    function recreateLogFile(filePath) {
+        if (!filePath) return;
+
+        const resolvedPath = path.resolve(filePath);
+        if (recreatedLogFiles.has(resolvedPath)) return;
+
+        ensureLogFile(resolvedPath);
+        fs.writeFileSync(resolvedPath, '', 'utf8');
+        recreatedLogFiles.add(resolvedPath);
+    }
+
+    /**
      * Appends a single line to the configured log file.
      *
      * @param {string} message The formatted log line.
@@ -119,7 +138,7 @@ function createLogger(channelName, thisSource = "Unknown", config = {}, options 
     function appendToFile(message) {
         if (!fileEnabled || !logFilePath) return;
         try {
-            ensureLogFile(logFilePath);
+            recreateLogFile(logFilePath);
             fs.appendFileSync(logFilePath, `${message}\n`, 'utf8');
         } catch (errResult) {
             console.error(`logger.js:createLogger:appendToFile: ${errResult.message}`);
@@ -135,7 +154,7 @@ function createLogger(channelName, thisSource = "Unknown", config = {}, options 
     }
 
     writeSessionHeader();
-
+    //#endregion
     //#region Logging functions
     function logToConsole(...args) {
         // const message = args.join(' ');
@@ -200,6 +219,28 @@ function createLogger(channelName, thisSource = "Unknown", config = {}, options 
                 break;
         }
     }
+
+    function messageDetail(...args) {
+        // const message = args.join(' ');
+        const content = args.map(formatLogValue).filter(Boolean).join(' ');
+        const message = `${content}`;
+
+        try {
+            appendToFile(message);
+            if (localIsServer) {
+                // server: usually forward via LSP
+                lspConnection?.sendNotification?.('mydefrag/log', { message });
+            } else {
+                outputChannel?.appendLine?.(message);
+            }
+            console.log(message);
+        } catch (errResult) {
+            const errorMessage = `logger.js:createLogger:messageDetail: Error handling output: ${errResult.message}`;
+            console.error(errorMessage);
+            appendToFile(errorMessage);
+        }
+    }
+
     //#endregion
     dbg(5, `Logger ${channelName} belonging to ${source} started.`)
     return {
@@ -209,6 +250,7 @@ function createLogger(channelName, thisSource = "Unknown", config = {}, options 
         warn,
         err,
         message,
+        messageDetail,
         logToConsole,
         filePath: logFilePath
     };

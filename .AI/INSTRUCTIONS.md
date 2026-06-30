@@ -1,6 +1,6 @@
-# MyDefrag Language Extension Instructions
+# Instructions
 
-You are assisting with the MyDefrag Language Extension.
+You are assisting with developing the MyDefrag Language Extension.
 
 ## General Rules
 
@@ -18,6 +18,7 @@ You are assisting with the MyDefrag Language Extension.
 * Follow existing project conventions.
 * Generate JSDoc comments for new functions.
 * Preserve existing error handling patterns.
+* When creating scripts or programs to show the script name as a comment as close to line 1 as is possible.
 
 ## Debugging
 
@@ -60,6 +61,14 @@ When generating code:
 2. Code
 3. Notes
 
+## Chat History
+
+Keep raw chats in `.codex/chats/history/topic.md`.
+
+## Codex Manual
+
+The local copy of the Codex manual is at `D:\Script\MyDefrag-syntax\doc\Codex\codex-manual.md`.
+
 ## Update Automation Control
 
 Never automatically run:
@@ -80,10 +89,6 @@ Before modifying more than one file:
 
 ## Project Context Overview
 
-Language:
-
-* MyDefrag scripting language
-
 Technologies:
 
 * Node.js
@@ -101,6 +106,12 @@ Key Files:
 * tokenizer.js
 * languageData.js
 
+MyDefrag scripting language:
+
+* Language reference: "D:\Script\MyDefrag-syntax\doc\MyDefrag Help"
+* BNF language definition: "D:\Script\MyDefrag-syntax\doc\MyDefrag GOLD Parser BNF (Backus-Naur Form) syntax.bnf"
+* Client, Server, Parser and Diagnostic session log: C:\Users\david\AppData\Roaming\VSCodium\User\globalStorage\macrodm.mydefrag-syntax\log
+
 Build:
 
 * npm
@@ -111,3 +122,22 @@ Target Editors:
 
 * VSCodium
 * VS Code
+
+Agreed. This aligns with preferences you've already established for code revisions. I'll treat it as a standing rule.
+
+## Rules
+
+### Revision Rule
+
+When asked to revise a document or program:
+
+* **Provide the complete revised document or source file**, suitable for copy/paste or replacement.
+* **Do not provide partial patches or snippets** unless explicitly requested.
+* **Make only the requested changes.**
+* **Do not make unnecessary changes** to formatting, wording, structure, or style.
+* **Preserve all existing comments.**
+* **Preserve existing formatting** unless the requested change requires otherwise.
+* **Minimize the diff** so changes are easy to review.
+* **Do not rename public identifiers, files, or APIs** unless explicitly requested.
+* **Do not remove content** unless explicitly requested or it is demonstrably incorrect and directly related to the requested revision.
+* When multiple files are involved, **identify the affected files before making changes**, consistent with your existing workflow.

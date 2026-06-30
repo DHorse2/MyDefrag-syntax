@@ -1,0 +1,4535 @@
+{
+  "generatedAt": "2026-06-29T10:10:04.507Z",
+  "event": "validate",
+  "uri": "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsDataGet.MyDc",
+  "parserState": "SCRIPT_FRAGMENT",
+  "diagnosticsByUri": {
+    "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragAnyComplexVolume.MyD": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 138,
+              "character": 0
+            },
+            "end": {
+              "line": 138,
+              "character": 14
+            }
+          },
+          "message": "Unexpected statement 'bodisyouruncle'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 138,
+              "character": 0
+            },
+            "end": {
+              "line": 138,
+              "character": 14
+            }
+          },
+          "message": "Unexpected token 'bodisyouruncle' — expected end of file",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoAction.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 0
+            },
+            "end": {
+              "line": 3,
+              "character": 11
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileactions' may be incomplete",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileSelect ... FileActions ... FileEnd block.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsDataGet.MyDc": {
+      "count": 4,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 63,
+              "character": 38
+            },
+            "end": {
+              "line": 63,
+              "character": 61
+            }
+          },
+          "message": "Expected ) but found '\"VolOccupiedSizeGbDesc\"'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 63,
+              "character": 38
+            },
+            "end": {
+              "line": 63,
+              "character": 61
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '\"VolOccupiedSizeGbDesc\"'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside one of: script, VolumeActions, FileActions.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 63,
+              "character": 38
+            },
+            "end": {
+              "line": 63,
+              "character": 61
+            }
+          },
+          "message": "Unexpected token '\"VolOccupiedSizeGbDesc\"' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneDoHeader.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 12,
+              "character": 1
+            },
+            "end": {
+              "line": 12,
+              "character": 11
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileselect' may be incomplete",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Automatic/ZoneDoActionAutomatic.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Automatic/ZoneDoActionInteractive.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeAllFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeAllRegular.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeBlobsFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeOsBootDataFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeOsBootFixedFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeOsDirFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeOsMftFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeOsPageHiberDumpFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeOsProgramHintsDataFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeOsProgramHintsFixedFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeOsProgramsDataFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoActionTypeOsProgramsFixedFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Fast/ZoneDoGapFast.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeAllFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeBlobsFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeOsBootDataFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeOsBootFixedFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeOsDirFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeOsMftFull.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeOsPageHiberDumpFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeOsProgramHintsDataFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeOsProgramHintsFixedFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeOsProgramsDataFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoActionTypeOsProgramsFixedFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Full/ZoneDoGapFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeAllRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeBlobsRegular.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeOsBootDataRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeOsBootFixedRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeOsDirRegular.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeOsMftRegular.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeOsPageHiberDumpRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeOsProgramHintsDataRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeOsProgramHintsFixedRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeOsProgramsDataRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoActionTypeOsProgramsFixedRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/Regular/ZoneDoGapRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/VolumeTypeSelect.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionAutomaticThis.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionMoveToEndOfDisk.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionMoveUpToZone.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionSortByCreationDate.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionSortByCreationDateFull.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionSortByImportSequence.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionSortByImportSequenceSkip.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionSortByName.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionThis.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeAll.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeBlobs.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsBootData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsBootFixed.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsDir.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsMft.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsPageHiberDump.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsProgramHints.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsProgramHintsData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsProgramHintsFixed.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsPrograms.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsProgramsData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoActionTypeOsProgramsFixed.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoGapNoVacate.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoGapThis.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ActionVerbs/ZoneDoGapVacate.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DEFRAGANY$%20VOLUME%20HERE.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DEFRAGVOLUME$%20TYPE%20HERE.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DEFRAGZONE$GROUP$%20HERE.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragAnyBasicVolume.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragAnyComplexVolume.MyD": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 138,
+              "character": 0
+            },
+            "end": {
+              "line": 138,
+              "character": 14
+            }
+          },
+          "message": "Unexpected statement 'bodisyouruncle'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 138,
+              "character": 0
+            },
+            "end": {
+              "line": 138,
+              "character": 14
+            }
+          },
+          "message": "Unexpected token 'bodisyouruncle' — expected end of file",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragAnyVolume.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragVolumeData.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragVolumeDev.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragVolumeSys.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragZoneGroupMftDir.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragZoneGroupOs.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/BANNER$%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/BANNERz%20END.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/BannerDescriptionSet.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/BannerSet.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DISPLA$Y%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DataVolumeStats.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/Display.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplayColors%20-%20Copy.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplayColors%20p20211108.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplayColors.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplayColorsZoneDark.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplayColorsZoneLight.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplayDiskmapFlip.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplaySetDateTimeCurrent.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplaySetDateTimeRun.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplaySetRun.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplaySetServer.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplaySetVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplaySetWindowText.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplaySetZone.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplaySetZoneStep.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/DisplayStatusBar.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Display/StatsDataToDo.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GAP$%20CALCULATIONS%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GapCalcMethod.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GapCalcMft.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GapCalcOriginal.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GapCalcOs.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GapCalcStd.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GapCommandDoNotVacate.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GapCommandDoVacate.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GapZoneCalc.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GapZoneCommand.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Gap/GapZoneSet.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PAUSE%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseAmt.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseCheck.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseCheckRun.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseCheckVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseCheckZone.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseCheckZoneTypes.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseDisplay.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZone.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneType.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeDevToDo.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeGames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeIdeScripts.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeLinksCorp.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeOsBoot.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeOsDIR.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeOsDataDynamic.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeOsMFT.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeOsPageHiberDump.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeOsPrograms.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypePeople.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeProgramHints.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeReference.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeShares.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeSpaceHogs.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Pause/PauseZoneTypeSystemOtherData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/AnalyzeOnly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragAnyDisk.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragDataDiskDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragDataDiskMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragDataDiskWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragDataDiskYearly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragDevDiskDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragDevDiskMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragDevDiskWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragDevDiskYearly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragSystemDiskDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragSystemDiskMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragSystemDiskWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/DefragSystemDiskYearly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/AnalyzeOnly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/AutomaticDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/AutomaticMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/AutomaticWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/ConsolidateFreeSpace.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/DataDiskDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/DataDiskMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/DataDiskWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/DefragmentOnly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/FlashMemoryDisks.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/More%20Example%20Scripts/ForceTogether.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/More%20Example%20Scripts/HighLight.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/More%20Example%20Scripts/MoveToEndOfDisk.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/More%20Example%20Scripts/SortByCreationTime.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/More%20Example%20Scripts/SortByLastAccess.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/More%20Example%20Scripts/SortByLastChange.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/More%20Example%20Scripts/SortByName.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/More%20Example%20Scripts/SortBySize.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/Settings.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/SystemDiskDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/SystemDiskMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/MyDefrag%20Examples/SystemDiskWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/AnalyzeOnly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/AutomaticDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/AutomaticMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/AutomaticWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/ConsolidateFreeSpace.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/DataDiskDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/DataDiskMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/DataDiskWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/DefragmentOnly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/FlashMemoryDisks.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/More%20Example%20Scripts/ForceTogether.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/More%20Example%20Scripts/HighLight.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/More%20Example%20Scripts/MoveToEndOfDisk.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/More%20Example%20Scripts/SortByCreationTime.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/More%20Example%20Scripts/SortByLastAccess.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/More%20Example%20Scripts/SortByLastChange.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/More%20Example%20Scripts/SortByName.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/More%20Example%20Scripts/SortBySize.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/Settings.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/SystemDiskDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/SystemDiskMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/MyDefrag%20Examples/SystemDiskWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsAutomatic/AnalyzeOnly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsAutomatic/DefragAllDailyAuto.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsAutomatic/DefragAllMonthlyAuto.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsAutomatic/DefragDataDiskDailyAuto.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsAutomatic/DefragDataDiskMonthlyAuto.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsAutomatic/DefragDevDiskDailyAuto.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsAutomatic/DefragDevDiskMonthlyAuto.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsAutomatic/DefragSystemDiskDailyAuto.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsAutomatic/DefragSystemDiskMonthlyAuto.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsDaily/AnalyzeOnly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsDaily/DefragAllDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsDaily/DefragDataDiskDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsDaily/DefragDevDiskDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsDaily/DefragSystemDiskDaily.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsMonthly/AnalyzeOnly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsMonthly/DefragAllMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsMonthly/DefragDataDiskMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsMonthly/DefragDevDiskMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsMonthly/DefragSystemDiskMonthly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsWeekly/AnalyzeOnly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsWeekly/DefragAllWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsWeekly/DefragDataDiskWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsWeekly/DefragDevDiskWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsWeekly/DefragSystemDiskWeekly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsYearly/AnalyzeOnly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsYearly/DefragAllYearly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsYearly/DefragDataDiskYearly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsYearly/DefragDevDiskYearly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/ScriptsYearly/DefragSystemDiskYearly.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/ResetScripts/Settings.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Scripts/Settings.MyD": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeAllFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeAllRegular.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeBlobsFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeOsBootDataFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeOsBootFixedFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeOsDirFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeOsMftFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeOsPageHiberDumpFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeOsProgramHintsDataFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeOsProgramHintsFixedFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeOsProgramsDataFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoActionTypeOsProgramsFixedFast.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Fast/ZoneDoGapFast.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeAllFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeBlobsFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeOsBootDataFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeOsBootFixedFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeOsDirFull.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeOsMftFull.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeOsPageHiberDumpFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeOsProgramHintsDataFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeOsProgramHintsFixedFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeOsProgramsDataFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoActionTypeOsProgramsFixedFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Full/ZoneDoGapFull.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeAllRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeBlobsRegular.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeOsBootDataRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeOsBootFixedRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeOsDirRegular.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeOsMftRegular.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeOsPageHiberDumpRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeOsProgramHintsDataRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeOsProgramHintsFixedRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeOsProgramsDataRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoActionTypeOsProgramsFixedRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/Regular/ZoneDoGapRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoAction.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 0
+            },
+            "end": {
+              "line": 3,
+              "character": 11
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileactions' may be incomplete",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileSelect ... FileActions ... FileEnd block.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionMoveToEndOfDisk.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionMoveUpToZone.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionSortByCreationDate.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionSortByImportSequence.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionSortByImportSequenceSkip.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionSortByName.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionThis.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeAll.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeBlobs.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsBootData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsBootFixed.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsDir.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsMft.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsPageHiberDump.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsProgramHints.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsProgramHintsData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsProgramHintsFixed.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsPrograms.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsProgramsData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoActionTypeOsProgramsFixed.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoGapNoVacate.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoGapThis.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoGapVacate.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SETTINGSR$$%20RUN%20PROCESSING.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SETTINGSSY$%20SYSTEM%20DEFAULTS%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsRu$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsRun.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsRunFileStepDescriptions.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsRunVolum$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsRunVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsRunZone$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsRunZonez$%20DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsRunzz$%20Volumzzz$DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsRunzzz$%20DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysDebugLevel.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysExitIfTimeout.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysOtherInstances.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysPagedfrg.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysPowerSaver.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysProcessPriority.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysScriptDirectoryLocation.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysServerName.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysServerNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysVolumeNamePrefix.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysWindowSize.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSetting/SettingsSysZoneNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SETTINGSYOUR$%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SETTINGSYOURz%20END.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursDev.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursDisplayColors.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursDisplayStatusBar.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursFileStepDescriptions.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursGapCalcMethod.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursGapCommandDo.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursPauseVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursPauseZone.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursRu$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursRun.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursRunFileStepDescriptions.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursRunVolum$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursRunVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursRunZone$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursRunZonez$%20DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursRunzz$%20Volumzzz$DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursRunzzz$%20DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursServerNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSys.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysDebugLevel.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysExitIfTimeout.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysOtherInstances.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysPagedfrg.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysPowerSaver.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysProcessPriority.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysServer.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysServerName.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysServerNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysVolumeNamePrefix.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysVolumeNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysWindowSize.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetSettingYours/SettingsYoursSysZoneNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SETTINGSR$$%20RUN%20PROCESSING.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SETTINGSSY$%20SYSTEM%20DEFAULTS%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsAutomaticRun.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRu$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRu$%2520DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRun.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRunLanguage.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRunLanguageEnglish.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRunVolum$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRunVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRunZone$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRunZoneStepDescriptions.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRunZonez$%20DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRunzz$%20Volumzzz$DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsRunzzz$%20DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysDebugLevel.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysExitIfTimeout.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysOtherInstances.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysPagedfrg.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysPowerSaver.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysProcessPriority.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysScriptDirectoryLocation.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysServerName.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysServerNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysVolumeNamePrefix.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysVolumeNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysWindowSize.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsSysZoneNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SETTINGSYOUR$%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SETTINGSYOURz%20END.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursDev.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursDisplayColors.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursDisplayStatusBar.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursGapCalcMethod.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursGapCommandDo.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursPauseVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursPauseZone.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursRu$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursRun.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursRunVolum$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursRunVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursRunZone$%20DoBefore.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursRunZoneStepDescriptions.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursRunZonez$%20DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursRunzz$%20Volumzzz$DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursRunzzz$%20DoAfter.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursServerNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSys.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysDebugLevel.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysExitIfTimeout.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysOtherInstances.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysPagedfrg.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysPowerSaver.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysProcessPriority.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysServer.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysServerName.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysServerNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysVolume.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysVolumeNamePrefix.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysVolumeNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysWindowSize.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursSysZoneNames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Settings/SettingsYours/SettingsYoursZoneStepDescriptions.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/VolumeTypeSelect.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionAutomaticThis.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionThis.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeAll.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsBootData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsBootFixed.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsDir.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsMft.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsPageHiberDump.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsProgramHints.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsProgramHintsData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsProgramHintsFixed.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsPrograms.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsProgramsData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoActionTypeOsProgramsFixed.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/State/ZoneDoGapThis.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VOLUME$%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VOLUMEWHEN$%20HERE%20-%20Copy.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeDoCurrentClear.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeFooterGet.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeNoIncrement.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsDataGet.MyDc": {
+      "count": 4,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 63,
+              "character": 38
+            },
+            "end": {
+              "line": 63,
+              "character": 61
+            }
+          },
+          "message": "Expected ) but found '\"VolOccupiedSizeGbDesc\"'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 63,
+              "character": 38
+            },
+            "end": {
+              "line": 63,
+              "character": 61
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '\"VolOccupiedSizeGbDesc\"'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside one of: script, VolumeActions, FileActions.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 63,
+              "character": 38
+            },
+            "end": {
+              "line": 63,
+              "character": 61
+            }
+          },
+          "message": "Unexpected token '\"VolOccupiedSizeGbDesc\"' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsDetailDisplay.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsDetailGet.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsSummaryDisplay.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsSummaryGet.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeWhenFinished.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeWhenStarted.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeType.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 4
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Failed parsing fragment statement 'name' as 'volume_condition'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 4
+            }
+          },
+          "message": "Unexpected token 'name' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeC.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeD.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeData.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 4
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Failed parsing fragment statement 'name' as 'volume_condition'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 4
+            }
+          },
+          "message": "Unexpected token 'name' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeDev.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 4
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Unknown fragment keyword 'skip' parent 'null'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 4
+            }
+          },
+          "message": "Unexpected token 'skip' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeE.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeF.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeG.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeSys.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 4
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Unknown fragment keyword 'skip' parent 'null'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 4
+            }
+          },
+          "message": "Unexpected token 'skip' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZONE$%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZONEFIXED$%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZONENO$%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZONEWHEN$%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneDoAction.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 1
+            },
+            "end": {
+              "line": 3,
+              "character": 12
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileactions' may be incomplete",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileSelect ... FileActions ... FileEnd block.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneDoCurrentClear.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneDoCurrentSet.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneDoFooter.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 20,
+              "character": 1
+            },
+            "end": {
+              "line": 20,
+              "character": 8
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileend' may be incomplete",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileSelect ... FileActions ... FileEnd block.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneDoHeader.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 12,
+              "character": 1
+            },
+            "end": {
+              "line": 12,
+              "character": 11
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileselect' may be incomplete",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneDoVolumeTotals.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneFixedDev.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneFixedOs.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneFixedSys.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneListStatisticsAppend.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneNoCalculation.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneNoIncrement.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneNoIncrementAdjust.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneStatisticsDetailReportAppend.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneStatisticsDetailZoneAppend.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneStatisticsGet.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneStatisticsReportGet.MyDc": {
+      "count": 4,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 30,
+              "character": 42
+            },
+            "end": {
+              "line": 30,
+              "character": 53
+            }
+          },
+          "message": "Expected ) but found 'actionverbs'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 30,
+              "character": 42
+            },
+            "end": {
+              "line": 30,
+              "character": 53
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Unknown fragment keyword 'actionverbs' parent 'null'",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside one of: script, VolumeActions, FileActions.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 30,
+              "character": 42
+            },
+            "end": {
+              "line": 30,
+              "character": 53
+            }
+          },
+          "message": "Unexpected token 'actionverbs' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneStatisticsReportGetOriginal.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DEFRAGZONETYPE$%20HERE.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeBlobs.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 25,
+              "character": 1
+            },
+            "end": {
+              "line": 25,
+              "character": 12
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileactions' may be incomplete",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileSelect ... FileActions ... FileEnd block.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeDevToDo.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeGames.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeIdeScripts.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeIncludes.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeLinksCorp.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeOsBoot.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 23,
+              "character": 8
+            },
+            "end": {
+              "line": 23,
+              "character": 9
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 23,
+              "character": 8
+            },
+            "end": {
+              "line": 23,
+              "character": 9
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeOsDir.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 18,
+              "character": 1
+            },
+            "end": {
+              "line": 18,
+              "character": 12
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileactions' may be incomplete",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileSelect ... FileActions ... FileEnd block.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeOsMft.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 22,
+              "character": 1
+            },
+            "end": {
+              "line": 22,
+              "character": 12
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileactions' may be incomplete",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileSelect ... FileActions ... FileEnd block.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeOsPageHiberDump.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 24,
+              "character": 1
+            },
+            "end": {
+              "line": 24,
+              "character": 12
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileactions' may be incomplete",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileSelect ... FileActions ... FileEnd block.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeOsProgramHints.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 22,
+              "character": 8
+            },
+            "end": {
+              "line": 22,
+              "character": 9
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 22,
+              "character": 8
+            },
+            "end": {
+              "line": 22,
+              "character": 9
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeOsPrograms.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 24,
+              "character": 8
+            },
+            "end": {
+              "line": 24,
+              "character": 9
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 24,
+              "character": 8
+            },
+            "end": {
+              "line": 24,
+              "character": 9
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypePeople.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeReference.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeShares.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeSystemOtherData.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeDefrag/DefragZoneTypeUnallocated.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZONETYPESELECT$%20HERE%20-%20Copy.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectBlobs.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 0
+            },
+            "end": {
+              "line": 2,
+              "character": 1
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 0
+            },
+            "end": {
+              "line": 2,
+              "character": 1
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectDevToDo.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectGames.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectIdeScripts.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectLinksCorp.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsBoot.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsDIR.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsDataDynamic.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 0
+            },
+            "end": {
+              "line": 2,
+              "character": 1
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 0
+            },
+            "end": {
+              "line": 2,
+              "character": 1
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsMFT.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsPageHiberDump.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 0
+            },
+            "end": {
+              "line": 2,
+              "character": 1
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 0
+            },
+            "end": {
+              "line": 2,
+              "character": 1
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsProgramHints.MyDc": {
+      "count": 1,
+      "diagnostics": [
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsPrograms.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 6,
+              "character": 4
+            },
+            "end": {
+              "line": 6,
+              "character": 5
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 6,
+              "character": 4
+            },
+            "end": {
+              "line": 6,
+              "character": 5
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectPeople.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectReference.MyDc": {
+      "count": 2,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 0
+            },
+            "end": {
+              "line": 4,
+              "character": 1
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 0
+            },
+            "end": {
+              "line": 4,
+              "character": 1
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectRegular.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectShares.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectSystemOtherData.MyDc": {
+      "count": 3,
+      "diagnostics": [
+        {
+          "severity": 1,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 3,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "source": "MyDefrag"
+        },
+        {
+          "severity": 2,
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 4
+            },
+            "end": {
+              "line": 4,
+              "character": 5
+            }
+          },
+          "message": "Unexpected token '(' — fragment may be incomplete",
+          "source": "MyDefrag"
+        }
+      ]
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectUnallocated.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneWhenFinished.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    },
+    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneWhenStarted.MyDc": {
+      "count": 0,
+      "diagnostics": []
+    }
+  }
+}

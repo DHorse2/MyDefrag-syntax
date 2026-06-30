@@ -40,6 +40,7 @@ const parseStates = {
     SCRIPT_FRAGMENT: 1,
     SCRIPT_UNKNOWN: 2
 };
+const fragmentTraceSingleLine = false;
 class Parser {
     constructor(tokens, text, state = parseStates.SCRIPT_UNKNOWN) {
         this.tokens = tokens;
@@ -57,7 +58,7 @@ class Parser {
     curr() { return this.tokens[this.pos]; }
     next() { return this.tokens[this.pos++]; }
     prev() { return this.tokens[this.pos - 1]; }
-    atEof() { return this.curr().type === TT.EOF; }
+    atEof() { return !this.curr() || this.curr().type === TT.EOF; }
 
     // Yes or No?
     parseYesNo() {
@@ -275,11 +276,14 @@ class Parser {
                     return false;
             }
         } catch (errResult) {
-            const message = `server.js:Parser:parseStatement: Unexpected error parsing Token: ${t.value.toLowerCase()} NextToken: ${this.curr().value.toLowerCase()} Error: ${errResult.message}`;
+            const currentToken = this.curr?.();
+            const tokenValue = String(t?.value ?? '').toLowerCase();
+            const nextTokenValue = String(currentToken?.value ?? '').toLowerCase();
+            const message = `server.js:Parser:parseStatement: Unexpected error parsing Token: ${tokenValue} NextToken: ${nextTokenValue} Error: ${errResult.message}`;
             console?.error?.(message);           // debugger
             logger?.err?.(errResult, message);   // output channel
-            this.error?.(message); // document diagnostic
-            return message;
+            this.error?.(ini.severity.Error, message, t); // document diagnostic
+            return false;
         }
     }
     // ── Fragments .Parse ───────────────────────────────────────────────────────
@@ -309,42 +313,89 @@ class Parser {
 
     // Verbose fragment parser tracing.
     // logger.dbg(5, ...) is expected to respect verboseLevel internally.
-    fragmentTrace(label, data = {}) {
-        const columns = [
-            ['event', label, 20],
-            ['step', data.step, 4],
+    fragmentTrace(label, data = {}, details = {}) {
+        const firstColumns = [
+            ['#', data.count, 3],
+            ['step', data.step, 2],
+            ['event', label, 15],
+            ['type', data.tokenType, 8],
+            ['kw', data.keyword, 15],
+            ['kind', data.keywordKind ?? data.kind ?? data.fragmentKind, 15],
+            ['parent', data.keywordParent ?? data.parent ?? data.fragmentParent, 15],
             ['ok', data.ok, 6],
             ['pos', data.pos, 4],
-            ['token', data.tokenValue, 18],
-            ['type', data.tokenType, 14],
-            ['kw', data.keyword, 18],
-            ['kind', data.keywordKind ?? data.kind ?? data.fragmentKind, 20],
-            ['parent', data.keywordParent ?? data.parent ?? data.fragmentParent, 20],
-            ['allowed', data.allowed, 7],
-            ['parsed', data.parsed, 7],
-            ['stack', data.fragmentStack, 24],
-            ['errs', data.errorsAfter ?? data.errors, 4],
-            ['fragmentKind', data.fragmentKind, 24],
-            ['fragmentParent', data.fragmentParent, 24],
-            ['fragmentStack', data.fragmentStack, 24],
+            ['token', data.tokenValue, 40],
         ];
 
-        const message = columns
-            .filter(column => Array.isArray(column))
-            .map(([name, value, width]) => `${name}=${this.formatTraceColumn(value, width)}`)
-            .join(' ');
+        const secondColumns = [
+            ['_____', "___________________", 20],
+            ['allowed', data.allowed, 7],
+            ['parsed', data.parsed, 7],
+            ['stack', data.fragmentStack, 12],
+            ['errFlag', this.errorFlag ?? false, 6],
+            ['errs', data.errorsAfter ?? data.errors, 4],
+            ['fragmentKind', data.fragmentKind, 12],
+            ['fragmentParent', data.fragmentParent, 12],
+            ['fragmentStack', data.fragmentStack, 40],
+        ];
 
-        logger?.dbg?.(5, `server.js:Parser:parseFragment ${message}`);
+        let message;
+
+        if (fragmentTraceSingleLine) {
+            message = this.formatTraceColumnsPacked([...firstColumns, ...secondColumns]);
+            logger?.messageDetail?.(message);
+        } else {
+            message = this.formatTraceColumnsFixed(firstColumns);
+            logger?.messageDetail?.(message);
+
+            message = this.formatTraceColumnsFixed(secondColumns);
+            logger?.messageDetail?.(message);
+        }
+
+        if (details && Object.keys(details).length) {
+            message = Object.entries(details)
+                .map(([name, value]) => `${name} = ${this.formatTraceValue(value)}`)
+                .join('], [');
+
+            logger?.messageDetail?.(`details [${message}]`);
+        }
+
+        logger?.messageDetail?.(".");
     }
 
     /**
-     * Formats one fragment trace value as a fixed-width single-line column.
+     * Formats fragment trace columns as one packed single-line message.
+     *
+     * @param {Array<Array>} columns The trace columns to format.
+     * @returns {string} Packed trace column text.
+     */
+    formatTraceColumnsPacked(columns) {
+        return columns
+            .filter(column => Array.isArray(column) && column[0] !== '_____')
+            .map(([name, value]) => `${name}=${this.formatTraceValue(value)}`)
+            .join(', ');
+    }
+
+    /**
+     * Formats fragment trace columns as fixed-width trace output.
+     *
+     * @param {Array<Array>} columns The trace columns to format.
+     * @returns {string} Fixed-width trace column text.
+     */
+    formatTraceColumnsFixed(columns) {
+        return columns
+            .filter(column => Array.isArray(column))
+            .map(([name, value, width]) => `[${name} = ${this.formatTraceColumn(value+']', width)}`)
+            .join(', ');
+    }
+
+    /**
+     * Formats one fragment trace value as packed single-line text.
      *
      * @param {*} value The value to format.
-     * @param {number} width The maximum visible column width.
-     * @returns {string} Padded or truncated column text.
+     * @returns {string} Single-line trace text.
      */
-    formatTraceColumn(value, width) {
+    formatTraceValue(value) {
         let text;
 
         if (value === null || value === undefined) {
@@ -357,7 +408,20 @@ class Parser {
             text = String(value);
         }
 
-        text = text.replace(/\s+/g, ' ');
+        return text.replace(/\s+/g, ' ');
+    }
+
+    /**
+     * Formats one fragment trace value as a fixed-width single-line column.
+     *
+     * @param {*} value The value to format.
+     * @param {number} width The maximum visible column width.
+     * @returns {string} Padded or truncated column text.
+     */
+    formatTraceColumn(value, width) {
+        let text;
+
+        text = this.formatTraceValue(value);
         if (text.length > width) {
             text = text.slice(0, Math.max(0, width - 1)) + '…';
         }
@@ -406,7 +470,8 @@ class Parser {
         //#endregion
         // ─────────────────────────────────────────────────────────────────────────────────
         // Process remaining file (or whole file)
-        let fragmentStep = 0;
+        let fragmentInfo;
+        let fragmentCount = 0;
         let keywordData;
         let parsed;
         let canReplaceFragmentParent;
@@ -414,24 +479,31 @@ class Parser {
         let allowed;
 
         while (!this.atEof()) {
-            fragmentStep++;
-
+            fragmentCount++;
             const statementStart = this.pos;
             const statementErrors = this.errors.length;
             t = this.curr();
 
-            this.fragmentTrace("loop-start", {
-                step: fragmentStep,
+            fragmentInfo = {
+                count: fragmentCount,
+                step: 0,
                 pos: this.pos,
+                keyword: "",
+                // keywordKind,
+                // keywordData,
                 tokenType: t?.type,
                 tokenValue: t?.value,
                 tokenParent: t?.parent ?? null,
                 tokenPosition: t?.start !== undefined ? this.offsetToPos(t.start) : null,
+                ok: fragment.ok,
                 fragmentKind: fragment.kind,
                 fragmentParent: fragment.parent,
                 fragmentStack: [...(fragment.stack ?? [])],
                 errors: this.errors.length
-            });
+
+            };
+            fragmentInfo.step++;
+            this.fragmentTrace("f-start", fragmentInfo);
 
             // ─────────────────────────────────────────────────────────────────────────────────
             // Parse statement
@@ -440,13 +512,7 @@ class Parser {
                 (t.type === TT.MACRO ||
                     (t.type === TT.KEYWORD && t.value.toLowerCase() === 'include'))
             ) {
-                this.fragmentTrace("macro-skip", {
-                    step: fragmentStep,
-                    pos: this.pos,
-                    tokenType: t?.type,
-                    tokenValue: t?.value
-                });
-
+                this.fragmentTrace("macro-skip", fragmentInfo);
                 this.next();
             } else {
                 // KEYWORD
@@ -455,31 +521,18 @@ class Parser {
                     (t.type === TT.KEYWORD || t.type === TT.IDENT)
                 ) ? String(t.value).toLowerCase() : '';
 
-                this.fragmentTrace("keyword", {
-                    step: fragmentStep,
-                    keyword,
-                    tokenType: t?.type,
-                    tokenValue: t?.value,
-                    tokenParent: t?.parent ?? null,
-                    fragmentKind: fragment.kind,
-                    fragmentParent: fragment.parent,
-                    fragmentStack: [...(fragment.stack ?? [])]
-                });
+                fragmentInfo.step++;
+                this.fragmentTrace("keyword", fragmentInfo);
 
                 // NO KEYWORD error
                 if (!keyword) {
-                    this.fragmentTrace("no-keyword-error", {
-                        step: fragmentStep,
-                        tokenType: t?.type,
-                        tokenValue: t?.value,
-                        pos: this.pos
-                    });
+                    this.errorFlag = true;
+                    this.fragmentTrace("no-keyword", fragmentInfo);
 
                     this.error(
                         ini.severity.Error,
                         `server.js:Parser:parseFragment: Expected fragment keyword, got '${t?.value}'`
                     );
-                    this.errorFlag = true;
                     break;
                 }
 
@@ -489,40 +542,36 @@ class Parser {
                     token: t
                 });
 
-                this.fragmentTrace("keyword-data", {
-                    step: fragmentStep,
-                    keyword,
-                    ok: keywordData?.ok ?? false,
-                    kind: keywordData?.kind ?? null,
-                    parent: keywordData?.parent ?? null,
+                // Update trace data
+                fragmentInfo.keyword = keyword;
+                fragmentInfo.keywordKind = keywordData.kind;
+                fragmentInfo.keywordParent = keywordData.parent;
+
+                fragmentInfo.step++;
+                this.fragmentTrace("kw-data", fragmentInfo, {
                     opens: keywordData?.opens ?? null,
                     closes: keywordData?.closes ?? null,
                     allowedParents: keywordData?.allowedParents ?? [],
                     parentHints: keywordData?.parentHints ?? null,
-                    currentFragmentKind: fragment.kind,
-                    currentFragmentParent: fragment.parent,
-                    currentFragmentStack: [...(fragment.stack ?? [])]
                 });
 
                 // Unknown fragment keyword
                 if (!keywordData || !keywordData.ok) {
-                    this.fragmentTrace("unknown-keyword-error", {
-                        step: fragmentStep,
-                        keyword,
-                        tokenParent: t?.parent ?? null,
-                        keywordData
-                    });
+                    this.errorFlag = true;
+                    this.fragmentTrace("kw-unknown", fragmentInfo, {
+                            keywordData,
+                        });
 
                     this.error(
                         ini.severity.Error,
                         `server.js:Parser:parseFragment: Unknown fragment keyword '${keyword}' parent '${t.parent}'`
                     );
-                    this.errorFlag = true;
                     break;
                 }
 
                 // ─────────────────────────────────────────────────────────────────────────────────
                 // Determine script category. Based on first statement
+                fragmentInfo.step++;
                 canReplaceFragmentParent =
                     !fragment.parent ||
                     fragment.parent === 'any' ||
@@ -532,134 +581,97 @@ class Parser {
                         keywordData.parent !== 'any'
                     );
 
-                this.fragmentTrace("parent-decision", {
-                    step: fragmentStep,
-                    keyword,
-                    canReplaceFragmentParent,
-                    oldFragmentKind: fragment.kind,
-                    oldFragmentParent: fragment.parent,
-                    keywordKind: keywordData.kind,
-                    keywordParent: keywordData.parent
-                });
+                this.fragmentTrace("what-kind", fragmentInfo, {
+                        canReplaceFragmentParent,
+                    });
 
                 if (canReplaceFragmentParent) {
                     fragment.kind = keywordData.kind;
                     fragment.parent = keywordData.parent;
                     fragment.parentHints = keywordData.parentHints || null;
 
-                    this.fragmentTrace("parent-established", {
-                        step: fragmentStep,
-                        keyword,
-                        fragmentKind: fragment.kind,
-                        fragmentParent: fragment.parent,
-                        fragmentParentHints: fragment.parentHints
-                    });
+                    this.fragmentTrace("set-kind", fragmentInfo, {
+                            fragmentParentHints: fragment.parentHints,
+                        });
                 }
 
                 // ─────────────────────────────────────────────────────────────────────────────────
                 // Later statements must be legal in the established fragment context.
                 allowed = this.fragmentAllows(keywordData, fragment);
-
-                this.fragmentTrace("fragment-allows", {
-                    step: fragmentStep,
-                    keyword,
-                    allowed,
-                    keywordKind: keywordData.kind,
-                    keywordParent: keywordData.parent,
-                    allowedParents: keywordData.allowedParents ?? [],
-                    fragmentKind: fragment.kind,
-                    fragmentParent: fragment.parent,
-                    fragmentStack: [...(fragment.stack ?? [])]
-                });
+                fragmentInfo.step++;
+                this.fragmentTrace("f-allowed", fragmentInfo, {
+                        allowedParents: keywordData.allowedParents ?? [],
+                    });
 
                 if (!allowed) {
+                    this.errorFlag = true;
                     this.error(
                         ini.severity.Error,
                         `server.js:Parser:parseFragment: '${keyword}' is '${keywordData.kind}' and belongs in '${keywordData.parent}', ` +
                         `but this fragment was established as '${fragment.parent}'`
                     );
-                    this.errorFlag = true;
                     break;
                 }
 
                 // ─────────────────────────────────────────────────────────────────────────────────
                 // Now actually parse the statement using the real parser.
                 parsed = this.parseFragmentStatementByKind(keywordData);
+                fragmentInfo.step++;
+                this.fragmentTrace("parse-by-kind", fragmentInfo, {
+                        startPos: statementStart,
+                        endPos: this.pos,
+                        consumedTokens: this.pos - statementStart,
+                        errorsBefore: statementErrors,
+                        errorsAfter: this.errors.length,
 
-                this.fragmentTrace("parse-by-kind", {
-                    step: fragmentStep,
-                    keyword,
-                    parsed,
-                    keywordKind: keywordData.kind,
-                    startPos: statementStart,
-                    endPos: this.pos,
-                    consumedTokens: this.pos - statementStart,
-                    errorsBefore: statementErrors,
-                    errorsAfter: this.errors.length
-                });
+                    });
 
                 if (!parsed) {
+                    this.errorFlag = true;
                     this.pos = statementStart;
                     this.errors.length = statementErrors;
 
-                    this.fragmentTrace("parse-by-kind-error", {
-                        step: fragmentStep,
-                        keyword,
-                        restoredPos: this.pos,
-                        restoredErrors: this.errors.length
-                    });
+                    this.fragmentTrace("parse--error", fragmentInfo, {
+                            restoredPos: this.pos,
+                            restoredErrors: this.errors.length,
+                        });
 
                     this.error(
                         ini.severity.Error,
                         `server.js:Parser:parseFragment: Failed parsing fragment statement '${keyword}' as '${keywordData.kind}'`
                     );
-                    this.errorFlag = true;
                     break;
                 }
 
                 // Safety guard: parser must consume something.
                 if (this.pos === statementStart) {
-                    this.fragmentTrace("no-progress-error", {
-                        step: fragmentStep,
-                        keyword,
-                        pos: this.pos
-                    });
-
+                    this.errorFlag = true;
+                    this.fragmentTrace("no-progress", fragmentInfo);
                     this.error(
                         ini.severity.Error,
                         `server.js:Parser:parseFragment: Parser made no progress at '${keyword}'`
                     );
-                    this.errorFlag = true;
                     break;
                 }
 
                 if (!this.errorFlag) {
                     this.updateFragmentStack(keywordData, fragment);
 
-                    this.fragmentTrace("stack-updated", {
-                        step: fragmentStep,
-                        keyword,
-                        opens: keywordData.opens ?? null,
-                        closes: keywordData.closes ?? null,
-                        fragmentKind: fragment.kind,
-                        fragmentParent: fragment.parent,
-                        fragmentStack: [...(fragment.stack ?? [])],
-                        pos: this.pos
-                    });
+                    this.fragmentTrace("update-stack", fragmentInfo, {
+                            opens: keywordData.opens ?? null,
+                            closes: keywordData.closes ?? null,
+                        }
+                    );
                 }
             }
         }
 
-        this.fragmentTrace("loop-end", {
-            atEof: this.atEof(),
-            pos: this.pos,
-            errorFlag: this.errorFlag,
-            errors: this.errors.length,
-            fragmentKind: fragment.kind,
-            fragmentParent: fragment.parent,
-            fragmentParentHints: fragment.parentHints ?? null,
-            fragmentStack: [...(fragment.stack ?? [])]
-        });
+        fragmentInfo.step++;
+        this.fragmentTrace("loop-end", fragmentInfo, {
+                atEof: this.atEof(),
+                errorFlag: this.errorFlag,
+            }
+        );
         this.hintFragmentParent(fragment);
         if (this.atEof() && !this.errorFlag) { return true; } else { return false; }
     }
@@ -796,6 +808,13 @@ class Parser {
             case 'excludefiles':
                 return this.backwardExcludeFiles(ctx);
             //#endregion
+            //#region Volume action statements
+            case 'makegap':
+                return this.backwardVolumeAction(ctx);
+
+            case 'setfilecolor':
+                return this.backwardSetFileColor(ctx);
+            //#endregion
             //#region  File action statements
             case 'sortbyname':
             case 'sortbyextension':
@@ -806,6 +825,7 @@ class Parser {
             case 'sortbyimportancetofile':
             case 'sortbyimportancetovolume':
             case 'sortbyfragmentation':
+            case 'sortbyimportsequence':
             case 'sortbylcn':
                 return this.backwardFileSortAction(ctx);
 
@@ -822,7 +842,6 @@ class Parser {
             case 'fastfill':
             case 'forcedfill':
             case 'vacate':
-            case 'makegap':
             case 'addgap':
                 return this.backwardFileAction(ctx);
 
@@ -998,6 +1017,20 @@ class Parser {
     }
 
     backwardSetting(ctx) {
+        const keyword = String(ctx.token?.value || '').toLowerCase();
+
+        if (keyword === 'setstatisticswindowtext') {
+            return {
+                ok: true,
+                keyword,
+                kind: 'settingInline',
+                parent: 'any',
+                opens: null,
+                closes: null,
+                allowedParents: ['script', 'volumeactions', 'fileactions', 'any']
+            };
+        }
+
         return this.backwardScriptStatement(ctx, 'settingInline');
     }
 
@@ -1079,6 +1112,64 @@ class Parser {
         };
     }
 
+    /**
+     * Classifies SetFileColor fragments by the command argument shape.
+     *
+     * Outside VolumeSelect:
+     * SetFileColor(FILESTATE, NUMBER, NUMBER, NUMBER)
+     *
+     * Inside VolumeSelect:
+     * SetFileColor(FILEBOOLEAN, FILESTATE, NUMBER, NUMBER, NUMBER)
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardSetFileColor(ctx) {
+        const keyword = String(ctx.token?.value || '').toLowerCase();
+        const isVolumeAction = !this.isSetFileColorSettingForm();
+
+        return {
+            ok: true,
+            keyword,
+            kind: isVolumeAction ? 'volume_action' : 'settingInline',
+            parent: isVolumeAction ? 'volumeactions' : 'script',
+            opens: null,
+            closes: null,
+            allowedParents: isVolumeAction ? ['volumeactions'] : ['script']
+        };
+    }
+
+    /**
+     * Detects whether SetFileColor uses the outside-VolumeSelect setting form.
+     *
+     * @returns {boolean} True when the first top-level comma is followed by a number.
+     */
+    isSetFileColorSettingForm() {
+        let depth = 0;
+
+        for (let i = this.pos; i < this.tokens.length; i++) {
+            const token = this.tokens[i];
+            if (!token || token.type === TT.EOF) return false;
+
+            if (token.type === TT.LPAREN) {
+                depth++;
+                continue;
+            }
+
+            if (token.type === TT.RPAREN) {
+                depth--;
+                if (depth <= 0) return false;
+                continue;
+            }
+
+            if (depth === 1 && token.type === TT.COMMA) {
+                return this.tokens[i + 1]?.type === TT.NUMBER;
+            }
+        }
+
+        return false;
+    }
+
     backwardExcludeVolumes(ctx) {
         return {
             ok: true,
@@ -1130,6 +1221,24 @@ class Parser {
             opens: null,
             closes: null,
             allowedParents: ['fileactions', 'fileselect']
+        };
+    }
+
+    /**
+     * Classifies fragments that start inside VolumeActions(...).
+     *
+     * @param {object} ctx Fragment parsing context.
+     * @returns {object} Fragment classification metadata.
+     */
+    backwardVolumeAction(ctx) {
+        return {
+            ok: true,
+            keyword: String(ctx.token?.value || '').toLowerCase(),
+            kind: 'volume_action',
+            parent: 'volumeactions',
+            opens: null,
+            closes: null,
+            allowedParents: ['volumeactions']
         };
     }
 
@@ -1356,6 +1465,9 @@ class Parser {
         // First statement is always allowed to establish the fragment.
         if (!fragment.parent) return true;
 
+        // Statements explicitly marked any are legal in established fragments.
+        if (keywordData.parent === 'any') return true;
+
         // Exact parent match.
         if (keywordData.parent === fragment.parent) return true;
 
@@ -1392,15 +1504,18 @@ class Parser {
             case 'write':
             case 'message':
             case 'settingInline':
+                return this.parseStatement();
 
             case 'volumeselect':
             case 'volumeactions':
             case 'volumeend':
-            case 'excludevolumes':
 
             case 'fileselect':
             case 'fileactions':
             case 'fileend':
+                return this.parseCompoundStructureFragment(keywordData);
+
+            case 'excludevolumes':
             case 'excludefiles':
 
             case 'fastboot':
@@ -1448,6 +1563,26 @@ class Parser {
                 return this.parseStatement();
         }
     }
+
+    /**
+     * Parses an orphaned compound structure marker in fragment mode.
+     *
+     * @param {object} keywordData Fragment keyword metadata.
+     * @returns {boolean} True when the structure marker was consumed.
+     */
+    parseCompoundStructureFragment(keywordData) {
+        const t = this.curr();
+
+        if (!this.parseSingleTokenFragment()) return false;
+
+        this.warning(
+            ini.severity.Warning,
+            `SCRIPT_FRAGMENT: orphaned compound structure '${keywordData.keyword || t?.value}' may be incomplete`,
+            t
+        );
+
+        return true;
+    }
     // ─────────────────────────────────────────────────────────────────────────────────
     updateFragmentStack(keywordData, fragment) {
         if (!keywordData || !fragment) return;
@@ -1472,6 +1607,8 @@ class Parser {
     // ─────────────────────────────────────────────────────────────────────────────────
     //#region Volume and FIle Booleans .Parse ───────────────────────────────────────────────────────
     parseVolumeBooleans() {
+        if (this.atEof()) return;
+
         this.parseVolumeBoolean();
         while (!this.atEof() && !this.isKw('VolumeActions') && !this.isKw('VolumeEnd')) {
             if (this.isAnyKw('or', 'and') ||
@@ -1485,6 +1622,8 @@ class Parser {
         }
     }
     parseVolumeBoolean() {
+        if (this.atEof()) return;
+
         let t = this.curr();
         // Parentheses
         if (t.type === TT.LPAREN) {
@@ -1797,11 +1936,17 @@ class Parser {
                 return true;
             case 'sortbyname': case 'sortbysize': case 'sortbylastaccess':
             case 'sortbylastchange': case 'sortbycreationdate':
-            case 'sortbynewestdate': case 'sortbyimportsequence':
+            case 'sortbynewestdate':
                 this.next();
                 this.expect(TT.LPAREN, '(');
                 this.parseAscDesc();
                 this.parseSortByOption();
+                this.expect(TT.RPAREN, ')');
+                return true;
+            case 'sortbyimportsequence':
+                this.next();
+                this.expect(TT.LPAREN, '(');
+                this.parseSortByImportSequenceOptions();
                 this.expect(TT.RPAREN, ')');
                 return true;
             case 'placentfssystemfiles':
@@ -1858,6 +2003,15 @@ class Parser {
             this.parseNumber();
             this.expect(TT.RPAREN, ')');
         }
+    }
+    /**
+     * Parses SortByImportSequence options.
+     *
+     * MyDefrag accepts Ascending or Descending followed by an optional SkipBlock.
+     */
+    parseSortByImportSequenceOptions() {
+        this.parseAscDesc();
+        this.parseSortByOption();
     }
     //#endregion
     // ─────────────────────────────────────────────────────────────────────────────────

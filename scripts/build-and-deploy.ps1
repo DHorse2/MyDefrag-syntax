@@ -15,7 +15,7 @@ Path or filename to write the created .vsix. If empty, the script derives a name
 (publisher/name-version-Configuration.vsix).
 
 .PARAMETER ExtensionFolderName
-Explicit extension folder name to use when installing (e.g., 'local.mydefrag-syntax-0.2.0').
+Explicit extension folder name to use when installing (e.g., 'local.mydefrag-syntax-0.4.0').
 If not provided, the script computes publisher.name-version from package.json.
 
 .PARAMETER SkipInstall
@@ -24,6 +24,8 @@ install or extract the VSIX into a local editor extensions folder.
 
 .EXAMPLE
 .\scripts\build-and-deploy.ps1 -Configuration Debug -VsixOut .\artifacts\myext.vsix -SkipInstall
+.\scripts\build-and-deploy.ps1 -Configuration Debug -VsixOut .\artifacts\mydefrag-syntax-0.4.0-Release.vsix
+.\scripts\build-and-deploy.ps1 -Configuration Debug -VsixOut .\artifacts\mydefrag-syntax-0.4.0-Release.vsix -SkipInstall
 
 Build a debug VSIX and place it in artifacts, but do not install locally.
 
@@ -140,19 +142,17 @@ try {
     $vsceCmd = Resolve-Path 'node_modules\.bin\vsce.cmd' -ErrorAction SilentlyContinue
     if ($vsceCmd) {
         $exe = $vsceCmd.Path
-        $args = @('package', '--out', $VsixOut)
+        $exeArgs = @('package', '--out', $VsixOut)
     } else {
         # fallback to running the script with node (rare)
         $node = (Get-Command node -ErrorAction Stop).Source
-        $vsceScript = Resolve-Path 'node_modules\.bin\vsce'  # this is a shell script; don't pass to node
+        $vsceScript = Resolve-Path 'node_modules\.bin\vsce'  # this is a shell script; donC:\Users\david\.vscode-oss\extensions't pass to node
         $exe = $node
-        $args = @($vsceScript.Path, 'package', '--out', $VsixOut)
+        $exeArgs = @($vsceScript.Path, 'package', '--out', $VsixOut)
     }
-    $proc = Start-Process -FilePath $exe -ArgumentList $args -NoNewWindow -PassThru -Wait
-    if ($proc.ExitCode -ne 0) { Throw "vsce package failed (exit $($proc.ExitCode))." }
 
     # Start and wait, capture exit code
-    $proc = Start-Process -FilePath $exe -ArgumentList $args -NoNewWindow -PassThru -Wait
+    $proc = Start-Process -FilePath $exe -ArgumentList $exeArgs -NoNewWindow -PassThru -Wait
     if ($null -eq $proc) {
         Throw "build-and-deploy: Failed to start process for packaging VSIX."
     }

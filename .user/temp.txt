@@ -22,9 +22,66 @@ ovsx
 git
 
 
+=============================================
+
 Unexpected token '!include "..\Settings\SettingsAutomaticRun.MyDc"!' — fragment may be incomplete
 
 server.js:Parser:parseFragment: Failed parsing fragment statement 'makegap' as 'file_action'
 
 codium --install-extension artifacts\mydefrag-syntax-0.2.0-Debug.vsix --force
+
+$extractDir = Join-Path $localDir "extracted"
+
+Expand-Archive -LiteralPath $localZip -DestinationPath $extractDir -Force
+
+Start-MpScan -ScanType CustomScan -ScanPath $extractDir
+
+Get-MpThreatDetection |
+    Sort-Object InitialDetectionTime -Descending |
+    Select-Object -First 10 InitialDetectionTime, ThreatName, Resources, ActionSuccess
+
+=============================================
+
+Get-ChildItem -LiteralPath $extractDir -Recurse -File |
+    Where-Object {
+        $_.Extension -in ".exe",".dll",".bat",".cmd",".ps1",".vbs",".js",".msi",".scr",".com"
+    } |
+    Select-Object FullName, Length, LastWriteTime
+
+Get-Content "$env:TEMP\MpCmdRun.log" -Tail 80
+
+=============================================
+
+*.md, *.html, *.csproj, *.Log
+
+=============================================
+
+const logDir = path.join(context.globalStorageUri.fsPath, "log");
+Then writes:
+client.log
+server.log
+parser.log
+
+C:\Users\david\AppData\Roaming\VSCodium\User\globalStorage\macrodm.mydefrag-syntax\log
+
+For VS Code instead of VSCodium, the equivalent would usually be:
+C:\Users\david\AppData\Roaming\Code\User\globalStorage\macrodm.mydefrag-syntax\log
+
+=============================================
+ollama launch codex
+ollama launch codex-app
+codex --version
+ollama launch codex-app --config
+npm install -g @openai/codex
+ollama launch opencode
+
+ollama --version
+ollama list
+ollama ps
+ollama run qwen3-coder:latest
+ollama run qwen2.5-coder:14b
+ollama run qwen3-coder:30b
+
+/bye
+
 

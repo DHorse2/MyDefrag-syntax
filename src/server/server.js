@@ -165,7 +165,11 @@ let excludeConfig = {
 };
 let workspaceFolders = [];
 let workspaceFolderPaths = [];
-let logPaths = {};
+const paths = require('../shared/path');
+paths.ensureDirectories();
+// let logPaths = {};
+const MYDFRG_EXTENSIONS = new Set(['.mydc', '.myd']);
+const currentDiagnosticsByUri = new Map();
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
 //#region Events for server - connection, documents
@@ -203,7 +207,8 @@ connection.onInitialize(async (params) => {
                 fileExcludes: {},
                 searchExcludes: {}
             };
-            logPaths = params.initializationOptions.logPaths || {};
+            // logPaths = params.initializationOptions.logPaths || {};
+            // logPaths = paths || {};
             // config = ini.initialize(source, INI_PATH, channelName, isServer, true, ini.severity.Verbose);
             applyMyDefragConfig(params.initializationOptions.config || buildMyDefragConfig());
             // console?.error(
@@ -247,12 +252,12 @@ connection.onInitialize(async (params) => {
             // logger.initialize(source, connection, isServer, diagnostics, iniData, config, isDebugOn, verboseLevel)
             logger = Logger.createLogger(channelName, source, config, {
                 connection,
-                filePath: logPaths.server,
+                filePath: paths.server,
                 isServer: true
             });
             parserLogger = Logger.createLogger('MyDefrag Parser', 'Parser', config, {
                 connection,
-                filePath: logPaths.parser,
+                filePath: paths.parser,
                 isServer: true
             });
             configureTokenizer({ logger: parserLogger });
@@ -288,12 +293,12 @@ connection.onDidChangeConfiguration(change => {
     applyMyDefragConfig(buildMyDefragConfig(change.settings?.mydfrg || {}));
     logger = Logger.createLogger(channelName, source, config, {
         connection,
-        filePath: logPaths.server,
+        filePath: paths.server,
         isServer: true
     });
     parserLogger = Logger.createLogger('MyDefrag Parser', 'Parser', config, {
         connection,
-        filePath: logPaths.parser,
+        filePath: paths.parser,
         isServer: true
     });
     configureTokenizer({ logger: parserLogger });
@@ -334,11 +339,83 @@ documents.onDidSave(change => {
     console?.log('server.js:onDidSave MyDefrag server document saved');
     validateDocument(change.document);
 });
+
+documents.onDidClose(change => {
+    console?.log('server.js:onDidClose MyDefrag server document closed');
+    currentDiagnosticsByUri.set(change.document.uri, []);
+    writeDiagnosticsSnapshot('close', change.document.uri, parserState);
+    connection.sendDiagnostics({
+        uri: change.document.uri,
+        diagnostics: []
+    });
+});
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
 //#region VALIDATE DOCUMENT .Parse ───────────────────────────────────────────────────────────
 // ─────────────────────────────────────────────────────────────────────────────────
 let currFilePath = "";
+
+/**
+ * Returns the compact diagnostics snapshot path.
+ *
+ * @returns {string}
+ */
+function getDiagnosticsSnapshotPath() {
+    return paths.diagnosticsLatestFile;
+}
+/**
+ * Converts parser state constants into stable snapshot labels.
+ *
+ * @param {number} state The parser state value.
+ * @returns {string} The parser state label.
+ */
+function formatParserState(state) {
+    switch (state) {
+        case parseStates.SCRIPT_FULL:
+            return 'SCRIPT_FULL';
+        case parseStates.SCRIPT_FRAGMENT:
+            return 'SCRIPT_FRAGMENT';
+        case parseStates.SCRIPT_UNKNOWN:
+            return 'SCRIPT_UNKNOWN';
+        default:
+            return String(state ?? 'unknown');
+    }
+}
+
+/**
+ * Writes the current diagnostics map to a compact JSON snapshot.
+ *
+ * @param {string} event The lifecycle event that refreshed the snapshot.
+ * @param {string} uri The URI that changed.
+ * @param {number} state The parser state for the changed URI.
+ */
+function writeDiagnosticsSnapshot(event, uri, state) {
+    const snapshotPath = getDiagnosticsSnapshotPath();
+    if (!snapshotPath) return;
+
+    const diagnosticsByUri = {};
+    for (const [diagnosticUri, uriDiagnostics] of [...currentDiagnosticsByUri.entries()].sort()) {
+        diagnosticsByUri[diagnosticUri] = {
+            count: uriDiagnostics.length,
+            diagnostics: uriDiagnostics
+        };
+    }
+
+    const snapshot = {
+        generatedAt: new Date().toISOString(),
+        event,
+        uri,
+        parserState: formatParserState(state),
+        diagnosticsByUri
+    };
+
+    try {
+        fs.writeFileSync(snapshotPath, JSON.stringify(snapshot, null, 2), 'utf8');
+    } catch (errResult) {
+        logger?.warn?.(`writeDiagnosticsSnapshot: Unable to write ${snapshotPath}: ${errResult.message}`);
+    }
+}
+
 async function validateDocument(document) {
     let parser;
     let fragParser;
@@ -389,13 +466,13 @@ async function validateDocument(document) {
         // warnings are issued.
         // ToDo extend functionality to add "quick fix"
         // ToDo Add code snippets for structural code. IE Volume & FileSelect groups.
-        logger.dbg(5, `validateDocument: Step 1 - Parse Document`);
+        logger.dbg(5, `validateDocument: Parsing Document`);
 
         if (parserState !== parseStates.SCRIPT_FRAGMENT) {
             // Check for full document errors
             parser = new Parser(tokens, text, parserState);
-            logger.dbg(5, `validateDocument: Step 1 Parsing`);
-            logger.dbg(5, "validateDocument: Full Document FIRST TOKEN:", parser.curr(), "=", parser.curr().value);
+            logger.dbg(5, `validateDocument: Full Document: Parsing`);
+            logger.dbg(5, "validateDocument: Full Document: First token:", parser.curr());
 
             // ─────────────────────────────────────────────────────────────────────────────────
             parser.parseStatements();
@@ -404,8 +481,8 @@ async function validateDocument(document) {
                 parserState = parseStates.SCRIPT_FULL;
                 parser.state = parseStates.SCRIPT_FULL;
             }
-            logger.dbg(5, `validateDocument: Full Document Parse Statements ${parser.errors.length}`);
-            logger.dbg(5, "validateDocument: AFTER PARSE:", parser.curr(), "=", parser.curr().value);
+            logger.dbg(5, `validateDocument: Full Document: Parse Statements ${parser.errors.length}`);
+            logger.dbg(5, "validateDocument: Full Document: After parse:", parser.curr());
             bestParser = parser;
 
         } else {
@@ -414,23 +491,23 @@ async function validateDocument(document) {
         // ─────────────────────────────────────────────────────────────────────────────────
         // If full-script parse failed, try fragment mode
         logger.dbg(5, `Parser Eof: ${bestParser.atEof()} Errors: ${bestParser.errors.length}`);
-        logger.dbg(5, `validateDocument: Step 2 - Parse Fragments`);
+        logger.dbg(5, `validateDocument: Parse Document Fragment`);
         // Errors present. Check if this is a valid fragment
         if (!bestParser.atEof() || bestParser.errors.length > 0) {
             // if any errors were found or processing paused
             parserState = parseStates.SCRIPT_FRAGMENT;
             fragParser = new Parser(tokens, text, parserState);
-            logger.dbg(5, `validateDocument: Step 2 - Parsing`);
-            logger.dbg(5, "validateDocument: Document Fragment FIRST TOKEN:", fragParser.curr(), "=", fragParser.curr().value);
+            logger.dbg(5, `validateDocument: Document Fragment: Parsing`);
+            logger.dbg(5, "validateDocument: Document Fragment: First token:", fragParser.curr(), "=", fragParser.curr().value);
 
             // ─────────────────────────────────────────────────────────────────────────────────
             // Choose the parser with fewer errors
             fragParserResult = fragParser.parseFragment();
             t = fragParser.curr();
-            logger.dbg(5, `validateDocument: Document Fragment Parse Statements. Success: ${fragParserResult} Errors: ${fragParser.errors.length}`);
-            logger.dbg(5, "validateDocument: AFTER PARSE:", fragParser.curr(), "=", fragParser.curr().value);
+            logger.dbg(5, `validateDocument: Document Fragment: Parse Statements. Success: ${fragParserResult} Errors: ${fragParser.errors.length}`);
+            logger.dbg(5, "validateDocument: Document Fragment: After parse:", fragParser.curr(), "=", fragParser.curr().value);
             // Comparison
-            logger.dbg(5, `validateDocument: Step Comparison. Errors, Frag: ${fragParser.errors.length}, Full: ${bestParser.errors.length} `);
+            logger.dbg(5, `validateDocument: Document Fragment: Step Comparison. Errors, Frag: ${fragParser.errors.length}, Full: ${bestParser.errors.length} `);
             if (
                 initialParserState !== parseStates.SCRIPT_FULL ||
                 fragParser.errors.length < bestParser.errors.length ||
@@ -443,7 +520,7 @@ async function validateDocument(document) {
         }
         // ─────────────────────────────────────────────────────────────────────────────────
         logger.dbg(5, `validateDocument: Parser Eof: ${bestParser.atEof()} Errors: ${bestParser.errors.length}`);
-        logger.dbg(5, `validateDocument: Step 3 Orphaned tokens`);
+        logger.dbg(5, `validateDocument: Check for orphaned tokens`);
         parser = bestParser;
         parserState = bestParser.state;
         // Report any remaining tokens as unexpected.
@@ -501,43 +578,79 @@ async function validateDocument(document) {
             source: 'MyDefrag',
         });
     }    //ParserState Send Notification to extension.js
+    currentDiagnosticsByUri.set(document.uri, diagnostics);
+    writeDiagnosticsSnapshot('validate', document.uri, parserState);
     connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
 
     connection.sendDiagnostics({
         uri: document.uri,
         diagnostics
     });
+    logger.dbg(5, `validateDocument: Parsing completed`);
 }
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
 //#region Functions
 // Scan All Files
+/**
+ * Checks whether a file name is a MyDefrag script file.
+ *
+ * @param {string} fileName The file name to check.
+ * @returns {boolean} True when the file extension is supported by this server.
+ */
+function isMyDefragScriptFile(fileName) {
+    return MYDFRG_EXTENSIONS.has(path.extname(fileName).toLowerCase());
+}
+
+/**
+ * Recursively scans a workspace folder for MyDefrag files, skipping excluded
+ * directories before descending and excluded files before reading content.
+ *
+ * @param {string} folderUri The folder URI to scan.
+ */
 async function scanAllFiles(folderUri) {
     const folderPath = fileURLToPath(folderUri);
-    const entries = fs.readdirSync(folderPath, { withFileTypes: true });
-    const MYDFRG_EXTENSIONS = ['.MyDc', '.mydc', '.MYDC', '.MyD', '.myd', '.MYD'];
+    const normalizedFolderUri = folderUri.endsWith('/') ? folderUri : `${folderUri}/`;
+    const relFolderPath = util.getRelativePath(normalizedFolderUri, workspaceFolderPaths);
+
+    if (util.isExcluded(relFolderPath, excludeConfig, logger)) {
+        logger.dbg(6, `scanAllFiles: Skipping excluded folder ${relFolderPath}`);
+        return;
+    }
+
+    let entries;
+    try {
+        entries = fs.readdirSync(folderPath, { withFileTypes: true });
+    } catch (errResult) {
+        logger?.warn?.(`scanAllFiles: Unable to read folder ${folderPath}: ${errResult.message}`);
+        return;
+    }
 
     for (const entry of entries) {
         const fullPath = path.join(folderPath, entry.name);
+        const uri = pathToFileURL(fullPath).toString();
+        const relPath = util.getRelativePath(uri, workspaceFolderPaths);
 
         if (entry.isDirectory()) {
             // directory
-            await scanAllFiles(pathToFileURL(fullPath).toString());
+            if (util.isExcluded(`${relPath}/`, excludeConfig, logger)) {
+                logger.dbg(6, `scanAllFiles: Skipping excluded folder ${relPath}`);
+                continue;
+            }
+            await scanAllFiles(`${uri}/`);
 
-        } else if (entry.isFile() && MYDFRG_EXTENSIONS.some(ext => entry.name.endsWith(ext))) {
+        } else if (entry.isFile() && isMyDefragScriptFile(entry.name)) {
             // file
-            const uri = pathToFileURL(fullPath).toString();
-            const relPath = util.getRelativePath(uri, workspaceFolders);
+            if (util.isExcluded(relPath, excludeConfig, logger)) {
+                // clear diagnostics for this file
+                // diagnosticCollection.set(document.uri, []);
+                continue;
+            }
             // Skip if already open — documents.get() handles those
             if (!documents.get(uri)) {
                 const content = fs.readFileSync(fullPath, 'utf8');
                 const document = TextDocument.create(uri, 'mydfrg', 1, content);
-                if (!util.isExcluded(relPath, excludeConfig, logger)) {
-                    await validateDocument(document);
-                } else {
-                    // clear diagnostics for this file
-                    // diagnosticCollection.set(document.uri, []);
-                }
+                await validateDocument(document);
             }
         }
     }
@@ -570,28 +683,19 @@ connection.onInitialized(() => {
 });
 
 // Change File Watcher
-connection.onDidChangeWatchedFiles(() => {
-    // Re-validate all open documents when files change:
-    // documents.all().forEach(validateDocument);
-    // Validate all files:
+connection.onDidChangeWatchedFiles(async () => {
     console?.log('server.js:onDidChangeWatchedFiles: MyDefrag server document watched On Did Change');
-    // Validate open documents
+
     documents.all().forEach(validateDocument);
-    // Validate all files in workspace. Was await
-    const folders = connection.workspace.getWorkspaceFolders();
-    if (folders) {
-        for (const folder of folders) {
-            // await 
-            scanAllFiles(folder.uri);
+
+    try {
+        const folders = await connection.workspace.getWorkspaceFolders();
+        for (const folder of folders || []) {
+            await scanAllFiles(folder.uri);
         }
+    } catch (errResult) {
+        logger?.err?.(errResult, 'server.js:onDidChangeWatchedFiles: Failed to rescan workspace folders');
     }
-    // Design note:
-    // Many people never use the LSP watcher mechanism and instead use:
-    // const watcher = vscode.workspace.createFileSystemWatcher('**/*.MyDc');
-    // watcher.onDidCreate(...);
-    // watcher.onDidChange(...);
-    // watcher.onDidDelete(...);
-    // This is often simpler and more reliable.    
 });
 //#endregion
 // Client Open Document and Connection .Parse ──────────────────────────────────────────────────────────────

@@ -1,0 +1,38 @@
+{
+  "components": [
+    "diagnosticExplorer",
+    "docs",
+    "extension",
+    "parser",
+    "preview",
+    "server",
+    "tooling",
+    "translator"
+  ],
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locales": [
+    "en",
+    "zh-Hans",
+    "sw",
+    "am",
+    "ha",
+    "yo",
+    "ig",
+    "zu",
+    "xh",
+    "af",
+    "ar",
+    "fr",
+    "pt"
+  ],
+  "outputs": {
+    "catalogs": "build\\language\\catalogs",
+    "keywordMaps": "build\\language\\keyword-maps",
+    "reports": "build\\language\\reports",
+    "variableMaps": "build\\language\\variable-maps"
+  },
+  "validation": {
+    "errors": [],
+    "warnings": []
+  }
+}

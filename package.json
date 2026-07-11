@@ -18,38 +18,15 @@
         "configuration": {
             "title": "MyDefrag",
             "properties": {
-                "mydfrg.exclude": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "default": [
-                        "**/Backup/**",
-                        "**/Bu/**",
-                        "**/MdmSysTools/**",
-                        "**/Archive/**",
-                        "**/*.tmp.MyDc",
-                        "**/Compile*",
-                        "**/*.log",
-                        "**/TaylorDoVs0_2/**",
-                        "**/TaylorDoVs0_3/**",
-                        "**/TaylorDoVs0_4/**",
-                        "**/Log/**",
-                        "**/Logs/**",
-                        "**/artifacts/**",
-                        "**/.user/**",
-                        "**/node_modules/**",
-                        "**/artifacts/**",
-                        "**/resources/",
-                        "**/dist/**",
-                        "**/.git/**",
-                        "**/.user/**",
-                        "**/.vs/**",
-                        "**/.vscode/**",
-                        "**/Download/**",
-                        "**/GithubIo/**"
-                    ],
-                    "description": "Glob patterns to exclude from MyDefrag validation"
+                "mydfrg.userDir": {
+                    "type": "string",
+                    "default": ".user",
+                    "description": "Directory for MyDefrag user data."
+                },
+                "mydfrg.logDir": {
+                    "type": "string",
+                    "default": ".user/logs",
+                    "description": "Directory for MyDefrag log files."
                 },
                 "mydfrg.debugOn": {
                     "type": "boolean",
@@ -162,6 +139,39 @@
                         "Hint"
                     ],
                     "description": "Diagnostic severity for inferred fragment parent messages."
+                },
+                "mydfrg.exclude": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "**/Backup/**",
+                        "**/Bu/**",
+                        "**/MdmSysTools/**",
+                        "**/Archive/**",
+                        "**/*.tmp.MyDc",
+                        "**/Compile*",
+                        "**/*.log",
+                        "**/TaylorDoVs0_2/**",
+                        "**/TaylorDoVs0_3/**",
+                        "**/TaylorDoVs0_4/**",
+                        "**/Log/**",
+                        "**/Logs/**",
+                        "**/artifacts/**",
+                        "**/.user/**",
+                        "**/node_modules/**",
+                        "**/artifacts/**",
+                        "**/resources/",
+                        "**/dist/**",
+                        "**/.git/**",
+                        "**/.user/**",
+                        "**/.vs/**",
+                        "**/.vscode/**",
+                        "**/Download/**",
+                        "**/GithubIo/**"
+                    ],
+                    "description": "Glob patterns to exclude from MyDefrag validation"
                 }
             }
         },
@@ -248,6 +258,10 @@
             {
                 "command": "mydfrg.diagnostics.reset",
                 "title": "MyDefrag: Reset Diagnostic Navigation"
+            },
+            {
+                "command": "mydfrg.configureFolders",
+                "title": "MyDefrag: Configure Folders"
             }
         ],
         "menus": {
@@ -263,6 +277,12 @@
                     "command": "mydfrg.openPreview",
                     "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
                     "group": "navigation"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "mydfrg.configureFolders",
+                    "when": "true"
                 }
             ]
         },
@@ -287,7 +307,8 @@
         "onLanguage:bat",
         "onCommand:mydfrg.openPreview",
         "onCommand:mdm.openFileAtPosition",
-        "onCommand:mydfrg.openSettings"
+        "onCommand:mydfrg.openSettings",
+        "onCommand:mydfrg.configureFolders"
     ],
     "scripts": {
         "deploy:local": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1",
@@ -296,6 +317,10 @@
         "publish:vsx": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1",
         "clean": "rimraf dist out .vscodeignore",
         "build": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1 -SkipInstall",
+        "language:validate": "node ./scripts/build-language.js validate",
+        "language:build": "node ./scripts/build-language.js build",
+        "language:report": "node ./scripts/build-language.js report",
+        "test:language": "node ./scripts/test-language-runtime.js",
         "prepare": "npm run build",
         "enableNetwwork:local": "powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1",
         "listSymLinks:local": "powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1",

@@ -1,0 +1,26 @@
+{
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "expected",
+        "actual"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Expected {expected} but found {actual}"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "token"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unexpected token '{token}'"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "ar"
+}

@@ -1,3 +1,17 @@
 {
-  "items": {}
+  "items": {
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonedoheader.mydc|12||script_fragment: orphaned compound structure 'fileselect' may be incomplete": "sent",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypedefrag/defragzonetypeblobs.mydc|25||script_fragment: orphaned compound structure 'fileactions' may be incomplete": "ignored",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypedefrag/defragzonetypeosboot.mydc|27||server.js:parser:parsefragment: 'fileactions' is 'fileactions' and belongs in 'file_block', but this fragment was established as 'fileactions'": "ignored",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypedefrag/defragzonetypeosboot.mydc|27||unexpected token 'fileactions' — fragment may be incomplete": "ignored",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypedefrag/defragzonetypeosdir.mydc|18||script_fragment: orphaned compound structure 'fileactions' may be incomplete": "ignored",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypedefrag/defragzonetypeosmft.mydc|22||script_fragment: orphaned compound structure 'fileactions' may be incomplete": "ignored",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypedefrag/defragzonetypeospagehiberdump.mydc|24||script_fragment: orphaned compound structure 'fileactions' may be incomplete": "ignored",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypedefrag/defragzonetypeosprogramhints.mydc|26||server.js:parser:parsefragment: 'fileactions' is 'fileactions' and belongs in 'file_block', but this fragment was established as 'fileactions'": "ignored",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypedefrag/defragzonetypeosprogramhints.mydc|26||unexpected token 'fileactions' — fragment may be incomplete": "ignored",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypedefrag/defragzonetypeosprograms.mydc|30||server.js:parser:parsefragment: 'fileactions' is 'fileactions' and belongs in 'file_block', but this fragment was established as 'fileactions'": "ignored",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypedefrag/defragzonetypeosprograms.mydc|30||unexpected token 'fileactions' — fragment may be incomplete": "ignored",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypeselect/zonetypeselectospagehiberdump.mydc|7||server.js:parser:parsefragment: unknown fragment keyword 'asdfs' parent 'null'": "fixed",
+    "d:/mdmtaylordo/mdmdefrag/taylordovs0_5/src/zone/zonetypeselect/zonetypeselectospagehiberdump.mydc|7||unexpected token 'asdfs' — fragment may be incomplete": "fixed"
+  }
 }

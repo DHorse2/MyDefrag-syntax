@@ -1,0 +1,49 @@
+{
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "MyDefrag: No current diagnostic."
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "index",
+        "total"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "$(warning) MyDefrag {index}/{total}"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "$(check) MyDefrag 0 diagnostics"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "current",
+        "eligible",
+        "all",
+        "remaining",
+        "remainingFiles",
+        "traversableFiles",
+        "totalFiles",
+        "fixed",
+        "ignored",
+        "skipped"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "Diagnostics: {current}/{eligible}/{all} ({remaining} remaining, {remainingFiles}/{traversableFiles}/{totalFiles} files, fixed {fixed}, ignored {ignored}, skipped {skipped})"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "yo"
+}

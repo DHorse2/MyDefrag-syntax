@@ -136,21 +136,21 @@ Test and Validate
 
 Large projects often contain:
 
-* Legacy code
-* Hidden dependencies
-* Build system assumptions
-* Packaging requirements
-* Language server interactions
-* Extension activation logic
-* Tooling-specific constraints
+- Legacy code
+- Hidden dependencies
+- Build system assumptions
+- Packaging requirements
+- Language server interactions
+- Extension activation logic
+- Tooling-specific constraints
 
 Allowing the AI to modify code before it understands the project can lead to unnecessary or incorrect changes.
 
 Performing a structured assessment first produces:
 
-* Better architectural understanding
-* More accurate recommendations
-* Fewer unintended modifications
-* Higher quality implementation plans
+- Better architectural understanding
+- More accurate recommendations
+- Fewer unintended modifications
+- Higher quality implementation plans
 
 This workflow is particularly effective for VS Code extensions, Language Server Protocol (LSP) projects, compiler/parser development, and multi-component development environments.

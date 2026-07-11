@@ -1,0 +1,164 @@
+{
+  "keywords": [
+    {
+      "id": "structure.volumeSelect",
+      "canonical": "VolumeSelect",
+      "category": "structure.volume",
+      "parent": "volume_block",
+      "description": "Begins volume selection conditions.",
+      "status": "approved"
+    },
+    {
+      "id": "structure.volumeActions",
+      "canonical": "VolumeActions",
+      "category": "structure.volume",
+      "parent": "volume_block",
+      "description": "Begins volume actions.",
+      "status": "approved"
+    },
+    {
+      "id": "structure.volumeEnd",
+      "canonical": "VolumeEnd",
+      "category": "structure.volume",
+      "parent": "volume_block",
+      "description": "Ends a volume block.",
+      "status": "approved"
+    },
+    {
+      "id": "structure.fileSelect",
+      "canonical": "FileSelect",
+      "category": "structure.file",
+      "parent": "file_block",
+      "description": "Begins file selection conditions.",
+      "status": "approved"
+    },
+    {
+      "id": "structure.fileActions",
+      "canonical": "FileActions",
+      "category": "structure.file",
+      "parent": "file_block",
+      "description": "Begins file actions.",
+      "status": "approved"
+    },
+    {
+      "id": "structure.fileEnd",
+      "canonical": "FileEnd",
+      "category": "structure.file",
+      "parent": "file_block",
+      "description": "Ends a file block.",
+      "status": "approved"
+    },
+    {
+      "id": "script.excludeVolumes",
+      "canonical": "ExcludeVolumes",
+      "category": "script.setting",
+      "parent": "script",
+      "description": "Defines volumes excluded from processing.",
+      "status": "reviewed"
+    },
+    {
+      "id": "script.excludeFiles",
+      "canonical": "ExcludeFiles",
+      "category": "script.setting",
+      "parent": "script",
+      "description": "Defines files excluded from processing.",
+      "status": "reviewed"
+    },
+    {
+      "id": "volumeCondition.name",
+      "canonical": "Name",
+      "category": "volume.condition",
+      "parent": "volume_condition",
+      "description": "Matches a volume name or mount point.",
+      "status": "approved"
+    },
+    {
+      "id": "volumeCondition.label",
+      "canonical": "Label",
+      "category": "volume.condition",
+      "parent": "volume_condition",
+      "description": "Matches a volume label.",
+      "status": "approved"
+    },
+    {
+      "id": "volumeCondition.size",
+      "canonical": "Size",
+      "category": "volume.condition",
+      "parent": "volume_condition",
+      "description": "Matches volume size.",
+      "status": "approved"
+    },
+    {
+      "id": "volumeCondition.fragmentCount",
+      "canonical": "FragmentCount",
+      "category": "volume.condition",
+      "parent": "volume_condition",
+      "description": "Matches volume fragment count.",
+      "status": "approved"
+    },
+    {
+      "id": "fileCondition.fileName",
+      "canonical": "FileName",
+      "category": "file.condition",
+      "parent": "file_condition",
+      "description": "Matches a file name.",
+      "status": "approved"
+    },
+    {
+      "id": "fileCondition.directoryName",
+      "canonical": "DirectoryName",
+      "category": "file.condition",
+      "parent": "file_condition",
+      "description": "Matches a directory name.",
+      "status": "approved"
+    },
+    {
+      "id": "fileCondition.fullPath",
+      "canonical": "FullPath",
+      "category": "file.condition",
+      "parent": "file_condition",
+      "description": "Matches a full path.",
+      "status": "approved"
+    },
+    {
+      "id": "fileAction.defragment",
+      "canonical": "Defragment",
+      "category": "file.action",
+      "parent": "file_action",
+      "description": "Defragments matching files.",
+      "status": "approved"
+    },
+    {
+      "id": "fileAction.fastFill",
+      "canonical": "FastFill",
+      "category": "file.action",
+      "parent": "file_action",
+      "description": "Moves files with fast fill behavior.",
+      "status": "approved"
+    },
+    {
+      "id": "fileAction.sortByName",
+      "canonical": "SortByName",
+      "category": "file.action.sort",
+      "parent": "file_action",
+      "description": "Sorts files by name.",
+      "status": "reviewed"
+    },
+    {
+      "id": "setting.setVariable",
+      "canonical": "SetVariable",
+      "category": "setting",
+      "parent": "settingInline",
+      "description": "Sets a script variable.",
+      "status": "reviewed"
+    },
+    {
+      "id": "setting.setColor",
+      "canonical": "SetColor",
+      "category": "setting",
+      "parent": "settingInline",
+      "description": "Sets a display color.",
+      "status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "main": {
+    "id": "7c34210a7597b45b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b004558d89b2601f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d01bb0a92498f980",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a68da53e09ca2374",
+    "type": "split",
+    "children": [
+      {
+        "id": "7401926916ea428b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d084581d1ded8870",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b616935bf6464623",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b2678d40fcfe9465",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300.5
+  },
+  "right": {
+    "id": "3629074002f6b507",
+    "type": "split",
+    "children": [
+      {
+        "id": "3bcd4e1d489b7d21",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6d1f5e1f0f798c9c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "MyDefrag Help/manual/Scripts.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Scripts"
+            }
+          },
+          {
+            "id": "e93fadd7f961ef5a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "MyDefrag Help/manual/Scripts.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Scripts"
+            }
+          },
+          {
+            "id": "d45d039e8958992d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7f795ba59d995432",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "4b1aa6a7c3422eea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "MyDefrag Help/manual/Scripts.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Scripts"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "d01bb0a92498f980",
+  "lastOpenFiles": [
+    "Untitled.base",
+    "MyDefrag Help/manual/Scripts.md",
+    "MyDefrag Help/REVIEW-INDEX.md",
+    "MyDefrag Help/review-map.json",
+    "mydefrag-help-review-tool/README.md",
+    "mydefrag-help-review-tool/PACKAGE-SCRIPT-SNIPPET.md",
+    "mydefrag-help-review-tool/docs/MyDefrag Help/REVIEW-INDEX.md",
+    "mydefrag-help-review-tool/docs/MyDefrag Help/review-map.json",
+    "mydefrag-help-review-tool/docs/MyDefrag Help",
+    "mydefrag-help-review-tool/docs",
+    "mydefrag-help-review-tool/scripts/review-help-conversion.js",
+    "mydefrag-help-review-tool/scripts",
+    "mydefrag-help-review-tool",
+    "mydefrag-help-review-tool.zip",
+    "MyDefrag Help/language/Scripts/VolumeBoolean.md",
+    "MyDefrag Help/language/Scripts/VolumeSelect.md",
+    "MyDefrag Help/language/VolumeBoolean/NOT.md",
+    "MyDefrag Help/language/FileBoolean/All.md",
+    "MyDefrag Help/language/Scripts/FileBoolean.md",
+    "MyDefrag Help/language/FileBoolean/OR.md",
+    "MyDefrag Help/index.md",
+    "language/FileBoolean",
+    "MyDefrag Help/language/VolumeActions/Settings.md",
+    "MyDefrag Help/language/Scripts/FileActions.md",
+    "MyDefrag Help/language/VolumeActions/FileSelect.md",
+    "MyDefrag Help/README.md",
+    "MyDefrag Help/manual/TipsAndTricks.md",
+    "MyDefrag Help/faq/FAQ.md",
+    "MyDefrag Help/manual/KnownProblems.md"
+  ]
+}

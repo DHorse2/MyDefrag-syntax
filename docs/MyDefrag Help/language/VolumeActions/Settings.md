@@ -1,0 +1,35 @@
+# VolumeActions - Settings
+
+| [**AppendLogfile**](../Settings/AppendLogfile.md) |
+| --- |
+| [**BatteryPower**](../Settings/BatteryPower.md) |
+| [**Debug**](../Settings/Debug.md) |
+| [**Description**](../Settings/Description.md) |
+| [**DiskmapFlip**](../Settings/DiskmapFlip.md) |
+| [**ExcludeFiles**](../Settings/ExcludeFiles.md) |
+| [**ExcludeVolumes**](../Settings/ExcludeVolumes.md) |
+| [**ExitIfTimeout**](../Settings/ExitIfTimeout.md) |
+| [**FileMoveChunkSize**](../Settings/FileMoveChunkSize.md) |
+| [**IgnoreWrapAroundFragmentation**](../Settings/IgnoreWrapAroundFragmentation.md) |
+| [**Language**](../Settings/Language.md) |
+| [**MaxRunTime**](../Settings/MaxRunTime.md) |
+| [**Message**](../Settings/Message.md) |
+| [**OtherInstances**](../Settings/OtherInstances.md) |
+| [**Pause**](../Settings/Pause.md) |
+| [**ProcessPriority**](../Settings/ProcessPriority.md) |
+| [**RememberUnmovables**](../Settings/RememberUnmovables.md) |
+| [**RunProgram**](../Settings/RunProgram.md) |
+| [**RunScript**](../Settings/RunScript.md) |
+| [**SetColor**](../Settings/SetColor.md) |
+| [**SetFileColor**](../Settings/SetFileColor.md) |
+| [**SetScreenPowerSaver**](../Settings/SetScreenPowerSaver.md) |
+| [**SetScreenSaver**](../Settings/SetScreenSaver.md) |
+| [**SetStatisticsWindowText**](../Settings/SetStatisticsWindowText.md) |
+| [**SetVariable**](../Settings/SetVariable.md) |
+| [**Slowdown**](../Settings/Slowdown.md) |
+| [**StatusBar**](../Settings/StatusBar.md) |
+| [**Title**](../Settings/Title.md) |
+| [**WhenFinished**](../Settings/WhenFinished.md) |
+| [**WindowSize**](../Settings/WindowSize.md) |
+| [**WriteLogfile**](../Settings/WriteLogfile.md) |
+| [**ZoomLevel**](../Settings/ZoomLevel.md) |

@@ -1,0 +1,2339 @@
+{
+  "files": [
+    {
+      "candidateCount": 84,
+      "candidates": [
+        {
+          "line": 4,
+          "text": "Syntax highlighting for MyDefrag scripting language"
+        },
+        {
+          "line": 9,
+          "text": "https://github.com/DHorse2/MyDefrag-syntax"
+        },
+        {
+          "line": 15,
+          "text": "Programming Languages"
+        },
+        {
+          "line": 24,
+          "text": "Directory for MyDefrag user data."
+        },
+        {
+          "line": 29,
+          "text": "Directory for MyDefrag log files."
+        },
+        {
+          "line": 34,
+          "text": "Enable MyDefrag extension debug logging."
+        },
+        {
+          "line": 41,
+          "text": "MyDefrag extension verbosity level. Debug logging requires mydfrg.debugOn."
+        },
+        {
+          "line": 61,
+          "text": "Diagnostic severity for references found only by walking up parent folders."
+        },
+        {
+          "line": 81,
+          "text": "Diagnostic severity for references containing execution-time macros."
+        },
+        {
+          "line": 101,
+          "text": "Diagnostic severity for references whose target files are found."
+        },
+        {
+          "line": 121,
+          "text": "Diagnostic severity for references whose target files are not found."
+        },
+        {
+          "line": 141,
+          "text": "Diagnostic severity for inferred fragment parent messages."
+        },
+        {
+          "line": 149,
+          "text": "**/Backup/**"
+        },
+        {
+          "line": 150,
+          "text": "**/Bu/**"
+        },
+        {
+          "line": 151,
+          "text": "**/MdmSysTools/**"
+        },
+        {
+          "line": 152,
+          "text": "**/Archive/**"
+        },
+        {
+          "line": 153,
+          "text": "**/*.tmp.MyDc"
+        },
+        {
+          "line": 154,
+          "text": "**/Compile*"
+        },
+        {
+          "line": 155,
+          "text": "**/*.log"
+        },
+        {
+          "line": 156,
+          "text": "**/TaylorDoVs0_2/**"
+        },
+        {
+          "line": 157,
+          "text": "**/TaylorDoVs0_3/**"
+        },
+        {
+          "line": 158,
+          "text": "**/TaylorDoVs0_4/**"
+        },
+        {
+          "line": 159,
+          "text": "**/Log/**"
+        },
+        {
+          "line": 160,
+          "text": "**/Logs/**"
+        },
+        {
+          "line": 161,
+          "text": "**/artifacts/**"
+        },
+        {
+          "line": 162,
+          "text": "**/.user/**"
+        },
+        {
+          "line": 163,
+          "text": "**/node_modules/**"
+        },
+        {
+          "line": 164,
+          "text": "**/artifacts/**"
+        },
+        {
+          "line": 165,
+          "text": "**/resources/"
+        },
+        {
+          "line": 166,
+          "text": "**/dist/**"
+        },
+        {
+          "line": 167,
+          "text": "**/.git/**"
+        },
+        {
+          "line": 168,
+          "text": "**/.user/**"
+        },
+        {
+          "line": 169,
+          "text": "**/.vs/**"
+        },
+        {
+          "line": 170,
+          "text": "**/.vscode/**"
+        },
+        {
+          "line": 171,
+          "text": "**/Download/**"
+        },
+        {
+          "line": 172,
+          "text": "**/GithubIo/**"
+        },
+        {
+          "line": 174,
+          "text": "Glob patterns to exclude from MyDefrag validation"
+        },
+        {
+          "line": 182,
+          "text": "MyDefrag Script"
+        },
+        {
+          "line": 216,
+          "text": "Open File at Position"
+        },
+        {
+          "line": 224,
+          "text": "MyDefrag: Get Next Diagnostic"
+        },
+        {
+          "line": 228,
+          "text": "MyDefrag: Get Next File Diagnostic"
+        },
+        {
+          "line": 232,
+          "text": "MyDefrag: File Diagnostic is Fixed"
+        },
+        {
+          "line": 236,
+          "text": "MyDefrag: Ignore File Diagnostic"
+        },
+        {
+          "line": 240,
+          "text": "MyDefrag: Skip Current File"
+        },
+        {
+          "line": 244,
+          "text": "MyDefrag: Send Invalid to Agent"
+        },
+        {
+          "line": 248,
+          "text": "MyDefrag: Diagnostic points to Valid Syntax"
+        },
+        {
+          "line": 252,
+          "text": "MyDefrag: Get Previous File Diagnostic"
+        },
+        {
+          "line": 256,
+          "text": "MyDefrag: Go to Top of Diagnostic list"
+        },
+        {
+          "line": 260,
+          "text": "MyDefrag: Reset Diagnostic Navigation"
+        },
+        {
+          "line": 271,
+          "text": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD"
+        },
+        {
+          "line": 278,
+          "text": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD"
+        },
+        {
+          "line": 293,
+          "text": "MyDefrag Diagnostics"
+        },
+        {
+          "line": 306,
+          "text": "onLanguage:mydfrg"
+        },
+        {
+          "line": 307,
+          "text": "onLanguage:bat"
+        },
+        {
+          "line": 308,
+          "text": "onCommand:mydfrg.openPreview"
+        },
+        {
+          "line": 309,
+          "text": "onCommand:mdm.openFileAtPosition"
+        },
+        {
+          "line": 310,
+          "text": "onCommand:mydfrg.openSettings"
+        },
+        {
+          "line": 311,
+          "text": "onCommand:mydfrg.configureFolders"
+        },
+        {
+          "line": 314,
+          "text": "deploy:local"
+        },
+        {
+          "line": 314,
+          "text": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1"
+        },
+        {
+          "line": 315,
+          "text": "liveUpdate:local"
+        },
+        {
+          "line": 315,
+          "text": "powershell -ExecutionPolicy Bypass -File ./scripts/update-live-MyDefrag.ps1"
+        },
+        {
+          "line": 316,
+          "text": "pack:vsix"
+        },
+        {
+          "line": 316,
+          "text": "powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1"
+        },
+        {
+          "line": 317,
+          "text": "publish:vsx"
+        },
+        {
+          "line": 317,
+          "text": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1"
+        },
+        {
+          "line": 318,
+          "text": "rimraf dist out .vscodeignore"
+        },
+        {
+          "line": 319,
+          "text": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1 -SkipInstall"
+        },
+        {
+          "line": 320,
+          "text": "language:validate"
+        },
+        {
+          "line": 320,
+          "text": "node ./scripts/build-language.js validate"
+        },
+        {
+          "line": 321,
+          "text": "language:build"
+        },
+        {
+          "line": 321,
+          "text": "node ./scripts/build-language.js build"
+        },
+        {
+          "line": 322,
+          "text": "language:report"
+        },
+        {
+          "line": 322,
+          "text": "node ./scripts/build-language.js report"
+        },
+        {
+          "line": 323,
+          "text": "test:language"
+        },
+        {
+          "line": 323,
+          "text": "node ./scripts/test-language-runtime.js"
+        },
+        {
+          "line": 324,
+          "text": "npm run build"
+        },
+        {
+          "line": 325,
+          "text": "enableNetwwork:local"
+        },
+        {
+          "line": 325,
+          "text": "powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1"
+        },
+        {
+          "line": 326,
+          "text": "listSymLinks:local"
+        },
+        {
+          "line": 326,
+          "text": "powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1"
+        },
+        {
+          "line": 327,
+          "text": "addVsCodiumToExplorer:local"
+        },
+        {
+          "line": 327,
+          "text": "powershell -ExecutionPolicy Bypass -File ./scripts/add-VsCodium-ToExplorer.ps1"
+        },
+        {
+          "line": 335,
+          "text": "@vscode/vsce"
+        }
+      ],
+      "file": "package.json",
+      "status": "scanned"
+    },
+    {
+      "candidateCount": 88,
+      "candidates": [
+        {
+          "line": 1,
+          "text": "use strict"
+        },
+        {
+          "line": 38,
+          "text": "MyDefrag Syntax"
+        },
+        {
+          "line": 251,
+          "text": "Next candidate: ${dir}, and ${filePath}"
+        },
+        {
+          "line": 323,
+          "text": "**/*.{MyDc,MyD}"
+        },
+        {
+          "line": 323,
+          "text": "**/node_modules/**"
+        },
+        {
+          "line": 340,
+          "text": "searchWorkspace: Unable to read ${uri.toString()}: ${errResult.message}"
+        },
+        {
+          "line": 379,
+          "text": "s actually rendered in an editor pane (visible range changes, becomes the active editor, etc.). These are genuinely two separate triggers from VS Code"
+        },
+        {
+          "line": 379,
+          "text": "t being registered twice, it"
+        },
+        {
+          "line": 461,
+          "text": "extension.js:activate:settings:initialize Error returned from initialization: ${errResult.message}"
+        },
+        {
+          "line": 465,
+          "text": "init done"
+        },
+        {
+          "line": 466,
+          "text": "EXTENSION: config: ${config}"
+        },
+        {
+          "line": 467,
+          "text": "iniData: ${iniData}"
+        },
+        {
+          "line": 484,
+          "text": "MYDC EXTENSION INITIALIZED"
+        },
+        {
+          "line": 490,
+          "text": "Settings source=VSCodium, Debug=${isDebugOn}"
+        },
+        {
+          "line": 493,
+          "text": "extension.js:activate Unexpected error in Logging Channel and Status Bar initialization: ${errResult.message}"
+        },
+        {
+          "line": 498,
+          "text": "Channel, Status Bar done"
+        },
+        {
+          "line": 500,
+          "text": "extension.js:activate Unexpected error initializing extension: ${errResult.message}"
+        },
+        {
+          "line": 527,
+          "text": "SetVariable\\\\s*\\\\(\\\\s*(${escapeRegex(word)})\\\\s*,"
+        },
+        {
+          "line": 548,
+          "text": "\\\\b(${escapeRegex(word)})\\\\b"
+        },
+        {
+          "line": 575,
+          "text": "Inline completion provider registered"
+        },
+        {
+          "line": 601,
+          "text": "MYDC EXTENSION LINKS Provider for ${filePath}, language: mydfrg"
+        },
+        {
+          "line": 603,
+          "text": "provideDocumentLinks called for"
+        },
+        {
+          "line": 631,
+          "text": "${key}=${String(value)}"
+        },
+        {
+          "line": 642,
+          "text": "${message} (${contextText})"
+        },
+        {
+          "line": 674,
+          "text": "Internal trace: requested line ${i}, valid range is 0-${document.lineCount - 1}."
+        },
+        {
+          "line": 685,
+          "text": "${message} ${formatTraceContext(mergedContext)}"
+        },
+        {
+          "line": 686,
+          "text": "${message} ${formatTraceContext(mergedContext)}"
+        },
+        {
+          "line": 707,
+          "text": "${text[line]}"
+        },
+        {
+          "line": 709,
+          "text": "Invalid format: line: ${line}, text: ${text}"
+        },
+        {
+          "line": 717,
+          "text": "Invalid format: range[${range.start.line}::${range.start.character}], text: ${text}"
+        },
+        {
+          "line": 723,
+          "text": "Processing File: ${document.fileName}"
+        },
+        {
+          "line": 755,
+          "text": "INCLUDE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${lineText}"
+        },
+        {
+          "line": 759,
+          "text": "Number of INCLUDE links: ${includeLinks.length}"
+        },
+        {
+          "line": 801,
+          "text": "Number of FILE links: ${fileLinks.length}"
+        },
+        {
+          "line": 804,
+          "text": "]*\\.(?:bat|My\\w+|cmd|exe|com)[^"
+        },
+        {
+          "line": 831,
+          "text": "Number of BATCH & command links: ${commandLinks.length}"
+        },
+        {
+          "line": 833,
+          "text": "includeLinks ${includeLinks.length}, fileLinks ${fileLinks.length}, commandLinks ${commandLinks.length}, EXCLUDED folders ${excludeConfig.folderCount}, files ${excludeConfig.fileCount}, search ${excludeConfig.searchCount}."
+        },
+        {
+          "line": 872,
+          "text": "MYDC EXTENSION BATCH LINK Provider for ${filePath}, language: mydfrg"
+        },
+        {
+          "line": 877,
+          "text": "------------ File: (${document.uri.fsPath}) ------------ ."
+        },
+        {
+          "line": 879,
+          "text": "\\s]*\\.(?:bat|My\\w+|cmd|exe|com))([^"
+        },
+        {
+          "line": 900,
+          "text": "File name is: ("
+        },
+        {
+          "line": 901,
+          "text": "BATCH file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}"
+        },
+        {
+          "line": 912,
+          "text": "No message available"
+        },
+        {
+          "line": 915,
+          "text": "referenceRelativePathLevel: ${referenceRelativePathLevel}"
+        },
+        {
+          "line": 917,
+          "text": "BAT Link: Found in PARENT ${stepsUpward} steps up, possibly invalid."
+        },
+        {
+          "line": 920,
+          "text": "${document.uri.fsPath}:${lineNum}:${colNum}: Link target found: ${foundPath}"
+        },
+        {
+          "line": 925,
+          "text": "BAT Link: Contains execution time macros: ${filePath}"
+        },
+        {
+          "line": 928,
+          "text": "BAT Link: File not found: ${filePath}"
+        },
+        {
+          "line": 952,
+          "text": "dir:"
+        },
+        {
+          "line": 953,
+          "text": "base:"
+        },
+        {
+          "line": 954,
+          "text": "our filename:"
+        },
+        {
+          "line": 955,
+          "text": "currentDir:"
+        },
+        {
+          "line": 956,
+          "text": "absolutePath: ("
+        },
+        {
+          "line": 957,
+          "text": "absoluteUri:"
+        },
+        {
+          "line": 958,
+          "text": "match.index:"
+        },
+        {
+          "line": 959,
+          "text": "filePath:"
+        },
+        {
+          "line": 960,
+          "text": "quoteStart:"
+        },
+        {
+          "line": 961,
+          "text": "start:"
+        },
+        {
+          "line": 962,
+          "text": "end:"
+        },
+        {
+          "line": 963,
+          "text": "absolutePath:"
+        },
+        {
+          "line": 964,
+          "text": "range:"
+        },
+        {
+          "line": 968,
+          "text": "Number of BATCH batchFileCommandLinks: ${commandLinks.length}"
+        },
+        {
+          "line": 976,
+          "text": "extension.js:activate Unexpected error activating extension: ${errResult.message}"
+        },
+        {
+          "line": 988,
+          "text": "User Directory"
+        },
+        {
+          "line": 993,
+          "text": "Log Directory"
+        },
+        {
+          "line": 1000,
+          "text": "Select the folder setting to update"
+        },
+        {
+          "line": 1016,
+          "text": "Select ${choice.label}"
+        },
+        {
+          "line": 1034,
+          "text": "MyDefrag: ${choice.label} set to ${selected[0].fsPath}"
+        },
+        {
+          "line": 1049,
+          "text": "@ext:macrodm.mydefrag-syntax"
+        },
+        {
+          "line": 1081,
+          "text": "Error, in preparing preview summary!"
+        },
+        {
+          "line": 1083,
+          "text": "Finished preview summary!"
+        },
+        {
+          "line": 1088,
+          "text": "ERROR: Preview generation failed: ${result.error.msg}"
+        },
+        {
+          "line": 1090,
+          "text": "${nextMessage}"
+        },
+        {
+          "line": 1096,
+          "text": "extension.js:activate:generatePreview: Unexpected error Generating Preview of document: ${errResult.message}"
+        },
+        {
+          "line": 1113,
+          "text": ".merged$1"
+        },
+        {
+          "line": 1114,
+          "text": "mydfrg-preview:${mergedPath}"
+        },
+        {
+          "line": 1126,
+          "text": "Preview source: ${sourcePath}"
+        },
+        {
+          "line": 1142,
+          "text": "Init done, Creating and Registering Client"
+        },
+        {
+          "line": 1176,
+          "text": "--inspect=6009"
+        },
+        {
+          "line": 1186,
+          "text": "--inspect=6009"
+        },
+        {
+          "line": 1187,
+          "text": "--inspect-brk=6009"
+        },
+        {
+          "line": 1188,
+          "text": "--inspect=6009"
+        },
+        {
+          "line": 1189,
+          "text": "--inspect-brk=9229"
+        },
+        {
+          "line": 1196,
+          "text": "**/*.{MyDc,mydc,MYDC,MyD,myd,MYD}"
+        },
+        {
+          "line": 1213,
+          "text": "MyDefrag Language Client"
+        },
+        {
+          "line": 1249,
+          "text": "Subscribing to providers"
+        },
+        {
+          "line": 1263,
+          "text": "Providers registered"
+        },
+        {
+          "line": 1266,
+          "text": "Starting server ${channelName}"
+        }
+      ],
+      "file": "src/extension.js",
+      "status": "scanned"
+    },
+    {
+      "candidateCount": 87,
+      "candidates": [
+        {
+          "line": 1,
+          "text": "use strict"
+        },
+        {
+          "line": 5,
+          "text": "SERVER: entered server.js"
+        },
+        {
+          "line": 21,
+          "text": "SERVER: modules loaded"
+        },
+        {
+          "line": 39,
+          "text": "MyDefrag Issues"
+        },
+        {
+          "line": 46,
+          "text": "SERVER: connection created"
+        },
+        {
+          "line": 188,
+          "text": "server.js:connection.onInitialize: SERVER loading configuration"
+        },
+        {
+          "line": 206,
+          "text": "server.js:onInitialize: WorkspaceFolders are not available"
+        },
+        {
+          "line": 209,
+          "text": ") ? f.uri : f.uri +"
+        },
+        {
+          "line": 211,
+          "text": "server.js:onInitialize: WorkspaceFolders error in validation"
+        },
+        {
+          "line": 233,
+          "text": "server.js:onInitialize: Error returned from initialization: ${errResult.message}"
+        },
+        {
+          "line": 239,
+          "text": "server.js:onInitialize: [${source}] verboseLevel: ${verboseLevel}"
+        },
+        {
+          "line": 241,
+          "text": "server.js:onInitialize: params:"
+        },
+        {
+          "line": 243,
+          "text": "server.js:onInitialize: initializationOptions:"
+        },
+        {
+          "line": 245,
+          "text": "server.js:onInitialize: config:"
+        },
+        {
+          "line": 247,
+          "text": "server.js:onInitialize: iniData:"
+        },
+        {
+          "line": 250,
+          "text": "server.js:onInitialize: init done. Creating Logger"
+        },
+        {
+          "line": 262,
+          "text": "server.js:onInitialize: 1"
+        },
+        {
+          "line": 269,
+          "text": "MyDefrag Parser"
+        },
+        {
+          "line": 276,
+          "text": "server.js:onInitialize: 2"
+        },
+        {
+          "line": 278,
+          "text": "server.js:onInitialize: 3"
+        },
+        {
+          "line": 280,
+          "text": "SERVER: MYDC SERVER INITIALIZED"
+        },
+        {
+          "line": 281,
+          "text": "server.js:onInitialize: 4"
+        },
+        {
+          "line": 282,
+          "text": "server.js:onInitialize: Settings source=VSCodium, Debug=${isDebugOn}"
+        },
+        {
+          "line": 284,
+          "text": "server.js:onInitialize: Unexpected error in Logging Channel initialization: ${errResult.message}"
+        },
+        {
+          "line": 288,
+          "text": "server.js:onInitialize: Unexpected error initializing server: ${errResult.message}"
+        },
+        {
+          "line": 291,
+          "text": "server.js:onInitialize: Initialization done"
+        },
+        {
+          "line": 315,
+          "text": "MyDefrag Parser"
+        },
+        {
+          "line": 341,
+          "text": "server.js:onDidChangeContent MyDefrag server document changed"
+        },
+        {
+          "line": 351,
+          "text": "server.js:onDidOpen MyDefrag server document opened"
+        },
+        {
+          "line": 361,
+          "text": "server.js:onDidSave MyDefrag server document saved"
+        },
+        {
+          "line": 372,
+          "text": "server.js:onDidClose MyDefrag server document closed"
+        },
+        {
+          "line": 450,
+          "text": "writeDiagnosticsSnapshot: Unable to write ${snapshotPath}: ${errResult.message}"
+        },
+        {
+          "line": 466,
+          "text": "clear-${reason}"
+        },
+        {
+          "line": 542,
+          "text": "clear-${reason}"
+        },
+        {
+          "line": 575,
+          "text": "clear-${reason}"
+        },
+        {
+          "line": 701,
+          "text": "refreshAllDiagnostics: ${reason} failed"
+        },
+        {
+          "line": 729,
+          "text": "refreshChangedFiles: watched-files failed"
+        },
+        {
+          "line": 767,
+          "text": "validateFileUri: Unable to read ${key}: ${errResult.message}"
+        },
+        {
+          "line": 813,
+          "text": "${reason}-complete"
+        },
+        {
+          "line": 849,
+          "text": "${reason}-complete"
+        },
+        {
+          "line": 861,
+          "text": ") ? f.uri : f.uri +"
+        },
+        {
+          "line": 865,
+          "text": "refreshAllDiagnostics: Unable to refresh workspace folders: ${errResult.message}"
+        },
+        {
+          "line": 884,
+          "text": "${reason}-complete"
+        },
+        {
+          "line": 902,
+          "text": "validateDocument:"
+        },
+        {
+          "line": 903,
+          "text": "validateDocument: MYDC SERVER ACTIVATED"
+        },
+        {
+          "line": 904,
+          "text": "validateDocument: for ${filePath}"
+        },
+        {
+          "line": 926,
+          "text": "${t.type}:${t.value}"
+        },
+        {
+          "line": 940,
+          "text": "quick fix"
+        },
+        {
+          "line": 942,
+          "text": "validateDocument: Parsing Document"
+        },
+        {
+          "line": 947,
+          "text": "validateDocument: Full Document: Parsing"
+        },
+        {
+          "line": 948,
+          "text": "validateDocument: Full Document: First token:"
+        },
+        {
+          "line": 957,
+          "text": "validateDocument: Full Document: Parse Statements ${parser.errors.length}"
+        },
+        {
+          "line": 958,
+          "text": "validateDocument: Full Document: After parse:"
+        },
+        {
+          "line": 966,
+          "text": "Parser Eof: ${bestParser.atEof()} Errors: ${bestParser.errors.length}"
+        },
+        {
+          "line": 967,
+          "text": "validateDocument: Parse Document Fragment"
+        },
+        {
+          "line": 973,
+          "text": "validateDocument: Document Fragment: Parsing"
+        },
+        {
+          "line": 974,
+          "text": "validateDocument: Document Fragment: First token:"
+        },
+        {
+          "line": 980,
+          "text": "validateDocument: Document Fragment: Parse Statements. Success: ${fragParserResult} Errors: ${fragParser.errors.length}"
+        },
+        {
+          "line": 981,
+          "text": "validateDocument: Document Fragment: After parse:"
+        },
+        {
+          "line": 983,
+          "text": "validateDocument: Document Fragment: Step Comparison. Errors, Frag: ${fragParser.errors.length}, Full: ${bestParser.errors.length}"
+        },
+        {
+          "line": 990,
+          "text": "document fragment"
+        },
+        {
+          "line": 995,
+          "text": "validateDocument: Parser Eof: ${bestParser.atEof()} Errors: ${bestParser.errors.length}"
+        },
+        {
+          "line": 996,
+          "text": "validateDocument: Check for orphaned tokens"
+        },
+        {
+          "line": 1004,
+          "text": "Unexpected token '${t.value}' — fragment may be incomplete"
+        },
+        {
+          "line": 1006,
+          "text": "Unexpected token '${t.value}' — expected end of file"
+        },
+        {
+          "line": 1017,
+          "text": "Parser state: pos=${bestParser.pos}, token=${JSON.stringify(bestParser.peek?.() ?? null)}"
+        },
+        {
+          "line": 1018,
+          "text": "Parser state: unavailable"
+        },
+        {
+          "line": 1021,
+          "text": "server.js:validateDocument: Unexpected parser failure"
+        },
+        {
+          "line": 1022,
+          "text": "${err.name}: ${err.message}"
+        },
+        {
+          "line": 1023,
+          "text": "${err.stack || \"(no stack available)\"}"
+        },
+        {
+          "line": 1033,
+          "text": "logger.err failed:"
+        },
+        {
+          "line": 1038,
+          "text": "Internal parser failure: ${err.name}: ${err.message}"
+        },
+        {
+          "line": 1041,
+          "text": "warningAtStart failed:"
+        },
+        {
+          "line": 1045,
+          "text": "validateDocument: Publish diagnostics"
+        },
+        {
+          "line": 1070,
+          "text": "validateDocument: Parsing completed"
+        },
+        {
+          "line": 1096,
+          "text": "${folderUri}/"
+        },
+        {
+          "line": 1104,
+          "text": "scanAllFiles: Skipping excluded folder ${relFolderPath}"
+        },
+        {
+          "line": 1112,
+          "text": "scanAllFiles: Unable to read folder ${folderPath}: ${errResult.message}"
+        },
+        {
+          "line": 1129,
+          "text": "${relPath}/"
+        },
+        {
+          "line": 1130,
+          "text": "scanAllFiles: Skipping excluded folder ${relPath}"
+        },
+        {
+          "line": 1133,
+          "text": "${uri}/"
+        },
+        {
+          "line": 1168,
+          "text": "server.js:onCompletion: MyDefrag server connection on Completion"
+        },
+        {
+          "line": 1172,
+          "text": "server.js:onHover: MyDefrag server connection on Hover"
+        },
+        {
+          "line": 1177,
+          "text": "server.js:onInitialized: MyDefrag server Language Client entered initialized"
+        },
+        {
+          "line": 1178,
+          "text": "server.js:onInitialized: Workspace scan deferred to file/configuration refresh"
+        },
+        {
+          "line": 1179,
+          "text": "server.js:onInitialized: MyDefrag server Language Client initialized. Log test."
+        },
+        {
+          "line": 1184,
+          "text": "server.js:onDidChangeWatchedFiles: MyDefrag server document watched On Did Change"
+        }
+      ],
+      "file": "src/server/server.js",
+      "status": "scanned"
+    },
+    {
+      "candidateCount": 83,
+      "candidates": [
+        {
+          "line": 1,
+          "text": "use strict"
+        },
+        {
+          "line": 68,
+          "text": "Expected 'yes' or 'no'"
+        },
+        {
+          "line": 102,
+          "text": "[diagnostic] ${message}"
+        },
+        {
+          "line": 103,
+          "text": "(line ${start.line + 1}, char ${start.character + 1} -"
+        },
+        {
+          "line": 104,
+          "text": "line ${end.line + 1}, char ${end.character + 1};"
+        },
+        {
+          "line": 105,
+          "text": "state=${this.state}, pos=${this.pos})"
+        },
+        {
+          "line": 140,
+          "text": "Expected '${kw}' but found '${t.value}'"
+        },
+        {
+          "line": 171,
+          "text": "Expected ${desc || type} but found '${t.value}'"
+        },
+        {
+          "line": 193,
+          "text": ").toLowerCase() ==="
+        },
+        {
+          "line": 303,
+          "text": "Unexpected statement '${t?.value ?? ''}'"
+        },
+        {
+          "line": 315,
+          "text": "Parser made no progress at '${t?.value ?? ''}'"
+        },
+        {
+          "line": 331,
+          "text": ">>>>> ${t.value} type: ${t.type} vs. IDENT or MACRO"
+        },
+        {
+          "line": 401,
+          "text": "server.js:Parser:parseStatement: Unexpected error parsing Token: ${tokenValue} NextToken: ${nextTokenValue} Error: ${errResult.message}"
+        },
+        {
+          "line": 413,
+          "text": "parseStatements()"
+        },
+        {
+          "line": 414,
+          "text": "atEof()"
+        },
+        {
+          "line": 415,
+          "text": "atEof() == true"
+        },
+        {
+          "line": 416,
+          "text": "atEof() == false"
+        },
+        {
+          "line": 417,
+          "text": "atEof() == true"
+        },
+        {
+          "line": 476,
+          "text": "${name} = ${this.formatTraceValue(value)}"
+        },
+        {
+          "line": 479,
+          "text": "details [${message}]"
+        },
+        {
+          "line": 494,
+          "text": "${name}=${this.formatTraceValue(value)}"
+        },
+        {
+          "line": 507,
+          "text": "[${name} = ${this.formatTraceColumn(value+']', width)}"
+        },
+        {
+          "line": 559,
+          "text": "unexpected statement"
+        },
+        {
+          "line": 565,
+          "text": "server.js:Parser:parseFragment: Full statement parse succeeded: ${this.errors.length}"
+        },
+        {
+          "line": 570,
+          "text": "server.js:Parser:parseFragment: Full statement parse failed. Errors: ${this.errors.length}"
+        },
+        {
+          "line": 656,
+          "text": "server.js:Parser:parseFragment: Expected fragment keyword, got '${t?.value}'"
+        },
+        {
+          "line": 702,
+          "text": "server.js:Parser:parseFragment: Unknown fragment keyword '${keyword}' parent '${t.parent}'"
+        },
+        {
+          "line": 753,
+          "text": "server.js:Parser:parseFragment: '${keyword}' is '${keywordData.kind}' and belongs in '${keywordData.parent}',"
+        },
+        {
+          "line": 754,
+          "text": "but this fragment was established as '${fragment.parent}'"
+        },
+        {
+          "line": 786,
+          "text": "server.js:Parser:parseFragment: Failed parsing fragment statement '${keyword}' as '${keywordData.kind}'"
+        },
+        {
+          "line": 797,
+          "text": "server.js:Parser:parseFragment: Parser made no progress at '${keyword}'"
+        },
+        {
+          "line": 834,
+          "text": "SCRIPT_FRAGMENT: insert this fragment inside ${parents[0]}."
+        },
+        {
+          "line": 835,
+          "text": "SCRIPT_FRAGMENT: insert this fragment inside one of: ${parents.join(', ')}."
+        },
+        {
+          "line": 856,
+          "text": "VolumeSelect ... VolumeActions ... VolumeEnd block"
+        },
+        {
+          "line": 862,
+          "text": "FileSelect ... FileActions ... FileEnd block"
+        },
+        {
+          "line": 1209,
+          "text": ": case"
+        },
+        {
+          "line": 1209,
+          "text": ": case"
+        },
+        {
+          "line": 1217,
+          "text": ": case"
+        },
+        {
+          "line": 1225,
+          "text": ": case"
+        },
+        {
+          "line": 1232,
+          "text": ": case"
+        },
+        {
+          "line": 1245,
+          "text": ": case"
+        },
+        {
+          "line": 1245,
+          "text": ": case"
+        },
+        {
+          "line": 1245,
+          "text": ": case"
+        },
+        {
+          "line": 1246,
+          "text": ": case"
+        },
+        {
+          "line": 1246,
+          "text": ": case"
+        },
+        {
+          "line": 1246,
+          "text": ": case"
+        },
+        {
+          "line": 1248,
+          "text": ": case"
+        },
+        {
+          "line": 1248,
+          "text": ": case"
+        },
+        {
+          "line": 1248,
+          "text": ": case"
+        },
+        {
+          "line": 1249,
+          "text": ": case"
+        },
+        {
+          "line": 1249,
+          "text": ": case"
+        },
+        {
+          "line": 1249,
+          "text": ": case"
+        },
+        {
+          "line": 1251,
+          "text": ": case"
+        },
+        {
+          "line": 1251,
+          "text": ": case"
+        },
+        {
+          "line": 1251,
+          "text": ": case"
+        },
+        {
+          "line": 1252,
+          "text": ": case"
+        },
+        {
+          "line": 1252,
+          "text": ": case"
+        },
+        {
+          "line": 1252,
+          "text": ": case"
+        },
+        {
+          "line": 1729,
+          "text": "case '${k.toLowerCase()}': return this.${method}(ctx);"
+        },
+        {
+          "line": 1853,
+          "text": "SCRIPT_FRAGMENT: orphaned compound structure '${keywordData.keyword || t?.value}' may be incomplete"
+        },
+        {
+          "line": 1929,
+          "text": ": case"
+        },
+        {
+          "line": 1972,
+          "text": "Expected filesystem type (NTFS, FAT, FAT12, FAT16, FAT32)"
+        },
+        {
+          "line": 1977,
+          "text": "Unexpected token '${t.value}' in volume boolean"
+        },
+        {
+          "line": 1983,
+          "text": "server.js:Parser: parseFileBooleans:"
+        },
+        {
+          "line": 1985,
+          "text": "server.js:Parser: parseFileBooleans after first boolean:"
+        },
+        {
+          "line": 2108,
+          "text": "Unexpected token '${t.value}' in file boolean"
+        },
+        {
+          "line": 2111,
+          "text": "Unexpected token '${t.value}' in file boolean, continuing..."
+        },
+        {
+          "line": 2120,
+          "text": "Expected file location option"
+        },
+        {
+          "line": 2304,
+          "text": "Expected 'Ascending' or 'Descending'"
+        },
+        {
+          "line": 2376,
+          "text": "Expected window size option"
+        },
+        {
+          "line": 2420,
+          "text": "Expected 'ask', 'allow', 'exit', or 'kill'"
+        },
+        {
+          "line": 2427,
+          "text": "Expected 'ask', 'allow', or 'exit'"
+        },
+        {
+          "line": 2434,
+          "text": "Expected 'off' or 'reset'"
+        },
+        {
+          "line": 2448,
+          "text": "Expected process priority"
+        },
+        {
+          "line": 2456,
+          "text": ">> Setting: ${kw} type: ${this.curr().type} vs. IDENT or KEYWORD"
+        },
+        {
+          "line": 2459,
+          "text": "Expected variable name"
+        },
+        {
+          "line": 2474,
+          "text": "Unknown setting '${t.value}'"
+        },
+        {
+          "line": 2482,
+          "text": "server.js:ValidateDocument Unexpected error Generating Preview of document: + ${errResult.message}"
+        },
+        {
+          "line": 2509,
+          "text": "Expected WhenFinished option"
+        },
+        {
+          "line": 2518,
+          "text": "Expected color name"
+        },
+        {
+          "line": 2552,
+          "text": "Unexpected token '${t.value}' in file color boolean"
+        },
+        {
+          "line": 2617,
+          "text": "Expected variable after '-'"
+        },
+        {
+          "line": 2653,
+          "text": "Expected number or variable but found '${t.value}'"
+        }
+      ],
+      "file": "src/server/parser.js",
+      "status": "scanned"
+    },
+    {
+      "candidateCount": 155,
+      "candidates": [
+        {
+          "line": 2,
+          "text": "use strict"
+        },
+        {
+          "line": 43,
+          "text": "Preview Processor"
+        },
+        {
+          "line": 44,
+          "text": "MyDefrag Preview"
+        },
+        {
+          "line": 86,
+          "text": "mydefrag-preprocess.js:activate Unexpected error in first Initialize step: ${errResult.message}"
+        },
+        {
+          "line": 97,
+          "text": "+ String(n).padStart(COL_W - 2) +"
+        },
+        {
+          "line": 103,
+          "text": "${col(outLine)}${col(srcLine)}${indent}${text}"
+        },
+        {
+          "line": 105,
+          "text": "${BLANK}${BLANK} ${indent}${text}"
+        },
+        {
+          "line": 116,
+          "text": "ensureLineOpen() -> OPENED logical line ${state.line}"
+        },
+        {
+          "line": 118,
+          "text": "ensureLineOpen() -> logical line already open (${state.line})"
+        },
+        {
+          "line": 145,
+          "text": "--- processFile called: depth=${depth} state.line=${state.line} state.open=${state.open} ---"
+        },
+        {
+          "line": 146,
+          "text": "filePath=\"${filePath}\""
+        },
+        {
+          "line": 147,
+          "text": "stack=[${stack.join(\", \")}]"
+        },
+        {
+          "line": 152,
+          "text": "ERROR: Circular include: ${cycle}"
+        },
+        {
+          "line": 154,
+          "text": "CIRCULAR INCLUDE DETECTED!!!"
+        },
+        {
+          "line": 155,
+          "text": "*** ${message} ***"
+        },
+        {
+          "line": 161,
+          "text": "${parentUri}:${parentSrcLineNo}:${parentSrcColNo}"
+        },
+        {
+          "line": 168,
+          "text": "parentFilePath ="
+        },
+        {
+          "line": 169,
+          "text": "filePath ="
+        },
+        {
+          "line": 170,
+          "text": "stack ="
+        },
+        {
+          "line": 173,
+          "text": "checking existence: \"${filePath}\""
+        },
+        {
+          "line": 175,
+          "text": "ERROR: Missing include: \"${filePath}\""
+        },
+        {
+          "line": 177,
+          "text": "ERROR!!! Missing: ${missingUri}"
+        },
+        {
+          "line": 178,
+          "text": "At: ${parentUri}:${parentSrcLineNo}:${parentSrcColNo}"
+        },
+        {
+          "line": 180,
+          "text": "ERROR: FILE NOT FOUND!!!, returning error annotation"
+        },
+        {
+          "line": 181,
+          "text": "*** WARNING: Missing include (\"${missingUri}\") ***"
+        },
+        {
+          "line": 183,
+          "text": "File exists OK"
+        },
+        {
+          "line": 191,
+          "text": "first line preview=\"${srcLines[0].substring(0, 60)}\""
+        },
+        {
+          "line": 192,
+          "text": "last line preview=\"${srcLines[srcLines.length - 1].substring(0, 60)}\""
+        },
+        {
+          "line": 200,
+          "text": "Read and split into logical lines:"
+        },
+        {
+          "line": 201,
+          "text": "raw file read: ${raw.length} bytes"
+        },
+        {
+          "line": 202,
+          "text": "hasFinalNewline=${hasFinalNewline}"
+        },
+        {
+          "line": 203,
+          "text": "split produced: ${srcLines.length} entries"
+        },
+        {
+          "line": 207,
+          "text": "removing synthetic trailing empty line caused by final newline"
+        },
+        {
+          "line": 210,
+          "text": "file does NOT end with newline; keeping final entry"
+        },
+        {
+          "line": 218,
+          "text": "file is physically empty"
+        },
+        {
+          "line": 221,
+          "text": "logical line count finalized, srcTotal=${srcTotal}"
+        },
+        {
+          "line": 228,
+          "text": "outStart=${outStart}"
+        },
+        {
+          "line": 231,
+          "text": "srcLines=${srcLines.length}"
+        },
+        {
+          "line": 236,
+          "text": "processing srcLine ${srcLineNo}/${srcLines.length}"
+        },
+        {
+          "line": 237,
+          "text": "rawLine=\"${rawLine.substring(0, 80)}\""
+        },
+        {
+          "line": 245,
+          "text": "rawLine=\"${rawLine.substring(0, 80)}\""
+        },
+        {
+          "line": 249,
+          "text": "-> INCLUDE directive found \"${match[1]}\" on logical line ${state.line}"
+        },
+        {
+          "line": 269,
+          "text": "includeDir=\"${includeDir}\""
+        },
+        {
+          "line": 270,
+          "text": "includePathResolved=\"${includePathResolved}\""
+        },
+        {
+          "line": 271,
+          "text": "recursing into child depth=${depth + 1}, hasFileNewLine=${hasFinalNewline}"
+        },
+        {
+          "line": 275,
+          "text": "child returned: outStart=${child.outStart}, outEnd=${child.outEnd}, child.srcTotal=${child.srcTotal}, child.hasFinalNewline=${child.hasFinalNewline}"
+        },
+        {
+          "line": 280,
+          "text": "BEGIN [depth:${depth + 1}] ${includePathResolvedUri}"
+        },
+        {
+          "line": 281,
+          "text": "src:${child.srcTotal}"
+        },
+        {
+          "line": 282,
+          "text": "out:${child.outStart}-${child.outEnd}"
+        },
+        {
+          "line": 288,
+          "text": "END [depth:${depth + 1}] ${includePathResolvedUri}"
+        },
+        {
+          "line": 289,
+          "text": "src:${child.srcTotal}"
+        },
+        {
+          "line": 290,
+          "text": "out:${child.outStart}-${child.outEnd}"
+        },
+        {
+          "line": 293,
+          "text": "pushing beginAnnot + child.lines + endAnnot"
+        },
+        {
+          "line": 302,
+          "text": "state.open now ${state.open} after child include"
+        },
+        {
+          "line": 308,
+          "text": "-> normal content line"
+        },
+        {
+          "line": 311,
+          "text": "emitting normal line on logical line ${state.line}"
+        },
+        {
+          "line": 316,
+          "text": "normal line terminated logical line"
+        },
+        {
+          "line": 325,
+          "text": "finished file:"
+        },
+        {
+          "line": 326,
+          "text": "outStart=${outStart}"
+        },
+        {
+          "line": 327,
+          "text": "outEnd=${outEnd}"
+        },
+        {
+          "line": 328,
+          "text": "outLines.length=${outLines.length}"
+        },
+        {
+          "line": 329,
+          "text": "hasFinalNewline=${hasFinalNewline}"
+        },
+        {
+          "line": 341,
+          "text": "--- Preview processing triggered ---"
+        },
+        {
+          "line": 342,
+          "text": "Debug Path=${INI_PATH}"
+        },
+        {
+          "line": 345,
+          "text": "Debug=${isDebugOn}"
+        },
+        {
+          "line": 346,
+          "text": "INI_PATH=\"${INI_PATH}\""
+        },
+        {
+          "line": 347,
+          "text": "isDebugOn=${isDebugOn}"
+        },
+        {
+          "line": 349,
+          "text": "main() started"
+        },
+        {
+          "line": 351,
+          "text": "process.argv = ${JSON.stringify(process.argv)}"
+        },
+        {
+          "line": 353,
+          "text": "args = ${JSON.stringify(args)}"
+        },
+        {
+          "line": 359,
+          "text": "[MyDefrag]"
+        },
+        {
+          "line": 361,
+          "text": "MyDefrag Script Preprocessor"
+        },
+        {
+          "line": 363,
+          "text": "Usage: node mydefrag-preprocess.js <entryFile> [outputFile] [-w]"
+        },
+        {
+          "line": 365,
+          "text": "<entryFile> Path to the root .MyDc script."
+        },
+        {
+          "line": 366,
+          "text": "[outputFile] Optional output path."
+        },
+        {
+          "line": 367,
+          "text": "Defaults to <entryFileName>.merged.MyDc ."
+        },
+        {
+          "line": 368,
+          "text": "[-w] Write the preview file to disk rather than memory."
+        },
+        {
+          "line": 370,
+          "text": "Output columns per content line:"
+        },
+        {
+          "line": 371,
+          "text": "<CompiledScriptLine> <ActualFileScriptLine> <Content>"
+        },
+        {
+          "line": 373,
+          "text": "CompiledScriptLine: running logical merged line number"
+        },
+        {
+          "line": 374,
+          "text": "ActualFileScriptLine: line number within the owning source file"
+        },
+        {
+          "line": 375,
+          "text": "Content: the contents of the script file"
+        },
+        {
+          "line": 377,
+          "text": "BEGIN / END annotations are unnumbered single lines."
+        },
+        {
+          "line": 391,
+          "text": "Entry file not found: ${entryFile}"
+        },
+        {
+          "line": 392,
+          "text": "Entry file does not exist — aborting"
+        },
+        {
+          "line": 400,
+          "text": ".merged$1"
+        },
+        {
+          "line": 411,
+          "text": "Entry file exists OK"
+        },
+        {
+          "line": 412,
+          "text": "outputFile = \"${outputFile}\""
+        },
+        {
+          "line": 413,
+          "text": "writeToFile = \"${writeToFile}\""
+        },
+        {
+          "line": 415,
+          "text": "Entry : \"${entryFile}\""
+        },
+        {
+          "line": 416,
+          "text": "Output : \"${outputFile}\""
+        },
+        {
+          "line": 433,
+          "text": "calling processFile on entry..."
+        },
+        {
+          "line": 436,
+          "text": "processFile for source file returned:"
+        },
+        {
+          "line": 437,
+          "text": "root.outStart=${root.outStart}"
+        },
+        {
+          "line": 438,
+          "text": "root.outEnd=${root.outEnd}"
+        },
+        {
+          "line": 439,
+          "text": "root.srcTotal=${root.srcTotal}"
+        },
+        {
+          "line": 440,
+          "text": "root.hasFinalNewline=${root.hasFinalNewline}"
+        },
+        {
+          "line": 441,
+          "text": "visited set size: ${linkVisited.length}"
+        },
+        {
+          "line": 442,
+          "text": "visitedMissing set size: ${linkVisitedMissing.size}"
+        },
+        {
+          "line": 443,
+          "text": "state.line after processing: ${state.line}"
+        },
+        {
+          "line": 448,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 449,
+          "text": "|MyDefrag Preprocessor — Merged Output"
+        },
+        {
+          "line": 450,
+          "text": "|Generated : ${new Date().toISOString()}"
+        },
+        {
+          "line": 451,
+          "text": "|Entry : ${entryUri}"
+        },
+        {
+          "line": 452,
+          "text": "|Output file : ${outputFile}"
+        },
+        {
+          "line": 453,
+          "text": "|Output lines : ${state.line} (logical merged lines)"
+        },
+        {
+          "line": 454,
+          "text": "|${\"<outLine>\".padStart(COL_W)}${\"<srcLine>\".padStart(COL_W)} <content>"
+        },
+        {
+          "line": 455,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 458,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 459,
+          "text": "|MyDefrag Preprocessor — Merged Output"
+        },
+        {
+          "line": 460,
+          "text": "|Generated : ${new Date().toISOString()}"
+        },
+        {
+          "line": 461,
+          "text": "|Entry : ${entryFile}"
+        },
+        {
+          "line": 462,
+          "text": "|Output lines: ${state.line} (logical merged lines)"
+        },
+        {
+          "line": 463,
+          "text": "|${\"<outLine>\".padStart(COL_W)}${\"<srcLine>\".padStart(COL_W)} <content>"
+        },
+        {
+          "line": 464,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 468,
+          "text": "building footer maps..."
+        },
+        {
+          "line": 471,
+          "text": "|Include Files. (${linkVisited.length} file(s) processed"
+        },
+        {
+          "line": 472,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 480,
+          "text": "|[${String(idx).padStart(3, \"0\")}] ${uri}"
+        },
+        {
+          "line": 481,
+          "text": "|[${String(idx).padStart(3, \"0\")}] \"${f}\""
+        },
+        {
+          "line": 482,
+          "text": "Include file URI=${uri}"
+        },
+        {
+          "line": 487,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 488,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 494,
+          "text": "building missing file map (${linkVisitedMissing.size} files)"
+        },
+        {
+          "line": 503,
+          "text": "|MISSING FILE ERRORS!!! (${linkVisitedMissing.size} file(s) missing)"
+        },
+        {
+          "line": 504,
+          "text": "|Script starts at line ${startLineOfCode}."
+        },
+        {
+          "line": 505,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 523,
+          "text": "${parentUri}:${parentSrcLineNo}:${parentSrcColNo}"
+        },
+        {
+          "line": 524,
+          "text": "${parentFile}:${parentSrcLineNo}:${parentSrcColNo}"
+        },
+        {
+          "line": 525,
+          "text": "${parentUri}:${parentSrcLineNo}"
+        },
+        {
+          "line": 527,
+          "text": "|[${String(idx).padStart(3, \"0\")}] ${missingUri}"
+        },
+        {
+          "line": 528,
+          "text": "| At line ${OutputLine}, file \"${parentUri}\", line ${parentSrcLineNo}, col ${parentSrcColNo}"
+        },
+        {
+          "line": 532,
+          "text": "|[${String(idx).padStart(3, \"0\")}] ${missingFile}"
+        },
+        {
+          "line": 533,
+          "text": "| At line ${OutputLine}, file \"${parentPathWithLine}\""
+        },
+        {
+          "line": 538,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 539,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 543,
+          "text": "no missing include files"
+        },
+        {
+          "line": 546,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 547,
+          "text": "MISSING FILES"
+        },
+        {
+          "line": 548,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 549,
+          "text": "No missing files."
+        },
+        {
+          "line": 550,
+          "text": "|${\"═\".repeat(72)}"
+        },
+        {
+          "line": 568,
+          "text": "Console footer length=${footerOutput.length} and in document=${footer.length}"
+        },
+        {
+          "line": 577,
+          "text": "writing to: \"${outputFile}\""
+        },
+        {
+          "line": 582,
+          "text": "writeFileSync WRITE FAILED: ${errResult.message}"
+        },
+        {
+          "line": 583,
+          "text": "writeFileSync ERROR writing output: ${errResult.message}"
+        },
+        {
+          "line": 584,
+          "text": "writeFileSync WRITE FAILED: ${errResult.message}"
+        },
+        {
+          "line": 591,
+          "text": "output file confirmed on disk: ${writtenSize} bytes"
+        },
+        {
+          "line": 593,
+          "text": "output file NOT found after write — something is very wrong"
+        },
+        {
+          "line": 597,
+          "text": "creating memory resident preview: \"${outputFile}\""
+        },
+        {
+          "line": 602,
+          "text": "Done. ${linkVisited.length} file(s), ${state.line} logical merged lines."
+        },
+        {
+          "line": 603,
+          "text": "${linkVisitedMissing.size} file(s) are missing."
+        },
+        {
+          "line": 605,
+          "text": "Output written to: \"${outputFile}\""
+        },
+        {
+          "line": 607,
+          "text": "Output written to stdout (preview mode)"
+        },
+        {
+          "line": 609,
+          "text": "main() done"
+        }
+      ],
+      "file": "src/preprocess/mydefrag-preprocess.js",
+      "status": "scanned"
+    },
+    {
+      "candidateCount": 7,
+      "candidates": [
+        {
+          "line": 1,
+          "text": "use strict"
+        },
+        {
+          "line": 162,
+          "text": "MyDefrag: Treating current diagnostic as likely parser/classification issue: ${item.message}"
+        },
+        {
+          "line": 173,
+          "text": "MyDefrag: Wrote AI diagnostic prompt to ${paths.diagnosticsSendPromptFile}"
+        },
+        {
+          "line": 184,
+          "text": "MyDefrag: Wrote AI diagnostic prompt to ${result.promptFile}"
+        },
+        {
+          "line": 195,
+          "text": "MyDefrag diagnostic navigation failed to load: ${err.message}"
+        },
+        {
+          "line": 247,
+          "text": "$(warning) MyDefrag ${index + 1}/${total}"
+        },
+        {
+          "line": 250,
+          "text": "Open current MyDefrag diagnostic"
+        }
+      ],
+      "file": "src/diagnostics/registerDiagnosticNavigation.js",
+      "status": "scanned"
+    },
+    {
+      "candidateCount": 47,
+      "candidates": [
+        {
+          "line": 1,
+          "text": "use strict"
+        },
+        {
+          "line": 104,
+          "text": "Failed to load diagnostics: ${err.message}"
+        },
+        {
+          "line": 375,
+          "text": "Diagnostic prompt copied to clipboard."
+        },
+        {
+          "line": 412,
+          "text": "Diagnostic prompt copied to clipboard."
+        },
+        {
+          "line": 465,
+          "text": "# MyDefrag Language Extension"
+        },
+        {
+          "line": 467,
+          "text": "## Developer comments"
+        },
+        {
+          "line": 471,
+          "text": "## Diagnostic Repair Request"
+        },
+        {
+          "line": 473,
+          "text": "You are assisting in the development of the MyDefrag Language Extension."
+        },
+        {
+          "line": 475,
+          "text": "Your objective is to determine whether the current diagnostic is caused by:"
+        },
+        {
+          "line": 477,
+          "text": "1. Invalid MyDefrag script syntax."
+        },
+        {
+          "line": 478,
+          "text": "2. A tokenizer defect."
+        },
+        {
+          "line": 479,
+          "text": "3. A parser defect."
+        },
+        {
+          "line": 480,
+          "text": "4. Incorrect languageData metadata."
+        },
+        {
+          "line": 481,
+          "text": "5. An incorrect diagnostic."
+        },
+        {
+          "line": 482,
+          "text": "6. A navigation or classification bug."
+        },
+        {
+          "line": 484,
+          "text": "When proposing code changes:"
+        },
+        {
+          "line": 486,
+          "text": "- Preserve all existing comments."
+        },
+        {
+          "line": 487,
+          "text": "- Preserve formatting."
+        },
+        {
+          "line": 488,
+          "text": "- Make the smallest possible safe change."
+        },
+        {
+          "line": 489,
+          "text": "- Do not refactor unrelated code."
+        },
+        {
+          "line": 490,
+          "text": "- Explain the root cause before proposing a fix."
+        },
+        {
+          "line": 491,
+          "text": "- If multiple fixes are possible, recommend the safest one."
+        },
+        {
+          "line": 495,
+          "text": "## Diagnostic"
+        },
+        {
+          "line": 497,
+          "text": "File: ${diagnostic.filePath}"
+        },
+        {
+          "line": 498,
+          "text": "Line: ${diagnostic.oneBasedLine}"
+        },
+        {
+          "line": 499,
+          "text": "Column: ${diagnostic.oneBasedColumn}"
+        },
+        {
+          "line": 500,
+          "text": "Severity: ${diagnostic.severity}"
+        },
+        {
+          "line": 501,
+          "text": "Message: ${diagnostic.message}"
+        },
+        {
+          "line": 502,
+          "text": "Token: ${diagnostic.token || \"(not detected)\"}"
+        },
+        {
+          "line": 503,
+          "text": "Known Keyword: ${diagnostic.keywordExists ? \"Yes\" : \"No\"}"
+        },
+        {
+          "line": 507,
+          "text": "## Investigation"
+        },
+        {
+          "line": 509,
+          "text": "Determine:"
+        },
+        {
+          "line": 511,
+          "text": "- What the parser was expecting."
+        },
+        {
+          "line": 512,
+          "text": "- Why the diagnostic was produced."
+        },
+        {
+          "line": 513,
+          "text": "- Whether the script is valid."
+        },
+        {
+          "line": 514,
+          "text": "- Whether the language extension is correct."
+        },
+        {
+          "line": 518,
+          "text": "## Expected Response"
+        },
+        {
+          "line": 520,
+          "text": "Please provide:"
+        },
+        {
+          "line": 522,
+          "text": "1. Root cause."
+        },
+        {
+          "line": 523,
+          "text": "2. Recommended fix."
+        },
+        {
+          "line": 524,
+          "text": "3. Files requiring modification."
+        },
+        {
+          "line": 525,
+          "text": "4. Exact code changes."
+        },
+        {
+          "line": 526,
+          "text": "5. Any risks or side effects."
+        },
+        {
+          "line": 530,
+          "text": "## Diagnostic JSON"
+        },
+        {
+          "line": 532,
+          "text": "```json"
+        },
+        {
+          "line": 598,
+          "text": "file:///"
+        },
+        {
+          "line": 620,
+          "text": ").replace(/\\\\/g,"
+        }
+      ],
+      "file": "src/diagnostics/diagnosticNavigator.js",
+      "status": "scanned"
+    },
+    {
+      "candidateCount": 18,
+      "candidates": [
+        {
+          "line": 1,
+          "text": "use strict"
+        },
+        {
+          "line": 54,
+          "text": "Diagnostics: ${stats.index}/${totalDiagnosticCount}/${totalMessageCount} (${stats.total} remaining, ${stats.fileCount}/${totalTraversableFileCount}/${totalFileCount} files, fixed ${stateCounts.fixed}, ignored ${stateCounts.ignored}, skipped ${stateCounts.skipped})"
+        },
+        {
+          "line": 68,
+          "text": "No eligible diagnostics"
+        },
+        {
+          "line": 73,
+          "text": "Reset dismissed diagnostics"
+        },
+        {
+          "line": 88,
+          "text": "Line ${current.oneBasedLine}, Column ${current.oneBasedColumn}"
+        },
+        {
+          "line": 94,
+          "text": "Line ${current.oneBasedLine}, Column ${current.oneBasedColumn}"
+        },
+        {
+          "line": 98,
+          "text": "Severity ${current.severity}"
+        },
+        {
+          "line": 104,
+          "text": "Severity ${current.severity}"
+        },
+        {
+          "line": 108,
+          "text": "Diagnostic: ${current.message}"
+        },
+        {
+          "line": 118,
+          "text": "Keyword/token: ${current.token} (${current.keywordExists ? 'known' : 'unknown'})"
+        },
+        {
+          "line": 119,
+          "text": "Keyword/token: not detected"
+        },
+        {
+          "line": 131,
+          "text": "Get next"
+        },
+        {
+          "line": 137,
+          "text": "Next file"
+        },
+        {
+          "line": 138,
+          "text": "Previous file"
+        },
+        {
+          "line": 139,
+          "text": "Go to top"
+        },
+        {
+          "line": 140,
+          "text": "Reset dismissed diagnostics"
+        },
+        {
+          "line": 158,
+          "text": "Copied diagnostic explorer text: ${copyText}"
+        },
+        {
+          "line": 211,
+          "text": ").replace(/\\\\/g,"
+        }
+      ],
+      "file": "src/diagnostics/diagnosticTreeProvider.js",
+      "status": "scanned"
+    }
+  ],
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "note": "This report is a conservative candidate inventory. It is not a behavior change and does not imply every string should be cataloged.",
+  "title": "Hard-coded human-facing strings remaining"
+}

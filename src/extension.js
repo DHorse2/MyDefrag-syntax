@@ -31,6 +31,8 @@ const paths = require('./shared/path');
 paths.ensureDirectories();
 const util = require('./utilities/util')
 const Logger = require('./shared/logger');
+const languageData = require('./server/languageData');
+const { CompletionPointProvider } = require('./completion/completionPointProvider');
 const { registerDiagnosticNavigation } = require('./diagnostics/registerDiagnosticNavigation');
 
 const channelName = 'MyDefrag Syntax';
@@ -204,15 +206,51 @@ vscode.languages.onDidChangeDiagnostics((event) => {
     }
 });
 
-function findFileWalkingUp(startDir, filePath) {
+/**
+ * Yields provider work back to the extension host event loop.
+ *
+ * @returns {Promise<void>}
+ */
+function yieldToEventLoop() {
+    return new Promise(resolve => setImmediate(resolve));
+}
+
+/**
+ * Checks whether a path exists without blocking the extension host.
+ *
+ * @param {string} filePath Path to check.
+ * @returns {Promise<boolean>} True when the path exists.
+ */
+async function pathExists(filePath) {
+    try {
+        await fs.promises.access(filePath);
+        return true;
+    } catch {
+        return false;
+    }
+}
+
+/**
+ * Searches for a file from the starting directory upward.
+ *
+ * @param {string} startDir Directory to start from.
+ * @param {string} filePath Relative file path to locate.
+ * @param {vscode.CancellationToken} [token] Optional cancellation token.
+ * @returns {Promise<{foundPath: string|null, directLinkValid: boolean, stepsUpward: number}>}
+ */
+async function findFileWalkingUp(startDir, filePath, token) {
     let dir = startDir;
     const root = path.parse(dir).root; // e.g. "D:\"
     let directLinkValid = true;
     let stepsUpward = 0;
     while (true) {
-        logger.info(`Next candidate: ${dir}, and ${filePath}`); // Debug only
+        if (token?.isCancellationRequested) {
+            return { foundPath: null, directLinkValid: false, stepsUpward };
+        }
+
+        logger.info(null, `Next candidate: ${dir}, and ${filePath}`); // Debug only
         const candidate = path.resolve(dir, filePath).replace(/\//g, '\\');
-        if (fs.existsSync(candidate)) {
+        if (await pathExists(candidate)) {
             return { foundPath: candidate, directLinkValid, stepsUpward };
         }
         // Stop if we've reached the root
@@ -227,8 +265,57 @@ function findFileWalkingUp(startDir, filePath) {
 }
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
+/**
+ * Builds a table of zero-based line start offsets for a text buffer.
+ *
+ * @param {string} text Text to inspect.
+ * @returns {number[]} Line start offsets.
+ */
+function getLineStarts(text) {
+    const lineStarts = [0];
+
+    for (let i = 0; i < text.length; i++) {
+        if (text.charCodeAt(i) === 10) {
+            lineStarts.push(i + 1);
+        }
+    }
+
+    return lineStarts;
+}
+
+/**
+ * Converts a text offset to a VS Code position without opening a document.
+ *
+ * @param {string} text Text to inspect.
+ * @param {number[]} lineStarts Line start offsets.
+ * @param {number} offset Text offset.
+ * @returns {vscode.Position} Position for the offset.
+ */
+function positionAtTextOffset(text, lineStarts, offset) {
+    const boundedOffset = Math.max(0, Math.min(offset, text.length));
+    let low = 0;
+    let high = lineStarts.length - 1;
+
+    while (low <= high) {
+        const mid = Math.floor((low + high) / 2);
+        const start = lineStarts[mid];
+        const nextStart = mid + 1 < lineStarts.length ? lineStarts[mid + 1] : text.length + 1;
+
+        if (boundedOffset < start) {
+            high = mid - 1;
+        } else if (boundedOffset >= nextStart) {
+            low = mid + 1;
+        } else {
+            return new vscode.Position(mid, boundedOffset - start);
+        }
+    }
+
+    const lastLine = Math.max(0, lineStarts.length - 1);
+    return new vscode.Position(lastLine, boundedOffset - lineStarts[lastLine]);
+}
+
 // Search all .MyDc / .MyD files in the workspace for a regex pattern.
-async function searchWorkspace(pattern) {
+async function searchWorkspace(pattern, token) {
     // Returns an array of vscode.Location objects.
     const locations = [];
 
@@ -236,24 +323,52 @@ async function searchWorkspace(pattern) {
     const uris = await vscode.workspace.findFiles('**/*.{MyDc,MyD}', '**/node_modules/**');
 
     for (const uri of uris) {
-        const doc = await vscode.workspace.openTextDocument(uri);
-        const text = doc.getText();
+        if (token?.isCancellationRequested) {
+            return locations;
+        }
+
+        const relPath = vscode.workspace.asRelativePath(uri);
+        if (util.isExcluded(relPath, excludeConfig, logger)) {
+            continue;
+        }
+
+        let text;
+        try {
+            const bytes = await vscode.workspace.fs.readFile(uri);
+            text = Buffer.from(bytes).toString('utf8');
+        } catch (errResult) {
+            logger?.warn?.(`searchWorkspace: Unable to read ${uri.toString()}: ${errResult.message}`);
+            continue;
+        }
+
+        const lineStarts = getLineStarts(text);
         let match;
 
         // Reset lastIndex each call since we reuse the regex
         pattern.lastIndex = 0;
 
         while ((match = pattern.exec(text)) !== null) {
-            const pos = doc.positionAt(match.index);
             // Highlight just the variable name, not the whole match
             const nameIndex = match.index + match[0].indexOf(match[1]);
-            const start = doc.positionAt(nameIndex);
-            const end = doc.positionAt(nameIndex + match[1].length);
+            const start = positionAtTextOffset(text, lineStarts, nameIndex);
+            const end = positionAtTextOffset(text, lineStarts, nameIndex + match[1].length);
             locations.push(new vscode.Location(uri, new vscode.Range(start, end)));
         }
+
+        await yieldToEventLoop();
     }
 
     return locations;
+}
+// ─────────────────────────────────────────────────────────────────────────────────
+// Load log and user paths
+function configureMyDefragPaths() {
+    const settings = vscode.workspace.getConfiguration('mydfrg');
+
+    paths.configurePaths({
+        userDir: settings.get('userDir'),
+        logDir: settings.get('logDir')
+    });
 }
 // ─────────────────────────────────────────────────────────────────────────────────
 //#region Extension activate/deactivate .Parse
@@ -268,6 +383,7 @@ async function activate(context) {
     const path = require('path');
     const fs = require('fs');
 
+    configureMyDefragPaths();
     // const logDir = path.join(context.globalStorageUri.fsPath, "log");
     const logDir = paths.logDir;
 
@@ -295,6 +411,48 @@ async function activate(context) {
     let providerRegistration;
     let openCmd;
     let batLinkProvider;
+    let inlineCompletionProvider;
+    let inlineCompletionRegistration;
+
+    function isDiagnosticsDocument(document) {
+        return document?.uri?.scheme === 'file' &&
+            (document.languageId === 'mydfrg' || document.languageId === 'bat');
+    }
+
+    function clearClientDiagnostics() {
+        diagnosticCollection.clear();
+
+        for (const document of vscode.workspace.textDocuments) {
+            if (isDiagnosticsDocument(document)) {
+                diagnosticCollection.delete(document.uri);
+            }
+        }
+    }
+
+    function buildServerSettingsPayload() {
+        const mydfrg = vscode.workspace.getConfiguration('mydfrg');
+
+        return {
+            mydfrg: {
+                exclude: mydfrg.get('exclude') || [],
+                debugOn: mydfrg.get('debugOn'),
+                verboseLevel: mydfrg.get('verboseLevel'),
+                referenceRelativePathLevel: mydfrg.get('referenceRelativePathLevel'),
+                referenceContainsMacros: mydfrg.get('referenceContainsMacros'),
+                referenceFileFoundLevel: mydfrg.get('referenceFileFoundLevel'),
+                referenceFileNotFoundLevel: mydfrg.get('referenceFileNotFoundLevel'),
+                fragmentParentLevel: mydfrg.get('fragmentParentLevel')
+            },
+            files: {
+                exclude: vscode.workspace.getConfiguration('files').get('exclude') || {}
+            },
+            search: {
+                exclude: vscode.workspace.getConfiguration('search').get('exclude') || {}
+            }
+        };
+    }
+
+    // ========================================================================================
     //#endregion
     try { // ---- Initialization ----
         try { // VSCodium Settings Init
@@ -323,7 +481,7 @@ async function activate(context) {
             });
             if (iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Warning, loggedMessages, iniErrors) }
             console?.log(iniData);
-            logger.info("MYDC EXTENSION INITIALIZED");
+            logger.info(null, "MYDC EXTENSION INITIALIZED");
             // ─────────────────────────────────────────────────────────────────────────────────
             ParserStateBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
             ParserStateBar.text = `MyDefrag Unknown document type`;
@@ -359,7 +517,7 @@ async function activate(context) {
         definitionProvider = vscode.languages.registerDefinitionProvider(
             { language: 'mydfrg' },
             {
-                async provideDefinition(document, position) {
+                async provideDefinition(document, position, token) {
                     const range = document.getWordRangeAtPosition(position, /\w+/);
                     if (!range) return;
                     const word = document.getText(range);
@@ -370,7 +528,7 @@ async function activate(context) {
                         'g'
                     );
 
-                    const locations = await searchWorkspace(pattern);
+                    const locations = await searchWorkspace(pattern, token);
                     return locations;   // single result jumps directly; multiple shows a picker
                 }
             }
@@ -381,7 +539,7 @@ async function activate(context) {
         referenceProvider = vscode.languages.registerReferenceProvider(
             { language: 'mydfrg' },
             {
-                async provideReferences(document, position, context) {
+                async provideReferences(document, position, context, token) {
                     const range = document.getWordRangeAtPosition(position, /\w+/);
                     if (!range) return;
                     const word = document.getText(range);
@@ -389,11 +547,32 @@ async function activate(context) {
                     // Match any standalone occurrence of the word (as a whole word)
                     const pattern = new RegExp(`\\b(${escapeRegex(word)})\\b`, 'g');
 
-                    const locations = await searchWorkspace(pattern);
+                    const locations = await searchWorkspace(pattern, token);
                     return locations;
                 }
             }
         );
+        // ── Inline Completions ───────────────────────────────────────────────────────────
+        inlineCompletionProvider = new CompletionPointProvider({
+            vscode,
+            languageData,
+            logger,
+            config
+        });
+        inlineCompletionRegistration = vscode.languages.registerInlineCompletionItemProvider(
+            { language: 'mydfrg' },
+            {
+                provideInlineCompletionItems(document, position, context, token) {
+                    return inlineCompletionProvider.provide({
+                        document,
+                        position,
+                        context,
+                        token
+                    });
+                }
+            }
+        );
+        logger.dbg(4, 'Inline completion provider registered');
         // ── Document Links (Ctrl+Click on includes) ─────────────────────────────
         // Triggered by Ctrl+Click or hovering the path in an !include "..."! line.
         // Resolves the relative path to an absolute URI so VSCodium can open it.
@@ -401,12 +580,16 @@ async function activate(context) {
             { language: 'mydfrg' },
             {
                 onDidChangeDocumentLinks: linkChangeEmitter.event,
-                provideDocumentLinks(document) {
+                async provideDocumentLinks(document, token) {
+                    await yieldToEventLoop();
+                    if (token?.isCancellationRequested) {
+                        return [];
+                    }
+
                     // filePath = document.fileName;
-                    filePath = fileURLToPath(document.uri.toString());
-                    ext = path.extname(filePath).toLowerCase();
-                    text = document.getText();
-                    relPath = vscode.workspace.asRelativePath(document.uri);
+                    const filePath = fileURLToPath(document.uri.toString());
+                    const text = document.getText();
+                    const relPath = vscode.workspace.asRelativePath(document.uri);
                     // Check if file is excluded
                     if (util.isExcluded(relPath, excludeConfig, logger)) {
                         diagnosticCollection.set(document.uri, []);
@@ -414,16 +597,16 @@ async function activate(context) {
                     }
                     // Process file
                     if (verboseLevel >= 5) {
-                        logger.info(`.`);
-                        logger.info(`MYDC EXTENSION LINKS Provider for ${filePath}, language: mydfrg`);
+                        logger.info(null, `.`);
+                        logger.info(null, `MYDC EXTENSION LINKS Provider for ${filePath}, language: mydfrg`);
                         if (verboseLevel >= 8) {
-                            logger.info('provideDocumentLinks called for', document.uri.toString());
+                            logger.info(null, 'provideDocumentLinks called for', document.uri.toString());
                             console.trace(); // shows the call stack — reveals if it's two different VS Code internal callers
                         }
                     }
-                    includeLinks = [];
-                    fileLinks = [];
-                    commandLinks = [];
+                    const includeLinks = [];
+                    const fileLinks = [];
+                    const commandLinks = [];
                     let isDuplicate = false;
                     const toZeroBased = (s) => parseInt(s) - 1;
 
@@ -537,11 +720,15 @@ async function activate(context) {
                     // ── Document INCLUDE Links ─────────────────────────────
                     const pattern = /!include\s+"([^"]+)"!/g;
 
-                    logger.info(`Processing File: ${document.fileName}`);
+                    logger.info(null, `Processing File: ${document.fileName}`);
                     let match;
                     let linkSet = false;
 
                     while ((match = pattern.exec(text)) !== null) {
+                        if (token?.isCancellationRequested) {
+                            return [];
+                        }
+
                         const includePath = match[1];
                         const quoteStart = match.index + match[0].indexOf('"') + 1;
                         const start = document.positionAt(quoteStart);
@@ -569,11 +756,19 @@ async function activate(context) {
                         }
                         linkSet = true;
                     }
-                    // logger.info(`Number of INCLUDE links: ${includeLinks.length}`);
+                    // logger.info(null, `Number of INCLUDE links: ${includeLinks.length}`);
 
                     // ── Document FILE Links ─────────────────────────────
                     const lineRe = /file:\/\/\/([^:\s]+):(\d+):(\d+)/g;
                     for (let i = 0; i < document.lineCount; i++) {
+                        if (token?.isCancellationRequested) {
+                            return [];
+                        }
+
+                        if (i > 0 && i % 100 === 0) {
+                            await yieldToEventLoop();
+                        }
+
                         const lineText = docLine(i, {
                             caller: 'fileUriLinkScan',
                             parentFile: document.uri.fsPath,
@@ -603,11 +798,15 @@ async function activate(context) {
                             }
                         }
                     }
-                    // logger.info(`Number of FILE links: ${fileLinks.length}`);
+                    // logger.info(null, `Number of FILE links: ${fileLinks.length}`);
 
                     // ── Document BATCH/Command Links ─────────────────────────────
                     const execPattern = /\s*"([^"]*\.(?:bat|My\w+|cmd|exe|com)[^"]*)"\s*/gi;
                     while ((match = execPattern.exec(text)) !== null) {
+                        if (token?.isCancellationRequested) {
+                            return [];
+                        }
+
                         const execPath = filePathMatch(match);
                         const quoteStart = text.indexOf('"', match.index) + 1; // skip past opening quote
                         const start = document.positionAt(quoteStart);
@@ -629,9 +828,9 @@ async function activate(context) {
                             })}`);
                         }
                     }
-                    // logger.info(`Number of BATCH & command links: ${commandLinks.length}`);
+                    // logger.info(null, `Number of BATCH & command links: ${commandLinks.length}`);
                     // Finish 
-                    logger.info(`includeLinks ${includeLinks.length}, fileLinks ${fileLinks.length}, commandLinks ${commandLinks.length}, EXCLUDED folders ${excludeConfig.folderCount}, files ${excludeConfig.fileCount}, search ${excludeConfig.searchCount}.`);
+                    logger.info(null, `includeLinks ${includeLinks.length}, fileLinks ${fileLinks.length}, commandLinks ${commandLinks.length}, EXCLUDED folders ${excludeConfig.folderCount}, files ${excludeConfig.fileCount}, search ${excludeConfig.searchCount}.`);
                     diagnosticCollection.set(document.uri, internalDiagnostics);
                     return [...includeLinks, ...fileLinks, ...commandLinks];
                     // return links;
@@ -656,18 +855,22 @@ async function activate(context) {
             { language: 'bat' },
             {
                 onDidChangeDocumentLinks: linkChangeEmitter.event,
-                provideDocumentLinks(document) {
-                    filePath = fileURLToPath(document.uri.toString());
-                    ext = path.extname(filePath).toLowerCase();
-                    text = document.getText();
-                    relPath = vscode.workspace.asRelativePath(document.uri);
+                async provideDocumentLinks(document, token) {
+                    await yieldToEventLoop();
+                    if (token?.isCancellationRequested) {
+                        return [];
+                    }
+
+                    const filePath = fileURLToPath(document.uri.toString());
+                    const text = document.getText();
+                    const relPath = vscode.workspace.asRelativePath(document.uri);
                     if (util.isExcluded(relPath, excludeConfig, logger)) {
                         diagnosticCollection.set(document.uri, []);
                         return [];
                     }
 
-                    logger.info(`MYDC EXTENSION BATCH LINK Provider for ${filePath}, language: mydfrg`);
-                    batchFileCommandLinks = [];
+                    logger.info(null, `MYDC EXTENSION BATCH LINK Provider for ${filePath}, language: mydfrg`);
+                    const batchFileCommandLinks = [];
                     let diagnostics = [];
                     const currentDir = path.dirname(document.uri.fsPath);
                     let headingDone = false;
@@ -677,8 +880,12 @@ async function activate(context) {
                     let match;
 
                     while ((match = execPattern.exec(text)) !== null) {
+                        if (token?.isCancellationRequested) {
+                            return [];
+                        }
+
                         if (!headingDone) {
-                            logger.info(headingText + '\n.\n');
+                            logger.info(null, headingText + '\n.\n');
                             headingDone = true;
                         }
                         const filePath = match[1];
@@ -691,13 +898,17 @@ async function activate(context) {
                         const dir = path.dirname(absolutePath);
                         const base = path.basename(absolutePath);
                         logger.dbg(3, `File name is: (`, filePath, `)`);
-                        logger.info(`BATCH file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`);
+                        logger.info(null, `BATCH file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`);
                         const lineNum = start.line + 1;
                         const colNum = start.character + 1;
                         const hasMacro = (filePath.match(/!/g) || []).length >= 2;
 
                         // Validate file (and search upward when missing)
-                        const { foundPath, directLinkValid, stepsUpward } = findFileWalkingUp(currentDir, filePath);
+                        const { foundPath, directLinkValid, stepsUpward } = await findFileWalkingUp(currentDir, filePath, token);
+                        if (token?.isCancellationRequested) {
+                            return [];
+                        }
+
                         let batMessage = "No message available";
                         let severity = 4;
                         if (foundPath) {
@@ -734,7 +945,7 @@ async function activate(context) {
                             if (!loggedMessages.has(batMessage)) {
                                 loggedMessages.add(batMessage);
                                 logger.message(thisSeverity, batMessage)
-                                // logger.info(batMessage + '\n.\n');
+                                // logger.info(null, batMessage + '\n.\n');
                             }
                         }
                         // For debugging only, formatted for console?.log
@@ -754,7 +965,7 @@ async function activate(context) {
                         batchFileCommandLinks.push(new vscode.DocumentLink(range, vscode.Uri.file(absolutePath)));
                     }
 
-                    logger.info(`Number of BATCH batchFileCommandLinks: ${commandLinks.length}`);
+                    logger.info(null, `Number of BATCH batchFileCommandLinks: ${commandLinks.length}`);
                     diagnosticCollection.set(document.uri, diagnostics);
                     return batchFileCommandLinks;
                 }
@@ -764,6 +975,70 @@ async function activate(context) {
     } catch (errResult) {
         console?.error(`extension.js:activate Unexpected error activating extension: ${errResult.message}`);
     }
+    // ─────────────────────────────────────────────────────────────────────────────────
+    // Configure folders
+    const configureFolders = vscode.commands.registerCommand(
+        'mydfrg.configureFolders',
+        async () => {
+            const settings = vscode.workspace.getConfiguration('mydfrg');
+
+            const choice = await vscode.window.showQuickPick(
+                [
+                    {
+                        label: 'User Directory',
+                        setting: 'userDir',
+                        description: settings.get('userDir') || '.user'
+                    },
+                    {
+                        label: 'Log Directory',
+                        setting: 'logDir',
+                        description: settings.get('logDir') || '.user/logs'
+                    }
+                ],
+                {
+                    title: 'MyDefrag: Configure Folders',
+                    placeHolder: 'Select the folder setting to update'
+                }
+            );
+
+            if (!choice) {
+                return;
+            }
+
+            const currentValue = settings.get(choice.setting) || paths.DEFAULTS[choice.setting];
+            const resolvedPath = paths.resolveFromProjectRoot
+                ? paths.resolveFromProjectRoot(currentValue)
+                : path.isAbsolute(currentValue)
+                    ? currentValue
+                    : path.join(paths.projectRoot, currentValue);
+
+            const selected = await vscode.window.showOpenDialog({
+                title: `Select ${choice.label}`,
+                defaultUri: vscode.Uri.file(resolvedPath),
+                canSelectFiles: false,
+                canSelectFolders: true,
+                canSelectMany: false
+            });
+
+            if (!selected || selected.length === 0) {
+                return;
+            }
+
+            await settings.update(
+                choice.setting,
+                selected[0].fsPath,
+                vscode.ConfigurationTarget.Workspace
+            );
+
+            vscode.window.showInformationMessage(
+                `MyDefrag: ${choice.label} set to ${selected[0].fsPath}`
+            );
+
+            configureMyDefragPaths();
+            paths.ensureDirectories();
+
+        }
+    );
     // ─────────────────────────────────────────────────────────────────────────────────
     // Open Settings
     const openSettings = vscode.commands.registerCommand(
@@ -805,7 +1080,7 @@ async function activate(context) {
             if (result.stderr.length) {
                 logger.err(null, `Error, in preparing preview summary!`, result.stderr);
             } else {
-                logger.info(`Finished preview summary!`)
+                logger.info(null, `Finished preview summary!`)
             }
             // ─────────────────────────────────────────────────────────────────────────────────
             // Error Handling  ─────────────────────────────────────────────────────────────────
@@ -848,7 +1123,7 @@ async function activate(context) {
         provideTextDocumentContent(uri) {
             const mergedPath = uri.fsPath;
             const sourcePath = mergedPath.replace(/\.merged(\.\w+)$/, '$1');
-            logger.info(`Preview source: ${sourcePath}\n`);
+            logger.info(null, `Preview source: ${sourcePath}\n`);
             return generatePreview(sourcePath);
             // return generatePreview(uri.fsPath);
         }
@@ -856,7 +1131,7 @@ async function activate(context) {
     const previewProvider = new MyPreviewProvider();
     // ─────────────────────────────────────────────────────────────────────────────────
     // Register Diagnostic Explorer
-    registerDiagnosticNavigation(context);
+    const diagnosticNavigation = registerDiagnosticNavigation(context);
     // ─────────────────────────────────────────────────────────────────────────────────
     // Text Document Content Provider
     providerRegistration = vscode.workspace.registerTextDocumentContentProvider(
@@ -944,7 +1219,10 @@ async function activate(context) {
             connection?.appendLine?.(msg.message);
         }
     });
-    const settingsChangeListener = vscode.workspace.onDidChangeConfiguration(event => {
+    client.onNotification('mydfrg/diagnosticsSnapshotChanged', async () => {
+        await diagnosticNavigation?.refresh?.();
+    });
+    const settingsChangeListener = vscode.workspace.onDidChangeConfiguration(async event => {
         if (
             event.affectsConfiguration('mydfrg') ||
             event.affectsConfiguration('files.exclude') ||
@@ -952,7 +1230,18 @@ async function activate(context) {
         ) {
             loadExcludeConfig();
             applyMyDefragConfig(loadMyDefragConfig());
+
+            logger = Logger.createLogger(channelName, source, config, {
+                outputChannel: connection,
+                filePath: paths.client
+            });
+
+            clearClientDiagnostics();
+
+            loggedMessages.clear();
             linkChangeEmitter.fire();
+
+            await vscode.commands.executeCommand('mydfrg.diagnostics.refresh');
         }
     });
     // ─────────────────────────────────────────────────────────────────────────────────
@@ -961,10 +1250,12 @@ async function activate(context) {
     context.subscriptions.push(providerRegistration);
     context.subscriptions.push(definitionProvider);
     context.subscriptions.push(referenceProvider);
+    context.subscriptions.push(inlineCompletionRegistration);
     context.subscriptions.push(linkProvider);
     context.subscriptions.push(batLinkProvider);
     context.subscriptions.push(openPreviewCommand);
     context.subscriptions.push(openCmd);
+    context.subscriptions.push(configureFolders);
     context.subscriptions.push(openSettings);
     context.subscriptions.push(docChangeListener, docCloseListener, linkChangeEmitter);
     context.subscriptions.push(settingsChangeListener);
@@ -982,13 +1273,16 @@ async function activate(context) {
     //     uri: document.uri,
     //     diagnostics
     // });
-    client.onNotification('mydefrag/parserStateChanged', (params) => {
+    client.onNotification('mydfrg/parserState', (params) => {
         const activeUri = vscode.window.activeTextEditor?.document.uri.toString();
         // params.uri === vscode.window.activeTextEditor?.document.uri.toString();
         if (params.uri !== activeUri) {
             return; // ignore updates for documents that aren't currently active
         }
         const labels = {
+            0: 'MyDefrag Script (.myd)',
+            1: 'MyDefrag Fragment (.mydc)',
+            2: 'MyDefrag Unknown document type',
             myd: 'MyDefrag Script (.myd)',
             mydc: 'MyDefrag Fragment (.mydc)',
             unknown: 'MyDefrag Unknown document type'

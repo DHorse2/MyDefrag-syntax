@@ -112,7 +112,6 @@ $ExcludeDirs = @(
     ".vscode",
     ".vs",
     ".idea",
-    "node_modules",
     "dist",
     "out",
     "tmp",

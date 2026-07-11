@@ -1,0 +1,63 @@
+{
+  "component": "extension",
+  "entries": {
+    "extension.command.configureFolders.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "draft",
+      "text": "MyDefrag: Configure Folders"
+    },
+    "extension.command.openPreview.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "native-review-required",
+      "text": "打开预览"
+    },
+    "extension.command.openSettings.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "native-review-required",
+      "text": "MyDefrag：打开设置"
+    },
+    "extension.message.noActiveDocument.warning": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "No MyDefrag document is active."
+    },
+    "extension.product.displayName": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "draft",
+      "text": "MyDefrag Script (.MyDc / .MyD)"
+    },
+    "extension.status.parser.fragment.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "MyDefrag Fragment (.mydc)"
+    },
+    "extension.status.parser.script.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "MyDefrag Script (.myd)"
+    },
+    "extension.status.parser.unknown.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "MyDefrag Unknown document type"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "zh-Hans"
+}

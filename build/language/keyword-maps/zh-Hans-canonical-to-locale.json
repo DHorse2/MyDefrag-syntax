@@ -1,0 +1,122 @@
+{
+  "Defragment": {
+    "fallbackLocale": null,
+    "id": "fileAction.defragment",
+    "status": "native-review-required",
+    "text": "整理碎片"
+  },
+  "DirectoryName": {
+    "fallbackLocale": "en",
+    "id": "fileCondition.directoryName",
+    "status": "draft",
+    "text": "DirectoryName"
+  },
+  "ExcludeFiles": {
+    "fallbackLocale": "en",
+    "id": "script.excludeFiles",
+    "status": "draft",
+    "text": "ExcludeFiles"
+  },
+  "ExcludeVolumes": {
+    "fallbackLocale": "en",
+    "id": "script.excludeVolumes",
+    "status": "draft",
+    "text": "ExcludeVolumes"
+  },
+  "FastFill": {
+    "fallbackLocale": "en",
+    "id": "fileAction.fastFill",
+    "status": "draft",
+    "text": "FastFill"
+  },
+  "FileActions": {
+    "fallbackLocale": "en",
+    "id": "structure.fileActions",
+    "status": "draft",
+    "text": "FileActions"
+  },
+  "FileEnd": {
+    "fallbackLocale": "en",
+    "id": "structure.fileEnd",
+    "status": "draft",
+    "text": "FileEnd"
+  },
+  "FileName": {
+    "fallbackLocale": "en",
+    "id": "fileCondition.fileName",
+    "status": "draft",
+    "text": "FileName"
+  },
+  "FileSelect": {
+    "fallbackLocale": null,
+    "id": "structure.fileSelect",
+    "status": "native-review-required",
+    "text": "选择文件"
+  },
+  "FragmentCount": {
+    "fallbackLocale": "en",
+    "id": "volumeCondition.fragmentCount",
+    "status": "draft",
+    "text": "FragmentCount"
+  },
+  "FullPath": {
+    "fallbackLocale": "en",
+    "id": "fileCondition.fullPath",
+    "status": "draft",
+    "text": "FullPath"
+  },
+  "Label": {
+    "fallbackLocale": "en",
+    "id": "volumeCondition.label",
+    "status": "draft",
+    "text": "Label"
+  },
+  "Name": {
+    "fallbackLocale": "en",
+    "id": "volumeCondition.name",
+    "status": "draft",
+    "text": "Name"
+  },
+  "SetColor": {
+    "fallbackLocale": "en",
+    "id": "setting.setColor",
+    "status": "draft",
+    "text": "SetColor"
+  },
+  "SetVariable": {
+    "fallbackLocale": "en",
+    "id": "setting.setVariable",
+    "status": "draft",
+    "text": "SetVariable"
+  },
+  "Size": {
+    "fallbackLocale": "en",
+    "id": "volumeCondition.size",
+    "status": "draft",
+    "text": "Size"
+  },
+  "SortByName": {
+    "fallbackLocale": "en",
+    "id": "fileAction.sortByName",
+    "status": "draft",
+    "text": "SortByName"
+  },
+  "VolumeActions": {
+    "fallbackLocale": "en",
+    "id": "structure.volumeActions",
+    "status": "draft",
+    "text": "VolumeActions"
+  },
+  "VolumeEnd": {
+    "fallbackLocale": "en",
+    "id": "structure.volumeEnd",
+    "status": "draft",
+    "text": "VolumeEnd"
+  },
+  "VolumeSelect": {
+    "fallbackLocale": null,
+    "id": "structure.volumeSelect",
+    "status": "native-review-required",
+    "text": "选择卷"
+  }
+}

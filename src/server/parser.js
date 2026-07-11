@@ -62,6 +62,8 @@ class Parser {
 
     // Yes or No?
     parseYesNo() {
+        if (this.completeStatementWithMacro()) return;
+
         if (!this.isAnyKw('yes', 'no')) {
             this.error(ini.severity.Error, `Expected 'yes' or 'no'`);
         } else this.next();
@@ -131,6 +133,10 @@ class Parser {
         if ((t.type === TT.KEYWORD || t.type === TT.IDENT) && t.value.toLowerCase() === kw.toLowerCase()) {
             return this.next();
         }
+
+        if (this.completeStatementWithMacro(t)) return t;
+        this.completeStatementAfterMacro(t);
+
         this.error(ini.severity.Error, `Expected '${kw}' but found '${t.value}'`, t);
         return null;
     }
@@ -158,6 +164,10 @@ class Parser {
     expect(type, desc) {
         let t = this.curr();
         if (t.type === type) return this.next();
+
+        if (this.completeStatementWithMacro(t)) return t;
+        this.completeStatementAfterMacro(t);
+
         this.error(ini.severity.Error, `Expected ${desc || type} but found '${t.value}'`, t);
         return null;
     }
@@ -165,6 +175,114 @@ class Parser {
     tryType(type) {
         if (this.curr().type === type) { this.next(); return true; }
         return false;
+    }
+
+    /**
+     * Checks whether the current token is a macro/include directive.
+     *
+     * @param {object} token Token to test.
+     * @returns {boolean} True when the token is a macro/include directive.
+     */
+    isMacroToken(token = this.curr()) {
+        return !!(
+            token &&
+            (
+                token.type === TT.MACRO ||
+                (
+                    token.type === TT.KEYWORD &&
+                    String(token.value || '').toLowerCase() === 'include'
+                )
+            )
+        );
+    }
+
+    /**
+     * Consumes a macro/include directive when one is present.
+     *
+     * @returns {boolean} True when a macro/include directive was consumed.
+     */
+    consumeMacroToken() {
+        if (!this.isMacroToken()) return false;
+
+        this.next();
+        return true;
+    }
+
+    /**
+     * Throws the internal signal used when a macro completes the current statement.
+     */
+    throwMacroStatementCompletion() {
+        const macroCompletion = new Error('MYDEFRAG_MACRO_COMPLETES_STATEMENT');
+        macroCompletion.code = 'MYDEFRAG_MACRO_COMPLETES_STATEMENT';
+        throw macroCompletion;
+    }
+
+    /**
+     * Checks whether the previous token was a macro/include directive.
+     *
+     * @returns {boolean} True when the previous token was a macro/include directive.
+     */
+    previousTokenWasMacro() {
+        return this.isMacroToken(this.prev());
+    }
+
+    /**
+     * Finishes the visible tail left after a macro completes a statement.
+     */
+    finishMacroCompletedStatement() {
+        while (!this.atEof() && this.curr().type === TT.RPAREN) {
+            this.next();
+        }
+    }
+
+    /**
+     * Completes the current statement when a macro substitutes the remaining text.
+     *
+     * @param {object} token Token to test.
+     */
+    completeStatementWithMacro(token = this.curr()) {
+        if (!this.isMacroToken(token)) return false;
+
+        this.next();
+
+        if (!this.atEof() &&
+            (
+                this.curr().type === TT.COMMA ||
+                this.curr().type === TT.RPAREN
+            )
+        ) {
+            return true;
+        }
+
+        this.throwMacroStatementCompletion();
+    }
+
+    /**
+     * Completes the current statement when a previous macro left no valid continuation.
+     *
+     * @param {object} token Current token.
+     */
+    completeStatementAfterMacro(token = this.curr()) {
+        if (!this.previousTokenWasMacro()) return;
+
+        if (
+            this.atEof() ||
+            token?.type === TT.RPAREN ||
+            token?.type === TT.KEYWORD ||
+            token?.type === TT.IDENT
+        ) {
+            this.throwMacroStatementCompletion();
+        }
+    }
+
+    /**
+     * Checks whether an error is an internal macro-completion signal.
+     *
+     * @param {Error} errResult Error-like object.
+     * @returns {boolean} True when the error represents macro statement completion.
+     */
+    isMacroStatementCompletion(errResult) {
+        return errResult?.code === 'MYDEFRAG_MACRO_COMPLETES_STATEMENT';
     }
     //#endregion
     //
@@ -212,11 +330,7 @@ class Parser {
             // logger.dbg(5, `xxx`);
             // logger.dbg(5, `>>>>> ${t.value} type: ${t.type} vs. IDENT or MACRO`)
             // Macros
-            if (!this.atEof() &&
-                (t.type === TT.MACRO ||
-                    (t.type === TT.KEYWORD && t.value.toLowerCase() === 'include'))
-            ) {
-                this.next();
+            if (this.consumeMacroToken()) {
                 t = this.curr();
                 return true;
             }
@@ -276,6 +390,11 @@ class Parser {
                     return false;
             }
         } catch (errResult) {
+            if (this.isMacroStatementCompletion(errResult)) {
+                this.finishMacroCompletedStatement();
+                return true;
+            }
+
             const currentToken = this.curr?.();
             const tokenValue = String(t?.value ?? '').toLowerCase();
             const nextTokenValue = String(currentToken?.value ?? '').toLowerCase();
@@ -343,13 +462,13 @@ class Parser {
 
         if (fragmentTraceSingleLine) {
             message = this.formatTraceColumnsPacked([...firstColumns, ...secondColumns]);
-            logger?.messageDetail?.(message);
+            logger?.messageDetail?.(null, message);
         } else {
             message = this.formatTraceColumnsFixed(firstColumns);
-            logger?.messageDetail?.(message);
+            logger?.messageDetail?.(null, message);
 
             message = this.formatTraceColumnsFixed(secondColumns);
-            logger?.messageDetail?.(message);
+            logger?.messageDetail?.(null, message);
         }
 
         if (details && Object.keys(details).length) {
@@ -357,10 +476,10 @@ class Parser {
                 .map(([name, value]) => `${name} = ${this.formatTraceValue(value)}`)
                 .join('], [');
 
-            logger?.messageDetail?.(`details [${message}]`);
+            logger?.messageDetail?.(null, `details [${message}]`);
         }
 
-        logger?.messageDetail?.(".");
+        logger?.messageDetail?.(null, ".");
     }
 
     /**
@@ -465,7 +584,8 @@ class Parser {
             kind: null,
             parent: null,
             parent: null,
-            stack: []
+            stack: [],
+            incompleteKeyword: false
         };
         //#endregion
         // ─────────────────────────────────────────────────────────────────────────────────
@@ -508,18 +628,20 @@ class Parser {
             // ─────────────────────────────────────────────────────────────────────────────────
             // Parse statement
             // MACROs
-            if (!this.atEof() &&
-                (t.type === TT.MACRO ||
-                    (t.type === TT.KEYWORD && t.value.toLowerCase() === 'include'))
-            ) {
+            if (this.isMacroToken(t)) {
                 this.fragmentTrace("macro-skip", fragmentInfo);
                 this.next();
             } else {
                 // KEYWORD
-                const keyword = (
-                    t &&
-                    (t.type === TT.KEYWORD || t.type === TT.IDENT)
-                ) ? String(t.value).toLowerCase() : '';
+                const parenthesizedBoolean = t?.type === TT.LPAREN
+                    ? this.parseParenthesizedBooleanFragment()
+                    : null;
+                const keyword = parenthesizedBoolean
+                    ? parenthesizedBoolean.keywordData.keyword
+                    : (
+                        t &&
+                        (t.type === TT.KEYWORD || t.type === TT.IDENT)
+                    ) ? String(t.value).toLowerCase() : '';
 
                 fragmentInfo.step++;
                 this.fragmentTrace("keyword", fragmentInfo);
@@ -537,10 +659,12 @@ class Parser {
                 }
 
                 // Get Keyword Data
-                keywordData = this.parseFragmentKeywordBackward(keyword, {
-                    fragment,
-                    token: t
-                });
+                keywordData = parenthesizedBoolean
+                    ? parenthesizedBoolean.keywordData
+                    : this.parseFragmentKeywordBackward(keyword, {
+                        fragment,
+                        token: t
+                    });
 
                 // Update trace data
                 fragmentInfo.keyword = keyword;
@@ -557,6 +681,17 @@ class Parser {
 
                 // Unknown fragment keyword
                 if (!keywordData || !keywordData.ok) {
+                    const prefixMatches = this.findKnownKeywordPrefixMatches(keyword);
+                    if (this.isTrailingKeywordPrefix(t, prefixMatches)) {
+                        fragment.incompleteKeyword = true;
+                        this.fragmentTrace("kw-prefix", fragmentInfo, {
+                            keywordData,
+                            prefixMatches
+                        });
+                        this.next();
+                        break;
+                    }
+
                     this.errorFlag = true;
                     this.fragmentTrace("kw-unknown", fragmentInfo, {
                             keywordData,
@@ -579,6 +714,14 @@ class Parser {
                         fragment.parent === 'script' &&
                         keywordData.parent !== 'script' &&
                         keywordData.parent !== 'any'
+                    ) ||
+                    (
+                        fragment.parent === 'value' &&
+                        fragment.kind === 'operator' &&
+                        (
+                            keywordData.kind === 'file_condition' ||
+                            keywordData.kind === 'volume_condition'
+                        )
                     );
 
                 this.fragmentTrace("what-kind", fragmentInfo, {
@@ -615,7 +758,9 @@ class Parser {
 
                 // ─────────────────────────────────────────────────────────────────────────────────
                 // Now actually parse the statement using the real parser.
-                parsed = this.parseFragmentStatementByKind(keywordData);
+                parsed = parenthesizedBoolean
+                    ? parenthesizedBoolean.parsed
+                    : this.parseFragmentStatementByKind(keywordData);
                 fragmentInfo.step++;
                 this.fragmentTrace("parse-by-kind", fragmentInfo, {
                         startPos: statementStart,
@@ -672,7 +817,9 @@ class Parser {
                 errorFlag: this.errorFlag,
             }
         );
-        this.hintFragmentParent(fragment);
+        if (!fragment.incompleteKeyword) {
+            this.hintFragmentParent(fragment);
+        }
         if (this.atEof() && !this.errorFlag) { return true; } else { return false; }
     }
     // Builds a hint to insert at the top of the document.
@@ -749,6 +896,61 @@ class Parser {
         // Real date/time parsing is handled later by parseDateTime().
         return this.isNumber() || this.isKw('now');
     }
+
+    /**
+     * Finds known keywords that start with the supplied in-progress text.
+     *
+     * @param {string} prefix In-progress keyword text.
+     * @returns {string[]} Matching complete keyword texts.
+     */
+    findKnownKeywordPrefixMatches(prefix) {
+        const normalized = String(prefix || '').toLowerCase();
+        const matches = [];
+        const seen = new Set();
+
+        if (!normalized) return matches;
+
+        const addMatch = (keywordText) => {
+            const text = String(keywordText || '').toLowerCase();
+            if (
+                text.length > normalized.length &&
+                text.startsWith(normalized) &&
+                !seen.has(text)
+            ) {
+                seen.add(text);
+                matches.push(text);
+            }
+        };
+
+        for (const keyword of KEYWORDS) {
+            addMatch(keyword?.text);
+        }
+
+        for (const keyword of KEYWORDS_SETTINGS) {
+            addMatch(keyword);
+        }
+
+        return matches;
+    }
+
+    /**
+     * Detects an active trailing partial keyword that completion can still finish.
+     *
+     * @param {object} token Current token.
+     * @param {string[]} prefixMatches Known keyword completions for the token.
+     * @returns {boolean} True when the token is the final in-progress word.
+     */
+    isTrailingKeywordPrefix(token, prefixMatches) {
+        if (!token || !Array.isArray(prefixMatches) || prefixMatches.length === 0) {
+            return false;
+        }
+
+        if (token.type !== TT.IDENT && token.type !== TT.KEYWORD) {
+            return false;
+        }
+
+        return this.tokens[this.pos + 1]?.type === TT.EOF;
+    }
     //#endregion
     //#region  Backward reasoning functions.
     parseSingleTokenFragment() {
@@ -762,6 +964,78 @@ class Parser {
         const errorCount = this.errors.length;
         parseFn.call(this);
         return this.pos > start && this.errors.length === errorCount;
+    }
+
+    /**
+     * Parses a fragment that starts with a grouped FileBoolean or VolumeBoolean.
+     *
+     * @returns {?object} Fragment parse result and classification metadata.
+     */
+    parseParenthesizedBooleanFragment() {
+        const start = this.pos;
+        const errorCount = this.errors.length;
+
+        const fileKeywordData = {
+            ok: true,
+            keyword: '(...)',
+            kind: 'file_condition',
+            parent: 'fileactions',
+            opens: null,
+            closes: null,
+            allowedParents: ['fileactions', 'fileselect']
+        };
+
+        const volumeKeywordData = {
+            ok: true,
+            keyword: '(...)',
+            kind: 'volume_condition',
+            parent: 'volumeselect',
+            opens: null,
+            closes: null,
+            allowedParents: ['volumeselect']
+        };
+
+        if (this.tryParenthesizedBooleanFragment(() => this.parseFileBooleans(false))) {
+            return {
+                parsed: true,
+                keywordData: fileKeywordData
+            };
+        }
+
+        this.pos = start;
+        this.errors.length = errorCount;
+
+        if (this.tryParenthesizedBooleanFragment(this.parseVolumeBooleans)) {
+            return {
+                parsed: true,
+                keywordData: volumeKeywordData
+            };
+        }
+
+        this.pos = start;
+        this.errors.length = errorCount;
+        return null;
+    }
+
+    /**
+     * Attempts a grouped boolean parse without leaving failed state behind.
+     *
+     * @param {Function} parseFn Boolean parser to try.
+     * @returns {boolean} True when the parser consumed tokens without diagnostics.
+     */
+    tryParenthesizedBooleanFragment(parseFn) {
+        const start = this.pos;
+        const errorCount = this.errors.length;
+
+        parseFn.call(this);
+
+        if (this.pos > start && this.errors.length === errorCount) {
+            return true;
+        }
+
+        this.pos = start;
+        this.errors.length = errorCount;
+        return false;
     }
 
     parseFragmentKeywordBackward(keyword, ctx = {}) {
@@ -884,7 +1158,6 @@ class Parser {
             case 'hidden':
             case 'unmovable':
             case 'virtual':
-            case 'diskmapflip':
             case 'fragmented':
             case 'lastaccessenabled':
             case 'nottobeindexed':
@@ -1174,7 +1447,7 @@ class Parser {
         return {
             ok: true,
             keyword: 'excludevolumes',
-            kind: 'volume_condition',
+            kind: 'excludevolumes',
             parent: 'script',
             opens: null,
             closes: null,
@@ -1186,7 +1459,7 @@ class Parser {
         return {
             ok: true,
             keyword: 'excludefiles',
-            kind: 'file_condition',
+            kind: 'excludefiles',
             parent: 'script',
             opens: null,
             closes: null,
@@ -1732,13 +2005,29 @@ class Parser {
             return;
         }
         // Macros
+        let skippedMacro = false;
         while (!this.atEof() &&
             (t.type === TT.MACRO ||
                 (t.type === TT.KEYWORD && t.value.toLowerCase() === 'include'))
         ) {
+            skippedMacro = true;
             this.next();
             t = this.curr();
         }
+
+        if (skippedMacro &&
+            (
+                t.type === TT.RPAREN ||
+                this.isAnyKw('or', 'and') ||
+                t.type === TT.PIPE ||
+                t.type === TT.DPIPE ||
+                t.type === TT.AMP ||
+                t.type === TT.DAMP
+            )
+        ) {
+            return;
+        }
+
         // KEYWORD
         const kw = (t.type === TT.KEYWORD || t.type === TT.IDENT) ? t.value.toLowerCase() : '';
         switch (kw) { // FileBoolean
@@ -1825,6 +2114,8 @@ class Parser {
         }
     }
     parseFileLocationOption() {
+        if (this.completeStatementWithMacro()) return;
+
         if (!this.isAnyKw('beginoffile', 'endoffile', 'entirefile', 'anypart', 'anycompletefragment')) {
             this.error(ini.severity.Error, `Expected file location option`);
         } else this.next();
@@ -1843,61 +2134,66 @@ class Parser {
         }
     }
     parseVolumeAction() {
-        let t = this.curr();
-        // Macros
-        if (!this.atEof() &&
-            (t.type === TT.MACRO ||
-                (t.type === TT.KEYWORD && t.value.toLowerCase() === 'include'))
-        ) {
-            this.next();
-            t = this.curr();
-            return true;
-        }
-        const kw = (t.type === TT.KEYWORD || t.type === TT.IDENT) ? t.value.toLowerCase() : '';
+        try {
+            let t = this.curr();
+            // Macros
+            if (this.consumeMacroToken()) {
+                t = this.curr();
+                return true;
+            }
+            const kw = (t.type === TT.KEYWORD || t.type === TT.IDENT) ? t.value.toLowerCase() : '';
 
-        switch (kw) { // VolumeAction
-            case 'reclaimntfsreservedareas':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.parseSettings();
-                this.expect(TT.RPAREN, ')');
+            switch (kw) { // VolumeAction
+                case 'reclaimntfsreservedareas':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.parseSettings();
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                case 'fileselect':
+                    this.next();
+                    this.parseFileBooleans(true);
+                    this.expectKw('FileActions');
+                    this.parseFileActions();
+                    this.expectKw('FileEnd');
+                    return true;
+                case 'makegap':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.parseNumber();
+                    this.parseMakeGapOptions();
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                case 'dismountvolume': case 'deletejournal':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                case 'setfilecolor':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.parseFileBooleans(true);
+                    this.expect(TT.COMMA, ',');
+                    this.parseFileColorBooleans();
+                    this.expect(TT.COMMA, ',');
+                    this.parseNumber();
+                    this.expect(TT.COMMA, ',');
+                    this.parseNumber();
+                    this.expect(TT.COMMA, ',');
+                    this.parseNumber();
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                default:
+                    if (this.isSetting()) { this.parseSetting(); return true; }
+                    return false;
+            }
+        } catch (errResult) {
+            if (this.isMacroStatementCompletion(errResult)) {
+                this.finishMacroCompletedStatement();
                 return true;
-            case 'fileselect':
-                this.next();
-                this.parseFileBooleans(true);
-                this.expectKw('FileActions');
-                this.parseFileActions();
-                this.expectKw('FileEnd');
-                return true;
-            case 'makegap':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.parseNumber();
-                this.parseMakeGapOptions();
-                this.expect(TT.RPAREN, ')');
-                return true;
-            case 'dismountvolume': case 'deletejournal':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.expect(TT.RPAREN, ')');
-                return true;
-            case 'setfilecolor':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.parseFileBooleans(true);
-                this.expect(TT.COMMA, ',');
-                this.parseFileColorBooleans();
-                this.expect(TT.COMMA, ',');
-                this.parseNumber();
-                this.expect(TT.COMMA, ',');
-                this.parseNumber();
-                this.expect(TT.COMMA, ',');
-                this.parseNumber();
-                this.expect(TT.RPAREN, ')');
-                return true;
-            default:
-                if (this.isSetting()) { this.parseSetting(); return true; }
-                return false;
+            }
+
+            throw errResult;
         }
     }
     // ── File Actions .Parse ──────────────────────────────────────────────────────────
@@ -1913,61 +2209,72 @@ class Parser {
         }
     }
     parseFileAction() {
-        let t = this.curr();
-        const kw = (t.type === TT.KEYWORD || t.type === TT.IDENT) ? t.value.toLowerCase() : '';
+        try {
+            let t = this.curr();
+            if (this.consumeMacroToken()) return true;
 
-        switch (kw) { // FileAction
-            case 'defragment':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.parseDefragmentOptions();
-                this.expect(TT.RPAREN, ')');
+            const kw = (t.type === TT.KEYWORD || t.type === TT.IDENT) ? t.value.toLowerCase() : '';
+
+            switch (kw) { // FileAction
+                case 'defragment':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.parseDefragmentOptions();
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                case 'fastfill':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.parseFastFillOptions();
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                case 'movedownfill': case 'movetoendofdisk': case 'moveuptozone': case 'forcedfill':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                case 'sortbyname': case 'sortbysize': case 'sortbylastaccess':
+                case 'sortbylastchange': case 'sortbycreationdate':
+                case 'sortbynewestdate':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.parseAscDesc();
+                    this.parseSortByOption();
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                case 'sortbyimportsequence':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.parseSortByImportSequenceOptions();
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                case 'placentfssystemfiles':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.parseAscDesc();
+                    this.parseSortByOption();
+                    this.expect(TT.COMMA, ',');
+                    this.parseNumber();
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                case 'addgap':
+                    this.next();
+                    this.expect(TT.LPAREN, '(');
+                    this.parseNumber();
+                    this.parseMakeGapOptions();
+                    this.expect(TT.RPAREN, ')');
+                    return true;
+                default:
+                    if (this.isSetting()) { this.parseSetting(); return true; }
+                    return false;
+            }
+        } catch (errResult) {
+            if (this.isMacroStatementCompletion(errResult)) {
+                this.finishMacroCompletedStatement();
                 return true;
-            case 'fastfill':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.parseFastFillOptions();
-                this.expect(TT.RPAREN, ')');
-                return true;
-            case 'movedownfill': case 'movetoendofdisk': case 'moveuptozone': case 'forcedfill':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.expect(TT.RPAREN, ')');
-                return true;
-            case 'sortbyname': case 'sortbysize': case 'sortbylastaccess':
-            case 'sortbylastchange': case 'sortbycreationdate':
-            case 'sortbynewestdate':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.parseAscDesc();
-                this.parseSortByOption();
-                this.expect(TT.RPAREN, ')');
-                return true;
-            case 'sortbyimportsequence':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.parseSortByImportSequenceOptions();
-                this.expect(TT.RPAREN, ')');
-                return true;
-            case 'placentfssystemfiles':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.parseAscDesc();
-                this.parseSortByOption();
-                this.expect(TT.COMMA, ',');
-                this.parseNumber();
-                this.expect(TT.RPAREN, ')');
-                return true;
-            case 'addgap':
-                this.next();
-                this.expect(TT.LPAREN, '(');
-                this.parseNumber();
-                this.parseMakeGapOptions();
-                this.expect(TT.RPAREN, ')');
-                return true;
-            default:
-                if (this.isSetting()) { this.parseSetting(); return true; }
-                return false;
+            }
+
+            throw errResult;
         }
     }
     //#endregion
@@ -1991,6 +2298,8 @@ class Parser {
         }
     }
     parseAscDesc() {
+        if (this.completeStatementWithMacro()) return;
+
         if (!this.isAnyKw('ascending', 'descending')) {
             this.error(ini.severity.Error, `Expected 'Ascending' or 'Descending'`);
         } else this.next();
@@ -2165,6 +2474,11 @@ class Parser {
                     this.error(ini.severity.Error, `Unknown setting '${t.value}'`, t);
             }
         } catch (errResult) {
+            if (this.isMacroStatementCompletion(errResult)) {
+                this.finishMacroCompletedStatement();
+                return true;
+            }
+
             const message = `server.js:ValidateDocument Unexpected error Generating Preview of document: + ${errResult.message}`;
             console?.error?.(message);           // debugger
             logger?.err?.(errResult, message);   // output channel
@@ -2181,6 +2495,8 @@ class Parser {
     }
 
     parseWhenFinished() {
+        if (this.completeStatementWithMacro()) return;
+
         if (this.tryKw('Wait') || this.tryKw('Exit')) return;
         if (this.tryKw('Shutdown')) {
             while (this.isAnyKw('reboot', 'warnusers', 'forced')) this.next();
@@ -2196,6 +2512,8 @@ class Parser {
     // ── Color Features .Parse ───────────────────────────────────────────────────
 
     parseColorName() {
+        if (this.completeStatementWithMacro()) return;
+
         if (!this.isAnyKw('empty', 'allocated', 'busyread', 'busywrite', 'text')) {
             this.error(ini.severity.Error, `Expected color name`);
         } else this.next();
@@ -2213,6 +2531,8 @@ class Parser {
 
     parseFileColorBoolean() {
         let t = this.curr();
+        if (this.completeStatementWithMacro(t)) return;
+
         if (t.type === TT.LPAREN) {
             this.next();
             this.parseFileColorBooleans();
@@ -2335,6 +2655,8 @@ class Parser {
     }
     // ── Strings .Parse ───────────────────────────────────────────────────────────────
     parseStringArguments() {
+        if (this.completeStatementWithMacro()) return;
+
         this.expect(TT.STRING, 'string');
         while (this.curr().type === TT.COMMA) {
             this.next();

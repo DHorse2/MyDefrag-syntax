@@ -1,0 +1,56 @@
+name: Translation issue
+description: Report or review a MyDefrag Syntax translation entry.
+title: "[Translation]: "
+labels:
+  - translation
+body:
+  - type: input
+    id: locale
+    attributes:
+      label: Locale
+      description: Locale ID such as en, zh-Hans, sw, ar, or fr.
+      placeholder: zh-Hans
+    validations:
+      required: true
+  - type: input
+    id: key
+    attributes:
+      label: Catalog key or keyword ID
+      description: Use a structured catalog key or semantic keyword ID.
+      placeholder: extension.command.openPreview.title
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text
+      description: Paste the current rendered text.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed text
+      description: Paste the proposed translation or correction.
+    validations:
+      required: true
+  - type: dropdown
+    id: review-status
+    attributes:
+      label: Proposed review status
+      options:
+        - draft
+        - machine-generated
+        - native-review-required
+        - reviewed
+        - approved
+        - deprecated
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Include placeholder concerns, keyword collision concerns, native-review context, or source references.
+    validations:
+      required: false

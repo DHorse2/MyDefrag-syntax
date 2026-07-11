@@ -6,6 +6,7 @@
 // Add this near the top of src/extension.js with the other require() calls.
 
 const path = require('path');
+const paths = require('../shared/path');
 const vscode = require('vscode');
 const { DiagnosticNavigator } = require('./diagnosticNavigator');
 const { DiagnosticTreeProvider } = require('./diagnosticTreeProvider');
@@ -21,6 +22,12 @@ const { DiagnosticTreeProvider } = require('./diagnosticTreeProvider');
  * @returns {{ navigator: DiagnosticNavigator, treeProvider: DiagnosticTreeProvider }}
  */
 function registerDiagnosticNavigation(context) {
+    paths.ensureDirectories();
+    const stateFile = resolveDiagnosticStateFile();
+    const legacyStateFile = stateFile === paths.diagnosticsStateFile
+        ? null
+        : paths.diagnosticsStateFile;
+
     // const diagnosticsFile = path.join(
     //     context.globalStorageUri.fsPath,
     //     'log',
@@ -32,7 +39,10 @@ function registerDiagnosticNavigation(context) {
     //     ? path.join(workspaceRoot, '.user', 'logs', 'session_dismissed.json')
     //     : path.join(context.globalStorageUri.fsPath, 'log', 'session_dismissed.json');
 
-    const navigator = new DiagnosticNavigator();
+    const navigator = new DiagnosticNavigator({
+        stateFile,
+        legacyStateFile
+    });
     // {
     //     diagnosticsFile,
     //     dismissedFile,
@@ -49,7 +59,7 @@ function registerDiagnosticNavigation(context) {
     );
 
     const refresh = async () => {
-        await navigator.reload();
+        navigator.reload();
         treeProvider.refresh();
         updateDiagnosticStatusBar(context, navigator);
     };
@@ -62,8 +72,12 @@ function registerDiagnosticNavigation(context) {
         }
 
         const uri = vscode.Uri.file(item.filePath);
-        const line = Math.max(0, Number(item.line || 1) - 1);
-        const column = Math.max(0, Number(item.column || 1) - 1);
+        const line = Number.isInteger(item.line)
+            ? item.line
+            : Math.max(0, Number(item.oneBasedLine || 1) - 1);
+        const column = Number.isInteger(item.character)
+            ? item.character
+            : Math.max(0, Number(item.oneBasedColumn || 1) - 1);
         const position = new vscode.Position(line, column);
 
         await vscode.window.showTextDocument(uri, {
@@ -148,15 +162,30 @@ function registerDiagnosticNavigation(context) {
                 ? `MyDefrag: Treating current diagnostic as likely parser/classification issue: ${item.message}`
                 : 'MyDefrag: No current diagnostic.';
             await navigator.validSyntax();
+            treeProvider.refresh();
+            updateDiagnosticStatusBar(context, navigator);
             vscode.window.showInformationMessage(text);
         }),
 
         vscode.commands.registerCommand('mydfrg.diagnostics.sendIt', async () => {
             const item = navigator.current();
             const text = item
-                ? `MyDefrag: Treating current diagnostic as likely parser/classification issue: ${item.message}`
+                ? `MyDefrag: Wrote AI diagnostic prompt to ${paths.diagnosticsSendPromptFile}`
                 : 'MyDefrag: No current diagnostic.';
-            await navigator.sendIt();
+            const result = await navigator.sendIt();
+
+            if (result) {
+                const doc = await vscode.workspace.openTextDocument(result.promptFile);
+                await vscode.window.showTextDocument(doc, {
+                    preview: false,
+                    preserveFocus: false
+                });
+                vscode.window.showInformationMessage(
+                    `MyDefrag: Wrote AI diagnostic prompt to ${result.promptFile}`
+                );
+            }
+            treeProvider.refresh();
+            updateDiagnosticStatusBar(context, navigator);
             vscode.window.showInformationMessage(text);
         })
     );
@@ -166,7 +195,22 @@ function registerDiagnosticNavigation(context) {
         vscode.window.showWarningMessage(`MyDefrag diagnostic navigation failed to load: ${err.message}`);
     });
 
-    return { navigator, treeProvider };
+    return { navigator, treeProvider, refresh };
+}
+
+/**
+ * Resolve diagnostic navigation state to the target workspace when available.
+ *
+ * @returns {string}
+ */
+function resolveDiagnosticStateFile() {
+    const workspaceRoot = vscode.workspace.workspaceFolders?.[0]?.uri?.fsPath || '';
+
+    if (!workspaceRoot) {
+        return paths.diagnosticsStateFile;
+    }
+
+    return path.join(workspaceRoot, '.vscode', 'session_dismissed.json');
 }
 
 let diagnosticStatusBarItem = null;

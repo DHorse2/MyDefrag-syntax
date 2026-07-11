@@ -1,0 +1,245 @@
+{
+  "entries": [
+    {
+      "key": "extension.product.displayName",
+      "component": "extension",
+      "category": "product",
+      "role": "displayName",
+      "text": "MyDefrag Script (.MyDc / .MyD)",
+      "status": "approved",
+      "source": "package.json"
+    },
+    {
+      "key": "extension.command.openPreview.title",
+      "component": "extension",
+      "category": "command",
+      "role": "title",
+      "text": "Open Preview",
+      "status": "approved",
+      "source": "package.json"
+    },
+    {
+      "key": "extension.command.openSettings.title",
+      "component": "extension",
+      "category": "command",
+      "role": "title",
+      "text": "MyDefrag: Open Settings",
+      "status": "approved",
+      "source": "package.json"
+    },
+    {
+      "key": "extension.command.configureFolders.title",
+      "component": "extension",
+      "category": "command",
+      "role": "title",
+      "text": "MyDefrag: Configure Folders",
+      "status": "approved",
+      "source": "package.json"
+    },
+    {
+      "key": "extension.status.parser.script.text",
+      "component": "extension",
+      "category": "status",
+      "role": "text",
+      "text": "MyDefrag Script (.myd)",
+      "status": "reviewed",
+      "source": "src/extension.js"
+    },
+    {
+      "key": "extension.status.parser.fragment.text",
+      "component": "extension",
+      "category": "status",
+      "role": "text",
+      "text": "MyDefrag Fragment (.mydc)",
+      "status": "reviewed",
+      "source": "src/extension.js"
+    },
+    {
+      "key": "extension.status.parser.unknown.text",
+      "component": "extension",
+      "category": "status",
+      "role": "text",
+      "text": "MyDefrag Unknown document type",
+      "status": "reviewed",
+      "source": "src/extension.js"
+    },
+    {
+      "key": "extension.message.noActiveDocument.warning",
+      "component": "extension",
+      "category": "message",
+      "role": "warning",
+      "text": "No MyDefrag document is active.",
+      "status": "reviewed",
+      "source": "src/extension.js"
+    },
+    {
+      "key": "diagnosticExplorer.message.noCurrentDiagnostic.info",
+      "component": "diagnosticExplorer",
+      "category": "message",
+      "role": "info",
+      "text": "MyDefrag: No current diagnostic.",
+      "status": "reviewed",
+      "source": "src/diagnostics/registerDiagnosticNavigation.js"
+    },
+    {
+      "key": "diagnosticExplorer.status.hasDiagnostics.text",
+      "component": "diagnosticExplorer",
+      "category": "status",
+      "role": "text",
+      "text": "$(warning) MyDefrag {index}/{total}",
+      "placeholders": [
+        "index",
+        "total"
+      ],
+      "status": "reviewed",
+      "source": "src/diagnostics/registerDiagnosticNavigation.js"
+    },
+    {
+      "key": "diagnosticExplorer.status.noDiagnostics.text",
+      "component": "diagnosticExplorer",
+      "category": "status",
+      "role": "text",
+      "text": "$(check) MyDefrag 0 diagnostics",
+      "status": "reviewed",
+      "source": "src/diagnostics/registerDiagnosticNavigation.js"
+    },
+    {
+      "key": "diagnosticExplorer.tree.header.label",
+      "component": "diagnosticExplorer",
+      "category": "tree",
+      "role": "label",
+      "text": "Diagnostics: {current}/{eligible}/{all} ({remaining} remaining, {remainingFiles}/{traversableFiles}/{totalFiles} files, fixed {fixed}, ignored {ignored}, skipped {skipped})",
+      "placeholders": [
+        "current",
+        "eligible",
+        "all",
+        "remaining",
+        "remainingFiles",
+        "traversableFiles",
+        "totalFiles",
+        "fixed",
+        "ignored",
+        "skipped"
+      ],
+      "status": "reviewed",
+      "source": "src/diagnostics/diagnosticTreeProvider.js"
+    },
+    {
+      "key": "server.diagnostic.unsupportedExtension.message",
+      "component": "server",
+      "category": "diagnostic",
+      "role": "message",
+      "text": "Unsupported MyDefrag file extension: {extension}",
+      "placeholders": [
+        "extension"
+      ],
+      "status": "draft",
+      "source": "src/server/server.js"
+    },
+    {
+      "key": "parser.diagnostic.unexpectedToken.message",
+      "component": "parser",
+      "category": "diagnostic",
+      "role": "message",
+      "text": "Unexpected token '{token}'",
+      "placeholders": [
+        "token"
+      ],
+      "status": "draft",
+      "source": "src/server/parser.js"
+    },
+    {
+      "key": "parser.diagnostic.expectedToken.message",
+      "component": "parser",
+      "category": "diagnostic",
+      "role": "message",
+      "text": "Expected {expected} but found {actual}",
+      "placeholders": [
+        "expected",
+        "actual"
+      ],
+      "status": "draft",
+      "source": "src/server/parser.js"
+    },
+    {
+      "key": "preview.annotation.includeBegin.text",
+      "component": "preview",
+      "category": "annotation",
+      "role": "text",
+      "text": "BEGIN [depth:{depth}] {path}",
+      "placeholders": [
+        "depth",
+        "path"
+      ],
+      "status": "reviewed",
+      "source": "src/preprocess/mydefrag-preprocess.js"
+    },
+    {
+      "key": "preview.annotation.includeEnd.text",
+      "component": "preview",
+      "category": "annotation",
+      "role": "text",
+      "text": "END   [depth:{depth}] {path}",
+      "placeholders": [
+        "depth",
+        "path"
+      ],
+      "status": "reviewed",
+      "source": "src/preprocess/mydefrag-preprocess.js"
+    },
+    {
+      "key": "preview.warning.missingInclude.text",
+      "component": "preview",
+      "category": "warning",
+      "role": "text",
+      "text": "*** WARNING: Missing include (\"{uri}\") ***",
+      "placeholders": [
+        "uri"
+      ],
+      "status": "reviewed",
+      "source": "src/preprocess/mydefrag-preprocess.js"
+    },
+    {
+      "key": "preview.report.includeFiles.heading",
+      "component": "preview",
+      "category": "report",
+      "role": "heading",
+      "text": "Include Files. ({count} file(s) processed",
+      "placeholders": [
+        "count"
+      ],
+      "status": "reviewed",
+      "source": "src/preprocess/mydefrag-preprocess.js"
+    },
+    {
+      "key": "translator.directive.language.text",
+      "component": "translator",
+      "category": "directive",
+      "role": "syntax",
+      "text": "; @mydfrg-language {locale}",
+      "placeholders": [
+        "locale"
+      ],
+      "status": "draft",
+      "source": "language/canonical/component-catalog.json"
+    },
+    {
+      "key": "tooling.report.migrationRemaining.title",
+      "component": "tooling",
+      "category": "report",
+      "role": "title",
+      "text": "Hard-coded human-facing strings remaining",
+      "status": "draft",
+      "source": "scripts/build-language.js"
+    },
+    {
+      "key": "docs.translation.nativeReviewRequired.text",
+      "component": "docs",
+      "category": "translation",
+      "role": "notice",
+      "text": "Machine-generated or placeholder translation entries require native review before approval.",
+      "status": "draft",
+      "source": "docs/TRANSLATION_CONTRIBUTING.md"
+    }
+  ]
+}

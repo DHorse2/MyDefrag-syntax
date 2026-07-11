@@ -1,0 +1,122 @@
+{
+  "Defragment": {
+    "fallbackLocale": null,
+    "id": "fileAction.defragment",
+    "status": "approved",
+    "text": "Defragment"
+  },
+  "DirectoryName": {
+    "fallbackLocale": null,
+    "id": "fileCondition.directoryName",
+    "status": "approved",
+    "text": "DirectoryName"
+  },
+  "ExcludeFiles": {
+    "fallbackLocale": null,
+    "id": "script.excludeFiles",
+    "status": "approved",
+    "text": "ExcludeFiles"
+  },
+  "ExcludeVolumes": {
+    "fallbackLocale": null,
+    "id": "script.excludeVolumes",
+    "status": "approved",
+    "text": "ExcludeVolumes"
+  },
+  "FastFill": {
+    "fallbackLocale": null,
+    "id": "fileAction.fastFill",
+    "status": "approved",
+    "text": "FastFill"
+  },
+  "FileActions": {
+    "fallbackLocale": null,
+    "id": "structure.fileActions",
+    "status": "approved",
+    "text": "FileActions"
+  },
+  "FileEnd": {
+    "fallbackLocale": null,
+    "id": "structure.fileEnd",
+    "status": "approved",
+    "text": "FileEnd"
+  },
+  "FileName": {
+    "fallbackLocale": null,
+    "id": "fileCondition.fileName",
+    "status": "approved",
+    "text": "FileName"
+  },
+  "FileSelect": {
+    "fallbackLocale": null,
+    "id": "structure.fileSelect",
+    "status": "approved",
+    "text": "FileSelect"
+  },
+  "FragmentCount": {
+    "fallbackLocale": null,
+    "id": "volumeCondition.fragmentCount",
+    "status": "approved",
+    "text": "FragmentCount"
+  },
+  "FullPath": {
+    "fallbackLocale": null,
+    "id": "fileCondition.fullPath",
+    "status": "approved",
+    "text": "FullPath"
+  },
+  "Label": {
+    "fallbackLocale": null,
+    "id": "volumeCondition.label",
+    "status": "approved",
+    "text": "Label"
+  },
+  "Name": {
+    "fallbackLocale": null,
+    "id": "volumeCondition.name",
+    "status": "approved",
+    "text": "Name"
+  },
+  "SetColor": {
+    "fallbackLocale": null,
+    "id": "setting.setColor",
+    "status": "approved",
+    "text": "SetColor"
+  },
+  "SetVariable": {
+    "fallbackLocale": null,
+    "id": "setting.setVariable",
+    "status": "approved",
+    "text": "SetVariable"
+  },
+  "Size": {
+    "fallbackLocale": null,
+    "id": "volumeCondition.size",
+    "status": "approved",
+    "text": "Size"
+  },
+  "SortByName": {
+    "fallbackLocale": null,
+    "id": "fileAction.sortByName",
+    "status": "approved",
+    "text": "SortByName"
+  },
+  "VolumeActions": {
+    "fallbackLocale": null,
+    "id": "structure.volumeActions",
+    "status": "approved",
+    "text": "VolumeActions"
+  },
+  "VolumeEnd": {
+    "fallbackLocale": null,
+    "id": "structure.volumeEnd",
+    "status": "approved",
+    "text": "VolumeEnd"
+  },
+  "VolumeSelect": {
+    "fallbackLocale": null,
+    "id": "structure.volumeSelect",
+    "status": "approved",
+    "text": "VolumeSelect"
+  }
+}

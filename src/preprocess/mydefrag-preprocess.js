@@ -150,7 +150,7 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
   if (stack.includes(filePath)) {
     const cycle = [...stack, filePath].map(p => path.basename(p)).join(" → ");
     const message = `ERROR: Circular include: ${cycle}`;
-    logger.info(message);
+    logger.info(null, null, null, null, null, message);
     logger.dbg(1, `  CIRCULAR INCLUDE DETECTED!!!`);
     return { lines: [annotLine(indent, `*** ${message} ***`)], outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // CIRCULAR FILE REFERENCE
   }
@@ -338,7 +338,7 @@ function main() {
   // ---- Initialization ----
   // at top of script (global items)
   // ── Read INI configuration ────
-  logger.info('--- Preview processing triggered ---');
+  logger.info(null, '--- Preview processing triggered ---');
   logger.dbg(5, `  Debug Path=${INI_PATH}`)
   // const iniReader = ini.readIni(INI_PATH);
   // isDebugOn = String(iniData.isDebugOn || "true").toLowerCase() === "true";
@@ -355,7 +355,7 @@ function main() {
   // ──────────────────────────────────────────────────────────────────────────
   // ---- Help ----
   if (args.length === 0 || args[0] === "--help" || args[0] === "-h") {
-    logger.info([
+    logger.info(null, [
       "[MyDefrag]",
       "",
       "  MyDefrag Script Preprocessor",
@@ -412,8 +412,8 @@ function main() {
   logger.dbg(0, `outputFile = "${outputFile}"`);
   logger.dbg(0, `writeToFile = "${writeToFile}"`);
   const entryUri = pathToFileURL(entryFile).href;
-  logger.info(`Entry  : "${entryFile}"`);
-  logger.info(`Output : "${outputFile}"`);
+  logger.info(null, `Entry  : "${entryFile}"`);
+  logger.info(null, `Output : "${outputFile}"`);
   // if (iniData !== config.iniData && iniData !== config) {
   //   // ToDO ??? validate config
   // }
@@ -558,7 +558,7 @@ function main() {
     "\n" +
     linkVisitedMapOutPut.join("\n") +
     "\n";
-  footerOutput.split(/\r?\n/).forEach(line => { logger.info(line); });
+  footerOutput.split(/\r?\n/).forEach(line => { logger.info(null, line); });
 
   const footer =
     missingMapLines.join("\n") +
@@ -599,14 +599,14 @@ function main() {
   }
 
   // ──────────────────────────────────────────────────────────────────────────
-  logger.info(`Done. ${linkVisited.length} file(s), ${state.line} logical merged lines.`);
-  logger.warn(`${linkVisitedMissing.size} file(s) are missing.`);
+  logger.info(null, `Done. ${linkVisited.length} file(s), ${state.line} logical merged lines.`);
+  logger.warn(null, `${linkVisitedMissing.size} file(s) are missing.`);
   if (writeToFile) {
-    logger.info(`Output written to: "${outputFile}"`);
+    logger.info(null, `Output written to: "${outputFile}"`);
   } else {
-    logger.info(`Output written to stdout (preview mode)`);
+    logger.info(null, `Output written to stdout (preview mode)`);
   }
-  logger.info(`main() done`);
+  logger.info(null, `main() done`);
 }
 // ──────────────────────────────────────────────────────────────────────────
 main();

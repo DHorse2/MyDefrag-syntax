@@ -4,14 +4,14 @@
 
 ## Opilot Status (VSCodium)
 
-**Status:** Not currently recommended for VSCodium.
+**Status:*- Not currently recommended for VSCodium.
 
 ### Tested Environment
 
-* VSCodium
-* Windows 11
-* Opilot 1.8.2
-* Ollama
+- VSCodium
+- Windows 11
+- Opilot 1.8.2
+- Ollama
 
 ### Observed Issues
 
@@ -36,9 +36,9 @@ The extension fails during activation before registering its commands.
 
 As a consequence, commands such as:
 
-* `opilot.refreshLocalModels`
-* `opilot.manageAuthToken`
-* `opilot.openExtensionSettings`
+- `opilot.refreshLocalModels`
+- `opilot.manageAuthToken`
+- `opilot.openExtensionSettings`
 
 are unavailable.
 
@@ -48,9 +48,9 @@ As tested, **Opilot 1.8.2 is not currently usable under VSCodium**.
 
 Whether this is due to:
 
-* an incomplete extension package,
-* reliance on proposed VS Code APIs,
-* or incompatibilities between Opilot and VSCodium,
+- an incomplete extension package,
+- reliance on proposed VS Code APIs,
+- or incompatibilities between Opilot and VSCodium,
 
 was not determined during this investigation.
 

@@ -3,7 +3,7 @@
 //#region Initialize server .Parse
 const console = require('console');
 console?.error('SERVER: entered server.js');
-debugger;
+// debugger;
 const {
     createConnection,
     TextDocuments,
@@ -45,7 +45,7 @@ const connection = createConnection(ProposedFeatures.all);
 var connectionShown = false;
 console?.error('SERVER: connection created');
 const documents = new TextDocuments(TextDocument);
-var diagnostics = [];
+// Diagnostics are scoped per validation run in validateDocument().
 const Logger = require('../shared/logger');
 let logger;
 let parserLogger;
@@ -170,13 +170,24 @@ paths.ensureDirectories();
 // let logPaths = {};
 const MYDFRG_EXTENSIONS = new Set(['.mydc', '.myd']);
 const currentDiagnosticsByUri = new Map();
+const VALIDATION_DEBOUNCE_MS = 250;
+const WORKSPACE_REFRESH_DEBOUNCE_MS = 250;
+const BULK_SCAN_YIELD_INTERVAL = 25;
+const FILE_CHANGE_TYPE_DELETED = 3;
+const pendingValidationTimers = new Map();
+const pendingWatchedFileChanges = new Map();
+let didReceiveConfiguration = false;
+let workspaceRefreshTimer = null;
+let watchedFileRefreshTimer = null;
+let refreshSequence = 0;
+let refreshQueue = Promise.resolve();
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
 //#region Events for server - connection, documents
 connection.onInitialize(async (params) => {
     console?.log(`server.js:connection.onInitialize: SERVER loading configuration`);
 
-    debugger;
+    // debugger;
 
     // console?.error(
     //     JSON.stringify(
@@ -266,7 +277,7 @@ connection.onInitialize(async (params) => {
             if (ini.iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Warning, loggedMessages, ini.iniErrors) }
             // console?.error("server.js:onInitialize: 3");
             // console?.log(ini.severity);
-            logger.info("SERVER: MYDC SERVER INITIALIZED");
+            logger.info(null, "SERVER: MYDC SERVER INITIALIZED");
             // console?.error("server.js:onInitialize: 4");
             logger.dbg(5, `server.js:onInitialize: Settings source=VSCodium, Debug=${isDebugOn}`)
         } catch (errResult) {
@@ -289,20 +300,27 @@ connection.onInitialize(async (params) => {
     };
 });
 // Called when client sends updated config
-connection.onDidChangeConfiguration(change => {
+connection.onDidChangeConfiguration(async change => {
+    const isInitialConfiguration = !didReceiveConfiguration;
+    didReceiveConfiguration = true;
+
     applyMyDefragConfig(buildMyDefragConfig(change.settings?.mydfrg || {}));
+
     logger = Logger.createLogger(channelName, source, config, {
         connection,
         filePath: paths.server,
         isServer: true
     });
+
     parserLogger = Logger.createLogger('MyDefrag Parser', 'Parser', config, {
         connection,
         filePath: paths.parser,
         isServer: true
     });
+
     configureTokenizer({ logger: parserLogger });
     configureParser({ logger: parserLogger, ini: { ...ini, ...config } });
+
     excludeConfig = {
         mydfrgExcludes: change.settings?.mydfrg?.exclude || [],
         fileExcludes: change.settings?.files?.exclude || {},
@@ -311,37 +329,48 @@ connection.onDidChangeConfiguration(change => {
         folderCount: 0,
         searchCount: 0
     };
-    // Re-validate since excludes may have changed
-    // Validate document open in editors
-    documents.all().forEach(validateDocument);
-    // Re-validate since excludes may have changed
-    // connection.workspace.getWorkspaceFolders().then(folders => {
-    //     for (const folder of folders) {
-    //         scanAllFiles(folder.uri);
-    //     }
-    // });
-    for (const folder of workspaceFolders) {
-        scanAllFiles(folder.uri);
-    }
+
+    await enqueueDiagnosticsRefresh('configuration', {
+        clear: false,
+        clearUnavailable: true,
+        scanWorkspace: true
+    });
 });
 //Events for server - documents
 documents.onDidChangeContent(change => {
     console?.log('server.js:onDidChangeContent MyDefrag server document changed');
-    validateDocument(change.document);
+    if (isUriExcluded(change.document.uri)) {
+        clearUriDiagnostics(change.document.uri, 'excluded', { writeSnapshot: false });
+        return;
+    }
+
+    scheduleValidateDocument(change.document);
 });
 
 documents.onDidOpen(change => {
     console?.log('server.js:onDidOpen MyDefrag server document opened');
+    if (isUriExcluded(change.document.uri)) {
+        clearUriDiagnostics(change.document.uri, 'excluded', { writeSnapshot: false });
+        return;
+    }
+
     validateDocument(change.document);
 });
 
 documents.onDidSave(change => {
     console?.log('server.js:onDidSave MyDefrag server document saved');
+    clearPendingValidation(change.document.uri);
+    if (isUriExcluded(change.document.uri)) {
+        clearUriDiagnostics(change.document.uri, 'excluded', { writeSnapshot: false });
+        return;
+    }
+
     validateDocument(change.document);
 });
 
 documents.onDidClose(change => {
     console?.log('server.js:onDidClose MyDefrag server document closed');
+    clearPendingValidation(change.document.uri);
     currentDiagnosticsByUri.set(change.document.uri, []);
     writeDiagnosticsSnapshot('close', change.document.uri, parserState);
     connection.sendDiagnostics({
@@ -381,7 +410,7 @@ function formatParserState(state) {
             return String(state ?? 'unknown');
     }
 }
-
+// ─────────────────────────────────────────────────────────────────────────────────
 /**
  * Writes the current diagnostics map to a compact JSON snapshot.
  *
@@ -411,23 +440,465 @@ function writeDiagnosticsSnapshot(event, uri, state) {
 
     try {
         fs.writeFileSync(snapshotPath, JSON.stringify(snapshot, null, 2), 'utf8');
+        connection.sendNotification('mydfrg/diagnosticsSnapshotChanged', {
+            event,
+            uri,
+            snapshotPath,
+            parserState: snapshot.parserState
+        });
     } catch (errResult) {
         logger?.warn?.(`writeDiagnosticsSnapshot: Unable to write ${snapshotPath}: ${errResult.message}`);
     }
 }
 
-async function validateDocument(document) {
+function clearPublishedDiagnostics(reason = 'configuration') {
+    const uris = Array.from(currentDiagnosticsByUri.keys());
+
+    currentDiagnosticsByUri.clear();
+
+    for (const uri of uris) {
+        connection.sendDiagnostics({
+            uri,
+            diagnostics: []
+        });
+    }
+
+    writeDiagnosticsSnapshot(`clear-${reason}`, '', parserState);
+}
+
+/**
+ * Normalizes a URI-like value into the string key used by diagnostics maps.
+ *
+ * @param {string|object} uri Document URI or URI-like object.
+ * @returns {string} URI string.
+ */
+function normalizeUri(uri) {
+    return uri?.toString?.() ?? String(uri);
+}
+
+/**
+ * Converts a file URI to a filesystem path.
+ *
+ * @param {string|object} uri Document URI or URI-like object.
+ * @returns {string} Filesystem path.
+ */
+function getFilePathFromUri(uri) {
+    return fileURLToPath(normalizeUri(uri));
+}
+
+/**
+ * Checks whether a URI targets a MyDefrag script file handled by this server.
+ *
+ * @param {string|object} uri Document URI or URI-like object.
+ * @returns {boolean} True when the URI points to a supported script file.
+ */
+function isMyDefragScriptUri(uri) {
+    try {
+        return isMyDefragScriptFile(getFilePathFromUri(uri));
+    } catch (_err) {
+        return false;
+    }
+}
+
+/**
+ * Returns the workspace-relative path used by the exclusion helper.
+ *
+ * @param {string|object} uri Document URI or URI-like object.
+ * @returns {string} Workspace-relative path when possible.
+ */
+function getRelativePathForUri(uri) {
+    return util.getRelativePath(normalizeUri(uri), workspaceFolderPaths);
+}
+
+/**
+ * Checks whether a URI is excluded by the current server exclude settings.
+ *
+ * @param {string|object} uri Document URI or URI-like object.
+ * @returns {boolean} True when the URI is excluded.
+ */
+function isUriExcluded(uri) {
+    return util.isExcluded(getRelativePathForUri(uri), excludeConfig, logger);
+}
+
+/**
+ * Clears diagnostics for one URI without rebuilding other files.
+ *
+ * @param {string|object} uri Document URI or URI-like object.
+ * @param {string} reason Clear reason.
+ * @param {object} [options] Clear options.
+ * @returns {boolean} True when diagnostics were cleared.
+ */
+function clearUriDiagnostics(uri, reason = 'clear', options = {}) {
+    const key = normalizeUri(uri);
+
+    clearPendingValidation(key);
+    currentDiagnosticsByUri.delete(key);
+    connection.sendDiagnostics({
+        uri: key,
+        diagnostics: []
+    });
+
+    if (options.writeSnapshot !== false) {
+        writeDiagnosticsSnapshot(`clear-${reason}`, key, parserState);
+    }
+
+    return true;
+}
+
+/**
+ * Clears diagnostics for excluded or deleted files without clearing all results.
+ *
+ * @param {string} reason Clear reason.
+ * @returns {number} Number of URIs cleared.
+ */
+function clearUnavailableDiagnostics(reason = 'configuration') {
+    let clearedCount = 0;
+
+    for (const uri of Array.from(currentDiagnosticsByUri.keys())) {
+        let shouldClear = isUriExcluded(uri);
+
+        if (!shouldClear) {
+            try {
+                shouldClear = !fs.existsSync(getFilePathFromUri(uri));
+            } catch (_err) {
+                shouldClear = true;
+            }
+        }
+
+        if (shouldClear) {
+            clearUriDiagnostics(uri, reason, { writeSnapshot: false });
+            clearedCount++;
+        }
+    }
+
+    if (clearedCount > 0) {
+        writeDiagnosticsSnapshot(`clear-${reason}`, '', parserState);
+    }
+
+    return clearedCount;
+}
+
+/**
+ * Checks whether a queued refresh has been superseded.
+ *
+ * @param {object} options Refresh options.
+ * @returns {boolean} True when the refresh should stop.
+ */
+function isRefreshStale(options = {}) {
+    return Boolean(options.refreshId && options.refreshId !== refreshSequence);
+}
+
+/**
+ * Serializes expensive diagnostics refreshes and skips superseded queued work.
+ *
+ * @param {string} reason Refresh reason.
+ * @param {object} [options] Refresh options.
+ * @returns {Promise<void>}
+ */
+function enqueueDiagnosticsRefresh(reason, options = {}) {
+    const refreshId = ++refreshSequence;
+
+    refreshQueue = refreshQueue
+        .catch(() => { })
+        .then(async () => {
+            if (refreshId !== refreshSequence) {
+                return;
+            }
+
+            await refreshAllDiagnostics(reason, {
+                ...options,
+                refreshId
+            });
+        });
+
+    return refreshQueue;
+}
+
+/**
+ * Serializes watched-file refresh work with workspace refresh work.
+ *
+ * @param {Array<object>} changes LSP file watcher changes.
+ * @param {string} reason Refresh reason.
+ * @returns {Promise<void>}
+ */
+function enqueueChangedFileRefresh(changes, reason = 'watched-files') {
+    const refreshId = ++refreshSequence;
+
+    refreshQueue = refreshQueue
+        .catch(() => { })
+        .then(async () => {
+            if (refreshId !== refreshSequence) {
+                return;
+            }
+
+            await refreshChangedFiles(changes, reason, { refreshId });
+        });
+
+    return refreshQueue;
+}
+
+/**
+ * Yields bulk diagnostics work back to the language-server event loop.
+ *
+ * @returns {Promise<void>}
+ */
+function yieldToEventLoop() {
+    return new Promise(resolve => setImmediate(resolve));
+}
+
+/**
+ * Clears a queued validation timer for a document.
+ *
+ * @param {string|object} uri Document URI or URI-like object.
+ */
+function clearPendingValidation(uri) {
+    const key = normalizeUri(uri);
+    const timer = pendingValidationTimers.get(key);
+
+    if (timer) {
+        clearTimeout(timer);
+        pendingValidationTimers.delete(key);
+    }
+}
+
+/**
+ * Schedules current-document validation after typing settles.
+ *
+ * @param {TextDocument} document The document to validate.
+ * @param {number} delayMs Delay in milliseconds.
+ */
+function scheduleValidateDocument(document, delayMs = VALIDATION_DEBOUNCE_MS) {
+    const key = document.uri;
+
+    clearPendingValidation(key);
+
+    const timer = setTimeout(() => {
+        pendingValidationTimers.delete(key);
+        validateDocument(document);
+    }, delayMs);
+
+    pendingValidationTimers.set(key, timer);
+}
+
+/**
+ * Debounces expensive workspace-wide refreshes.
+ *
+ * @param {string} reason Refresh reason.
+ * @param {number} delayMs Delay in milliseconds.
+ */
+function scheduleWorkspaceRefresh(reason, delayMs = WORKSPACE_REFRESH_DEBOUNCE_MS) {
+    if (workspaceRefreshTimer) {
+        clearTimeout(workspaceRefreshTimer);
+    }
+
+    workspaceRefreshTimer = setTimeout(() => {
+        workspaceRefreshTimer = null;
+        enqueueDiagnosticsRefresh(reason, {
+            clear: false,
+            clearUnavailable: true,
+            scanWorkspace: true
+        }).catch(errResult => {
+            logger?.err?.(errResult, `refreshAllDiagnostics: ${reason} failed`);
+        });
+    }, delayMs);
+}
+
+/**
+ * Debounces watched file changes and validates only the affected script files.
+ *
+ * @param {Array<object>} changes LSP file watcher changes.
+ * @param {number} delayMs Delay in milliseconds.
+ */
+function scheduleWatchedFileRefresh(changes = [], delayMs = WORKSPACE_REFRESH_DEBOUNCE_MS) {
+    for (const change of changes) {
+        if (change?.uri) {
+            pendingWatchedFileChanges.set(change.uri, change);
+        }
+    }
+
+    if (watchedFileRefreshTimer) {
+        clearTimeout(watchedFileRefreshTimer);
+    }
+
+    watchedFileRefreshTimer = setTimeout(() => {
+        const pendingChanges = Array.from(pendingWatchedFileChanges.values());
+        pendingWatchedFileChanges.clear();
+        watchedFileRefreshTimer = null;
+
+        enqueueChangedFileRefresh(pendingChanges, 'watched-files').catch(errResult => {
+            logger?.err?.(errResult, 'refreshChangedFiles: watched-files failed');
+        });
+    }, delayMs);
+}
+
+/**
+ * Validates or clears one changed file URI from a watcher event.
+ *
+ * @param {string|object} uri Changed file URI.
+ * @param {object} [options] Validation options.
+ * @returns {Promise<boolean>} True when the URI was handled.
+ */
+async function validateFileUri(uri, options = {}) {
+    const key = normalizeUri(uri);
+
+    if (!isMyDefragScriptUri(key)) {
+        return false;
+    }
+
+    if (isUriExcluded(key)) {
+        clearUriDiagnostics(key, 'excluded', { writeSnapshot: false });
+        return true;
+    }
+
+    const openDocument = documents.get(key);
+    if (openDocument) {
+        clearPendingValidation(key);
+        await validateDocument(openDocument, options);
+        return true;
+    }
+
+    try {
+        const content = fs.readFileSync(getFilePathFromUri(key), 'utf8');
+        const document = TextDocument.create(key, 'mydfrg', 1, content);
+        await validateDocument(document, options);
+        return true;
+    } catch (errResult) {
+        clearUriDiagnostics(key, 'missing', { writeSnapshot: false });
+        logger?.warn?.(`validateFileUri: Unable to read ${key}: ${errResult.message}`);
+        return true;
+    }
+}
+
+/**
+ * Refreshes diagnostics for the exact files reported by the file watcher.
+ *
+ * @param {Array<object>} changes LSP file watcher changes.
+ * @param {string} reason Refresh reason.
+ * @param {object} [options] Refresh options.
+ * @returns {Promise<void>}
+ */
+async function refreshChangedFiles(changes = [], reason = 'watched-files', options = {}) {
+    let handledCount = 0;
+
+    for (const change of changes) {
+        if (isRefreshStale(options)) {
+            return;
+        }
+
+        const uri = normalizeUri(change?.uri);
+        if (!uri || !isMyDefragScriptUri(uri)) {
+            continue;
+        }
+
+        if (change.type === FILE_CHANGE_TYPE_DELETED) {
+            clearUriDiagnostics(uri, reason, { writeSnapshot: false });
+            handledCount++;
+            continue;
+        }
+
+        if (await validateFileUri(uri, { writeSnapshot: false })) {
+            handledCount++;
+        }
+
+        if (handledCount % BULK_SCAN_YIELD_INTERVAL === 0) {
+            await yieldToEventLoop();
+        }
+    }
+
+    if (isRefreshStale(options)) {
+        return;
+    }
+
+    if (handledCount > 0) {
+        writeDiagnosticsSnapshot(`${reason}-complete`, '', parserState);
+    }
+}
+
+async function refreshAllDiagnostics(reason = 'configuration', options = {}) {
+    const shouldClear = options.clear === true;
+    const shouldClearUnavailable = options.clearUnavailable === true;
+    const shouldScanWorkspace = options.scanWorkspace !== false;
+
+    if (shouldClear) {
+        clearPublishedDiagnostics(reason);
+    }
+
+    if (shouldClearUnavailable) {
+        clearUnavailableDiagnostics(reason);
+    }
+
+    for (const document of documents.all()) {
+        if (isRefreshStale(options)) {
+            return;
+        }
+
+        if (isUriExcluded(document.uri)) {
+            clearUriDiagnostics(document.uri, 'excluded', { writeSnapshot: false });
+            continue;
+        }
+
+        clearPendingValidation(document.uri);
+        await validateDocument(document, { writeSnapshot: false });
+    }
+
+    if (isRefreshStale(options)) {
+        return;
+    }
+
+    if (!shouldScanWorkspace) {
+        writeDiagnosticsSnapshot(`${reason}-complete`, '', parserState);
+        return;
+    }
+
+    let folders = workspaceFolders;
+
+    try {
+        const latestFolders = await connection.workspace.getWorkspaceFolders();
+        if (latestFolders) {
+            folders = latestFolders;
+            workspaceFolders = latestFolders;
+            workspaceFolderPaths = workspaceFolders.map(f =>
+                f.uri.endsWith('/') ? f.uri : f.uri + '/'
+            );
+        }
+    } catch (errResult) {
+        logger?.warn?.(`refreshAllDiagnostics: Unable to refresh workspace folders: ${errResult.message}`);
+    }
+
+    const scanOptions = {
+        scannedCount: 0,
+        isStale: () => isRefreshStale(options)
+    };
+    for (const folder of folders || []) {
+        if (isRefreshStale(options)) {
+            return;
+        }
+
+        await scanAllFiles(folder.uri, scanOptions);
+    }
+
+    if (isRefreshStale(options)) {
+        return;
+    }
+
+    writeDiagnosticsSnapshot(`${reason}-complete`, '', parserState);
+}
+// ─────────────────────────────────────────────────────────────────────────────────
+async function validateDocument(document, options = {}) {
     let parser;
     let fragParser;
     let bestParser;
     let fragParserResult;
     let t = null;
+    let documentVersion;
+    const diagnostics = [];
     try { // ── Validate Document ─────────────────────────────────────────────────────────
         const filePath = fileURLToPath(document.uri.toString());
         currFilePath = filePath;
         const ext = path.extname(filePath).toLowerCase();
+        const isMyDefragDocument = document.languageId === 'mydfrg';
+        documentVersion = document.version;
         const text = document.getText();
-        diagnostics = [];
         logger.dbg(5, `validateDocument: `);
         logger.dbg(5, `validateDocument: MYDC SERVER ACTIVATED`);
         logger.dbg(3, `validateDocument: for ${filePath}`);
@@ -441,7 +912,9 @@ async function validateDocument(document) {
                 parserState = parseStates.SCRIPT_FRAGMENT;
                 break;
             default:
-                parserState = parseStates.SCRIPT_UNKNOWN;
+                parserState = isMyDefragDocument
+                    ? parseStates.SCRIPT_FRAGMENT
+                    : parseStates.SCRIPT_UNKNOWN;
                 break;
         }
         const initialParserState = parserState;
@@ -570,6 +1043,12 @@ async function validateDocument(document) {
     }
     // ─────────────────────────────────────────────────────────────────────────────────
     logger.dbg(5, `validateDocument: Publish diagnostics`);
+    const liveDocument = documents.get(document.uri);
+    if (liveDocument && liveDocument.version !== documentVersion) {
+        scheduleValidateDocument(liveDocument);
+        return;
+    }
+
     for (const errResult of bestParser.errors) {
         diagnostics.push({
             severity: errResult.severity,
@@ -579,7 +1058,9 @@ async function validateDocument(document) {
         });
     }    //ParserState Send Notification to extension.js
     currentDiagnosticsByUri.set(document.uri, diagnostics);
-    writeDiagnosticsSnapshot('validate', document.uri, parserState);
+    if (options.writeSnapshot !== false) {
+        writeDiagnosticsSnapshot('validate', document.uri, parserState);
+    }
     connection.sendNotification('mydfrg/parserState', { uri: document.uri, state: parserState });
 
     connection.sendDiagnostics({
@@ -607,15 +1088,21 @@ function isMyDefragScriptFile(fileName) {
  * directories before descending and excluded files before reading content.
  *
  * @param {string} folderUri The folder URI to scan.
+ * @param {object} [options] Bulk scan options.
+ * @returns {Promise<number>} Count of scanned MyDefrag files.
  */
-async function scanAllFiles(folderUri) {
+async function scanAllFiles(folderUri, options = {}) {
     const folderPath = fileURLToPath(folderUri);
     const normalizedFolderUri = folderUri.endsWith('/') ? folderUri : `${folderUri}/`;
     const relFolderPath = util.getRelativePath(normalizedFolderUri, workspaceFolderPaths);
 
+    if (options.isStale?.()) {
+        return 0;
+    }
+
     if (util.isExcluded(relFolderPath, excludeConfig, logger)) {
         logger.dbg(6, `scanAllFiles: Skipping excluded folder ${relFolderPath}`);
-        return;
+        return 0;
     }
 
     let entries;
@@ -623,10 +1110,16 @@ async function scanAllFiles(folderUri) {
         entries = fs.readdirSync(folderPath, { withFileTypes: true });
     } catch (errResult) {
         logger?.warn?.(`scanAllFiles: Unable to read folder ${folderPath}: ${errResult.message}`);
-        return;
+        return 0;
     }
 
+    let scannedFiles = 0;
+
     for (const entry of entries) {
+        if (options.isStale?.()) {
+            return scannedFiles;
+        }
+
         const fullPath = path.join(folderPath, entry.name);
         const uri = pathToFileURL(fullPath).toString();
         const relPath = util.getRelativePath(uri, workspaceFolderPaths);
@@ -637,23 +1130,32 @@ async function scanAllFiles(folderUri) {
                 logger.dbg(6, `scanAllFiles: Skipping excluded folder ${relPath}`);
                 continue;
             }
-            await scanAllFiles(`${uri}/`);
+            scannedFiles += await scanAllFiles(`${uri}/`, options);
 
         } else if (entry.isFile() && isMyDefragScriptFile(entry.name)) {
             // file
             if (util.isExcluded(relPath, excludeConfig, logger)) {
                 // clear diagnostics for this file
                 // diagnosticCollection.set(document.uri, []);
+                clearUriDiagnostics(uri, 'excluded', { writeSnapshot: false });
                 continue;
             }
             // Skip if already open — documents.get() handles those
             if (!documents.get(uri)) {
                 const content = fs.readFileSync(fullPath, 'utf8');
                 const document = TextDocument.create(uri, 'mydfrg', 1, content);
-                await validateDocument(document);
+                await validateDocument(document, { writeSnapshot: false });
+                scannedFiles++;
+                options.scannedCount = (options.scannedCount || 0) + 1;
+
+                if (options.scannedCount % BULK_SCAN_YIELD_INTERVAL === 0) {
+                    await yieldToEventLoop();
+                }
             }
         }
     }
+
+    return scannedFiles;
 }
 // ─────────────────────────────────────────────────────────────────────────────────
 // MyDefrag pre-defined variables.
@@ -673,29 +1175,19 @@ connection.onHover(() => { // ToDo onHover
 connection.onInitialized(() => {
     // ─────────────────────────────────────────────────────────────────────────────────
     logger.dbg(6, 'server.js:onInitialized: MyDefrag server Language Client entered initialized');
-    logger.dbg(6, 'server.js:onInitialized: Scan all files in the workspace');
-    connection.workspace.getWorkspaceFolders().then(folders => {
-        for (const folder of folders) {
-            scanAllFiles(folder.uri);
-        }
-    });
+    logger.dbg(6, 'server.js:onInitialized: Workspace scan deferred to file/configuration refresh');
     logger.dbg(3, 'server.js:onInitialized: MyDefrag server Language Client initialized. Log test.');
 });
 
 // Change File Watcher
-connection.onDidChangeWatchedFiles(async () => {
+connection.onDidChangeWatchedFiles(async change => {
     console?.log('server.js:onDidChangeWatchedFiles: MyDefrag server document watched On Did Change');
-
-    documents.all().forEach(validateDocument);
-
-    try {
-        const folders = await connection.workspace.getWorkspaceFolders();
-        for (const folder of folders || []) {
-            await scanAllFiles(folder.uri);
-        }
-    } catch (errResult) {
-        logger?.err?.(errResult, 'server.js:onDidChangeWatchedFiles: Failed to rescan workspace folders');
+    if (change?.changes?.length) {
+        scheduleWatchedFileRefresh(change.changes);
+        return;
     }
+
+    scheduleWorkspaceRefresh('watched-files');
 });
 //#endregion
 // Client Open Document and Connection .Parse ──────────────────────────────────────────────────────────────

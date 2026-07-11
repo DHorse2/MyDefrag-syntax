@@ -1,0 +1,82 @@
+{
+  "DirectoryName": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "ExcludeFiles": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
+  },
+  "ExcludeVolumes": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "FastFill": {
+    "canonical": "FastFill",
+    "id": "fileAction.fastFill"
+  },
+  "FileActions": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
+  },
+  "FileEnd": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "FileName": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "FragmentCount": {
+    "canonical": "FragmentCount",
+    "id": "volumeCondition.fragmentCount"
+  },
+  "FullPath": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "Label": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "Name": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "SetColor": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
+  },
+  "SetVariable": {
+    "canonical": "SetVariable",
+    "id": "setting.setVariable"
+  },
+  "Size": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
+  },
+  "SortByName": {
+    "canonical": "SortByName",
+    "id": "fileAction.sortByName"
+  },
+  "VolumeActions": {
+    "canonical": "VolumeActions",
+    "id": "structure.volumeActions"
+  },
+  "VolumeEnd": {
+    "canonical": "VolumeEnd",
+    "id": "structure.volumeEnd"
+  },
+  "整理碎片": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
+  },
+  "选择卷": {
+    "canonical": "VolumeSelect",
+    "id": "structure.volumeSelect"
+  },
+  "选择文件": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
+  }
+}

@@ -156,20 +156,24 @@ function createLogger(channelName, thisSource = "Unknown", config = {}, options 
     writeSessionHeader();
     //#endregion
     //#region Logging functions
-    function logToConsole(...args) {
+    function logToConsole(thisSeverity, ...args) {
+        thisSeverity ??= localIniData.severity.Information;
+        lastSeverity = localIniData.severity.Warning;
         // const message = args.join(' ');
         const content = args.map(formatLogValue).filter(Boolean).join(' ');
         const message = `[${new Date().toISOString()}] [${extensionName}] [${localSource}] ${content}`;
 
         try {
             appendToFile(message);
-            if (localIsServer) {
-                // server: usually forward via LSP
-                lspConnection?.sendNotification?.('mydefrag/log', { message });
-            } else {
-                outputChannel?.appendLine?.(message);
+            if (localIsDebugOn && thisSeverity <= localVerboseLevel) {
+                if (localIsServer) {
+                    // server: usually forward via LSP
+                    lspConnection?.sendNotification?.('mydefrag/log', { message });
+                } else {
+                    outputChannel?.appendLine?.(message);
+                }
+                console.log(message);
             }
-            console.log(message);
         } catch (errResult) {
             const errorMessage = `logger.js:createLogger:logToConsole: Error handling output: ${errResult.message}`;
             console.error(errorMessage);
@@ -179,61 +183,65 @@ function createLogger(channelName, thisSource = "Unknown", config = {}, options 
     // logToConsole(`logger.js:createLogger: Console LOGGER creation source: ${source}`)
 
     function dbg(thisSeverity = localVerboseLevel, ...args) {
+        thisSeverity ??= localVerboseLevel;
         if (localIsDebugOn && thisSeverity <= localVerboseLevel) {
-            logToConsole(`[DEBUG ${thisSeverity}]`, ...args);
+            logToConsole(thisSeverity, `[DEBUG ${thisSeverity}]`, ...args);
         }
     }
-    function err(errResult, ...args) {
-        logToConsole(`[ERROR!!!]`, errResult, ...args);
-        lastSeverity = localIniData.severity.Error
+    function err(thisSeverity, ...args) {
+        thisSeverity ??= localIniData.severity.Error;
+        logToConsole(thisSeverity, `[ERROR!!!]`, thisSeverity, ...args);
     }
-    function warn(...args) {
-        logToConsole(`[WARNING]`, ...args);
-        lastSeverity = localIniData.severity.Warning;
+    function warn(thisSeverity, ...args) {
+        thisSeverity ??= localIniData.severity.Warning;
+        logToConsole(thisSeverity, `[WARNING]`, ...args);
     }
-    function hint(...args) {
-        logToConsole(`[HINT]`, ...args);
-        lastSeverity = localIniData.severity.Hint;
+    function hint(thisSeverity, ...args) {
+        thisSeverity ??= localIniData.severity.Hint;
+        logToConsole(thisSeverity, `[HINT]`, ...args);
     }
-    function info(...args) {
-        logToConsole(`[INFO]`, ...args);
-        lastSeverity = localIniData.severity.Information;
+    function info(thisSeverity, ...args) {
+        thisSeverity ??= localIniData.severity.Information;
+        logToConsole(thisSeverity, `[INFO]`, ...args);
     }
-    function message(thisSeverity = localIniData.severity.Information, ...args) {
-        lastSeverity = thisSeverity;
+    function message(thisSeverity, ...args) {
+        thisSeverity ??= localIniData.severity.Information;
         switch (thisSeverity) {
             case localIniData.severity.Error:
-                err(...args);
+                err(thisSeverity, ...args);
                 break;
             case localIniData.severity.Warning:
-                warn(...args);
+                warn(thisSeverity, ...args);
                 break;
             case localIniData.severity.Information:
-                info(...args);
+                info(thisSeverity, ...args);
                 break;
             case localIniData.severity.Hint:
-                hint(...args);
+                hint(thisSeverity, ...args);
                 break;
             default:
-                info(...args);
+                info(thisSeverity, ...args);
                 break;
         }
     }
 
-    function messageDetail(...args) {
+    function messageDetail(thisSeverity, ...args) {
+        thisSeverity ??= localIniData.severity.Information;
         // const message = args.join(' ');
         const content = args.map(formatLogValue).filter(Boolean).join(' ');
         const message = `${content}`;
 
         try {
             appendToFile(message);
-            if (localIsServer) {
-                // server: usually forward via LSP
-                lspConnection?.sendNotification?.('mydefrag/log', { message });
-            } else {
-                outputChannel?.appendLine?.(message);
+            if (localIsDebugOn && thisSeverity <= localVerboseLevel) {
+                if (localIsServer) {
+                    // server: usually forward via LSP
+                    lspConnection?.sendNotification?.('mydefrag/log', { message });
+                } else {
+                    outputChannel?.appendLine?.(message);
+                }
+                console.log(message);
             }
-            console.log(message);
         } catch (errResult) {
             const errorMessage = `logger.js:createLogger:messageDetail: Error handling output: ${errResult.message}`;
             console.error(errorMessage);
@@ -271,7 +279,7 @@ function logArrayToConsole(logger, thisChannelName, thisSeverity = iniData.sever
                 if (!loggedMessages.has(nextMessage)) {
                     loggedMessages.add(nextMessage);
                     logger.message(thisSeverity, nextMessage);
-                    // logger.info(nextMessage + '\n.\n');
+                    // logger.info(null, nextMessage + '\n.\n');
                     logger.dbg(3, nextMessage);
                 }
             }

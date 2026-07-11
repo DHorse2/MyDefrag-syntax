@@ -1,64 +1,18 @@
 {
-  "generatedAt": "2026-06-29T10:10:04.507Z",
-  "event": "validate",
-  "uri": "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsDataGet.MyDc",
+  "generatedAt": "2026-07-11T10:15:51.300Z",
+  "event": "configuration-complete",
+  "uri": "",
   "parserState": "SCRIPT_FRAGMENT",
   "diagnosticsByUri": {
     "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragAnyComplexVolume.MyD": {
-      "count": 2,
-      "diagnostics": [
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 138,
-              "character": 0
-            },
-            "end": {
-              "line": 138,
-              "character": 14
-            }
-          },
-          "message": "Unexpected statement 'bodisyouruncle'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 138,
-              "character": 0
-            },
-            "end": {
-              "line": 138,
-              "character": 14
-            }
-          },
-          "message": "Unexpected token 'bodisyouruncle' — expected end of file",
-          "source": "MyDefrag"
-        }
-      ]
+      "count": 0,
+      "diagnostics": []
     },
-    "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/ScriptsReset/ResetActionVerbs/ZoneDoAction.MyDc": {
-      "count": 2,
+    "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsPageHiberDump.MyDc": {
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 3,
-              "character": 0
-            },
-            "end": {
-              "line": 3,
-              "character": 11
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileactions' may be incomplete",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -69,107 +23,7 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileSelect ... FileActions ... FileEnd block.",
-          "source": "MyDefrag"
-        }
-      ]
-    },
-    "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsDataGet.MyDc": {
-      "count": 4,
-      "diagnostics": [
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 63,
-              "character": 38
-            },
-            "end": {
-              "line": 63,
-              "character": 61
-            }
-          },
-          "message": "Expected ) but found '\"VolOccupiedSizeGbDesc\"'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 63,
-              "character": 38
-            },
-            "end": {
-              "line": 63,
-              "character": 61
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '\"VolOccupiedSizeGbDesc\"'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside one of: script, VolumeActions, FileActions.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 63,
-              "character": 38
-            },
-            "end": {
-              "line": 63,
-              "character": 61
-            }
-          },
-          "message": "Unexpected token '\"VolOccupiedSizeGbDesc\"' — fragment may be incomplete",
-          "source": "MyDefrag"
-        }
-      ]
-    },
-    "file:///d%3A/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneDoHeader.MyDc": {
-      "count": 2,
-      "diagnostics": [
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 12,
-              "character": 1
-            },
-            "end": {
-              "line": 12,
-              "character": 11
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: orphaned compound structure 'fileselect' may be incomplete",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeActions.",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
@@ -186,7 +40,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -206,7 +60,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -226,7 +80,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -246,7 +100,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -266,7 +120,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -286,7 +140,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -306,7 +160,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -326,7 +180,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -346,7 +200,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -366,7 +220,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -386,7 +240,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -406,7 +260,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -450,7 +304,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -498,7 +352,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -526,7 +380,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -546,7 +400,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -590,7 +444,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -614,7 +468,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -634,7 +488,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -654,7 +508,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -674,7 +528,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -694,7 +548,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -714,7 +568,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -734,7 +588,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -762,7 +616,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -790,7 +644,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -810,7 +664,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -883,39 +737,8 @@
       "diagnostics": []
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragAnyComplexVolume.MyD": {
-      "count": 2,
-      "diagnostics": [
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 138,
-              "character": 0
-            },
-            "end": {
-              "line": 138,
-              "character": 14
-            }
-          },
-          "message": "Unexpected statement 'bodisyouruncle'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 138,
-              "character": 0
-            },
-            "end": {
-              "line": 138,
-              "character": 14
-            }
-          },
-          "message": "Unexpected token 'bodisyouruncle' — expected end of file",
-          "source": "MyDefrag"
-        }
-      ]
+      "count": 0,
+      "diagnostics": []
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Defrag/DefragAnyVolume.MyD": {
       "count": 0,
@@ -941,7 +764,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1001,7 +824,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1021,7 +844,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1109,7 +932,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1129,7 +952,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1625,7 +1448,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1645,7 +1468,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1665,7 +1488,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1685,7 +1508,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1705,7 +1528,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1725,7 +1548,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1745,7 +1568,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1765,7 +1588,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1785,7 +1608,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1805,7 +1628,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1825,7 +1648,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1845,7 +1668,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1885,7 +1708,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1905,7 +1728,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1953,7 +1776,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -1981,7 +1804,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2001,7 +1824,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2060,7 +1883,7 @@
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2080,7 +1903,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2100,7 +1923,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2120,7 +1943,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2140,7 +1963,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2160,7 +1983,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2180,7 +2003,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2208,7 +2031,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2236,7 +2059,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2256,7 +2079,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2808,7 +2631,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2848,7 +2671,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2868,7 +2691,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -2937,69 +2760,8 @@
       "diagnostics": []
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsDataGet.MyDc": {
-      "count": 4,
-      "diagnostics": [
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 63,
-              "character": 38
-            },
-            "end": {
-              "line": 63,
-              "character": 61
-            }
-          },
-          "message": "Expected ) but found '\"VolOccupiedSizeGbDesc\"'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 63,
-              "character": 38
-            },
-            "end": {
-              "line": 63,
-              "character": 61
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '\"VolOccupiedSizeGbDesc\"'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside one of: script, VolumeActions, FileActions.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 63,
-              "character": 38
-            },
-            "end": {
-              "line": 63,
-              "character": 61
-            }
-          },
-          "message": "Unexpected token '\"VolOccupiedSizeGbDesc\"' — fragment may be incomplete",
-          "source": "MyDefrag"
-        }
-      ]
+      "count": 0,
+      "diagnostics": []
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeStatisticsDetailDisplay.MyDc": {
       "count": 0,
@@ -3024,276 +2786,6 @@
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Volume/VolumeWhenStarted.MyDc": {
       "count": 0,
       "diagnostics": []
-    },
-    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeType.MyDc": {
-      "count": 3,
-      "diagnostics": [
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 4
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Failed parsing fragment statement 'name' as 'volume_condition'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 4
-            }
-          },
-          "message": "Unexpected token 'name' — fragment may be incomplete",
-          "source": "MyDefrag"
-        }
-      ]
-    },
-    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeC.MyDc": {
-      "count": 1,
-      "diagnostics": [
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
-          "source": "MyDefrag"
-        }
-      ]
-    },
-    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeD.MyDc": {
-      "count": 1,
-      "diagnostics": [
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
-          "source": "MyDefrag"
-        }
-      ]
-    },
-    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeData.MyDc": {
-      "count": 3,
-      "diagnostics": [
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 4
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Failed parsing fragment statement 'name' as 'volume_condition'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 4
-            }
-          },
-          "message": "Unexpected token 'name' — fragment may be incomplete",
-          "source": "MyDefrag"
-        }
-      ]
-    },
-    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeDev.MyDc": {
-      "count": 2,
-      "diagnostics": [
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 4
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Unknown fragment keyword 'skip' parent 'null'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 4
-            }
-          },
-          "message": "Unexpected token 'skip' — fragment may be incomplete",
-          "source": "MyDefrag"
-        }
-      ]
-    },
-    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeE.MyDc": {
-      "count": 1,
-      "diagnostics": [
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
-          "source": "MyDefrag"
-        }
-      ]
-    },
-    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeF.MyDc": {
-      "count": 1,
-      "diagnostics": [
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
-          "source": "MyDefrag"
-        }
-      ]
-    },
-    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeG.MyDc": {
-      "count": 1,
-      "diagnostics": [
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside VolumeSelect.",
-          "source": "MyDefrag"
-        }
-      ]
-    },
-    "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/VolumeType/VolumeTypeSys.MyDc": {
-      "count": 2,
-      "diagnostics": [
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 4
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Unknown fragment keyword 'skip' parent 'null'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 4
-            }
-          },
-          "message": "Unexpected token 'skip' — fragment may be incomplete",
-          "source": "MyDefrag"
-        }
-      ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZONE$%20HERE.MyDc": {
       "count": 0,
@@ -3330,7 +2822,7 @@
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3373,7 +2865,7 @@
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3408,7 +2900,7 @@
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3469,69 +2961,8 @@
       "diagnostics": []
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneStatisticsReportGet.MyDc": {
-      "count": 4,
-      "diagnostics": [
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 30,
-              "character": 42
-            },
-            "end": {
-              "line": 30,
-              "character": 53
-            }
-          },
-          "message": "Expected ) but found 'actionverbs'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 30,
-              "character": 42
-            },
-            "end": {
-              "line": 30,
-              "character": 53
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Unknown fragment keyword 'actionverbs' parent 'null'",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
-          "range": {
-            "start": {
-              "line": 0,
-              "character": 0
-            },
-            "end": {
-              "line": 0,
-              "character": 1
-            }
-          },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside one of: script, VolumeActions, FileActions.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 30,
-              "character": 42
-            },
-            "end": {
-              "line": 30,
-              "character": 53
-            }
-          },
-          "message": "Unexpected token 'actionverbs' — fragment may be incomplete",
-          "source": "MyDefrag"
-        }
-      ]
+      "count": 0,
+      "diagnostics": []
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneStatisticsReportGetOriginal.MyDc": {
       "count": 0,
@@ -3560,7 +2991,7 @@
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3592,7 +3023,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3619,19 +3050,19 @@
           "severity": 1,
           "range": {
             "start": {
-              "line": 23,
-              "character": 8
+              "line": 27,
+              "character": 1
             },
             "end": {
-              "line": 23,
-              "character": 9
+              "line": 27,
+              "character": 12
             }
           },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "message": "server.js:Parser:parseFragment: 'fileactions' is 'fileactions' and belongs in 'file_block', but this fragment was established as 'fileactions'",
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3642,22 +3073,22 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         },
         {
           "severity": 2,
           "range": {
             "start": {
-              "line": 23,
-              "character": 8
+              "line": 27,
+              "character": 1
             },
             "end": {
-              "line": 23,
-              "character": 9
+              "line": 27,
+              "character": 12
             }
           },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "Unexpected token 'fileactions' — fragment may be incomplete",
           "source": "MyDefrag"
         }
       ]
@@ -3681,7 +3112,7 @@
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3716,7 +3147,7 @@
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3751,7 +3182,7 @@
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3774,19 +3205,19 @@
           "severity": 1,
           "range": {
             "start": {
-              "line": 22,
-              "character": 8
+              "line": 26,
+              "character": 1
             },
             "end": {
-              "line": 22,
-              "character": 9
+              "line": 26,
+              "character": 12
             }
           },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "message": "server.js:Parser:parseFragment: 'fileactions' is 'fileactions' and belongs in 'file_block', but this fragment was established as 'fileactions'",
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3797,22 +3228,22 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         },
         {
           "severity": 2,
           "range": {
             "start": {
-              "line": 22,
-              "character": 8
+              "line": 26,
+              "character": 1
             },
             "end": {
-              "line": 22,
-              "character": 9
+              "line": 26,
+              "character": 12
             }
           },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "Unexpected token 'fileactions' — fragment may be incomplete",
           "source": "MyDefrag"
         }
       ]
@@ -3824,19 +3255,19 @@
           "severity": 1,
           "range": {
             "start": {
-              "line": 24,
-              "character": 8
+              "line": 30,
+              "character": 1
             },
             "end": {
-              "line": 24,
-              "character": 9
+              "line": 30,
+              "character": 12
             }
           },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
+          "message": "server.js:Parser:parseFragment: 'fileactions' is 'fileactions' and belongs in 'file_block', but this fragment was established as 'fileactions'",
           "source": "MyDefrag"
         },
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3847,22 +3278,22 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         },
         {
           "severity": 2,
           "range": {
             "start": {
-              "line": 24,
-              "character": 8
+              "line": 30,
+              "character": 1
             },
             "end": {
-              "line": 24,
-              "character": 9
+              "line": 30,
+              "character": 12
             }
           },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "Unexpected token 'fileactions' — fragment may be incomplete",
           "source": "MyDefrag"
         }
       ]
@@ -3896,60 +3327,30 @@
       "diagnostics": []
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectBlobs.MyDc": {
-      "count": 2,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
+          "severity": 4,
           "range": {
             "start": {
-              "line": 2,
+              "line": 0,
               "character": 0
             },
             "end": {
-              "line": 2,
+              "line": 0,
               "character": 1
             }
           },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 2,
-              "character": 0
-            },
-            "end": {
-              "line": 2,
-              "character": 1
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectDevToDo.MyDc": {
-      "count": 3,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -3960,46 +3361,16 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectGames.MyDc": {
-      "count": 3,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4010,46 +3381,16 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectIdeScripts.MyDc": {
-      "count": 3,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4060,46 +3401,16 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectLinksCorp.MyDc": {
-      "count": 3,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4110,22 +3421,7 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
@@ -4134,7 +3430,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4154,7 +3450,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4171,36 +3467,21 @@
       ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsDataDynamic.MyDc": {
-      "count": 2,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
+          "severity": 4,
           "range": {
             "start": {
-              "line": 2,
+              "line": 0,
               "character": 0
             },
             "end": {
-              "line": 2,
+              "line": 0,
               "character": 1
             }
           },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 2,
-              "character": 0
-            },
-            "end": {
-              "line": 2,
-              "character": 1
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
@@ -4209,7 +3490,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4226,36 +3507,21 @@
       ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsPageHiberDump.MyDc": {
-      "count": 2,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
+          "severity": 4,
           "range": {
             "start": {
-              "line": 2,
+              "line": 0,
               "character": 0
             },
             "end": {
-              "line": 2,
+              "line": 0,
               "character": 1
             }
           },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 2,
-              "character": 0
-            },
-            "end": {
-              "line": 2,
-              "character": 1
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
@@ -4264,7 +3530,7 @@
       "count": 1,
       "diagnostics": [
         {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4281,25 +3547,10 @@
       ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectOsPrograms.MyDc": {
-      "count": 3,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 6,
-              "character": 4
-            },
-            "end": {
-              "line": 6,
-              "character": 5
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4310,46 +3561,16 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 6,
-              "character": 4
-            },
-            "end": {
-              "line": 6,
-              "character": 5
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectPeople.MyDc": {
-      "count": 3,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4360,57 +3581,27 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectReference.MyDc": {
-      "count": 2,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
+          "severity": 4,
           "range": {
             "start": {
-              "line": 4,
+              "line": 0,
               "character": 0
             },
             "end": {
-              "line": 4,
+              "line": 0,
               "character": 1
             }
           },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 0
-            },
-            "end": {
-              "line": 4,
-              "character": 1
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
@@ -4420,25 +3611,10 @@
       "diagnostics": []
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectShares.MyDc": {
-      "count": 3,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4449,46 +3625,16 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]
     },
     "file:///d:/MdmTaylorDo/MdmDefrag/TaylorDoVs0_5/src/Zone/ZoneTypeSelect/ZoneTypeSelectSystemOtherData.MyDc": {
-      "count": 3,
+      "count": 1,
       "diagnostics": [
         {
-          "severity": 1,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "server.js:Parser:parseFragment: Expected fragment keyword, got '('",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 3,
+          "severity": 4,
           "range": {
             "start": {
               "line": 0,
@@ -4499,22 +3645,7 @@
               "character": 1
             }
           },
-          "message": "SCRIPT_FRAGMENT: insert this fragment inside value.",
-          "source": "MyDefrag"
-        },
-        {
-          "severity": 2,
-          "range": {
-            "start": {
-              "line": 4,
-              "character": 4
-            },
-            "end": {
-              "line": 4,
-              "character": 5
-            }
-          },
-          "message": "Unexpected token '(' — fragment may be incomplete",
+          "message": "SCRIPT_FRAGMENT: insert this fragment inside FileActions.",
           "source": "MyDefrag"
         }
       ]

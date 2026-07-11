@@ -1,0 +1,38 @@
+{
+  "diagnostics": [
+    {
+      "code": "MYDFRG_PARSER_UNEXPECTED_TOKEN",
+      "component": "parser",
+      "severity": "error",
+      "messageKey": "parser.diagnostic.unexpectedToken.message",
+      "placeholders": [
+        "token"
+      ],
+      "source": "src/server/parser.js",
+      "status": "draft"
+    },
+    {
+      "code": "MYDFRG_PARSER_EXPECTED_TOKEN",
+      "component": "parser",
+      "severity": "error",
+      "messageKey": "parser.diagnostic.expectedToken.message",
+      "placeholders": [
+        "expected",
+        "actual"
+      ],
+      "source": "src/server/parser.js",
+      "status": "draft"
+    },
+    {
+      "code": "MYDFRG_SERVER_UNSUPPORTED_EXTENSION",
+      "component": "server",
+      "severity": "information",
+      "messageKey": "server.diagnostic.unsupportedExtension.message",
+      "placeholders": [
+        "extension"
+      ],
+      "source": "src/server/server.js",
+      "status": "draft"
+    }
+  ]
+}

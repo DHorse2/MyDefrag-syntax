@@ -21,8 +21,10 @@ const DiagState = Object.freeze({
 class DiagnosticStateStore {
     /**
      * @param {string|null} stateFile Absolute path to diagnostics state JSON.
+     * @param {object} [options]
+     * @param {string|null} [options.legacyStateFile] Legacy state path to read when the primary file does not exist.
      */
-    constructor(stateFile = null) {
+    constructor(stateFile = null, options = {}) {
         paths.ensureDirectories();
 
         if (stateFile === null || stateFile === undefined) {
@@ -30,7 +32,9 @@ class DiagnosticStateStore {
         }
 
         this.stateFile = stateFile;
+        this.legacyStateFile = options.legacyStateFile || null;
         this.items = new Map();
+        this.saveFailed = false;
 
         this.load();
     }
@@ -46,14 +50,20 @@ class DiagnosticStateStore {
      * @returns {Map<string,string>}
      */
     load() {
+        if (this.saveFailed) {
+            return this.items;
+        }
+
         this.items.clear();
 
-        if (!this.stateFile || !fs.existsSync(this.stateFile)) {
+        const loadStateFile = this.getLoadStateFile();
+
+        if (!loadStateFile || !fs.existsSync(loadStateFile)) {
             return this.items;
         }
 
         try {
-            const raw = fs.readFileSync(this.stateFile, 'utf8');
+            const raw = fs.readFileSync(loadStateFile, 'utf8');
             if (!raw.trim()) { return this.items; }
 
             const parsed = JSON.parse(raw);
@@ -82,6 +92,25 @@ class DiagnosticStateStore {
     }
 
     /**
+     * Use the primary state file when present, otherwise read legacy state once.
+     *
+     * @returns {string|null}
+     */
+    getLoadStateFile() {
+        if (this.stateFile && fs.existsSync(this.stateFile)) {
+            return this.stateFile;
+        }
+
+        if (this.legacyStateFile &&
+            this.legacyStateFile !== this.stateFile &&
+            fs.existsSync(this.legacyStateFile)) {
+            return this.legacyStateFile;
+        }
+
+        return this.stateFile;
+    }
+
+    /**
      * Save diagnostic state to disk.
      */
     save() {
@@ -99,7 +128,13 @@ class DiagnosticStateStore {
             items: sortedItems
         };
 
-        fs.writeFileSync(this.stateFile, JSON.stringify(payload, null, 2), 'utf8');
+        try {
+            replaceFileSync(this.stateFile, JSON.stringify(payload, null, 2), 'utf8');
+            this.saveFailed = false;
+        } catch (err) {
+            this.saveFailed = true;
+            console.error(`Failed to save diagnostic state: ${err.message}`);
+        }
     }
 
     /**
@@ -185,6 +220,14 @@ class DiagnosticStateStore {
     }
 
     /**
+     * @param {string} key
+     * @returns {boolean}
+     */
+    isSent(key) {
+        return this.get(key) === DiagState.SENT;
+    }
+
+    /**
      * Clear only skipped diagnostics.
      */
     clearSkipped() {
@@ -247,7 +290,8 @@ class DiagnosticStateStore {
         return state === DiagState.NONE ||
             state === DiagState.SKIPPED ||
             state === DiagState.FIXED ||
-            state === DiagState.IGNORED;
+            state === DiagState.IGNORED ||
+            state === DiagState.SENT;
     }
 
     /**
@@ -261,6 +305,58 @@ class DiagnosticStateStore {
 
         return String(key).replace(/\\/g, '/').toLowerCase();
     }
+}
+
+function replaceFileSync(filePath, content, encoding) {
+    const dir = path.dirname(filePath);
+    const base = path.basename(filePath);
+    const tempFile = path.join(dir, `.${base}.${process.pid}.${Date.now()}.tmp`);
+
+    try {
+        fs.writeFileSync(tempFile, content, encoding);
+        retryFileOperation(() => fs.renameSync(tempFile, filePath));
+    } finally {
+        if (fs.existsSync(tempFile)) {
+            try {
+                fs.unlinkSync(tempFile);
+            } catch (_err) {
+                // Best effort cleanup for a failed atomic write.
+            }
+        }
+    }
+}
+
+function retryFileOperation(operation) {
+    let lastError = null;
+
+    for (let attempt = 0; attempt < 5; attempt += 1) {
+        try {
+            operation();
+            return;
+        } catch (err) {
+            lastError = err;
+
+            if (!isRetriableFileError(err) || attempt === 4) {
+                throw err;
+            }
+
+            sleepSync(20);
+        }
+    }
+
+    throw lastError;
+}
+
+function isRetriableFileError(err) {
+    return err &&
+        (err.code === 'UNKNOWN' ||
+            err.code === 'EBUSY' ||
+            err.code === 'EPERM' ||
+            err.code === 'EACCES');
+}
+
+function sleepSync(ms) {
+    Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 }
 
 module.exports = {

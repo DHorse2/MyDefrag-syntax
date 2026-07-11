@@ -10,7 +10,7 @@ const {
 const { KeywordLookup } = require('./keywordLookup');
 const paths = require('../shared/path');
 
-const INFORMATION_SEVERITY = 3;
+const MAX_PROBLEMS_SEVERITY = 2;
 
 /**
  * Loads diagnostics-latest.json and provides deterministic next/next-file
@@ -21,6 +21,8 @@ class DiagnosticNavigator {
      * @param {object} options
      * @param {string} options.diagnosticsFile Absolute path to diagnostics-latest.json.
      * @param {string} options.dismissedFile Absolute path to session_dismissed.json.
+     * @param {string} options.stateFile Absolute path to writable diagnostic state JSON.
+     * @param {string} options.legacyStateFile Legacy diagnostic state JSON used only when stateFile does not exist.
      * @param {object} [options.languageData] Existing project keyword/language data.
      */
     constructor(options = {}) {
@@ -28,9 +30,13 @@ class DiagnosticNavigator {
 
         this.diagnosticsFile = options.diagnosticsFile || paths.diagnosticsLatestFile;
 
-        this.dismissedFile = options.dismissedFile || paths.diagnosticsStateFile;
+        const stateFile = options.stateFile || paths.diagnosticsStateFile;
 
-        this.state = new DiagnosticStateStore(options.stateFile || paths.diagnosticsStateFile);
+        this.dismissedFile = options.dismissedFile || stateFile;
+
+        this.state = new DiagnosticStateStore(stateFile, {
+            legacyStateFile: options.legacyStateFile
+        });
 
         // this.navigatorStateFile = options.navigatorStateFile || paths.navigatorStateFile;
 
@@ -47,13 +53,14 @@ class DiagnosticNavigator {
         this.index = -1;
         this.reload();
     }
-
+    // ─────────────────────────────────────────────────────────────────────────────────
+    //#region Diagnostic Data
     // diagnostic key helper
     keyOf(item) {
         if (!item) { return ''; }
 
         return [
-            item.filePath || '',
+            this.normalizePath(item.filePath || ''),
             item.line ?? '',
             item.column ?? '',
             item.message || ''
@@ -64,12 +71,16 @@ class DiagnosticNavigator {
      * Reload diagnostics and dismissed state from disk.
      */
     reload() {
+        const currentKey = this.keyOf(this.visibleDiagnostics[this.index]);
         this.state.load();
         this.allDiagnostics = this.loadDiagnostics();
         this.visibleDiagnostics = this.filterDiagnostics(this.allDiagnostics);
 
         if (this.visibleDiagnostics.length === 0) {
             this.index = -1;
+        } else if (currentKey) {
+            const nextIndex = this.visibleDiagnostics.findIndex((item) => this.keyOf(item) === currentKey);
+            this.index = nextIndex >= 0 ? nextIndex : Math.min(this.index, this.visibleDiagnostics.length - 1);
         } else if (this.index < 0 || this.index >= this.visibleDiagnostics.length) {
             this.index = 0;
         }
@@ -108,7 +119,7 @@ class DiagnosticNavigator {
             for (const item of parsed) {
                 this.pushNormalizedItem(result, item, item.filePath || item.file || item.uri);
             }
-            return result;
+            return this.dedupeDiagnostics(this.sortDiagnostics(result));
         }
 
         if (parsed && typeof parsed === 'object') {
@@ -116,7 +127,7 @@ class DiagnosticNavigator {
                 for (const item of parsed.diagnosticsByUri) {
                     this.pushNormalizedItem(result, item, item.filePath || item.file || item.uri);
                 }
-                return result;
+                return this.dedupeDiagnostics(this.sortDiagnostics(result));
             }
             for (const [filePath, entry] of Object.entries(parsed.diagnosticsByUri || {})) {
                 let diagnostics = entry;
@@ -136,7 +147,7 @@ class DiagnosticNavigator {
             }
         }
 
-        return result;
+        return this.dedupeDiagnostics(this.sortDiagnostics(result));
     }
 
     /**
@@ -168,15 +179,48 @@ class DiagnosticNavigator {
     }
 
     /**
+     * Remove duplicate diagnostics that differ only by URI spelling.
+     *
+     * @param {Array<object>} diagnostics
+     * @returns {Array<object>}
+     */
+    dedupeDiagnostics(diagnostics) {
+        const result = [];
+        const seen = new Set();
+
+        for (const diagnostic of diagnostics) {
+            const key = this.keyOf(diagnostic);
+            if (seen.has(key)) { continue; }
+
+            seen.add(key);
+            result.push(diagnostic);
+        }
+
+        return result;
+    }
+
+    /**
+     * Keep diagnostic navigation stable across snapshot rewrites.
+     *
+     * @param {Array<object>} diagnostics
+     * @returns {Array<object>}
+     */
+    sortDiagnostics(diagnostics) {
+        return diagnostics.slice().sort((a, b) => this.keyOf(a).localeCompare(this.keyOf(b)));
+    }
+
+    /**
      * @param {Array<object>} diagnostics
      * @returns {Array<object>}
      */
     filterDiagnostics(diagnostics) {
         return diagnostics.filter((item) => {
             const key = this.keyOf(item);
-            if (item.severity === 3) { return false; }
+            if (!isProblemsDiagnostic(item)) { return false; }
             if (this.state.isFixed(key)) { return false; }
             if (this.state.isIgnored(key)) { return false; }
+            if (this.state.isSkipped(key)) { return false; }
+            if (this.state.isSent(key)) { return false; }
             return true;
         });
     }
@@ -188,12 +232,16 @@ class DiagnosticNavigator {
     isNavigable(item) {
         if (!item) { return false; }
         const key = this.keyOf(item);
+        if (!isProblemsDiagnostic(item)) { return false; }
         if (this.state.isFixed(key)) { return false; }
         if (this.state.isIgnored(key)) { return false; }
         if (this.state.isSkipped(key)) { return false; }
+        if (this.state.isSent(key)) { return false; }
         return true;
     }
-
+    //#endregion
+    // ─────────────────────────────────────────────────────────────────────────────────
+    //#region API Exposed Commands
     /**
     * @returns {object|null}
     */
@@ -210,7 +258,9 @@ class DiagnosticNavigator {
     next() {
         this.reload();
         if (this.visibleDiagnostics.length === 0) return null;
-        this.index = Math.min(this.index + 1, this.visibleDiagnostics.length - 1);
+        this.index = this.index < 0
+            ? 0
+            : Math.min(this.index + 1, this.visibleDiagnostics.length - 1);
         return this.current();
     }
 
@@ -268,7 +318,8 @@ class DiagnosticNavigator {
         const current = this.current();
         if (!current) { return null; }
         this.state.set(this.keyOf(current), DiagState.SKIPPED);
-        return this.next();
+        this.reload();
+        return this.current();
     }
 
     /**
@@ -311,16 +362,67 @@ class DiagnosticNavigator {
     }
 
     /**
-     * Send data to AI Agent or external program/clipboard
+     * Generate an AI prompt for the current diagnostic.
+     * The current diagnostic remains selected.
      *
      * @returns {object|null}
+     * 
+     * use the VS Code API.
+     *      const vscode = require('vscode');
+     *      await vscode.env.clipboard.writeText(promptText);
+     * or in a non-async function:
+     *      vscode.env.clipboard.writeText(promptText).then(() => {
+     *          vscode.window.showInformationMessage("Diagnostic prompt copied to clipboard.");
+     *      });
+     *         
      */
-    sendIt() {
+    async sendIt() {
         const current = this.current();
-        if (!current) { return null; }
+        if (!current) {
+            return null;
+        }
+
+        paths.ensureDirectories();
+
+        const payload = {
+            generatedAt: new Date().toISOString(),
+            diagnostic: current,
+            key: this.keyOf(current),
+            diagnosticsFile: this.diagnosticsFile
+        };
+
+        const prompt = this.buildAiPrompt(payload);
+
+        // Save prompt to disk
+        fs.writeFileSync(
+            paths.diagnosticsSendPromptFile,
+            prompt,
+            'utf8'
+        );
+
+        // Optional JSON companion
+        fs.writeFileSync(
+            paths.diagnosticsSendItemFile,
+            JSON.stringify(payload, null, 2),
+            'utf8'
+        );
+
+        // Optional clipboard
+        vscode.env.clipboard.writeText(prompt).then(() => {
+            vscode.window.showInformationMessage("Diagnostic prompt copied to clipboard.");
+        });
+
+        // Remember that this diagnostic has been sent
         this.state.set(this.keyOf(current), DiagState.SENT);
+
+        // Reload so the tree/status can reflect SENT
         this.reload();
-        return this.current();
+
+        // Stay on THIS diagnostic
+        return {
+            diagnostic: this.current(),
+            promptFile: paths.diagnosticsSendPromptFile
+        };
     }
 
     /**
@@ -331,8 +433,8 @@ class DiagnosticNavigator {
     top() {
         this.state.clearSkipped();
         this.reload();
-        this.index = -1;
-        return this.next();
+        this.index = this.visibleDiagnostics.length > 0 ? 0 : -1;
+        return this.current();
     }
 
     /**
@@ -343,10 +445,96 @@ class DiagnosticNavigator {
     reset() {
         this.state.reset();
         this.reload();
-        this.index = -1;
-        return this.next();
+        this.index = this.visibleDiagnostics.length > 0 ? 0 : -1;
+        return this.current();
     }
+    //#endregion
+    // ─────────────────────────────────────────────────────────────────────────────────
+    //#region Functions
+    /**
+     * Builds a Markdown prompt for AI-assisted diagnosis of a MyDefrag
+     * language extension diagnostic.
+     *
+     * @param {object} payload
+     * @returns {string}
+     */
+    buildAiPrompt(payload) {
+        const diagnostic = payload.diagnostic || {};
 
+        return [
+            "# MyDefrag Language Extension",
+            "",
+            "## Developer comments",
+            "",
+            "None",
+            "",
+            "## Diagnostic Repair Request",
+            "",
+            "You are assisting in the development of the MyDefrag Language Extension.",
+            "",
+            "Your objective is to determine whether the current diagnostic is caused by:",
+            "",
+            "1. Invalid MyDefrag script syntax.",
+            "2. A tokenizer defect.",
+            "3. A parser defect.",
+            "4. Incorrect languageData metadata.",
+            "5. An incorrect diagnostic.",
+            "6. A navigation or classification bug.",
+            "",
+            "When proposing code changes:",
+            "",
+            "- Preserve all existing comments.",
+            "- Preserve formatting.",
+            "- Make the smallest possible safe change.",
+            "- Do not refactor unrelated code.",
+            "- Explain the root cause before proposing a fix.",
+            "- If multiple fixes are possible, recommend the safest one.",
+            "",
+            "---",
+            "",
+            "## Diagnostic",
+            "",
+            `File: ${diagnostic.filePath}`,
+            `Line: ${diagnostic.oneBasedLine}`,
+            `Column: ${diagnostic.oneBasedColumn}`,
+            `Severity: ${diagnostic.severity}`,
+            `Message: ${diagnostic.message}`,
+            `Token: ${diagnostic.token || "(not detected)"}`,
+            `Known Keyword: ${diagnostic.keywordExists ? "Yes" : "No"}`,
+            "",
+            "---",
+            "",
+            "## Investigation",
+            "",
+            "Determine:",
+            "",
+            "- What the parser was expecting.",
+            "- Why the diagnostic was produced.",
+            "- Whether the script is valid.",
+            "- Whether the language extension is correct.",
+            "",
+            "---",
+            "",
+            "## Expected Response",
+            "",
+            "Please provide:",
+            "",
+            "1. Root cause.",
+            "2. Recommended fix.",
+            "3. Files requiring modification.",
+            "4. Exact code changes.",
+            "5. Any risks or side effects.",
+            "",
+            "---",
+            "",
+            "## Diagnostic JSON",
+            "",
+            "```json",
+            JSON.stringify(payload, null, 2),
+            "```",
+            ""
+        ].join("\n");
+    }
     /**
      * Open the current diagnostic in the editor.
      *
@@ -377,6 +565,18 @@ class DiagnosticNavigator {
     }
 
     /**
+     * @returns {{currentIndex:number,total:number,fileCount:number}}
+     */
+    getState() {
+        const stats = this.getStats();
+        return {
+            currentIndex: stats.index > 0 ? stats.index - 1 : 0,
+            total: stats.total,
+            fileCount: stats.fileCount
+        };
+    }
+
+    /**
      * @param {object} diagnostic
      * @returns {object}
      */
@@ -396,7 +596,18 @@ class DiagnosticNavigator {
     filePathFromUriOrPath(value) {
         const text = String(value);
         if (text.startsWith('file:///')) {
-            return vscode.Uri.parse(text).fsPath;
+            let uriText = text;
+            try {
+                uriText = decodeURIComponent(text);
+            } catch (_err) {
+                uriText = text;
+            }
+
+            try {
+                return vscode.Uri.parse(uriText).fsPath;
+            } catch (_err) {
+                return uriText.replace(/^file:\/\/\//, '');
+            }
         }
         return text;
     }
@@ -408,6 +619,17 @@ class DiagnosticNavigator {
     normalizePath(filePath) {
         return String(filePath || '').replace(/\\/g, '/').toLowerCase();
     }
+}
+//#endregion
+
+/**
+ * Match the diagnostic severities that should be navigated from the Problems list.
+ *
+ * @param {object} diagnostic
+ * @returns {boolean}
+ */
+function isProblemsDiagnostic(diagnostic) {
+    return Boolean(diagnostic && diagnostic.severity > 0 && diagnostic.severity <= MAX_PROBLEMS_SEVERITY);
 }
 
 module.exports = {

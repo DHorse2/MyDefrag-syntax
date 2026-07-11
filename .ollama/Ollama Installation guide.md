@@ -6,31 +6,31 @@ This document describes the recommended installation and configuration of **Opil
 
 ## Table of Contents
 
-* [Purpose](#purpose)
-* [Prerequisites](#prerequisites)
-* [Tested Development System](#tested-development-system)
-* [Recommended Model Configuration](#recommended-model-configuration)
+- [Purpose](#purpose)
+- [Prerequisites](#prerequisites)
+- [Tested Development System](#tested-development-system)
+- [Recommended Model Configuration](#recommended-model-configuration)
 
-  * [Fast Coding Model](#fast-coding-model)
-  * [Primary Development Model](#primary-development-model)
-  * [General Purpose Model](#general-purpose-model)
-  * [Large Models](#large-models)
-* [Configure Opilot](#configure-opilot)
-* [Recommended Workflow](#recommended-workflow)
-* [Shell Commands](#shell-commands)
+  - [Fast Coding Model](#fast-coding-model)
+  - [Primary Development Model](#primary-development-model)
+  - [General Purpose Model](#general-purpose-model)
+  - [Large Models](#large-models)
+- [Configure Opilot](#configure-opilot)
+- [Recommended Workflow](#recommended-workflow)
+- [Shell Commands](#shell-commands)
 
-  * [Start the Ollama Service](#start-the-ollama-service)
-  * [Verify Installation](#verify-installation)
-  * [List Installed Models](#list-installed-models)
-  * [Download Models](#download-models)
-  * [Run a Model](#run-a-model)
-  * [Show Running Models](#show-running-models)
-  * [Stop Models](#stop-models)
-  * [Remove a Model](#remove-a-model)
-  * [Display Model Information](#display-model-information)
-  * [Display Help](#display-help)
-  * [Typical Daily Workflow](#typical-daily-workflow)
-* [Future Evaluation](#future-evaluation)
+  - [Start the Ollama Service](#start-the-ollama-service)
+  - [Verify Installation](#verify-installation)
+  - [List Installed Models](#list-installed-models)
+  - [Download Models](#download-models)
+  - [Run a Model](#run-a-model)
+  - [Show Running Models](#show-running-models)
+  - [Stop Models](#stop-models)
+  - [Remove a Model](#remove-a-model)
+  - [Display Model Information](#display-model-information)
+  - [Display Help](#display-help)
+  - [Typical Daily Workflow](#typical-daily-workflow)
+- [Future Evaluation](#future-evaluation)
 
 ---
 
@@ -38,10 +38,10 @@ This document describes the recommended installation and configuration of **Opil
 
 This guide describes a recommended local AI development environment using:
 
-* VSCodium
-* Opilot
-* Ollama
-* Local Large Language Models (LLMs)
+- VSCodium
+- Opilot
+- Ollama
+- Local Large Language Models (LLMs)
 
 The objective is to provide fast, private, high-quality AI assistance for software development without relying on cloud-hosted services.
 
@@ -51,11 +51,11 @@ The objective is to provide fast, private, high-quality AI assistance for softwa
 
 Install the following software:
 
-* VSCodium
-* Ollama
-* Opilot extension
-* Git
-* Node.js
+- VSCodium
+- Ollama
+- Opilot extension
+- Git
+- Node.js
 
 Ensure the Ollama service is running before opening Opilot.
 
@@ -93,10 +93,10 @@ ollama pull qwen2.5-coder:7b
 
 Recommended for:
 
-* Autocomplete
-* Small code changes
-* Quick questions
-* Everyday programming
+- Autocomplete
+- Small code changes
+- Quick questions
+- Everyday programming
 
 ---
 
@@ -110,13 +110,13 @@ ollama pull qwen2.5-coder:14b
 
 Recommended for:
 
-* JavaScript
-* PowerShell
-* TCL
-* Rust
-* Parser development
-* Language Server development
-* Multi-file reasoning
+- JavaScript
+- PowerShell
+- TCL
+- Rust
+- Parser development
+- Language Server development
+- Multi-file reasoning
 
 This should become the primary development model.
 
@@ -132,11 +132,11 @@ ollama pull qwen3:8b
 
 Recommended for:
 
-* Documentation
-* Technical writing
-* Design discussions
-* Architecture
-* Project planning
+- Documentation
+- Technical writing
+- Design discussions
+- Architecture
+- Project planning
 
 ---
 
@@ -154,10 +154,10 @@ Although it runs successfully on the tested hardware, it exceeds the available G
 
 This model is best reserved for:
 
-* Repository-wide analysis
-* Complex debugging
-* Large architectural reviews
-* Long-context reasoning
+- Repository-wide analysis
+- Complex debugging
+- Large architectural reviews
+- Long-context reasoning
 
 For everyday development, the 14B coding model provides the best balance between speed and reasoning quality.
 
@@ -167,7 +167,7 @@ For everyday development, the 14B coding model provides the best balance between
 
 1. Install and start Ollama.
 2. Install the Opilot extension.
-3. Open the **Ollama** activity bar.
+3. Open the **Ollama*- activity bar.
 4. Verify the downloaded models appear.
 5. Open **Copilot Chat**.
 6. Select the desired Ollama model.
@@ -309,10 +309,10 @@ ollama ps
 
 Future revisions of this guide should include:
 
-* Opilot configuration options
-* Context length recommendations
-* GPU layer tuning
-* Performance benchmarks
-* MCP integration
-* Comparison with ChatGPT, Codex, and Cline
-* Updated model recommendations as Ollama evolves
+- Opilot configuration options
+- Context length recommendations
+- GPU layer tuning
+- Performance benchmarks
+- MCP integration
+- Comparison with ChatGPT, Codex, and Cline
+- Updated model recommendations as Ollama evolves

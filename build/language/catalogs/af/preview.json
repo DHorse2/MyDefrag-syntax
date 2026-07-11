@@ -1,0 +1,45 @@
+{
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "depth",
+        "path"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "BEGIN [depth:{depth}] {path}"
+    },
+    "preview.annotation.includeEnd.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "depth",
+        "path"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "END   [depth:{depth}] {path}"
+    },
+    "preview.report.includeFiles.heading": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "count"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "Include Files. ({count} file(s) processed"
+    },
+    "preview.warning.missingInclude.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "uri"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "draft",
+      "text": "*** WARNING: Missing include (\"{uri}\") ***"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "af"
+}

@@ -99,7 +99,16 @@ function tokenize(text) {
             // String " ... " or ' ... '
             if (text[i] === '"' || text[i] === "'") {
                 const q = text[i]; i++;
-                while (i < len && text[i] !== q) i++;
+                while (i < len && text[i] !== q) {
+                    if (text[i] === '!') {
+                        const nextBang = text.indexOf('!', i + 1);
+                        if (nextBang > i + 1 && !/[\r\n]/.test(text.slice(i + 1, nextBang))) {
+                            i = nextBang + 1;
+                            continue;
+                        }
+                    }
+                    i++;
+                }
                 if (i < len) i++; // closing quote
                 tokens.push({ type: TT.STRING, value: text.slice(start, i), start, end: i });
                 continue;

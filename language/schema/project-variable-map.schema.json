@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MyDefrag project variable translation map",
+  "type": "object",
+  "required": [
+    "projectId",
+    "sourceLocale",
+    "targetLocale",
+    "variables"
+  ],
+  "properties": {
+    "projectId": {
+      "type": "string"
+    },
+    "sourceLocale": {
+      "type": "string"
+    },
+    "targetLocale": {
+      "type": "string"
+    },
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "symbolId",
+          "canonicalName",
+          "localizedName",
+          "status"
+        ],
+        "properties": {
+          "symbolId": {
+            "type": "string"
+          },
+          "canonicalName": {
+            "type": "string"
+          },
+          "localizedName": {
+            "type": "string"
+          },
+          "declarations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "$ref": "translation-status.schema.json#/definitions/reviewState"
+          }
+        }
+      }
+    }
+  }
+}

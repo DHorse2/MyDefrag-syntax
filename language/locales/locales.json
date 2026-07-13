@@ -1,0 +1,108 @@
+{
+  "locales": [
+    {
+      "id": "en",
+      "englishName": "English",
+      "nativeName": "English",
+      "direction": "ltr",
+      "status": "approved",
+      "notes": "Canonical source catalog."
+    },
+    {
+      "id": "zh-Hans",
+      "englishName": "Simplified Chinese",
+      "nativeName": "简体中文",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Representative sample only; not production complete."
+    },
+    {
+      "id": "sw",
+      "englishName": "Swahili",
+      "nativeName": "Kiswahili",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "am",
+      "englishName": "Amharic",
+      "nativeName": "አማርኛ",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "ha",
+      "englishName": "Hausa",
+      "nativeName": "Hausa",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "yo",
+      "englishName": "Yoruba",
+      "nativeName": "Yorùbá",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "ig",
+      "englishName": "Igbo",
+      "nativeName": "Igbo",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "zu",
+      "englishName": "Zulu",
+      "nativeName": "isiZulu",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "xh",
+      "englishName": "Xhosa",
+      "nativeName": "isiXhosa",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "af",
+      "englishName": "Afrikaans",
+      "nativeName": "Afrikaans",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "ar",
+      "englishName": "Arabic",
+      "nativeName": "العربية",
+      "direction": "rtl",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "fr",
+      "englishName": "French",
+      "nativeName": "Français",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "pt",
+      "englishName": "Portuguese",
+      "nativeName": "Português",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    }
+  ]
+}

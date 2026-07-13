@@ -1,0 +1,40 @@
+{
+  "defaultMode": "annotated-expanded",
+  "modes": [
+    {
+      "id": "annotated-expanded",
+      "description": "Current behavior: expanded source with generated include annotations and summary output.",
+      "status": "approved"
+    },
+    {
+      "id": "code-only-expanded",
+      "description": "Expanded source without generated annotations.",
+      "status": "draft"
+    },
+    {
+      "id": "canonical-preview",
+      "description": "Canonical MyDefrag source view after future localized source translation.",
+      "status": "draft"
+    },
+    {
+      "id": "localized-preview",
+      "description": "Localized keyword rendering over canonical source semantics.",
+      "status": "draft"
+    },
+    {
+      "id": "bilingual-preview",
+      "description": "Canonical and localized source shown together for review.",
+      "status": "draft"
+    },
+    {
+      "id": "semantic-review-preview",
+      "description": "Semantic IDs, canonical spellings, and localized spellings for review.",
+      "status": "draft"
+    },
+    {
+      "id": "translation-difference-preview",
+      "description": "Diff-oriented preview for translation and keyword mapping changes.",
+      "status": "draft"
+    }
+  ]
+}

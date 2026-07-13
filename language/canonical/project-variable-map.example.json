@@ -1,0 +1,19 @@
+{
+  "projectId": "example",
+  "sourceLocale": "en",
+  "targetLocale": "zh-Hans",
+  "variables": [
+    {
+      "symbolId": "example.variable.spaceHogLimit",
+      "canonicalName": "SpaceHogLimit",
+      "localizedName": "SpaceHogLimit",
+      "declarations": [
+        "Scripts/Example.MyD:12:1"
+      ],
+      "references": [
+        "Scripts/Example.MyD:20:13"
+      ],
+      "status": "draft"
+    }
+  ]
+}

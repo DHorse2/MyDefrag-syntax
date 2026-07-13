@@ -1,0 +1,148 @@
+# 📁 File Tree: .AI
+
+<!-- markdownlint-disable MD036 MD040 -->
+
+📍 Root: d:\AI\.AI  
+🕒 Generated: 7/8/2026, 7:29:31 AM  
+
+📊 Folders: 26 | Files: 98
+
+---
+
+```
+.AI/
+├── Computers/
+│   └── TJ9DTHV-Mdm/
+│       ├── Cache/
+│       ├── Configuration/
+│       ├── Journal/
+│       │   ├── 1fdba22e.jsonl
+│       │   ├── 48ea27e7.jsonl
+│       │   ├── 72a9a133.jsonl
+│       │   ├── abc123ef.jsonl
+│       │   └── e23dc04b-cb88-454a-b18b-e28b18ba2685.jsonl
+│       ├── Logs/
+│       ├── Prompt/
+│       │   └── e23dc04b-cb88-454a-b18b-e28b18ba2685.md
+│       ├── State/
+│       │   └── current-execution.json
+│       └── Temp/
+├── Config/
+│   └── typos.toml
+├── Context/
+│   ├── AI_Development_Rules.md
+│   ├── Architecture.md
+│   ├── Coding_Standards.md
+│   ├── Debugging_Workflow.md
+│   ├── Development_Rules.md
+│   ├── Installation_Guide.md
+│   ├── Key_Files.md
+│   ├── Parser_Call_Tree.md
+│   ├── Parser_Diagnostic_Workflow.md
+│   └── Project_Context.md
+├── Documentation/
+│   └── Execution-Feature-Status.md
+├── Journal/
+├── Logs/
+├── Modes/
+│   └── Modes_Summary.md
+├── Procedures/
+│   ├── Ai_Bootstrap.md
+│   ├── Code_Review.proc.md
+│   ├── Debugging_Run.proc.md
+│   ├── Execution_Record_Metrics.md
+│   ├── Execution_Record.proc.md
+│   ├── Last_Conversation.md
+│   ├── Markdown_Document_Update.proc.md
+│   ├── README.md
+│   ├── Run Control, Execution Workflow, and Project Files.md
+│   ├── TODO_List_Maintenance.proc.md
+│   └── Validation.proc.md
+├── Prompts/
+│   ├── AI-Extension-Capability-Discovery-Prompt.md
+│   ├── Codex-Extract-Code-Review-TODO-Prompt-v2.md
+│   ├── Codex-Refine-Journaling-Architecture.md
+│   ├── Codex-Task-Add-Ai-Todo-Prompt-Inserter.md
+│   ├── Codex-Task-Change-Run-Journal-Storage.md
+│   ├── Codex-Task-Inline-Completion-Point-Provider.md
+│   ├── currentTask copy.md
+│   ├── currentTask_AI.md
+│   ├── currentTask_Create_ToDo.md
+│   ├── currentTask_TaylorDo.md
+│   ├── currentTask-run-database-execution-context.md
+│   ├── currentTask.md
+│   ├── currentTask20260707.md
+│   ├── Debug Extension Using Diagnostics.md
+│   ├── Detailed Project Review Prompt.md
+│   ├── Execution-Feature-Status.md
+│   ├── File Tree - Prompts.md
+│   ├── Review Checklist.md
+│   ├── Review Instructions.md
+│   ├── RunControl.md
+│   ├── RunControl.md.20260708-041139.bak
+│   ├── Start Codex Diagnostic.md
+│   ├── Taylor2-Code-Review-Prompt.md
+│   └── Update AI Standards Directory Location.md
+├── Results/
+│   ├── AI-Startup-Execution-Record.md
+│   ├── AI-Startup-Review.md
+│   ├── AI-Startup-TODO.md
+│   ├── Codex-Self-TODO-Execution-Record.md
+│   ├── Codex-Self-TODO.md
+│   ├── Roles-Prompts-Implementation-Review-Execution-Record.md
+│   ├── TaylorDo-Execution-Record.md
+│   ├── TaylorDo-Review.md
+│   └── TaylorDo-TODO.md
+├── Roles/
+│   ├── Architect.role.md
+│   ├── Code_Reviewer.role.md
+│   ├── Debugger.role.md
+│   ├── Documentation_Editor.role.md
+│   ├── README.md
+│   ├── Run_Recorder.role.md
+│   └── Test_Engineer.role.md
+├── Rules/
+├── Scripts/
+│   ├── Add-AiTodoPrompt.bat
+│   ├── Add-AiTodoPrompt.ps1
+│   ├── Add-AiTodoPromptDo.ps1
+│   ├── AiProjectIdentity.ps1
+│   ├── Resolve-AiTaskQueue.ps1
+│   └── Test-AiTaskQueueProjectScope.ps1
+├── Snapshot/
+├── Standards/
+│   ├── Execution_Record_Standard.md
+│   ├── Global Markdown Documentation Standard.md
+│   └── Output Document Formatting Rules.md
+├── Tests/
+│   ├── Add-AiTodoPrompt.Tests.ps1
+│   ├── AI_Test_Run_Control_Mapping.md
+│   ├── AI_Test_Types.md
+│   ├── Execution_Metrics_Test.md
+│   ├── File Tree - Tests.md
+│   ├── Minimal_Startup_Test.md
+│   ├── Procedure_Composition_Test.md
+│   ├── Resolve-AiTaskQueue.Tests.ps1
+│   ├── Role_Selection_Test.md
+│   └── Startup_Compliance_Test.md
+├── Tools/
+│   └── Run_Journal.cjs
+├── Workspace/
+├── AI Prompt Library.md
+├── Ai_Bootstrap.md
+├── AI_Directive_Vocabulary.md
+├── AI_Execution_Separation_Of_Concerns.md
+├── Default_Search_Filter.md
+├── Detailed Project Review Prompt.md
+├── File Tree - .AI.md
+├── Instructions.md
+├── Readme.md
+├── Session_Template.md
+├── Start_Here.md
+└── Todo.md
+
+```
+
+---
+
+*Generated by TreeScope*

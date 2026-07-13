@@ -1,0 +1,145 @@
+# Current Task
+
+## Title
+
+Review and revise the AI execution documentation.
+
+## Objective
+
+Review all AI documentation under the `.AI` directory and identify documentation that assumes the current `currentTask.md` execution model.
+
+Revise the documentation to support a future queue-driven execution architecture while maintaining compatibility with the current implementation.
+
+The repository currently uses:
+
+- `.AI\Prompt\currentTask.md`
+
+as the execution entry point.
+
+Do not change this workflow.
+
+Instead, revise the documentation so it describes:
+
+- the current implementation
+- its limitations
+- a recommended evolution toward a queue-based execution model
+
+## Current Workflow Constraint
+
+This task must be executed using the existing workflow.
+
+Codex should assume that `.AI\Prompt\currentTask.md` is still the active task handoff file. The new queue structure does not exist yet and must not be treated as implemented.
+
+## Review Goals
+
+Identify documentation that assumes:
+
+- only one current task exists
+- prompts are stored exclusively in `currentTask.md`
+- all execution begins from `currentTask.md`
+- ad hoc prompts must explicitly override the current task
+- to-do items, diagnostics, and tasks cannot carry their own execution prompts
+
+Recommend improvements that separate:
+
+- Queue Items
+- Prompts
+- Current Task
+- Run Control
+- Execution History
+- Ad Hoc Execution
+
+without requiring immediate implementation.
+
+## Future Architecture To Document
+
+Document the proposed future structure as a recommended architecture, not as the current implementation.
+
+Preferred future structure:
+
+```text
+.AI/
+├── Prompt/
+│   ├── currentTask.md
+│   ├── currentTask.clear.md
+│   └── ...
+├── Queue/
+│   ├── currentItem.json
+│   ├── Todo/
+│   │   ├── ready.jsonl
+│   │   ├── open.jsonl
+│   │   └── completed.jsonl
+│   ├── Diagnostic/
+│   │   ├── ready.jsonl
+│   │   ├── skipped.jsonl
+│   │   └── completed.jsonl
+│   └── Task/
+│       ├── ready.jsonl
+│       ├── open.jsonl
+│       └── completed.jsonl
+└── RunControl/
+    └── mode.json
+```
+
+## Future Design Principles To Capture
+
+The revised documentation should describe these principles:
+
+- Queue items represent work objects.
+- A to-do item should include a concise execution prompt so Codex does not need to ask the user what to do.
+- Queue items may also reference reusable named prompts or procedures.
+- Reusable prompts are assets, not necessarily current tasks.
+- `currentTask.md` is a temporary execution handoff file.
+- In the current implementation, `currentTask.md` remains the entry point.
+- In the future implementation, `currentTask.md` should be generated from the selected queue item and its associated prompt/procedure.
+- Ad hoc requests should bypass queue mode.
+- Clearing the current task should return the system to ad hoc mode so Codex does not keep following stale task instructions.
+- Diagnostics, to-do items, project tasks, research items, and future graph-based work objects should be able to enter queues.
+
+## Deliverables
+
+Produce revised documentation and recommendations.
+
+At minimum:
+
+- Update relevant `.AI` documentation to distinguish the current workflow from the proposed future queue-driven workflow.
+- Add or update examples showing how a to-do item can carry a concise execution prompt.
+- Add or update examples showing how a queue item can reference a named reusable prompt.
+- Document the need for clearing `currentTask.md` when switching to ad hoc mode.
+- Identify obsolete or misleading documentation.
+- Report any architectural inconsistencies discovered during review.
+
+## Constraints
+
+- Do not restructure the repository.
+- Do not rename files.
+- Do not create the future queue folder structure unless explicitly instructed later.
+- Preserve existing terminology where practical.
+- Prefer additive documentation changes.
+- Preserve comments.
+- Maintain Markdown formatting standards.
+- Use `-` for unordered lists.
+- Ensure every heading in a document is unique.
+- Ensure horizontal rules are preceded by a blank line.
+- Avoid unrelated formatting changes.
+
+## Expected Codex Behavior
+
+Codex should:
+
+- Inspect the relevant `.AI` documentation before editing.
+- Summarize the affected files before making changes.
+- Make minimal documentation changes needed to align the docs with this task.
+- Keep a detailed record of inspected files, commands, edits, and reasoning in the appropriate AI execution log location if such a location already exists.
+- If no execution log location is documented, report that gap as a documentation issue instead of inventing a new structure.
+
+## Completion Criteria
+
+The task is complete when the AI documentation clearly distinguishes:
+
+- the existing `currentTask.md` workflow
+- the problem of stale current-task state during ad hoc work
+- the proposed future queue-driven model
+- the role of concise per-item prompts
+- the role of reusable named prompts
+- the role of `currentTask.md` as a runtime handoff rather than the permanent source of work

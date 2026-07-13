@@ -1,0 +1,6 @@
+﻿# AI Todo
+
+- [x] `.AI\Prompts\Codex-Task-Inline-Completion-Point-Provider.md` - Completed
+- [x] `.AI\Prompts\Codex-Task-Probe-Dirty-Worktree-Pattern.md` - Loaded
+- [ ] `.AI\Prompts\Codex-Task-Establish-Declarative-Multilingual-Architecture.md` - Ready
+- [x] [projectId: ai-workspace] [taskId: implement-chatgpt-compatible-task-journals] `.AI\Prompts\Codex-Task-Implement-ChatGPT-Compatible-Task-Journals.md` - Loaded

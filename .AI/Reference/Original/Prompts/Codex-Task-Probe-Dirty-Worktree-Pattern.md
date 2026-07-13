@@ -1,0 +1,149 @@
+# Codex Task: Probe Repeated Dirty Worktree Reports
+
+## Task Type
+
+Probe / investigation only.
+
+Do not fix code unless explicitly instructed later.
+
+## Objective
+
+Investigate why Codex frequently reports the repository/worktree as already dirty before starting tasks.
+
+The goal is to collect evidence and produce a clear diagnosis of recurring dirty-worktree causes, not to clean, reset, delete, format, or modify project files.
+
+## Scope
+
+Primary scope:
+
+- Current project repository.
+- Git status before, during, and after Codex tasks.
+- Codex-created temporary files.
+- Execution-record artifacts.
+- Generated logs.
+- Line-ending or formatting churn.
+- Tool-generated files.
+- Concurrent Codex-window interactions.
+
+## Required Safety Rules
+
+- Do not run `git reset`.
+- Do not run `git clean`.
+- Do not delete project files.
+- Do not modify source files.
+- Do not normalize line endings.
+- Do not rewrite execution records.
+- Do not commit anything.
+- Do not stash anything.
+- Do not change `.gitignore` unless a later explicit task approves it.
+- Read and report only, except for writing the investigation report itself.
+
+## Investigation Steps
+
+1. Identify the repository root and current branch.
+
+2. Capture the current Git state:
+
+   ```powershell
+   git status --short
+   git status --porcelain=v1
+   git diff --stat
+   git diff --name-status
+   git diff --check
+   git ls-files --others --exclude-standard
+   ```
+
+3. Classify every dirty path into one of these categories:
+
+   | Category | Meaning |
+   |---|---|
+   | Pre-existing source modification | Source file already modified before this probe |
+   | Codex execution record | Run record or journal artifact |
+   | Temporary validation artifact | Temporary harness, scratch file, generated test file |
+   | Generated diagnostic/log artifact | Logs, reports, diagnostics, snapshots |
+   | Tool/package artifact | `node_modules`, package lock churn, build output, cache |
+   | Line-ending/whitespace churn | Diff appears mostly formatting or EOL related |
+   | Unknown | Cannot determine from available evidence |
+
+4. For modified tracked files, inspect only enough diff context to determine likely cause:
+
+   ```powershell
+   git diff -- <path>
+   ```
+
+   Do not make any changes.
+
+5. Check whether execution records are being written inside the project repository and whether that is intentional.
+
+6. Check whether Codex temp directories are inside the repository and whether they are excluded by `.gitignore`.
+
+7. Check whether generated diagnostics, logs, or state snapshots are inside the repository and whether they are excluded by `.gitignore`.
+
+8. Check whether concurrent Codex windows could be touching the same repository at the same time.
+
+9. Identify whether the dirty state appears to be:
+
+   - normal active development,
+   - leftover generated artifacts,
+   - incomplete cleanup from previous Codex runs,
+   - expected execution-record tracking,
+   - editor/tool churn,
+   - line-ending churn,
+   - concurrent-window overlap,
+   - or another cause.
+
+## Required Output
+
+Create one Markdown investigation report.
+
+Recommended path:
+
+```text
+runs\YYYY-MM-DD\probe-dirty-worktree-pattern\execution-record.md
+```
+
+The report must include:
+
+1. Summary.
+2. Repository root and branch.
+3. Initial dirty state.
+4. Classified dirty files.
+5. Evidence for each category.
+6. Likely root causes.
+7. Risks.
+8. Recommended next actions.
+9. Whether this should become a standard pre-run Codex check.
+10. Any proposed future changes, clearly marked as proposals only.
+
+## Required Recommendation Section
+
+Include a section titled:
+
+```markdown
+## Recommended Codex Pre-Run Boundary Rule
+```
+
+Evaluate whether future Codex tasks should always begin with:
+
+```powershell
+git status --short
+git diff --stat
+git diff --name-status
+git ls-files --others --exclude-standard
+```
+
+Then recommend a standard rule in this form:
+
+```text
+Before editing, Codex should record pre-existing dirty paths and distinguish them from task-owned changes in the final execution record.
+```
+
+## Completion Criteria
+
+The task is complete when:
+
+- No source files have been modified.
+- No cleanup or reset actions have been performed.
+- A report has been written.
+- The report clearly separates observed evidence from recommendations.
+- The final response summarizes the dirty-worktree causes without claiming to have fixed them.

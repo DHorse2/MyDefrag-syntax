@@ -27,8 +27,8 @@
     },
     {
       "id": "translator",
-      "description": "Future source-language directives, keyword translation, and variable-map messages.",
-      "runtime": false
+      "description": "Language-maintenance Electron app for canonical catalogs, migration inventory, validation, and builds.",
+      "runtime": true
     },
     {
       "id": "docs",
@@ -39,18 +39,271 @@
       "id": "tooling",
       "description": "Build, validation, reporting, and migration strings.",
       "runtime": false
+    },
+    {
+      "id": "package",
+      "description": "Application package and project metadata.",
+      "runtime": false
+    },
+    {
+      "id": "locales",
+      "description": "Locale-maintenance Electron app for translator-owned component catalogs and targeted rebuilds.",
+      "runtime": true
     }
   ],
   "migrationInventory": {
     "scanFiles": [
-      "package.json",
-      "src/extension.js",
-      "src/server/server.js",
-      "src/server/parser.js",
-      "src/preprocess/mydefrag-preprocess.js",
-      "src/diagnostics/registerDiagnosticNavigation.js",
-      "src/diagnostics/diagnosticNavigator.js",
-      "src/diagnostics/diagnosticTreeProvider.js"
+      {
+        "path": "package.json",
+        "component": "package"
+      },
+      {
+        "path": "src/extension.js",
+        "component": "extension"
+      },
+      {
+        "path": "src/server/server.js",
+        "component": "server"
+      },
+      {
+        "path": "src/server/parser.js",
+        "component": "parser"
+      },
+      {
+        "path": "src/preprocess/mydefrag-preprocess.js",
+        "component": "preview"
+      },
+      {
+        "path": "src/diagnostics/registerDiagnosticNavigation.js",
+        "component": "diagnosticExplorer"
+      },
+      {
+        "path": "src/diagnostics/diagnosticNavigator.js",
+        "component": "diagnosticExplorer"
+      },
+      {
+        "path": "src/diagnostics/diagnosticTreeProvider.js",
+        "component": "diagnosticExplorer"
+      },
+      {
+        "path": "build/mdl-language-app/main/ipc-handlers.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/main/main.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/main/project-root.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/main/source-opener.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/main/window-options.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/preload/preload.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/renderer/app.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/renderer/index.html",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/renderer/ui-state.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/repositories/canonical-data-repository.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/services/build-integration.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/services/language-maintenance-service.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/services/source-key-suggester.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/shared/contracts.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/splash/index.html",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-language-app/validation/schema-validator.js",
+        "component": "translator"
+      },
+      {
+        "path": "build/mdl-locale-app/main/ipc-handlers.js",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/main/main.js",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/main/project-root.js",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/main/window-options.js",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/preload/preload.js",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/renderer/app.js",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/renderer/index.html",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/renderer/ui-state.js",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/repositories/locale-catalog-repository.js",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/services/locale-maintenance-service.js",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/shared/contracts.js",
+        "component": "locales"
+      },
+      {
+        "path": "build/mdl-locale-app/validation/locale-catalog-validator.js",
+        "component": "locales"
+      }
+    ],
+    "candidateStatuses": [
+      {
+        "path": "package.json",
+        "text": ".user",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "categories",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "configuration",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "contributes",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "default",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "description",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "displayName",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "engines",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "git",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.userDir",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "name",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "properties",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "publisher",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "repository",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "string",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "title",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "type",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "url",
+        "status": "review"
+      },
+      {
+        "path": "package.json",
+        "text": "version",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "vscode",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "use strict",
+        "status": "rejected"
+      }
     ]
   }
 }

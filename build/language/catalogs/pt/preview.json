@@ -2,42 +2,42 @@
   "component": "preview",
   "entries": {
     "preview.annotation.includeBegin.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "depth",
         "path"
       ],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "BEGIN [depth:{depth}] {path}"
+      "status": "machine-generated",
+      "text": "BEGIN [profundidade {depth}] {path}"
     },
     "preview.annotation.includeEnd.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "depth",
         "path"
       ],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "END   [depth:{depth}] {path}"
+      "status": "machine-generated",
+      "text": "FIM [profundidade {depth}] {path}"
     },
     "preview.report.includeFiles.heading": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "count"
       ],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "Include Files. ({count} file(s) processed"
+      "status": "machine-generated",
+      "text": "Incluir ficheiros. (Foram processados {count}s ficheiros)"
     },
     "preview.warning.missingInclude.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "uri"
       ],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "*** WARNING: Missing include (\"{uri}\") ***"
+      "status": "machine-generated",
+      "text": "*** AVISO: Falta a inclusão («{uri}») ***"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

@@ -1,14 +1,2239 @@
 {
   "component": "translator",
   "entries": {
+    "translator.accessibility.allowDeeplCallsDuringSaveAndRebuild.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "السماح بإجراء مكالمات Deep L أثناء عمليات الحفظ وإعادة البناء"
+    },
+    "translator.accessibility.applicationNavigation.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التنقل بين تطبيقات"
+    },
+    "translator.accessibility.buildCommandOutput.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مخرجات أمر «بناء»"
+    },
+    "translator.accessibility.closeOperationResult.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إغلاق نتيجة العملية"
+    },
+    "translator.accessibility.closeValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "windowLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إغلاق {windowLabel}"
+    },
+    "translator.accessibility.componentAssignedToValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المكون المخصص لـ {filePath}"
+    },
+    "translator.accessibility.componentDescription.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "وصف المكون"
+    },
+    "translator.accessibility.componentForAddedMigrationFiles.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مكون لملفات الترحيل المضافة"
+    },
+    "translator.accessibility.componentForScannedMigrationFile.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مكون لملف الترحيل الممسوح ضوئيًا"
+    },
+    "translator.accessibility.componentIdentifier.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "معرّف المكون"
+    },
+    "translator.accessibility.defaultPreviewMode.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "وضع المعاينة الافتراضي"
+    },
+    "translator.accessibility.filterMigrationSourceFiles.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تصفية ملفات مصدر الترحيل"
+    },
+    "translator.accessibility.maximizeValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "windowLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "أقصى {windowLabel}"
+    },
+    "translator.accessibility.migrationCandidatesForValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المرشحون للهجرة إلى {filePath}"
+    },
+    "translator.accessibility.minimizeValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "windowLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تصغير نافذة {windowLabel}"
+    },
+    "translator.accessibility.normalizedText.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "النص المعياري"
+    },
+    "translator.accessibility.openValueAtLineValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath",
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "افتح الملف «{filePath}» عند السطر «{candidateLine}»"
+    },
+    "translator.accessibility.operationInProgress.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "العملية جارية"
+    },
+    "translator.accessibility.removeValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إزالة برنامج «{filePath}»"
+    },
+    "translator.accessibility.runtimeComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مكون وقت التشغيل"
+    },
+    "translator.accessibility.selectedComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المكون المحدد"
+    },
+    "translator.accessibility.showComponentsHome.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "عرض الصفحة الرئيسية لـ «المكونات»"
+    },
+    "translator.accessibility.suggestedKey.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المفتاح المقترح"
+    },
+    "translator.accessibility.viewMigrationCandidatesForValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "عرض المرشحين للترحيل إلى {filePath}"
+    },
+    "translator.accessibility.windowControls.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "عناصر التحكم في النوافذ"
+    },
+    "translator.action.componentCatalog.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "كتالوج المكونات"
+    },
+    "translator.action.diagnosticMessages.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "رسائل التشخيص"
+    },
+    "translator.action.exit.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "خروج"
+    },
+    "translator.action.previewModes.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "أوضاع المعاينة"
+    },
+    "translator.action.rebuild.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إعادة البناء"
+    },
+    "translator.action.reloadData.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إعادة تحميل البيانات"
+    },
+    "translator.action.revert.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الرجوع"
+    },
+    "translator.action.save.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "حفظ"
+    },
+    "translator.action.semanticKeywords.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الكلمات المفتاحية الدلالية"
+    },
+    "translator.action.stopBuild.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إيقاف البناء"
+    },
+    "translator.action.validate.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التحقق من الصحة"
+    },
+    "translator.dialog.addFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إضافة ملفات"
+    },
+    "translator.dialog.addMigrationSourceFiles.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إضافة ملفات مصدر الترحيل"
+    },
+    "translator.dialog.cancel.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إلغاء"
+    },
+    "translator.dialog.close.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إغلاق"
+    },
+    "translator.dialog.componentCatalogAddRecord.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "كتالوج المكونات - إضافة سجل"
+    },
+    "translator.dialog.confirmAuthoritativeChanges.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تأكيد التغييرات الرسمية"
+    },
+    "translator.dialog.discardAndReload.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إلغاء التحميل وإعادة التحميل"
+    },
+    "translator.dialog.discardUnsavedChanges.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "هل تريد إلغاء التغييرات التي لم يتم حفظها؟"
+    },
+    "translator.dialog.draftReverted.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم التراجع عن المسودة"
+    },
+    "translator.dialog.exitWithoutSaving.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الخروج دون حفظ"
+    },
+    "translator.dialog.languageBuildIsRunning.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "يجري حالياً إنشاء إصدار اللغة"
+    },
+    "translator.dialog.languageRebuildFailed.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "فشل إعادة بناء اللغة"
+    },
+    "translator.dialog.languageRebuildSucceeded.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تمت إعادة بناء اللغة بنجاح"
+    },
+    "translator.dialog.maximize.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تكبير"
+    },
+    "translator.dialog.minimize.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تصغير"
+    },
+    "translator.dialog.mydefragLanguageMaintenance.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "صيانة لغة أداة إلغاء التجزئة الخاصة بي"
+    },
+    "translator.dialog.noFilesWillChange.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لن تتغير أي ملفات."
+    },
+    "translator.dialog.nothingToSave.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا يوجد ما يمكن حفظه"
+    },
+    "translator.dialog.returnToBuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "العودة إلى عملية البناء"
+    },
+    "translator.dialog.revertFailed.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "فشل التراجع"
+    },
+    "translator.dialog.saveAndBuildSucceeded.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم الحفظ والإنشاء بنجاح"
+    },
+    "translator.dialog.saveAndRebuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "حفظ وإعادة إنشاء"
+    },
+    "translator.dialog.saveBlocked.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم حفظ \"محظور\""
+    },
+    "translator.dialog.saveFailedAndWasRolledBack.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "فشل الحفظ وتم التراجع عنه"
+    },
+    "translator.dialog.scanFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مسح الملف ضوئيًا"
+    },
+    "translator.dialog.scanMigrationSourceFile.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مسح ملف مصدر الترحيل ضوئيًّا"
+    },
+    "translator.dialog.selectTheMydefragSyntaxRepository.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "حدد مستودع صيغ «My Defragmenter»"
+    },
+    "translator.dialog.startingMydefragLanguageMaintenance.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "البدء في صيانة لغة أداة إلغاء التجزئة"
+    },
+    "translator.dialog.unsavedLanguageChanges.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تغييرات اللغة غير المحفوظة"
+    },
+    "translator.dialog.valueFailed.title": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "title"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{title} فشل"
+    },
     "translator.directive.language.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "locale"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "; @mydfrg-language {locale}"
+      "status": "machine-generated",
+      "text": "; @mydfrg اللغة {locale}"
+    },
+    "translator.heading.languageMaintenance.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الحفاظ على اللغة"
+    },
+    "translator.heading.languageOperation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "عملية اللغة"
+    },
+    "translator.heading.operationResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "نتيجة العملية"
+    },
+    "translator.input.filterSourceFilePaths.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تصفية مسارات الملفات المصدرية"
+    },
+    "translator.input.searchAllFields.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "البحث في جميع الحقول"
+    },
+    "translator.input.searchComponentIdOrDescription.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ابحث عن معرّف المكون أو وصفه"
+    },
+    "translator.input.searchComponents.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مكونات البحث"
+    },
+    "translator.input.searchValue.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "definitionTitle"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "البحث في موقع «{definitionTitle}»"
+    },
+    "translator.message.aLanguageBuildIsAlreadyRunning.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "هناك عملية تجميع لغة قيد التشغيل بالفعل."
+    },
+    "translator.message.aLineAwareVscodiumOrVsCodeInstallation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم يتم العثور على تثبيت لـ VS Codium أو VS Code يدعم عرض الأسطر؛ تم فتح ملف المصدر باستخدام التطبيق الافتراضي الخاص به."
+    },
+    "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم يتم تحديد مستودع صيغ صالح لـ «My Defragmenter»."
+    },
+    "translator.message.applicationFailedToStart.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "فشل تشغيل التطبيق"
+    },
+    "translator.message.buildCancelledByUser.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم إلغاء عملية البناء من قِبل المستخدم."
+    },
+    "translator.message.buildProcessDidNotReportTerminationAfterCancellation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم تُبلّغ عملية البناء عن إنهاء بعد الإلغاء."
+    },
+    "translator.message.catalogRecordAddedToInMemoryDraft.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تمت إضافة سجل الكتالوج إلى المسودة الموجودة في الذاكرة"
+    },
+    "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "اختر المستودع الذي يحتوي على اللغة / (النسخة القياسية) واللغة / (النسخة المُجمَّعة)."
+    },
+    "translator.message.componentAddedInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تمت إضافة المكون إلى الذاكرة"
+    },
+    "translator.message.componentAssignmentIsStaleRebuildRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعيين المكونات قديم؛ يلزم إعادة البناء."
+    },
+    "translator.message.componentChangeRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم رفض تغيير المكون"
+    },
+    "translator.message.componentUpdatedInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم تحديث المكون في الذاكرة"
+    },
+    "translator.message.deeplApiCallsAreEnabledForThisRebuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم تمكين استدعاءات واجهة برمجة تطبيقات Deep L في عملية إعادة البناء هذه"
+    },
+    "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم تعطيل Deep L؛ ويجري استخدام اللغة الإنجليزية المعيارية"
+    },
+    "translator.message.draftUpdated.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم تحديث المسودة"
+    },
+    "translator.message.duplicateComponentIdValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "componentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "معرّف مكون مكرر: {componentId}"
+    },
+    "translator.message.duplicateValueValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "definitionIdentityKey",
+        "identity"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "نسخة مكررة من «{definitionIdentityKey}»: {identity}"
+    },
+    "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا يمكن إعادة تسمية معرّفات المكونات الموجودة."
+    },
+    "translator.message.exitAndDiscardAllInMemoryChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الخروج وإلغاء جميع التغييرات الموجودة في الذاكرة؟"
+    },
+    "translator.message.forcingTheLanguageBuildProcessToStop.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إجبار عملية تجميع اللغة على التوقف"
+    },
+    "translator.message.invalidComponentRequest.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "طلب مكون غير صالح."
+    },
+    "translator.message.invalidFileSelection.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "اختيار ملف غير صالح."
+    },
+    "translator.message.invalidRecordRequest.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "طلب سجل غير صالح."
+    },
+    "translator.message.languageBuildCancelled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم إلغاء إصدار اللغة"
+    },
+    "translator.message.languageBuildCommandCompleted.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "اكتمل تنفيذ أمر إنشاء اللغة"
+    },
+    "translator.message.languageBuildCommandFailed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "فشل أمر إنشاء إصدار اللغة"
+    },
+    "translator.message.languageDataReloaded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إعادة تحميل بيانات اللغة"
+    },
+    "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم يتم تحميل بيانات الحفاظ على اللغة."
+    },
+    "translator.message.migrationAssignmentRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم رفض طلب الهجرة"
+    },
+    "translator.message.migrationCandidatesAreUnavailableBecauseTheReportStatus.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "reportFileStatus"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مرشحو الترحيل غير متاحين لأن حالة التقرير هي «{reportFileStatus}»."
+    },
+    "translator.message.migrationCandidatesUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مرشحو الهجرة غير متاحين"
+    },
+    "translator.message.migrationComponentAssignmentUpdated.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم تحديث تخصيص مكون الهجرة"
+    },
+    "translator.message.migrationFileAdded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تمت إضافة ملف الهجرة"
+    },
+    "translator.message.migrationFileAlreadyListed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ملف الترحيل مدرج بالفعل"
+    },
+    "translator.message.migrationFileRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم رفض ملف الهجرة"
+    },
+    "translator.message.migrationFileRemovalFailed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "فشل إزالة ملف الترحيل"
+    },
+    "translator.message.migrationFileRemoved.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تمت إزالة ملف الترحيل"
+    },
+    "translator.message.migrationFilesAdded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تمت إضافة ملفات الترحيل"
+    },
+    "translator.message.migrationFilesRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ملفات الهجرة المرفوضة"
+    },
+    "translator.message.noApplicableSchemaIsAvailableForValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "viewName"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا يتوفر مخطط قابل للتطبيق لـ {viewName}."
+    },
+    "translator.message.noLanguageBuildIsRunning.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا توجد عملية تجميع لغة قيد التشغيل."
+    },
+    "translator.message.noNewFilesAdded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم تتم إضافة أي ملفات جديدة"
+    },
+    "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "missing"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ليس مستودع لغات لبرنامج «My Defragmenter». مفقود: {missing}"
+    },
+    "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "غير موجود في تقرير الترحيل؛ يلزم إعادة البناء."
+    },
+    "translator.message.pathEscapesTheRepositoryRootValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "relativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المسار يتجاوز جذر المستودع: {relativePath}"
+    },
+    "translator.message.recordRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم رفض السجل"
+    },
+    "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ستؤدي عملية إعادة التحميل إلى إلغاء جميع التغييرات التي أُجريت على اللغة والمخزنة في الذاكرة."
+    },
+    "translator.message.runningLanguageBuildCommand.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تنفيذ أمر إنشاء لغة"
+    },
+    "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "احفظ التغييرات أو أعدها إلى حالتها في الذاكرة قبل إعادة البناء."
+    },
+    "translator.message.selectAValidComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "اختر مكونًا صالحًا."
+    },
+    "translator.message.selectAValidComponentBeforeAddingFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "يرجى تحديد مكون صالح قبل إضافة الملفات."
+    },
+    "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "absolutePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الملف المحدد يقع خارج جذر المستودع: {absolutePath}"
+    },
+    "translator.message.selectedPathIsNotAFileValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "absolutePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المسار المحدد ليس ملفًا: {absolutePath}"
+    },
+    "translator.message.sourceFileOpened.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم فتح الملف المصدر"
+    },
+    "translator.message.theComponentChangedOrNoLongerExists.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم تغيير المكون أو لم يعد موجودًا."
+    },
+    "translator.message.theConfiguredLanguageBuilderDoesNotExposeExtractstringcandidates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا يعرض مُنشئ اللغة الذي تم تكوينه المرشحات المستخرجة للسلسلة."
+    },
+    "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر إيقاف عملية تجميع اللغة."
+    },
+    "translator.message.theMigrationFileIsNoLongerListed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم يعد ملف الترحيل مدرجًا في القائمة."
+    },
+    "translator.message.theMigrationReportComponentAssignmentIsStaleRebuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مهمة مكون تقرير الترحيل قديمة. أعد إنشاء مخرجات اللغة."
+    },
+    "translator.message.theMigrationReportDoesNotContainThisFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا يحتوي تقرير الترحيل على هذا الملف. أعد إنشاء مخرجات اللغة."
+    },
+    "translator.message.theMigrationReportDoesNotIncludeCatalogFound.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا يتضمن تقرير الترحيل سلاسل النصوص الموجودة في الكتالوج. أعد إنشاء مخرجات اللغة."
+    },
+    "translator.message.theMigrationReportIsMissingFullCandidateSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تفتقر تقرير الترحيل إلى الأسطر الكاملة لمصادر المرشحين. أعد إنشاء مخرجات اللغة."
+    },
+    "translator.message.theRecordChangedOrNoLongerExists.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم تغيير السجل أو لم يعد موجودًا."
+    },
+    "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "جسر التحميل المسبق المقيد غير متاح."
+    },
+    "translator.message.theScannedSourcePathIsNotANormalized.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مسار المصدر الذي تم مسحه ضوئيًا ليس مسارًا نسبيًا معياريًّا للمستودع."
+    },
+    "translator.message.theSelectedLineIsNotACurrentMigration.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الخط المختار ليس مرشحاً حاليًا لعملية الترحيل."
+    },
+    "translator.message.theSelectedLineIsNotACurrentReported.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "السطر المحدد ليس سلسلة هجرة مُبلغ عنها حاليًا."
+    },
+    "translator.message.theSelectedStringIsNoLongerACurrent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم تعد السلسلة المحددة مرشحة حالية للهجرة قيد الفحص."
+    },
+    "translator.message.theSourceFileCouldNotBeOpened.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر فتح الملف المصدر."
+    },
+    "translator.message.unableToAddFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر إضافة الملفات."
+    },
+    "translator.message.unableToAddTheScannedFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر إضافة الملف الممسوح ضوئيًا."
+    },
+    "translator.message.unableToApplyTheComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر تطبيق المكون."
+    },
+    "translator.message.unableToAssignTheComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر تعيين المكون."
+    },
+    "translator.message.unableToLoadLanguageData.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر تحميل بيانات اللغة."
+    },
+    "translator.message.unableToLoadMigrationCandidates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر تحميل العناصر المرشحة للترحيل."
+    },
+    "translator.message.unableToOpenMigrationSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر فتح مصدر الترحيل"
+    },
+    "translator.message.unableToOpenValueValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "targetRelativePath",
+        "error"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر فتح الرابط {targetRelativePath}: {error}"
+    },
+    "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "errorMessage"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر قراءة ملف البناء /، تقرير اللغة /، تقرير /، تقرير الترحيل .json: {errorMessage}"
+    },
+    "translator.message.unableToRemoveTheFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر إزالة الملف."
+    },
+    "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التحقق من صحة التغييرات اللغوية؛ تم تمكين استدعاءات واجهة برمجة تطبيقات Deep L"
+    },
+    "translator.message.validatingLanguageChangesDeeplIsDisabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التحقق من صحة التغييرات اللغوية؛ تم تعطيل Deep L"
+    },
+    "translator.message.validationResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "نتيجة التحقق من الصحة"
+    },
+    "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "انتظر حتى ينتهي عملية التجميع قبل الخروج."
+    },
+    "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "في انتظار انتهاء عملية تجميع اللغة"
+    },
+    "translator.message.writeValueAuthoritativeFileS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "normalizedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "هل يمكن الكتابة إلى الملف (الملفات) المرجعي (المرجعية) {normalizedCount}؟"
+    },
+    "translator.progress.capturingGeneratedFilesForRollback.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "حفظ الملفات التي تم إنشاؤها من أجل التراجع عن التغييرات"
+    },
+    "translator.progress.checkingGeneratedFileChanges.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التحقق من التغييرات التي طرأت على الملف الذي تم إنشاؤه"
+    },
+    "translator.progress.committingLanguageChanges.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تسجيل التغييرات اللغوية"
+    },
+    "translator.progress.rebuildingLanguageOutputs.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إعادة بناء المخرجات اللغوية"
+    },
+    "translator.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "استعادة الملفات المرجعية والملفات التي تم إنشاؤها"
+    },
+    "translator.progress.restoringFilesAfterAnError.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "استعادة الملفات بعد حدوث خطأ"
+    },
+    "translator.progress.restoringGeneratedFiles.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "استعادة الملفات التي تم إنشاؤها"
+    },
+    "translator.progress.savingLanguageData.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "حفظ بيانات اللغة"
+    },
+    "translator.progress.startingSaveAndRebuild.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "بدء عملية الحفظ وإعادة البناء"
+    },
+    "translator.progress.stoppingLanguageBuild.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إيقاف عملية إنشاء اللغة"
+    },
+    "translator.progress.unableToStartLanguageBuild.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعذر بدء عملية إنشاء نسخة اللغة"
+    },
+    "translator.progress.useStopBuildInTheProgressWindowThen.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "استخدم خيار «إيقاف البناء» في نافذة التقدم، ثم انتظر حتى تكتمل عملية التراجع قبل إغلاق التطبيق."
+    },
+    "translator.progress.waitingForSaveConfirmation.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "في انتظار تأكيد الحفظ"
+    },
+    "translator.progress.writingAuthoritativeLanguageFiles.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "كتابة ملفات اللغات الموثوقة"
+    },
+    "translator.ui.addComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إضافة مكون"
+    },
+    "translator.ui.addFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "أضف الملفات."
+    },
+    "translator.ui.addRecord.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إضافة سجل"
+    },
+    "translator.ui.addToSourceFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إضافة إلى ملفات المصدر"
+    },
+    "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "componentSelectValue"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تمت إضافتها إلى ملفات المصدر ضمن المكون «{componentSelectValue}». ولا يزال من الضروري حفظ التغييرات."
+    },
+    "translator.ui.allCandidates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "جميع المرشحين"
+    },
+    "translator.ui.allCandidatesValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "جميع المرشحين: {filePath}"
+    },
+    "translator.ui.allComponentDetails.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تفاصيل جميع المكونات"
+    },
+    "translator.ui.allComponents.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "جميع المكونات"
+    },
+    "translator.ui.allComponentsNoComponentFilter.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "جميع المكونات | لا توجد مكونات | تصفية"
+    },
+    "translator.ui.allowDeeplCalls.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "السماح بمكالمات Deep L"
+    },
+    "translator.ui.alreadyInSourceFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "موجودة بالفعل في ملفات المصدر"
+    },
+    "translator.ui.alreadyListedUnderComponentValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "scannedFileInventoryComponent"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم إدراجه بالفعل ضمن المكون {scannedFileInventoryComponent}."
+    },
+    "translator.ui.analyzingSourceContext.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تحليل سياق المصدر."
+    },
+    "translator.ui.applyInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التطبيق في الذاكرة"
+    },
+    "translator.ui.applyNormalizedText.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تطبيق النص المعياري"
+    },
+    "translator.ui.applyToInMemoryDraft.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إضافة إلى مسودة في الذاكرة"
+    },
+    "translator.ui.assignNewFilesTo.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعيين الملفات الجديدة إلى"
+    },
+    "translator.ui.assignToComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعيين إلى المكون"
+    },
+    "translator.ui.authoritativeFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الملفات المرجعية"
+    },
+    "translator.ui.availableComponents.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المكونات المتوفرة"
+    },
+    "translator.ui.badgeValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateDirty"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "شارة {stateDirty}"
+    },
+    "translator.ui.badgeValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "validationOk"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "شارة {validationOk}"
+    },
+    "translator.ui.candidateDetails.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تفاصيل المرشح"
+    },
+    "translator.ui.catalogMatches.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "نتائج البحث في الكتالوج"
+    },
+    "translator.ui.catalogOutputLocales.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إعدادات اللغة لإخراج الكتالوج"
+    },
+    "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "اختر مكونًا من قائمة المكونات المعتمدة .json."
+    },
+    "translator.ui.clearEditor.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مسح المحرر"
+    },
+    "translator.ui.closeCandidates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المرشحون المتقاربون"
+    },
+    "translator.ui.component.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المكون"
+    },
+    "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "سيعرض «كتالوج المكونات» و«رسائل التشخيص» السجلات الخاصة بكل مكون."
+    },
+    "translator.ui.componentDetails.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تفاصيل المكونات"
+    },
+    "translator.ui.componentSelection.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "اختيار المكونات"
+    },
+    "translator.ui.components.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المكونات"
+    },
+    "translator.ui.coverageUnavailableValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التغطية غير متوفرة: {resultError}"
+    },
+    "translator.ui.coverageUnavailableValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "fileError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التغطية غير متوفرة: {fileError}"
+    },
+    "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مستمد من رسالة الدليل القياسي المحددة."
+    },
+    "translator.ui.description.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الوصف"
+    },
+    "translator.ui.detectedPlaceholdersValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "arrayFromNewSetNamesSort"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "العناصر النائبة التي تم اكتشافها: {arrayFromNewSetNamesSort}"
+    },
+    "translator.ui.discardAllInMemoryChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "هل تريد إلغاء جميع التغييرات الموجودة في الذاكرة؟"
+    },
+    "translator.ui.editComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تحرير المكون"
+    },
+    "translator.ui.editMigrationInventory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تحرير قائمة الترحيل"
+    },
+    "translator.ui.editRecord.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تحرير السجل"
+    },
+    "translator.ui.editValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "componentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تحرير {componentId}"
+    },
+    "translator.ui.filteredToComponentValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "selectedComponent"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم التصفية حسب المكون: {selectedComponent}"
+    },
+    "translator.ui.generatedFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الملفات التي تم إنشاؤها"
+    },
+    "translator.ui.generatedFilesChanged.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم تغيير الملفات التي تم إنشاؤها"
+    },
+    "translator.ui.hideLeftPanel.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إخفاء اللوحة اليسرى"
+    },
+    "translator.ui.identifier.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المعرّف"
+    },
+    "translator.ui.inCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "في الكتالوج"
+    },
+    "translator.ui.invalidValueErrorS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "validationErrorsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "غير صالح (أخطاء في {validationErrorsCount})"
+    },
+    "translator.ui.join.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": ").join(', ')}"
+    },
+    "translator.ui.lineValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "السطر{candidateLine}"
+    },
+    "translator.ui.loadingPotentialFoundCoverage.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم العثور على تغطية محتملة لـ/."
+    },
+    "translator.ui.loadingProjectLanguageData.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "جاري تحميل بيانات لغة المشروع."
+    },
+    "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "يحتفظ باللغة / المعيارية / المكونات .json → قائمة الترحيل .scanFiles"
+    },
+    "translator.ui.maintainsValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "definitionFile"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "يدير موقع {definitionFile}"
+    },
+    "translator.ui.migrationCoverageUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تغطية الهجرة غير متوفرة"
+    },
+    "translator.ui.migrationCoverageValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "fileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تغطية أخبار الهجرة {fileCatalogedStringCount}"
+    },
+    "translator.ui.migrationInventory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "قائمة الهجرة"
+    },
+    "translator.ui.migrationInventory.text2": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "قائمة الجالية"
+    },
+    "translator.ui.migrationInventoryEntries.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "بنود جرد الهجرة"
+    },
+    "translator.ui.no.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا"
+    },
+    "translator.ui.noCandidateStringsWereFoundInThisFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم يتم العثور على أي سلاسل مرشحة في هذا الملف."
+    },
+    "translator.ui.noComponentMatchesTheSearch.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا توجد مكونات مطابقة لنتائج البحث."
+    },
+    "translator.ui.noFileSelected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم يتم تحديد أي ملف."
+    },
+    "translator.ui.noFilesMatchTheCurrentFilter.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا توجد ملفات تتطابق مع المعايير الحالية."
+    },
+    "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم يتم الإبلاغ عن أي مرشحين للترحيل في هذا الملف."
+    },
+    "translator.ui.noMigrationSourceFilesAreListed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم يتم إدراج أي ملفات مصدر للترحيل."
+    },
+    "translator.ui.noRecordsMatchTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا توجد سجلات تتطابق مع المعايير الحالية."
+    },
+    "translator.ui.noScanResultsAreAvailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا توجد نتائج مسح متاحة."
+    },
+    "translator.ui.noStableSourceConstructWasFound.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم يتم العثور على بنية مصدر مستقرة."
+    },
+    "translator.ui.noUnsavedChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لا توجد تغييرات لم يتم حفظها"
+    },
+    "translator.ui.notSet.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "(لم يتم تحديده)"
+    },
+    "translator.ui.notValidated.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "لم يتم التحقق من صحتها"
+    },
+    "translator.ui.openComponentCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "فتح كتالوج المكونات"
+    },
+    "translator.ui.openDiagnosticMessages.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "رسائل التشخيص المفتوحة"
+    },
+    "translator.ui.openPreviewModes.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "أوضاع المعاينة المفتوحة"
+    },
+    "translator.ui.openSemanticKeywords.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الكلمات المفتاحية الدلالية المفتوحة"
+    },
+    "translator.ui.openSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "المصدر المفتوح"
+    },
+    "translator.ui.potentialCandidate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مرشح محتمل"
+    },
+    "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إعداد عملية إعادة بناء مُعَدَّلة مع تعطيل ميزة Deep L"
+    },
+    "translator.ui.preparingNormalizedSaveWithDeeplDisabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إعداد حفظ معادلة مع تعطيل ميزة Deep L"
+    },
+    "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التحضير لإعادة البناء مع تمكين استدعاءات واجهة برمجة التطبيقات Deep L"
+    },
+    "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التحضير للحفظ مع تمكين استدعاءات واجهة برمجة تطبيقات Deep L"
+    },
+    "translator.ui.recoveryFilesRetained.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم الاحتفاظ بملفات الاستعادة"
+    },
+    "translator.ui.remove.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إزالة"
+    },
+    "translator.ui.removeValueFromTheMigrationInventory.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "هل يتم حذف «{filePath}» من قائمة الترحيل؟"
+    },
+    "translator.ui.repositoryMaintenanceTool.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "أداة صيانة المستودع"
+    },
+    "translator.ui.restore.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "استعادة"
+    },
+    "translator.ui.restoringTheLastLoadedDraftAndValidatingIt.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "استعادة آخر مسودة تم تحميلها والتحقق من صحتها"
+    },
+    "translator.ui.revertingLanguageData.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "استعادة بيانات اللغة"
+    },
+    "translator.ui.runtime.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مدة التشغيل"
+    },
+    "translator.ui.scanFailedValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "فشل المسح الضوئي: {resultError}"
+    },
+    "translator.ui.scanFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مسح الملف ضوئيًا."
+    },
+    "translator.ui.scanSourceFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "مسح ملف المصدر ضوئيًا"
+    },
+    "translator.ui.scanSourceFileValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "scannedFilePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ملف المصدر الممسوح ضوئيًا: {scannedFilePath}"
+    },
+    "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "scannedFileExtractedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم فحص سلسلة (سلاسل) المرشحين {scannedFileExtractedCount} دون تغيير قائمة المخزون."
+    },
+    "translator.ui.scanningSelectedFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "جاري مسح الملف المحدد."
+    },
+    "translator.ui.scope.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "النطاق"
+    },
+    "translator.ui.search.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "بحث"
+    },
+    "translator.ui.searchAndFilter.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "البحث والتصفية"
+    },
+    "translator.ui.selectAComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "(اختر مكونًا)"
+    },
+    "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "اختر ملفًا لعرض كل سلسلة تقبلها ميزة «استخراج السلاسل المرشحة»."
+    },
+    "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "اختر مرشحًا تم الإبلاغ عنه لمراجعة حالته."
+    },
+    "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "حدد مكونًا معينًا قبل إضافة سجل."
+    },
+    "translator.ui.selectFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "اختر ملفًا."
+    },
+    "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "اختر ملف مستودع واحد لفحصه دون إضافته إلى قائمة جرد المصادر."
+    },
+    "translator.ui.selectedValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "scannedFilePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم اختيار: {scannedFilePath}"
+    },
+    "translator.ui.setPreviewDefault.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تعيين المعاينة كخيار افتراضي"
+    },
+    "translator.ui.showLeftPanel.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "إظهار اللوحة اليسرى"
+    },
+    "translator.ui.showingRecordsFromAllComponents.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "عرض السجلات من جميع المكونات"
+    },
+    "translator.ui.statusInCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "الحالة: موجود في الكتالوج"
+    },
+    "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "معاينة موجهة للترجمة باستخدام الاستبدالات القياسية للكلمات."
+    },
+    "translator.ui.uncheckedBuildsUseNormalizedEnglishAndDoNot.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تستخدم الإصدارات غير الخاضعة للفحص اللغة الإنجليزية المعيارية ولا تستدعي Deep L."
+    },
+    "translator.ui.unsavedChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التغييرات غير المحفوظة"
+    },
+    "translator.ui.unsavedChangesRemainInMemoryContinueToAnother.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "التغييرات التي لم يتم حفظها لا تزال موجودة في الذاكرة. هل تريد المتابعة إلى عرض آخر؟"
+    },
+    "translator.ui.useSuggestedKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "استخدم المفتاح المقترح"
+    },
+    "translator.ui.validValueWarningS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "validationWarningsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "صالح (تحذير(ات) {validationWarningsCount})"
+    },
+    "translator.ui.validationFailedWithValueErrorS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "validationErrorsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "فشل التحقق بسبب ({validationErrorsCount}) خطأ (أخطاء)."
+    },
+    "translator.ui.validationListValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "kind"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "قائمة التحقق {kind}"
+    },
+    "translator.ui.validationPassedWithValueWarningS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "validationWarningsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "تم اجتياز عملية التحقق مع وجود تحذير(تحذيرات) {validationWarningsCount}."
+    },
+    "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "scannedFileCandidateCount",
+        "scannedFileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{scannedFileCandidateCount} المرشح (المرشحون) المحتملون، {scannedFileCatalogedStringCount} الموجودون في الكتالوج"
+    },
+    "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "fileCandidateCount",
+        "fileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} المرشح (المرشحون) المحتملون، {fileCatalogedStringCount} الموجودون في الكتالوج"
+    },
+    "translator.ui.valuePotentialValueFoundInCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "fileCandidateCount",
+        "fileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} تم العثور على موقع محتمل {fileCatalogedStringCount} في الكتالوج"
+    },
+    "translator.ui.valueRecordS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "recordsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{recordsCount} السجل (السجلات)"
+    },
+    "translator.ui.valueSourceFileS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filesCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{filesCount} ملف (ملفات) المصدر"
+    },
+    "translator.ui.viewCandidates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "عرض المرشحين"
+    },
+    "translator.ui.viewHeadingDataViewToolbar.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "عرض بيانات العناوين عرض شريط الأدوات"
+    },
+    "translator.ui.yes.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "نعم"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

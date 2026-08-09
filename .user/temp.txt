@@ -1,4 +1,6 @@
- I need a temporary ps1 script to install ollama for all users. download quen and deepseek. install continue.dev
+=============================================
+
+I need a temporary ps1 script to install ollama for all users. download quen and deepseek. install continue.dev
 
  ollama, chatgtp business, aider, quen, cline,
 
@@ -86,4 +88,38 @@ ollama run qwen3-coder:30b
 
 =============================================
 
+- [x] xxxxxxxxxxxxxxxxxxxxxxx
+- [ ] xxxxxxxxxxxxxxxxxxxxxxxx
 
+
+=============================================
+
+"D:\Script\MyDefrag-syntax\build"
+"D:\Script\MyDefrag-syntax\language"
+"D:\Script\MyDefrag-syntax\scripts\build-language.js"
+
+=============================================
+
+wevtutil qe System /q:"*[System[(EventID=2004) and TimeCreated[timediff(@SystemTime) <= 7200000]]]" /f:text /c:10 > "D:\Data\Event-2004.txt"
+
+wevtutil qe Application /q:"*[System[((EventID=1000) or (EventID=1001)) and TimeCreated[timediff(@SystemTime) <= 7200000]]]" /f:text /c:30 > "D:\Data\Application-Crashes.txt"
+
+in GB: Committed 23.2/63.8 Cached 18.2 Available 18.0 Installed 32 in use 13.8 (87.5 mb compressed)
+
+=============================================
+
+npm run language:app
+npm run locale:app
+npm run language:build
+
+=============================================
+Next. in MyDefrag Language Maintenance, in the Migration Inventory, add a new button that will open up a window to view the D:\Script\MyDefrag-syntax\build\language\reports\migration-report.json candidates for that file.
+
+So this would show the line #, text, and full line from the candidate file.
+
+The Component Catalog Add Record is included. Selecting a line populates the add record as much as possible.
+
+In addition, modifiy Component Catalog to not just include "source" but also the line number where the string was found.
+=============================================
+
+=============================================

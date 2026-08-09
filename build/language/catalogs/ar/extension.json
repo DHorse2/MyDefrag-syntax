@@ -2,60 +2,60 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "MyDefrag: Configure Folders"
+      "status": "machine-generated",
+      "text": "أداة إلغاء التجزئة الخاصة بي: تهيئة المجلدات"
     },
     "extension.command.openPreview.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "Open Preview"
+      "status": "machine-generated",
+      "text": "فتح المعاينة"
     },
     "extension.command.openSettings.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "MyDefrag: Open Settings"
+      "status": "machine-generated",
+      "text": "أداة إلغاء التجزئة الخاصة بي: فتح الإعدادات"
     },
     "extension.message.noActiveDocument.warning": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "No MyDefrag document is active."
+      "status": "machine-generated",
+      "text": "لا يوجد مستند «أداة إلغاء التجزئة» نشط حالياً."
     },
     "extension.product.displayName": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "MyDefrag Script (.MyDc / .MyD)"
+      "status": "machine-generated",
+      "text": "برنامج «Defragmenter Script» الخاص بي (.MyDc / .MyD)"
     },
     "extension.status.parser.fragment.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "MyDefrag Fragment (.mydc)"
+      "status": "machine-generated",
+      "text": "\"شظية أداة إلغاء التجزئة الخاصة بي\" (.mydc)"
     },
     "extension.status.parser.script.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "MyDefrag Script (.myd)"
+      "status": "machine-generated",
+      "text": "برنامج «Defragmenter» الخاص بي (.myd)"
     },
     "extension.status.parser.unknown.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "MyDefrag Unknown document type"
+      "status": "machine-generated",
+      "text": "أداة إلغاء التجزئة الخاصة بي نوع المستند غير معروف"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

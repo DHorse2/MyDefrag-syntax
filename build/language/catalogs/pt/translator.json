@@ -1,14 +1,2239 @@
 {
   "component": "translator",
   "entries": {
+    "translator.accessibility.allowDeeplCallsDuringSaveAndRebuild.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Permitir chamadas «Deep L» durante o processo de gravação e reconstrução"
+    },
+    "translator.accessibility.applicationNavigation.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Navegação na aplicação"
+    },
+    "translator.accessibility.buildCommandOutput.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Saída do comando «build»"
+    },
+    "translator.accessibility.closeOperationResult.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fechar resultado da operação"
+    },
+    "translator.accessibility.closeValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "windowLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fechar {windowLabel}"
+    },
+    "translator.accessibility.componentAssignedToValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Componente atribuído a {filePath}"
+    },
+    "translator.accessibility.componentDescription.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Descrição do componente"
+    },
+    "translator.accessibility.componentForAddedMigrationFiles.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Componente para ficheiros de migração adicionais"
+    },
+    "translator.accessibility.componentForScannedMigrationFile.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Componente para ficheiro de migração digitalizado"
+    },
+    "translator.accessibility.componentIdentifier.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Identificador do componente"
+    },
+    "translator.accessibility.defaultPreviewMode.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Modo de pré-visualização predefinido"
+    },
+    "translator.accessibility.filterMigrationSourceFiles.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Filtrar ficheiros de origem da migração"
+    },
+    "translator.accessibility.maximizeValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "windowLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Maximizar {windowLabel}"
+    },
+    "translator.accessibility.migrationCandidatesForValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Candidatos à migração para o {filePath}"
+    },
+    "translator.accessibility.minimizeValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "windowLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Minimizar {windowLabel}"
+    },
+    "translator.accessibility.normalizedText.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Texto normalizado"
+    },
+    "translator.accessibility.openValueAtLineValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath",
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Abra o ficheiro «{filePath}» na linha «{candidateLine}»"
+    },
+    "translator.accessibility.operationInProgress.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Operação em curso"
+    },
+    "translator.accessibility.removeValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Remover o «{filePath}»"
+    },
+    "translator.accessibility.runtimeComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Componente de tempo de execução"
+    },
+    "translator.accessibility.selectedComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Componente selecionado"
+    },
+    "translator.accessibility.showComponentsHome.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mostrar a página inicial dos Componentes"
+    },
+    "translator.accessibility.suggestedKey.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Chave sugerida"
+    },
+    "translator.accessibility.viewMigrationCandidatesForValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ver candidatos à migração para o {filePath}"
+    },
+    "translator.accessibility.windowControls.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Controlos da janela"
+    },
+    "translator.action.componentCatalog.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Catálogo de Componentes"
+    },
+    "translator.action.diagnosticMessages.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mensagens de diagnóstico"
+    },
+    "translator.action.exit.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sair"
+    },
+    "translator.action.previewModes.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Modos de pré-visualização"
+    },
+    "translator.action.rebuild.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Reconstruir"
+    },
+    "translator.action.reloadData.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Atualizar dados"
+    },
+    "translator.action.revert.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Reverter"
+    },
+    "translator.action.save.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Guardar"
+    },
+    "translator.action.semanticKeywords.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Palavras-chave semânticas"
+    },
+    "translator.action.stopBuild.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Interromper a compilação"
+    },
+    "translator.action.validate.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Validar"
+    },
+    "translator.dialog.addFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Adicionar ficheiros"
+    },
+    "translator.dialog.addMigrationSourceFiles.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Adicionar ficheiros de origem da migração"
+    },
+    "translator.dialog.cancel.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Cancelar"
+    },
+    "translator.dialog.close.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fechar"
+    },
+    "translator.dialog.componentCatalogAddRecord.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Catálogo de Componentes – Adicionar Registo"
+    },
+    "translator.dialog.confirmAuthoritativeChanges.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Confirmar alterações oficiais"
+    },
+    "translator.dialog.discardAndReload.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Anular e recarregar"
+    },
+    "translator.dialog.discardUnsavedChanges.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Deseja descartar as alterações não guardadas?"
+    },
+    "translator.dialog.draftReverted.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Rascunho revertido"
+    },
+    "translator.dialog.exitWithoutSaving.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sair sem guardar"
+    },
+    "translator.dialog.languageBuildIsRunning.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A compilação do idioma está a decorrer"
+    },
+    "translator.dialog.languageRebuildFailed.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Falha na reconstrução do idioma"
+    },
+    "translator.dialog.languageRebuildSucceeded.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A reconstrução do idioma foi bem-sucedida"
+    },
+    "translator.dialog.maximize.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Maximizar"
+    },
+    "translator.dialog.minimize.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Minimizar"
+    },
+    "translator.dialog.mydefragLanguageMaintenance.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Manutenção do My Defragmenter Language"
+    },
+    "translator.dialog.noFilesWillChange.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nenhum ficheiro será alterado."
+    },
+    "translator.dialog.nothingToSave.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não há nada para guardar"
+    },
+    "translator.dialog.returnToBuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Voltar à compilação"
+    },
+    "translator.dialog.revertFailed.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A reversão falhou"
+    },
+    "translator.dialog.saveAndBuildSucceeded.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O processo de gravação e compilação foi bem-sucedido"
+    },
+    "translator.dialog.saveAndRebuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Guardar e reconstruir"
+    },
+    "translator.dialog.saveBlocked.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Gravação bloqueada"
+    },
+    "translator.dialog.saveFailedAndWasRolledBack.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A gravação falhou e foi revertida"
+    },
+    "translator.dialog.scanFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Digitalizar ficheiro"
+    },
+    "translator.dialog.scanMigrationSourceFile.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Digitalizar o ficheiro de origem da migração"
+    },
+    "translator.dialog.selectTheMydefragSyntaxRepository.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Selecione o repositório de sintaxe «Meu Desfragmentador»"
+    },
+    "translator.dialog.startingMydefragLanguageMaintenance.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iniciar a manutenção do meu desfragmentador"
+    },
+    "translator.dialog.unsavedLanguageChanges.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Alterações de idioma não guardadas"
+    },
+    "translator.dialog.valueFailed.title": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "title"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{title} falhou"
+    },
     "translator.directive.language.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "locale"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "; @mydfrg-language {locale}"
+      "status": "machine-generated",
+      "text": "; @mydfrg idioma {locale}"
+    },
+    "translator.heading.languageMaintenance.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Preservação da Língua"
+    },
+    "translator.heading.languageOperation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Operação linguística"
+    },
+    "translator.heading.operationResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Resultado da operação"
+    },
+    "translator.input.filterSourceFilePaths.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Filtrar caminhos dos ficheiros de origem"
+    },
+    "translator.input.searchAllFields.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pesquisar em todos os campos"
+    },
+    "translator.input.searchComponentIdOrDescription.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pesquisar pelo ID ou pela descrição do componente"
+    },
+    "translator.input.searchComponents.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pesquisar componentes"
+    },
+    "translator.input.searchValue.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "definitionTitle"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pesquisar «{definitionTitle}»"
+    },
+    "translator.message.aLanguageBuildIsAlreadyRunning.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Já está a decorrer uma compilação da linguagem."
+    },
+    "translator.message.aLineAwareVscodiumOrVsCodeInstallation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi encontrada uma instalação do VS Codium ou do VS Code com reconhecimento de linha; o ficheiro de código-fonte foi aberto com a sua aplicação predefinida."
+    },
+    "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi selecionado um repositório de sintaxe válido do My Defragmenter."
+    },
+    "translator.message.applicationFailedToStart.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível iniciar a aplicação"
+    },
+    "translator.message.buildCancelledByUser.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Compilação cancelada pelo utilizador."
+    },
+    "translator.message.buildProcessDidNotReportTerminationAfterCancellation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O processo de compilação não indicou que tinha sido encerrado após o cancelamento."
+    },
+    "translator.message.catalogRecordAddedToInMemoryDraft.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Registo do catálogo adicionado ao rascunho na memória"
+    },
+    "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Escolha o repositório responsável pela língua / canonical e crie / language."
+    },
+    "translator.message.componentAddedInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Componente adicionado à memória"
+    },
+    "translator.message.componentAssignmentIsStaleRebuildRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A atribuição de componentes está desatualizada; é necessária uma recompilação."
+    },
+    "translator.message.componentChangeRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Alteração do componente rejeitada"
+    },
+    "translator.message.componentUpdatedInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Componente atualizado na memória"
+    },
+    "translator.message.deeplApiCallsAreEnabledForThisRebuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "As chamadas à API do Deep L estão ativadas para esta reconstrução"
+    },
+    "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O Deep L está desativado; a utilizar inglês normalizado"
+    },
+    "translator.message.draftUpdated.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Versão preliminar atualizada"
+    },
+    "translator.message.duplicateComponentIdValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "componentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ID do componente duplicado: {componentId}"
+    },
+    "translator.message.duplicateValueValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "definitionIdentityKey",
+        "identity"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{definitionIdentityKey} duplicado: {identity}"
+    },
+    "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Os identificadores de componentes existentes não podem ser renomeados."
+    },
+    "translator.message.exitAndDiscardAllInMemoryChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sair e descartar todas as alterações na memória?"
+    },
+    "translator.message.forcingTheLanguageBuildProcessToStop.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Forçar a interrupção do processo de compilação da linguagem"
+    },
+    "translator.message.invalidComponentRequest.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pedido de componente inválido."
+    },
+    "translator.message.invalidFileSelection.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Seleção de ficheiro inválida."
+    },
+    "translator.message.invalidRecordRequest.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pedido de registo inválido."
+    },
+    "translator.message.languageBuildCancelled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Compilação da versão do idioma cancelada"
+    },
+    "translator.message.languageBuildCommandCompleted.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O comando de compilação do idioma foi concluído"
+    },
+    "translator.message.languageBuildCommandFailed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Falha no comando de compilação da linguagem"
+    },
+    "translator.message.languageDataReloaded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Dados linguísticos atualizados"
+    },
+    "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Os dados relativos à preservação da língua não foram carregados."
+    },
+    "translator.message.migrationAssignmentRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pedido de migração rejeitado"
+    },
+    "translator.message.migrationCandidatesAreUnavailableBecauseTheReportStatus.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "reportFileStatus"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Os candidatos à migração não estão disponíveis porque o estado do relatório é «{reportFileStatus}»."
+    },
+    "translator.message.migrationCandidatesUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Candidatos à migração indisponíveis"
+    },
+    "translator.message.migrationComponentAssignmentUpdated.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Atualização da atribuição do componente de migração"
+    },
+    "translator.message.migrationFileAdded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ficheiro de migração adicionado"
+    },
+    "translator.message.migrationFileAlreadyListed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O ficheiro de migração já consta da lista"
+    },
+    "translator.message.migrationFileRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ficheiro de migração rejeitado"
+    },
+    "translator.message.migrationFileRemovalFailed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Falha na remoção do ficheiro de migração"
+    },
+    "translator.message.migrationFileRemoved.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ficheiro de migração removido"
+    },
+    "translator.message.migrationFilesAdded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ficheiros de migração adicionados"
+    },
+    "translator.message.migrationFilesRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ficheiros de migração rejeitados"
+    },
+    "translator.message.noApplicableSchemaIsAvailableForValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "viewName"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não existe nenhum esquema aplicável para {viewName}."
+    },
+    "translator.message.noLanguageBuildIsRunning.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não está a ser executada nenhuma compilação de linguagem."
+    },
+    "translator.message.noNewFilesAdded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foram adicionados novos ficheiros"
+    },
+    "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "missing"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não é um repositório de idiomas do My Defragmenter. Falta: {missing}"
+    },
+    "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não consta do relatório de migração; é necessária uma reconstrução."
+    },
+    "translator.message.pathEscapesTheRepositoryRootValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "relativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O caminho ultrapassa a raiz do repositório: {relativePath}"
+    },
+    "translator.message.recordRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Registo rejeitado"
+    },
+    "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ao recarregar, todas as alterações de idioma guardadas na memória serão descartadas."
+    },
+    "translator.message.runningLanguageBuildCommand.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Executar o comando de compilação do linguagem"
+    },
+    "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Guarde ou repor as alterações na memória antes de recompilar."
+    },
+    "translator.message.selectAValidComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Selecione um componente válido."
+    },
+    "translator.message.selectAValidComponentBeforeAddingFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Selecione um componente válido antes de adicionar ficheiros."
+    },
+    "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "absolutePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O ficheiro selecionado encontra-se fora da raiz do repositório: {absolutePath}"
+    },
+    "translator.message.selectedPathIsNotAFileValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "absolutePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O caminho selecionado não é um ficheiro: {absolutePath}"
+    },
+    "translator.message.sourceFileOpened.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ficheiro de origem aberto"
+    },
+    "translator.message.theComponentChangedOrNoLongerExists.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O componente foi alterado ou já não existe."
+    },
+    "translator.message.theConfiguredLanguageBuilderDoesNotExposeExtractstringcandidates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O gerador de línguas configurado não expõe candidatos a cadeias de caracteres extraídas."
+    },
+    "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível interromper o processo de compilação da linguagem."
+    },
+    "translator.message.theMigrationFileIsNoLongerListed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O ficheiro de migração já não consta da lista."
+    },
+    "translator.message.theMigrationReportComponentAssignmentIsStaleRebuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A atribuição do componente do relatório de migração está desatualizada. Recrie as saídas de idioma."
+    },
+    "translator.message.theMigrationReportDoesNotContainThisFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O relatório de migração não contém este ficheiro. Recrie as saídas de idioma."
+    },
+    "translator.message.theMigrationReportDoesNotIncludeCatalogFound.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O relatório de migração não inclui as cadeias de caracteres encontradas no catálogo. Recrie as saídas de idioma."
+    },
+    "translator.message.theMigrationReportIsMissingFullCandidateSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Faltam linhas de código-fonte completas do candidato no relatório de migração. Recrie as saídas de código."
+    },
+    "translator.message.theRecordChangedOrNoLongerExists.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O registo foi alterado ou já não existe."
+    },
+    "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A ponte de pré-carga restrita não está disponível."
+    },
+    "translator.message.theScannedSourcePathIsNotANormalized.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O caminho da fonte analisado não é um caminho de ficheiro relativo normalizado do repositório."
+    },
+    "translator.message.theSelectedLineIsNotACurrentMigration.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A linha selecionada não é, de momento, candidata à migração."
+    },
+    "translator.message.theSelectedLineIsNotACurrentReported.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A linha selecionada não é uma sequência de migração atualmente registada."
+    },
+    "translator.message.theSelectedStringIsNoLongerACurrent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A cadeia de caracteres selecionada já não é um candidato à migração atualmente analisado."
+    },
+    "translator.message.theSourceFileCouldNotBeOpened.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível abrir o ficheiro de origem."
+    },
+    "translator.message.unableToAddFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não é possível adicionar ficheiros."
+    },
+    "translator.message.unableToAddTheScannedFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível adicionar o ficheiro digitalizado."
+    },
+    "translator.message.unableToApplyTheComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível aplicar o componente."
+    },
+    "translator.message.unableToAssignTheComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível atribuir o componente."
+    },
+    "translator.message.unableToLoadLanguageData.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível carregar os dados de idioma."
+    },
+    "translator.message.unableToLoadMigrationCandidates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível carregar os candidatos à migração."
+    },
+    "translator.message.unableToOpenMigrationSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível abrir a fonte de migração"
+    },
+    "translator.message.unableToOpenValueValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "targetRelativePath",
+        "error"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível abrir {targetRelativePath}: {error}"
+    },
+    "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "errorMessage"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não é possível ler a compilação /, a linguagem /, os relatórios /, o relatório de migração .json: {errorMessage}"
+    },
+    "translator.message.unableToRemoveTheFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível eliminar o ficheiro."
+    },
+    "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Validação das alterações na linguagem; as chamadas à API do Deep L estão ativadas"
+    },
+    "translator.message.validatingLanguageChangesDeeplIsDisabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Validação das alterações de idioma; o Deep L está desativado"
+    },
+    "translator.message.validationResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Resultado da validação"
+    },
+    "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Aguarde até que a compilação termine antes de sair."
+    },
+    "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "À espera que o processo de compilação da linguagem termine"
+    },
+    "translator.message.writeValueAuthoritativeFileS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "normalizedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Gravar num ou em vários ficheiros de autoridade d{normalizedCount}?"
+    },
+    "translator.progress.capturingGeneratedFilesForRollback.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Recolha dos ficheiros gerados para a reversão"
+    },
+    "translator.progress.checkingGeneratedFileChanges.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Verificar as alterações no ficheiro gerado"
+    },
+    "translator.progress.committingLanguageChanges.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Submeter alterações no código"
+    },
+    "translator.progress.rebuildingLanguageOutputs.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Reconstrução das produções linguísticas"
+    },
+    "translator.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Restaurar ficheiros de referência e ficheiros gerados"
+    },
+    "translator.progress.restoringFilesAfterAnError.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Recuperação de ficheiros após um erro"
+    },
+    "translator.progress.restoringGeneratedFiles.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Restaurar ficheiros gerados"
+    },
+    "translator.progress.savingLanguageData.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Guardar dados linguísticos"
+    },
+    "translator.progress.startingSaveAndRebuild.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iniciar o processo de gravação e reconstrução"
+    },
+    "translator.progress.stoppingLanguageBuild.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Interromper a compilação do idioma"
+    },
+    "translator.progress.unableToStartLanguageBuild.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi possível iniciar a compilação do idioma"
+    },
+    "translator.progress.useStopBuildInTheProgressWindowThen.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Utilize a opção «Parar compilação» na janela de progresso e, em seguida, aguarde que a reversão seja concluída antes de fechar a aplicação."
+    },
+    "translator.progress.waitingForSaveConfirmation.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "À espera da confirmação da gravação"
+    },
+    "translator.progress.writingAuthoritativeLanguageFiles.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Criação de ficheiros de localização oficiais"
+    },
+    "translator.ui.addComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Adicionar componente"
+    },
+    "translator.ui.addFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Adicionar ficheiros."
+    },
+    "translator.ui.addRecord.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Adicionar registo"
+    },
+    "translator.ui.addToSourceFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Adicionar aos ficheiros de código-fonte"
+    },
+    "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "componentSelectValue"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Adicionado aos ficheiros de código-fonte na pasta «{componentSelectValue}» do componente. Ainda é necessário guardar."
+    },
+    "translator.ui.allCandidates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Todos os candidatos"
+    },
+    "translator.ui.allCandidatesValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Todos os candidatos: {filePath}"
+    },
+    "translator.ui.allComponentDetails.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Todos os detalhes dos componentes"
+    },
+    "translator.ui.allComponents.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Todos os componentes"
+    },
+    "translator.ui.allComponentsNoComponentFilter.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Todos os componentes | Sem filtro de componentes"
+    },
+    "translator.ui.allowDeeplCalls.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Permitir chamadas Deep L"
+    },
+    "translator.ui.alreadyInSourceFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Já nos ficheiros de código-fonte"
+    },
+    "translator.ui.alreadyListedUnderComponentValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "scannedFileInventoryComponent"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Já consta na lista de componentes {scannedFileInventoryComponent}."
+    },
+    "translator.ui.analyzingSourceContext.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A analisar o contexto da fonte."
+    },
+    "translator.ui.applyInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Aplicar na memória"
+    },
+    "translator.ui.applyNormalizedText.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Aplicar texto normalizado"
+    },
+    "translator.ui.applyToInMemoryDraft.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Aplicar ao rascunho na memória"
+    },
+    "translator.ui.assignNewFilesTo.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Atribuir novos ficheiros a"
+    },
+    "translator.ui.assignToComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Atribuir a um componente"
+    },
+    "translator.ui.authoritativeFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ficheiros de referência"
+    },
+    "translator.ui.availableComponents.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Componentes disponíveis"
+    },
+    "translator.ui.badgeValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateDirty"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "emblema {stateDirty}"
+    },
+    "translator.ui.badgeValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "validationOk"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "emblema {validationOk}"
+    },
+    "translator.ui.candidateDetails.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Detalhes do candidato"
+    },
+    "translator.ui.catalogMatches.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Resultados do catálogo"
+    },
+    "translator.ui.catalogOutputLocales.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Locais de saída do catálogo"
+    },
+    "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Escolha um componente do inventário de componentes de referência .json."
+    },
+    "translator.ui.clearEditor.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Limpar editor"
+    },
+    "translator.ui.closeCandidates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Candidatos com resultados próximos"
+    },
+    "translator.ui.component.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Componente"
+    },
+    "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "O «Catálogo de Componentes» e as «Mensagens de Diagnóstico» apresentarão registos de todos os componentes."
+    },
+    "translator.ui.componentDetails.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Detalhes do componente"
+    },
+    "translator.ui.componentSelection.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Seleção de componentes"
+    },
+    "translator.ui.components.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Componentes"
+    },
+    "translator.ui.coverageUnavailableValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Cobertura indisponível: {resultError}"
+    },
+    "translator.ui.coverageUnavailableValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "fileError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Cobertura indisponível: {fileError}"
+    },
+    "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Derivado da mensagem do catálogo canónico selecionada."
+    },
+    "translator.ui.description.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Descrição"
+    },
+    "translator.ui.detectedPlaceholdersValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "arrayFromNewSetNamesSort"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Marcadores de lugar detetados: {arrayFromNewSetNamesSort}"
+    },
+    "translator.ui.discardAllInMemoryChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Deseja descartar todas as alterações na memória?"
+    },
+    "translator.ui.editComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Editar componente"
+    },
+    "translator.ui.editMigrationInventory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Editar inventário de migração"
+    },
+    "translator.ui.editRecord.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Editar registo"
+    },
+    "translator.ui.editValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "componentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Editar {componentId}"
+    },
+    "translator.ui.filteredToComponentValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "selectedComponent"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Filtrado por componente: {selectedComponent}"
+    },
+    "translator.ui.generatedFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ficheiros gerados"
+    },
+    "translator.ui.generatedFilesChanged.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Os ficheiros gerados foram alterados"
+    },
+    "translator.ui.hideLeftPanel.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ocultar o painel da esquerda"
+    },
+    "translator.ui.identifier.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Identificador"
+    },
+    "translator.ui.inCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "No catálogo"
+    },
+    "translator.ui.invalidValueErrorS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "validationErrorsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Inválido (erro(s) de {validationErrorsCount})"
+    },
+    "translator.ui.join.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": ").join(', ')}"
+    },
+    "translator.ui.lineValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Linha{candidateLine}"
+    },
+    "translator.ui.loadingPotentialFoundCoverage.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Carregamento em curso: o jogador / foi incluído na cobertura."
+    },
+    "translator.ui.loadingProjectLanguageData.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A carregar os dados de idioma do projeto."
+    },
+    "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mantém a linguagem /, o canónico /, os componentes .json → inventário de migração .scanFiles"
+    },
+    "translator.ui.maintainsValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "definitionFile"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Responsável pela manutenção de {definitionFile}"
+    },
+    "translator.ui.migrationCoverageUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "cobertura de migração indisponível"
+    },
+    "translator.ui.migrationCoverageValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "fileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "cobertura sobre a migração {fileCatalogedStringCount}"
+    },
+    "translator.ui.migrationInventory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Inventário de migração"
+    },
+    "translator.ui.migrationInventory.text2": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Inventário de Migração"
+    },
+    "translator.ui.migrationInventoryEntries.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Entradas do inventário de migração"
+    },
+    "translator.ui.no.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não"
+    },
+    "translator.ui.noCandidateStringsWereFoundInThisFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foram encontradas cadeias de caracteres candidatas neste ficheiro."
+    },
+    "translator.ui.noComponentMatchesTheSearch.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nenhum componente corresponde à pesquisa."
+    },
+    "translator.ui.noFileSelected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi selecionado nenhum ficheiro."
+    },
+    "translator.ui.noFilesMatchTheCurrentFilter.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não existem ficheiros que correspondam ao filtro atual."
+    },
+    "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foram identificados candidatos à migração para este ficheiro."
+    },
+    "translator.ui.noMigrationSourceFilesAreListed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não estão listados quaisquer ficheiros de origem da migração."
+    },
+    "translator.ui.noRecordsMatchTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não existem registos que correspondam aos filtros atuais."
+    },
+    "translator.ui.noScanResultsAreAvailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não há resultados de digitalização disponíveis."
+    },
+    "translator.ui.noStableSourceConstructWasFound.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não foi encontrada nenhuma construção de fonte estável."
+    },
+    "translator.ui.noUnsavedChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não há alterações não guardadas"
+    },
+    "translator.ui.notSet.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "(não definido)"
+    },
+    "translator.ui.notValidated.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Não validado"
+    },
+    "translator.ui.openComponentCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Abrir o catálogo de componentes"
+    },
+    "translator.ui.openDiagnosticMessages.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mensagens de diagnóstico abertas"
+    },
+    "translator.ui.openPreviewModes.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Modos de pré-visualização abertos"
+    },
+    "translator.ui.openSemanticKeywords.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Palavras-chave semânticas abertas"
+    },
+    "translator.ui.openSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Código aberto"
+    },
+    "translator.ui.potentialCandidate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Candidato potencial"
+    },
+    "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Preparação da reconstrução normalizada com o Deep L desativado"
+    },
+    "translator.ui.preparingNormalizedSaveWithDeeplDisabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Preparar um ficheiro de gravação normalizado com o Deep L desativado"
+    },
+    "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Preparar a recompilação com as chamadas à API do Deep L ativadas"
+    },
+    "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Preparar o «Guardar» com as chamadas à API do Deep L ativadas"
+    },
+    "translator.ui.recoveryFilesRetained.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ficheiros de recuperação mantidos"
+    },
+    "translator.ui.remove.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Remover"
+    },
+    "translator.ui.removeValueFromTheMigrationInventory.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Remover o «{filePath}» do inventário de migração?"
+    },
+    "translator.ui.repositoryMaintenanceTool.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ferramenta de manutenção de repositórios"
+    },
+    "translator.ui.restore.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Restaurar"
+    },
+    "translator.ui.restoringTheLastLoadedDraftAndValidatingIt.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Recuperar o último rascunho carregado e validá-lo"
+    },
+    "translator.ui.revertingLanguageData.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Reverter dados linguísticos"
+    },
+    "translator.ui.runtime.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tempo de execução"
+    },
+    "translator.ui.scanFailedValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Falha na verificação: {resultError}"
+    },
+    "translator.ui.scanFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Digitalizar ficheiro."
+    },
+    "translator.ui.scanSourceFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Digitalizar o ficheiro de origem"
+    },
+    "translator.ui.scanSourceFileValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "scannedFilePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ficheiro original digitalizado: {scannedFilePath}"
+    },
+    "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "scannedFileExtractedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Foram analisadas as sequências de candidatos «{scannedFileExtractedCount}» sem alterar o inventário."
+    },
+    "translator.ui.scanningSelectedFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A analisar o ficheiro selecionado."
+    },
+    "translator.ui.scope.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Âmbito"
+    },
+    "translator.ui.search.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pesquisar"
+    },
+    "translator.ui.searchAndFilter.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pesquisar e filtrar"
+    },
+    "translator.ui.selectAComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "(selecione um componente)"
+    },
+    "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Selecione um ficheiro para apresentar todas as cadeias de caracteres aceites pela função «Extract String Candidates»."
+    },
+    "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Selecione um candidato denunciado para verificar o seu estado."
+    },
+    "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Selecione um componente específico antes de adicionar um registo."
+    },
+    "translator.ui.selectFile.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Selecione o ficheiro."
+    },
+    "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Selecione um ficheiro do repositório para analisar sem o adicionar ao inventário de fontes."
+    },
+    "translator.ui.selectedValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "scannedFilePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Selecionado: {scannedFilePath}"
+    },
+    "translator.ui.setPreviewDefault.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Definir pré-visualização como predefinição"
+    },
+    "translator.ui.showLeftPanel.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mostrar painel esquerdo"
+    },
+    "translator.ui.showingRecordsFromAllComponents.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A apresentar registos de todos os componentes"
+    },
+    "translator.ui.statusInCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Estado: Em catálogo"
+    },
+    "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pré-visualização orientada para a tradução, utilizando substituições de palavras canónicas."
+    },
+    "translator.ui.uncheckedBuildsUseNormalizedEnglishAndDoNot.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "As compilações não verificadas utilizam inglês normalizado e não chamam o Deep L."
+    },
+    "translator.ui.unsavedChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Alterações não guardadas"
+    },
+    "translator.ui.unsavedChangesRemainInMemoryContinueToAnother.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "As alterações não guardadas permanecem na memória. Deseja avançar para outra visualização?"
+    },
+    "translator.ui.useSuggestedKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Utilizar a chave sugerida"
+    },
+    "translator.ui.validValueWarningS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "validationWarningsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Válido (aviso(s) de {validationWarningsCount})"
+    },
+    "translator.ui.validationFailedWithValueErrorS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "validationErrorsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A validação falhou devido a ({validationErrorsCount}) erros."
+    },
+    "translator.ui.validationListValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "kind"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "lista de validação {kind}"
+    },
+    "translator.ui.validationPassedWithValueWarningS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "validationWarningsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A validação foi bem-sucedida, com {validationWarningsCount} aviso(s)."
+    },
+    "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "scannedFileCandidateCount",
+        "scannedFileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{scannedFileCandidateCount} candidato(s) potencial(is), {scannedFileCatalogedStringCount} encontrado(s) no catálogo"
+    },
+    "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "fileCandidateCount",
+        "fileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} candidato(s) potencial(is), {fileCatalogedStringCount}, encontrado(s) no catálogo"
+    },
+    "translator.ui.valuePotentialValueFoundInCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "fileCandidateCount",
+        "fileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} {fileCatalogedStringCount}o potencial encontrado no catálogo"
+    },
+    "translator.ui.valueRecordS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "recordsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{recordsCount} registo(s)"
+    },
+    "translator.ui.valueSourceFileS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filesCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{filesCount} ficheiro(s) de origem"
+    },
+    "translator.ui.viewCandidates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ver candidatos"
+    },
+    "translator.ui.viewHeadingDataViewToolbar.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ver dados do título ver barra de ferramentas"
+    },
+    "translator.ui.yes.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sim"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

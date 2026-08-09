@@ -15,11 +15,7 @@ This option will look for blocks of
 ### Syntax
 
 ```mydfrg
-SkipBlock(
-NUMBER
- ,
-NUMBER
-)
+SkipBlock(NUMBER , NUMBER)
 ```
 
 ### Example

@@ -9,9 +9,7 @@ Select the volume if it's label matches the STRING. The string may
 ### Syntax
 
 ```mydfrg
-Label(
-STRING
-)
+Label(STRING)
 ```
 
 ### Example

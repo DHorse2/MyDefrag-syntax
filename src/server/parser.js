@@ -42,10 +42,11 @@ const parseStates = {
 };
 const fragmentTraceSingleLine = false;
 class Parser {
-    constructor(tokens, text, state = parseStates.SCRIPT_UNKNOWN) {
+    constructor(tokens, text, state = parseStates.SCRIPT_UNKNOWN, diagnosticLogContext = null) {
         this.tokens = tokens;
         this.text = text;
         this.state = state;
+        this.diagnosticLogContext = diagnosticLogContext;
         this.pos = 0;
         this.errors = [];
         this.start = 0;
@@ -96,6 +97,18 @@ class Parser {
             },
             severity,
         });
+
+        if (
+            severity === ini.severity.Error &&
+            this.diagnosticLogContext?.fileName &&
+            !this.diagnosticLogContext.fileNameOutput
+        ) {
+            this.diagnosticLogContext.fileNameOutput = true;
+            logger.message(
+                severity,
+                `[diagnostic] File: ${this.diagnosticLogContext.fileName}`
+            );
+        }
 
         logger.message(
             severity,

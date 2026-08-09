@@ -382,6 +382,7 @@ async function activate(context) {
     //#region declarations
     const path = require('path');
     const fs = require('fs');
+    const uiLocale = vscode.env.language;
 
     configureMyDefragPaths();
     // const logDir = path.join(context.globalStorageUri.fsPath, "log");
@@ -1197,6 +1198,7 @@ async function activate(context) {
             configurationSection: ['mydfrg', 'files', 'search']
         },
         initializationOptions: {
+            locale: vscode.env.language,
             config: config,
             excludes: excludeConfig,
             paths: paths

@@ -11,9 +11,7 @@ Run until a maximum DATETIME. When the time expires MyDefrag will stop
 ### Syntax
 
 ```mydfrg
-MaxRunTime(
-DATETIME
-)
+MaxRunTime(DATETIME)
 ```
 
 ### Parameters

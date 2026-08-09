@@ -2,23 +2,23 @@
   "component": "parser",
   "entries": {
     "parser.diagnostic.expectedToken.message": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "expected",
         "actual"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Expected {expected} but found {actual}"
+      "status": "machine-generated",
+      "text": "Verwag '{expected}, maar gevind '{actual}"
     },
     "parser.diagnostic.unexpectedToken.message": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "token"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unexpected token '{token}'"
+      "status": "machine-generated",
+      "text": "Onverwagte token '{token}'"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

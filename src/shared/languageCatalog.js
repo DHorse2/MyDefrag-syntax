@@ -6,6 +6,7 @@ const path = require('path');
 const DEFAULT_LOCALE = 'en';
 
 /**
+ * languageCatalog.js
  * Creates a small catalog loader that works without VS Code APIs.
  *
  * @param {object} options

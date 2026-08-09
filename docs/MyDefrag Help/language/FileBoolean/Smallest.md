@@ -6,9 +6,7 @@ Select the smallest items (size in bytes). The argument is the number of items
 ### Syntax
 
 ```mydfrg
-Smallest(
-NUMBER
-)
+Smallest(NUMBER)
 ```
 
 ### Example

@@ -89,9 +89,9 @@
       "notes": "Placeholder locale metadata."
     },
     {
-      "id": "fr",
-      "englishName": "French",
-      "nativeName": "Français",
+      "id": "fr-CA",
+      "englishName": "French (Canada)",
+      "nativeName": "Français (Canada)",
       "direction": "ltr",
       "status": "native-review-required",
       "notes": "Placeholder locale metadata."
@@ -103,6 +103,43 @@
       "direction": "ltr",
       "status": "native-review-required",
       "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "fa",
+      "englishName": "Persian",
+      "nativeName": "فارسی",
+      "direction": "rtl",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "ru",
+      "englishName": "Russian",
+      "nativeName": "Русский",
+      "direction": "ltr",
+      "status": "native-review-required",
+      "notes": "Placeholder locale metadata."
+    },
+    {
+      "id": "de",
+      "englishName": "German",
+      "nativeName": "Deutsch",
+      "direction": "ltr",
+      "status": "draft"
+    },
+    {
+      "id": "fr",
+      "englishName": "French",
+      "nativeName": "Français",
+      "direction": "ltr",
+      "status": "draft"
+    },
+    {
+      "id": "es",
+      "englishName": "Spanish",
+      "nativeName": "Español",
+      "direction": "ltr",
+      "status": "draft"
     }
   ]
 }

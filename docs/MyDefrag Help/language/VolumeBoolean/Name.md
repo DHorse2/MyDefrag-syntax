@@ -11,9 +11,7 @@ Select the volume if it's name matches the STRING. The string may
 ### Syntax
 
 ```mydfrg
-Name(
-STRING
-)
+Name(STRING)
 ```
 
 ### Example

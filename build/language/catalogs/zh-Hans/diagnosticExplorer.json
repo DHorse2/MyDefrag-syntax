@@ -9,24 +9,24 @@
       "text": "MyDefrag：没有当前诊断。"
     },
     "diagnosticExplorer.status.hasDiagnostics.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "index",
         "total"
       ],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "$(warning) MyDefrag {index}/{total}"
+      "status": "machine-generated",
+      "text": "$(warning) 我的磁盘碎片整理工具 {index} / {total}"
     },
     "diagnosticExplorer.status.noDiagnostics.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "$(check) MyDefrag 0 diagnostics"
+      "status": "machine-generated",
+      "text": "$(check) My Defragmenter 0 诊断"
     },
     "diagnosticExplorer.tree.header.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "current",
         "eligible",
@@ -40,8 +40,8 @@
         "skipped"
       ],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "Diagnostics: {current}/{eligible}/{all} ({remaining} remaining, {remainingFiles}/{traversableFiles}/{totalFiles} files, fixed {fixed}, ignored {ignored}, skipped {skipped})"
+      "status": "machine-generated",
+      "text": "诊断信息：{current} / {eligible} / {all} ({remaining} 剩余，{remainingFiles} / {traversableFiles} / {totalFiles} 文件，已修复 {fixed}，已忽略 {ignored}，已跳过 {skipped})"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

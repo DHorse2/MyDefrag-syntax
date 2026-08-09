@@ -10,13 +10,7 @@ Select the volume if NUMBER1 is between NUMBER2 and NUMBER3
 ### Syntax
 
 ```mydfrg
-NumberBetween(
-NUMBER1
- ,
-NUMBER2
- ,
-NUMBER3
-)
+NumberBetween(NUMBER1 , NUMBER2 , NUMBER3)
 ```
 
 ### Example

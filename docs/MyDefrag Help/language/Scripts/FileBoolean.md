@@ -18,7 +18,7 @@ FileEnd
 
 ### Actions
 
-| [**(...)**](../FileBoolean/....md) |
+| [**Boolean**](../FileBoolean/Boolean.md) |
 | --- |
 | [**All**](../FileBoolean/All.md) |
 | [**AND**](../FileBoolean/AND.md) |

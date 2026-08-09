@@ -16,11 +16,7 @@ to append a text to a logfile).
 ### Syntax
 
 ```mydfrg
-WriteLogfile(
-STRING
- ,
-STRING
-)
+WriteLogfile(STRING , STRING)
 ```
 
 ### Example

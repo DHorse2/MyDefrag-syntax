@@ -198,7 +198,12 @@ connection.onInitialize(async (params) => {
     // );
     try { // ---- Initialization ----
         //                    OR THIS:
-        try { // Ini Init
+        try { // Ini Init Config
+            // Language
+            uiLocale =
+                params.initializationOptions?.locale ||
+                params.locale ||
+                'en';
             // Workspace folders
             // console?.log(JSON.stringify(params.capabilities, null, 2));
             try {
@@ -895,6 +900,10 @@ async function validateDocument(document, options = {}) {
     try { // ── Validate Document ─────────────────────────────────────────────────────────
         const filePath = fileURLToPath(document.uri.toString());
         currFilePath = filePath;
+        const diagnosticLogContext = {
+            fileName: path.basename(filePath),
+            fileNameOutput: false,
+        };
         const ext = path.extname(filePath).toLowerCase();
         const isMyDefragDocument = document.languageId === 'mydfrg';
         documentVersion = document.version;
@@ -943,7 +952,7 @@ async function validateDocument(document, options = {}) {
 
         if (parserState !== parseStates.SCRIPT_FRAGMENT) {
             // Check for full document errors
-            parser = new Parser(tokens, text, parserState);
+            parser = new Parser(tokens, text, parserState, diagnosticLogContext);
             logger.dbg(5, `validateDocument: Full Document: Parsing`);
             logger.dbg(5, "validateDocument: Full Document: First token:", parser.curr());
 
@@ -959,7 +968,7 @@ async function validateDocument(document, options = {}) {
             bestParser = parser;
 
         } else {
-            bestParser = new Parser(tokens, text, parserState);
+            bestParser = new Parser(tokens, text, parserState, diagnosticLogContext);
         }
         // ─────────────────────────────────────────────────────────────────────────────────
         // If full-script parse failed, try fragment mode
@@ -969,7 +978,7 @@ async function validateDocument(document, options = {}) {
         if (!bestParser.atEof() || bestParser.errors.length > 0) {
             // if any errors were found or processing paused
             parserState = parseStates.SCRIPT_FRAGMENT;
-            fragParser = new Parser(tokens, text, parserState);
+            fragParser = new Parser(tokens, text, parserState, diagnosticLogContext);
             logger.dbg(5, `validateDocument: Document Fragment: Parsing`);
             logger.dbg(5, "validateDocument: Document Fragment: First token:", fragParser.curr(), "=", fragParser.curr().value);
 

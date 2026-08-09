@@ -41,7 +41,8 @@ function registerDiagnosticNavigation(context) {
 
     const navigator = new DiagnosticNavigator({
         stateFile,
-        legacyStateFile
+        legacyStateFile,
+        diagnosticsProvider: () => vscode.languages.getDiagnostics()
     });
     // {
     //     diagnosticsFile,
@@ -55,6 +56,11 @@ function registerDiagnosticNavigation(context) {
         vscode.window.createTreeView('mydfrgDiagnostics', {
             treeDataProvider: treeProvider,
             showCollapseAll: false
+        }),
+        vscode.languages.onDidChangeDiagnostics(() => {
+            refresh().catch((err) => {
+                vscode.window.showWarningMessage(`Diagnostic explorer refresh failed: ${err.message}`);
+            });
         })
     );
 

@@ -6,15 +6,9 @@ Logical AND of two file booleans. The result is true if all the booleans
 ### Syntax
 
 ```mydfrg
-FILEBOOLEAN
- and
-FILEBOOLEAN
-FILEBOOLEAN
- &
-FILEBOOLEAN
-FILEBOOLEAN
- &&
-FILEBOOLEAN
+FILEBOOLEAN and FILEBOOLEAN
+FILEBOOLEAN & FILEBOOLEAN
+FILEBOOLEAN && FILEBOOLEAN
 ```
 
 ### Example

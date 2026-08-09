@@ -24,6 +24,7 @@ class DiagnosticNavigator {
      * @param {string} options.stateFile Absolute path to writable diagnostic state JSON.
      * @param {string} options.legacyStateFile Legacy diagnostic state JSON used only when stateFile does not exist.
      * @param {object} [options.languageData] Existing project keyword/language data.
+     * @param {Function} [options.diagnosticsProvider] Returns VS Code diagnostics grouped by URI.
      */
     constructor(options = {}) {
         paths.ensureDirectories();
@@ -47,6 +48,7 @@ class DiagnosticNavigator {
         this.dismissedFiles = new Set(); // remove todo???
 
         this.keywordLookup = new KeywordLookup(options.languageData || {});
+        this.diagnosticsProvider = options.diagnosticsProvider || null;
 
         this.allDiagnostics = [];
         this.visibleDiagnostics = [];
@@ -92,18 +94,53 @@ class DiagnosticNavigator {
      * @returns {Array<object>}
      */
     loadDiagnostics() {
-        if (!this.diagnosticsFile || !fs.existsSync(this.diagnosticsFile)) {
+        const diagnostics = [];
+
+        if (this.diagnosticsFile && fs.existsSync(this.diagnosticsFile)) {
+            try {
+                const raw = fs.readFileSync(this.diagnosticsFile, 'utf8');
+                if (raw.trim()) {
+                    diagnostics.push(...this.normalizeDiagnostics(JSON.parse(raw)));
+                }
+            } catch (err) {
+                console.error(`Failed to load diagnostics: ${err.message}`);
+            }
+        }
+
+        diagnostics.push(...this.loadProvidedDiagnostics());
+        return this.dedupeDiagnostics(this.sortDiagnostics(diagnostics));
+    }
+
+    /**
+     * Loads diagnostics published by every active VS Code diagnostic source.
+     *
+     * @returns {Array<object>}
+     */
+    loadProvidedDiagnostics() {
+        if (typeof this.diagnosticsProvider !== 'function') {
             return [];
         }
 
+        const result = [];
+
         try {
-            const raw = fs.readFileSync(this.diagnosticsFile, 'utf8');
-            if (!raw.trim()) return [];
-            return this.normalizeDiagnostics(JSON.parse(raw));
+            for (const entry of this.diagnosticsProvider() || []) {
+                if (!Array.isArray(entry) || entry.length < 2) { continue; }
+
+                const [uri, diagnostics] = entry;
+                if (uri?.scheme !== 'file' || !Array.isArray(diagnostics)) { continue; }
+
+                for (const diagnostic of diagnostics) {
+                    this.pushNormalizedItem(result, diagnostic, uri.fsPath || uri.toString(), {
+                        vscodeSeverity: true
+                    });
+                }
+            }
         } catch (err) {
-            console.error(`Failed to load diagnostics: ${err.message}`);
-            return [];
+            console.error(`Failed to load provided diagnostics: ${err.message}`);
         }
+
+        return result;
     }
 
     /**
@@ -154,15 +191,19 @@ class DiagnosticNavigator {
      * @param {Array<object>} result
      * @param {object} diagnostic
      * @param {string} filePath
+     * @param {object} [options]
      */
-    pushNormalizedItem(result, diagnostic, filePath) {
+    pushNormalizedItem(result, diagnostic, filePath, options = {}) {
         if (!diagnostic || !filePath) return;
 
         const range = diagnostic.range || {};
         const start = range.start || diagnostic.start || {};
         const line = Number.isInteger(diagnostic.line) ? diagnostic.line : Number(start.line || 0);
         const character = Number.isInteger(diagnostic.character) ? diagnostic.character : Number(start.character || diagnostic.column || 0);
-        const severity = Number.isInteger(diagnostic.severity) ? diagnostic.severity : Number(diagnostic.severity || 0);
+        const rawSeverity = Number.isInteger(diagnostic.severity)
+            ? diagnostic.severity
+            : Number(diagnostic.severity || 0);
+        const severity = options.vscodeSeverity ? rawSeverity + 1 : rawSeverity;
         const token = this.keywordLookup.extractToken(diagnostic);
         const keyword = this.keywordLookup.lookup(token);
 

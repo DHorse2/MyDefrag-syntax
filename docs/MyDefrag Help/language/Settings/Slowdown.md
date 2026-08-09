@@ -5,9 +5,7 @@ Change the speed of MyDefrag.
 ### Syntax
 
 ```mydfrg
-Slowdown(
-NUMBER
-)
+Slowdown(NUMBER)
 ```
 
 ### Parameters

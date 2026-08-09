@@ -13,9 +13,7 @@ The description of the script. This string is displayed by MyDefrag in the scrip
 ### Syntax
 
 ```mydfrg
-Description(
-STRING
-)
+Description(STRING)
 ```
 
 ### Example

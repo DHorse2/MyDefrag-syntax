@@ -10,11 +10,7 @@ Select all the items that were changed
 ### Syntax
 
 ```mydfrg
-LastChange(
-DATETIME
- ,
-DATETIME
-)
+LastChange(DATETIME , DATETIME)
 ```
 
 ### Example

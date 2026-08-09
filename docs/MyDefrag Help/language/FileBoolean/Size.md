@@ -9,11 +9,7 @@ Select all the items that have a size in bytes between the minimum
 ### Syntax
 
 ```mydfrg
-Size(
-NUMBER
- ,
-NUMBER
-)
+Size(NUMBER , NUMBER)
 ```
 
 ### Example

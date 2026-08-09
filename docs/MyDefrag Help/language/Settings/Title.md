@@ -16,9 +16,7 @@ The title of the script. This string will be displayed in the script chooser
 ### Syntax
 
 ```mydfrg
-Title(
-STRING
-)
+Title(STRING)
 ```
 
 ### Example

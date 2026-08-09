@@ -2,16 +2,6 @@
 // languageData.js
 //#region KEYWORDS, KEYWORDS_MAP, KEYWORDS_BY_PARENT
 // All keywords from the grammar (case-insensitive)
-// ToDo A few notes on decisions made: 
-// fixed appeared twice in your original Set (Sets deduplicate, so only one survived). 
-// It's placed under volume_condition since that's its primary use; 
-// if your grammar also uses it as a window_state value you can add a second entry.
-// fragmented also appeared twice in the original — it's under file_condition (the fragment state test) and 
-// I added a second entry under file_state since it doubles as a file state flag.
-// text as a zone label is kept under zone; 
-// if it also doubles as a literal type name in your tokenizer you may want a second entry with parent: 'literal'.
-// Your tokenize(text) call can now filter with .filter(k => k.parent === 'volume_condition') or 
-// build a fast lookup with new Map(KEYWORDS.map(k => [k.text, k])) for O(1) access by keyword string.
 const KEYWORDS = [
     // ─────────────────────────────────────────────────────────────────────────────────
     // Parent Child Relationships

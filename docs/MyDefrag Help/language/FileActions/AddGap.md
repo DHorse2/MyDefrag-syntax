@@ -15,9 +15,7 @@ Set the position of the beginning of the next zone. This command is commonly
 ### Syntax
 
 ```mydfrg
-AddGap(
-NUMBER
- [, DoNotVacate])
+AddGap(NUMBER [, DoNotVacate])
 ```
 
 ### Example

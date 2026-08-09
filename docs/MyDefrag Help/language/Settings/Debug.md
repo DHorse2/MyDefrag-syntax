@@ -25,9 +25,7 @@ Set a debug level, controlling the amount of information that is written to the
 ### Syntax
 
 ```mydfrg
-Debug(
-NUMBER
-)
+Debug(NUMBER)
 ```
 
 ### Example

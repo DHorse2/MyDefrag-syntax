@@ -11,9 +11,7 @@ This setting is the number of seconds that MyDefrag will wait for
 ### Syntax
 
 ```mydfrg
-ExitIfTimeout(
-NUMBER
-)
+ExitIfTimeout(NUMBER)
 ```
 
 ### See also:

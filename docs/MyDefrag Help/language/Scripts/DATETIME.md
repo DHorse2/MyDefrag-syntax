@@ -7,74 +7,27 @@ a literal date/time.
 
 ### Syntax
 
-```mydfrg
-YYYY-MM-DD HH:MM:SS
-
-Literal date/time (year-month-day hours:minutes:seconds).
-
-YYYY/MM/DD HH:MM:SS
-
-Literal date/time (year/month/day hours:minutes:seconds).
-
-HH:MM:SS
-
-The current date/time plus a number of hours:minutes:seconds.
-
-HH:MM:SS ago
-
-The current date/time minus a number of hours:minutes:seconds.
-
-NNNN
-
-The current date/time plus a number of seconds.
-    Please note that zero ("0") is interpreted as "zero seconds after now", not as
-    "beginning of time".
-
-NNNN ago
-
-The current date/time minus a number of seconds.
-
-NNNN SSSS
-
-The current date/time plus a number of "SSSS", where SSSS is "years", "months",
-    "days", "hours", "minutes", "seconds", or "weeks" (1 week is 7 days).
-
-NNNN SSSS ago
-
-The current date/time minus a number of "SSSS", where SSSS is "years", "months",
-    "days", "hours", "minutes", "seconds", or "weeks" (1 week is 7 days).
-
-now
-
-The current date/time.
-
-[empty]
-
-Empty date/time. This is used by some functions for "beginning of time"
-    or "infinity", depending of the function.
-    Please note that number "0" is interpreted as "zero seconds after now", not as
-    "beginning of time" or "infinity".
-```
+| Syntax | Description |
+| --- | --- |
+| **YYYY-MM-DD HH:MM:SS** | Literal date/time (year-month-day hours:minutes:seconds). |
+| **YYYY/MM/DD HH:MM:SS** | Literal date/time (year/month/day hours:minutes:seconds). |
+| **HH:MM:SS** | The current date/time plus a number of hours:minutes:seconds. |
+| **HH:MM:SS ago** | The current date/time minus a number of hours:minutes:seconds. |
+| **NNNN** | The current date/time plus a number of seconds. Please note that zero ("0") is interpreted as "zero seconds after now", not as "beginning of time". |
+| **NNNN ago** | The current date/time minus a number of seconds. |
+| **NNNN SSSS** | The current date/time plus a number of "SSSS", where SSSS is "years", "months", "days", "hours", "minutes", "seconds", or "weeks" (1 week is 7 days). |
+| **NNNN SSSS ago** | The current date/time minus a number of "SSSS", where SSSS is "years", "months", "days", "hours", "minutes", "seconds", or "weeks" (1 week is 7 days). |
+| **now** | The current date/time. |
+| [empty] | Empty date/time. This is used by some functions for "beginning of time" or "infinity", depending on the function. Please note that number "0" is interpreted as "zero seconds after now", not as "beginning of time" or "infinity". |
 
 ### Examples
 
-```mydfrg
-2008/10/13 23:12:06
-
-Literal date/time.
-
-01:00:00
-
-1 hour into the future.
-
-15
-
-15 seconds after now.
-
-15 days ago
-
-15 days ago.
-```
+| Example | Description |
+| --- | --- |
+| **2008/10/13 23:12:06** | Literal date/time. |
+| **01:00:00** | 1 hour into the future. |
+| **15** | 15 seconds after now. |
+| **15 days ago** | 15 days ago. |
 
 ### See also:
 

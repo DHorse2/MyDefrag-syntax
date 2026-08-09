@@ -12,11 +12,7 @@ Select all the items that have a last access time
 ### Syntax
 
 ```mydfrg
-LastAccess(
-DATETIME
- ,
-DATETIME
-)
+LastAccess(DATETIME , DATETIME)
 ```
 
 ### Example

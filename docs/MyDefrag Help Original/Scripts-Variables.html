@@ -4,7 +4,7 @@ MyDefrag has a long list of pre-defined variables that you can use. They are dyn
 Program and script
 Variable Units Description 
 MyDefragVersion String MyDefrag version (for example "MyDefrag v4.0b4") 
-WindowsVersion String Windows version (for example "v6.0 build 6000") 
+Windows Version String Windows version (for example "v6.0 build 6000") 
 Commandline String Commandline (for example "MyDefrag.exe -r Weekly.MyD") 
 ExecutableDirectory String Executable directory, the directory where the currently running MyDefrag interpreter is located (for example "C:\Program Files\MyDefrag v4.3.1") 
 WorkingDirectory String Working directory (for example "C:\Program Files\MyDefrag v4.3.1") 
@@ -33,7 +33,7 @@ VolumeUsedP Percentage
 MftSize bytes The size of the $MFT. 
 BytesPerCluster bytes The size of a cluster. 
 Windows uses disks in blocks called "clusters". 
-Harddisks split the data in even smaller blocks, called "sectors". A clusters is 1 or more whole sectors, which is set by Windows when it formats the disk. 
+Harddisks split the data in even smaller blocks, called "sectors". A cluster is 1 or more whole sectors, which is set by Windows when it formats the disk. 
 The minimum size that a file will occupy is 1 cluster. 
 Very small files on NTFS disks are stored in the MFT, and are then reported as occupying zero clusters. 
  
@@ -220,7 +220,7 @@ ZONE221P Percentage
 
 Gaps by count
 The number of gaps on the volume. The percentages are the same number, but as the percentage of the total gaps on the volume. 
-The less gaps the better. More gaps will cause more fragmentation. 
+The fewer gaps the better. More gaps will cause more fragmentation. 
 The gap count will increase while defragmenting. 
 The gap count will decrease while optimizing. 
 Variable Units Description 

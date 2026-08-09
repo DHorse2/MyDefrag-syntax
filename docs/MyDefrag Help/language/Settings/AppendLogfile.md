@@ -15,11 +15,7 @@ to replace the text
 ### Syntax
 
 ```mydfrg
-AppendLogfile(
-STRING
- ,
-STRING
-)
+AppendLogfile(STRING , STRING)
 ```
 
 ### Example

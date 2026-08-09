@@ -24,11 +24,7 @@ If enclosed by double-quotes then the string may not contain a double-quote.
 ### Syntax
 
 ```mydfrg
-Message(
-STRING
- ,
-STRING
-)
+Message(STRING , STRING)
 ```
 
 ### Example

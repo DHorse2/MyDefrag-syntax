@@ -12,9 +12,7 @@ Select all the directories that have a name which matches the
 ### Syntax
 
 ```mydfrg
-DirectoryName(
-STRING
-)
+DirectoryName(STRING)
 ```
 
 ### Example

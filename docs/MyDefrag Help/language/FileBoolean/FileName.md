@@ -11,9 +11,7 @@ Select all the items (files, directories) that have a filename
 ### Syntax
 
 ```mydfrg
-FileName(
-STRING
-)
+FileName(STRING)
 ```
 
 ### Example

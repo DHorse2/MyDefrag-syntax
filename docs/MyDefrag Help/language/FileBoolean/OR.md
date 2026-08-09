@@ -6,15 +6,9 @@ Logical OR of two file booleans. The result is true if at least 1 of the boolean
 ### Syntax
 
 ```mydfrg
-FILEBOOLEAN
- or
-FILEBOOLEAN
-FILEBOOLEAN
- |
-FILEBOOLEAN
-FILEBOOLEAN
- ||
-FILEBOOLEAN
+FILEBOOLEAN or FILEBOOLEAN
+FILEBOOLEAN | FILEBOOLEAN
+FILEBOOLEAN || FILEBOOLEAN
 ```
 
 ### Example

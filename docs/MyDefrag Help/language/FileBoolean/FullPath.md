@@ -14,11 +14,7 @@ Select all the directories that have a full path which matches the first
 ### Syntax
 
 ```mydfrg
-FullPath(
-STRING
- ,
-STRING
-)
+FullPath(STRING , STRING)
 ```
 
 ### Example

@@ -15,9 +15,7 @@ fileaction.
 ### Syntax
 
 ```mydfrg
-ChunkSize(
-NUMBER
-)
+ChunkSize(NUMBER)
 ```
 
 ### Example

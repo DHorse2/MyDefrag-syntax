@@ -7,11 +7,7 @@ Select all the items that have a number of fragments between the minimum
 ### Syntax
 
 ```mydfrg
-FragmentCount(
-NUMBER
- ,
-NUMBER
-)
+FragmentCount(NUMBER , NUMBER)
 ```
 
 ### Example

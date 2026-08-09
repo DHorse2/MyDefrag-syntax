@@ -8,13 +8,7 @@ Change the colors that are used on the display.
 ### Syntax
 
 ```mydfrg
-SetColor(COLORNAME ,
-NUMBER
- ,
-NUMBER
- ,
-NUMBER
-)
+SetColor(COLORNAME , NUMBER , NUMBER , NUMBER)
 ```
 
 ### Parameters

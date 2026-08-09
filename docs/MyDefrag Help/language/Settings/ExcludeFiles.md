@@ -9,9 +9,7 @@ Exclude a selection of files.
 ### Syntax
 
 ```mydfrg
-ExcludeFiles(
-FILEBOOLEAN
-)
+ExcludeFiles(FILEBOOLEAN)
 ```
 
 ### Example

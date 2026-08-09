@@ -20,9 +20,7 @@ fileaction, except that files can be placed inside the NTFS reserved area.
 ### Syntax
 
 ```mydfrg
-PlaceNtfsSystemFiles(OPTIONS ,
-NUMBER
-)
+PlaceNtfsSystemFiles(OPTIONS , NUMBER)
 ```
 
 | The OPTIONS are a space-separated list of these keywords:[**Ascending**](../Misc/SortByName-Ascending.md) [**Descending**](../Misc/SortByName-Descending.md) [**SkipBlock**](../Misc/SortByName-SkipBlock.md) The NUMBER parameter is a hint, specifying a desired size for the NTFS reserved   area. | [**Ascending**](../Misc/SortByName-Ascending.md) | [**Descending**](../Misc/SortByName-Descending.md) | [**SkipBlock**](../Misc/SortByName-SkipBlock.md) |

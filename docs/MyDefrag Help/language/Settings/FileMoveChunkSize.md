@@ -14,9 +14,7 @@ MyDefrag is build on top of the Microsoft defragmentation API and basically all 
 ### Syntax
 
 ```mydfrg
-FileMoveChunkSize(
-NUMBER
-)
+FileMoveChunkSize(NUMBER)
 ```
 
 ### Example

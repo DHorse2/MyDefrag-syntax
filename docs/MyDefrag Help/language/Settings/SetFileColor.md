@@ -16,23 +16,10 @@ Change the colors that are used to draw files in the diskmap window.
 
 ```mydfrg
 // Outside a VolumeSelect:
-SetFileColor(FILESTATE ,
-NUMBER
- ,
-NUMBER
- ,
-NUMBER
-)
+SetFileColor(FILESTATE , NUMBER , NUMBER , NUMBER)
+
 // Inside a VolumeSelect:
-SetFileColor(
-FILEBOOLEAN
- , FILESTATE ,
-NUMBER
- ,
-NUMBER
- ,
-NUMBER
-)
+SetFileColor(FILEBOOLEAN , FILESTATE , NUMBER , NUMBER , NUMBER)
 ```
 
 ### Parameters

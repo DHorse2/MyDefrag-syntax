@@ -11,9 +11,7 @@ Windows reserves a percentage of the volume for the MFT (Master File Table) and 
 ### Syntax
 
 ```mydfrg
-ReclaimNtfsReservedAreas(
-SETTINGS
-)
+ReclaimNtfsReservedAreas(SETTINGS)
 ```
 
 ### Example

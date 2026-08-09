@@ -9,11 +9,7 @@ Select all the items that have an average number of bytes per fragment
 ### Syntax
 
 ```mydfrg
-AverageFragmentSize(
-NUMBER
- ,
-NUMBER
-)
+AverageFragmentSize(NUMBER , NUMBER)
 ```
 
 ### Example

@@ -7,11 +7,7 @@ Select the volume if it's size in bytes is between the minimum
 ### Syntax
 
 ```mydfrg
-Size(
-NUMBER
- ,
-NUMBER
-)
+Size(NUMBER , NUMBER)
 ```
 
 ### Example

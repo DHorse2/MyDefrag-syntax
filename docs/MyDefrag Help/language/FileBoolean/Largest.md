@@ -6,9 +6,7 @@ Select the largests items (size in bytes). The argument is the number of items
 ### Syntax
 
 ```mydfrg
-Largest(
-NUMBER
-)
+Largest(NUMBER)
 ```
 
 ### Example

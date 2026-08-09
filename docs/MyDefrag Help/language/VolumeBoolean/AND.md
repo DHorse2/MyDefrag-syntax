@@ -6,15 +6,9 @@ Logical AND of two volume booleans. The result is true if all the booleans
 ### Syntax
 
 ```mydfrg
-VOLUMEBOOLEAN
- and
-VOLUMEBOOLEAN
-VOLUMEBOOLEAN
- &
-VOLUMEBOOLEAN
-VOLUMEBOOLEAN
- &&
-VOLUMEBOOLEAN
+VOLUMEBOOLEAN and VOLUMEBOOLEAN
+VOLUMEBOOLEAN & VOLUMEBOOLEAN
+VOLUMEBOOLEAN && VOLUMEBOOLEAN
 ```
 
 ### Example

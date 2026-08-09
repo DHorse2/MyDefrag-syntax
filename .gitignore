@@ -1,0 +1,64 @@
+# Repository-local AI and tooling state
+/.agents/
+/.cline/
+/.clinerules/
+/.codex/
+/.obsidian/
+/.ollama/
+/.user/
+
+# Dependencies
+/node_modules/
+
+# Requested repository exclusions
+/build/
+/language/
+
+# Generated packages, build artifacts, and test output
+/artifacts/
+/dist/
+/out/
+/coverage/
+/.nyc_output/
+*.vsix
+*.tgz
+
+# Logs and diagnostic output
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment configuration
+.env
+.env.*
+!.env.example
+*.local
+
+# Temporary files and caches
+/.cache/
+/.tmp/
+/temp/
+/tmp/
+*.bak
+*.swp
+*.swo
+*.temp
+*.tmp
+*~
+
+# Windows and macOS metadata
+.DS_Store
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE-specific local state
+/.idea/
+*.code-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

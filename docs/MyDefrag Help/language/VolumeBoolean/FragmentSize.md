@@ -10,11 +10,7 @@ NOTE: MyDefrag has to open the disk and analyze all the files so it can calculat
 ### Syntax
 
 ```mydfrg
-FragmentSize(
-NUMBER
- ,
-NUMBER
-)
+FragmentSize(NUMBER , NUMBER)
 ```
 
 ### Example

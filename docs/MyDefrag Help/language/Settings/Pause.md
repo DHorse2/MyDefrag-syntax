@@ -7,9 +7,7 @@ Pause MyDefrag for a specified amount of time.
 ### Syntax
 
 ```mydfrg
-Pause(
-DATETIME
-)
+Pause(DATETIME)
 ```
 
 ### Parameters

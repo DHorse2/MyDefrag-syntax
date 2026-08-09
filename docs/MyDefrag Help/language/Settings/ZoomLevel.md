@@ -8,9 +8,7 @@ Set the zoom level of the MyDefrag diskmap display.
 ### Syntax
 
 ```mydfrg
-ZoomLevel(
-NUMBER
-)
+ZoomLevel(NUMBER)
 ```
 
 ### Parameters

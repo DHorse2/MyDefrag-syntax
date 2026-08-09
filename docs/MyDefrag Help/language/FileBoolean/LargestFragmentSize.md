@@ -7,11 +7,7 @@ Select all the items that have a largest fragment with a size (in bytes)
 ### Syntax
 
 ```mydfrg
-LargestFragmentSize(
-NUMBER
- ,
-NUMBER
-)
+LargestFragmentSize(NUMBER ,NUMBER)
 ```
 
 ### Example

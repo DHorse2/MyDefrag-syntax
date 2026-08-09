@@ -13,9 +13,7 @@ Select the items (files, directories) that are listed in the listfile.
 ### Syntax
 
 ```mydfrg
-ImportListFromFile(
-STRING
-)
+ImportListFromFile(STRING)
 ```
 
 ### Example

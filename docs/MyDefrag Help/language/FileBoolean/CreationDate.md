@@ -10,11 +10,7 @@ Select all the items that were created
 ### Syntax
 
 ```mydfrg
-CreationDate(
-DATETIME
- ,
-DATETIME
-)
+CreationDate(DATETIME , DATETIME)
 ```
 
 ### Example

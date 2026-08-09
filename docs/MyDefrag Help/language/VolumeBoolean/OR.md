@@ -6,15 +6,9 @@ Logical OR of two volume booleans. The result is true if at least 1 of the boole
 ### Syntax
 
 ```mydfrg
-VOLUMEBOOLEAN
- or
-VOLUMEBOOLEAN
-VOLUMEBOOLEAN
- |
-VOLUMEBOOLEAN
-VOLUMEBOOLEAN
- ||
-VOLUMEBOOLEAN
+VOLUMEBOOLEAN or VOLUMEBOOLEAN
+VOLUMEBOOLEAN | VOLUMEBOOLEAN
+VOLUMEBOOLEAN || VOLUMEBOOLEAN
 ```
 
 ### Example

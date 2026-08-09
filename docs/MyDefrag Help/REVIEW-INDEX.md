@@ -23,7 +23,7 @@ This file maps each converted Markdown topic to its original source HTML file.
 | pending | FileActions / SortByName | [FileActions-SortByName.html](../MyDefrag%20Help%20Original/FileActions-SortByName.html) | [language/FileActions/SortByName.md](language/FileActions/SortByName.md) |
 | pending | FileActions / SortByNewestDate | [FileActions-SortByNewestDate.html](../MyDefrag%20Help%20Original/FileActions-SortByNewestDate.html) | [language/FileActions/SortByNewestDate.md](language/FileActions/SortByNewestDate.md) |
 | pending | FileActions / SortBySize | [FileActions-SortBySize.html](../MyDefrag%20Help%20Original/FileActions-SortBySize.html) | [language/FileActions/SortBySize.md](language/FileActions/SortBySize.md) |
-| pending | FileBoolean / ... | [FileBoolean-....html](../MyDefrag%20Help%20Original/FileBoolean-....html) | [language/FileBoolean/....md](language/FileBoolean/....md) |
+| pending | FileBoolean / Boolean | [FileBoolean-....html](../MyDefrag%20Help%20Original/FileBoolean-....html) | [language/FileBoolean/Boolean.md](language/FileBoolean/Boolean.md) |
 | pending | FileBoolean / AND | [FileBoolean-AND.html](../MyDefrag%20Help%20Original/FileBoolean-AND.html) | [language/FileBoolean/AND.md](language/FileBoolean/AND.md) |
 | pending | FileBoolean / All | [FileBoolean-All.html](../MyDefrag%20Help%20Original/FileBoolean-All.html) | [language/FileBoolean/All.md](language/FileBoolean/All.md) |
 | pending | FileBoolean / Archive | [FileBoolean-Archive.html](../MyDefrag%20Help%20Original/FileBoolean-Archive.html) | [language/FileBoolean/Archive.md](language/FileBoolean/Archive.md) |
@@ -124,7 +124,7 @@ This file maps each converted Markdown topic to its original source HTML file.
 | pending | VolumeActions / MakeGap | [VolumeActions-MakeGap.html](../MyDefrag%20Help%20Original/VolumeActions-MakeGap.html) | [language/VolumeActions/MakeGap.md](language/VolumeActions/MakeGap.md) |
 | pending | VolumeActions / ReclaimNtfsReservedAreas | [VolumeActions-ReclaimNtfsReservedAreas.html](../MyDefrag%20Help%20Original/VolumeActions-ReclaimNtfsReservedAreas.html) | [language/VolumeActions/ReclaimNtfsReservedAreas.md](language/VolumeActions/ReclaimNtfsReservedAreas.md) |
 | pending | VolumeActions / Settings | [VolumeActions-Settings.html](../MyDefrag%20Help%20Original/VolumeActions-Settings.html) | [language/VolumeActions/Settings.md](language/VolumeActions/Settings.md) |
-| pending | VolumeBoolean / ... | [VolumeBoolean-....html](../MyDefrag%20Help%20Original/VolumeBoolean-....html) | [language/VolumeBoolean/....md](language/VolumeBoolean/....md) |
+| pending | VolumeBoolean / Boolean | [VolumeBoolean-....html](../MyDefrag%20Help%20Original/VolumeBoolean-....html) | [language/VolumeBoolean/Boolean.md](language/VolumeBoolean/Boolean.md) |
 | pending | VolumeBoolean / AND | [VolumeBoolean-AND.html](../MyDefrag%20Help%20Original/VolumeBoolean-AND.html) | [language/VolumeBoolean/AND.md](language/VolumeBoolean/AND.md) |
 | pending | VolumeBoolean / All | [VolumeBoolean-All.html](../MyDefrag%20Help%20Original/VolumeBoolean-All.html) | [language/VolumeBoolean/All.md](language/VolumeBoolean/All.md) |
 | pending | VolumeBoolean / Cdrom | [VolumeBoolean-Cdrom.html](../MyDefrag%20Help%20Original/VolumeBoolean-Cdrom.html) | [language/VolumeBoolean/Cdrom.md](language/VolumeBoolean/Cdrom.md) |

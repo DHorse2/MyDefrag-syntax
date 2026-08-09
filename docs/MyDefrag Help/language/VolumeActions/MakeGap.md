@@ -14,9 +14,7 @@ Set the position of the beginning of the next zone. This command is commonly
 ### Syntax
 
 ```mydfrg
-MakeGap(
-NUMBER
- [, DoNotVacate])
+MakeGap(NUMBER [, DoNotVacate])
 ```
 
 ### Example
@@ -24,10 +22,13 @@ NUMBER
 ```mydfrg
 # Make a gap of 1% of the free size of the volume.
 MakeGap(ZoneBegin + VolumeFree * 0.01)
+
 # Same, but do not vacate.
 MakeGap(ZoneBegin + VolumeFree * 0.01 , DoNotVacate)
+
 # Start next zone at 30% into the data on the volume.
 MakeGap(VolumeUsed * 0.3)
+
 # Place next zone at the end of the disk, with some extra maneuvering space.
 MakeGap(MaxNextZoneBegin - VolumeFree * 0.01)
 ```

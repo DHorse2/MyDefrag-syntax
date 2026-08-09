@@ -10,11 +10,7 @@ NOTE: MyDefrag has to open the disk and analyze all the files to determine the n
 ### Syntax
 
 ```mydfrg
-FragmentCount(
-NUMBER
- ,
-NUMBER
-)
+FragmentCount(NUMBER , NUMBER)
 ```
 
 ### Example

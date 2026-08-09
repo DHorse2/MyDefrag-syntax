@@ -12,9 +12,7 @@ Select all the directories that have a full path which matches the
 ### Syntax
 
 ```mydfrg
-DirectoryPath(
-STRING
-)
+DirectoryPath(STRING)
 ```
 
 ### Example

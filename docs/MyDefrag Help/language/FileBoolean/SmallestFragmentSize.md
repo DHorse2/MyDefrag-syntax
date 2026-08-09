@@ -7,11 +7,7 @@ Select all the items that have a smallest fragment with a size (in bytes)
 ### Syntax
 
 ```mydfrg
-SmallestFragmentSize(
-NUMBER
- ,
-NUMBER
-)
+SmallestFragmentSize(NUMBER , NUMBER)
 ```
 
 ### Example

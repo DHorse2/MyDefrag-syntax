@@ -27,9 +27,7 @@ to include partial
 ### Syntax
 
 ```mydfrg
-RunScript(
-STRING
-)
+RunScript(STRING)
 ```
 
 ### Example

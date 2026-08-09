@@ -67,7 +67,7 @@ Converted from the MyDefrag Help HTML source.
 
 ### VolumeBoolean
 
-- [...](language/VolumeBoolean/....md)
+- [Boolean](language/VolumeBoolean/Boolean.md)
 - [All](language/VolumeBoolean/All.md)
 - [AND](language/VolumeBoolean/AND.md)
 - [Cdrom](language/VolumeBoolean/Cdrom.md)
@@ -100,7 +100,7 @@ Converted from the MyDefrag Help HTML source.
 
 ### FileBoolean
 
-- [...](language/FileBoolean/....md)
+- [Boolean](language/FileBoolean/Boolean.md)
 - [All](language/FileBoolean/All.md)
 - [AND](language/FileBoolean/AND.md)
 - [Archive](language/FileBoolean/Archive.md)

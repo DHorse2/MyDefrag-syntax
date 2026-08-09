@@ -2,60 +2,60 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "MyDefrag: Configure Folders"
+      "status": "machine-generated",
+      "text": "I-Defragmenter yami: Lungisa amafolda"
     },
     "extension.command.openPreview.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "Open Preview"
+      "status": "machine-generated",
+      "text": "Vula ukubuka kwangaphambilini"
     },
     "extension.command.openSettings.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "MyDefrag: Open Settings"
+      "status": "machine-generated",
+      "text": "I-Defragmenter yami: Vula Izilungiselelo"
     },
     "extension.message.noActiveDocument.warning": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "No MyDefrag document is active."
+      "status": "machine-generated",
+      "text": "Cha, idokhumenti yami ye-Defragmenter ayisebenzi."
     },
     "extension.product.displayName": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "MyDefrag Script (.MyDc / .MyD)"
+      "status": "machine-generated",
+      "text": "Isikripthi sami se-Defragmenter (.MyDc / .MyD)"
     },
     "extension.status.parser.fragment.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "MyDefrag Fragment (.mydc)"
+      "status": "machine-generated",
+      "text": "Ingcezu yami ye-Defragmenter (.mydc)"
     },
     "extension.status.parser.script.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "MyDefrag Script (.myd)"
+      "status": "machine-generated",
+      "text": "Isikripthi sami se-Defragmenter (.myd)"
     },
     "extension.status.parser.unknown.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "MyDefrag Unknown document type"
+      "status": "machine-generated",
+      "text": "I-Defragmenter yami engaziwa uhlobo lwedokhumenti"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

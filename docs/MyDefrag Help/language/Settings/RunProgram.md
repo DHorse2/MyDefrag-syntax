@@ -5,9 +5,7 @@ Run an external program.
 ### Syntax
 
 ```mydfrg
-RunProgram(
-STRING
- [, STRINGS])
+RunProgram(STRING [, STRINGS])
 ```
 
 ### Parameters

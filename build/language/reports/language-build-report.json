@@ -1,8 +1,156 @@
 {
+  "catalogLocales": [
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "en",
+      "path": "build/language/catalogs/en",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "zh-Hans",
+      "path": "build/language/catalogs/zh-Hans",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "sw",
+      "path": "build/language/catalogs/sw",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "am",
+      "path": "build/language/catalogs/am",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "ha",
+      "path": "build/language/catalogs/ha",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "yo",
+      "path": "build/language/catalogs/yo",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "ig",
+      "path": "build/language/catalogs/ig",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "zu",
+      "path": "build/language/catalogs/zu",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "xh",
+      "path": "build/language/catalogs/xh",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "af",
+      "path": "build/language/catalogs/af",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "ar",
+      "path": "build/language/catalogs/ar",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "fr-CA",
+      "path": "build/language/catalogs/fr-CA",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "pt",
+      "path": "build/language/catalogs/pt",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "fa",
+      "path": "build/language/catalogs/fa",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "ru",
+      "path": "build/language/catalogs/ru",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "de",
+      "path": "build/language/catalogs/de",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "fr",
+      "path": "build/language/catalogs/fr",
+      "status": "updated-existing"
+    },
+    {
+      "componentFilesCreated": 0,
+      "componentFilesUpdated": 1,
+      "entriesAdded": 1,
+      "locale": "es",
+      "path": "build/language/catalogs/es",
+      "status": "updated-existing"
+    }
+  ],
   "components": [
     "diagnosticExplorer",
     "docs",
     "extension",
+    "locales",
+    "package",
     "parser",
     "preview",
     "server",
@@ -22,8 +170,13 @@
     "xh",
     "af",
     "ar",
+    "fr-CA",
+    "pt",
+    "fa",
+    "ru",
+    "de",
     "fr",
-    "pt"
+    "es"
   ],
   "outputs": {
     "catalogs": "build\\language\\catalogs",
@@ -31,8 +184,15 @@
     "reports": "build\\language\\reports",
     "variableMaps": "build\\language\\variable-maps"
   },
+  "translation": {
+    "deepLApiCalls": 0,
+    "deepLCharactersPassed": 0,
+    "mode": "normalized"
+  },
   "validation": {
     "errors": [],
-    "warnings": []
+    "warnings": [
+      "Locale fr-CA contains metadata only and will use English fallback output."
+    ]
   }
 }

@@ -10,11 +10,7 @@ Select the items (files, directories) that are located in a specified
 ### Syntax
 
 ```mydfrg
-FileLocation(ARGUMENT ,
-NUMBER
- ,
-NUMBER
-)
+FileLocation(ARGUMENT , NUMBER , NUMBER)
 ```
 
 ### Argument

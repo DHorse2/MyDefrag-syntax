@@ -16,9 +16,7 @@ Windows XP and Vista create a logfile for every program that is started, contain
 ### Syntax
 
 ```mydfrg
-ImportListFromProgramHints(
-STRING
-)
+ImportListFromProgramHints(STRING)
 ```
 
 ### Example

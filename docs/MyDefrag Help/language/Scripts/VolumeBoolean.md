@@ -20,7 +20,7 @@ VolumeEnd
 
 ### Actions
 
-| [**(...)**](../VolumeBoolean/....md) |
+| [**Boolean**](../VolumeBoolean/Boolean.md) |
 | --- |
 | [**All**](../VolumeBoolean/All.md) |
 | [**AND**](../VolumeBoolean/AND.md) |

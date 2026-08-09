@@ -8,9 +8,7 @@ Exclude a selection of volumes.
 ### Syntax
 
 ```mydfrg
-ExcludeVolumes(
-VOLUMEBOOLEAN
-)
+ExcludeVolumes(VOLUMEBOOLEAN)
 ```
 
 ### Example

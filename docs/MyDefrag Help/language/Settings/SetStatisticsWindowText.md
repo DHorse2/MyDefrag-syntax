@@ -13,9 +13,7 @@ for a list of variables that can be
 ### Syntax
 
 ```mydfrg
-SetStatisticsWindowText(
-STRING
-)
+SetStatisticsWindowText(STRING)
 ```
 
 ### Example

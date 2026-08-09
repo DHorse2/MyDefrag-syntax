@@ -9,9 +9,7 @@ Select a language. After this setting the program will display all texts in the
 ### Syntax
 
 ```mydfrg
-Language(
-STRING
-)
+Language(STRING)
 ```
 
 ### Parameters

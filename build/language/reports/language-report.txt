@@ -1,0 +1,1911 @@
+MYDEFRAG LANGUAGE REPORT
+========================
+
+SUMMARY
+-------
+Validation: passed (0 error(s), 1 warning(s))
+Locales: 15
+Components: 10
+Translation mode: deepl
+DeepL API calls: 0
+DeepL source characters passed: 0
+Keyword collisions: 0
+Migration files: 36 scanned, 0 missing
+Migration candidates: 1007
+
+CATALOG GENERATION
+------------------
+Locale  | Catalog status     | Path
+--------+--------------------+--------------------------------
+en      | unchanged-existing | build/language/catalogs/en
+zh-Hans | unchanged-existing | build/language/catalogs/zh-Hans
+sw      | unchanged-existing | build/language/catalogs/sw
+am      | unchanged-existing | build/language/catalogs/am
+ha      | unchanged-existing | build/language/catalogs/ha
+yo      | unchanged-existing | build/language/catalogs/yo
+ig      | unchanged-existing | build/language/catalogs/ig
+zu      | unchanged-existing | build/language/catalogs/zu
+xh      | unchanged-existing | build/language/catalogs/xh
+af      | unchanged-existing | build/language/catalogs/af
+ar      | unchanged-existing | build/language/catalogs/ar
+fr-CA   | unchanged-existing | build/language/catalogs/fr-CA
+pt      | unchanged-existing | build/language/catalogs/pt
+fa      | unchanged-existing | build/language/catalogs/fa
+ru      | unchanged-existing | build/language/catalogs/ru
+
+TRANSLATION COMPLETENESS
+------------------------
+Locale  | Status                 | Entries translated | Entry fallback | Keywords translated | Keyword fallback
+--------+------------------------+--------------------+----------------+---------------------+-----------------
+en      | approved               | 377/377 (100.0%)   | 0              | 20/20 (100.0%)      | 0
+zh-Hans | native-review-required | 7/377 (1.9%)       | 370            | 3/20 (15.0%)        | 17
+sw      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+am      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+ha      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+yo      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+ig      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+zu      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+xh      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+af      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+ar      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+fr-CA   | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+pt      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+fa      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+ru      | native-review-required | 0/377 (0.0%)       | 377            | 0/20 (0.0%)         | 20
+
+KEYWORD COLLISIONS
+------------------
+None.
+
+VALIDATION WARNINGS
+-------------------
+- Locale fr-CA contains metadata only and will use English fallback output.
+
+MIGRATION CANDIDATE INVENTORY
+-----------------------------
+This report contains potential migration candidates and detected strings already represented in the catalog. It is not a behavior change and does not imply every string should be cataloged.
+
+package.json [package]
+src/extension.js [extension]
+src/server/server.js [server]
+src/server/parser.js [parser]
+src/preprocess/mydefrag-preprocess.js [preview]
+src/diagnostics/registerDiagnosticNavigation.js [diagnosticExplorer]
+src/diagnostics/diagnosticNavigator.js [diagnosticExplorer]
+src/diagnostics/diagnosticTreeProvider.js [diagnosticExplorer]
+build/mdl-language-app/main/ipc-handlers.js [translator]
+build/mdl-language-app/main/main.js [translator]
+build/mdl-language-app/main/project-root.js [translator]
+build/mdl-language-app/main/source-opener.js [translator]
+build/mdl-language-app/main/window-options.js [translator]
+build/mdl-language-app/preload/preload.js [translator]
+build/mdl-language-app/renderer/app.js [translator]
+build/mdl-language-app/renderer/index.html [translator]
+build/mdl-language-app/renderer/ui-state.js [translator]
+build/mdl-language-app/repositories/canonical-data-repository.js [translator]
+build/mdl-language-app/services/build-integration.js [translator]
+build/mdl-language-app/services/language-maintenance-service.js [translator]
+build/mdl-language-app/services/source-key-suggester.js [translator]
+build/mdl-language-app/shared/contracts.js [translator]
+build/mdl-language-app/splash/index.html [translator]
+build/mdl-language-app/validation/schema-validator.js [translator]
+build/mdl-locale-app/main/ipc-handlers.js [locales]
+build/mdl-locale-app/main/main.js [locales]
+build/mdl-locale-app/main/project-root.js [locales]
+build/mdl-locale-app/main/window-options.js [locales]
+build/mdl-locale-app/preload/preload.js [locales]
+build/mdl-locale-app/renderer/app.js [locales]
+build/mdl-locale-app/renderer/index.html [locales]
+build/mdl-locale-app/renderer/ui-state.js [locales]
+build/mdl-locale-app/repositories/locale-catalog-repository.js [locales]
+build/mdl-locale-app/services/locale-maintenance-service.js [locales]
+build/mdl-locale-app/shared/contracts.js [locales]
+build/mdl-locale-app/validation/locale-catalog-validator.js [locales]
+
+CANDIDATE FILES
+---------------
+
+package.json
+------------
+Component: package
+Status: scanned
+Potential candidates: 104
+Line 4: Syntax highlighting for MyDefrag scripting language
+Line 9: https://github.com/DHorse2/MyDefrag-syntax
+Line 24: Directory for MyDefrag user data.
+Line 29: Directory for MyDefrag log files.
+Line 34: Enable MyDefrag extension debug logging.
+Line 41: MyDefrag extension verbosity level. Debug logging requires mydfrg.debugOn.
+Line 61: Diagnostic severity for references found only by walking up parent folders.
+Line 81: Diagnostic severity for references containing execution-time macros.
+Line 101: Diagnostic severity for references whose target files are found.
+Line 121: Diagnostic severity for references whose target files are not found.
+Line 141: Diagnostic severity for inferred fragment parent messages.
+Line 149: **/Backup/**
+Line 150: **/Bu/**
+Line 151: **/MdmSysTools/**
+Line 152: **/Archive/**
+Line 153: **/*.tmp.MyDc
+Line 154: **/Compile*
+Line 155: **/*.log
+Line 156: **/TaylorDoVs0_2/**
+Line 157: **/TaylorDoVs0_3/**
+Line 158: **/TaylorDoVs0_4/**
+Line 159: **/Log/**
+Line 160: **/Logs/**
+Line 161: **/artifacts/**
+Line 162: **/.user/**
+Line 163: **/node_modules/**
+Line 164: **/artifacts/**
+Line 165: **/resources/
+Line 166: **/dist/**
+Line 167: **/.git/**
+Line 168: **/.user/**
+Line 169: **/.vs/**
+Line 170: **/.vscode/**
+Line 171: **/Download/**
+Line 172: **/GithubIo/**
+Line 174: Glob patterns to exclude from MyDefrag validation
+Line 182: MyDefrag Script
+Line 216: Open File at Position
+Line 224: MyDefrag: Get Next Diagnostic
+Line 228: MyDefrag: Get Next File Diagnostic
+Line 232: MyDefrag: File Diagnostic is Fixed
+Line 236: MyDefrag: Ignore File Diagnostic
+Line 240: MyDefrag: Skip Current File
+Line 244: MyDefrag: Send Invalid to Agent
+Line 248: MyDefrag: Diagnostic points to Valid Syntax
+Line 252: MyDefrag: Get Previous File Diagnostic
+Line 256: MyDefrag: Go to Top of Diagnostic list
+Line 260: MyDefrag: Reset Diagnostic Navigation
+Line 271: resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc ||
+          resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD
+Line 278: resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc ||
+          resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD
+Line 293: MyDefrag Diagnostics
+Line 306: onView:mydfrgDiagnostics
+Line 308: onLanguage:mydfrg
+Line 309: onLanguage:bat
+Line 310: onCommand:mydfrg.openPreview
+Line 311: onCommand:mdm.openFileAtPosition
+Line 312: onCommand:mydfrg.openSettings
+Line 313: onCommand:mydfrg.configureFolders
+Line 316: deploy:local
+Line 316: powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1
+Line 317: liveUpdate:local
+Line 317: powershell -ExecutionPolicy Bypass -File ./scripts/update-live-MyDefrag.ps1
+Line 318: pack:vsix
+Line 318: powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1
+Line 319: publish:vsx
+Line 319: powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1
+Line 320: rimraf dist out .vscodeignore
+Line 321: powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1 -SkipInstall
+Line 322: language:validate
+Line 322: node ./build/scripts/build-language.js validate
+Line 323: language:build
+Line 323: node ./build/scripts/build-language.js build
+Line 324: language:report
+Line 324: node ./build/scripts/build-language.js report
+Line 325: language:app
+Line 325: electron ./build/mdl-language-app/main/main.js --project-root .
+Line 326: language:app:pack
+Line 326: electron-builder --config build/mdl-language-app/electron-builder.yml --win dir
+Line 327: language:app:package
+Line 327: electron-builder --config build/mdl-language-app/electron-builder.yml --win nsis
+Line 328: test:language-app
+Line 328: node --test \"./build/mdl-language-app/tests/*.test.js\"
+Line 329: locale:app
+Line 329: electron ./build/mdl-locale-app/main/main.js --project-root .
+Line 330: locale:app:pack
+Line 330: electron-builder --config build/mdl-locale-app/electron-builder.yml --win dir
+Line 331: locale:app:package
+Line 331: electron-builder --config build/mdl-locale-app/electron-builder.yml --win nsis
+Line 332: test:locale-app
+Line 332: node --test \"./build/mdl-locale-app/tests/*.test.js\"
+Line 333: test:language-report
+Line 333: node ./build/scripts/test-language-report.js
+Line 334: test:language
+Line 334: node ./build/scripts/test-language-runtime.js
+Line 335: npm run build
+Line 336: enableNetwwork:local
+Line 336: powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1
+Line 337: listSymLinks:local
+Line 337: powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1
+Line 338: addVsCodiumToExplorer:local
+Line 338: powershell -ExecutionPolicy Bypass -File ./scripts/add-VsCodium-ToExplorer.ps1
+Line 348: @vscode/vsce
+Line 355: brace-expansion@>=2.0.0 <2.1.4
+Line 356: fast-uri@>=3.0.0 <3.1.5
+Found in catalog: 5
+Line 3: MyDefrag Script (.MyDc / .MyD)
+  Catalog: extension.product.displayName
+Line 15: Programming Languages
+  Catalog: package.catagories.list
+Line 212: Open Preview
+  Catalog: extension.command.openPreview.title
+Line 220: MyDefrag: Open Settings
+  Catalog: extension.command.openSettings.title
+Line 264: MyDefrag: Configure Folders
+  Catalog: extension.command.configureFolders.title
+
+src/extension.js
+----------------
+Component: extension
+Status: scanned
+Potential candidates: 88
+Line 1: use strict
+Line 38: MyDefrag Syntax
+Line 251: Next candidate: ${dir}, and ${filePath}
+Line 323: **/*.{MyDc,MyD}
+Line 323: **/node_modules/**
+Line 340: searchWorkspace: Unable to read ${uri.toString()}: ${errResult.message}
+Line 379: s actually rendered in an editor pane (visible range changes, becomes the active editor,
+          etc.). These are genuinely two separate triggers from VS Code
+Line 379: t being registered twice, it
+Line 462: extension.js:activate:settings:initialize Error returned from initialization:
+          ${errResult.message}
+Line 466: init done
+Line 467: EXTENSION: config: ${config}
+Line 468: iniData: ${iniData}
+Line 485: MYDC EXTENSION INITIALIZED
+Line 491: Settings source=VSCodium, Debug=${isDebugOn}
+Line 494: extension.js:activate Unexpected error in Logging Channel and Status Bar initialization:
+          ${errResult.message}
+Line 499: Channel, Status Bar done
+Line 501: extension.js:activate Unexpected error initializing extension: ${errResult.message}
+Line 528: SetVariable\\s*\\(\\s*(${escapeRegex(word)})\\s*,
+Line 549: \\b(${escapeRegex(word)})\\b
+Line 576: Inline completion provider registered
+Line 602: MYDC EXTENSION LINKS Provider for ${filePath}, language: mydfrg
+Line 604: provideDocumentLinks called for
+Line 632: ${key}=${String(value)}
+Line 643: ${message} (${contextText})
+Line 675: Internal trace: requested line ${i}, valid range is 0-${document.lineCount - 1}.
+Line 686: ${message} ${formatTraceContext(mergedContext)}
+Line 687: ${message} ${formatTraceContext(mergedContext)}
+Line 708: ${text[line]}
+Line 710: Invalid format: line: ${line}, text: ${text}
+Line 718: Invalid format: range[${range.start.line}::${range.start.character}], text: ${text}
+Line 724: Processing File: ${document.fileName}
+Line 756: INCLUDE file match: index: ${match.index},
+          range[${range.start.line}::${range.start.character}], ${match[0]}, ${lineText}
+Line 760: Number of INCLUDE links: ${includeLinks.length}
+Line 802: Number of FILE links: ${fileLinks.length}
+Line 805: ]*\.(?:bat|My\w+|cmd|exe|com)[^
+Line 832: Number of BATCH & command links: ${commandLinks.length}
+Line 834: includeLinks ${includeLinks.length}, fileLinks ${fileLinks.length}, commandLinks
+          ${commandLinks.length}, EXCLUDED folders ${excludeConfig.folderCount}, files
+          ${excludeConfig.fileCount}, search ${excludeConfig.searchCount}.
+Line 873: MYDC EXTENSION BATCH LINK Provider for ${filePath}, language: mydfrg
+Line 878: ------------ File: (${document.uri.fsPath}) ------------ .
+Line 880: \s]*\.(?:bat|My\w+|cmd|exe|com))([^
+Line 901: File name is: (
+Line 902: BATCH file match: index: ${match.index},
+          range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}
+Line 913: No message available
+Line 916: referenceRelativePathLevel: ${referenceRelativePathLevel}
+Line 918: BAT Link: Found in PARENT ${stepsUpward} steps up, possibly invalid.
+Line 921: ${document.uri.fsPath}:${lineNum}:${colNum}: Link target found: ${foundPath}
+Line 926: BAT Link: Contains execution time macros: ${filePath}
+Line 929: BAT Link: File not found: ${filePath}
+Line 953: dir:
+Line 954: base:
+Line 955: our filename:
+Line 956: currentDir:
+Line 957: absolutePath: (
+Line 958: absoluteUri:
+Line 959: match.index:
+Line 960: filePath:
+Line 961: quoteStart:
+Line 962: start:
+Line 963: end:
+Line 964: absolutePath:
+Line 965: range:
+Line 969: Number of BATCH batchFileCommandLinks: ${commandLinks.length}
+Line 977: extension.js:activate Unexpected error activating extension: ${errResult.message}
+Line 989: User Directory
+Line 994: Log Directory
+Line 1001: Select the folder setting to update
+Line 1017: Select ${choice.label}
+Line 1035: MyDefrag: ${choice.label} set to ${selected[0].fsPath}
+Line 1050: @ext:macrodm.mydefrag-syntax
+Line 1082: Error, in preparing preview summary!
+Line 1084: Finished preview summary!
+Line 1089: ERROR: Preview generation failed: ${result.error.msg}
+Line 1091: ${nextMessage}
+Line 1097: extension.js:activate:generatePreview: Unexpected error Generating Preview of document:
+           ${errResult.message}
+Line 1114: .merged$1
+Line 1115: mydfrg-preview:${mergedPath}
+Line 1127: Preview source: ${sourcePath}
+Line 1143: Init done, Creating and Registering Client
+Line 1177: --inspect=6009
+Line 1187: --inspect=6009
+Line 1188: --inspect-brk=6009
+Line 1189: --inspect=6009
+Line 1190: --inspect-brk=9229
+Line 1197: **/*.{MyDc,mydc,MYDC,MyD,myd,MYD}
+Line 1215: MyDefrag Language Client
+Line 1251: Subscribing to providers
+Line 1265: Providers registered
+Line 1268: Starting server ${channelName}
+Found in catalog: 10
+Line 488: MyDefrag Unknown document type
+  Catalog: extension.status.parser.unknown.text
+Line 1000: MyDefrag: Configure Folders
+  Catalog: extension.command.configureFolders.title
+Line 1111: No MyDefrag document is active.
+  Catalog: extension.message.noActiveDocument.warning
+Line 1285: MyDefrag Script (.myd)
+  Catalog: extension.status.parser.script.text
+Line 1286: MyDefrag Fragment (.mydc)
+  Catalog: extension.status.parser.fragment.text
+Line 1287: MyDefrag Unknown document type
+  Catalog: extension.status.parser.unknown.text
+Line 1288: MyDefrag Script (.myd)
+  Catalog: extension.status.parser.script.text
+Line 1289: MyDefrag Fragment (.mydc)
+  Catalog: extension.status.parser.fragment.text
+Line 1290: MyDefrag Unknown document type
+  Catalog: extension.status.parser.unknown.text
+Line 1292: MyDefrag Unknown document type
+  Catalog: extension.status.parser.unknown.text
+
+src/server/server.js
+--------------------
+Component: server
+Status: scanned
+Potential candidates: 87
+Line 1: use strict
+Line 5: SERVER: entered server.js
+Line 21: SERVER: modules loaded
+Line 39: MyDefrag Issues
+Line 46: SERVER: connection created
+Line 188: server.js:connection.onInitialize: SERVER loading configuration
+Line 211: server.js:onInitialize: WorkspaceFolders are not available
+Line 214: ) ? f.uri : f.uri +
+Line 216: server.js:onInitialize: WorkspaceFolders error in validation
+Line 238: server.js:onInitialize: Error returned from initialization: ${errResult.message}
+Line 244: server.js:onInitialize: [${source}] verboseLevel: ${verboseLevel}
+Line 246: server.js:onInitialize: params:
+Line 248: server.js:onInitialize: initializationOptions:
+Line 250: server.js:onInitialize: config:
+Line 252: server.js:onInitialize: iniData:
+Line 255: server.js:onInitialize: init done. Creating Logger
+Line 267: server.js:onInitialize: 1
+Line 274: MyDefrag Parser
+Line 281: server.js:onInitialize: 2
+Line 283: server.js:onInitialize: 3
+Line 285: SERVER: MYDC SERVER INITIALIZED
+Line 286: server.js:onInitialize: 4
+Line 287: server.js:onInitialize: Settings source=VSCodium, Debug=${isDebugOn}
+Line 289: server.js:onInitialize: Unexpected error in Logging Channel initialization:
+          ${errResult.message}
+Line 293: server.js:onInitialize: Unexpected error initializing server: ${errResult.message}
+Line 296: server.js:onInitialize: Initialization done
+Line 320: MyDefrag Parser
+Line 346: server.js:onDidChangeContent MyDefrag server document changed
+Line 356: server.js:onDidOpen MyDefrag server document opened
+Line 366: server.js:onDidSave MyDefrag server document saved
+Line 377: server.js:onDidClose MyDefrag server document closed
+Line 455: writeDiagnosticsSnapshot: Unable to write ${snapshotPath}: ${errResult.message}
+Line 471: clear-${reason}
+Line 547: clear-${reason}
+Line 580: clear-${reason}
+Line 706: refreshAllDiagnostics: ${reason} failed
+Line 734: refreshChangedFiles: watched-files failed
+Line 772: validateFileUri: Unable to read ${key}: ${errResult.message}
+Line 818: ${reason}-complete
+Line 854: ${reason}-complete
+Line 866: ) ? f.uri : f.uri +
+Line 870: refreshAllDiagnostics: Unable to refresh workspace folders: ${errResult.message}
+Line 889: ${reason}-complete
+Line 911: validateDocument:
+Line 912: validateDocument: MYDC SERVER ACTIVATED
+Line 913: validateDocument: for ${filePath}
+Line 935: ${t.type}:${t.value}
+Line 949: quick fix
+Line 951: validateDocument: Parsing Document
+Line 956: validateDocument: Full Document: Parsing
+Line 957: validateDocument: Full Document: First token:
+Line 966: validateDocument: Full Document: Parse Statements ${parser.errors.length}
+Line 967: validateDocument: Full Document: After parse:
+Line 975: Parser Eof: ${bestParser.atEof()} Errors: ${bestParser.errors.length}
+Line 976: validateDocument: Parse Document Fragment
+Line 982: validateDocument: Document Fragment: Parsing
+Line 983: validateDocument: Document Fragment: First token:
+Line 989: validateDocument: Document Fragment: Parse Statements. Success: ${fragParserResult}
+          Errors: ${fragParser.errors.length}
+Line 990: validateDocument: Document Fragment: After parse:
+Line 992: validateDocument: Document Fragment: Step Comparison. Errors, Frag:
+          ${fragParser.errors.length}, Full: ${bestParser.errors.length}
+Line 999: document fragment
+Line 1004: validateDocument: Parser Eof: ${bestParser.atEof()} Errors: ${bestParser.errors.length}
+Line 1005: validateDocument: Check for orphaned tokens
+Line 1013: Unexpected token '${t.value}' — fragment may be incomplete
+Line 1015: Unexpected token '${t.value}' — expected end of file
+Line 1026: Parser state: pos=${bestParser.pos}, token=${JSON.stringify(bestParser.peek?.() ?? null)}
+Line 1027: Parser state: unavailable
+Line 1030: server.js:validateDocument: Unexpected parser failure
+Line 1031: ${err.name}: ${err.message}
+Line 1032: ${err.stack || "(no stack available)"}
+Line 1042: logger.err failed:
+Line 1047: Internal parser failure: ${err.name}: ${err.message}
+Line 1050: warningAtStart failed:
+Line 1054: validateDocument: Publish diagnostics
+Line 1079: validateDocument: Parsing completed
+Line 1105: ${folderUri}/
+Line 1113: scanAllFiles: Skipping excluded folder ${relFolderPath}
+Line 1121: scanAllFiles: Unable to read folder ${folderPath}: ${errResult.message}
+Line 1138: ${relPath}/
+Line 1139: scanAllFiles: Skipping excluded folder ${relPath}
+Line 1142: ${uri}/
+Line 1177: server.js:onCompletion: MyDefrag server connection on Completion
+Line 1181: server.js:onHover: MyDefrag server connection on Hover
+Line 1186: server.js:onInitialized: MyDefrag server Language Client entered initialized
+Line 1187: server.js:onInitialized: Workspace scan deferred to file/configuration refresh
+Line 1188: server.js:onInitialized: MyDefrag server Language Client initialized. Log test.
+Line 1193: server.js:onDidChangeWatchedFiles: MyDefrag server document watched On Did Change
+Found in catalog: 0
+
+src/server/parser.js
+--------------------
+Component: parser
+Status: scanned
+Potential candidates: 84
+Line 1: use strict
+Line 69: Expected 'yes' or 'no'
+Line 109: [diagnostic] File: ${this.diagnosticLogContext.fileName}
+Line 115: [diagnostic] ${message}
+Line 116: (line ${start.line + 1}, char ${start.character + 1} -
+Line 117: line ${end.line + 1}, char ${end.character + 1};
+Line 118: state=${this.state}, pos=${this.pos})
+Line 153: Expected '${kw}' but found '${t.value}'
+Line 184: Expected ${desc || type} but found '${t.value}'
+Line 206: ).toLowerCase() ===
+Line 316: Unexpected statement '${t?.value ?? ''}'
+Line 328: Parser made no progress at '${t?.value ?? ''}'
+Line 344: >>>>> ${t.value} type: ${t.type} vs. IDENT or MACRO
+Line 414: server.js:Parser:parseStatement: Unexpected error parsing Token: ${tokenValue} NextToken:
+          ${nextTokenValue} Error: ${errResult.message}
+Line 426: parseStatements()
+Line 427: atEof()
+Line 428: atEof() == true
+Line 429: atEof() == false
+Line 430: atEof() == true
+Line 489: ${name} = ${this.formatTraceValue(value)}
+Line 492: details [${message}]
+Line 507: ${name}=${this.formatTraceValue(value)}
+Line 520: [${name} = ${this.formatTraceColumn(value+']', width)}
+Line 572: unexpected statement
+Line 578: server.js:Parser:parseFragment: Full statement parse succeeded: ${this.errors.length}
+Line 583: server.js:Parser:parseFragment: Full statement parse failed. Errors: ${this.errors.length}
+Line 669: server.js:Parser:parseFragment: Expected fragment keyword, got '${t?.value}'
+Line 715: server.js:Parser:parseFragment: Unknown fragment keyword '${keyword}' parent '${t.parent}'
+Line 766: server.js:Parser:parseFragment: '${keyword}' is '${keywordData.kind}' and belongs in
+          '${keywordData.parent}',
+Line 767: but this fragment was established as '${fragment.parent}'
+Line 799: server.js:Parser:parseFragment: Failed parsing fragment statement '${keyword}' as
+          '${keywordData.kind}'
+Line 810: server.js:Parser:parseFragment: Parser made no progress at '${keyword}'
+Line 847: SCRIPT_FRAGMENT: insert this fragment inside ${parents[0]}.
+Line 848: SCRIPT_FRAGMENT: insert this fragment inside one of: ${parents.join(', ')}.
+Line 869: VolumeSelect ... VolumeActions ... VolumeEnd block
+Line 875: FileSelect ... FileActions ... FileEnd block
+Line 1222: : case
+Line 1222: : case
+Line 1230: : case
+Line 1238: : case
+Line 1245: : case
+Line 1258: : case
+Line 1258: : case
+Line 1258: : case
+Line 1259: : case
+Line 1259: : case
+Line 1259: : case
+Line 1261: : case
+Line 1261: : case
+Line 1261: : case
+Line 1262: : case
+Line 1262: : case
+Line 1262: : case
+Line 1264: : case
+Line 1264: : case
+Line 1264: : case
+Line 1265: : case
+Line 1265: : case
+Line 1265: : case
+Line 1742: case '${k.toLowerCase()}': return this.${method}(ctx);
+Line 1866: SCRIPT_FRAGMENT: orphaned compound structure '${keywordData.keyword || t?.value}' may be
+           incomplete
+Line 1942: : case
+Line 1985: Expected filesystem type (NTFS, FAT, FAT12, FAT16, FAT32)
+Line 1990: Unexpected token '${t.value}' in volume boolean
+Line 1996: server.js:Parser: parseFileBooleans:
+Line 1998: server.js:Parser: parseFileBooleans after first boolean:
+Line 2121: Unexpected token '${t.value}' in file boolean
+Line 2124: Unexpected token '${t.value}' in file boolean, continuing...
+Line 2133: Expected file location option
+Line 2317: Expected 'Ascending' or 'Descending'
+Line 2389: Expected window size option
+Line 2433: Expected 'ask', 'allow', 'exit', or 'kill'
+Line 2440: Expected 'ask', 'allow', or 'exit'
+Line 2447: Expected 'off' or 'reset'
+Line 2461: Expected process priority
+Line 2469: >> Setting: ${kw} type: ${this.curr().type} vs. IDENT or KEYWORD
+Line 2472: Expected variable name
+Line 2487: Unknown setting '${t.value}'
+Line 2495: server.js:ValidateDocument Unexpected error Generating Preview of document: +
+           ${errResult.message}
+Line 2522: Expected WhenFinished option
+Line 2531: Expected color name
+Line 2565: Unexpected token '${t.value}' in file color boolean
+Line 2630: Expected variable after '-'
+Line 2666: Expected number or variable but found '${t.value}'
+Found in catalog: 0
+
+src/preprocess/mydefrag-preprocess.js
+-------------------------------------
+Component: preview
+Status: scanned
+Potential candidates: 155
+Line 2: use strict
+Line 43: Preview Processor
+Line 44: MyDefrag Preview
+Line 86: mydefrag-preprocess.js:activate Unexpected error in first Initialize step:
+         ${errResult.message}
+Line 97: + String(n).padStart(COL_W - 2) +
+Line 103: ${col(outLine)}${col(srcLine)}${indent}${text}
+Line 105: ${BLANK}${BLANK} ${indent}${text}
+Line 116: ensureLineOpen() -> OPENED logical line ${state.line}
+Line 118: ensureLineOpen() -> logical line already open (${state.line})
+Line 145: --- processFile called: depth=${depth} state.line=${state.line} state.open=${state.open}
+          ---
+Line 146: filePath="${filePath}"
+Line 147: stack=[${stack.join(", ")}]
+Line 152: ERROR: Circular include: ${cycle}
+Line 154: CIRCULAR INCLUDE DETECTED!!!
+Line 155: *** ${message} ***
+Line 161: ${parentUri}:${parentSrcLineNo}:${parentSrcColNo}
+Line 168: parentFilePath =
+Line 169: filePath =
+Line 170: stack =
+Line 173: checking existence: "${filePath}"
+Line 175: ERROR: Missing include: "${filePath}"
+Line 177: ERROR!!! Missing: ${missingUri}
+Line 178: At: ${parentUri}:${parentSrcLineNo}:${parentSrcColNo}
+Line 180: ERROR: FILE NOT FOUND!!!, returning error annotation
+Line 181: *** WARNING: Missing include ("${missingUri}") ***
+Line 183: File exists OK
+Line 191: first line preview="${srcLines[0].substring(0, 60)}"
+Line 192: last line preview="${srcLines[srcLines.length - 1].substring(0, 60)}"
+Line 200: Read and split into logical lines:
+Line 201: raw file read: ${raw.length} bytes
+Line 202: hasFinalNewline=${hasFinalNewline}
+Line 203: split produced: ${srcLines.length} entries
+Line 207: removing synthetic trailing empty line caused by final newline
+Line 210: file does NOT end with newline; keeping final entry
+Line 218: file is physically empty
+Line 221: logical line count finalized, srcTotal=${srcTotal}
+Line 228: outStart=${outStart}
+Line 231: srcLines=${srcLines.length}
+Line 236: processing srcLine ${srcLineNo}/${srcLines.length}
+Line 237: rawLine="${rawLine.substring(0, 80)}"
+Line 245: rawLine="${rawLine.substring(0, 80)}"
+Line 249: -> INCLUDE directive found "${match[1]}" on logical line ${state.line}
+Line 269: includeDir="${includeDir}"
+Line 270: includePathResolved="${includePathResolved}"
+Line 271: recursing into child depth=${depth + 1}, hasFileNewLine=${hasFinalNewline}
+Line 275: child returned: outStart=${child.outStart}, outEnd=${child.outEnd},
+          child.srcTotal=${child.srcTotal}, child.hasFinalNewline=${child.hasFinalNewline}
+Line 280: BEGIN [depth:${depth + 1}] ${includePathResolvedUri}
+Line 281: src:${child.srcTotal}
+Line 282: out:${child.outStart}-${child.outEnd}
+Line 288: END [depth:${depth + 1}] ${includePathResolvedUri}
+Line 289: src:${child.srcTotal}
+Line 290: out:${child.outStart}-${child.outEnd}
+Line 293: pushing beginAnnot + child.lines + endAnnot
+Line 302: state.open now ${state.open} after child include
+Line 308: -> normal content line
+Line 311: emitting normal line on logical line ${state.line}
+Line 316: normal line terminated logical line
+Line 325: finished file:
+Line 326: outStart=${outStart}
+Line 327: outEnd=${outEnd}
+Line 328: outLines.length=${outLines.length}
+Line 329: hasFinalNewline=${hasFinalNewline}
+Line 341: --- Preview processing triggered ---
+Line 342: Debug Path=${INI_PATH}
+Line 345: Debug=${isDebugOn}
+Line 346: INI_PATH="${INI_PATH}"
+Line 347: isDebugOn=${isDebugOn}
+Line 349: main() started
+Line 351: process.argv = ${JSON.stringify(process.argv)}
+Line 353: args = ${JSON.stringify(args)}
+Line 359: [MyDefrag]
+Line 361: MyDefrag Script Preprocessor
+Line 363: Usage: node mydefrag-preprocess.js <entryFile> [outputFile] [-w]
+Line 365: <entryFile> Path to the root .MyDc script.
+Line 366: [outputFile] Optional output path.
+Line 367: Defaults to <entryFileName>.merged.MyDc .
+Line 368: [-w] Write the preview file to disk rather than memory.
+Line 370: Output columns per content line:
+Line 371: <CompiledScriptLine> <ActualFileScriptLine> <Content>
+Line 373: CompiledScriptLine: running logical merged line number
+Line 374: ActualFileScriptLine: line number within the owning source file
+Line 375: Content: the contents of the script file
+Line 377: BEGIN / END annotations are unnumbered single lines.
+Line 391: Entry file not found: ${entryFile}
+Line 392: Entry file does not exist — aborting
+Line 400: .merged$1
+Line 411: Entry file exists OK
+Line 412: outputFile = "${outputFile}"
+Line 413: writeToFile = "${writeToFile}"
+Line 415: Entry : "${entryFile}"
+Line 416: Output : "${outputFile}"
+Line 433: calling processFile on entry...
+Line 436: processFile for source file returned:
+Line 437: root.outStart=${root.outStart}
+Line 438: root.outEnd=${root.outEnd}
+Line 439: root.srcTotal=${root.srcTotal}
+Line 440: root.hasFinalNewline=${root.hasFinalNewline}
+Line 441: visited set size: ${linkVisited.length}
+Line 442: visitedMissing set size: ${linkVisitedMissing.size}
+Line 443: state.line after processing: ${state.line}
+Line 448: |${"═".repeat(72)}
+Line 449: |MyDefrag Preprocessor — Merged Output
+Line 450: |Generated : ${new Date().toISOString()}
+Line 451: |Entry : ${entryUri}
+Line 452: |Output file : ${outputFile}
+Line 453: |Output lines : ${state.line} (logical merged lines)
+Line 454: |${"<outLine>".padStart(COL_W)}${"<srcLine>".padStart(COL_W)} <content>
+Line 455: |${"═".repeat(72)}
+Line 458: |${"═".repeat(72)}
+Line 459: |MyDefrag Preprocessor — Merged Output
+Line 460: |Generated : ${new Date().toISOString()}
+Line 461: |Entry : ${entryFile}
+Line 462: |Output lines: ${state.line} (logical merged lines)
+Line 463: |${"<outLine>".padStart(COL_W)}${"<srcLine>".padStart(COL_W)} <content>
+Line 464: |${"═".repeat(72)}
+Line 468: building footer maps...
+Line 471: |Include Files. (${linkVisited.length} file(s) processed
+Line 472: |${"═".repeat(72)}
+Line 480: |[${String(idx).padStart(3, "0")}] ${uri}
+Line 481: |[${String(idx).padStart(3, "0")}] "${f}"
+Line 482: Include file URI=${uri}
+Line 487: |${"═".repeat(72)}
+Line 488: |${"═".repeat(72)}
+Line 494: building missing file map (${linkVisitedMissing.size} files)
+Line 503: |MISSING FILE ERRORS!!! (${linkVisitedMissing.size} file(s) missing)
+Line 504: |Script starts at line ${startLineOfCode}.
+Line 505: |${"═".repeat(72)}
+Line 523: ${parentUri}:${parentSrcLineNo}:${parentSrcColNo}
+Line 524: ${parentFile}:${parentSrcLineNo}:${parentSrcColNo}
+Line 525: ${parentUri}:${parentSrcLineNo}
+Line 527: |[${String(idx).padStart(3, "0")}] ${missingUri}
+Line 528: | At line ${OutputLine}, file "${parentUri}", line ${parentSrcLineNo}, col
+          ${parentSrcColNo}
+Line 532: |[${String(idx).padStart(3, "0")}] ${missingFile}
+Line 533: | At line ${OutputLine}, file "${parentPathWithLine}"
+Line 538: |${"═".repeat(72)}
+Line 539: |${"═".repeat(72)}
+Line 543: no missing include files
+Line 546: |${"═".repeat(72)}
+Line 547: MISSING FILES
+Line 548: |${"═".repeat(72)}
+Line 549: No missing files.
+Line 550: |${"═".repeat(72)}
+Line 568: Console footer length=${footerOutput.length} and in document=${footer.length}
+Line 577: writing to: "${outputFile}"
+Line 582: writeFileSync WRITE FAILED: ${errResult.message}
+Line 583: writeFileSync ERROR writing output: ${errResult.message}
+Line 584: writeFileSync WRITE FAILED: ${errResult.message}
+Line 591: output file confirmed on disk: ${writtenSize} bytes
+Line 593: output file NOT found after write — something is very wrong
+Line 597: creating memory resident preview: "${outputFile}"
+Line 602: Done. ${linkVisited.length} file(s), ${state.line} logical merged lines.
+Line 603: ${linkVisitedMissing.size} file(s) are missing.
+Line 605: Output written to: "${outputFile}"
+Line 607: Output written to stdout (preview mode)
+Line 609: main() done
+Found in catalog: 0
+
+src/diagnostics/registerDiagnosticNavigation.js
+-----------------------------------------------
+Component: diagnosticExplorer
+Status: scanned
+Potential candidates: 8
+Line 1: use strict
+Line 62: Diagnostic explorer refresh failed: ${err.message}
+Line 168: MyDefrag: Treating current diagnostic as likely parser/classification issue:
+          ${item.message}
+Line 179: MyDefrag: Wrote AI diagnostic prompt to ${paths.diagnosticsSendPromptFile}
+Line 190: MyDefrag: Wrote AI diagnostic prompt to ${result.promptFile}
+Line 201: MyDefrag diagnostic navigation failed to load: ${err.message}
+Line 253: $(warning) MyDefrag ${index + 1}/${total}
+Line 256: Open current MyDefrag diagnostic
+Found in catalog: 4
+Line 76: MyDefrag: No current diagnostic.
+  Catalog: diagnosticExplorer.message.noCurrentDiagnostic.info
+Line 169: MyDefrag: No current diagnostic.
+  Catalog: diagnosticExplorer.message.noCurrentDiagnostic.info
+Line 180: MyDefrag: No current diagnostic.
+  Catalog: diagnosticExplorer.message.noCurrentDiagnostic.info
+Line 254: $(check) MyDefrag 0 diagnostics
+  Catalog: diagnosticExplorer.status.noDiagnostics.text
+
+src/diagnostics/diagnosticNavigator.js
+--------------------------------------
+Component: diagnosticExplorer
+Status: scanned
+Potential candidates: 48
+Line 1: use strict
+Line 106: Failed to load diagnostics: ${err.message}
+Line 140: Failed to load provided diagnostics: ${err.message}
+Line 416: Diagnostic prompt copied to clipboard.
+Line 453: Diagnostic prompt copied to clipboard.
+Line 506: # MyDefrag Language Extension
+Line 508: ## Developer comments
+Line 512: ## Diagnostic Repair Request
+Line 514: You are assisting in the development of the MyDefrag Language Extension.
+Line 516: Your objective is to determine whether the current diagnostic is caused by:
+Line 518: 1. Invalid MyDefrag script syntax.
+Line 519: 2. A tokenizer defect.
+Line 520: 3. A parser defect.
+Line 521: 4. Incorrect languageData metadata.
+Line 522: 5. An incorrect diagnostic.
+Line 523: 6. A navigation or classification bug.
+Line 525: When proposing code changes:
+Line 527: - Preserve all existing comments.
+Line 528: - Preserve formatting.
+Line 529: - Make the smallest possible safe change.
+Line 530: - Do not refactor unrelated code.
+Line 531: - Explain the root cause before proposing a fix.
+Line 532: - If multiple fixes are possible, recommend the safest one.
+Line 536: ## Diagnostic
+Line 538: File: ${diagnostic.filePath}
+Line 539: Line: ${diagnostic.oneBasedLine}
+Line 540: Column: ${diagnostic.oneBasedColumn}
+Line 541: Severity: ${diagnostic.severity}
+Line 542: Message: ${diagnostic.message}
+Line 543: Token: ${diagnostic.token || "(not detected)"}
+Line 544: Known Keyword: ${diagnostic.keywordExists ? "Yes" : "No"}
+Line 548: ## Investigation
+Line 550: Determine:
+Line 552: - What the parser was expecting.
+Line 553: - Why the diagnostic was produced.
+Line 554: - Whether the script is valid.
+Line 555: - Whether the language extension is correct.
+Line 559: ## Expected Response
+Line 561: Please provide:
+Line 563: 1. Root cause.
+Line 564: 2. Recommended fix.
+Line 565: 3. Files requiring modification.
+Line 566: 4. Exact code changes.
+Line 567: 5. Any risks or side effects.
+Line 571: ## Diagnostic JSON
+Line 573: ```json
+Line 639: file:///
+Line 661: ).replace(/\\/g,
+Found in catalog: 0
+
+src/diagnostics/diagnosticTreeProvider.js
+-----------------------------------------
+Component: diagnosticExplorer
+Status: scanned
+Potential candidates: 18
+Line 1: use strict
+Line 54: Diagnostics: ${stats.index}/${totalDiagnosticCount}/${totalMessageCount} (${stats.total}
+         remaining, ${stats.fileCount}/${totalTraversableFileCount}/${totalFileCount} files, fixed
+         ${stateCounts.fixed}, ignored ${stateCounts.ignored}, skipped ${stateCounts.skipped})
+Line 68: No eligible diagnostics
+Line 73: Reset dismissed diagnostics
+Line 88: Line ${current.oneBasedLine}, Column ${current.oneBasedColumn}
+Line 94: Line ${current.oneBasedLine}, Column ${current.oneBasedColumn}
+Line 98: Severity ${current.severity}
+Line 104: Severity ${current.severity}
+Line 108: Diagnostic: ${current.message}
+Line 118: Keyword/token: ${current.token} (${current.keywordExists ? 'known' : 'unknown'})
+Line 119: Keyword/token: not detected
+Line 131: Get next
+Line 137: Next file
+Line 138: Previous file
+Line 139: Go to top
+Line 140: Reset dismissed diagnostics
+Line 158: Copied diagnostic explorer text: ${copyText}
+Line 211: ).replace(/\\/g,
+Found in catalog: 0
+
+build/mdl-language-app/main/ipc-handlers.js
+------------------------------
+Component: translator
+Status: scanned
+Potential candidates: 5
+Line 1: use strict
+Line 48: Add files
+Line 59: Scan file
+Line 111: Discard and reload
+Line 131: Write ${normalized.length} authoritative file(s)?
+Found in catalog: 6
+Line 47: Add migration source files
+  Catalog: translator.dialog.addMigrationSourceFiles.title
+Line 58: Scan migration source file
+  Catalog: translator.dialog.scanMigrationSourceFile.title
+Line 114: Discard unsaved changes?
+  Catalog: translator.dialog.discardUnsavedChanges.title
+Line 115: Reloading will discard all in-memory language changes.
+  Catalog: translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text
+Line 127: Save and rebuild
+  Catalog: locales.action.saveAndRebuild.label
+Line 130: Confirm authoritative changes
+  Catalog: translator.dialog.confirmAuthoritativeChanges.title
+
+build/mdl-language-app/main/main.js
+----------------------
+Component: translator
+Status: scanned
+Potential candidates: 4
+Line 1: use strict
+Line 51: Return to build
+Line 56: Use Stop build in the progress window, then wait for rollback to complete before closing
+         the application.
+Line 67: Exit without saving
+Found in catalog: 8
+Line 36: Select the MyDefrag-syntax repository
+  Catalog: translator.dialog.selectTheMydefragSyntaxRepository.title, locales.dialog.selectTheMydefragSyntaxRepository.title
+Line 37: Choose the repository that owns language/canonical and build/language.
+  Catalog: translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text
+Line 42: A valid MyDefrag-syntax repository was not selected.
+  Catalog: translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text
+Line 54: Language build is running
+  Catalog: translator.dialog.languageBuildIsRunning.title
+Line 55: Wait for the build to finish before exiting.
+  Catalog: translator.message.waitForTheBuildToFinishBeforeExiting.text, locales.message.waitForTheBuildToFinishBeforeExiting.text
+Line 70: Unsaved language changes
+  Catalog: translator.dialog.unsavedLanguageChanges.title
+Line 71: Exit and discard all in-memory changes?
+  Catalog: translator.message.exitAndDiscardAllInMemoryChanges.text
+Line 127: MyDefrag Language Maintenance
+  Catalog: translator.dialog.mydefragLanguageMaintenance.text
+
+build/mdl-language-app/main/project-root.js
+------------------------------
+Component: translator
+Status: scanned
+Potential candidates: 3
+Line 1: use strict
+Line 24: --project-root=
+Line 25: --project-root=
+Found in catalog: 0
+
+build/mdl-language-app/main/source-opener.js
+-------------------------------
+Component: translator
+Status: scanned
+Potential candidates: 5
+Line 1: use strict
+Line 12: Microsoft VS Code
+Line 13: Microsoft VS Code
+Line 26: ${target.absolutePath}:${target.line}:1
+Line 38: Unable to open ${target.relativePath}: ${error}
+Found in catalog: 1
+Line 43: A line-aware VSCodium or VS Code installation was not found; the source file was opened
+         with its default application.
+  Catalog: translator.message.aLineAwareVscodiumOrVsCodeInstallation.text
+
+build/mdl-language-app/main/window-options.js
+--------------------------------
+Component: translator
+Status: scanned
+Potential candidates: 3
+Line 1: use strict
+Line 12: #f4f1e8
+Line 34: #20332f
+Found in catalog: 2
+Line 13: MyDefrag Language Maintenance
+  Catalog: translator.dialog.mydefragLanguageMaintenance.text
+Line 35: Starting MyDefrag Language Maintenance
+  Catalog: translator.dialog.startingMydefragLanguageMaintenance.title
+
+build/mdl-language-app/preload/preload.js
+----------------------------
+Component: translator
+Status: scanned
+Potential candidates: 25
+Line 1: use strict
+Line 9: language-maintenance:load
+Line 10: language-maintenance:apply-record
+Line 11: language-maintenance:apply-component
+Line 12: language-maintenance:set-preview-default
+Line 13: language-maintenance:choose-migration-files
+Line 14: language-maintenance:scan-migration-file
+Line 15: language-maintenance:add-scanned-migration-file
+Line 16: language-maintenance:get-migration-summary
+Line 17: language-maintenance:get-migration-candidates
+Line 18: language-maintenance:suggest-catalog-key
+Line 19: language-maintenance:open-migration-source
+Line 20: language-maintenance:open-scanned-migration-source
+Line 21: language-maintenance:assign-migration-file-component
+Line 22: language-maintenance:remove-migration-file
+Line 23: language-maintenance:revert
+Line 24: language-maintenance:reload
+Line 25: language-maintenance:validate
+Line 26: language-maintenance:preview-save
+Line 27: language-maintenance:confirm-save
+Line 28: language-maintenance:save
+Line 29: language-maintenance:rebuild
+Line 30: language-maintenance:cancel-build
+Line 31: language-maintenance:exit
+Line 35: language-maintenance:progress
+Found in catalog: 0
+
+build/mdl-language-app/renderer/app.js
+-------------------------
+Component: translator
+Status: scanned
+Potential candidates: 172
+Line 1: use strict
+Line 62: badge ${state.dirty ? 'dirty' : 'clean'}
+Line 65: Valid (${validation.warnings.length} warning(s))
+Line 66: Invalid (${validation.errors.length} error(s))
+Line 67: badge ${validation.ok ? 'valid' : 'invalid'}
+Line 88: ${minutes}:${seconds}
+Line 96: ${progressOutput.textContent}${output}
+Line 104: [${formatElapsed(Date.now() - progressStartedAt)}] ${message}
+Line 135: > ${progress.command}
+Line 149: ${title} failed
+Line 176: Authoritative files
+Line 179: Migration inventory entries
+Line 182: Generated files
+Line 185: Recovery files retained
+Line 188: Generated files changed
+Line 192: ${buildResult.stdout || ''}${buildResult.stderr || ''}
+Line 200: , { className:
+Line 207: Validation passed with ${validation.warnings.length} warning(s).
+Line 208: Validation failed with ${validation.errors.length} error(s).
+Line 212: validation-list ${kind}
+Line 214: , { text: `${item.file || item.source ||
+Line 214: } ${item.path ||
+Line 219: , { text:
+Line 220: , { className:
+Line 223: ${locale.locale}: ${locale.status} (${locale.path})
+Line 244: , { className:
+Line 246: , { text:
+Line 247: , { text:
+Line 250: , { className:
+Line 253: , { className:
+Line 254: , { text:
+Line 268: ${component.id} ${component.description}
+Line 271: ${component.id} — ${component.description}
+Line 300: , { className:
+Line 302: Open component catalog
+Line 303: Open diagnostic messages
+Line 304: Open semantic keywords
+Line 305: Open preview modes
+Line 306: Edit migration inventory
+Line 328: , { className:
+Line 329: , { text:
+Line 329: }), element(
+Line 329: , { text:
+Line 330: , { text:
+Line 330: }), element(
+Line 331: , { text:
+Line 331: }), element(
+Line 332: , { text:
+Line 332: }), element(
+Line 335: , { text:
+Line 336: , { text:
+Line 343: , { className:
+Line 343: , text:
+Line 346: , { className:
+Line 347: , { text:
+Line 347: }), element(
+Line 347: , {}, [element(
+Line 348: , { text:
+Line 348: }), element(
+Line 349: , { text:
+Line 349: }), element(
+Line 349: , { text: component.runtime ?
+Line 361: , { className:
+Line 361: }, [element(
+Line 361: , { text:
+Line 374: [a-z][A-Za-z0-9]*
+Line 394: , { text: isEdit ? `Edit ${component.id}` :
+Line 398: , { className:
+Line 438: , { text:
+Line 439: , { className:
+Line 443: — ${entry.component}
+Line 450: , { className:
+Line 452: , { text:
+Line 453: , { text:
+Line 456: , { className:
+Line 524: ${file.path} ${file.component}
+Line 527: ${files.length} source file(s)
+Line 536: , { className:
+Line 542: View migration candidates for ${file.path}
+Line 559: Remove ${file.path}
+Line 562: Remove ${file.path} from the migration inventory?
+Line 581: Component assigned to ${file.path}
+Line 615: , { className:
+Line 619: , { className:
+Line 637: Coverage unavailable: ${result.error || 'Unable to load migration report.'}
+Line 638: migration-coverage unavailable
+Line 646: Coverage unavailable: ${file.error}
+Line 647: migration-coverage unavailable
+Line 650: ${file.candidateCount} potential · ${file.catalogedStringCount} found in catalog
+Line 651: migration-coverage ${file.catalogedStringCount > 0 ? 'has-found' : 'no-found'}
+Line 665: Line ${candidate.line}
+Line 667: candidate-status ${inCatalog ? 'in-catalog' : 'potential'}
+Line 676: Catalog: ${candidate.catalogEntries.map((entry) =>
+Line 687: Open ${filePath} at line ${candidate.line}
+Line 714: Minimize ${windowLabel}
+Line 722: Maximize ${windowLabel}
+Line 726: candidate-window-control candidate-window-close
+Line 730: Close ${windowLabel}
+Line 738: Maximize ${windowLabel}
+Line 743: ${minimized ? 'Restore' : 'Minimize'} ${windowLabel}
+Line 750: Minimize ${windowLabel}
+Line 755: ${maximized ? 'Restore' : 'Maximize'} ${windowLabel}
+Line 759: , { className:
+Line 768: candidate-dialog migration-scan-dialog
+Line 771: , { text:
+Line 775: , { className:
+Line 777: scan file window
+Line 797: , { className:
+Line 809: , { className:
+Line 811: candidate-choice scan-candidate ${inCatalog ? 'in-catalog' : 'potential'}
+Line 835: Selected: ${scannedFile.path}
+Line 841: Scan failed: ${result.error || 'Unable to scan the selected file.'}
+Line 843: , { className:
+Line 843: , text:
+Line 847: Scan source file: ${scannedFile.path}
+Line 848: ${scannedFile.candidateCount} potential candidate(s), ${scannedFile.catalogedStringCount}
+          found in catalog
+Line 857: Already listed under component ${scannedFile.inventoryComponent}.
+Line 858: Scanned ${scannedFile.extractedCount} candidate string(s) without changing the inventory.
+Line 874: Added to source files under component ${componentSelect.value}. Save is still required.
+Line 892: , { className:
+Line 897: candidate-pane migration-scan-pane
+Line 922: Migration candidates for ${file.path}
+Line 923: , { className:
+Line 925: All candidates: ${file.path}
+Line 927: ${file.candidateCount} potential candidate(s), ${file.catalogedStringCount} found in
+          catalog
+Line 930: migration candidates window
+Line 933: , { text:
+Line 934: , { className:
+Line 935: , { className:
+Line 986: , { className:
+Line 989: ${entry.key} [${entry.component}] - ${entry.category} / ${entry.role}
+Line 995: , { className:
+Line 996: , { text:
+Line 997: , { text:
+Line 1009: candidate-choice ${inCatalog ? 'in-catalog' : 'potential'}
+Line 1020: , { className:
+Line 1026: , { className:
+Line 1026: , text:
+Line 1028: , { text:
+Line 1029: , { className:
+Line 1029: , text:
+Line 1034: , { className:
+Line 1076: , { className:
+Line 1077: , { className:
+Line 1081: Showing records from all components
+Line 1082: Filtered to component: ${selectedComponent}
+Line 1083: Maintains ${definition.file}
+Line 1086: Search ${definition.title}
+Line 1110: Set preview default
+Line 1127: , { className:
+Line 1151: ${records.length} record(s)
+Line 1153: , { className:
+Line 1153: , text:
+Line 1164: , { className: record[identityKey] === editingIdentity ?
+Line 1178: , { className:
+Line 1188: , text:
+Line 1237: , { text: options.title || (isNew ?
+Line 1268: , { className:
+Line 1299: Derived from the JSON property path.
+Line 1300: Derived from the JavaScript function and expression context.
+Line 1302: , { className:
+Line 1327: , { className:
+Line 1330: Detected placeholders: ${Array.from(new Set(names)).sort().join(', ') || '(none)'}
+Line 1348: form-actions form-actions-top
+Line 1431: Preparing save with DeepL API calls enabled
+Line 1432: Preparing normalized save with DeepL disabled
+Line 1433: Saving language data
+Line 1457: Reverting language data
+Line 1458: Restoring the last loaded draft and validating it
+Line 1489: Preparing rebuild with DeepL API calls enabled
+Line 1490: Preparing normalized rebuild with DeepL disabled
+Line 1491: Rebuilding language outputs
+Found in catalog: 112
+Line 61: Unsaved changes
+  Catalog: translator.ui.unsavedChanges.text, locales.ui.unsavedChanges.text
+Line 61: No unsaved changes
+  Catalog: translator.ui.noUnsavedChanges.text, locales.ui.noUnsavedChanges.text
+Line 78: Show left panel
+  Catalog: translator.ui.showLeftPanel.text
+Line 78: Hide left panel
+  Catalog: translator.ui.hideLeftPanel.text
+Line 252: Add component
+  Catalog: translator.ui.addComponent.text
+Line 257: Search component ID or description
+  Catalog: translator.input.searchComponentIdOrDescription.placeholder
+Line 257: Search components
+  Catalog: translator.input.searchComponents.placeholder
+Line 258: Selected component
+  Catalog: translator.accessibility.selectedComponent.label
+Line 265: All components — no component filter
+  Catalog: translator.ui.allComponentsNoComponentFilter.text
+Line 298: Available components
+  Catalog: translator.ui.availableComponents.text
+Line 351: Edit component
+  Catalog: translator.ui.editComponent.text
+Line 375: Component identifier
+  Catalog: translator.accessibility.componentIdentifier.label
+Line 380: Component description
+  Catalog: translator.accessibility.componentDescription.label
+Line 386: Runtime component
+  Catalog: translator.accessibility.runtimeComponent.label
+Line 397: Runtime component
+  Catalog: translator.accessibility.runtimeComponent.label
+Line 399: Apply in memory
+  Catalog: translator.ui.applyInMemory.text, locales.action.applyInMemory.label
+Line 417: Component updated in memory
+  Catalog: translator.message.componentUpdatedInMemory.text
+Line 417: Component added in memory
+  Catalog: translator.message.componentAddedInMemory.text
+Line 422: Component change rejected
+  Catalog: translator.message.componentChangeRejected.text
+Line 425: Unable to apply the component.
+  Catalog: translator.message.unableToApplyTheComponent.text
+Line 460: Filter source file paths
+  Catalog: translator.input.filterSourceFilePaths.placeholder
+Line 461: Filter migration source files
+  Catalog: translator.accessibility.filterMigrationSourceFiles.label
+Line 467: Component for added migration files
+  Catalog: translator.accessibility.componentForAddedMigrationFiles.label
+Line 475: Add files…
+  Catalog: translator.ui.addFiles.text
+Line 480: Scan file…
+  Catalog: translator.ui.scanFile.text
+Line 491: Migration files added
+  Catalog: translator.message.migrationFilesAdded.text
+Line 491: No new files added
+  Catalog: translator.message.noNewFilesAdded.text
+Line 497: Migration files rejected
+  Catalog: translator.message.migrationFilesRejected.text
+Line 500: Unable to add files.
+  Catalog: translator.message.unableToAddFiles.text
+Line 507: Search and filter
+  Catalog: translator.ui.searchAndFilter.text
+Line 508: Assign new files to
+  Catalog: translator.ui.assignNewFilesTo.text
+Line 531: No files match the current filter.
+  Catalog: translator.ui.noFilesMatchTheCurrentFilter.text
+Line 531: No migration source files are listed.
+  Catalog: translator.ui.noMigrationSourceFilesAreListed.text
+Line 540: View candidates
+  Catalog: translator.ui.viewCandidates.text
+Line 551: Migration candidates unavailable
+  Catalog: translator.message.migrationCandidatesUnavailable.text
+Line 552: Unable to load migration candidates.
+  Catalog: translator.message.unableToLoadMigrationCandidates.text
+Line 566: Migration file removed
+  Catalog: translator.message.migrationFileRemoved.text
+Line 572: Migration file removal failed
+  Catalog: translator.message.migrationFileRemovalFailed.text
+Line 575: Unable to remove the file.
+  Catalog: translator.message.unableToRemoveTheFile.text
+Line 595: Migration component assignment updated
+  Catalog: translator.message.migrationComponentAssignmentUpdated.text
+Line 600: Migration assignment rejected
+  Catalog: translator.message.migrationAssignmentRejected.text
+Line 603: Unable to assign the component.
+  Catalog: translator.message.unableToAssignTheComponent.text
+Line 611: Loading potential / found coverage…
+  Catalog: translator.ui.loadingPotentialFoundCoverage.text
+Line 668: In Catalog
+  Catalog: translator.ui.inCatalog.text
+Line 668: Potential Candidate
+  Catalog: translator.ui.potentialCandidate.text
+Line 676: ).join(', ')}
+  Catalog: translator.ui.join.text
+Line 686: Open source
+  Catalog: translator.ui.openSource.text
+Line 698: Unable to open migration source
+  Catalog: translator.message.unableToOpenMigrationSource.text
+Line 699: The source file could not be opened.
+  Catalog: translator.message.theSourceFileCouldNotBeOpened.text
+Line 702: Source file opened
+  Catalog: translator.message.sourceFileOpened.text
+Line 759: Window controls
+  Catalog: translator.accessibility.windowControls.label
+Line 769: Scan migration source file
+  Catalog: translator.dialog.scanMigrationSourceFile.title
+Line 773: Select one repository file to inspect without adding it to the source inventory.
+  Catalog: translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text
+Line 779: Component for scanned migration file
+  Catalog: translator.accessibility.componentForScannedMigrationFile.label
+Line 786: Select file…
+  Catalog: translator.ui.selectFile.text
+Line 790: Add to source files
+  Catalog: translator.ui.addToSourceFiles.text
+Line 795: No file selected.
+  Catalog: translator.ui.noFileSelected.text
+Line 800: Select a file to display every string accepted by extractStringCandidates.
+  Catalog: translator.ui.selectAFileToDisplayEveryStringAccepted.text
+Line 819: No candidate strings were found in this file.
+  Catalog: translator.ui.noCandidateStringsWereFoundInThisFile.text
+Line 826: Scanning selected file…
+  Catalog: translator.ui.scanningSelectedFile.text
+Line 835: No file selected.
+  Catalog: translator.ui.noFileSelected.text
+Line 853: Already in source files
+  Catalog: translator.ui.alreadyInSourceFiles.text
+Line 854: Add to source files
+  Catalog: translator.ui.addToSourceFiles.text
+Line 873: Already in source files
+  Catalog: translator.ui.alreadyInSourceFiles.text
+Line 875: Migration file added
+  Catalog: translator.message.migrationFileAdded.text
+Line 875: Migration file already listed
+  Catalog: translator.message.migrationFileAlreadyListed.text
+Line 882: Migration file rejected
+  Catalog: translator.message.migrationFileRejected.text
+Line 885: Unable to add the scanned file.
+  Catalog: translator.message.unableToAddTheScannedFile.text
+Line 894: Assign to component
+  Catalog: translator.ui.assignToComponent.text
+Line 952: Analyzing source context...
+  Catalog: translator.ui.analyzingSourceContext.text
+Line 964: Component Catalog Add Record
+  Catalog: translator.dialog.componentCatalogAddRecord.title
+Line 968: Close candidates
+  Catalog: translator.ui.closeCandidates.text
+Line 976: Catalog record added to in-memory draft
+  Catalog: translator.message.catalogRecordAddedToInMemoryDraft.text
+Line 992: Close candidates
+  Catalog: translator.ui.closeCandidates.text
+Line 1086: Search all fields
+  Catalog: translator.input.searchAllFields.placeholder
+Line 1087: Search and filter
+  Catalog: translator.ui.searchAndFilter.text
+Line 1092: Add record
+  Catalog: translator.ui.addRecord.text
+Line 1095: Select a specific component before adding a record.
+  Catalog: translator.ui.selectASpecificComponentBeforeAddingARecord.text
+Line 1103: Default preview mode
+  Catalog: translator.accessibility.defaultPreviewMode.label
+Line 1112: Default preview mode
+  Catalog: translator.accessibility.defaultPreviewMode.label
+Line 1198: (select a component)
+  Catalog: translator.ui.selectAComponent.text
+Line 1237: Edit record
+  Catalog: translator.ui.editRecord.text
+Line 1249: Normalized text
+  Catalog: translator.accessibility.normalizedText.label
+Line 1253: Apply normalized text
+  Catalog: translator.ui.applyNormalizedText.text
+Line 1270: Normalized text
+  Catalog: translator.accessibility.normalizedText.label
+Line 1274: Translation-oriented preview using canonical word substitutions.
+  Catalog: translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text
+Line 1287: Suggested key
+  Catalog: translator.accessibility.suggestedKey.label
+Line 1291: Use suggested key
+  Catalog: translator.ui.useSuggestedKey.text
+Line 1304: Suggested key
+  Catalog: translator.accessibility.suggestedKey.label
+Line 1308: No stable source construct was found.
+  Catalog: translator.ui.noStableSourceConstructWasFound.text
+Line 1320: Derived from the selected canonical catalog message.
+  Catalog: translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text
+Line 1337: Apply to in-memory draft
+  Catalog: translator.ui.applyToInMemoryDraft.text
+Line 1338: Clear editor
+  Catalog: translator.ui.clearEditor.text
+Line 1391: Draft updated
+  Catalog: translator.message.draftUpdated.text
+Line 1394: Record rejected
+  Catalog: translator.message.recordRejected.text
+Line 1415: The restricted preload bridge is unavailable.
+  Catalog: translator.message.theRestrictedPreloadBridgeIsUnavailable.text
+Line 1418: Unable to load language data.
+  Catalog: translator.message.unableToLoadLanguageData.text
+Line 1435: Save blocked
+  Catalog: translator.dialog.saveBlocked.title
+Line 1436: Nothing to save
+  Catalog: translator.dialog.nothingToSave.title
+Line 1437: Waiting for save confirmation
+  Catalog: translator.progress.waitingForSaveConfirmation.status, locales.progress.waitingForSaveConfirmation.status
+Line 1440: Starting save and rebuild
+  Catalog: translator.progress.startingSaveAndRebuild.status
+Line 1443: Save and build succeeded
+  Catalog: translator.dialog.saveAndBuildSucceeded.title
+Line 1443: Save failed and was rolled back
+  Catalog: translator.dialog.saveFailedAndWasRolledBack.title, locales.dialog.saveFailedAndWasRolledBack.title
+Line 1454: Discard all in-memory changes?
+  Catalog: translator.ui.discardAllInMemoryChanges.text
+Line 1463: Revert failed
+  Catalog: translator.dialog.revertFailed.title
+Line 1466: Draft reverted
+  Catalog: translator.dialog.draftReverted.title
+Line 1482: Validation result
+  Catalog: translator.message.validationResult.text, locales.message.validationResult.text
+Line 1494: Language rebuild succeeded
+  Catalog: translator.dialog.languageRebuildSucceeded.title
+Line 1494: Language rebuild failed
+  Catalog: translator.dialog.languageRebuildFailed.title
+Line 1506: Language data reloaded
+  Catalog: translator.message.languageDataReloaded.text
+Line 1523: Stopping language build
+  Catalog: translator.progress.stoppingLanguageBuild.status
+Line 1538: Application failed to start
+  Catalog: translator.message.applicationFailedToStart.text, locales.message.applicationFailedToStart.text
+
+build/mdl-language-app/renderer/index.html
+-----------------------------
+Component: translator
+Status: scanned
+Potential candidates: 11
+Line 5: width=device-width, initial-scale=1
+Line 6: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src
+        'none'; object-src 'none'; base-uri 'none'; form-action 'none'
+Line 20: stroke-linecap=
+Line 20: stroke-linejoin=
+Line 21: m3 11 9-8 9 8
+Line 22: M5 10v10h14V10
+Line 23: M9 20v-6h6v6
+Line 32: checkbox-field deepl-api-toggle header-deepl-toggle
+Line 36: badge clean
+Line 37: badge neutral
+Line 43: nav-button active
+Found in catalog: 10
+Line 14: Hide left panel
+  Catalog: translator.ui.hideLeftPanel.text
+Line 14: Hide left panel
+  Catalog: translator.ui.hideLeftPanel.text
+Line 19: Show Components home
+  Catalog: translator.accessibility.showComponentsHome.label
+Line 19: Show Components home
+  Catalog: translator.accessibility.showComponentsHome.label
+Line 32: Unchecked builds use normalized English and do not call DeepL.
+  Catalog: translator.ui.uncheckedBuildsUseNormalizedEnglishAndDoNot.title
+Line 33: Allow DeepL calls during Save and Rebuild
+  Catalog: translator.accessibility.allowDeeplCallsDuringSaveAndRebuild.label
+Line 42: Application navigation
+  Catalog: translator.accessibility.applicationNavigation.label
+Line 66: Close operation result
+  Catalog: translator.accessibility.closeOperationResult.label
+Line 76: Operation in progress
+  Catalog: translator.accessibility.operationInProgress.label, locales.accessibility.operationInProgress.label
+Line 78: Build command output
+  Catalog: translator.accessibility.buildCommandOutput.label, locales.accessibility.buildCommandOutput.label
+
+build/mdl-language-app/renderer/ui-state.js
+------------------------------
+Component: translator
+Status: scanned
+Potential candidates: 3
+Line 9: use strict
+Line 13: Unsaved changes remain in memory. Continue to another view?
+Line 18: ${JSON.stringify(record)} ${JSON.stringify(related)}
+Found in catalog: 0
+
+build/mdl-language-app/repositories/canonical-data-repository.js
+---------------------------------------------------
+Component: translator
+Status: scanned
+Potential candidates: 9
+Line 1: use strict
+Line 9: ${process.pid}-${Date.now()}-${crypto.randomBytes(4).toString('hex')}
+Line 27: Not a MyDefrag language repository. Missing: ${missing.join(', ')}
+Line 35: Path escapes the repository root: ${relativePath}
+Line 44: Selected file is outside the repository root: ${absolutePath}
+Line 47: Selected path is not a file: ${absolutePath}
+Line 53: ${JSON.stringify(value, null, 2)}
+Line 86: .${path.basename(target)}.${suffix}.tmp
+Line 87: .${path.basename(target)}.${suffix}.bak
+Found in catalog: 0
+
+build/mdl-language-app/services/build-integration.js
+---------------------------------------
+Component: translator
+Status: scanned
+Potential candidates: 9
+Line 1: use strict
+Line 34: ${current}${chunk}
+Line 100: ${target}.${process.pid}.${Date.now()}.restore.tmp
+Line 122: node build/scripts/build-language.js ${actionArguments.join(' ')}
+Line 135: , stderr:
+Line 176: Language build cancelled
+Line 177: Language build command completed
+Line 177: Language build command failed
+Line 237: Build process did not report termination after cancellation.
+Found in catalog: 13
+Line 117: A language build is already running.
+  Catalog: translator.message.aLanguageBuildIsAlreadyRunning.text
+Line 134: Unable to start language build
+  Catalog: translator.progress.unableToStartLanguageBuild.status
+Line 152: Running language build command
+  Catalog: translator.message.runningLanguageBuildCommand.text
+Line 170: Build cancelled by user.
+  Catalog: translator.message.buildCancelledByUser.text
+Line 189: Build command output
+  Catalog: translator.accessibility.buildCommandOutput.label, locales.accessibility.buildCommandOutput.label
+Line 194: Build command output
+  Catalog: translator.accessibility.buildCommandOutput.label, locales.accessibility.buildCommandOutput.label
+Line 203: No language build is running.
+  Catalog: translator.message.noLanguageBuildIsRunning.text
+Line 221: Waiting for the language build process to stop
+  Catalog: translator.message.waitingForTheLanguageBuildProcessToStop.text
+Line 228: Forcing the language build process to stop
+  Catalog: translator.message.forcingTheLanguageBuildProcessToStop.text
+Line 247: The language build process could not be stopped.
+  Catalog: translator.message.theLanguageBuildProcessCouldNotBeStopped.text
+Line 256: Capturing generated files for rollback
+  Catalog: translator.progress.capturingGeneratedFilesForRollback.status, locales.progress.capturingGeneratedFilesForRollback.status
+Line 260: Restoring generated files
+  Catalog: translator.progress.restoringGeneratedFiles.status
+Line 264: Checking generated file changes
+  Catalog: translator.progress.checkingGeneratedFileChanges.status, locales.progress.checkingGeneratedFileChanges.status
+
+build/mdl-language-app/services/language-maintenance-service.js
+--------------------------------------------------
+Component: translator
+Status: scanned
+Potential candidates: 15
+Line 1: use strict
+Line 94: , message:
+Line 108: , message:
+Line 115: /${definition.collectionKey}
+Line 116: Duplicate ${definition.identityKey}: ${identity}
+Line 162: Duplicate component id: ${component.id}
+Line 270: ).replaceAll(
+Line 292: Unable to read build/language/reports/migration-report.json: ${error.message}
+Line 299: Migration candidates are unavailable because the report status is ${reportFile.status ||
+          'invalid'}.
+Line 430: The selected line is not a current reported migration string.
+Line 451: The selected string is no longer a current scanned migration candidate.
+Line 592: Validating language changes; DeepL API calls are enabled
+Line 593: Validating language changes; DeepL is disabled
+Line 683: DeepL API calls are enabled for this rebuild
+Line 684: DeepL is disabled; using normalized English
+Found in catalog: 26
+Line 142: Invalid component request.
+  Catalog: translator.message.invalidComponentRequest.text
+Line 156: The component changed or no longer exists.
+  Catalog: translator.message.theComponentChangedOrNoLongerExists.text
+Line 159: Existing component identifiers cannot be renamed.
+  Catalog: translator.message.existingComponentIdentifiersCannotBeRenamed.text
+Line 193: Invalid file selection.
+  Catalog: translator.message.invalidFileSelection.text
+Line 196: Select a valid component before adding files.
+  Catalog: translator.message.selectAValidComponentBeforeAddingFiles.text
+Line 242: The configured language builder does not expose extractStringCandidates.
+  Catalog: translator.message.theConfiguredLanguageBuilderDoesNotExposeExtractstringcandidates.text
+Line 273: The scanned source path is not a normalized repository-relative file path.
+  Catalog: translator.message.theScannedSourcePathIsNotANormalized.text
+Line 302: The migration report does not include catalog-found strings. Rebuild the language outputs.
+  Catalog: translator.message.theMigrationReportDoesNotIncludeCatalogFound.text
+Line 326: The migration report is missing full candidate source lines. Rebuild the language outputs.
+  Catalog: translator.message.theMigrationReportIsMissingFullCandidateSource.text
+Line 356: Not present in the migration report; rebuild required.
+  Catalog: translator.message.notPresentInTheMigrationReportRebuildRequired.text
+Line 364: Component assignment is stale; rebuild required.
+  Catalog: translator.message.componentAssignmentIsStaleRebuildRequired.text
+Line 393: The migration file is no longer listed.
+  Catalog: translator.message.theMigrationFileIsNoLongerListed.text
+Line 402: The migration report does not contain this file. Rebuild the language outputs.
+  Catalog: translator.message.theMigrationReportDoesNotContainThisFile.text
+Line 405: The migration report component assignment is stale. Rebuild the language outputs.
+  Catalog: translator.message.theMigrationReportComponentAssignmentIsStaleRebuild.text
+Line 483: The selected line is not a current migration candidate.
+  Catalog: translator.message.theSelectedLineIsNotACurrentMigration.text
+Line 506: The migration file is no longer listed.
+  Catalog: translator.message.theMigrationFileIsNoLongerListed.text
+Line 509: Select a valid component.
+  Catalog: translator.message.selectAValidComponent.text
+Line 528: The migration file is no longer listed.
+  Catalog: translator.message.theMigrationFileIsNoLongerListed.text
+Line 612: Capturing generated files for rollback
+  Catalog: translator.progress.capturingGeneratedFilesForRollback.status, locales.progress.capturingGeneratedFilesForRollback.status
+Line 616: Writing authoritative language files
+  Catalog: translator.progress.writingAuthoritativeLanguageFiles.status
+Line 620: Restoring authoritative and generated files
+  Catalog: translator.progress.restoringAuthoritativeAndGeneratedFiles.status, locales.progress.restoringAuthoritativeAndGeneratedFiles.status
+Line 635: Checking generated file changes
+  Catalog: translator.progress.checkingGeneratedFileChanges.status, locales.progress.checkingGeneratedFileChanges.status
+Line 638: Committing language changes
+  Catalog: translator.progress.committingLanguageChanges.status
+Line 652: Restoring files after an error
+  Catalog: translator.progress.restoringFilesAfterAnError.status, locales.progress.restoringFilesAfterAnError.status
+Line 677: Save or revert in-memory changes before rebuilding.
+  Catalog: translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text
+Line 701: Language maintenance data has not been loaded.
+  Catalog: translator.message.languageMaintenanceDataHasNotBeenLoaded.text
+
+build/mdl-language-app/services/source-key-suggester.js
+------------------------------------------
+Component: translator
+Status: scanned
+Potential candidates: 10
+Line 1: use strict
+Line 15: item${part}
+Line 66: && next ===
+Line 82: && next ===
+Line 88: && next ===
+Line 94: || character ===
+Line 94: || character ===
+Line 141: ).length - left.split(
+Line 141: ).length)[0] ||
+Line 180: line${line}
+Found in catalog: 0
+
+build/mdl-language-app/shared/contracts.js
+-----------------------------
+Component: translator
+Status: scanned
+Potential candidates: 25
+Line 1: use strict
+Line 43: language-maintenance:load
+Line 44: language-maintenance:apply-record
+Line 45: language-maintenance:apply-component
+Line 46: language-maintenance:set-preview-default
+Line 47: language-maintenance:choose-migration-files
+Line 48: language-maintenance:scan-migration-file
+Line 49: language-maintenance:add-scanned-migration-file
+Line 50: language-maintenance:get-migration-summary
+Line 51: language-maintenance:get-migration-candidates
+Line 52: language-maintenance:suggest-catalog-key
+Line 53: language-maintenance:open-migration-source
+Line 54: language-maintenance:open-scanned-migration-source
+Line 55: language-maintenance:assign-migration-file-component
+Line 56: language-maintenance:remove-migration-file
+Line 57: language-maintenance:revert
+Line 58: language-maintenance:reload
+Line 59: language-maintenance:validate
+Line 60: language-maintenance:preview-save
+Line 61: language-maintenance:confirm-save
+Line 62: language-maintenance:save
+Line 63: language-maintenance:rebuild
+Line 64: language-maintenance:cancel-build
+Line 65: language-maintenance:exit
+Line 69: language-maintenance:progress
+Found in catalog: 4
+Line 5: Component Catalog
+  Catalog: translator.action.componentCatalog.label
+Line 14: Diagnostic Messages
+  Catalog: translator.action.diagnosticMessages.label
+Line 23: Semantic Keywords
+  Catalog: translator.action.semanticKeywords.label
+Line 32: Preview Modes
+  Catalog: translator.action.previewModes.label
+
+build/mdl-language-app/splash/index.html
+---------------------------
+Component: translator
+Status: scanned
+Potential candidates: 2
+Line 5: width=device-width, initial-scale=1
+Line 6: default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none';
+        object-src 'none'; base-uri 'none'; form-action 'none'
+Found in catalog: 0
+
+build/mdl-language-app/validation/schema-validator.js
+----------------------------------------
+Component: translator
+Status: scanned
+Potential candidates: 5
+Line 1: use strict
+Line 24: No applicable schema is available for ${viewName}.
+Line 52: ] = value.$ref.split(
+Line 55: ).replace(/~0/g,
+Line 58: $ref
+Found in catalog: 0
+
+build/mdl-locale-app/main/ipc-handlers.js
+-------------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 4
+Line 1: use strict
+Line 45: Discard and reload
+Line 59: Save and rebuild component
+Line 63: Write ${normalized.length} authoritative file(s)?
+Found in catalog: 3
+Line 48: Discard unsaved translations?
+  Catalog: locales.dialog.discardUnsavedTranslations.title
+Line 49: Reloading will discard changes to the selected locale component.
+  Catalog: locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text
+Line 62: Confirm locale source changes
+  Catalog: locales.dialog.confirmLocaleSourceChanges.title
+
+build/mdl-locale-app/main/main.js
+-----------------------------
+Component: locales
+Status: scanned
+Potential candidates: 4
+Line 1: use strict
+Line 40: Return to build
+Line 45: Use Stop build in the progress window, then wait for rollback to complete before closing
+         the application.
+Line 56: Exit without saving
+Found in catalog: 8
+Line 27: Select the MyDefrag-syntax repository
+  Catalog: translator.dialog.selectTheMydefragSyntaxRepository.title, locales.dialog.selectTheMydefragSyntaxRepository.title
+Line 28: Choose the repository that owns language/locales and build/language.
+  Catalog: locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text
+Line 32: A valid MyDefrag locale repository was not selected.
+  Catalog: locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text
+Line 43: Locale component build is running
+  Catalog: locales.dialog.localeComponentBuildIsRunning.title
+Line 44: Wait for the build to finish before exiting.
+  Catalog: translator.message.waitForTheBuildToFinishBeforeExiting.text, locales.message.waitForTheBuildToFinishBeforeExiting.text
+Line 59: Unsaved locale changes
+  Catalog: locales.dialog.unsavedLocaleChanges.title
+Line 60: Exit and discard the selected component translations?
+  Catalog: locales.message.exitAndDiscardTheSelectedComponentTranslations.text
+Line 95: MyDefrag Locale Maintenance
+  Catalog: locales.dialog.mydefragLocaleMaintenance.text
+
+build/mdl-locale-app/main/project-root.js
+-------------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 3
+Line 1: use strict
+Line 23: --project-root=
+Line 23: --project-root=
+Found in catalog: 0
+
+build/mdl-locale-app/main/window-options.js
+---------------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 2
+Line 1: use strict
+Line 12: #f4f1e8
+Found in catalog: 1
+Line 13: MyDefrag Locale Maintenance
+  Catalog: locales.dialog.mydefragLocaleMaintenance.text
+
+build/mdl-locale-app/preload/preload.js
+-----------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 17
+Line 1: use strict
+Line 8: locale-maintenance:load
+Line 9: locale-maintenance:select
+Line 10: locale-maintenance:request-api-translation
+Line 11: locale-maintenance:replace-with-api-translation
+Line 12: locale-maintenance:apply-translation
+Line 13: locale-maintenance:remove-translation
+Line 14: locale-maintenance:revert
+Line 15: locale-maintenance:reload
+Line 16: locale-maintenance:validate
+Line 17: locale-maintenance:preview-save
+Line 18: locale-maintenance:confirm-save
+Line 19: locale-maintenance:save
+Line 20: locale-maintenance:rebuild
+Line 21: locale-maintenance:cancel-build
+Line 22: locale-maintenance:exit
+Line 26: locale-maintenance:progress
+Found in catalog: 0
+
+build/mdl-locale-app/renderer/app.js
+--------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 23
+Line 1: use strict
+Line 47: ${minutes}:${seconds}
+Line 55: ${progressOutput.textContent}${output}
+Line 63: [${formatElapsed(Date.now() - progressStartedAt)}] ${message}
+Line 94: > ${progress.command}
+Line 114: badge ${state.dirty ? 'dirty' : 'clean'}
+Line 118: ${state.validation.errors.length} validation error(s)
+Line 119: badge ${state.validation.ok ? 'valid' : 'invalid'}
+Line 125: ${locale.nativeName} — ${locale.englishName} (${locale.id})
+Line 129: ${component.id} — ${component.description}
+Line 137: ${state.locale.nativeName}: ${state.component.id}
+Line 142: Source: ${state.authoritativeFile}
+Line 144: Generated: ${state.generatedFile}
+Line 147: ${state.completeness.translated} translated
+Line 148: ${state.completeness.fallback} English fallback
+Line 149: ${state.completeness.total} total
+Line 166: English fallback
+Line 202: ${row.apiTranslationProvider} result ready. Apply in memory to retain Current locale
+          value.
+Line 300: DeepL replaced Current locale value. Apply in memory to retain it.
+Line 304: Saving locale component
+Line 304: Preparing save
+Line 341: Rebuilding locale component
+Line 342: Preparing component rebuild
+Found in catalog: 23
+Line 113: Unsaved changes
+  Catalog: translator.ui.unsavedChanges.text, locales.ui.unsavedChanges.text
+Line 113: No unsaved changes
+  Catalog: translator.ui.noUnsavedChanges.text, locales.ui.noUnsavedChanges.text
+Line 197: Select a catalog entry
+  Catalog: locales.ui.selectACatalogEntry.text
+Line 204: Generate a translation from Current locale value. The result replaces that field only.
+  Catalog: locales.ui.generateATranslationFromCurrentLocaleValueThe.text
+Line 206: DeepL is not configured. Set DeeplApi before launching the application.
+  Catalog: locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text
+Line 239: Selection failed
+  Catalog: locales.message.selectionFailed.text
+Line 256: Translation rejected
+  Catalog: locales.message.translationRejected.text
+Line 275: Requesting a DeepL translation…
+  Catalog: locales.ui.requestingADeeplTranslation.text
+Line 282: Translation unavailable.
+  Catalog: locales.ui.translationUnavailable.text
+Line 283: API translation unavailable
+  Catalog: locales.message.apiTranslationUnavailable.text
+Line 290: The main process translated a different Current locale value. Restart Locale Maintenance
+          and retry.
+  Catalog: locales.message.theMainProcessTranslatedADifferentCurrentLocale.text
+Line 293: API translation rejected
+  Catalog: locales.message.apiTranslationRejected.text
+Line 306: Save blocked by validation
+  Catalog: locales.dialog.saveBlockedByValidation.title
+Line 308: Waiting for save confirmation
+  Catalog: translator.progress.waitingForSaveConfirmation.status, locales.progress.waitingForSaveConfirmation.status
+Line 312: Starting save and component rebuild
+  Catalog: locales.progress.startingSaveAndComponentRebuild.status
+Line 315: Save and component build succeeded
+  Catalog: locales.dialog.saveAndComponentBuildSucceeded.title
+Line 315: Save failed and was rolled back
+  Catalog: translator.dialog.saveFailedAndWasRolledBack.title, locales.dialog.saveFailedAndWasRolledBack.title
+Line 327: Discard in-memory translation changes?
+  Catalog: locales.ui.discardInMemoryTranslationChanges.text
+Line 334: Validation result
+  Catalog: translator.message.validationResult.text, locales.message.validationResult.text
+Line 345: Selected component rebuilt
+  Catalog: locales.message.selectedComponentRebuilt.text
+Line 345: Component rebuild failed
+  Catalog: locales.message.componentRebuildFailed.text
+Line 364: Stopping component build
+  Catalog: locales.progress.stoppingComponentBuild.status
+Line 372: Application failed to start
+  Catalog: translator.message.applicationFailedToStart.text, locales.message.applicationFailedToStart.text
+
+build/mdl-locale-app/renderer/index.html
+------------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 5
+Line 5: width=device-width, initial-scale=1
+Line 6: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src
+        'none'; object-src 'none'; base-uri 'none'; form-action 'none'
+Line 18: badge clean
+Line 19: badge neutral
+Line 74: readonly placeholder=
+Found in catalog: 4
+Line 48: Key, source, translation, status
+  Catalog: locales.input.keySourceTranslationStatus.placeholder
+Line 95: Maintenance actions
+  Catalog: locales.accessibility.maintenanceActions.label
+Line 115: Operation in progress
+  Catalog: translator.accessibility.operationInProgress.label, locales.accessibility.operationInProgress.label
+Line 117: Build command output
+  Catalog: translator.accessibility.buildCommandOutput.label, locales.accessibility.buildCommandOutput.label
+
+build/mdl-locale-app/renderer/ui-state.js
+-------------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 3
+Line 5: use strict
+Line 13: Discard unsaved translations and change the selection?
+Line 22: ) === String(currentValue ??
+Found in catalog: 0
+
+build/mdl-locale-app/repositories/locale-catalog-repository.js
+----------------------------------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 12
+Line 1: use strict
+Line 8: ${process.pid}-${Date.now()}-${crypto.randomBytes(4).toString('hex')}
+Line 27: Not a MyDefrag locale repository. Missing: ${missing.join(', ')}
+Line 35: Path escapes the repository root: ${relativePath}
+Line 45: language/locales/${localeId}/${componentId}.json
+Line 49: build/language/catalogs/${localeId}/${componentId}.json
+Line 54: language/locales/${localeId}/${name}
+Line 72: ${JSON.stringify(value, null, 2)}
+Line 109: Generated locale catalog identity mismatch in ${relativePath}:
+Line 110: ${generated.locale || '<missing>'}/${generated.component || '<missing>'}
+Line 163: .${path.basename(target)}.${transactionId}.tmp
+Line 164: .${path.basename(target)}.${transactionId}.bak
+Found in catalog: 0
+
+build/mdl-locale-app/services/locale-maintenance-service.js
+-------------------------------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 7
+Line 1: use strict
+Line 67: Unknown locale: ${localeId || '<missing>'}
+Line 68: Unknown component: ${componentId || '<missing>'}
+Line 132: English text is canonical and must be maintained in MyDefrag Language Maintenance.
+Line 143: build/language/catalogs/${this.selectedLocale}/${this.selectedComponent}.json
+Line 157: Unknown key for selected component: ${payload.key}
+Line 178: Unknown key for selected component: ${payload.key}
+Found in catalog: 15
+Line 54: Discard or save changes before changing locale or component.
+  Catalog: locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text
+Line 82: Generated locale catalog is invalid:
+  Catalog: locales.message.generatedLocaleCatalogIsInvalid.text
+Line 153: English canonical text is read-only here.
+  Catalog: locales.message.englishCanonicalTextIsReadOnlyHere.text
+Line 174: Canonical English is not an API translation target.
+  Catalog: locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text
+Line 185: Enter or populate Current locale value before generating an API translation.
+  Catalog: locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text
+Line 214: Generate an API translation before replacing the value.
+  Catalog: locales.message.generateAnApiTranslationBeforeReplacingTheValue.text
+Line 234: Generated translations must be applied before they can be removed from authored data.
+  Catalog: locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text
+Line 278: Capturing generated files for rollback
+  Catalog: translator.progress.capturingGeneratedFilesForRollback.status, locales.progress.capturingGeneratedFilesForRollback.status
+Line 282: Writing authoritative locale files
+  Catalog: locales.progress.writingAuthoritativeLocaleFiles.status
+Line 289: Restoring authoritative and generated files
+  Catalog: translator.progress.restoringAuthoritativeAndGeneratedFiles.status, locales.progress.restoringAuthoritativeAndGeneratedFiles.status
+Line 302: Checking generated file changes
+  Catalog: translator.progress.checkingGeneratedFileChanges.status, locales.progress.checkingGeneratedFileChanges.status
+Line 305: Committing locale source changes
+  Catalog: locales.progress.committingLocaleSourceChanges.status
+Line 317: Restoring files after an error
+  Catalog: translator.progress.restoringFilesAfterAnError.status, locales.progress.restoringFilesAfterAnError.status
+Line 343: Save or revert changes before rebuilding.
+  Catalog: locales.message.saveOrRevertChangesBeforeRebuilding.text
+Line 362: Locale maintenance data has not been loaded.
+  Catalog: locales.message.localeMaintenanceDataHasNotBeenLoaded.text
+
+build/mdl-locale-app/shared/contracts.js
+------------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 17
+Line 1: use strict
+Line 4: locale-maintenance:load
+Line 5: locale-maintenance:select
+Line 6: locale-maintenance:request-api-translation
+Line 7: locale-maintenance:replace-with-api-translation
+Line 8: locale-maintenance:apply-translation
+Line 9: locale-maintenance:remove-translation
+Line 10: locale-maintenance:revert
+Line 11: locale-maintenance:reload
+Line 12: locale-maintenance:validate
+Line 13: locale-maintenance:preview-save
+Line 14: locale-maintenance:confirm-save
+Line 15: locale-maintenance:save
+Line 16: locale-maintenance:rebuild
+Line 17: locale-maintenance:cancel-build
+Line 18: locale-maintenance:exit
+Line 22: locale-maintenance:progress
+Found in catalog: 0
+
+build/mdl-locale-app/validation/locale-catalog-validator.js
+-------------------------------------------------------
+Component: locales
+Status: scanned
+Potential candidates: 12
+Line 1: use strict
+Line 22: , message:
+Line 22: , source:
+Line 34: Unknown locale: ${document.locale}
+Line 37: Unknown component: ${document.component}
+Line 44: /entries/${key}
+Line 44: Unknown catalog key: ${key}
+Line 49: /entries/${key}
+Line 50: Catalog key belongs to component ${canonical.component}.
+Line 56: ) !== actual.join(
+Line 58: /entries/${key}/text
+Line 59: Placeholders must be exactly: ${expected.join(', ') || '(none)'}.
+Found in catalog: 0

@@ -1,0 +1,29 @@
+appId: com.macrodm.mydefrag.languageMaintenance
+productName: MyDefrag Language Maintenance
+asar: true
+npmRebuild: false
+directories:
+  output: artifacts/language-maintenance
+files:
+  - build/mdl-language-app/**/*
+  - "!build/mdl-language-app/tests/**/*"
+  - build/shared/renderer-splitter.js
+  - build/shared/renderer-splitter.css
+  - build/shared/renderer-table-columns.js
+  - build/shared/renderer-table-columns.css
+  - build/scripts/build-language.js
+  - build/language/translation/**/*
+  - package.json
+extraMetadata:
+  main: build/mdl-language-app/main/main.js
+  description: Standalone maintenance application for MyDefrag language definitions
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: MyDefrag-Language-Maintenance-${version}-${arch}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  perMachine: false

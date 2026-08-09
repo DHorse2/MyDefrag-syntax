@@ -1,0 +1,49 @@
+.resizable-column-table {
+    min-width: 100%;
+}
+
+.resizable-column-table.has-resized-columns {
+    table-layout: fixed;
+}
+
+.resizable-column-table th {
+    position: sticky;
+    padding-right: 0.85rem;
+}
+
+.table-column-resizer {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    bottom: 0;
+    z-index: 3;
+    width: 9px;
+    outline: 0;
+    cursor: col-resize;
+    touch-action: none;
+}
+
+.table-column-resizer::before {
+    position: absolute;
+    inset: 3px 3px;
+    border-radius: 999px;
+    content: "";
+    background: transparent;
+    transition: background-color 120ms ease, box-shadow 120ms ease;
+}
+
+.table-column-resizer:hover::before,
+.table-column-resizer:focus-visible::before {
+    background: #286b5c;
+    box-shadow: 0 0 0 2px rgb(40 107 92 / 22%);
+}
+
+.resizable-column-table th:last-child .table-column-resizer {
+    right: 0;
+}
+
+body.is-resizing-columns,
+body.is-resizing-columns * {
+    cursor: col-resize !important;
+    user-select: none !important;
+}

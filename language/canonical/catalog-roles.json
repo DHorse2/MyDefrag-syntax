@@ -1,0 +1,144 @@
+{
+  "roles": [
+    {
+      "id": "displayName",
+      "description": "Primary human-readable name for a product, component, extension, or named object."
+    },
+    {
+      "id": "heading",
+      "description": "Heading text that introduces a section or content group."
+    },
+    {
+      "id": "info",
+      "description": "Informational content explicitly distinguished from warnings and errors."
+    },
+    {
+      "id": "label",
+      "description": "Visible label for a control, command, field, navigation target, or data item."
+    },
+    {
+      "id": "list",
+      "description": "A complete list value or list-oriented metadata string."
+    },
+    {
+      "id": "message",
+      "description": "Standalone application or diagnostic message presented to the user."
+    },
+    {
+      "id": "notice",
+      "description": "Non-blocking notice that calls attention to important contextual information."
+    },
+    {
+      "id": "placeholder",
+      "description": "Temporary input text that illustrates the expected value or search scope."
+    },
+    {
+      "id": "status",
+      "description": "Current state or progress text that may change as an operation proceeds."
+    },
+    {
+      "id": "syntax",
+      "description": "Literal language syntax or a syntax-bearing template shown to users."
+    },
+    {
+      "id": "text",
+      "description": "General user-facing text without a more specific linguistic role."
+    },
+    {
+      "id": "title",
+      "description": "Title for a window, dialog, command, page, panel, report, or other named surface."
+    },
+    {
+      "id": "warning",
+      "description": "Warning content that communicates risk or a condition requiring attention."
+    },
+    {
+      "id": "accessKey",
+      "description": "Localized keyboard mnemonic associated with a visible control label."
+    },
+    {
+      "id": "accessibleName",
+      "description": "Non-visible accessible name used when visible content does not name an interface element."
+    },
+    {
+      "id": "altText",
+      "description": "Text alternative that conveys the purpose or content of a non-text element."
+    },
+    {
+      "id": "announcement",
+      "description": "Text intended for an assistive-technology live region or equivalent announcement."
+    },
+    {
+      "id": "caption",
+      "description": "Caption associated with a table, figure, media item, preview, or other content object."
+    },
+    {
+      "id": "description",
+      "description": "Explanatory description of a setting, control, component, option, or result."
+    },
+    {
+      "id": "detail",
+      "description": "Supplemental detail that expands a message, error, dialog, or operation result."
+    },
+    {
+      "id": "error",
+      "description": "Error content describing a failed operation or invalid condition."
+    },
+    {
+      "id": "example",
+      "description": "Example value, command, syntax fragment, or usage illustration."
+    },
+    {
+      "id": "help",
+      "description": "Contextual help text that explains behavior or available actions."
+    },
+    {
+      "id": "hint",
+      "description": "Short hint about input format, expected behavior, or a useful next action."
+    },
+    {
+      "id": "instruction",
+      "description": "Instruction that tells the user how to complete a task or resolve a condition."
+    },
+    {
+      "id": "item",
+      "description": "Text representing one item in a list, tree, collection, or result set."
+    },
+    {
+      "id": "structural",
+      "description": "Paths or hyperlink text partially of fully reflecting app folder structure. These might include document names in need of translation. If a full translation includes folder structure this directly affects code. Testing would be advised."
+    },
+    {
+      "id": "option",
+      "description": "Text for one selectable option, choice, mode, or preference value."
+    },
+    {
+      "id": "plural",
+      "description": "Plural-sensitive message or quantity text requiring locale-aware selection."
+    },
+    {
+      "id": "prompt",
+      "description": "Prompt requesting input, confirmation, or another user response."
+    },
+    {
+      "id": "question",
+      "description": "Interrogative text presented as a question to the user."
+    },
+    {
+      "id": "shortcut",
+      "description": "Displayed keyboard shortcut or key-chord text."
+    },
+    {
+      "id": "summary",
+      "description": "Condensed result, count, coverage statement, or operation overview."
+    },
+    {
+      "id": "tooltip",
+      "description": "Concise hover or focus help for a control or interface element."
+    },
+    {
+      "id": "value",
+      "description": "Displayed value text associated with a field, property, metric, or state."
+    }
+  ]
+}

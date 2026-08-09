@@ -1,0 +1,49 @@
+{
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Mi desfragmentador: No hay ningún diagnóstico disponible actualmente."
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "index",
+        "total"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "$(warning) Mi Desfragmentador {index} / {total}"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "$(check) Diagnóstico de My Defragmenter 0"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "current",
+        "eligible",
+        "all",
+        "remaining",
+        "remainingFiles",
+        "traversableFiles",
+        "totalFiles",
+        "fixed",
+        "ignored",
+        "skipped"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Diagnósticos: {current} / {eligible} / {all} ({remaining}: archivos restantes; {remainingFiles} / {traversableFiles} / {totalFiles}: archivos corregidos; {fixed}: ignorados; {ignored}: omitidos; {skipped})"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "es"
+}

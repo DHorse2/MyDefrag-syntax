@@ -1,0 +1,45 @@
+{
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "depth",
+        "path"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "BEGIN [Tiefe {depth}] {path}"
+    },
+    "preview.annotation.includeEnd.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "depth",
+        "path"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "ENDE [Tiefe {depth}] {path}"
+    },
+    "preview.report.includeFiles.heading": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "count"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Dateien einbinden. (Es wurden {count}-Datei(en) verarbeitet)"
+    },
+    "preview.warning.missingInclude.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "uri"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "*** WARNUNG: Fehlendes Include („{uri}“) ***"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "de"
+}

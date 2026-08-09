@@ -11,10 +11,8 @@
 /node_modules/
 
 # Requested repository exclusions
-/build/
-/language/
-/build.zip
-/language.zip
+*.zip
+
 
 # Generated packages, build artifacts, and test output
 /artifacts/

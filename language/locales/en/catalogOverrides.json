@@ -1,0 +1,107 @@
+{
+  "locale": "en",
+  "status": "approved",
+  "entries": [],
+  "keywords": [
+    {
+      "id": "structure.volumeSelect",
+      "text": "VolumeSelect",
+      "status": "approved"
+    },
+    {
+      "id": "structure.volumeActions",
+      "text": "VolumeActions",
+      "status": "approved"
+    },
+    {
+      "id": "structure.volumeEnd",
+      "text": "VolumeEnd",
+      "status": "approved"
+    },
+    {
+      "id": "structure.fileSelect",
+      "text": "FileSelect",
+      "status": "approved"
+    },
+    {
+      "id": "structure.fileActions",
+      "text": "FileActions",
+      "status": "approved"
+    },
+    {
+      "id": "structure.fileEnd",
+      "text": "FileEnd",
+      "status": "approved"
+    },
+    {
+      "id": "script.excludeVolumes",
+      "text": "ExcludeVolumes",
+      "status": "approved"
+    },
+    {
+      "id": "script.excludeFiles",
+      "text": "ExcludeFiles",
+      "status": "approved"
+    },
+    {
+      "id": "volumeCondition.name",
+      "text": "Name",
+      "status": "approved"
+    },
+    {
+      "id": "volumeCondition.label",
+      "text": "Label",
+      "status": "approved"
+    },
+    {
+      "id": "volumeCondition.size",
+      "text": "Size",
+      "status": "approved"
+    },
+    {
+      "id": "volumeCondition.fragmentCount",
+      "text": "FragmentCount",
+      "status": "approved"
+    },
+    {
+      "id": "fileCondition.fileName",
+      "text": "FileName",
+      "status": "approved"
+    },
+    {
+      "id": "fileCondition.directoryName",
+      "text": "DirectoryName",
+      "status": "approved"
+    },
+    {
+      "id": "fileCondition.fullPath",
+      "text": "FullPath",
+      "status": "approved"
+    },
+    {
+      "id": "fileAction.defragment",
+      "text": "Defragment",
+      "status": "approved"
+    },
+    {
+      "id": "fileAction.fastFill",
+      "text": "FastFill",
+      "status": "approved"
+    },
+    {
+      "id": "fileAction.sortByName",
+      "text": "SortByName",
+      "status": "approved"
+    },
+    {
+      "id": "setting.setVariable",
+      "text": "SetVariable",
+      "status": "approved"
+    },
+    {
+      "id": "setting.setColor",
+      "text": "SetColor",
+      "status": "approved"
+    }
+  ]
+}

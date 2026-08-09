@@ -1,0 +1,945 @@
+{
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Вывод команды «Сборка»"
+    },
+    "locales.accessibility.component.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Компонент"
+    },
+    "locales.accessibility.locale.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Локаль"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Мероприятия по техническому обслуживанию"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Операция в процессе выполнения"
+    },
+    "locales.action.applyInMemory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Применить в памяти"
+    },
+    "locales.action.close.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Закрыть"
+    },
+    "locales.action.exit.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Выход"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сгенерировать перевод API"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Пересобрать выбранный компонент"
+    },
+    "locales.action.reload.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Обновить"
+    },
+    "locales.action.revert.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Вернуть предыдущее состояние"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сохранить и перестроить"
+    },
+    "locales.action.stopBuild.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Остановить сборку"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Использовать английский язык в качестве запасного варианта"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Используйте нормализованный английский"
+    },
+    "locales.action.validate.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Проверить"
+    },
+    "locales.dialog.cancel.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Отменить"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Подтвердить изменения в исходном коде локализации"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сбросить и перезагрузить"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Удалить несохраненные переводы?"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Выйти без сохранения"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Идет сборка локального компонента"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Настройка языка программы дефрагментации"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Никакие файлы не будут изменены."
+    },
+    "locales.dialog.returnToBuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Вернуться к сборке"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сохранение и сборка компонента прошли успешно"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сохранить и пересобрать компонент"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сохранение заблокировано в результате проверки"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сохранение не удалось, и операция была отменена"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Выберите репозиторий синтаксиса «Мой дефрагментатор»"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Несохраненные изменения локали"
+    },
+    "locales.heading.catalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Каталог"
+    },
+    "locales.heading.localeOperation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Работа с локалями"
+    },
+    "locales.heading.operationResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Результат операции"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Выберите языковую локаль и компонент"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Создать перевод на основе текущего значения локали"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ключ, исходный текст, перевод, статус"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Не был выбран действительный репозиторий локалей для My Defragmenter."
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Отказ в переводе API"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Перевод API недоступен"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Не удалось запустить приложение"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Стандартный английский язык не является целевым языком перевода API."
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "canonicalComponent"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ключ каталога относится к компоненту «{canonicalComponent}»."
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Выберите репозиторий, в котором хранятся языковые локали /, и создайте языковую версию /."
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ошибка при восстановлении компонента"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Перед сменой локали или компонента отмените или сохраните изменения."
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Здесь читается исключительно канонический текст на английском языке."
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Английский текст является каноническим и должен поддерживаться в разделе «Языковое обслуживание» My Defragmenter."
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Перед генерацией перевода через API введите или заполните значение «Текущая локаль»."
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Удалить и отменить выбранные переводы компонентов?"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Перед заменой значения сгенерируйте перевод API."
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "relativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "В файле «{relativePath}» обнаружено несоответствие идентификаторов в каталоге локалей:"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сгенерированный каталог локалей является недействительным:"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сгенерированные переводы необходимо применить, прежде чем их можно будет удалить из исходных данных."
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Данные по обслуживанию локали не загружены."
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "missing"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Это не репозиторий локалей для My Defragmenter. Отсутствует: {missing}"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "relativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Путь выходит за пределы корневого каталога репозитория: {relativePath}"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "expected"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Заполнители должны иметь следующий формат: {expected}."
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "При перезагрузке изменения, внесенные в выбранный компонент локали, будут сброшены."
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Перед перекомпиляцией сохраните или отмените изменения."
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Восстановлен выбранный компонент"
+    },
+    "locales.message.selectionFailed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Выбор не удался"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Схема компонента локали недоступна."
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Основной процесс использовал другое значение текущей локали. Перезапустите модуль обслуживания локалей и повторите попытку."
+    },
+    "locales.message.translationRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Перевод отклонен"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "key"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Неизвестный ключ каталога: {key}"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "componentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Неизвестный компонент: {componentId}"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "documentComponent"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Неизвестный компонент: {documentComponent}"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "payloadKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Неизвестный ключ для выбранного компонента: {payloadKey}"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "localeId"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Неизвестная локаль: {localeId}"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "documentLocale"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Неизвестная локаль: {documentLocale}"
+    },
+    "locales.message.validationResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Результат проверки"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Перед выходом дождитесь завершения сборки."
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "normalizedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Записать в авторитетный(ые) файл(ы) {normalizedCount}?"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сохранение сгенерированных файлов для отката"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Проверка изменений в сгенерированном файле"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Фиксация изменений в исходном коде локали"
+    },
+    "locales.progress.preparingSave.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Подготовка к сохранению"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Восстановление авторитетных и сгенерированных файлов"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Восстановление файлов после ошибки"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Сохранение компонента локали"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Запуск сохранения и пересчёта компонентов"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Остановка сборки компонента"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Воспользуйтесь командой «Остановить сборку» в окне прогресса, а затем дождитесь завершения отката, прежде чем закрывать приложение."
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ожидание подтверждения сохранения"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Создание авторитетных файлов локализации"
+    },
+    "locales.ui.badgeValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateDirty"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "значок {stateDirty}"
+    },
+    "locales.ui.badgeValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateValidationOk"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "значок {stateValidationOk}"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Канонический английский язык"
+    },
+    "locales.ui.catalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ключ каталога"
+    },
+    "locales.ui.componentStrings.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Строки компонентов"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Текущее значение локали"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Deep L не настроен. Перед запуском приложения необходимо настроить Deepl API."
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Deep L заменило текущее значение локали. Примените изменения в памяти, чтобы сохранить их."
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Отменить изменения при преобразовании памяти?"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Удалить несохраненные переводы и изменить выбор?"
+    },
+    "locales.ui.englishFallback.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Резервный вариант на английском языке"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Создать перевод на основе текущего значения локали. Результат заменит только это поле."
+    },
+    "locales.ui.generatedValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateGeneratedFile"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Создано: {stateGeneratedFile}"
+    },
+    "locales.ui.key.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ключ"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Последние результаты Deep L"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Нет несохраненных изменений"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Нормализованный английский"
+    },
+    "locales.ui.notValidated.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Не подтверждено"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Подготовка к пересборке компонента"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Восстановление компонента локали"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Запрос на перевод с помощью Deep L."
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Обязательные поля"
+    },
+    "locales.ui.reviewStatus.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Статус проверки"
+    },
+    "locales.ui.search.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Поиск"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Выберите запись из каталога"
+    },
+    "locales.ui.sourceText.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Исходный текст"
+    },
+    "locales.ui.sourceValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateAuthoritativeFile"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Источник: {stateAuthoritativeFile}"
+    },
+    "locales.ui.status.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Статус"
+    },
+    "locales.ui.structuredEditor.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Структурированный редактор"
+    },
+    "locales.ui.translation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Перевод"
+    },
+    "locales.ui.translationScope.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Объем перевода"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Перевод недоступен."
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Настольное приложение для переводчиков"
+    },
+    "locales.ui.translatorNotes.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Примечания переводчика"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Несохраненные изменения"
+    },
+    "locales.ui.valid.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Действительно"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateCompletenessFallback"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{stateCompletenessFallback} Резервный вариант на английском языке"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "rowApiTranslationProvider"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{rowApiTranslationProvider} Результат готов. Примените в памяти, чтобы сохранить текущее значение локали."
+    },
+    "locales.ui.valueTotal.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateCompletenessTotal"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{stateCompletenessTotal} всего"
+    },
+    "locales.ui.valueTranslated.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateCompletenessTranslated"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{stateCompletenessTranslated} переведено"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateValidationErrorsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{stateValidationErrorsCount} ошибка(и) валидации"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "ru"
+}

@@ -1,0 +1,160 @@
+{
+  "categories": [
+    {
+      "id": "accessibility",
+      "description": "Accessible names, labels, and assistive-technology text."
+    },
+    {
+      "id": "action",
+      "description": "User-invoked actions, including button and command labels."
+    },
+    {
+      "id": "annotation",
+      "description": "Annotations embedded in previews or generated content."
+    },
+    {
+      "id": "catagories",
+      "description": "Legacy misspelling currently used by package.catagories.list; prefer categories for new records."
+    },
+    {
+      "id": "command",
+      "description": "Extension command titles exposed by the host application."
+    },
+    {
+      "id": "diagnostic",
+      "description": "Parser, server, and workspace diagnostic messages."
+    },
+    {
+      "id": "dialog",
+      "description": "Dialog titles, questions, details, and response labels."
+    },
+    {
+      "id": "directive",
+      "description": "Language directives and directive-oriented syntax text."
+    },
+    {
+      "id": "heading",
+      "description": "Section and page headings."
+    },
+    {
+      "id": "input",
+      "description": "Input placeholders and input-specific guidance."
+    },
+    {
+      "id": "message",
+      "description": "General informational, warning, and application messages."
+    },
+    {
+      "id": "metadata",
+      "description": "Package and application metadata displayed to users."
+    },
+    {
+      "id": "product",
+      "description": "Product identity and display-name text."
+    },
+    {
+      "id": "progress",
+      "description": "Long-running operation status and progress text."
+    },
+    {
+      "id": "report",
+      "description": "Generated report titles, headings, and report-oriented text."
+    },
+    {
+      "id": "status",
+      "description": "Persistent status indicators and status-bar text."
+    },
+    {
+      "id": "translation",
+      "description": "Translation workflow notices and review guidance."
+    },
+    {
+      "id": "tree",
+      "description": "Tree-view headers, nodes, and tree navigation labels."
+    },
+    {
+      "id": "ui",
+      "description": "General interface text not yet assigned to a narrower category."
+    },
+    {
+      "id": "warning",
+      "description": "Prominent warning text outside diagnostic and message flows."
+    },
+    {
+      "id": "categories",
+      "description": "Category inventory and category-selection labels; preferred replacement for catagories."
+    },
+    {
+      "id": "application",
+      "description": "Application-level behavior, lifecycle, and maintenance operations."
+    },
+    {
+      "id": "confirmation",
+      "description": "Confirmation questions for consequential or destructive actions."
+    },
+    {
+      "id": "empty-state",
+      "description": "Guidance shown when a list, table, or result set is empty."
+    },
+    {
+      "id": "error",
+      "description": "Operation and application failures that are not language diagnostics."
+    },
+    {
+      "id": "field",
+      "description": "Form-field labels, descriptions, requirements, and field help."
+    },
+    {
+      "id": "filter",
+      "description": "Search, filter, sort, and scope controls."
+    },
+    {
+      "id": "help",
+      "description": "Explanatory, onboarding, instructional, and contextual help text."
+    },
+    {
+      "id": "menu",
+      "description": "Application, context-menu, and overflow-menu labels."
+    },
+    {
+      "id": "navigation",
+      "description": "Navigation destinations, breadcrumbs, tabs, and panel selectors."
+    },
+    {
+      "id": "notification",
+      "description": "Transient notifications, banners, and toast messages."
+    },
+    {
+      "id": "prompt",
+      "description": "Questions and instructions that request user input or a decision."
+    },
+    {
+      "id": "setting",
+      "description": "Configuration names, descriptions, choices, and defaults."
+    },
+    {
+      "id": "summary",
+      "description": "Counts, coverage summaries, totals, and compact result overviews."
+    },
+    {
+      "id": "table",
+      "description": "Table headings, column labels, row labels, and tabular summaries."
+    },
+    {
+      "id": "tooltip",
+      "description": "Hover help and concise control explanations."
+    },
+    {
+      "id": "validation",
+      "description": "Validation rules, results, errors, warnings, and remediation guidance."
+    },
+    {
+      "id": "window",
+      "description": "Window, page, panel, and view titles."
+    },
+    {
+      "id": "path",
+      "description": "Folder and item paths that may need translation. Documents or translated folders."
+    }
+  ]
+}

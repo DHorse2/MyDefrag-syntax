@@ -1,0 +1,63 @@
+{
+  "component": "extension",
+  "entries": {
+    "extension.command.configureFolders.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کننده من: پیکربندی پوشه‌ها"
+    },
+    "extension.command.openPreview.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "پیش‌نمایش باز"
+    },
+    "extension.command.openSettings.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کنندهٔ من: تنظیمات را باز کنید"
+    },
+    "extension.message.noActiveDocument.warning": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "خیر، سند My Defragmenter فعال نیست."
+    },
+    "extension.product.displayName": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "اسکریپت Defragmenter من (.MyDc / .MyD)"
+    },
+    "extension.status.parser.fragment.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "قطعهٔ دِفرَگمنتَر من (.mydc)"
+    },
+    "extension.status.parser.script.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "اسکریپت Defragmenter من (.myd)"
+    },
+    "extension.status.parser.unknown.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Defragmenter من، نوع سند ناشناخته"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "fa"
+}

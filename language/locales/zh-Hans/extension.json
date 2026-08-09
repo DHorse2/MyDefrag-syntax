@@ -1,0 +1,24 @@
+{
+  "locale": "zh-Hans",
+  "component": "extension",
+  "entries": {
+    "extension.command.openPreview.title": {
+      "text": "打开预览",
+      "status": "approved",
+      "notes": "Representative sample only."
+    },
+    "extension.command.openSettings.title": {
+      "text": "我的磁盘碎片整理工具：打开“设置”",
+      "status": "native-review-required",
+      "notes": "Representative sample only."
+    },
+    "extension.message.noActiveDocument.warning": {
+      "text": "当前没有“我的碎片整理程序”文档处于活动状态。",
+      "status": "machine-generated"
+    },
+    "extension.product.displayName": {
+      "text": "我的磁盘碎片整理脚本（.MyDc / .MyD）",
+      "status": "approved"
+    }
+  }
+}

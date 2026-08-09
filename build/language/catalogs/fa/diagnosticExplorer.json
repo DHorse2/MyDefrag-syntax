@@ -1,0 +1,49 @@
+{
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کنندهٔ من: هیچ تشخیص فعلی وجود ندارد."
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "index",
+        "total"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "$(warning) Defragmenter من {index} / {total}"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "$(check) تشخیص‌های Defragmenter 0"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "current",
+        "eligible",
+        "all",
+        "remaining",
+        "remainingFiles",
+        "traversableFiles",
+        "totalFiles",
+        "fixed",
+        "ignored",
+        "skipped"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "تشخیصی: {current} / {eligible} / {all} ({remaining} باقی‌مانده، {remainingFiles} / {traversableFiles} / {totalFiles} فایل‌ها، {fixed} تعمیر شده، {ignored} نادیده گرفته شده، {skipped} رد شده)"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "fa"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MyDefrag normalized word substitutions",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "input",
+      "output"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "input": {
+        "type": "string",
+        "minLength": 1
+      },
+      "output": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

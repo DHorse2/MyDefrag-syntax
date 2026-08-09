@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+    <title>MyDefrag Locale Maintenance</title>
+    <link rel="stylesheet" href="../../shared/renderer-splitter.css">
+    <link rel="stylesheet" href="../../shared/renderer-table-columns.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="header-identity">
+            <p class="eyebrow">Translator desktop tool</p>
+            <h1>MyDefrag Locale Maintenance</h1>
+            <p id="project-root" class="project-root"></p>
+        </div>
+        <div class="status-stack">
+            <span id="dirty-badge" class="badge clean">No unsaved changes</span>
+            <span id="validation-badge" class="badge neutral">Not validated</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="selection-card" aria-labelledby="selection-heading">
+            <div>
+                <p class="eyebrow">Translation scope</p>
+                <h2 id="selection-heading">Select a locale and component</h2>
+            </div>
+            <label>Locale
+                <select id="locale-select" aria-label="Locale"></select>
+            </label>
+            <label>Component
+                <select id="component-select" aria-label="Component"></select>
+            </label>
+            <div id="scope-details" class="scope-details"></div>
+        </section>
+
+        <section id="read-only-notice" class="notice" hidden></section>
+
+        <section class="workspace">
+            <div class="catalog-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Component strings</p>
+                        <h2 id="catalog-title">Catalog</h2>
+                    </div>
+                    <label class="search-label">Search
+                        <input id="search-input" type="search" placeholder="Key, source, translation, status">
+                    </label>
+                </div>
+                <div id="completeness" class="completeness"></div>
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr><th>Key</th><th>Source text</th><th>Translation</th><th>Status</th></tr>
+                        </thead>
+                        <tbody id="catalog-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <aside class="editor-panel" aria-labelledby="editor-heading">
+                <p class="eyebrow">Structured editor</p>
+                <h2 id="editor-heading">Select a catalog entry</h2>
+                <form id="translation-form">
+                    <div class="editor-form-grid">
+                        <div class="editor-details">
+                            <label>Catalog key<input id="entry-key" type="text" readonly></label>
+                            <label>Canonical English<textarea id="source-text" rows="3" readonly></textarea></label>
+                            <label>Normalized English<textarea id="normalized-text" rows="3" readonly></textarea></label>
+                            <label>Required placeholders<input id="placeholders" type="text" readonly></label>
+                            <div id="translation-comparison" class="translation-comparison">
+                                <div class="translation-value-pane">
+                                    <label>Current locale value<textarea id="translation-text" rows="4" required></textarea></label>
+                                </div>
+                                <div class="api-translation-field translation-value-pane">
+                                    <label>Latest DeepL result<textarea id="api-translation-text" rows="4" readonly placeholder="Generate a translation from Current locale value"></textarea></label>
+                                    <p id="api-translation-status" class="field-help"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-controls">
+                            <div class="form-actions">
+                                <button id="request-api-button" type="button" class="secondary">Generate API translation</button>
+                            </div>
+                            <label>Review status<select id="translation-status"></select></label>
+                            <label>Translator notes<textarea id="translation-notes" rows="4"></textarea></label>
+                            <div class="form-actions">
+                                <button id="apply-button" type="submit">Apply in memory</button>
+                                <button id="remove-button" type="button" class="secondary">Use English fallback</button>
+                                <button id="use-normalized-button" type="button" class="secondary">Use Normalized English</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </aside>
+        </section>
+
+        <section class="action-bar" aria-label="Maintenance actions">
+            <button id="save-button">Save and rebuild</button>
+            <button id="revert-button" class="secondary">Revert</button>
+            <button id="validate-button" class="secondary">Validate</button>
+            <button id="rebuild-button" class="secondary">Rebuild selected component</button>
+            <button id="reload-button" class="secondary">Reload</button>
+            <button id="exit-button" class="secondary">Exit</button>
+        </section>
+
+        <section id="result-panel" class="result-panel" hidden>
+            <div class="panel-heading"><h2 id="result-title">Operation result</h2><button id="close-result" class="secondary">Close</button></div>
+            <pre id="result-content"></pre>
+        </section>
+    </main>
+
+    <dialog id="progress-dialog" class="progress-dialog" aria-labelledby="progress-title" aria-describedby="progress-status">
+        <div class="progress-heading">
+            <h2 id="progress-title">Locale operation</h2>
+            <span id="progress-elapsed">0:00</span>
+        </div>
+        <progress aria-label="Operation in progress"></progress>
+        <p id="progress-status" role="status" aria-live="polite">Starting...</p>
+        <pre id="progress-output" aria-label="Build command output"></pre>
+        <div class="progress-actions">
+            <button id="cancel-build-button" type="button" disabled>Stop build</button>
+        </div>
+    </dialog>
+    <script src="../../shared/renderer-splitter.js"></script>
+    <script src="../../shared/renderer-table-columns.js"></script>
+    <script src="ui-state.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

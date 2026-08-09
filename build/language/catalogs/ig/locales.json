@@ -1,0 +1,945 @@
+{
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Build command output"
+    },
+    "locales.accessibility.component.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Component"
+    },
+    "locales.accessibility.locale.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locale"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Maintenance actions"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Operation in progress"
+    },
+    "locales.action.applyInMemory.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Apply in memory"
+    },
+    "locales.action.close.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Close"
+    },
+    "locales.action.exit.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Exit"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generate API translation"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Rebuild selected component"
+    },
+    "locales.action.reload.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Reload"
+    },
+    "locales.action.revert.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Revert"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Save and rebuild"
+    },
+    "locales.action.stopBuild.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Stop build"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use English fallback"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use Normalized English"
+    },
+    "locales.action.validate.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validate"
+    },
+    "locales.dialog.cancel.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Cancel"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Confirm locale source changes"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Discard and reload"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Discard unsaved translations?"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Exit without saving"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locale component build is running"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "MyDefrag Locale Maintenance"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "No files will change."
+    },
+    "locales.dialog.returnToBuild.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Return to build"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Save and component build succeeded"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Save and rebuild component"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Save blocked by validation"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Save failed and was rolled back"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select the MyDefrag-syntax repository"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unsaved locale changes"
+    },
+    "locales.heading.catalog.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Catalog"
+    },
+    "locales.heading.localeOperation.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locale operation"
+    },
+    "locales.heading.operationResult.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Operation result"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select a locale and component"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generate a translation from Current locale value"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Key, source, translation, status"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "A valid MyDefrag locale repository was not selected."
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "API translation rejected"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "API translation unavailable"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Application failed to start"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Canonical English is not an API translation target."
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "canonicalComponent"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Catalog key belongs to component {canonicalComponent}."
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Choose the repository that owns language/locales and build/language."
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Component rebuild failed"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Discard or save changes before changing locale or component."
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "English canonical text is read-only here."
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "English text is canonical and must be maintained in MyDefrag Language Maintenance."
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Enter or populate Current locale value before generating an API translation."
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Exit and discard the selected component translations?"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generate an API translation before replacing the value."
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "relativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated locale catalog identity mismatch in {relativePath}:"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated locale catalog is invalid:"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated translations must be applied before they can be removed from authored data."
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locale maintenance data has not been loaded."
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "missing"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Not a MyDefrag locale repository. Missing: {missing}"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "relativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Path escapes the repository root: {relativePath}"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "expected"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Placeholders must be exactly: {expected}."
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Reloading will discard changes to the selected locale component."
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Save or revert changes before rebuilding."
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Selected component rebuilt"
+    },
+    "locales.message.selectionFailed.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Selection failed"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The locale component schema is unavailable."
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The main process translated a different Current locale value. Restart Locale Maintenance and retry."
+    },
+    "locales.message.translationRejected.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Translation rejected"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "key"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unknown catalog key: {key}"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "componentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unknown component: {componentId}"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "documentComponent"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unknown component: {documentComponent}"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "payloadKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unknown key for selected component: {payloadKey}"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "localeId"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unknown locale: {localeId}"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "documentLocale"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unknown locale: {documentLocale}"
+    },
+    "locales.message.validationResult.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validation result"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Wait for the build to finish before exiting."
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "normalizedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Write {normalizedCount} authoritative file(s)?"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Capturing generated files for rollback"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Checking generated file changes"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Committing locale source changes"
+    },
+    "locales.progress.preparingSave.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Restoring authoritative and generated files"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Restoring files after an error"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Saving locale component"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Starting save and component rebuild"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Stopping component build"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use Stop build in the progress window, then wait for rollback to complete before closing the application."
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Waiting for save confirmation"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Writing authoritative locale files"
+    },
+    "locales.ui.badgeValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "stateDirty"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "badge {stateDirty}"
+    },
+    "locales.ui.badgeValue.text2": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "stateValidationOk"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "badge {stateValidationOk}"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Canonical English"
+    },
+    "locales.ui.catalogKey.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Catalog key"
+    },
+    "locales.ui.componentStrings.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Component strings"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Current locale value"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "DeepL is not configured. Set DeeplApi before launching the application."
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "DeepL replaced Current locale value. Apply in memory to retain it."
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Discard in-memory translation changes?"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Discard unsaved translations and change the selection?"
+    },
+    "locales.ui.englishFallback.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "English fallback"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generate a translation from Current locale value. The result replaces that field only."
+    },
+    "locales.ui.generatedValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "stateGeneratedFile"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated: {stateGeneratedFile}"
+    },
+    "locales.ui.key.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Key"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Latest DeepL result"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "No unsaved changes"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Normalized English"
+    },
+    "locales.ui.notValidated.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Not validated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing component rebuild"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Rebuilding locale component"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Requesting a DeepL translation…"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Required placeholders"
+    },
+    "locales.ui.reviewStatus.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Review status"
+    },
+    "locales.ui.search.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Search"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select a catalog entry"
+    },
+    "locales.ui.sourceText.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Source text"
+    },
+    "locales.ui.sourceValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "stateAuthoritativeFile"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Source: {stateAuthoritativeFile}"
+    },
+    "locales.ui.status.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Status"
+    },
+    "locales.ui.structuredEditor.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Structured editor"
+    },
+    "locales.ui.translation.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Translation"
+    },
+    "locales.ui.translationScope.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Translation scope"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Translation unavailable."
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Translator desktop tool"
+    },
+    "locales.ui.translatorNotes.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Translator notes"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unsaved changes"
+    },
+    "locales.ui.valid.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Valid"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "stateCompletenessFallback"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{stateCompletenessFallback} English fallback"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "rowApiTranslationProvider"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{rowApiTranslationProvider} result ready. Apply in memory to retain Current locale value."
+    },
+    "locales.ui.valueTotal.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "stateCompletenessTotal"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{stateCompletenessTotal} total"
+    },
+    "locales.ui.valueTranslated.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "stateCompletenessTranslated"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{stateCompletenessTranslated} translated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "stateValidationErrorsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{stateValidationErrorsCount} validation error(s)"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "ig"
+}

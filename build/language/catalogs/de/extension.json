@@ -1,0 +1,63 @@
+{
+  "component": "extension",
+  "entries": {
+    "extension.command.configureFolders.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "Mein Defragmentierer: Ordner konfigurieren"
+    },
+    "extension.command.openPreview.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "Vorschau öffnen"
+    },
+    "extension.command.openSettings.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "Mein Defragmentierer: Einstellungen öffnen"
+    },
+    "extension.message.noActiveDocument.warning": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Es ist kein „My Defragmenter“-Dokument aktiv."
+    },
+    "extension.product.displayName": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "Mein Defragmentierungsskript (.MyDc / .MyD)"
+    },
+    "extension.status.parser.fragment.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Mein Defragmentierer-Fragment (.mydc)"
+    },
+    "extension.status.parser.script.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Mein Defragmentierungsskript (.myd)"
+    },
+    "extension.status.parser.unknown.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Mein Defragmentierer – Unbekannter Dokumenttyp"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "de"
+}

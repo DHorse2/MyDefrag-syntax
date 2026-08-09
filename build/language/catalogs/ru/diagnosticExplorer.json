@@ -1,0 +1,49 @@
+{
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "«Мой дефрагментатор»: Диагностика в данный момент не проводится."
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "index",
+        "total"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "$(warning) Мой дефрагментатор {index} / {total}"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "$(check) Диагностика программы «My Defragmenter 0»"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "current",
+        "eligible",
+        "all",
+        "remaining",
+        "remainingFiles",
+        "traversableFiles",
+        "totalFiles",
+        "fixed",
+        "ignored",
+        "skipped"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Диагностика: {current} / {eligible} / {all} ({remaining} остались, {remainingFiles} / {traversableFiles} / {totalFiles} файлы, исправлено {fixed}, проигнорировано {ignored}, пропущено {skipped})"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "ru"
+}

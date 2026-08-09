@@ -1,0 +1,30 @@
+appId: com.macrodm.mydefrag.localeMaintenance
+productName: MyDefrag Locale Maintenance
+asar: true
+npmRebuild: false
+directories:
+  output: artifacts/locale-maintenance
+files:
+  - build/mdl-locale-app/**/*
+  - "!build/mdl-locale-app/tests/**/*"
+  - build/shared/renderer-splitter.js
+  - build/shared/renderer-splitter.css
+  - build/shared/renderer-table-columns.js
+  - build/shared/renderer-table-columns.css
+  - build/mdl-language-app/services/build-integration.js
+  - build/scripts/build-language.js
+  - build/language/translation/**/*
+  - package.json
+extraMetadata:
+  main: build/mdl-locale-app/main/main.js
+  description: Standalone translator application for MyDefrag locale component catalogs
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: MyDefrag-Locale-Maintenance-${version}-${arch}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  perMachine: false

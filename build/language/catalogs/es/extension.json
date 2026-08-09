@@ -1,0 +1,63 @@
+{
+  "component": "extension",
+  "entries": {
+    "extension.command.configureFolders.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "Mi desfragmentador: Configurar carpetas"
+    },
+    "extension.command.openPreview.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "Abrir vista previa"
+    },
+    "extension.command.openSettings.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "Mi desfragmentador: Abrir configuración"
+    },
+    "extension.message.noActiveDocument.warning": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "No hay ningún documento de «My Defragmenter» activo."
+    },
+    "extension.product.displayName": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "Mi script de desfragmentación (.MyDc / .MyD)"
+    },
+    "extension.status.parser.fragment.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Mi fragmento del desfragmentador (.mydc)"
+    },
+    "extension.status.parser.script.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Mi script de desfragmentación (.myd)"
+    },
+    "extension.status.parser.unknown.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Mi desfragmentador. Tipo de documento desconocido"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "es"
+}

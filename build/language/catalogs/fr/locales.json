@@ -1,0 +1,945 @@
+{
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sortie de la commande de compilation"
+    },
+    "locales.accessibility.component.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Composant"
+    },
+    "locales.accessibility.locale.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Paramètres régionaux"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Opérations de maintenance"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Opération en cours"
+    },
+    "locales.action.applyInMemory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Appliquer en mémoire"
+    },
+    "locales.action.close.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fermer"
+    },
+    "locales.action.exit.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sortie"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Générer la traduction de l'API"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Reconstruire le composant sélectionné"
+    },
+    "locales.action.reload.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Actualiser"
+    },
+    "locales.action.revert.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Revenir en arrière"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Enregistrer et reconstruire"
+    },
+    "locales.action.stopBuild.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Arrêter la compilation"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Utiliser l'anglais comme langue de secours"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Utiliser l'anglais normalisé"
+    },
+    "locales.action.validate.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Valider"
+    },
+    "locales.dialog.cancel.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Annuler"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Valider les modifications apportées aux fichiers de localisation"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Vider et recharger"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Supprimer les traductions non enregistrées ?"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Quitter sans enregistrer"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "La compilation du composant de localisation est en cours"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Gestion des paramètres régionaux de mon défragmenteur"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Aucun fichier ne sera modifié."
+    },
+    "locales.dialog.returnToBuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Retour à la version"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Enregistrement et compilation du composant réussis"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Enregistrer et reconstruire le composant"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Enregistrement bloqué par la validation"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "L'enregistrement a échoué et a été annulé"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sélectionnez le référentiel de syntaxe « My Defragmenter »"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Modifications de paramètres régionaux non enregistrées"
+    },
+    "locales.heading.catalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Catalogue"
+    },
+    "locales.heading.localeOperation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fonctionnement par paramètres régionaux"
+    },
+    "locales.heading.operationResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Résultat de l'opération"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sélectionnez une configuration régionale et un composant"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Générer une traduction à partir de la valeur actuelle de la locale"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Clé, source, traduction, statut"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Aucun référentiel de paramètres régionaux valide pour « Mon Défragmenteur » n'a été sélectionné."
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Traduction de l'API rejetée"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Traduction de l'API indisponible"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "L'application n'a pas pu démarrer"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "L'anglais standard ne fait pas partie des langues cibles de traduction de l'API."
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "canonicalComponent"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "La clé de catalogue correspond au composant « {canonicalComponent} »."
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sélectionnez le référentiel contenant les fichiers de localisation de la langue / et la version / de cette langue."
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Échec de la reconstruction du composant"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ignorez ou enregistrez les modifications avant de changer de paramètres régionaux ou de composant."
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ici, on ne lit que le texte canonique anglais."
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Le texte en anglais fait autorité et doit être mis à jour dans la section « Gestion des langues » de My Defragmenter."
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Saisissez ou définissez la valeur de la locale actuelle avant de générer une traduction via l'API."
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Voulez-vous quitter et supprimer les traductions des composants sélectionnés ?"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Générez une traduction de l'API avant de remplacer la valeur."
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "relativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Incohérence d'identité du catalogue de paramètres régionaux généré dans {relativePath} :"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Le catalogue de paramètres régionaux généré n'est pas valide :"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Les traductions générées doivent être appliquées avant de pouvoir être supprimées des données créées."
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Les données de maintenance des paramètres régionaux n'ont pas été chargées."
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "missing"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ce n'est pas un référentiel de paramètres régionaux pour My Defragmenter. Manquant : {missing}"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "relativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Le chemin d'accès sort de la racine du référentiel : {relativePath}"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "expected"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Les espaces réservés doivent être exactement les suivants : {expected}."
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Le rafraîchissement annulera les modifications apportées au composant de paramètres régionaux sélectionné."
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Enregistrez ou annulez les modifications avant de relancer la compilation."
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pièce sélectionnée remise à neuf"
+    },
+    "locales.message.selectionFailed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Échec de la sélection"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Le schéma des composants de paramètres régionaux n'est pas disponible."
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Le processus principal a traduit une valeur de paramètres régionaux actuelle différente. Redémarrez la gestion des paramètres régionaux et réessayez."
+    },
+    "locales.message.translationRejected.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Traduction refusée"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "key"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Clé de catalogue inconnue : {key}"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "componentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Composant inconnu : {componentId}"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "documentComponent"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Composant inconnu : {documentComponent}"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "payloadKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Clé inconnue pour le composant sélectionné : {payloadKey}"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "localeId"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Localisation inconnue : {localeId}"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "documentLocale"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Localisation inconnue : {documentLocale}"
+    },
+    "locales.message.validationResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Résultat de la validation"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Attendez que la compilation soit terminée avant de quitter."
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "normalizedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Écrire dans un ou plusieurs fichiers de référen{normalizedCount}s ?"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sauvegarde des fichiers générés en vue d'une restauration"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Vérification des modifications apportées au fichier généré"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Valider les modifications apportées au code source de la locale"
+    },
+    "locales.progress.preparingSave.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Préparation de la sauvegarde"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Restauration des fichiers de référence et des fichiers générés"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Récupération des fichiers après une erreur"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Enregistrement d'un composant de paramètres régionaux"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Lancement de la sauvegarde et de la reconstruction des composants"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Interruption de la compilation d'un composant"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Utilisez l'option « Arrêter la compilation » dans la fenêtre de progression, puis attendez que la restauration soit terminée avant de fermer l'application."
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "En attente de la confirmation de l'enregistrement"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Rédaction de fichiers de paramètres régionaux faisant autorité"
+    },
+    "locales.ui.badgeValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateDirty"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "insigne {stateDirty}"
+    },
+    "locales.ui.badgeValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateValidationOk"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "insigne {stateValidationOk}"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Anglais canonique"
+    },
+    "locales.ui.catalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Clé de catalogue"
+    },
+    "locales.ui.componentStrings.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Chaînes de composants"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Valeur actuelle des paramètres régionaux"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Deep L n'est pas configuré. Configurez l'API Deepl avant de lancer l'application."
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Deep L a remplacé la valeur actuelle de la locale. Appliquez la modification en mémoire pour la conserver."
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ignorer les modifications apportées à la traduction en mémoire ?"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Supprimer les traductions non enregistrées et modifier la sélection ?"
+    },
+    "locales.ui.englishFallback.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Version de secours en anglais"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Générer une traduction à partir de la valeur actuelle de la locale. Le résultat remplace uniquement ce champ."
+    },
+    "locales.ui.generatedValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateGeneratedFile"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Généré le : {stateGeneratedFile}"
+    },
+    "locales.ui.key.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Clé"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Dernier résultat de Deep L"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Aucune modification non enregistrée"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Anglais normalisé"
+    },
+    "locales.ui.notValidated.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Non validé"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Préparation de la reconstruction d'un composant"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Reconstruction du composant « locale »"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Demande de traduction avec Deep L."
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Champs obligatoires"
+    },
+    "locales.ui.reviewStatus.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Statut de la révision"
+    },
+    "locales.ui.search.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Rechercher"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sélectionnez une entrée du catalogue"
+    },
+    "locales.ui.sourceText.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Texte source"
+    },
+    "locales.ui.sourceValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateAuthoritativeFile"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Source : {stateAuthoritativeFile}"
+    },
+    "locales.ui.status.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Statut"
+    },
+    "locales.ui.structuredEditor.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Éditeur structuré"
+    },
+    "locales.ui.translation.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Traduction"
+    },
+    "locales.ui.translationScope.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Portée de la traduction"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Traduction indisponible."
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Outil de traduction pour ordinateur de bureau"
+    },
+    "locales.ui.translatorNotes.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Notes du traducteur"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Modifications non enregistrées"
+    },
+    "locales.ui.valid.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Valide"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateCompletenessFallback"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{stateCompletenessFallback} Version de secours en anglais"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "rowApiTranslationProvider"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{rowApiTranslationProvider} Résultat prêt. Appliquer en mémoire pour conserver la valeur actuelle des paramètres régionaux."
+    },
+    "locales.ui.valueTotal.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateCompletenessTotal"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{stateCompletenessTotal} total"
+    },
+    "locales.ui.valueTranslated.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateCompletenessTranslated"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{stateCompletenessTranslated} traduit"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stateValidationErrorsCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{stateValidationErrorsCount} erreur(s) de validation"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "fr"
+}

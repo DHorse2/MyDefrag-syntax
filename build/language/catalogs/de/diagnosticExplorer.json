@@ -1,0 +1,49 @@
+{
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Mein Defragmentierer: Derzeit keine Diagnose."
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "index",
+        "total"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "$(warning) Mein Defragmentierer {index} / {total}"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "$(check) „Mein Defragmenter 0“ – Diagnose"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "current",
+        "eligible",
+        "all",
+        "remaining",
+        "remainingFiles",
+        "traversableFiles",
+        "totalFiles",
+        "fixed",
+        "ignored",
+        "skipped"
+      ],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Diagnose: {current} / {eligible} / {all} ({remaining} verbleiben, {remainingFiles} / {traversableFiles} / {totalFiles} Dateien, behoben {fixed}, ignoriert {ignored}, übersprungen {skipped})"
+    }
+  },
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "locale": "de"
+}

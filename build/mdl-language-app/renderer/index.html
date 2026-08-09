@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+    <title>MyDefrag Language Maintenance</title>
+    <link rel="stylesheet" href="../../shared/renderer-splitter.css">
+    <link rel="stylesheet" href="../../shared/renderer-table-columns.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="header-identity">
+            <div class="header-controls">
+                <button id="sidebar-toggle" class="icon-button" type="button" aria-label="Hide left panel" title="Hide left panel" aria-controls="sidebar" aria-expanded="true">
+                    <span class="hamburger-line" aria-hidden="true"></span>
+                    <span class="hamburger-line" aria-hidden="true"></span>
+                    <span class="hamburger-line" aria-hidden="true"></span>
+                </button>
+                <button id="home-button" class="icon-button" type="button" aria-label="Show Components home" title="Show Components home">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 11 9-8 9 8"></path>
+                        <path d="M5 10v10h14V10"></path>
+                        <path d="M9 20v-6h6v6"></path>
+                    </svg>
+                </button>
+            </div>
+            <p class="eyebrow">Repository maintenance tool</p>
+            <h1>MyDefrag Language Maintenance</h1>
+            <p id="project-root" class="project-root"></p>
+        </div>
+        <div class="status-stack">
+            <label class="checkbox-field deepl-api-toggle header-deepl-toggle" title="Unchecked builds use normalized English and do not call DeepL.">
+                <input id="allow-deepl-calls" type="checkbox" aria-label="Allow DeepL calls during Save and Rebuild">
+                <span>Allow DeepL calls</span>
+            </label>
+            <span id="dirty-badge" class="badge clean">No unsaved changes</span>
+            <span id="validation-badge" class="badge neutral">Not validated</span>
+        </div>
+    </header>
+
+    <div class="shell">
+        <aside id="sidebar" class="sidebar" aria-label="Application navigation">
+            <button class="nav-button active" data-view="main">Components</button>
+            <button class="nav-button" data-view="catalog">Component Catalog</button>
+            <button class="nav-button" data-view="diagnostics">Diagnostic Messages</button>
+            <button class="nav-button" data-view="migrationInventory">Migration Inventory</button>
+            <button class="nav-button" data-view="keywords">Semantic Keywords</button>
+            <button class="nav-button" data-view="locales">Locales</button>
+            <button class="nav-button" data-view="categories">Categories</button>
+            <button class="nav-button" data-view="roles">Roles</button>
+            <button class="nav-button" data-view="previewModes">Preview Modes</button>
+            <button class="nav-button" data-view="languageReport">Language Report</button>
+
+            <div class="sidebar-actions">
+                <button id="save-button" class="primary">Save</button>
+                <button id="revert-button">Revert</button>
+                <button id="validate-button">Validate</button>
+                <button id="rebuild-button">Rebuild</button>
+                <button id="reload-button">Reload data</button>
+                <button id="exit-button" class="danger-quiet">Exit</button>
+            </div>
+        </aside>
+
+        <div id="workspace-stack" class="workspace-stack">
+            <main id="workspace" tabindex="-1"></main>
+            <section id="result-panel" class="result-panel" aria-live="polite" hidden>
+                <div class="result-heading">
+                    <h2>Operation result</h2>
+                    <button id="close-result" aria-label="Close operation result">Close</button>
+                </div>
+                <div id="result-content"></div>
+            </section>
+        </div>
+    </div>
+
+    <dialog id="progress-dialog" class="progress-dialog" aria-labelledby="progress-title" aria-describedby="progress-status">
+        <div class="progress-heading">
+            <h2 id="progress-title">Language operation</h2>
+            <span id="progress-elapsed">0:00</span>
+        </div>
+        <progress aria-label="Operation in progress"></progress>
+        <p id="progress-status" role="status" aria-live="polite">Starting...</p>
+        <pre id="progress-output" aria-label="Build command output"></pre>
+        <div class="progress-actions">
+            <button id="cancel-build-button" class="danger-quiet" type="button" disabled>Stop build</button>
+        </div>
+    </dialog>
+
+    <script src="../../shared/renderer-splitter.js"></script>
+    <script src="../../shared/renderer-table-columns.js"></script>
+    <script src="../../language/translation/text-normalizer.js"></script>
+    <script src="ui-state.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

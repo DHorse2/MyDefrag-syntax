@@ -2,11 +2,11 @@
   "component": "docs",
   "entries": {
     "docs.translation.nativeReviewRequired.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "machine-generated",
-      "text": "تتطلب مدخلات الترجمة التي تم إنشاؤها آليًّا أو التي تحتوي على عناصر مؤقتة مراجعةً من قبل مترجم ناطق باللغة الأصلية قبل الموافقة عليها."
+      "status": "draft",
+      "text": "Machine-generated or placeholder translation entries require native review before approval."
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

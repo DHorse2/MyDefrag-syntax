@@ -2,17 +2,17 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "machine-generated",
-      "text": "我的磁盘碎片整理工具：配置文件夹"
+      "status": "draft",
+      "text": "MyDefrag: Configure Folders"
     },
     "extension.command.openPreview.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "approved",
+      "status": "native-review-required",
       "text": "打开预览"
     },
     "extension.command.openSettings.title": {
@@ -20,42 +20,42 @@
       "placeholders": [],
       "sourceStatus": "approved",
       "status": "native-review-required",
-      "text": "我的磁盘碎片整理工具：打开“设置”"
+      "text": "MyDefrag：打开设置"
     },
     "extension.message.noActiveDocument.warning": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "当前没有“我的碎片整理程序”文档处于活动状态。"
+      "status": "draft",
+      "text": "No MyDefrag document is active."
     },
     "extension.product.displayName": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "approved",
-      "text": "我的磁盘碎片整理脚本（.MyDc / .MyD）"
+      "status": "draft",
+      "text": "MyDefrag Script (.MyDc / .MyD)"
     },
     "extension.status.parser.fragment.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "我的“碎片整理”碎片（.mydc）"
+      "status": "draft",
+      "text": "MyDefrag Fragment (.mydc)"
     },
     "extension.status.parser.script.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "我的磁盘碎片整理脚本（.myd）"
+      "status": "draft",
+      "text": "MyDefrag Script (.myd)"
     },
     "extension.status.parser.unknown.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "我的磁盘碎片整理工具 未知文档类型"
+      "status": "draft",
+      "text": "MyDefrag Unknown document type"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

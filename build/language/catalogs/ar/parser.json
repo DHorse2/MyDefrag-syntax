@@ -2,23 +2,23 @@
   "component": "parser",
   "entries": {
     "parser.diagnostic.expectedToken.message": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [
         "expected",
         "actual"
       ],
       "sourceStatus": "draft",
-      "status": "machine-generated",
-      "text": "كنت أتوقع {expected} لكنني وجدت {actual}"
+      "status": "draft",
+      "text": "Expected {expected} but found {actual}"
     },
     "parser.diagnostic.unexpectedToken.message": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [
         "token"
       ],
       "sourceStatus": "draft",
-      "status": "machine-generated",
-      "text": "رمز غير متوقع «{token}»"
+      "status": "draft",
+      "text": "Unexpected token '{token}'"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

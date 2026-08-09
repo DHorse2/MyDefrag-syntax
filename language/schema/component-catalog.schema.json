@@ -47,11 +47,6 @@
           "source": {
             "type": "string"
           },
-          "sourceLine": {
-            "type": "integer",
-            "minimum": 1,
-            "description": "One-based line number where the source string was found."
-          },
           "notes": {
             "type": "string"
           }

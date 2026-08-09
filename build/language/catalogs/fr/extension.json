@@ -2,60 +2,60 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "machine-generated",
-      "text": "Mon défragmenteur : Configurer les dossiers"
+      "status": "draft",
+      "text": "MyDefrag: Configure Folders"
     },
     "extension.command.openPreview.title": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "machine-generated",
-      "text": "Ouvrir l'aperçu"
+      "status": "draft",
+      "text": "Open Preview"
     },
     "extension.command.openSettings.title": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "machine-generated",
-      "text": "Mon défragmenteur : Ouvrir les paramètres"
+      "status": "draft",
+      "text": "MyDefrag: Open Settings"
     },
     "extension.message.noActiveDocument.warning": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "Aucun document « Mon Défragmenteur » n'est actif."
+      "status": "draft",
+      "text": "No MyDefrag document is active."
     },
     "extension.product.displayName": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "machine-generated",
-      "text": "Mon script de défragmentation (.MyDc / .MyD)"
+      "status": "draft",
+      "text": "MyDefrag Script (.MyDc / .MyD)"
     },
     "extension.status.parser.fragment.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "Mon fragment de défragmenteur (.mydc)"
+      "status": "draft",
+      "text": "MyDefrag Fragment (.mydc)"
     },
     "extension.status.parser.script.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "Mon script de défragmentation (.myd)"
+      "status": "draft",
+      "text": "MyDefrag Script (.myd)"
     },
     "extension.status.parser.unknown.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "Mon défragmenteur Type de document inconnu"
+      "status": "draft",
+      "text": "MyDefrag Unknown document type"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

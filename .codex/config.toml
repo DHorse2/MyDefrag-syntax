@@ -11,9 +11,7 @@ command = "npx"
 args = [
   "-y",
   "@modelcontextprotocol/server-filesystem",
-  "D:\\Script\\MyDefrag-syntax",
   "D:\\AI"
-  
 ]
 startup_timeout_sec = 30
 tool_timeout_sec = 120
@@ -23,7 +21,6 @@ command = "uvx"
 args = [
   "mcp-server-git",
   "--repository",
-  "D:\\Script\\MyDefrag-syntax",
   "D:\\AI"
 ]
 startup_timeout_sec = 30
@@ -40,7 +37,7 @@ startup_timeout_sec = 30
 tool_timeout_sec = 120
 
 [mcp_servers.powershell.env]
-PROJECT_ROOT = "D:\\Script\\MyDefrag-syntax"
+PROJECT_ROOT = "D:\\AI"
 PWSH = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
 MAX_OUTPUT = "200000"
 

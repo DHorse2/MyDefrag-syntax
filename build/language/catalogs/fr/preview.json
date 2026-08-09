@@ -2,42 +2,42 @@
   "component": "preview",
   "entries": {
     "preview.annotation.includeBegin.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [
         "depth",
         "path"
       ],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "DÉBUT [{depth} de profondeur] {path}"
+      "status": "draft",
+      "text": "BEGIN [depth:{depth}] {path}"
     },
     "preview.annotation.includeEnd.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [
         "depth",
         "path"
       ],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "FIN [{depth} de profondeur] {path}"
+      "status": "draft",
+      "text": "END   [depth:{depth}] {path}"
     },
     "preview.report.includeFiles.heading": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [
         "count"
       ],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "Fichiers à inclure. ({count} fichier(s) traité(s))"
+      "status": "draft",
+      "text": "Include Files. ({count} file(s) processed"
     },
     "preview.warning.missingInclude.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [
         "uri"
       ],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "*** AVERTISSEMENT : inclusion manquante (« {uri} ») ***"
+      "status": "draft",
+      "text": "*** WARNING: Missing include (\"{uri}\") ***"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

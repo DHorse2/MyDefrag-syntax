@@ -2,60 +2,60 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "machine-generated",
-      "text": "Defragmenter yangu: Sanidi folda"
+      "status": "draft",
+      "text": "MyDefrag: Configure Folders"
     },
     "extension.command.openPreview.title": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "machine-generated",
-      "text": "Fungua Onyesho"
+      "status": "draft",
+      "text": "Open Preview"
     },
     "extension.command.openSettings.title": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "machine-generated",
-      "text": "Defragmenter yangu: Fungua Mipangilio"
+      "status": "draft",
+      "text": "MyDefrag: Open Settings"
     },
     "extension.message.noActiveDocument.warning": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "Hapana, hati yangu ya My Defragmenter haiko hai."
+      "status": "draft",
+      "text": "No MyDefrag document is active."
     },
     "extension.product.displayName": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "machine-generated",
-      "text": "Skripti yangu ya Defragmenter (.MyDc / .MyD)"
+      "status": "draft",
+      "text": "MyDefrag Script (.MyDc / .MyD)"
     },
     "extension.status.parser.fragment.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "Kipande changu cha Defragmenter (.mydc)"
+      "status": "draft",
+      "text": "MyDefrag Fragment (.mydc)"
     },
     "extension.status.parser.script.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "Skripti yangu ya Defragmenter (.myd)"
+      "status": "draft",
+      "text": "MyDefrag Script (.myd)"
     },
     "extension.status.parser.unknown.text": {
-      "fallbackLocale": null,
+      "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "reviewed",
-      "status": "machine-generated",
-      "text": "Defragmenter yangu aina isiyojulikana ya hati"
+      "status": "draft",
+      "text": "MyDefrag Unknown document type"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

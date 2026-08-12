@@ -1,0 +1,256 @@
+ .AI/AI Prompt Library.md                           |  224 [31m-[m
+ .AI/AI_Directive_Vocabulary.md                     |   15 [31m-[m
+ .AI/AI_Directive_VocabularyOld.md                  |  184 [31m-[m
+ .AI/AI_Execution_Separation_Of_Concerns.md         |  259 [31m-[m
+ .AI/Ai_Bootstrap.md                                |    3 [31m-[m
+ .AI/Codex/Global-Codex-Application-Instructions.md |    9 [31m-[m
+ .../Configuration/Codex-Machine-Instructions.md    |   67 [31m-[m
+ .../TJ9DTHV-Mdm/Configuration/Process-Launcher.md  |  120 [31m-[m
+ .AI/Computers/TJ9DTHV-Mdm/Journal/1fdba22e.jsonl   |    1 [31m-[m
+ .AI/Computers/TJ9DTHV-Mdm/Journal/48ea27e7.jsonl   |    1 [31m-[m
+ .AI/Computers/TJ9DTHV-Mdm/Journal/72a9a133.jsonl   |    1 [31m-[m
+ .AI/Computers/TJ9DTHV-Mdm/Journal/abc123ef.jsonl   |    1 [31m-[m
+ .../e23dc04b-cb88-454a-b18b-e28b18ba2685.jsonl     |    3 [31m-[m
+ .../Prompt/e23dc04b-cb88-454a-b18b-e28b18ba2685.md |  304 [31m-[m
+ .../TJ9DTHV-Mdm/State/current-execution.json       |   12 [31m-[m
+ .AI/Config/typos.toml                              |    0
+ .AI/Context/AI_Development_Rules.md                |  169 [31m-[m
+ .AI/Context/Architecture.md                        |   15 [31m-[m
+ .AI/Context/Coding_Standards.md                    |  330 [31m-[m
+ .AI/Context/Debugging_Workflow.md                  |  104 [31m-[m
+ .AI/Context/Development_Rules.md                   |   14 [31m-[m
+ .AI/Context/Installation_Guide.md                  |    1 [31m-[m
+ .AI/Context/Key_Files.md                           |   22 [31m-[m
+ .AI/Context/Parser_Call_Tree.md                    |  240 [31m-[m
+ .AI/Context/Parser_Diagnostic_Workflow.md          |  567 [31m--[m
+ .AI/Context/Project_Context.md                     |  215 [31m-[m
+ .AI/Default_Search_Filter.md                       |   44 [31m-[m
+ .AI/Detailed Project Review Prompt.md              |  537 [31m--[m
+ .AI/Documentation/Execution-Feature-Status.md      |  163 [31m-[m
+ .AI/File Tree - .AI.md                             |  148 [31m-[m
+ .AI/Instructions.md                                |   12 [31m-[m
+ .AI/Modes/Modes_Summary.md                         |    3 [31m-[m
+ .AI/Procedures/Ai_Bootstrap.md                     |    3 [31m-[m
+ .AI/Procedures/Code_Review.proc.md                 |    3 [31m-[m
+ .AI/Procedures/Debugging_Run.proc.md               |    3 [31m-[m
+ .AI/Procedures/Execution_Record.proc.md            |   11 [31m-[m
+ .AI/Procedures/Execution_Record_Metrics.md         |    3 [31m-[m
+ .AI/Procedures/Last_Conversation.md                |    3 [31m-[m
+ .AI/Procedures/Markdown_Document_Update.proc.md    |    3 [31m-[m
+ .AI/Procedures/README.md                           |    3 [31m-[m
+ ...ntrol, Execution Workflow, and Project Files.md |    3 [31m-[m
+ .AI/Procedures/TODO_List_Maintenance.proc.md       |    3 [31m-[m
+ .AI/Procedures/Task_Queue_Workflow.proc.md         |   16 [31m-[m
+ .AI/Procedures/Validation.proc.md                  |    8 [31m-[m
+ .../AI-Extension-Capability-Discovery-Prompt.md    |  273 [31m-[m
+ .../Codex-Extract-Code-Review-TODO-Prompt-v2.md    |  173 [31m-[m
+ .../Codex-Refine-Journaling-Architecture.md        |  304 [31m-[m
+ .../Codex-Task-Add-Ai-Todo-Prompt-Inserter.md      |  112 [31m-[m
+ .../Codex-Task-Change-Run-Journal-Storage.md       |  109 [31m-[m
+ ...x-Task-Enforce-Project-Scoped-AI-Task-Queues.md |  453 [31m-[m
+ ...ablish-Declarative-Multilingual-Architecture.md |  525 [31m--[m
+ .AI/Prompts/Codex-Task-Expand-Locale-Samples.md    |  387 [31m-[m
+ ...k-Implement-ChatGPT-Compatible-Task-Journals.md |  850 [31m--[m
+ .../Codex-Task-Inline-Completion-Point-Provider.md |  349 [31m-[m
+ ...sk-Move-Diagnostic-State-To-Workspace-Vscode.md |  284 [31m-[m
+ .../Codex-Task-Probe-Dirty-Worktree-Pattern.md     |  149 [31m-[m
+ ...odex-Task-Repair-Deterministic-Queue-Handoff.md |  185 [31m-[m
+ ...odex-Task-Revise-VSCodiumEnvironmentSnapshot.md |  404 [31m-[m
+ .AI/Prompts/Debug Extension Using Diagnostics.md   |   46 [31m-[m
+ .AI/Prompts/Detailed Project Review Prompt.md      |   21 [31m-[m
+ .AI/Prompts/Execution-Feature-Status.md            |  163 [31m-[m
+ .AI/Prompts/File Tree - Prompts.md                 |   39 [31m-[m
+ .AI/Prompts/Review Checklist.md                    |   36 [31m-[m
+ .AI/Prompts/Review Instructions.md                 |   45 [31m-[m
+ .AI/Prompts/RunControl.md                          |  268 [31m-[m
+ .AI/Prompts/RunControl.md.20260708-041139.bak      |  263 [31m-[m
+ .AI/Prompts/Start Codex Diagnostic.md              |    4 [31m-[m
+ .AI/Prompts/Taylor2-Code-Review-Prompt.md          |   98 [31m-[m
+ .../Update AI Standards Directory Location.md      |   73 [31m-[m
+ .AI/Prompts/currentTask copy.md                    |   88 [31m-[m
+ .../currentTask-run-database-execution-context.md  |  369 [31m-[m
+ .AI/Prompts/currentTask.md                         |  866 [31m--[m
+ .../currentTask.md.20260711-041737-7074031.bak     |  145 [31m-[m
+ .../currentTask.md.20260711-041737-7905536.bak     |  156 [31m-[m
+ .../currentTask.md.20260711-062931-3970594.bak     |  160 [31m-[m
+ .../currentTask.md.20260711-062931-4925732.bak     |  166 [31m-[m
+ .AI/Prompts/currentTask20260707.md                 |  114 [31m-[m
+ .AI/Prompts/currentTask_AI.md                      |   88 [31m-[m
+ .AI/Prompts/currentTask_Create_ToDo.md             |  117 [31m-[m
+ .AI/Prompts/currentTask_TaylorDo.md                |   88 [31m-[m
+ .AI/Readme.md                                      |  192 [31m-[m
+ .AI/Reference/Original/AI Prompt Library.md        |  224 [31m-[m
+ .AI/Reference/Original/AI_Directive_Vocabulary.md  |  136 [31m-[m
+ .../Original/AI_Directive_VocabularyOld.md         |  184 [31m-[m
+ .../AI_Execution_Separation_Of_Concerns.md         |  259 [31m-[m
+ .AI/Reference/Original/Ai_Bootstrap.md             |   21 [31m-[m
+ .../Codex/Global-Codex-Application-Instructions.md |   82 [31m-[m
+ .../Configuration/Codex-Machine-Instructions.md    |   67 [31m-[m
+ .../TJ9DTHV-Mdm/Configuration/Process-Launcher.md  |  120 [31m-[m
+ .../Prompt/e23dc04b-cb88-454a-b18b-e28b18ba2685.md |  304 [31m-[m
+ .../Original/Context/AI_Development_Rules.md       |  169 [31m-[m
+ .AI/Reference/Original/Context/Architecture.md     |   15 [31m-[m
+ .AI/Reference/Original/Context/Coding_Standards.md |  330 [31m-[m
+ .../Original/Context/Debugging_Workflow.md         |  104 [31m-[m
+ .../Original/Context/Development_Rules.md          |   14 [31m-[m
+ .../Original/Context/Installation_Guide.md         |    1 [31m-[m
+ .AI/Reference/Original/Context/Key_Files.md        |   22 [31m-[m
+ .AI/Reference/Original/Context/Parser_Call_Tree.md |  240 [31m-[m
+ .../Original/Context/Parser_Diagnostic_Workflow.md |  567 [31m--[m
+ .AI/Reference/Original/Context/Project_Context.md  |  215 [31m-[m
+ .AI/Reference/Original/Default_Search_Filter.md    |   44 [31m-[m
+ .../Original/Detailed Project Review Prompt.md     |  537 [31m--[m
+ .../Documentation/Execution-Feature-Status.md      |  163 [31m-[m
+ .AI/Reference/Original/File Tree - .AI.md          |  148 [31m-[m
+ .AI/Reference/Original/Instructions.md             |  175 [31m-[m
+ .AI/Reference/Original/Modes/Modes_Summary.md      |    8 [31m-[m
+ .AI/Reference/Original/Procedures/Ai_Bootstrap.md  |   20 [31m-[m
+ .../Original/Procedures/Code_Review.proc.md        |  108 [31m-[m
+ .../Original/Procedures/Debugging_Run.proc.md      |  109 [31m-[m
+ .../Original/Procedures/Execution_Record.proc.md   |  300 [31m-[m
+ .../Procedures/Execution_Record_Metrics.md         |   74 [31m-[m
+ .../Original/Procedures/Last_Conversation.md       |   65 [31m-[m
+ .../Procedures/Markdown_Document_Update.proc.md    |  112 [31m-[m
+ .AI/Reference/Original/Procedures/README.md        |   16 [31m-[m
+ ...ntrol, Execution Workflow, and Project Files.md |  490 [31m--[m
+ .../Procedures/TODO_List_Maintenance.proc.md       |  247 [31m-[m
+ .../Procedures/Task_Queue_Workflow.proc.md         |  260 [31m-[m
+ .../Original/Procedures/Validation.proc.md         |   99 [31m-[m
+ .../AI-Extension-Capability-Discovery-Prompt.md    |  273 [31m-[m
+ .../Codex-Extract-Code-Review-TODO-Prompt-v2.md    |  173 [31m-[m
+ .../Codex-Refine-Journaling-Architecture.md        |  304 [31m-[m
+ .../Codex-Task-Add-Ai-Todo-Prompt-Inserter.md      |  112 [31m-[m
+ .../Codex-Task-Change-Run-Journal-Storage.md       |  109 [31m-[m
+ ...x-Task-Enforce-Project-Scoped-AI-Task-Queues.md |  453 [31m-[m
+ ...ablish-Declarative-Multilingual-Architecture.md |  525 [31m--[m
+ .../Prompts/Codex-Task-Expand-Locale-Samples.md    |  387 [31m-[m
+ ...k-Implement-ChatGPT-Compatible-Task-Journals.md |  850 [31m--[m
+ .../Codex-Task-Inline-Completion-Point-Provider.md |  349 [31m-[m
+ ...sk-Move-Diagnostic-State-To-Workspace-Vscode.md |  284 [31m-[m
+ .../Codex-Task-Probe-Dirty-Worktree-Pattern.md     |  149 [31m-[m
+ ...odex-Task-Repair-Deterministic-Queue-Handoff.md |  185 [31m-[m
+ ...odex-Task-Revise-VSCodiumEnvironmentSnapshot.md |  404 [31m-[m
+ .../Prompts/Debug Extension Using Diagnostics.md   |   46 [31m-[m
+ .../Prompts/Detailed Project Review Prompt.md      |   21 [31m-[m
+ .../Original/Prompts/Execution-Feature-Status.md   |  163 [31m-[m
+ .../Original/Prompts/File Tree - Prompts.md        |   39 [31m-[m
+ .AI/Reference/Original/Prompts/Review Checklist.md |   36 [31m-[m
+ .../Original/Prompts/Review Instructions.md        |   45 [31m-[m
+ .AI/Reference/Original/Prompts/RunControl.md       |  268 [31m-[m
+ .../Original/Prompts/Start Codex Diagnostic.md     |    4 [31m-[m
+ .../Original/Prompts/Taylor2-Code-Review-Prompt.md |   98 [31m-[m
+ .../Update AI Standards Directory Location.md      |   73 [31m-[m
+ .AI/Reference/Original/Prompts/currentTask copy.md |   88 [31m-[m
+ .../currentTask-run-database-execution-context.md  |  369 [31m-[m
+ .AI/Reference/Original/Prompts/currentTask.md      |  866 [31m--[m
+ .../Original/Prompts/currentTask20260707.md        |  114 [31m-[m
+ .AI/Reference/Original/Prompts/currentTask_AI.md   |   88 [31m-[m
+ .../Original/Prompts/currentTask_Create_ToDo.md    |  117 [31m-[m
+ .../Original/Prompts/currentTask_TaylorDo.md       |   88 [31m-[m
+ .AI/Reference/Original/Readme.md                   |  192 [31m-[m
+ .../Results/AI-Startup-Execution-Record.md         |  249 [31m-[m
+ .../Original/Results/AI-Startup-Review.md          |  221 [31m-[m
+ .AI/Reference/Original/Results/AI-Startup-TODO.md  |  166 [31m-[m
+ .../Results/Codex-Self-TODO-Execution-Record.md    |  181 [31m-[m
+ .AI/Reference/Original/Results/Codex-Self-TODO.md  |   42 [31m-[m
+ ...ompts-Implementation-Review-Execution-Record.md |  162 [31m-[m
+ .../Original/Results/TaylorDo-Execution-Record.md  |  175 [31m-[m
+ .AI/Reference/Original/Results/TaylorDo-Review.md  |   96 [31m-[m
+ .AI/Reference/Original/Results/TaylorDo-TODO.md    |   54 [31m-[m
+ .AI/Reference/Original/Roles/Architect.role.md     |   87 [31m-[m
+ .AI/Reference/Original/Roles/Code_Reviewer.role.md |   88 [31m-[m
+ .AI/Reference/Original/Roles/Debugger.role.md      |   86 [31m-[m
+ .../Original/Roles/Documentation_Editor.role.md    |   86 [31m-[m
+ .AI/Reference/Original/Roles/README.md             |   24 [31m-[m
+ .AI/Reference/Original/Roles/Run_Recorder.role.md  |   88 [31m-[m
+ .AI/Reference/Original/Roles/Test_Engineer.role.md |   87 [31m-[m
+ .AI/Reference/Original/Session_Template.md         |   11 [31m-[m
+ .../Standards/Execution_Record_Standard.md         |  445 [31m-[m
+ .../Global Markdown Documentation Standard.md      |  174 [31m-[m
+ .../Standards/Output Document Formatting Rules.md  |   12 [31m-[m
+ .AI/Reference/Original/Start_Here.md               |  385 [31m-[m
+ .../Original/Tests/AI_Test_Run_Control_Mapping.md  |  231 [31m-[m
+ .AI/Reference/Original/Tests/AI_Test_Types.md      |   84 [31m-[m
+ .../Original/Tests/Execution_Metrics_Test.md       |    4 [31m-[m
+ .AI/Reference/Original/Tests/File Tree - Tests.md  |   24 [31m-[m
+ .../Original/Tests/Minimal_Startup_Test.md         |    3 [31m-[m
+ .../Original/Tests/Procedure_Composition_Test.md   |    3 [31m-[m
+ .../Original/Tests/Role_Selection_Test.md          |    3 [31m-[m
+ .../Original/Tests/Startup_Compliance_Test.md      |    4 [31m-[m
+ .AI/Reference/Original/Todo.md                     |    6 [31m-[m
+ .AI/Results/AI-Startup-Execution-Record.md         |  249 [31m-[m
+ .AI/Results/AI-Startup-Review.md                   |  221 [31m-[m
+ .AI/Results/AI-Startup-TODO.md                     |  166 [31m-[m
+ .AI/Results/Codex-Self-TODO-Execution-Record.md    |  181 [31m-[m
+ .AI/Results/Codex-Self-TODO.md                     |   42 [31m-[m
+ ...ompts-Implementation-Review-Execution-Record.md |  162 [31m-[m
+ .AI/Results/TaylorDo-Execution-Record.md           |  175 [31m-[m
+ .AI/Results/TaylorDo-Review.md                     |   96 [31m-[m
+ .AI/Results/TaylorDo-TODO.md                       |   54 [31m-[m
+ .AI/Roles/Architect.role.md                        |    3 [31m-[m
+ .AI/Roles/Code_Reviewer.role.md                    |    3 [31m-[m
+ .AI/Roles/Debugger.role.md                         |    3 [31m-[m
+ .AI/Roles/Documentation_Editor.role.md             |    3 [31m-[m
+ .AI/Roles/README.md                                |    3 [31m-[m
+ .AI/Roles/Run_Recorder.role.md                     |    3 [31m-[m
+ .AI/Roles/Test_Engineer.role.md                    |    3 [31m-[m
+ .AI/Scripts/Add-AiTodoPrompt.bat                   |   13 [31m-[m
+ .AI/Scripts/Add-AiTodoPrompt.ps1                   |  110 [31m-[m
+ .AI/Scripts/Add-AiTodoPromptDo.ps1                 |  267 [31m-[m
+ .AI/Scripts/AiProjectIdentity.ps1                  |  302 [31m-[m
+ .AI/Scripts/Resolve-AiTaskQueue.ps1                | 1170 [31m---[m
+ .AI/Scripts/Test-AiTaskQueueProjectScope.ps1       |  117 [31m-[m
+ .AI/Session_Template.md                            |   11 [31m-[m
+ .AI/Standards/Execution_Record_Standard.md         |    3 [31m-[m
+ .../Global Markdown Documentation Standard.md      |    3 [31m-[m
+ .AI/Standards/Output Document Formatting Rules.md  |    3 [31m-[m
+ .AI/Start_Here.md                                  |   15 [31m-[m
+ .AI/Tests/AI_Test_Run_Control_Mapping.md           |  231 [31m-[m
+ .AI/Tests/AI_Test_Types.md                         |   84 [31m-[m
+ .AI/Tests/Add-AiTodoPrompt.Tests.ps1               |  260 [31m-[m
+ .AI/Tests/Execution_Metrics_Test.md                |    4 [31m-[m
+ .AI/Tests/File Tree - Tests.md                     |   24 [31m-[m
+ .AI/Tests/Minimal_Startup_Test.md                  |    3 [31m-[m
+ .AI/Tests/Procedure_Composition_Test.md            |    3 [31m-[m
+ .AI/Tests/Resolve-AiTaskQueue.Tests.ps1            |  592 [31m--[m
+ .AI/Tests/Role_Selection_Test.md                   |    3 [31m-[m
+ .AI/Tests/Startup_Compliance_Test.md               |    4 [31m-[m
+ .AI/Todo.md                                        |    6 [31m-[m
+ .AI/Todo.md.20260708-115152.bak                    |    3 [31m-[m
+ .AI/Todo.md.20260711-001323.bak                    |    4 [31m-[m
+ .AI/Todo.md.20260711-041737-8315638.bak            |    5 [31m-[m
+ .AI/Todo.md.20260711-061742.bak                    |    5 [31m-[m
+ .AI/Todo.md.20260711-062931-5796625.bak            |    6 [31m-[m
+ .AI/Tools/Run_Journal.cjs                          |  731 [31m--[m
+ .codex/config.toml                                 |   56 [31m-[m
+ .gitignore                                         |    9 [32m+[m[31m-[m
+ .obsidian/app.json                                 |    1 [31m-[m
+ .obsidian/appearance.json                          |    1 [31m-[m
+ .obsidian/core-plugins.json                        |   33 [31m-[m
+ .obsidian/workspace.json                           |  181 [31m-[m
+ .ollama/Ollama Installation guide.md               |  318 [31m-[m
+ .ollama/Ollama model selection.md                  |  215 [31m-[m
+ .ollama/Opilot Status.md                           |   57 [31m-[m
+ .ollama/ollama_status.txt                          |    7 [31m-[m
+ .../reviews/2026-07-04 Detailed Project Review.md  | 1013 [31m---[m
+ .user/.vscode/settings.json                        |   10 [31m-[m
+ .user/File Tree - .user.md                         |   38 [31m-[m
+ .../settings.json                                  |   22 [31m-[m
+ .user/VsCodium AI Prompts.txt                      |  492 [31m--[m
+ .user/VsCodium/User/settings.json                  |  127 [31m-[m
+ .../2026-07-07-diagnostics-neutral-launcher.md     |  151 [31m-[m
+ ...-07-language-neutral-launcher-link-providers.md |  141 [31m-[m
+ .user/logs/diagnostic-ai-item.json                 |   36 [31m-[m
+ .user/logs/diagnostic-ai-prompt.md                 |  105 [31m-[m
+ ...ntax.mydefrag-syntax-#1-MyDefrag Syntax.sty.txt | 9125 [31m--------------------[m
+ .user/logs/session_dismissed.json                  |   17 [31m-[m
+ .user/temp.ps1                                     |  214 [31m-[m
+ .user/temp.txt                                     |  125 [31m-[m
+ .user/todo/code-review-todo-table.md               |   69 [31m-[m
+ .user/todo/code-review-todo.jsonl                  |   65 [31m-[m
+ .user/todo/code-review-todo.md                     |  916 [31m--[m
+ artifacts/mydefrag-syntax-0.2.0-Debug.vsix         |  Bin [31m83207[m -> [32m0[m bytes
+ artifacts/mydefrag-syntax-0.2.0-Release.vsix       |  Bin [31m53978[m -> [32m0[m bytes
+ artifacts/mydefrag-syntax-0.4.0-Release.vsix       |  Bin [31m685399[m -> [32m0[m bytes
+ artifacts/mydefrag-syntax-0.4.0.vsix               |  Bin [31m1705019[m -> [32m0[m bytes
+ 255 files changed, 2 insertions(+), 47505 deletions(-)

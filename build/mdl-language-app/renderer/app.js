@@ -814,30 +814,105 @@ async function populateMigrationSummary(coverageByPath, request) {
             coverage.className = 'migration-coverage unavailable';
             continue;
         }
-        coverage.textContent = `${file.candidateCount} non-catalog · ${file.catalogedStringCount} found in catalog`;
+        coverage.textContent = candidateProgressText(file);
         coverage.className = `migration-coverage ${file.catalogedStringCount > 0 ? 'has-found' : 'no-found'}`;
     }
 }
 
 function allMigrationCandidates(file) {
-    return [
+    return uiState.orderCandidatesByLine([
         ...file.candidates,
         ...file.catalogedStrings
-    ].sort((left, right) => left.line - right.line || left.text.localeCompare(right.text));
+    ]);
 }
 
 const CANDIDATE_STATUS_LABELS = Object.freeze({
     'in-catalog': 'In Catalog',
     potential: 'Potential Candidate',
     rejected: 'Rejected',
-    review: 'Review'
+    review: 'Review',
+    'code-edit': 'Code Edit',
+    'code-updated': 'Code Updated'
 });
+
+const COMPLETED_CANDIDATE_STATUSES = new Set([
+    'in-catalog',
+    'rejected',
+    'code-edit',
+    'code-updated'
+]);
+
+function candidateIsCataloged(candidate) {
+    return Array.isArray(candidate.catalogEntries) && candidate.catalogEntries.length > 0;
+}
+
+function candidateUsesCatalogFormat(candidate) {
+    return ['catalog.format-key', 'catalog.format-text'].includes(candidate?.catalogReference?.kind);
+}
+
+function candidateWorkflowSummary(source) {
+    if (!Array.isArray(source) && source?.statusCounts) {
+        return {
+            totalCount: source.totalCount,
+            completedCount: source.completedCount,
+            remainingCount: source.remainingCount,
+            statusCounts: source.statusCounts
+        };
+    }
+    const statusCounts = Object.fromEntries(
+        Object.keys(CANDIDATE_STATUS_LABELS).map((status) => [status, 0])
+    );
+    const candidates = Array.isArray(source)
+        ? source
+        : (Array.isArray(source?.candidates) && Array.isArray(source?.catalogedStrings)
+            ? allMigrationCandidates(source)
+            : null);
+    if (!candidates) {
+        statusCounts.potential = Number(source?.candidateCount) || 0;
+        statusCounts['in-catalog'] = Number(source?.catalogedStringCount) || 0;
+        const totalCount = statusCounts.potential + statusCounts['in-catalog'];
+        return {
+            totalCount,
+            completedCount: statusCounts['in-catalog'],
+            remainingCount: statusCounts.potential,
+            statusCounts
+        };
+    }
+    for (const candidate of candidates) {
+        const status = Object.prototype.hasOwnProperty.call(statusCounts, candidate.status)
+            ? candidate.status
+            : 'potential';
+        statusCounts[status] += 1;
+    }
+    const totalCount = candidates.length;
+    const completedCount = Object.entries(statusCounts)
+        .filter(([status]) => COMPLETED_CANDIDATE_STATUSES.has(status))
+        .reduce((sum, [, count]) => sum + count, 0);
+    return {
+        totalCount,
+        completedCount,
+        remainingCount: totalCount - completedCount,
+        statusCounts
+    };
+}
+
+function candidateProgressText(source) {
+    const summary = candidateWorkflowSummary(source);
+    const completedDetails = ['in-catalog', 'rejected', 'code-edit', 'code-updated']
+        .filter((status) => summary.statusCounts[status] > 0)
+        .map((status) => `${summary.statusCounts[status]} ${CANDIDATE_STATUS_LABELS[status]}`);
+    return [
+        `${summary.remainingCount} remaining`,
+        `${summary.completedCount}/${summary.totalCount} completed`,
+        ...completedDetails
+    ].join(' · ');
+}
 
 function migrationCandidateContent(candidate) {
     const status = Object.prototype.hasOwnProperty.call(CANDIDATE_STATUS_LABELS, candidate.status)
         ? candidate.status
         : 'potential';
-    const inCatalog = status === 'in-catalog';
+    const inCatalog = candidateIsCataloged(candidate);
     const summaryLine = element('span', { className: 'candidate-summary-line' }, [
         element('span', { className: 'candidate-line-number', text: `Line ${candidate.line}` }),
         element('span', {
@@ -887,6 +962,131 @@ function createOpenMigrationSourceButton(filePath, candidate, openRequest) {
         }
     });
     return openSourceButton;
+}
+
+function createMigrationTransformPreview(filePath, candidate, options = {}) {
+    const catalogKeyControl = options.catalogKeyControl || null;
+    const initialCatalogKey = String(options.catalogKey || '').trim();
+    const onSourceReplaced = options.onSourceReplaced || null;
+    let replacementEnabled = false;
+    let activeRequest = null;
+    let previewGeneration = 0;
+    const catalogKeyText = element('span', {
+        className: 'field-help',
+        text: initialCatalogKey ? `Catalog key: ${initialCatalogKey}` : 'Resolving catalog key...'
+    });
+    const originalCode = element('code', { text: candidate.fullLine });
+    const transformedCode = element('code', { text: 'Loading transform preview...' });
+    const replacementStatus = element('span', {
+        className: 'field-help',
+        text: 'Checking source-replacement safeguards...'
+    });
+    const replaceLineButton = element('button', {
+        type: 'button',
+        text: 'Replace line in source',
+        disabled: true
+    });
+    const preview = element('section', { className: 'candidate-transform-preview' }, [
+        element('div', { className: 'candidate-transform-heading' }, [
+            element('h4', { text: 'Source Transform Preview' }),
+            catalogKeyText
+        ]),
+        element('div', { className: 'candidate-transform-block' }, [
+            element('h5', { text: 'Original' }),
+            element('pre', {}, [originalCode])
+        ]),
+        element('div', { className: 'candidate-transform-block' }, [
+            element('h5', { text: 'Transformed' }),
+            element('pre', {}, [transformedCode])
+        ]),
+        element('div', { className: 'candidate-transform-actions' }, [
+            replaceLineButton,
+            replacementStatus
+        ])
+    ]);
+
+    replaceLineButton.addEventListener('click', async () => {
+        if (!replacementEnabled || !activeRequest) { return; }
+        const request = activeRequest;
+        replaceLineButton.disabled = true;
+        let result;
+        try {
+            result = await api.replaceMigrationSourceLine(request);
+        } catch (error) {
+            result = { ok: false, error: error.message };
+        }
+        if (!result.ok) {
+            const sourceChanged = result.code === 'SOURCE_CHANGED' || result.code === 'SOURCE_VERSION_REQUIRED';
+            replacementStatus.textContent = result.error || 'The source line was not replaced.';
+            replaceLineButton.disabled = !replacementEnabled || sourceChanged;
+            showResult('Source line was not replaced', {
+                error: result.error || 'Source replacement is not enabled.'
+            });
+            return;
+        }
+        replacementEnabled = false;
+        replacementStatus.textContent = result.message;
+        replaceLineButton.title = result.message;
+        if (typeof onSourceReplaced === 'function') { onSourceReplaced(result); }
+        showResult('Source line replaced', {
+            message: [result.message, result.statusWarning].filter(Boolean).join(' ')
+        });
+    });
+
+    const refreshPreview = async (nextCatalogKey) => {
+        const generation = ++previewGeneration;
+        const catalogKey = String(nextCatalogKey || '').trim();
+        replacementEnabled = false;
+        activeRequest = null;
+        replaceLineButton.disabled = true;
+        replaceLineButton.title = '';
+        catalogKeyText.textContent = catalogKey ? `Catalog key: ${catalogKey}` : 'Catalog key required';
+        transformedCode.textContent = catalogKey ? 'Regenerating transform preview...' : 'Enter a catalog key to generate the transform preview.';
+        replacementStatus.textContent = catalogKey
+            ? 'Checking source-replacement safeguards...'
+            : 'Source replacement requires a catalog key.';
+        if (!catalogKey) { return; }
+
+        const request = {
+            path: filePath,
+            line: candidate.line,
+            text: candidate.text,
+            catalogKey
+        };
+        let result;
+        try {
+            result = await api.previewMigrationSourceTransform(request);
+        } catch (error) {
+            result = { ok: false, error: error.message };
+        }
+        if (generation !== previewGeneration) { return; }
+        if (!result.ok) {
+            transformedCode.textContent = `Transform preview unavailable: ${result.error || 'Unknown error'}`;
+            replacementStatus.textContent = result.error || 'Source replacement is unavailable.';
+            return;
+        }
+        activeRequest = {
+            ...request,
+            catalogKey: result.catalogKey,
+            sourceVersion: result.sourceVersion
+        };
+        catalogKeyText.textContent = `Catalog key: ${result.catalogKey}`;
+        originalCode.textContent = result.originalLine;
+        transformedCode.textContent = result.transformedLines.join('\n');
+        replacementEnabled = result.sourceReplacement?.enabled === true;
+        replaceLineButton.disabled = !replacementEnabled;
+        replaceLineButton.title = result.sourceReplacement?.reason || '';
+        replacementStatus.textContent = result.sourceReplacement?.reason || '';
+    };
+
+    if (catalogKeyControl) {
+        catalogKeyControl.addEventListener('input', () => {
+            void refreshPreview(catalogKeyControl.value);
+        });
+    }
+    void refreshPreview(initialCatalogKey);
+
+    return preview;
 }
 
 function createResizableDialogControls(dialog, windowLabel) {
@@ -1296,33 +1496,61 @@ function catalogRecordForCandidate(file, candidate) {
     };
 }
 
+function applyCandidateCatalogEditorLayout(editor, variantClass, headingActions = null) {
+    editor.classList.add('candidate-catalog-editor', variantClass);
+    const editorHeading = editor.querySelector(':scope > h3');
+    const headingRow = element('div', { className: 'candidate-editor-heading' });
+    editor.replaceChild(headingRow, editorHeading);
+    headingRow.append(editorHeading);
+    if (headingActions) { headingRow.append(headingActions); }
+}
+
 function openMigrationCandidateWindow(file) {
     const dialog = element('dialog', { className: 'candidate-dialog', 'aria-label': `Migration candidates for ${file.path}` });
     const headingStatus = element('p', {
-        text: `${file.candidateCount} non-catalog candidate(s), ${file.catalogedStringCount} found in catalog`
+        text: candidateProgressText(file)
     });
     const heading = element('div', { className: 'candidate-dialog-heading' }, [
-        element('div', {}, [
+        element('div', { className: 'candidate-dialog-title-line' }, [
             element('h2', { text: `All candidates: ${file.path}` }),
             headingStatus
         ]),
         createResizableDialogControls(dialog, 'migration candidates window')
     ]);
+    const workflowNotice = element('p', { className: 'candidate-workflow-notice' });
+    workflowNotice.hidden = true;
     const candidatePane = element('section', { className: 'candidate-pane' });
     const statusFilter = element('select', { 'aria-label': 'Filter candidates by status' });
     statusFilter.append(element('option', { value: 'all', text: 'All statuses' }));
-    for (const status of ['in-catalog', 'potential', 'rejected', 'review']) {
+    for (const status of ['in-catalog', 'potential', 'review', 'rejected', 'code-edit', 'code-updated']) {
         statusFilter.append(element('option', { value: status, text: CANDIDATE_STATUS_LABELS[status] }));
     }
+    const lineOrder = element('select', { 'aria-label': 'Order candidates by line' });
+    lineOrder.append(
+        element('option', { value: 'ascending', text: 'Lowest line first' }),
+        element('option', { value: 'descending', text: 'Highest line first' })
+    );
     candidatePane.append(element('div', { className: 'candidate-list-heading' }, [
         element('h3', { text: 'All Candidates' }),
-        element('label', {}, [element('span', { text: 'Filter status' }), statusFilter])
+        element('div', { className: 'candidate-list-controls' }, [
+            element('label', {}, [element('span', { text: 'Filter status' }), statusFilter]),
+            element('label', {}, [element('span', { text: 'Line order' }), lineOrder])
+        ])
     ]));
     const choices = element('div', { className: 'candidate-choices' });
     const editorHost = element('div', { className: 'candidate-editor-host' });
     const choiceButtons = [];
     const candidateRows = [];
+    const pendingSourceUpdates = new Set();
     let selectionRequest = 0;
+
+    const updateWorkflowNotice = (candidate = null) => {
+        const pending = candidate != null && pendingSourceUpdates.has(candidate);
+        workflowNotice.hidden = !pending;
+        workflowNotice.textContent = pending
+            ? `Catalog record added for line ${candidate.line}. Update the source line to complete this candidate; navigation remains available.`
+            : '';
+    };
 
     const selectChoice = (selectedButton) => {
         for (const button of choiceButtons) {
@@ -1340,8 +1568,7 @@ function openMigrationCandidateWindow(file) {
     };
 
     const updateHeadingStatus = () => {
-        const catalogedCount = candidateRows.filter((candidateRow) => candidateRow.candidate.status === 'in-catalog').length;
-        headingStatus.textContent = `${candidateRows.length - catalogedCount} non-catalog candidate(s), ${catalogedCount} found in catalog`;
+        headingStatus.textContent = candidateProgressText(candidateRows.map((candidateRow) => candidateRow.candidate));
     };
 
     const refreshCandidateRows = async () => {
@@ -1386,11 +1613,24 @@ function openMigrationCandidateWindow(file) {
 
     const applyStatusFilter = () => {
         for (const candidateRow of candidateRows) {
-            candidateRow.row.hidden = statusFilter.value !== 'all'
-                && candidateRow.candidate.status !== statusFilter.value;
+            candidateRow.row.hidden = !uiState.candidateMatchesStatus(
+                candidateRow.candidate,
+                statusFilter.value
+            );
         }
     };
     statusFilter.addEventListener('change', applyStatusFilter);
+
+    const applyLineOrder = () => {
+        const rowByCandidate = new Map(candidateRows.map((candidateRow) => [candidateRow.candidate, candidateRow]));
+        const orderedCandidates = uiState.orderCandidatesByLine(
+            candidateRows.map((candidateRow) => candidateRow.candidate),
+            lineOrder.value
+        );
+        candidateRows.splice(0, candidateRows.length, ...orderedCandidates.map((candidate) => rowByCandidate.get(candidate)));
+        choices.append(...candidateRows.map((candidateRow) => candidateRow.row));
+    };
+    lineOrder.addEventListener('change', applyLineOrder);
 
     const updateCandidateStatus = async (candidate, status, controls = []) => {
         for (const control of controls) { control.disabled = true; }
@@ -1414,12 +1654,11 @@ function openMigrationCandidateWindow(file) {
         state = result.state;
         updateStatus();
         for (const candidateRow of candidateRows) {
-            if (candidateRow.candidate.text !== candidate.text || candidateRow.candidate.status === 'in-catalog') {
-                continue;
-            }
+            if (candidateRow.candidate.text !== candidate.text) { continue; }
             candidateRow.candidate.status = status;
             refreshCandidateRow(candidateRow);
         }
+        updateHeadingStatus();
         applyStatusFilter();
         showResult('Candidate status updated in memory', {
             message: 'Use Save to persist the candidate status in language/canonical/components.json.',
@@ -1428,9 +1667,32 @@ function openMigrationCandidateWindow(file) {
         return true;
     };
 
+    const recordSourceReplacement = (candidate, result, statusElement = null) => {
+        if (result.state) {
+            state = result.state;
+            updateStatus();
+        }
+        const replacementStatus = result.candidateStatus || 'code-updated';
+        if (replacementStatus === 'code-updated') {
+            for (const candidateRow of candidateRows) {
+                if (candidateRow.candidate.text !== candidate.text) { continue; }
+                candidateRow.candidate.status = 'code-updated';
+                pendingSourceUpdates.delete(candidateRow.candidate);
+                refreshCandidateRow(candidateRow);
+            }
+            if (statusElement) {
+                statusElement.textContent = `Candidate status: ${CANDIDATE_STATUS_LABELS['code-updated']}`;
+            }
+            updateWorkflowNotice(candidate);
+            updateHeadingStatus();
+            applyStatusFilter();
+        }
+    };
+
     const selectEditableCandidate = async (candidate, selectedButton) => {
         const request = ++selectionRequest;
         selectChoice(selectedButton);
+        updateWorkflowNotice(candidate);
         clear(editorHost);
         editorHost.append(element('p', {
             className: 'empty-state',
@@ -1453,30 +1715,40 @@ function openMigrationCandidateWindow(file) {
             clearText: 'Close candidates',
             actionsAtTop: true,
             onClear: () => dialog.close(),
-            onSuccess: () => {
-                const catalogEntries = state.views.catalog.records
-                    .filter((entry) => entry.text === candidate.text)
-                    .map((entry) => ({
-                        key: entry.key,
-                        component: entry.component,
-                        category: entry.category,
-                        role: entry.role
-                    }));
-                for (const candidateRow of candidateRows) {
-                    if (candidateRow.candidate.text !== candidate.text) { continue; }
-                    candidateRow.candidate.status = 'in-catalog';
-                    candidateRow.candidate.catalogEntries = catalogEntries;
-                    refreshCandidateRow(candidateRow);
-                }
-                updateHeadingStatus();
-                applyStatusFilter();
-                updateStatus();
-                showResult('Catalog record added to in-memory draft', { validation: state.validation });
-                selectNextCandidate(candidate, candidate.text);
+            onSuccess: ({ nextRecord }) => {
+                const addedRecord = state.views.catalog.records.find((entry) => entry.key === nextRecord.key)
+                    || nextRecord;
+                clear(editorHost);
+                editorHost.append(element('p', {
+                    className: 'empty-state',
+                    text: 'Refreshing catalog matches...'
+                }));
+                void refreshCandidateRows().then(() => {
+                    if (!candidateIsCataloged(candidate) && addedRecord) {
+                        candidate.status = 'in-catalog';
+                        candidate.catalogEntries = [{
+                            key: addedRecord.key,
+                            component: addedRecord.component,
+                            category: addedRecord.category,
+                            role: addedRecord.role
+                        }];
+                        const candidateRow = candidateRows.find((item) => item.candidate === candidate);
+                        if (candidateRow) { refreshCandidateRow(candidateRow); }
+                    }
+                    pendingSourceUpdates.add(candidate);
+                    updateHeadingStatus();
+                    applyStatusFilter();
+                    updateStatus();
+                    showResult('Catalog record added to in-memory draft', {
+                        message: `Cataloged line ${candidate.line}. Update its source line to complete this candidate; navigation remains available.`,
+                        validation: state.validation
+                    });
+                    selectCatalogedCandidate(candidate, selectedButton);
+                });
             }
         });
         const candidateStatus = element('select', { 'aria-label': 'Candidate status' });
-        for (const status of ['potential', 'review', 'rejected']) {
+        for (const status of ['potential', 'review', 'rejected', 'code-edit']) {
             candidateStatus.append(element('option', {
                 value: status,
                 text: CANDIDATE_STATUS_LABELS[status]
@@ -1505,7 +1777,7 @@ function openMigrationCandidateWindow(file) {
             const updated = await updateCandidateStatus(candidate, requestedStatus, [candidateStatus, rejectButton, previousLineButton, nextLineButton]);
             if (!updated) { candidateStatus.value = previousStatus; }
             rejectButton.disabled = candidate.status === 'rejected';
-            if (updated && requestedStatus === 'rejected') {
+            if (updated && ['rejected', 'code-edit'].includes(requestedStatus)) {
                 selectNextCandidate(candidate, candidate.text);
             }
         });
@@ -1526,19 +1798,24 @@ function openMigrationCandidateWindow(file) {
             previousLineButton,
             nextLineButton
         ]);
-        const editorHeading = catalogEditor.querySelector(':scope > h3');
-        const headingRow = element('div', { className: 'candidate-editor-heading' });
-        catalogEditor.replaceChild(headingRow, editorHeading);
-        headingRow.append(editorHeading, headingActions);
+        applyCandidateCatalogEditorLayout(catalogEditor, 'candidate-add-record', headingActions);
         const statusControls = element('div', { className: 'candidate-status-controls' }, [
             element('label', {}, [element('span', { text: 'Candidate status' }), candidateStatus]),
-            statusActions,
-            element('span', {
-                className: 'field-help',
-                text: 'Candidate decisions are saved with the migration inventory.'
-            })
+            statusActions
         ]);
         catalogEditor.insertBefore(statusControls, catalogEditor.children[1] || null);
+        catalogEditor.insertBefore(
+            createMigrationTransformPreview(
+                file.path,
+                candidate,
+                {
+                    catalogKey: suggestion.ok ? suggestion.suggestedKey : '',
+                    catalogKeyControl: catalogEditor.querySelector('[name="key"]'),
+                    onSourceReplaced: (result) => recordSourceReplacement(candidate, result)
+                }
+            ),
+            catalogEditor.children[2] || null
+        );
         editorHost.append(catalogEditor);
     };
 
@@ -1570,12 +1847,23 @@ function openMigrationCandidateWindow(file) {
                         validation: state.validation
                     });
                     if (!refreshed) {
-                        editCatalogMatch(candidate, selectedButton, nextRecord.key);
-                        return;
+                        const updatedEntry = {
+                            key: nextRecord.key,
+                            component: nextRecord.component,
+                            category: nextRecord.category,
+                            role: nextRecord.role
+                        };
+                        candidate.catalogEntries = [
+                            ...candidate.catalogEntries.filter((entry) => (
+                                entry.key !== recordKey && entry.key !== nextRecord.key
+                            )),
+                            updatedEntry
+                        ];
+                        const candidateRow = candidateRows.find((item) => item.candidate === candidate);
+                        if (candidateRow) { refreshCandidateRow(candidateRow); }
                     }
-                    if (candidate.status === 'in-catalog'
-                        && candidate.catalogEntries.some((entry) => entry.key === nextRecord.key)) {
-                        editCatalogMatch(candidate, selectedButton, nextRecord.key);
+                    if (candidateIsCataloged(candidate)) {
+                        selectCatalogedCandidate(candidate, selectedButton);
                     } else {
                         const candidateRow = candidateRows.find((item) => item.candidate === candidate);
                         if (candidateRow) { selectCandidateRow(candidateRow); }
@@ -1583,17 +1871,33 @@ function openMigrationCandidateWindow(file) {
                 });
             }
         });
+        const previousLineButton = element('button', {
+            type: 'button',
+            className: 'candidate-status-action',
+            text: 'Previous (line)'
+        });
+        const nextLineButton = element('button', {
+            type: 'button',
+            className: 'candidate-status-action',
+            text: 'Next (line)'
+        });
+        previousLineButton.addEventListener('click', () => selectPreviousCandidate(candidate));
+        nextLineButton.addEventListener('click', () => selectNextCandidate(candidate));
+        applyCandidateCatalogEditorLayout(editor, 'candidate-edit-record', element('div', {
+            className: 'candidate-editor-heading-actions'
+        }, [previousLineButton, nextLineButton]));
         editorHost.append(editor);
     };
 
     const selectCatalogedCandidate = (candidate, selectedButton) => {
         selectionRequest += 1;
         selectChoice(selectedButton);
+        updateWorkflowNotice(candidate);
         clear(editorHost);
         const matchList = element('ul', { className: 'catalog-match-list' });
         for (const entry of candidate.catalogEntries) {
             const record = state.views.catalog.records.find((item) => item.key === entry.key);
-            const current = record || entry;
+            const current = record || { ...entry, text: candidate.text };
             const editRecord = element('button', {
                 type: 'button',
                 text: 'Edit Record',
@@ -1604,9 +1908,7 @@ function openMigrationCandidateWindow(file) {
                 editCatalogMatch(candidate, selectedButton, entry.key);
             });
             matchList.append(element('li', { className: 'catalog-match-edit-row' }, [
-                element('span', {
-                    text: `${current.key} [${current.component}] - ${current.category} / ${current.role}`
-                }),
+                createReadOnlyCatalogRecord(current),
                 editRecord
             ]));
         }
@@ -1628,9 +1930,19 @@ function openMigrationCandidateWindow(file) {
         closeCandidates.addEventListener('click', () => dialog.close());
         previousLineButton.addEventListener('click', () => selectPreviousCandidate(candidate));
         nextLineButton.addEventListener('click', () => selectNextCandidate(candidate));
+        const matchStatus = element('p', {
+            text: `Candidate status: ${CANDIDATE_STATUS_LABELS[candidate.status] || CANDIDATE_STATUS_LABELS['in-catalog']}`
+        });
+        const catalogStatuses = Array.from(new Set(candidate.catalogEntries
+            .map((entry) => state.views.catalog.records.find((record) => record.key === entry.key)?.status)
+            .filter(Boolean)));
+        const catalogStatus = element('p', {
+            text: `Catalog status: ${catalogStatuses.join(', ') || 'Unavailable'}`
+        });
         const matchSummary = element('div', { className: 'catalog-match-summary' }, [
             element('h3', { text: 'Catalog Matches' }),
-            element('p', { text: 'Status: In Catalog' }),
+            matchStatus,
+            catalogStatus,
             element('p', { text: candidate.text }),
             element('p', {
                 className: 'field-help',
@@ -1640,21 +1952,103 @@ function openMigrationCandidateWindow(file) {
         const matchActions = element('div', {
             className: 'catalog-match-actions'
         }, [closeCandidates, previousLineButton, nextLineButton]);
-        editorHost.append(element('section', { className: 'card' }, [
+        const sourceTransform = candidateUsesCatalogFormat(candidate)
+            ? element('p', {
+                className: 'field-help',
+                text: candidate.historical
+                    ? 'This prior candidate is retained for analysis; the current source line already uses catalog.format.'
+                    : 'This current key occurrence already uses catalog.format and needs no source transformation.'
+            })
+            : createMigrationTransformPreview(
+                file.path,
+                candidate,
+                {
+                    catalogKey: candidate.catalogEntries[0]?.key || '',
+                    onSourceReplaced: (result) => recordSourceReplacement(candidate, result, matchStatus)
+                }
+            );
+        editorHost.append(element('section', { className: 'card catalog-match-card' }, [
             element('div', { className: 'catalog-match-header' }, [matchSummary, matchActions]),
+            sourceTransform,
             matchList
         ]));
     };
 
     const selectCandidateRow = (candidateRow) => {
-        if (candidateRow.candidate.status === 'in-catalog') {
+        if (candidateIsCataloged(candidateRow.candidate)) {
             selectCatalogedCandidate(candidateRow.candidate, candidateRow.choice);
         } else {
             void selectEditableCandidate(candidateRow.candidate, candidateRow.choice);
         }
     };
 
-    const selectNextCandidate = (currentCandidate, skipText = null) => {
+    const sourceUpdateStatus = async (candidate) => {
+        try {
+            return await api.getMigrationSourceUpdateStatus({
+                path: file.path,
+                line: candidate.line,
+                text: candidate.text
+            });
+        } catch (error) {
+            return { ok: false, error: error.message };
+        }
+    };
+
+    const warnIfSourceUpdatePending = async (candidate) => {
+        if (!candidate || !pendingSourceUpdates.has(candidate)) { return; }
+        const result = await sourceUpdateStatus(candidate);
+        if (result.ok && result.sourceUpdated) {
+            if (candidate.status !== 'code-updated') {
+                await updateCandidateStatus(candidate, 'code-edit');
+            }
+            for (const pendingCandidate of pendingSourceUpdates) {
+                if (pendingCandidate.text === candidate.text) {
+                    pendingSourceUpdates.delete(pendingCandidate);
+                }
+            }
+            updateWorkflowNotice();
+            return;
+        }
+        const detail = result.ok
+            ? `The source still contains the cataloged string from line ${candidate.line}: ${candidate.text}`
+            : `The source update for line ${candidate.line} could not be verified: ${result.error || 'Unknown error'}`;
+        showResult('Cataloged source still needs an update', {
+            message: `${detail}. Navigation will continue; source updates are recommended but not enforced.`
+        });
+        workflowNotice.textContent = `Source update remains pending. ${detail}. Navigation continued.`;
+        workflowNotice.hidden = false;
+    };
+
+    const warnForPendingSourceUpdates = async () => {
+        const unresolved = [];
+        for (const candidate of pendingSourceUpdates) {
+            const result = await sourceUpdateStatus(candidate);
+            if (result.ok && result.sourceUpdated) {
+                if (candidate.status !== 'code-updated') {
+                    await updateCandidateStatus(candidate, 'code-edit');
+                }
+                pendingSourceUpdates.delete(candidate);
+            } else {
+                unresolved.push(candidate);
+            }
+        }
+        if (unresolved.length > 0) {
+            showResult('Cataloged sources still need updates', {
+                message: `${unresolved.length} cataloged candidate(s) still contain their original source string or could not be verified. Closing continues without enforcement.`
+            });
+        }
+    };
+
+    const selectCandidateRowAfterWarning = async (candidateRow) => {
+        const currentRow = candidateRows.find((item) => item.choice.classList.contains('selected'));
+        if (currentRow && currentRow !== candidateRow) {
+            await warnIfSourceUpdatePending(currentRow.candidate);
+        }
+        selectCandidateRow(candidateRow);
+    };
+
+    const selectNextCandidate = async (currentCandidate, skipText = null) => {
+        await warnIfSourceUpdatePending(currentCandidate);
         const currentIndex = candidateRows.findIndex((candidateRow) => candidateRow.candidate === currentCandidate);
         const nextIndex = uiState.nextCandidateIndex(
             candidateRows.map((candidateRow) => candidateRow.candidate),
@@ -1668,6 +2062,7 @@ function openMigrationCandidateWindow(file) {
         }
         selectionRequest += 1;
         selectChoice(null);
+        updateWorkflowNotice();
         clear(editorHost);
         editorHost.append(element('section', { className: 'card' }, [
             element('h3', { text: 'Candidate Details' }),
@@ -1678,7 +2073,8 @@ function openMigrationCandidateWindow(file) {
         ]));
     };
 
-    const selectPreviousCandidate = (currentCandidate, skipText = null) => {
+    const selectPreviousCandidate = async (currentCandidate, skipText = null) => {
+        await warnIfSourceUpdatePending(currentCandidate);
         const currentIndex = candidateRows.findIndex((candidateRow) => candidateRow.candidate === currentCandidate);
         const previousIndex = uiState.previousCandidateIndex(
             candidateRows.map((candidateRow) => candidateRow.candidate),
@@ -1692,6 +2088,7 @@ function openMigrationCandidateWindow(file) {
         }
         selectionRequest += 1;
         selectChoice(null);
+        updateWorkflowNotice();
         clear(editorHost);
         editorHost.append(element('section', { className: 'card' }, [
             element('h3', { text: 'Candidate Details' }),
@@ -1711,7 +2108,9 @@ function openMigrationCandidateWindow(file) {
             'aria-pressed': 'false'
         }, migrationCandidateContent(candidate));
         choice.addEventListener('click', () => {
-            selectCandidateRow(candidateRows.find((candidateRow) => candidateRow.candidate === candidate));
+            void selectCandidateRowAfterWarning(
+                candidateRows.find((candidateRow) => candidateRow.candidate === candidate)
+            );
         });
         choiceButtons.push(choice);
         const row = element('div', { className: 'candidate-choice-row' }, [
@@ -1740,8 +2139,11 @@ function openMigrationCandidateWindow(file) {
         defaultFraction: 0.54,
         label: 'Resize candidate list and candidate editor'
     });
-    dialog.append(heading, layout);
-    dialog.addEventListener('close', () => dialog.remove(), { once: true });
+    dialog.append(heading, workflowNotice, layout);
+    dialog.addEventListener('close', () => {
+        void warnForPendingSourceUpdates();
+        dialog.remove();
+    }, { once: true });
     document.body.append(dialog);
     dialog.showModal();
     if (allCandidates[0]) {
@@ -2297,6 +2699,27 @@ function createField(view, fieldName, fieldSchema, record, required) {
     return { label, control };
 }
 
+function createReadOnlyCatalogRecord(record) {
+    const definition = state.views.catalog;
+    const schema = definition.schema;
+    const fields = element('div', {
+        className: 'catalog-match-record editor-form',
+        'aria-label': `Catalog record ${record.key || ''}`.trim()
+    });
+    for (const [fieldName, fieldSchema] of Object.entries(schema.properties || {})) {
+        const field = createField('catalog', fieldName, fieldSchema, record, false);
+        field.control.tabIndex = -1;
+        field.control.setAttribute('aria-readonly', 'true');
+        if (field.control.matches('select, input[type="checkbox"]')) {
+            field.control.disabled = true;
+        } else {
+            field.control.readOnly = true;
+        }
+        fields.append(field.label);
+    }
+    return fields;
+}
+
 function renderEditor(view, record, options = {}) {
     const definition = state.views[view];
     const card = element('section', { className: 'card' });
@@ -2350,6 +2773,12 @@ function renderEditor(view, record, options = {}) {
         }
     }
 
+    if (view === 'catalog' && !isNew) {
+        const keyControl = controls.get(definition.identityKey);
+        keyControl.readOnly = true;
+        keyControl.title = 'Existing catalog keys cannot be renamed. Add a new record to use another key.';
+    }
+
     if (view === 'catalog' && isNew && Object.prototype.hasOwnProperty.call(options, 'suggestedKey')) {
         const baseSuggestedKey = options.suggestedKey || '';
         const suggestedControl = element('input', {
@@ -2371,8 +2800,10 @@ function renderEditor(view, record, options = {}) {
             applySuggested.disabled = !suggestedControl.value;
         };
         applySuggested.addEventListener('click', () => {
-            controls.get('key').value = suggestedControl.value;
-            controls.get('key').focus();
+            const keyControl = controls.get('key');
+            keyControl.value = suggestedControl.value;
+            keyControl.dispatchEvent(new Event('input', { bubbles: true }));
+            keyControl.focus();
         });
         controls.get('category')?.addEventListener('change', updateSuggestedKey);
         updateSuggestedKey();
@@ -2435,6 +2866,8 @@ function renderEditor(view, record, options = {}) {
     }
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
+        submit.disabled = true;
+        cancel.disabled = true;
         const nextRecord = {};
         const removedFields = [];
         const requiredFields = new Set(schema.required || []);
@@ -2456,12 +2889,17 @@ function renderEditor(view, record, options = {}) {
                 nextRecord[fieldName] = Math.trunc(nextRecord[fieldName]);
             }
         }
-        const result = await api.applyRecord({
-            view,
-            originalIdentity: isNew ? null : record[definition.identityKey],
-            record: nextRecord,
-            removedFields
-        });
+        let result;
+        try {
+            result = await api.applyRecord({
+                view,
+                originalIdentity: isNew ? null : record[definition.identityKey],
+                record: nextRecord,
+                removedFields
+            });
+        } catch (error) {
+            result = { ok: false, error: error.message };
+        }
         if (result.ok) {
             state = result.state;
             editingIdentity = nextRecord[definition.identityKey];
@@ -2472,8 +2910,14 @@ function renderEditor(view, record, options = {}) {
             showResult('Draft updated', { validation: state.validation });
             render();
         } else {
+            submit.disabled = false;
+            cancel.disabled = false;
             showResult('Record rejected', {
-                validation: { ok: false, errors: result.errors || [], warnings: result.warnings || [] }
+                validation: {
+                    ok: false,
+                    errors: result.errors || [{ path: '/', message: result.error || 'Unable to update the in-memory draft.' }],
+                    warnings: result.warnings || []
+                }
             });
         }
     });

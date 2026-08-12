@@ -21,7 +21,7 @@ function createWindowOptions(appRoot) {
     };
 }
 
-function createSplashWindowOptions() {
+function createSplashWindowOptions(appRoot = path.resolve(__dirname, '..')) {
     return {
         width: 520,
         height: 280,
@@ -29,11 +29,12 @@ function createSplashWindowOptions() {
         maximizable: false,
         minimizable: false,
         fullscreenable: false,
-        show: false,
+        show: true,
         frame: false,
         backgroundColor: '#20332f',
         title: 'Starting MyDefrag Language Maintenance',
         webPreferences: {
+            preload: path.join(appRoot, 'splash', 'preload.js'),
             nodeIntegration: false,
             contextIsolation: true,
             sandbox: true,

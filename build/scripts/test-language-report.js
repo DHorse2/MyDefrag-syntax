@@ -169,8 +169,16 @@ try {
     assert.match(report, /src\/server\/parser\.js \[parser\]/);
     assert.match(report, /Component: parser/);
     assert.match(report, /Non-catalog candidates: \d+/);
-    assert.match(report, /Line \d+ \[(?:potential|review|rejected|in-catalog)\]:/);
+    assert.match(report, /Line \d+ \[(?:potential|review|rejected|code-edit|code-updated|in-catalog)\]:/);
     assert.match(report, /Found in catalog: \d+/);
+    assert.match(
+        report,
+        /^Line \d+ \[in-catalog\]: MyDefrag Script \| Catalog: package\.contributes\.languages\.aliases$/m
+    );
+    assert.doesNotMatch(
+        report,
+        /^Line \d+ \[(?:in-catalog|code-edit|code-updated)\]:[^\r\n]*\r?\n\s+Catalog:/m
+    );
     assert.strictEqual(result.stdout.includes(report), true);
     assert.match(
         result.stdout.replace(/\\/g, '/'),
@@ -188,6 +196,28 @@ try {
         parserMigration.catalogedStrings.find((item) => item.text === "Unexpected token '{token}'")
             .catalogEntries[0].key,
         'parser.diagnostic.unexpectedToken.message'
+    );
+    const extensionMigration = migrationReport.files.find((file) => file.file === 'src/extension.js');
+    const priorNoDocumentCandidate = extensionMigration.catalogedStrings.find(
+        (item) => item.text === 'No MyDefrag document is active.' && item.historical === true
+    );
+    const currentNoDocumentKey = extensionMigration.catalogedStrings.find(
+        (item) => item.text === 'extension.message.noActiveDocument.warning'
+    );
+    assert.equal(priorNoDocumentCandidate.status, 'code-updated');
+    assert.equal(
+        priorNoDocumentCandidate.catalogEntries[0].key,
+        'extension.message.noActiveDocument.warning'
+    );
+    assert.equal(currentNoDocumentKey.status, 'in-catalog');
+    assert.equal(currentNoDocumentKey.catalogReference.kind, 'catalog.format-key');
+    assert.match(
+        report,
+        /Line \d+ \[code-updated\]: No MyDefrag document is active\. \| Catalog: extension\.message\.noActiveDocument\.warning/
+    );
+    assert.match(
+        report,
+        /Line \d+ \[in-catalog\]: extension\.message\.noActiveDocument\.warning \| Catalog: extension\.message\.noActiveDocument\.warning/
     );
     const parserCandidate = parserMigration.candidates[0];
     assert.equal(typeof parserCandidate.fullLine, 'string');

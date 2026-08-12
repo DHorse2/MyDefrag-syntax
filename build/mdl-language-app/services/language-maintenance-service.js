@@ -3,10 +3,15 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
 const { VIEW_DEFINITIONS } = require('../shared/contracts');
 const { CanonicalDataRepository } = require('../repositories/canonical-data-repository');
 const { SchemaValidator } = require('../validation/schema-validator');
 const { BuildIntegration } = require('./build-integration');
+const {
+    applyMigrationSourceTransform,
+    buildMigrationSourceTransform
+} = require('./migration-source-transform');
 const { suggestCatalogKey: suggestSourceCatalogKey } = require('./source-key-suggester');
 
 const LANGUAGE_REPORT_PATH = 'build/language/reports/language-report.txt';
@@ -24,6 +29,7 @@ const MIGRATION_FOLDER_IGNORED_DIRECTORIES = new Set([
 const MIGRATION_FOLDER_IGNORED_PATHS = new Set([
     'build/language/catalogs'
 ]);
+const REPLACEABLE_MIGRATION_SOURCE_EXTENSIONS = new Set(['.cjs', '.js']);
 
 function clone(value) {
     return JSON.parse(JSON.stringify(value));
@@ -46,7 +52,35 @@ function buildOptions(request = {}) {
     };
 }
 
-const EDITABLE_CANDIDATE_STATUSES = new Set(['potential', 'rejected', 'review']);
+function sourceContentVersion(sourceText) {
+    return crypto.createHash('sha256').update(sourceText).digest('hex');
+}
+
+function commonJsSyntaxError(sourceText, relativePath) {
+    const sourceWithoutHashbang = sourceText.replace(/^#![^\r\n]*/u, '');
+    try {
+        new vm.Script(`(function (exports, require, module, __filename, __dirname) {\n${sourceWithoutHashbang}\n});`, {
+            filename: relativePath
+        });
+        return null;
+    } catch (error) {
+        return error.message;
+    }
+}
+
+const EDITABLE_CANDIDATE_STATUSES = new Set([
+    'potential',
+    'review',
+    'rejected',
+    'code-edit',
+    'code-updated'
+]);
+const COMPLETED_CANDIDATE_STATUSES = new Set([
+    'in-catalog',
+    'rejected',
+    'code-edit',
+    'code-updated'
+]);
 
 function storedCandidateStatus(migrationInventory, relativePath, text) {
     const entry = (migrationInventory?.candidateStatuses || []).find((candidate) => (
@@ -55,6 +89,33 @@ function storedCandidateStatus(migrationInventory, relativePath, text) {
         && candidate.text === text
     ));
     return entry?.status || 'potential';
+}
+
+function summarizeCandidateWorkflow(classification) {
+    const statusCounts = {
+        potential: 0,
+        review: 0,
+        rejected: 0,
+        'code-edit': 0,
+        'code-updated': 0,
+        'in-catalog': 0
+    };
+    for (const candidate of [...classification.candidates, ...classification.catalogedStrings]) {
+        const status = Object.prototype.hasOwnProperty.call(statusCounts, candidate.status)
+            ? candidate.status
+            : 'potential';
+        statusCounts[status] += 1;
+    }
+    const totalCount = Object.values(statusCounts).reduce((sum, count) => sum + count, 0);
+    const completedCount = Object.entries(statusCounts)
+        .filter(([status]) => COMPLETED_CANDIDATE_STATUSES.has(status))
+        .reduce((sum, [, count]) => sum + count, 0);
+    return {
+        totalCount,
+        completedCount,
+        remainingCount: totalCount - completedCount,
+        statusCounts
+    };
 }
 
 class LanguageMaintenanceService {
@@ -154,6 +215,12 @@ class LanguageMaintenanceService {
 
         if (originalIdentity != null && existingIndex < 0) {
             return { ok: false, errors: [{ path: '/', message: 'The record changed or no longer exists.' }] };
+        }
+        if (payload.view === 'catalog' && originalIdentity != null && identity !== originalIdentity) {
+            return { ok: false, errors: [{
+                path: '/key',
+                message: 'Existing catalog keys cannot be renamed. Add a new record instead.'
+            }] };
         }
         const duplicateIndex = records.findIndex((record, index) => (
             record[definition.identityKey] === identity && index !== existingIndex
@@ -397,8 +464,8 @@ class LanguageMaintenanceService {
         if (typeof this.builder.extractStringCandidates !== 'function') {
             return { ok: false, error: 'The configured language builder does not expose extractStringCandidates.' };
         }
-        const extractedStrings = this.builder.extractStringCandidates(sourceText);
-        const classification = this.classifyExtractedCandidates(extractedStrings, relativePath);
+        const extractedStrings = this.builder.extractStringCandidates(sourceText, { includeLocations: true });
+        const classification = this.classifyExtractedCandidates(extractedStrings, relativePath, sourceText);
         if (!classification.ok) { return classification; }
         const inventoryEntry = (this.draftState.components.migrationInventory?.scanFiles || [])
             .find((entry) => entry.path.toLocaleLowerCase() === relativePath.toLocaleLowerCase());
@@ -502,10 +569,18 @@ class LanguageMaintenanceService {
                         continue;
                     }
                     const relativePath = this.repository.relativeFile(absolutePath);
-                    const extractedStrings = this.builder.extractStringCandidates(buffer.toString('utf8'));
+                    const sourceText = buffer.toString('utf8');
+                    const extractedStrings = this.builder.extractStringCandidates(
+                        sourceText,
+                        { includeLocations: true }
+                    );
                     counts.scannedFileCount += 1;
                     if (extractedStrings.length === 0) { continue; }
-                    const classification = this.classifyExtractedCandidates(extractedStrings, relativePath);
+                    const classification = this.classifyExtractedCandidates(
+                        extractedStrings,
+                        relativePath,
+                        sourceText
+                    );
                     if (!classification.ok) {
                         counts.unreadablePathCount += 1;
                         continue;
@@ -609,7 +684,10 @@ class LanguageMaintenanceService {
         return this.classifyExtractedCandidates(reportedStrings, reportFile.file);
     }
 
-    classifyExtractedCandidates(reportedStrings, relativePath) {
+    classifyExtractedCandidates(reportedStrings, relativePath, sourceText = null) {
+        const expandedStrings = typeof this.builder.expandCatalogFormatCandidates === 'function'
+            ? this.builder.expandCatalogFormatCandidates(this.draftState, reportedStrings, sourceText)
+            : reportedStrings;
         const catalogEntriesByText = new Map();
         for (const entry of this.draftState.catalog.entries || []) {
             const matches = catalogEntriesByText.get(entry.text) || [];
@@ -621,26 +699,35 @@ class LanguageMaintenanceService {
             });
             catalogEntriesByText.set(entry.text, matches);
         }
+        const catalogEntriesForCandidate = typeof this.builder.createMigrationCatalogMatcher === 'function'
+            ? this.builder.createMigrationCatalogMatcher(this.draftState, relativePath)
+            : (candidate) => catalogEntriesByText.get(candidate.text) || [];
         const candidates = [];
         const catalogedStrings = [];
-        for (const candidate of reportedStrings) {
+        for (const candidate of expandedStrings) {
             if (!Number.isInteger(candidate?.line) || candidate.line < 1
                 || typeof candidate.text !== 'string' || typeof candidate.fullLine !== 'string') {
                 return { ok: false, error: 'The migration report is missing full candidate source lines. Rebuild the language outputs.' };
             }
+            const storedStatus = storedCandidateStatus(
+                this.draftState.components.migrationInventory,
+                relativePath,
+                candidate.text
+            );
             const item = {
                 line: candidate.line,
                 text: candidate.text,
                 fullLine: candidate.fullLine,
-                status: storedCandidateStatus(
-                    this.draftState.components.migrationInventory,
-                    relativePath,
-                    candidate.text
-                )
+                status: storedStatus
             };
-            const catalogEntries = catalogEntriesByText.get(candidate.text) || [];
+            if (candidate.historical === true) { item.historical = true; }
+            if (candidate.catalogReference) { item.catalogReference = candidate.catalogReference; }
+            const catalogEntries = catalogEntriesForCandidate(candidate);
             if (catalogEntries.length > 0) {
-                catalogedStrings.push({ ...item, status: 'in-catalog', catalogEntries });
+                const status = ['code-edit', 'code-updated'].includes(storedStatus)
+                    ? storedStatus
+                    : 'in-catalog';
+                catalogedStrings.push({ ...item, status, catalogEntries });
             } else {
                 candidates.push(item);
             }
@@ -681,12 +768,14 @@ class LanguageMaintenanceService {
                     error: classification.error
                 };
             }
+            const workflow = summarizeCandidateWorkflow(classification);
             return {
                 ok: true,
                 path: inventoryEntry.path,
                 component: inventoryEntry.component,
                 candidateCount: classification.candidates.length,
-                catalogedStringCount: classification.catalogedStrings.length
+                catalogedStringCount: classification.catalogedStrings.length,
+                ...workflow
             };
         });
         return { ok: true, files };
@@ -714,6 +803,7 @@ class LanguageMaintenanceService {
         }
         const classification = this.classifyMigrationReportFile(reportFile);
         if (!classification.ok) { return classification; }
+        const workflow = summarizeCandidateWorkflow(classification);
         return {
             ok: true,
             file: {
@@ -722,7 +812,8 @@ class LanguageMaintenanceService {
                 candidateCount: classification.candidates.length,
                 candidates: classification.candidates,
                 catalogedStringCount: classification.catalogedStrings.length,
-                catalogedStrings: classification.catalogedStrings
+                catalogedStrings: classification.catalogedStrings,
+                ...workflow
             }
         };
     }
@@ -750,7 +841,10 @@ class LanguageMaintenanceService {
             return { ok: false, error: error.message };
         }
         const sourceText = fs.readFileSync(absolutePath, 'utf8');
-        const candidates = this.builder.extractStringCandidates(sourceText)
+        const extractedStrings = this.builder.extractStringCandidates(sourceText, { includeLocations: true });
+        const candidates = (typeof this.builder.expandCatalogFormatCandidates === 'function'
+            ? this.builder.expandCatalogFormatCandidates(this.draftState, extractedStrings, sourceText)
+            : extractedStrings)
             .filter((candidate) => candidate.text === String(candidateText || ''));
         return this.getSourceTarget(
             normalizedPath,
@@ -800,9 +894,215 @@ class LanguageMaintenanceService {
                 relativePath: reportResult.file.path,
                 sourceText,
                 line: sourceLine,
-                candidateText: candidate.text
+                candidateText: candidate.text,
+                existingKeys: (this.draftState.catalog.entries || []).map((entry) => entry.key)
             })
         };
+    }
+
+    previewMigrationSourceTransform(request = {}) {
+        this.ensureLoaded();
+        const relativePath = String(request.path || '');
+        const sourceLine = Number(request.line);
+        const candidateText = String(request.text || '');
+        const reportResult = this.getMigrationCandidates(relativePath);
+        if (!reportResult.ok) { return reportResult; }
+        const matches = [...reportResult.file.candidates, ...reportResult.file.catalogedStrings]
+            .filter((candidate) => candidate.line === sourceLine && candidate.text === candidateText);
+        if (matches.length !== 1) {
+            return { ok: false, error: 'The selected line and text do not identify one current migration candidate.' };
+        }
+        const sourceExtension = path.extname(relativePath).toLocaleLowerCase();
+        if (!REPLACEABLE_MIGRATION_SOURCE_EXTENSIONS.has(sourceExtension)) {
+            return {
+                ok: false,
+                code: 'SOURCE_TYPE_NOT_SUPPORTED',
+                error: 'Automatic replacement is supported only for CommonJS .js and .cjs files. JSON and other formats require a format-specific localization transform.'
+            };
+        }
+
+        const target = this.getMigrationSourceTarget(relativePath, sourceLine);
+        if (!target.ok) { return target; }
+        const sourceText = fs.readFileSync(target.absolutePath, 'utf8');
+        const candidate = matches[0];
+        const suggestion = suggestSourceCatalogKey({
+            component: reportResult.file.component,
+            relativePath,
+            sourceText,
+            line: sourceLine,
+            candidateText
+        });
+        const catalogKey = String(request.catalogKey || candidate.catalogEntries?.[0]?.key || suggestion.suggestedKey || '');
+        const preview = buildMigrationSourceTransform({
+            sourceText,
+            line: sourceLine,
+            candidateText,
+            catalogKey,
+            extractStringCandidates: this.builder.extractStringCandidates
+        });
+        if (!preview.ok) { return preview; }
+
+        const transformedSource = applyMigrationSourceTransform(sourceText, preview);
+        if (!transformedSource.ok) { return transformedSource; }
+        const syntaxError = commonJsSyntaxError(transformedSource.content, relativePath);
+        const catalogEntry = (this.draftState.catalog.entries || []).find((entry) => entry.key === catalogKey);
+        let sourceReplacement = preview.sourceReplacement;
+        if (!catalogEntry) {
+            sourceReplacement = {
+                ...sourceReplacement,
+                enabled: false,
+                reason: 'Apply this catalog key to the in-memory draft before replacing source.'
+            };
+        } else if (catalogEntry.text !== candidateText) {
+            sourceReplacement = {
+                ...sourceReplacement,
+                enabled: false,
+                reason: 'The selected catalog key does not contain this candidate text.'
+            };
+        } else if (syntaxError) {
+            sourceReplacement = {
+                ...sourceReplacement,
+                enabled: false,
+                reason: `The transformed JavaScript is not syntactically valid: ${syntaxError}`
+            };
+        }
+        return {
+            ...preview,
+            path: relativePath,
+            sourceVersion: sourceContentVersion(sourceText),
+            sourceReplacement
+        };
+    }
+
+    getMigrationSourceUpdateStatus(request = {}) {
+        this.ensureLoaded();
+        const relativePath = String(request.path || '');
+        const sourceLine = Number(request.line);
+        const candidateText = String(request.text || '');
+        const reportResult = this.getMigrationCandidates(relativePath);
+        if (!reportResult.ok) { return reportResult; }
+        if (![...reportResult.file.candidates, ...reportResult.file.catalogedStrings]
+            .some((candidate) => candidate.line === sourceLine && candidate.text === candidateText)) {
+            return { ok: false, error: 'The selected line and text are not a current reported migration candidate.' };
+        }
+
+        let absolutePath;
+        try {
+            absolutePath = this.repository.resolve(relativePath);
+            this.repository.relativeFile(absolutePath);
+        } catch (error) {
+            return { ok: false, error: error.message };
+        }
+        const sourceText = fs.readFileSync(absolutePath, 'utf8');
+        const originalPresent = this.builder.extractStringCandidates(sourceText)
+            .some((candidate) => candidate.text === candidateText);
+        return {
+            ok: true,
+            path: relativePath,
+            line: sourceLine,
+            text: candidateText,
+            originalPresent,
+            sourceUpdated: !originalPresent
+        };
+    }
+
+    replaceMigrationSourceLine(request = {}) {
+        const preview = this.previewMigrationSourceTransform(request);
+        if (!preview.ok) { return preview; }
+        if (preview.sourceReplacement?.enabled !== true) {
+            return {
+                ok: false,
+                blocked: true,
+                code: 'SOURCE_REPLACEMENT_NOT_READY',
+                error: preview.sourceReplacement?.reason || 'Source replacement is not ready.',
+                preview
+            };
+        }
+        const expectedSourceVersion = String(request.sourceVersion || '');
+        if (!expectedSourceVersion) {
+            return {
+                ok: false,
+                blocked: true,
+                code: 'SOURCE_VERSION_REQUIRED',
+                error: 'Refresh the transform preview before replacing the source line.'
+            };
+        }
+        if (expectedSourceVersion !== preview.sourceVersion) {
+            return {
+                ok: false,
+                blocked: true,
+                code: 'SOURCE_CHANGED',
+                error: 'The source file changed after the transform preview was created. Reselect the candidate to refresh it.'
+            };
+        }
+
+        const absolutePath = this.repository.resolve(preview.path);
+        const sourceText = fs.readFileSync(absolutePath, 'utf8');
+        if (sourceContentVersion(sourceText) !== expectedSourceVersion) {
+            return {
+                ok: false,
+                blocked: true,
+                code: 'SOURCE_CHANGED',
+                error: 'The source file changed before replacement. Reselect the candidate to refresh it.'
+            };
+        }
+        const transformedSource = applyMigrationSourceTransform(sourceText, preview);
+        if (!transformedSource.ok) { return transformedSource; }
+        const syntaxError = commonJsSyntaxError(transformedSource.content, preview.path);
+        if (syntaxError) {
+            return {
+                ok: false,
+                blocked: true,
+                code: 'INVALID_TRANSFORMED_SOURCE',
+                error: `The transformed JavaScript is not syntactically valid: ${syntaxError}`
+            };
+        }
+
+        let transaction;
+        try {
+            transaction = this.repository.beginTransaction([{
+                relativePath: preview.path,
+                content: transformedSource.content,
+                expectedContent: sourceText
+            }]);
+            const recoveryFiles = transaction.commit();
+            let candidateStatusResult;
+            try {
+                candidateStatusResult = this.setMigrationCandidateStatus({
+                    path: preview.path,
+                    text: request.text,
+                    status: 'code-updated'
+                });
+            } catch (error) {
+                candidateStatusResult = { ok: false, error: error.message };
+            }
+            return {
+                ok: true,
+                path: preview.path,
+                line: preview.line,
+                catalogKey: preview.catalogKey,
+                variableName: preview.variableName,
+                transformedLines: preview.transformedLines,
+                sourceVersion: sourceContentVersion(transformedSource.content),
+                recoveryFiles,
+                candidateStatus: candidateStatusResult.ok ? 'code-updated' : null,
+                state: candidateStatusResult.ok ? candidateStatusResult.state : undefined,
+                statusWarning: candidateStatusResult.ok
+                    ? null
+                    : 'The source was updated, but the Code Updated workflow status could not be recorded.',
+                message: recoveryFiles.length > 0
+                    ? `Replaced line ${preview.line} in ${preview.path}. A backup could not be removed: ${recoveryFiles.join(', ')}`
+                    : `Replaced line ${preview.line} in ${preview.path}.`
+            };
+        } catch (error) {
+            transaction?.rollback();
+            return {
+                ok: false,
+                blocked: true,
+                code: error.code || 'SOURCE_REPLACEMENT_FAILED',
+                error: error.message
+            };
+        }
     }
 
     setMigrationCandidateStatus(request = {}) {
@@ -813,15 +1113,16 @@ class LanguageMaintenanceService {
         if (!EDITABLE_CANDIDATE_STATUSES.has(status)) {
             return { ok: false, errors: [{
                 path: '/migrationInventory/candidateStatuses',
-                message: 'Select Potential Candidate, Rejected, or Review.'
+                message: 'Select Potential Candidate, Review, Rejected, Code Edit, or Code Updated.'
             }] };
         }
         const current = this.getMigrationCandidates(relativePath);
         if (!current.ok) { return current; }
-        if (!current.file.candidates.some((candidate) => candidate.text === text)) {
+        if (![...current.file.candidates, ...current.file.catalogedStrings]
+            .some((candidate) => candidate.text === text)) {
             return { ok: false, errors: [{
                 path: '/migrationInventory/candidateStatuses',
-                message: 'The selected text is no longer a current non-catalog candidate.'
+                message: 'The selected text is no longer a current reported candidate.'
             }] };
         }
 

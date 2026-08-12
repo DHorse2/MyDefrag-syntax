@@ -45,10 +45,10 @@ function Read-AiProjectIdentity {
     )
 
     $resolvedProjectRoot = ConvertTo-AiFullPath -PathValue $ProjectRoot
-    $identityPath = Join-Path -Path $resolvedProjectRoot -ChildPath '.vscode\ai-project.json'
+    $identityPath = Join-Path -Path $resolvedProjectRoot -ChildPath '.codex\ai-project.json'
 
     if (-not (Test-Path -LiteralPath $identityPath -PathType Leaf)) {
-        throw "Fatal project identity error: missing $identityPath. Create .vscode\ai-project.json with schemaVersion, projectId, projectName, and projectRoot."
+        throw "Fatal project identity error: missing $identityPath. Create .codex\ai-project.json with schemaVersion, projectId, projectName, and projectRoot."
     }
 
     try {
@@ -107,7 +107,7 @@ function Find-AiProjectIdentityRoot {
     }
 
     while ($true) {
-        $identityPath = Join-Path -Path $current -ChildPath '.vscode\ai-project.json'
+        $identityPath = Join-Path -Path $current -ChildPath '.codex\ai-project.json'
         if (Test-Path -LiteralPath $identityPath -PathType Leaf) {
             return $current
         }

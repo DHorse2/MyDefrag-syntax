@@ -1,7 +1,7 @@
 'use strict';
 
 const path = require('path');
-const { visit } = require('jsonc-parser');
+const { parse, visit } = require('jsonc-parser');
 
 const CONTROL_WORDS = new Set(['catch', 'for', 'if', 'switch', 'while', 'with']);
 const GENERIC_IDENTIFIERS = new Set(['label', 'message', 'text', 'value']);
@@ -27,9 +27,44 @@ function buildKey(component, construct) {
     return segments.length >= 2 ? segments.join('.') : '';
 }
 
+function jsonPathWithArrayIdentity(document, jsonPath) {
+    const describedPath = [];
+    let current = document;
+    for (const segment of jsonPath) {
+        if (typeof segment !== 'number') {
+            describedPath.push(segment);
+            current = current?.[segment];
+            continue;
+        }
+        const item = Array.isArray(current) ? current[segment] : null;
+        const identity = item && typeof item === 'object'
+            ? ['id', 'key', 'command', 'code', 'name', 'type']
+                .map((field) => item[field])
+                .find((value) => typeof value === 'string' && value.trim())
+            : null;
+        describedPath.push(identity || `item${segment + 1}`);
+        current = item;
+    }
+    return describedPath;
+}
+
+function uniqueSuggestedKey(suggestedKey, candidateText, line, existingKeys = []) {
+    const occupied = new Set(existingKeys);
+    if (!suggestedKey || !occupied.has(suggestedKey)) { return suggestedKey; }
+    const semanticSuffix = keySegments([candidateText]).slice(0, 4);
+    const semanticKey = [...suggestedKey.split('.'), ...semanticSuffix].join('.');
+    if (semanticKey !== suggestedKey && !occupied.has(semanticKey)) { return semanticKey; }
+    const lineKey = `${suggestedKey}.line${line}`;
+    if (!occupied.has(lineKey)) { return lineKey; }
+    let sequence = 2;
+    while (occupied.has(`${lineKey}.item${sequence}`)) { sequence += 1; }
+    return `${lineKey}.item${sequence}`;
+}
+
 function suggestJsonPath(sourceText, line, candidateText) {
     const matches = [];
     const targetLine = line - 1;
+    const document = parse(sourceText, [], { allowTrailingComma: true });
     visit(sourceText, {
         onObjectProperty: (property, _offset, _length, startLine, _startCharacter, pathSupplier) => {
             if (startLine === targetLine && property === candidateText) {
@@ -42,7 +77,8 @@ function suggestJsonPath(sourceText, line, candidateText) {
             }
         }
     }, { allowTrailingComma: true });
-    return matches.sort((left, right) => right.length - left.length)[0] || [];
+    const jsonPath = matches.sort((left, right) => right.length - left.length)[0] || [];
+    return jsonPathWithArrayIdentity(document, jsonPath);
 }
 
 function maskJavaScriptStructure(sourceText) {
@@ -162,7 +198,7 @@ function suggestJavaScriptPath(sourceText, line) {
     return [...functions, ...expression.split('.').filter(Boolean)];
 }
 
-function suggestCatalogKey({ component, relativePath, sourceText, line, candidateText }) {
+function suggestCatalogKey({ component, relativePath, sourceText, line, candidateText, existingKeys = [] }) {
     const extension = path.extname(relativePath || '').toLocaleLowerCase();
     let construct = [];
     let strategy = 'fallback';
@@ -179,8 +215,12 @@ function suggestCatalogKey({ component, relativePath, sourceText, line, candidat
     if (!construct.length) {
         construct = [path.basename(relativePath || 'source', extension || undefined), `line${line}`];
     }
+    const baseSuggestedKey = buildKey(component, construct);
+    const suggestedKey = uniqueSuggestedKey(baseSuggestedKey, candidateText, line, existingKeys);
     return {
-        suggestedKey: buildKey(component, construct),
+        suggestedKey,
+        baseSuggestedKey,
+        collisionAdjusted: suggestedKey !== baseSuggestedKey,
         strategy,
         confidence,
         construct: keySegments(construct)
@@ -190,7 +230,9 @@ function suggestCatalogKey({ component, relativePath, sourceText, line, candidat
 module.exports = {
     buildKey,
     enclosingFunctions,
+    jsonPathWithArrayIdentity,
     suggestCatalogKey,
     suggestJavaScriptPath,
-    suggestJsonPath
+    suggestJsonPath,
+    uniqueSuggestedKey
 };

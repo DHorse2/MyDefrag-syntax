@@ -30,6 +30,49 @@ test('suggests a component-prefixed JSON property path', () => {
     assert.equal(result.confidence, 'high');
 });
 
+test('uses stable array-item identity so repeated JSON properties receive distinct keys', () => {
+    const sourceText = `{
+  "commands": [
+    { "command": "tool.first", "title": "First command" },
+    { "command": "tool.second", "title": "Second command" }
+  ]
+}`;
+    const first = suggestCatalogKey({
+        component: 'package',
+        relativePath: 'package.json',
+        sourceText,
+        line: sourceLine(sourceText, 'First command'),
+        candidateText: 'First command'
+    });
+    const second = suggestCatalogKey({
+        component: 'package',
+        relativePath: 'package.json',
+        sourceText,
+        line: sourceLine(sourceText, 'Second command'),
+        candidateText: 'Second command'
+    });
+
+    assert.equal(first.suggestedKey, 'package.commands.tool.first.title');
+    assert.equal(second.suggestedKey, 'package.commands.tool.second.title');
+    assert.notEqual(first.suggestedKey, second.suggestedKey);
+});
+
+test('adjusts a suggestion that is already occupied instead of reusing an existing catalog key', () => {
+    const sourceText = '{ "title": "Second title" }';
+    const result = suggestCatalogKey({
+        component: 'package',
+        relativePath: 'package.json',
+        sourceText,
+        line: 1,
+        candidateText: 'Second title',
+        existingKeys: ['package.title']
+    });
+
+    assert.equal(result.baseSuggestedKey, 'package.title');
+    assert.equal(result.suggestedKey, 'package.title.Second.title');
+    assert.equal(result.collisionAdjusted, true);
+});
+
 test('suggests a JavaScript function and interpolation member path', () => {
     const sourceText = fs.readFileSync(path.join(PROJECT_ROOT, 'src', 'extension.js'), 'utf8');
     const message = 'extension.js:activate Unexpected error in Logging Channel and Status Bar initialization';

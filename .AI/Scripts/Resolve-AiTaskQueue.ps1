@@ -17,7 +17,7 @@ directory.
 
 .PARAMETER ProjectId
 Optional expected project ID. When supplied, it must match
-<ProjectRoot>\.vscode\ai-project.json.
+<ProjectRoot>\.codex\ai-project.json.
 
 .PARAMETER AiRoot
 Optional explicit AI root. When omitted, `<ProjectRoot>\.AI` is preferred and
@@ -1111,7 +1111,7 @@ $resolvedTodoPath = if (-not [string]::IsNullOrWhiteSpace($TodoPath)) {
 $resolvedCurrentTaskPath = if (-not [string]::IsNullOrWhiteSpace($CurrentTaskPath)) {
     Resolve-FullPath -PathValue $CurrentTaskPath -BasePath $resolvedProjectRoot
 } else {
-    Join-Path -Path $resolvedAiRoot -ChildPath 'Prompts\currentTask.md'
+    Join-Path -Path $resolvedAiRoot -ChildPath ('Prompts\currentTask-' + $projectIdentity.ProjectId + '.md')
 }
 
 $lock = Enter-QueueLock -AiRootPath $resolvedAiRoot

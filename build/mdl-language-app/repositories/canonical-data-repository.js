@@ -146,6 +146,14 @@ class CanonicalDataRepository {
             }
 
             for (const item of staged) {
+                if (Object.prototype.hasOwnProperty.call(item, 'expectedContent')) {
+                    const currentContent = this.fs.readFileSync(item.target, 'utf8');
+                    if (currentContent !== item.expectedContent) {
+                        const error = new Error(`The source changed before it could be replaced: ${item.relativePath}`);
+                        error.code = 'SOURCE_CHANGED';
+                        throw error;
+                    }
+                }
                 this.fs.renameSync(item.target, item.backup);
                 try {
                     this.fs.renameSync(item.temporary, item.target);

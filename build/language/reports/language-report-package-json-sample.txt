@@ -1,0 +1,539 @@
+MYDEFRAG LANGUAGE REPORT - PACKAGE.JSON SAMPLE
+================================================
+
+Scope: package.json only
+Source: current working tree
+Canonical language-report.txt was not replaced.
+
+MIGRATION CANDIDATE INVENTORY
+-----------------------------
+This report contains reviewed migration candidates and detected strings already represented in the catalog. It is not a behavior change and does not imply every string should be cataloged.
+
+package.json [package]
+
+CANDIDATE FILES
+---------------
+
+package.json
+------------
+Component: package
+Status: scanned
+Non-catalog candidates: 473
+Line 2 [rejected]: name
+Line 2 [potential]: mydefrag-syntax
+Line 3 [rejected]: displayName
+Line 4 [rejected]: description
+Line 5 [rejected]: version
+Line 6 [rejected]: publisher
+Line 7 [rejected]: repository
+Line 8 [rejected]: type
+Line 8 [rejected]: git
+Line 9 [review]: url
+Line 11 [rejected]: engines
+Line 12 [rejected]: vscode
+Line 14 [rejected]: categories
+Line 17 [rejected]: contributes
+Line 18 [rejected]: configuration
+Line 19 [rejected]: title
+Line 20 [rejected]: properties
+Line 21 [rejected]: mydfrg.userDir
+Line 22 [rejected]: type
+Line 22 [rejected]: string
+Line 23 [rejected]: default
+Line 23 [rejected]: .user
+Line 24 [rejected]: description
+Line 26 [rejected]: mydfrg.logDir
+Line 27 [rejected]: type
+Line 27 [rejected]: string
+Line 28 [rejected]: default
+Line 28 [rejected]: .user/logs
+Line 29 [rejected]: description
+Line 31 [rejected]: mydfrg.debugOn
+Line 32 [rejected]: type
+Line 32 [rejected]: boolean
+Line 33 [rejected]: default
+Line 34 [rejected]: description
+Line 36 [rejected]: mydfrg.verboseLevel
+Line 37 [rejected]: type
+Line 37 [rejected]: number
+Line 38 [rejected]: default
+Line 39 [rejected]: minimum
+Line 40 [rejected]: maximum
+Line 41 [rejected]: description
+Line 43 [rejected]: mydfrg.referenceRelativePathLevel
+Line 44 [rejected]: type
+Line 45 [rejected]: number
+Line 46 [rejected]: string
+Line 48 [rejected]: default
+Line 48 [rejected]: Error
+Line 49 [rejected]: enum
+Line 55 [rejected]: None
+Line 56 [rejected]: Error
+Line 57 [rejected]: Warning
+Line 58 [rejected]: Information
+Line 59 [rejected]: Hint
+Line 61 [rejected]: description
+Line 63 [rejected]: mydfrg.referenceContainsMacros
+Line 64 [rejected]: type
+Line 65 [rejected]: number
+Line 66 [rejected]: string
+Line 68 [rejected]: default
+Line 69 [rejected]: enum
+Line 75 [rejected]: None
+Line 76 [rejected]: Error
+Line 77 [rejected]: Warning
+Line 78 [rejected]: Information
+Line 79 [rejected]: Hint
+Line 81 [rejected]: description
+Line 83 [rejected]: mydfrg.referenceFileFoundLevel
+Line 84 [rejected]: type
+Line 85 [rejected]: number
+Line 86 [rejected]: string
+Line 88 [rejected]: default
+Line 89 [rejected]: enum
+Line 95 [rejected]: None
+Line 96 [rejected]: Error
+Line 97 [rejected]: Warning
+Line 98 [rejected]: Information
+Line 99 [rejected]: Hint
+Line 101 [rejected]: description
+Line 103 [rejected]: mydfrg.referenceFileNotFoundLevel
+Line 104 [rejected]: type
+Line 105 [rejected]: number
+Line 106 [rejected]: string
+Line 108 [rejected]: default
+Line 109 [rejected]: enum
+Line 115 [rejected]: None
+Line 116 [rejected]: Error
+Line 117 [rejected]: Warning
+Line 118 [rejected]: Information
+Line 119 [rejected]: Hint
+Line 121 [rejected]: description
+Line 123 [rejected]: mydfrg.fragmentParentLevel
+Line 124 [rejected]: type
+Line 125 [rejected]: number
+Line 126 [rejected]: string
+Line 128 [rejected]: default
+Line 129 [rejected]: enum
+Line 135 [rejected]: None
+Line 136 [rejected]: Error
+Line 137 [rejected]: Warning
+Line 138 [rejected]: Information
+Line 139 [rejected]: Hint
+Line 141 [rejected]: description
+Line 143 [rejected]: mydfrg.exclude
+Line 144 [rejected]: type
+Line 144 [rejected]: array
+Line 145 [rejected]: items
+Line 146 [rejected]: type
+Line 146 [rejected]: string
+Line 148 [rejected]: default
+Line 149 [rejected]: **/Backup/**
+Line 150 [rejected]: **/Bu/**
+Line 151 [rejected]: **/MdmSysTools/**
+Line 152 [rejected]: **/Archive/**
+Line 153 [rejected]: **/*.tmp.MyDc
+Line 154 [rejected]: **/Compile*
+Line 155 [rejected]: **/*.log
+Line 156 [rejected]: **/TaylorDoVs0_2/**
+Line 157 [rejected]: **/TaylorDoVs0_3/**
+Line 158 [rejected]: **/TaylorDoVs0_4/**
+Line 159 [rejected]: **/Log/**
+Line 160 [rejected]: **/Logs/**
+Line 161 [rejected]: **/artifacts/**
+Line 162 [rejected]: **/.user/**
+Line 163 [rejected]: **/node_modules/**
+Line 164 [rejected]: **/artifacts/**
+Line 165 [rejected]: **/resources/
+Line 166 [rejected]: **/dist/**
+Line 167 [rejected]: **/.git/**
+Line 168 [rejected]: **/.user/**
+Line 169 [rejected]: **/.vs/**
+Line 170 [rejected]: **/.vscode/**
+Line 171 [rejected]: **/Download/**
+Line 172 [rejected]: **/GithubIo/**
+Line 174 [rejected]: description
+Line 178 [rejected]: languages
+Line 180 [rejected]: id
+Line 180 [rejected]: mydfrg
+Line 181 [rejected]: aliases
+Line 183 [rejected]: mydfrg
+Line 185 [rejected]: extensions
+Line 186 [rejected]: .MyDc
+Line 187 [rejected]: .MyD
+Line 188 [rejected]: .mydc
+Line 189 [rejected]: .myd
+Line 190 [rejected]: .MYDC
+Line 191 [rejected]: .MYD
+Line 193 [rejected]: configuration
+Line 193 [rejected]: ./src/language-configuration.json
+Line 196 [rejected]: grammars
+Line 198 [rejected]: language
+Line 198 [rejected]: mydfrg
+Line 199 [rejected]: scopeName
+Line 199 [rejected]: source.mydfrg
+Line 200 [rejected]: path
+Line 200 [rejected]: ./syntaxes/mydfrg.tmLanguage.json
+Line 203 [rejected]: snippets
+Line 205 [rejected]: language
+Line 205 [rejected]: mydfrg
+Line 206 [rejected]: path
+Line 206 [rejected]: ./snippets/mydfrg.code-snippets
+Line 209 [rejected]: commands
+Line 211 [rejected]: command
+Line 211 [rejected]: mydfrg.openPreview
+Line 212 [rejected]: title
+Line 215 [rejected]: command
+Line 215 [rejected]: mdm.openFileAtPosition
+Line 216 [rejected]: title
+Line 219 [rejected]: command
+Line 219 [rejected]: mydfrg.openSettings
+Line 220 [rejected]: title
+Line 223 [rejected]: command
+Line 223 [rejected]: mydfrg.diagnostics.next
+Line 224 [rejected]: title
+Line 225 [rejected]: icon
+Line 225 [rejected]: $(arrow-down)
+Line 228 [rejected]: command
+Line 228 [rejected]: mydfrg.diagnostics.previous
+Line 229 [rejected]: title
+Line 230 [rejected]: icon
+Line 230 [rejected]: $(arrow-up)
+Line 233 [rejected]: command
+Line 233 [rejected]: mydfrg.diagnostics.nextFile
+Line 234 [rejected]: title
+Line 235 [rejected]: icon
+Line 235 [rejected]: $(arrow-right)
+Line 238 [rejected]: command
+Line 238 [rejected]: mydfrg.diagnostics.fixedItem
+Line 239 [rejected]: title
+Line 240 [rejected]: icon
+Line 240 [rejected]: $(pass-filled)
+Line 243 [rejected]: command
+Line 243 [rejected]: mydfrg.diagnostics.ignoreItem
+Line 244 [rejected]: title
+Line 245 [rejected]: icon
+Line 245 [rejected]: $(eye-closed)
+Line 248 [rejected]: command
+Line 248 [rejected]: mydfrg.diagnostics.skipItem
+Line 249 [rejected]: title
+Line 250 [rejected]: icon
+Line 250 [rejected]: $(debug-step-over)
+Line 253 [rejected]: command
+Line 253 [rejected]: mydfrg.diagnostics.sendIt
+Line 254 [rejected]: title
+Line 255 [rejected]: icon
+Line 255 [rejected]: $(send)
+Line 258 [rejected]: command
+Line 258 [rejected]: mydfrg.diagnostics.validSyntax
+Line 259 [rejected]: title
+Line 259 [rejected]: MyDefrag: Mark as Valid Syntax
+Line 260 [rejected]: icon
+Line 260 [rejected]: $(thumbsup-filled)
+Line 263 [rejected]: command
+Line 263 [rejected]: mydfrg.diagnostics.prevFile
+Line 264 [rejected]: title
+Line 264 [rejected]: MyDefrag: Previous File
+Line 265 [rejected]: icon
+Line 265 [rejected]: $(arrow-left)
+Line 268 [rejected]: command
+Line 268 [rejected]: mydfrg.diagnostics.top
+Line 269 [rejected]: title
+Line 270 [rejected]: icon
+Line 270 [rejected]: $(arrow-circle-up)
+Line 273 [rejected]: command
+Line 273 [rejected]: mydfrg.diagnostics.reset
+Line 274 [rejected]: title
+Line 275 [rejected]: icon
+Line 275 [rejected]: $(discard)
+Line 278 [rejected]: command
+Line 278 [rejected]: mydfrg.diagnostics.refresh
+Line 279 [rejected]: title
+Line 280 [rejected]: icon
+Line 280 [rejected]: $(refresh)
+Line 283 [rejected]: command
+Line 283 [rejected]: mydfrg.diagnostics.filter
+Line 284 [rejected]: title
+Line 285 [rejected]: icon
+Line 285 [rejected]: $(filter)
+Line 288 [rejected]: command
+Line 288 [rejected]: mydfrg.diagnostics.clearFilter
+Line 289 [rejected]: title
+Line 290 [rejected]: icon
+Line 290 [rejected]: $(clear-all)
+Line 293 [rejected]: command
+Line 293 [rejected]: mydfrg.diagnostics.showTree
+Line 294 [rejected]: title
+Line 295 [rejected]: icon
+Line 295 [rejected]: $(list-tree)
+Line 298 [rejected]: command
+Line 298 [rejected]: mydfrg.diagnostics.showTable
+Line 299 [rejected]: title
+Line 300 [rejected]: icon
+Line 300 [rejected]: $(list-flat)
+Line 303 [rejected]: command
+Line 303 [rejected]: mydfrg.diagnostics.closeView
+Line 304 [rejected]: title
+Line 305 [rejected]: icon
+Line 305 [rejected]: $(close)
+Line 308 [rejected]: command
+Line 308 [rejected]: mydfrg.configureFolders
+Line 309 [rejected]: title
+Line 312 [rejected]: menus
+Line 313 [rejected]: editor/title
+Line 315 [rejected]: command
+Line 315 [rejected]: mydfrg.openPreview
+Line 316 [rejected]: when
+Line 316 [rejected]: resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc
+                     || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname ==
+                     .MYD
+Line 317 [rejected]: group
+Line 317 [rejected]: navigation
+Line 320 [rejected]: editor/title/context
+Line 322 [rejected]: command
+Line 322 [rejected]: mydfrg.openPreview
+Line 323 [rejected]: when
+Line 323 [rejected]: resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc
+                     || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname ==
+                     .MYD
+Line 324 [rejected]: group
+Line 324 [rejected]: navigation
+Line 327 [rejected]: view/title
+Line 329 [rejected]: command
+Line 329 [rejected]: mydfrg.diagnostics.previous
+Line 330 [rejected]: when
+Line 330 [rejected]: view == mydfrgDiagnostics
+Line 331 [rejected]: group
+Line 331 [rejected]: navigation@1
+Line 334 [rejected]: command
+Line 334 [rejected]: mydfrg.diagnostics.next
+Line 335 [rejected]: when
+Line 335 [rejected]: view == mydfrgDiagnostics
+Line 336 [rejected]: group
+Line 336 [rejected]: navigation@2
+Line 339 [rejected]: command
+Line 339 [rejected]: mydfrg.diagnostics.prevFile
+Line 340 [rejected]: when
+Line 340 [rejected]: view == mydfrgDiagnostics
+Line 341 [rejected]: group
+Line 341 [rejected]: navigation@3
+Line 344 [rejected]: command
+Line 344 [rejected]: mydfrg.diagnostics.nextFile
+Line 345 [rejected]: when
+Line 345 [rejected]: view == mydfrgDiagnostics
+Line 346 [rejected]: group
+Line 346 [rejected]: navigation@4
+Line 349 [rejected]: command
+Line 349 [rejected]: mydfrg.diagnostics.top
+Line 350 [rejected]: when
+Line 350 [rejected]: view == mydfrgDiagnostics
+Line 351 [rejected]: group
+Line 351 [rejected]: navigation@5
+Line 354 [rejected]: command
+Line 354 [rejected]: mydfrg.diagnostics.fixedItem
+Line 355 [rejected]: when
+Line 355 [rejected]: view == mydfrgDiagnostics
+Line 356 [rejected]: group
+Line 356 [rejected]: navigation@6
+Line 359 [rejected]: command
+Line 359 [rejected]: mydfrg.diagnostics.ignoreItem
+Line 360 [rejected]: when
+Line 360 [rejected]: view == mydfrgDiagnostics
+Line 361 [rejected]: group
+Line 361 [rejected]: navigation@7
+Line 364 [rejected]: command
+Line 364 [rejected]: mydfrg.diagnostics.skipItem
+Line 365 [rejected]: when
+Line 365 [rejected]: view == mydfrgDiagnostics
+Line 366 [rejected]: group
+Line 366 [rejected]: navigation@8
+Line 369 [rejected]: command
+Line 369 [rejected]: mydfrg.diagnostics.validSyntax
+Line 370 [rejected]: when
+Line 370 [rejected]: view == mydfrgDiagnostics
+Line 371 [rejected]: group
+Line 371 [rejected]: navigation@9
+Line 374 [rejected]: command
+Line 374 [rejected]: mydfrg.diagnostics.sendIt
+Line 375 [rejected]: when
+Line 375 [rejected]: view == mydfrgDiagnostics
+Line 376 [rejected]: group
+Line 376 [rejected]: navigation@10
+Line 379 [rejected]: command
+Line 379 [rejected]: mydfrg.diagnostics.showTable
+Line 380 [rejected]: when
+Line 380 [rejected]: view == mydfrgDiagnostics && mydfrgDiagnostics.viewMode == tree
+Line 381 [rejected]: group
+Line 381 [rejected]: navigation@11
+Line 384 [rejected]: command
+Line 384 [rejected]: mydfrg.diagnostics.showTree
+Line 385 [rejected]: when
+Line 385 [rejected]: view == mydfrgDiagnostics && mydfrgDiagnostics.viewMode == table
+Line 386 [rejected]: group
+Line 386 [rejected]: navigation@11
+Line 389 [rejected]: command
+Line 389 [rejected]: mydfrg.diagnostics.filter
+Line 390 [rejected]: when
+Line 390 [rejected]: view == mydfrgDiagnostics
+Line 391 [rejected]: group
+Line 391 [rejected]: navigation@12
+Line 394 [rejected]: command
+Line 394 [rejected]: mydfrg.diagnostics.clearFilter
+Line 395 [rejected]: when
+Line 395 [rejected]: view == mydfrgDiagnostics && mydfrgDiagnostics.filterActive
+Line 396 [rejected]: group
+Line 396 [rejected]: navigation@13
+Line 399 [rejected]: command
+Line 399 [rejected]: mydfrg.diagnostics.refresh
+Line 400 [rejected]: when
+Line 400 [rejected]: view == mydfrgDiagnostics
+Line 401 [rejected]: group
+Line 401 [rejected]: navigation@14
+Line 404 [rejected]: command
+Line 404 [rejected]: mydfrg.diagnostics.reset
+Line 405 [rejected]: when
+Line 405 [rejected]: view == mydfrgDiagnostics
+Line 406 [rejected]: group
+Line 406 [rejected]: navigation@15
+Line 409 [rejected]: command
+Line 409 [rejected]: mydfrg.diagnostics.closeView
+Line 410 [rejected]: when
+Line 410 [rejected]: view == mydfrgDiagnostics
+Line 411 [rejected]: group
+Line 411 [rejected]: navigation@16
+Line 414 [rejected]: commandPalette
+Line 416 [rejected]: command
+Line 416 [rejected]: mydfrg.configureFolders
+Line 417 [rejected]: when
+Line 417 [rejected]: true
+Line 421 [rejected]: views
+Line 422 [rejected]: explorer
+Line 424 [rejected]: id
+Line 424 [rejected]: mydfrgDiagnostics
+Line 425 [rejected]: name
+Line 425 [rejected]: MyDefrag Diagnostics
+Line 426 [rejected]: icon
+Line 426 [rejected]: resources/icons/logo.svg
+Line 430 [rejected]: links
+Line 432 [rejected]: enablement
+Line 432 [rejected]: true
+Line 436 [rejected]: main
+Line 436 [rejected]: ./src/extension.js
+Line 437 [rejected]: activationEvents
+Line 438 [rejected]: onView:mydfrgDiagnostics
+Line 439 [rejected]: onStartupFinished
+Line 440 [rejected]: onLanguage:mydfrg
+Line 441 [rejected]: onLanguage:bat
+Line 442 [rejected]: onCommand:mydfrg.openPreview
+Line 443 [rejected]: onCommand:mdm.openFileAtPosition
+Line 444 [rejected]: onCommand:mydfrg.openSettings
+Line 445 [rejected]: onCommand:mydfrg.configureFolders
+Line 447 [rejected]: scripts
+Line 448 [rejected]: deploy:local
+Line 448 [rejected]: powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1
+Line 449 [rejected]: liveUpdate:local
+Line 449 [rejected]: powershell -ExecutionPolicy Bypass -File ./scripts/update-live-MyDefrag.ps1
+Line 450 [rejected]: pack:vsix
+Line 450 [rejected]: powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1
+Line 451 [rejected]: publish:vsx
+Line 451 [rejected]: powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1
+Line 452 [rejected]: clean
+Line 452 [rejected]: rimraf dist out .vscodeignore
+Line 453 [rejected]: build
+Line 453 [rejected]: powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1
+                     -SkipInstall
+Line 454 [rejected]: language:catalogs:apps
+Line 454 [rejected]: node ./build/scripts/generate-electron-component-catalogs.js --write
+Line 455 [rejected]: language:validate
+Line 455 [rejected]: node ./build/scripts/build-language.js validate
+Line 456 [rejected]: language:build
+Line 456 [rejected]: node ./build/scripts/build-language.js build
+Line 457 [rejected]: language:report
+Line 457 [rejected]: node ./build/scripts/build-language.js report
+Line 458 [rejected]: language:app
+Line 458 [rejected]: electron ./build/mdl-language-app/main/main.js --project-root .
+Line 459 [potential]: language:diagnostics:install
+Line 459 [potential]: powershell -ExecutionPolicy Bypass -File
+                      ./scripts/Install-UdpPortExhaustionMonitor.ps1
+Line 460 [potential]: language:diagnostics:uninstall
+Line 460 [potential]: powershell -ExecutionPolicy Bypass -File
+                      ./scripts/Install-UdpPortExhaustionMonitor.ps1 -Uninstall
+Line 461 [rejected]: language:app:pack
+Line 461 [rejected]: electron-builder --config build/mdl-language-app/electron-builder.yml --win dir
+Line 462 [rejected]: language:app:package
+Line 462 [rejected]: electron-builder --config build/mdl-language-app/electron-builder.yml --win
+                     nsis
+Line 463 [rejected]: test:language-app
+Line 463 [rejected]: node --test \"./build/mdl-language-app/tests/*.test.js\"
+Line 464 [rejected]: locale:app
+Line 464 [rejected]: electron ./build/mdl-locale-app/main/main.js --project-root .
+Line 465 [rejected]: locale:app:pack
+Line 465 [rejected]: electron-builder --config build/mdl-locale-app/electron-builder.yml --win dir
+Line 466 [rejected]: locale:app:package
+Line 466 [rejected]: electron-builder --config build/mdl-locale-app/electron-builder.yml --win nsis
+Line 467 [rejected]: test:locale-app
+Line 467 [rejected]: node --test \"./build/mdl-locale-app/tests/*.test.js\"
+Line 468 [rejected]: test:language-report
+Line 468 [rejected]: node ./build/scripts/test-language-report.js
+Line 469 [rejected]: test:language
+Line 469 [rejected]: node ./build/scripts/test-language-runtime.js
+Line 470 [rejected]: prepare
+Line 470 [rejected]: npm run build
+Line 471 [rejected]: enableNetwwork:local
+Line 471 [rejected]: powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1
+Line 472 [rejected]: listSymLinks:local
+Line 472 [rejected]: powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1
+Line 473 [rejected]: addVsCodiumToExplorer:local
+Line 473 [rejected]: powershell -ExecutionPolicy Bypass -File ./scripts/add-VsCodium-ToExplorer.ps1
+Line 475 [rejected]: dependencies
+Line 476 [rejected]: ajv
+Line 477 [rejected]: jsonc-parser
+Line 478 [rejected]: vscode-languageclient
+Line 479 [rejected]: vscode-languageserver
+Line 480 [rejected]: vscode-languageserver-textdocument
+Line 482 [rejected]: devDependencies
+Line 483 [rejected]: @vscode/vsce
+Line 484 [rejected]: electron
+Line 485 [rejected]: electron-builder
+Line 486 [rejected]: rimraf
+Line 487 [rejected]: vsce
+Line 489 [rejected]: overrides
+Line 490 [rejected]: brace-expansion@>=2.0.0 <2.1.4
+Line 491 [rejected]: fast-uri@>=3.0.0 <3.1.5
+Found in catalog: 36
+Line 3 [in-catalog]: MyDefrag Script (.MyDc / .MyD) | Catalog: extension.product.displayName
+Line 4 [in-catalog]: Syntax highlighting for MyDefrag scripting language | Catalog: package.metadata.description, package.description
+Line 6 [in-catalog]: macrodm | Catalog: package.metadata.publisher
+Line 9 [in-catalog]: https://github.com/DHorse2/MyDefrag-syntax | Catalog: package.path.repository.url
+Line 15 [in-catalog]: Programming Languages | Catalog: package.catagories.list
+Line 19 [in-catalog]: MyDefrag | Catalog: package.metadata.contributes.configuration.title
+Line 24 [in-catalog]: Directory for MyDefrag user data. | Catalog: package.contributes.configuration.properties.mydfrg.userDir.description
+Line 29 [in-catalog]: Directory for MyDefrag log files. | Catalog: package.contributes.configuration.properties.mydfrg.logDir.description
+Line 34 [in-catalog]: Enable MyDefrag extension debug logging. | Catalog: package.contributes.configuration.properties.mydfrg.debugOn.description
+Line 41 [in-catalog]: MyDefrag extension verbosity level. Debug logging requires mydfrg.debugOn. | Catalog: package.contributes.configuration.properties.mydfrg.verboseLevel.description
+Line 61 [in-catalog]: Diagnostic severity for references found only by walking up parent folders. | Catalog: package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description
+Line 81 [in-catalog]: Diagnostic severity for references containing execution-time macros. | Catalog: package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description
+Line 101 [in-catalog]: Diagnostic severity for references whose target files are found. | Catalog: package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description
+Line 121 [in-catalog]: Diagnostic severity for references whose target files are not found. | Catalog: package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description
+Line 141 [in-catalog]: Diagnostic severity for inferred fragment parent messages. | Catalog: package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description
+Line 174 [in-catalog]: Glob patterns to exclude from MyDefrag validation | Catalog: package.contributes.configuration.properties.mydfrg.exclude.description
+Line 182 [in-catalog]: MyDefrag Script | Catalog: package.contributes.languages.aliases
+Line 212 [in-catalog]: Open Preview | Catalog: extension.command.openPreview.title
+Line 216 [in-catalog]: Open File at Position | Catalog: package.contributes.commands.title
+Line 220 [in-catalog]: MyDefrag: Open Settings | Catalog: extension.command.openSettings.title
+Line 224 [in-catalog]: MyDefrag: Next Diagnostic | Catalog: package.contributes.commands.mydfrg.diagnostics.next.title
+Line 229 [in-catalog]: MyDefrag: Previous Diagnostic | Catalog: package.contributes.commands.mydfrg.diagnostics.previous.title
+Line 234 [in-catalog]: MyDefrag: Next File | Catalog: package.contributes.commands.mydfrg.diagnostics.nextFile.title
+Line 239 [in-catalog]: MyDefrag: Mark Diagnostic Fixed | Catalog: package.contributes.commands.mydfrg.diagnostics.fixedItem.title
+Line 244 [in-catalog]: MyDefrag: Ignore Diagnostic | Catalog: package.contributes.commands.mydfrg.diagnostics.ignoreItem.title
+Line 249 [in-catalog]: MyDefrag: Skip Diagnostic | Catalog: package.contributes.commands.mydfrg.diagnostics.skipItem.title
+Line 254 [in-catalog]: MyDefrag: Send Diagnostic to Agent | Catalog: package.contributes.commands.mydfrg.diagnostics.sendIt.title
+Line 269 [in-catalog]: MyDefrag: First Diagnostic | Catalog: package.contributes.commands.mydfrg.diagnostics.top.title
+Line 274 [in-catalog]: MyDefrag: Reset Diagnostic Navigation | Catalog: package.contributes.commands.mydfrg.diagnostics.reset.title
+Line 279 [in-catalog]: MyDefrag: Refresh Diagnostics | Catalog: package.contributes.commands.mydfrg.diagnostics.refresh.title
+Line 284 [in-catalog]: MyDefrag: Filter Diagnostics | Catalog: package.contributes.commands.mydfrg.diagnostics.filter.title
+Line 289 [in-catalog]: MyDefrag: Clear Diagnostic Filter | Catalog: package.contributes.commands.mydfrg.diagnostics.clearFilter.title
+Line 294 [in-catalog]: MyDefrag: Show Diagnostics as Tree | Catalog: package.contributes.commands.mydfrg.diagnostics.showTree.title
+Line 299 [in-catalog]: MyDefrag: Show Diagnostics as Table | Catalog: package.contributes.commands.mydfrg.diagnostics.showTable.title
+Line 304 [in-catalog]: MyDefrag: Close Diagnostics Explorer | Catalog: package.contributes.commands.mydfrg.diagnostics.closeView.title
+Line 309 [in-catalog]: MyDefrag: Configure Folders | Catalog: extension.command.configureFolders.title

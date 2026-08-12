@@ -85,3 +85,30 @@ test('deduplicates the same diagnostic from the snapshot and VS Code', (t) => {
 
     assert.equal(navigator.allDiagnostics.length, 1);
 });
+
+test('selects displayed diagnostics and navigates backward without losing character position', (t) => {
+    const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'mydfrg-diagnostics-'));
+    t.after(() => fs.rmSync(tempDir, { recursive: true, force: true }));
+
+    const navigator = new DiagnosticNavigator({
+        diagnosticsFile: path.join(tempDir, 'missing-diagnostics.json'),
+        stateFile: path.join(tempDir, 'state.json'),
+        diagnosticsProvider: () => [[
+            { scheme: 'file', fsPath: 'C:\\repo\\sample.MyDc' },
+            [
+                { severity: 0, message: 'Same message', range: { start: { line: 4, character: 1 } } },
+                { severity: 0, message: 'Same message', range: { start: { line: 4, character: 2 } } },
+                { severity: 0, message: 'Same message', range: { start: { line: 4, character: 3 } } }
+            ]
+        ]]
+    });
+
+    assert.equal(navigator.visibleDiagnostics.length, 3);
+    assert.equal(new Set(navigator.visibleDiagnostics.map((item) => navigator.keyOf(item))).size, 3);
+
+    const selected = navigator.select(navigator.visibleDiagnostics[2]);
+    assert.equal(selected.character, 3);
+    assert.equal(navigator.previous().character, 2);
+    assert.equal(navigator.previous().character, 1);
+    assert.equal(navigator.previous().character, 1);
+});

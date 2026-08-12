@@ -9,11 +9,13 @@ const { createSplashWindowOptions, createWindowOptions } = require('../main/wind
 const { projectRootArgument } = require('../main/project-root');
 const { registerIpcHandlers } = require('../main/ipc-handlers');
 const {
+    candidateMatchesStatus,
     catalogKeyWithCategory,
     matchesComponentScope,
     matchesSearch,
     mayLeaveCurrentView,
     nextCandidateIndex,
+    orderCandidatesByLine,
     previousCandidateIndex
 } = require('../renderer/ui-state');
 
@@ -29,18 +31,22 @@ test('renderer window is isolated, sandboxed, and has no Node integration', () =
 });
 
 test('splash window is isolated and uses local-file content only', () => {
-    const options = createSplashWindowOptions();
+    const options = createSplashWindowOptions(APP_ROOT);
     assert.equal(options.frame, false);
+    assert.equal(options.show, true);
     assert.equal(options.webPreferences.nodeIntegration, false);
     assert.equal(options.webPreferences.contextIsolation, true);
     assert.equal(options.webPreferences.sandbox, true);
     assert.equal(options.webPreferences.webviewTag, false);
+    assert.equal(options.webPreferences.preload, path.join(APP_ROOT, 'splash', 'preload.js'));
 
     const html = fs.readFileSync(path.join(APP_ROOT, 'splash', 'index.html'), 'utf8');
     assert.match(html, /Content-Security-Policy/);
-    assert.match(html, /script-src 'none'/);
+    assert.match(html, /script-src 'self'/);
     assert.match(html, /connect-src 'none'/);
-    assert.match(html, /Loading project language data/);
+    assert.match(html, /id="startup-status"/);
+    assert.match(html, /id="startup-history"/);
+    assert.match(html, /src="splash\.js"/);
 });
 
 test('main window stays open while a build or rollback is active', () => {
@@ -161,6 +167,29 @@ test('candidate line navigation respects direction, status filters, and duplicat
     assert.equal(previousCandidateIndex(candidates, 3, 'all', 'Duplicate'), 0);
     assert.equal(previousCandidateIndex(candidates, 0), -1);
     assert.equal(previousCandidateIndex(null, 0), -1);
+    assert.equal(candidateMatchesStatus(candidates[1], 'rejected'), true);
+    assert.equal(candidateMatchesStatus(candidates[1], 'potential'), false);
+    assert.equal(candidateMatchesStatus(candidates[1], 'all'), true);
+});
+
+test('candidate display order can put either lowest or highest source lines first', () => {
+    const candidates = [
+        { line: 40, text: 'Last' },
+        { line: 10, text: 'Second at first line' },
+        { line: 10, text: 'First at first line' },
+        { line: 25, text: 'Middle' }
+    ];
+
+    assert.deepEqual(
+        orderCandidatesByLine(candidates).map((candidate) => `${candidate.line}:${candidate.text}`),
+        ['10:First at first line', '10:Second at first line', '25:Middle', '40:Last']
+    );
+    assert.deepEqual(
+        orderCandidatesByLine(candidates, 'descending').map((candidate) => `${candidate.line}:${candidate.text}`),
+        ['40:Last', '25:Middle', '10:First at first line', '10:Second at first line']
+    );
+    assert.deepEqual(candidates.map((candidate) => candidate.line), [40, 10, 10, 25]);
+    assert.deepEqual(orderCandidatesByLine(null), []);
 });
 
 test('catalog key suggestions include the currently selected category', () => {
@@ -231,6 +260,9 @@ test('all-components scope is display-only for component-scoped records', () => 
     assert.match(source, /text: 'View'/);
     assert.match(source, /className: 'migration-file-actions' \}, \[assignment, candidatesButton, removeButton\]/);
     assert.match(source, /title: 'Component Catalog Add Record'/);
+    assert.match(source, /className: 'candidate-dialog-title-line'/);
+    assert.match(source, /applyCandidateCatalogEditorLayout\(catalogEditor, 'candidate-add-record', headingActions\)/);
+    assert.doesNotMatch(source, /Candidate decisions are saved with the migration inventory\./);
     assert.match(source, /view === 'catalog' && fieldName === 'category'/);
     assert.match(source, /\['Existing Categories', \(category\) => state\.categoryUsage\[category\.id\] > 0\]/);
     assert.match(source, /\['Recommended Categories', \(category\) => !state\.categoryUsage\[category\.id\]\]/);
@@ -270,14 +302,26 @@ test('all-components scope is display-only for component-scoped records', () => 
     assert.match(source, /sourceLine: candidate\.line/);
     assert.match(source, /candidate\.fullLine/);
     assert.match(source, /text: 'All Candidates'/);
-    for (const label of ['In Catalog', 'Potential Candidate', 'Rejected', 'Review']) {
+    for (const label of ['In Catalog', 'Potential Candidate', 'Rejected', 'Review', 'Code Edit', 'Code Updated']) {
         assert.ok(source.includes(`'${label}'`));
     }
     assert.match(source, /const CANDIDATE_STATUS_LABELS = Object\.freeze/);
     assert.match(source, /'aria-label': 'Filter candidates by status'/);
     assert.match(source, /text: 'All statuses'/);
     assert.match(source, /text: 'Filter status'/);
+    assert.match(source, /'aria-label': 'Order candidates by line'/);
+    assert.match(source, /text: 'Lowest line first'/);
+    assert.match(source, /text: 'Highest line first'/);
+    assert.match(source, /text: 'Line order'/);
+    assert.match(source, /uiState\.orderCandidatesByLine/);
+    assert.match(source, /lineOrder\.addEventListener\('change', applyLineOrder\)/);
+    assert.match(source, /uiState\.candidateMatchesStatus/);
+    assert.match(styles, /\.candidate-list-controls \{[^}]*display: grid;[^}]*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);/);
+    assert.doesNotMatch(styles, /\.candidate-list-controls \{[^}]*flex-wrap: wrap;/);
+    assert.match(styles, /\.candidate-choice-row\[hidden\] \{ display: none; \}/);
     assert.match(source, /'aria-label': 'Candidate status'/);
+    assert.match(source, /\['potential', 'review', 'rejected', 'code-edit'\]/);
+    assert.doesNotMatch(source, /\['potential', 'review', 'rejected', 'code-edit', 'code-updated'\]/);
     assert.match(source, /text: 'Reject'/);
     assert.match(source, /text: 'Next \(line\)'/);
     assert.match(source, /text: 'Previous \(line\)'/);
@@ -286,7 +330,8 @@ test('all-components scope is display-only for component-scoped records', () => 
     assert.match(source, /className: 'candidate-status-actions'/);
     assert.match(source, /className: 'candidate-editor-heading-actions'/);
     assert.match(source, /className: 'candidate-editor-heading'/);
-    assert.match(source, /headingRow\.append\(editorHeading, headingActions\)/);
+    assert.match(source, /editor\.replaceChild\(headingRow, editorHeading\);\s*headingRow\.append\(editorHeading\)/);
+    assert.match(source, /if \(headingActions\) \{ headingRow\.append\(headingActions\); \}/);
     assert.match(source, /className: 'candidate-status-actions' \}, \[\s*rejectButton\s*\]\)/);
     assert.match(source, /api\.setMigrationCandidateStatus/);
     assert.match(source, /if \(fieldSchema\.enum\) \{\s*control = element\('select'/);
@@ -297,19 +342,36 @@ test('all-components scope is display-only for component-scoped records', () => 
     assert.match(source, /clearText: 'Back to catalog matches'/);
     assert.match(source, /api\.getMigrationCandidates\(file\.path\)/);
     assert.match(source, /text: 'Refreshing catalog matches\.\.\.'/);
-    assert.match(source, /candidate\.catalogEntries\.some\(\(entry\) => entry\.key === nextRecord\.key\)/);
+    assert.match(source, /candidate\.catalogEntries = \[/);
+    assert.match(source, /selectCatalogedCandidate\(candidate, selectedButton\)/);
     assert.match(source, /className: 'catalog-match-summary'/);
     assert.match(source, /className: 'catalog-match-actions'/);
+    assert.match(source, /className: 'card catalog-match-card'/);
     assert.match(source, /className: 'catalog-match-header'/);
+    assert.match(source, /function createReadOnlyCatalogRecord\(record\)/);
+    assert.match(source, /className: 'catalog-match-record editor-form'/);
+    assert.match(source, /field\.control\.setAttribute\('aria-readonly', 'true'\)/);
+    assert.match(source, /createReadOnlyCatalogRecord\(current\)/);
+    assert.match(source, /Candidate status: \$\{CANDIDATE_STATUS_LABELS/);
+    assert.match(source, /Catalog status: \$\{catalogStatuses\.join/);
+    assert.match(source, /keyControl\.readOnly = true/);
+    assert.match(source, /Existing catalog keys cannot be renamed/);
     assert.match(source, /nextLineButton\.addEventListener\('click', \(\) => selectNextCandidate\(candidate\)\)/);
     assert.match(styles, /\.catalog-match-edit-row \{[^}]*grid-template-columns: minmax\(0, 1fr\) auto;/);
+    assert.match(styles, /\.catalog-match-record > label \{[^}]*grid-template-columns: minmax\(7rem, 8\.5rem\) minmax\(0, 1fr\);/);
+    assert.match(styles, /\.catalog-match-record input\[readonly\],[\s\S]*?opacity: 1;[^}]*background: #f7f6f1;/);
     assert.match(styles, /\.catalog-match-header \{[^}]*grid-template-columns: minmax\(0, 1fr\) auto;/);
     assert.match(styles, /\.catalog-match-summary h3, \.catalog-match-summary p \{[^}]*margin: 0;/);
-    assert.match(styles, /\.catalog-match-actions \{[^}]*display: grid;[^}]*justify-content: flex-end;/);
-    assert.match(styles, /\.catalog-match-previous \{[^}]*grid-area: 1 \/ 2;/);
-    assert.match(styles, /\.catalog-match-next \{[^}]*grid-area: 2 \/ 2;/);
-    assert.match(styles, /\.catalog-match-actions button \{[^}]*font-size: 0\.7rem;/);
+    assert.match(styles, /\.catalog-match-card \{[^}]*padding: 0\.55rem;/);
+    assert.match(styles, /\.catalog-match-actions \{[^}]*grid-template-columns: repeat\(2, auto\);[^}]*justify-content: flex-end;/);
+    assert.match(styles, /\.catalog-match-previous \{[^}]*grid-area: 1 \/ 1;/);
+    assert.match(styles, /\.catalog-match-next \{[^}]*grid-area: 1 \/ 2;/);
+    assert.match(styles, /\.catalog-match-actions button \{[^}]*min-width: 4\.5rem;[^}]*font-size: 0\.72rem;/);
+    assert.match(styles, /\.candidate-editor-host \{[^}]*scrollbar-gutter: stable;/);
     assert.match(source, /file\.catalogedStrings/);
+    assert.match(source, /function candidateUsesCatalogFormat\(candidate\)/);
+    assert.match(source, /This prior candidate is retained for analysis/);
+    assert.match(source, /This current key occurrence already uses catalog\.format/);
     assert.match(source, /className: 'catalog-match-keys'/);
     assert.match(source, /className: 'candidate-summary-line'/);
     assert.match(source, /className: `candidate-source-line\$\{inCatalog \? ' has-catalog' : ''\}`/);
@@ -317,7 +379,9 @@ test('all-components scope is display-only for component-scoped records', () => 
     assert.match(styles, /\.candidate-source-line\.has-catalog \{[^}]*grid-template-columns: minmax\(9rem, 14rem\) minmax\(0, 1fr\);/);
     assert.match(styles, /\.catalog-match-keys \{[^}]*text-align: left;/);
     assert.match(source, /api\.getMigrationSummary\(\)/);
-    assert.match(source, /non-catalog · \$\{file\.catalogedStringCount\} found in catalog/);
+    assert.match(source, /coverage\.textContent = candidateProgressText\(file\)/);
+    assert.match(source, /`\$\{summary\.remainingCount\} remaining`/);
+    assert.match(source, /`\$\{summary\.completedCount\}\/\$\{summary\.totalCount\} completed`/);
     assert.match(source, /text: 'Scan file…'/);
     assert.match(source, /api\.scanMigrationFile\(\)/);
     assert.match(source, /text: 'Scan folder…'/);
@@ -338,6 +402,45 @@ test('all-components scope is display-only for component-scoped records', () => 
     assert.match(source, /request !== selectionRequest/);
     assert.match(source, /text: 'Open source'/);
     assert.match(source, /api\.openMigrationSource/);
+    assert.match(source, /function createMigrationTransformPreview\(filePath, candidate, options = \{\}\)/);
+    assert.match(source, /catalogKeyControl: catalogEditor\.querySelector\('\[name="key"\]'\)/);
+    assert.match(source, /catalogKeyControl\.addEventListener\('input'/);
+    assert.match(source, /keyControl\.dispatchEvent\(new Event\('input', \{ bubbles: true \}\)\)/);
+    assert.match(source, /const generation = \+\+previewGeneration/);
+    assert.match(source, /if \(generation !== previewGeneration\) \{ return; \}/);
+    assert.match(source, /activeRequest = null;[\s\S]{0,160}?replaceLineButton\.disabled = true;/);
+    assert.match(source, /text: 'Source Transform Preview'/);
+    assert.match(source, /text: 'Original'/);
+    assert.match(source, /text: 'Transformed'/);
+    assert.match(source, /text: 'Replace line in source'/);
+    assert.match(source, /api\.previewMigrationSourceTransform/);
+    assert.match(source, /api\.replaceMigrationSourceLine/);
+    assert.match(source, /const replacementStatus = result\.candidateStatus \|\| 'code-updated'/);
+    assert.match(source, /recordSourceReplacement/);
+    assert.match(source, /candidate\.status !== 'code-updated'[\s\S]{0,120}?updateCandidateStatus\(candidate, 'code-edit'\)/);
+    assert.match(source, /sourceVersion: result\.sourceVersion/);
+    assert.match(source, /replacementStatus\.textContent = result\.message/);
+    assert.match(source, /api\.getMigrationSourceUpdateStatus/);
+    assert.match(source, /Cataloged line \$\{candidate\.line\}\. Update its source line/);
+    assert.match(source, /className: 'candidate-workflow-notice'/);
+    assert.match(source, /Catalog record added for line \$\{candidate\.line\}/);
+    assert.doesNotMatch(source, /Accepted for translation/);
+    assert.match(source, /onSuccess: \(\{ nextRecord \}\) => \{/);
+    assert.match(source, /void refreshCandidateRows\(\)\.then/);
+    assert.match(source, /submit\.disabled = true/);
+    assert.match(source, /Unable to update the in-memory draft\./);
+    assert.match(source, /`The source still contains the cataloged string from line \$\{candidate\.line\}/);
+    assert.match(source, /showResult\('Catalog record added to in-memory draft'[\s\S]{0,500}?selectCatalogedCandidate\(candidate, selectedButton\)/);
+    assert.match(styles, /\.candidate-transform-preview \{[^}]*display: grid;/);
+    assert.match(styles, /\.candidate-transform-block pre \{[^}]*overflow: auto;/);
+    assert.match(styles, /\.candidate-dialog-title-line \{[^}]*white-space: nowrap;/);
+    assert.match(source, /applyCandidateCatalogEditorLayout\(catalogEditor, 'candidate-add-record', headingActions\)/);
+    assert.match(source, /applyCandidateCatalogEditorLayout\(editor, 'candidate-edit-record'/);
+    assert.match(styles, /\.candidate-catalog-editor button \{[^}]*font-size: 0\.72rem;/);
+    assert.match(styles, /\.candidate-catalog-editor \.editor-form > label,[\s\S]*?grid-template-columns: minmax\(7rem, 8\.5rem\) minmax\(0, 1fr\);/);
+    assert.match(styles, /\.candidate-status\.code-edit/);
+    assert.match(styles, /\.candidate-status\.code-updated/);
+    assert.match(styles, /\.candidate-workflow-notice \{[^}]*background: #fff1c9;/);
     assert.match(source, /text: 'Normalized text'/);
     assert.match(source, /text: 'Apply normalized text'/);
     assert.match(source, /textNormalizer\.normalizeText/);
@@ -383,6 +486,21 @@ test('all-components scope is display-only for component-scoped records', () => 
     assert.doesNotMatch(styles, /\.result-panel \{ position: fixed;/);
 });
 
+test('catalog match edits return to the visible read-only match panel', () => {
+    const source = fs.readFileSync(path.join(APP_ROOT, 'renderer', 'app.js'), 'utf8');
+    const start = source.indexOf('const editCatalogMatch =');
+    const end = source.indexOf('const selectCatalogedCandidate =', start);
+    const editCatalogMatchSource = source.slice(start, end);
+
+    assert.ok(start >= 0 && end > start);
+    assert.match(editCatalogMatchSource, /showResult\('Catalog record updated in memory'/);
+    assert.match(editCatalogMatchSource, /selectCatalogedCandidate\(candidate, selectedButton\)/);
+    assert.doesNotMatch(
+        editCatalogMatchSource,
+        /editCatalogMatch\(candidate, selectedButton, nextRecord\.key\)/
+    );
+});
+
 test('project-root command-line parsing supports both documented forms', () => {
     assert.equal(projectRootArgument(['app', '--project-root=D:\\Repo']), 'D:\\Repo');
     assert.equal(projectRootArgument(['app', '--project-root', 'D:\\Repo']), 'D:\\Repo');
@@ -420,6 +538,9 @@ test('IPC registration uses the explicit channel inventory and exit delegates to
         getMigrationSummary: () => ({ ok: true, files: [] }),
         getMigrationCandidates: (relativePath) => ({ ok: true, relativePath }),
         suggestCatalogKey: (request) => ({ ok: true, suggestedKey: 'server.activate.err.message', request }),
+        previewMigrationSourceTransform: (request) => ({ ok: true, originalLine: 'original', request }),
+        getMigrationSourceUpdateStatus: (request) => ({ ok: true, sourceUpdated: false, request }),
+        replaceMigrationSourceLine: (request) => ({ ok: true, request }),
         getLanguageReport: () => ({ ok: true, text: 'Report text', version: 'v1' }),
         setLanguageReportDirty: (dirty) => ({ ok: true, dirty }),
         saveLanguageReport: (request) => ({ ok: true, request }),
@@ -546,6 +667,25 @@ test('IPC registration uses the explicit channel inventory and exit delegates to
             path: 'src/new.js',
             line: 23
         }
+    });
+    const transformRequest = {
+        path: 'src/new.js',
+        line: 23,
+        text: 'Candidate message'
+    };
+    assert.deepEqual(await handlers.get(CHANNELS.previewMigrationSourceTransform)({}, transformRequest), {
+        ok: true,
+        originalLine: 'original',
+        request: transformRequest
+    });
+    assert.deepEqual(await handlers.get(CHANNELS.getMigrationSourceUpdateStatus)({}, transformRequest), {
+        ok: true,
+        sourceUpdated: false,
+        request: transformRequest
+    });
+    assert.deepEqual(await handlers.get(CHANNELS.replaceMigrationSourceLine)({}, transformRequest), {
+        ok: true,
+        request: transformRequest
     });
     assert.deepEqual(await handlers.get(CHANNELS.getLanguageReport)({}), {
         ok: true,

@@ -8,6 +8,7 @@
 - [Source and Generated Data Boundary](#source-and-generated-data-boundary)
 - [Installation](#installation)
 - [Development Launch](#development-launch)
+- [Startup Profile and Diagnostics](#startup-profile-and-diagnostics)
 - [Windows Build and Packaging](#windows-build-and-packaging)
 - [Views and Workflow](#views-and-workflow)
   - [Resizable Panels](#resizable-panels)
@@ -28,6 +29,8 @@
   - [A record cannot be applied](#a-record-cannot-be-applied)
   - [A migration file cannot be added](#a-migration-file-cannot-be-added)
   - [Save fails during the build](#save-fails-during-the-build)
+  - [The startup window stalls](#the-startup-window-stalls)
+  - [Temporary UDP Port-Exhaustion Monitor](#temporary-udp-port-exhaustion-monitor)
   - [Packaging cannot download tool assets](#packaging-cannot-download-tool-assets)
 - [Intentionally Deferred](#intentionally-deferred)
 
@@ -175,6 +178,30 @@ MyDefrag-Language-Maintenance.exe --project-root=D:\Script\MyDefrag-syntax
 If a packaged application cannot validate the supplied or current directory, it
 opens a folder-selection dialog. It refuses a directory that does not contain
 the required canonical files and language builder.
+
+## Startup Profile and Diagnostics
+
+The startup window is displayed immediately with its native background, before
+its sandboxed renderer finishes its first paint. Once the renderer is ready, it
+shows actual startup phases and elapsed time for project selection, language
+data loading, and main-window rendering. The splash remains visible until
+Electron emits `ready-to-show` for the main window. If renderer startup stalls,
+the last completed phase therefore remains visible instead of being replaced
+by an unpainted main window.
+
+Development and packaged launches use this dedicated Electron profile:
+
+```text
+%APPDATA%\MyDefrag Language Maintenance\
+```
+
+The application does not delete, move, or import data from the historical
+shared `%APPDATA%\Electron` profile. Chromium session data is isolated under
+`Session Data`, and append-only startup diagnostics are written under `logs`.
+Each JSONL entry includes a startup-session identifier, timestamp, process ID,
+event, and event-specific details. Recorded lifecycle evidence includes startup
+phases, load failures, preload failures, renderer responsiveness, renderer
+loss, and Electron child-process loss such as a Network Service crash.
 
 ## Windows Build and Packaging
 
@@ -407,47 +434,94 @@ inside the row.
 The window presents one source-ordered **All Candidates** list. Every row shows
 its line number, status, and detected text together on one compact first line,
 followed by the complete physical source line and **Open source** action. The
-four statuses are **In Catalog**, **Potential Candidate**, **Rejected**, and
-**Review**. The status filter can display any one of those groups. In Catalog
+workflow statuses are **In Catalog**, **Potential Candidate**, **Review**,
+**Rejected**, **Code Edit**, and **Code Updated**. The status filter can display
+any one of those groups. In Catalog
 rows place every matching catalog key and component left-aligned to the left of
 the complete physical source line. Candidate lists are not truncated.
+
+**Line order** can display either the lowest or highest source line first. This
+reorders only the existing candidate rows and Previous/Next sequence; it does
+not rescan or rewrite the source file.
+
+Selecting a candidate also displays a **Source Transform Preview**. **Original**
+shows the current physical source line. **Transformed** initially shows two
+lines: a `const tMessage = catalog.format(...).text;` lookup against the loaded
+component catalogs, followed by the original source line with the accepted
+string literal replaced by `tMessage`. Complex strings pass their named
+placeholder variables through the format call. The preview reuses the candidate
+extractor's filters and optional exact literal offsets, and the main process
+revalidates the current file, line, and candidate text before returning it.
+
+After **Apply to in-memory draft**, the accepted candidate stays selected so the
+analyst can update its source line. Moving to another candidate with a row,
+Previous, or Next re-scans the current file. If the accepted literal is still
+present anywhere in that file, the application warns and continues without
+requiring the source edit. If the application detects that the analyst changed
+the accepted source outside the Replace action, it records **Code Edit**.
+Closing the candidate window similarly warns about any accepted candidates that
+remain unverified. Existing cataloged candidates are not treated as newly
+accepted during the current review session.
+
+**Replace line in source** is enabled for an exact single-line candidate in a
+CommonJS `.js` or `.cjs` file after its catalog key exists in the current
+in-memory draft. The transform chooses `tMessage` or the next unused numbered
+name, validates the resulting JavaScript syntax, and binds the button to the
+SHA-256 version displayed by the preview. Replacement is rejected if the file
+changes before the click. A successful replacement preserves the file's line
+endings and uses the repository's temporary-file, backup, and atomic-rename
+transaction before removing the backup. JSON, TypeScript, module JavaScript,
+template expressions with `${...}`, multiline literals, and ambiguous same-line
+occurrences remain disabled until they have format-specific or parser-backed
+transforms. In particular, a JavaScript `catalog.format(...)` insertion is not
+valid in `package.json`.
 
 Selecting a non-catalog candidate populates the included Component Catalog Add
 Record form with the reliable fields: component, text, detected placeholders,
 draft status, source path, and source line. The catalog key, category, and role
 remain explicit reviewer decisions. The Add Record pane provides a candidate
-status dropdown and a **Reject** shortcut. Potential, Review, and Rejected
-decisions update the in-memory migration inventory; Save persists them in
-`language/canonical/components.json`. The catalog record's translation review
-status remains a separate schema-backed dropdown. Compact **Previous (line)**
+status dropdown and a **Reject** shortcut. Potential, Review, Rejected, and Code
+Edit decisions update the in-memory migration inventory; Save persists them in
+`language/canonical/components.json`. **Code Edit** records a manual source edit.
+**Code Updated** is not a manual choice: a successful **Replace line in source**
+action records it automatically. In Catalog, Rejected, Code Edit, and Code
+Updated count as completed analyst outcomes; Potential and Review remain
+outstanding. The catalog record's translation review status remains a separate
+schema-backed dropdown. Compact **Previous (line)**
 and **Next (line)** buttons are top-aligned at the right of the **Component
-Catalog Add Record** heading, with Previous directly above Next to match Catalog
-Matches. They move through source-ordered rows matching the active filter.
+Catalog Add Record** heading and sit beside each other. They move through
+source-ordered rows matching the active filter.
 Reject remains beside the candidate-status dropdown. Selecting a catalog category
 inserts that category immediately after the component in the Suggested key;
 changing category regenerates the suggestion without altering a manually typed
 Key until **Use suggested key** is pressed. Matching is recalculated against the
 current in-memory catalog whenever the window opens, so a newly applied record
 moves from Potential Candidate to In Catalog before Save. Selecting an In
-Catalog row shows its matching catalog records instead of an Add Record form.
-Each match has **Edit Record**, which embeds the existing schema-backed Component
-Catalog editor inside All Candidates without changing views. Apply retains the
-original catalog key as the change guard, updates only the in-memory draft, and
-reclassifies every candidate against the updated catalog. Key, component,
-category, role, or text changes therefore appear immediately; Save remains
-required for persistence. **Back to catalog matches** returns to the match list.
-The Catalog Matches pane places compact **Previous (line)** directly above
-**Next (line)** at the upper right; Close candidates remains on the same row as
-Next. Its header is a two-column layout: all match heading, status, source text,
-and help text remain together on the left while the button group occupies the
-right. The buttons therefore do not push the text down. Both directions use
-source order and the active status filter without wrapping. A successful
-**Reject** action, a change to Rejected status, or
-**Apply to in-memory draft** selects the next source-ordered row that matches
-the active status filter. Repeated occurrences of the same candidate text share
-one decision and are skipped together; selection does not wrap at the end of the
-list. A report that predates catalog-found strings is rejected with a rebuild
-instruction rather than silently rescanning different source content.
+Catalog row shows every matching catalog record in the same schema field order
+and compact label-left, field-right layout as Component Catalog Add Record. The
+initial controls are read-only. Each match has **Edit Record**, which embeds the
+existing schema-backed Component Catalog editor inside All Candidates without
+changing views. Add and Edit use the same compact field order, label-left layout,
+button sizing, and top-aligned Previous/Next controls. Apply retains the original
+catalog key as the change guard,
+updates only the in-memory draft, and reclassifies every candidate against the
+updated catalog. Key, component, category, role, or text changes therefore
+appear immediately; Save remains required for persistence. **Back to catalog
+matches** returns to the read-only match list.
+The Catalog Matches pane places compact **Previous (line)** and **Next (line)**
+beside each other at the upper right, using the same coordinates and dimensions
+as Add Record; Close candidates remains on the row below. Its header is a
+two-column layout: all match heading, status, source text, and help text remain
+together on the left while the button group occupies the right. The buttons
+therefore do not push the text down. Both directions use the current line order
+and active status filter without wrapping. A successful
+**Reject** action or a change to Rejected status selects the next displayed row
+that matches the active status filter. **Apply to in-memory draft** instead keeps
+the accepted row selected for its source-update step. Repeated occurrences of
+the same candidate text share one decision and are skipped together; selection
+does not wrap at the end of the list. A report that predates catalog-found
+strings is rejected with a rebuild instruction rather than silently rescanning
+different source content.
 
 The catalog form places **Normalized text** immediately after **Text**. This
 translation-oriented preview separates camelCase, kebab-case, snake_case,
@@ -608,6 +682,47 @@ not errors: Save and Rebuild add only missing component entry keys and report
 whether each locale was updated or unchanged. Invalid existing component JSON,
 mismatched locale/component metadata, or a non-object `entries` value fails
 closed so the application cannot replace analyst-maintained values.
+
+### The startup window stalls
+
+Inspect the newest JSONL file under:
+
+```text
+%APPDATA%\MyDefrag Language Maintenance\logs\
+```
+
+The final event identifies whether startup stopped before the splash DOM,
+project-data load, main renderer, or first paint. A `child-process-gone` entry
+includes Electron's process type, name, reason, and exit code when available.
+
+### Temporary UDP Port-Exhaustion Monitor
+
+The repository permanently includes capture and installer scripts, but the
+Scheduled Task they install is a **temporary diagnostic measure**. It runs as
+Local System only when Windows records System/Tcpip event 4266. Each occurrence
+captures UDP endpoints, owning process metadata, dynamic-port ranges, recent
+trigger events, and `netstat -anoq` output under:
+
+```text
+%ProgramData%\MyDefrag\Diagnostics\UdpPortExhaustion\
+```
+
+Install the temporary monitor from an elevated PowerShell session:
+
+```powershell
+npm run language:diagnostics:install
+```
+
+After the leaking process has been identified, uninstall the Scheduled Task:
+
+```powershell
+npm run language:diagnostics:uninstall
+```
+
+Uninstalling removes only the task. It deliberately preserves captured logs for
+analysis and does not change the Windows dynamic-port range. Logs can be
+deleted manually after the incident is resolved and the evidence is no longer
+needed.
 
 ### Packaging cannot download tool assets
 

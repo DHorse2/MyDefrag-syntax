@@ -6303,6 +6303,303 @@
       "placeholders": [
         "stateValidationErrorsCount"
       ]
+    },
+    {
+      "key": "package.contributes.configuration.properties.mydfrg.logDir.description",
+      "component": "package",
+      "category": "metadata",
+      "role": "prompt",
+      "text": "Directory for MyDefrag log files.",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 29
+    },
+    {
+      "key": "package.contributes.configuration.properties.mydfrg.debugOn.description",
+      "component": "package",
+      "category": "metadata",
+      "role": "prompt",
+      "text": "Enable My Defragmenter extension debug logging.",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 34
+    },
+    {
+      "key": "package.contributes.configuration.properties.mydfrg.verboseLevel.description",
+      "component": "package",
+      "category": "metadata",
+      "role": "prompt",
+      "text": "My Defragmenter extension verbosity level. Debug logging requires mydfrg debug On.",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 41
+    },
+    {
+      "key": "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description",
+      "component": "package",
+      "category": "metadata",
+      "role": "prompt",
+      "text": "Diagnostic severity for references found only by walking up parent folders.",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 61
+    },
+    {
+      "key": "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description",
+      "component": "package",
+      "category": "metadata",
+      "role": "prompt",
+      "text": "Diagnostic severity for references containing execution-time macros.",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 81
+    },
+    {
+      "key": "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description",
+      "component": "package",
+      "category": "metadata",
+      "role": "prompt",
+      "text": "Diagnostic severity for references whose target files are found.",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 101
+    },
+    {
+      "key": "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description",
+      "component": "package",
+      "category": "metadata",
+      "role": "prompt",
+      "text": "Diagnostic severity for references whose target files are not found.",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 121
+    },
+    {
+      "key": "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description",
+      "component": "package",
+      "category": "metadata",
+      "role": "prompt",
+      "text": "Diagnostic severity for inferred fragment parent messages.",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 141
+    },
+    {
+      "key": "package.contributes.configuration.properties.mydfrg.exclude.description",
+      "component": "package",
+      "category": "metadata",
+      "role": "description",
+      "text": "Glob patterns to exclude from My Defragmenter validation",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 174
+    },
+    {
+      "key": "package.contributes.languages.aliases",
+      "component": "package",
+      "category": "metadata",
+      "role": "item",
+      "text": "My Defragmenter Script",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 182
+    },
+    {
+      "key": "package.contributes.commands.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "Open File at Position",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 216
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.next.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Next Diagnostic",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 224
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.previous.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Previous Diagnostic",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 229
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.nextFile.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Next File",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 234
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.fixedItem.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Mark Diagnostic Fixed",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 239
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Ignore Diagnostic",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 244
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.skipItem.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Skip Diagnostic",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 249
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.sendIt.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Send Diagnostic to Agent",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 254
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.top.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: First Diagnostic",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 269
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.reset.title",
+      "component": "package",
+      "category": "command",
+      "role": "value",
+      "text": "My Defragmenter: Reset Diagnostic Navigation",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 274
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.refresh.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Refresh Diagnostics",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 279
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.filter.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Filter Diagnostics",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 284
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.clearFilter.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Clear Diagnostic Filter",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 289
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.showTree.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Show Diagnostics as Tree",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 294
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.showTable.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Show Diagnostics as Table",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 299
+    },
+    {
+      "key": "package.contributes.commands.mydfrg.diagnostics.closeView.title",
+      "component": "package",
+      "category": "command",
+      "role": "title",
+      "text": "My Defragmenter: Close Diagnostics Explorer",
+      "placeholders": [],
+      "status": "draft",
+      "source": "package.json",
+      "sourceLine": 304
+    },
+    {
+      "key": "extension.window.channelName",
+      "component": "extension",
+      "category": "window",
+      "role": "title",
+      "text": "My Defragmenter Syntax",
+      "placeholders": [],
+      "status": "draft",
+      "source": "src/extension.js",
+      "sourceLine": 38
     }
   ]
 }

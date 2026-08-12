@@ -23,6 +23,10 @@
         return selectedComponent == null || record.component === selectedComponent;
     }
 
+    function candidateMatchesStatus(candidate, statusFilter = 'all') {
+        return statusFilter === 'all' || candidate?.status === statusFilter;
+    }
+
     function nextCandidateIndex(candidates, currentIndex, statusFilter = 'all', skipText = null) {
         if (!Array.isArray(candidates)) { return -1; }
         for (let index = Number(currentIndex) + 1; index < candidates.length; index += 1) {
@@ -45,6 +49,16 @@
         return -1;
     }
 
+    function orderCandidatesByLine(candidates, order = 'ascending') {
+        if (!Array.isArray(candidates)) { return []; }
+        const lineDirection = order === 'descending' ? -1 : 1;
+        return [...candidates].sort((left, right) => {
+            const lineDifference = Number(left.line) - Number(right.line);
+            if (lineDifference !== 0) { return lineDifference * lineDirection; }
+            return String(left.text || '').localeCompare(String(right.text || ''));
+        });
+    }
+
     function catalogKeyWithCategory(suggestedKey, category) {
         const segments = String(suggestedKey || '').split('.').filter(Boolean);
         const categorySegment = String(category || '').trim();
@@ -53,11 +67,13 @@
     }
 
     return {
+        candidateMatchesStatus,
         catalogKeyWithCategory,
         matchesComponentScope,
         matchesSearch,
         mayLeaveCurrentView,
         nextCandidateIndex,
+        orderCandidatesByLine,
         previousCandidateIndex
     };
 }));

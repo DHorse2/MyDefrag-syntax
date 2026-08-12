@@ -64,7 +64,7 @@ class DiagnosticNavigator {
         return [
             this.normalizePath(item.filePath || ''),
             item.line ?? '',
-            item.column ?? '',
+            item.character ?? item.column ?? '',
             item.message || ''
         ].join('|');
     };
@@ -302,6 +302,38 @@ class DiagnosticNavigator {
         this.index = this.index < 0
             ? 0
             : Math.min(this.index + 1, this.visibleDiagnostics.length - 1);
+        return this.current();
+    }
+
+    /**
+     * Return the previous non-information diagnostic in sequence.
+     *
+     * @returns {object|null}
+     */
+    previous() {
+        this.reload();
+        if (this.visibleDiagnostics.length === 0) return null;
+        this.index = this.index < 0
+            ? 0
+            : Math.max(this.index - 1, 0);
+        return this.current();
+    }
+
+    /**
+     * Select a diagnostic displayed by the Explorer tree/table.
+     *
+     * @param {object|string} diagnosticOrKey
+     * @returns {object|null}
+     */
+    select(diagnosticOrKey) {
+        this.reload();
+        const key = typeof diagnosticOrKey === 'string'
+            ? diagnosticOrKey
+            : this.keyOf(diagnosticOrKey);
+        const nextIndex = this.visibleDiagnostics.findIndex((diagnostic) => this.keyOf(diagnostic) === key);
+
+        if (nextIndex < 0) return null;
+        this.index = nextIndex;
         return this.current();
     }
 

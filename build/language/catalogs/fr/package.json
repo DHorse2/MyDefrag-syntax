@@ -8,6 +8,167 @@
       "status": "machine-generated",
       "text": "Langages de programmation"
     },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Clear Diagnostic Filter"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Close Diagnostics Explorer"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Filter Diagnostics"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Mark Diagnostic Fixed"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Ignore Diagnostic"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Next Diagnostic"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Next File"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Previous Diagnostic"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Refresh Diagnostics"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Reset Diagnostic Navigation"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Send Diagnostic to Agent"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Show Diagnostics as Table"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Show Diagnostics as Tree"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: Skip Diagnostic"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter: First Diagnostic"
+    },
+    "package.contributes.commands.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Open File at Position"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Enable My Defragmenter extension debug logging."
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Glob patterns to exclude from My Defragmenter validation"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Directory for My Defragmenter log files."
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Diagnostic severity for references containing execution time macros."
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Diagnostic severity for references whose target files are found."
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Diagnostic severity for references whose target files are not found."
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Diagnostic severity for references found only by walking up parent folders."
+    },
     "package.contributes.configuration.properties.mydfrg.userDir.description": {
       "fallbackLocale": "en",
       "placeholders": [],
@@ -15,12 +176,33 @@
       "status": "draft",
       "text": "Directory for My Defragmenter user data."
     },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter extension verbosity level. Debug logging requires mydfrg debug On."
+    },
+    "package.contributes.languages.aliases": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Defragmenter Script"
+    },
     "package.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Mise en évidence de la syntaxe pour le langage de script « My Defragmenter »"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Diagnostic severity for inferred fragment parent messages."
     },
     "package.metadata.contributes.configuration.title": {
       "fallbackLocale": "en",

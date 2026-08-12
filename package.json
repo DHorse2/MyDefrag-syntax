@@ -221,43 +221,88 @@
             },
             {
                 "command": "mydfrg.diagnostics.next",
-                "title": "MyDefrag: Get Next Diagnostic"
+                "title": "MyDefrag: Next Diagnostic",
+                "icon": "$(arrow-down)"
+            },
+            {
+                "command": "mydfrg.diagnostics.previous",
+                "title": "MyDefrag: Previous Diagnostic",
+                "icon": "$(arrow-up)"
             },
             {
                 "command": "mydfrg.diagnostics.nextFile",
-                "title": "MyDefrag: Get Next File Diagnostic"
+                "title": "MyDefrag: Next File",
+                "icon": "$(arrow-right)"
             },
             {
                 "command": "mydfrg.diagnostics.fixedItem",
-                "title": "MyDefrag: File Diagnostic is Fixed"
+                "title": "MyDefrag: Mark Diagnostic Fixed",
+                "icon": "$(pass-filled)"
             },
             {
                 "command": "mydfrg.diagnostics.ignoreItem",
-                "title": "MyDefrag: Ignore File Diagnostic"
+                "title": "MyDefrag: Ignore Diagnostic",
+                "icon": "$(eye-closed)"
             },
             {
                 "command": "mydfrg.diagnostics.skipItem",
-                "title": "MyDefrag: Skip Current File"
+                "title": "MyDefrag: Skip Diagnostic",
+                "icon": "$(debug-step-over)"
             },
             {
                 "command": "mydfrg.diagnostics.sendIt",
-                "title": "MyDefrag: Send Invalid to Agent"
+                "title": "MyDefrag: Send Diagnostic to Agent",
+                "icon": "$(send)"
             },
             {
                 "command": "mydfrg.diagnostics.validSyntax",
-                "title": "MyDefrag: Diagnostic points to Valid Syntax"
+                "title": "MyDefrag: Mark as Valid Syntax",
+                "icon": "$(thumbsup-filled)"
             },
             {
                 "command": "mydfrg.diagnostics.prevFile",
-                "title": "MyDefrag: Get Previous File Diagnostic"
+                "title": "MyDefrag: Previous File",
+                "icon": "$(arrow-left)"
             },
             {
                 "command": "mydfrg.diagnostics.top",
-                "title": "MyDefrag: Go to Top of Diagnostic list"
+                "title": "MyDefrag: First Diagnostic",
+                "icon": "$(arrow-circle-up)"
             },
             {
                 "command": "mydfrg.diagnostics.reset",
-                "title": "MyDefrag: Reset Diagnostic Navigation"
+                "title": "MyDefrag: Reset Diagnostic Navigation",
+                "icon": "$(discard)"
+            },
+            {
+                "command": "mydfrg.diagnostics.refresh",
+                "title": "MyDefrag: Refresh Diagnostics",
+                "icon": "$(refresh)"
+            },
+            {
+                "command": "mydfrg.diagnostics.filter",
+                "title": "MyDefrag: Filter Diagnostics",
+                "icon": "$(filter)"
+            },
+            {
+                "command": "mydfrg.diagnostics.clearFilter",
+                "title": "MyDefrag: Clear Diagnostic Filter",
+                "icon": "$(clear-all)"
+            },
+            {
+                "command": "mydfrg.diagnostics.showTree",
+                "title": "MyDefrag: Show Diagnostics as Tree",
+                "icon": "$(list-tree)"
+            },
+            {
+                "command": "mydfrg.diagnostics.showTable",
+                "title": "MyDefrag: Show Diagnostics as Table",
+                "icon": "$(list-flat)"
+            },
+            {
+                "command": "mydfrg.diagnostics.closeView",
+                "title": "MyDefrag: Close Diagnostics Explorer",
+                "icon": "$(close)"
             },
             {
                 "command": "mydfrg.configureFolders",
@@ -277,6 +322,93 @@
                     "command": "mydfrg.openPreview",
                     "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
                     "group": "navigation"
+                }
+            ],
+            "view/title": [
+                {
+                    "command": "mydfrg.diagnostics.previous",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "mydfrg.diagnostics.next",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@2"
+                },
+                {
+                    "command": "mydfrg.diagnostics.prevFile",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@3"
+                },
+                {
+                    "command": "mydfrg.diagnostics.nextFile",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@4"
+                },
+                {
+                    "command": "mydfrg.diagnostics.top",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@5"
+                },
+                {
+                    "command": "mydfrg.diagnostics.fixedItem",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@6"
+                },
+                {
+                    "command": "mydfrg.diagnostics.ignoreItem",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@7"
+                },
+                {
+                    "command": "mydfrg.diagnostics.skipItem",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@8"
+                },
+                {
+                    "command": "mydfrg.diagnostics.validSyntax",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@9"
+                },
+                {
+                    "command": "mydfrg.diagnostics.sendIt",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@10"
+                },
+                {
+                    "command": "mydfrg.diagnostics.showTable",
+                    "when": "view == mydfrgDiagnostics && mydfrgDiagnostics.viewMode == tree",
+                    "group": "navigation@11"
+                },
+                {
+                    "command": "mydfrg.diagnostics.showTree",
+                    "when": "view == mydfrgDiagnostics && mydfrgDiagnostics.viewMode == table",
+                    "group": "navigation@11"
+                },
+                {
+                    "command": "mydfrg.diagnostics.filter",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@12"
+                },
+                {
+                    "command": "mydfrg.diagnostics.clearFilter",
+                    "when": "view == mydfrgDiagnostics && mydfrgDiagnostics.filterActive",
+                    "group": "navigation@13"
+                },
+                {
+                    "command": "mydfrg.diagnostics.refresh",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@14"
+                },
+                {
+                    "command": "mydfrg.diagnostics.reset",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@15"
+                },
+                {
+                    "command": "mydfrg.diagnostics.closeView",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@16"
                 }
             ],
             "commandPalette": [
@@ -324,6 +456,8 @@
         "language:build": "node ./build/scripts/build-language.js build",
         "language:report": "node ./build/scripts/build-language.js report",
         "language:app": "electron ./build/mdl-language-app/main/main.js --project-root .",
+        "language:diagnostics:install": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1",
+        "language:diagnostics:uninstall": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1 -Uninstall",
         "language:app:pack": "electron-builder --config build/mdl-language-app/electron-builder.yml --win dir",
         "language:app:package": "electron-builder --config build/mdl-language-app/electron-builder.yml --win nsis",
         "test:language-app": "node --test \"./build/mdl-language-app/tests/*.test.js\"",

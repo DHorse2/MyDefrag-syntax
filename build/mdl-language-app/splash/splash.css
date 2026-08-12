@@ -57,9 +57,16 @@ h1 {
 }
 
 .status {
-    margin: 0.4rem 0 0.7rem;
+    margin: 0.4rem 0 0;
     color: var(--muted);
     font-size: 0.92rem;
+}
+
+.elapsed {
+    min-height: 1rem;
+    margin: 0 0 0.55rem;
+    color: var(--muted);
+    font-size: 0.72rem;
 }
 
 .progress {
@@ -82,4 +89,20 @@ h1 {
 @keyframes load {
     from { transform: translateX(-35%); }
     to { transform: translateX(155%); }
+}
+
+.history {
+    width: min(23rem, 86vw);
+    max-height: 3.2rem;
+    margin: 0.65rem 0 0;
+    padding-left: 1.25rem;
+    overflow: hidden;
+    color: var(--muted);
+    font-size: 0.68rem;
+    line-height: 1.05rem;
+    text-align: left;
+}
+
+.history li:not(:last-child) {
+    opacity: 0.65;
 }

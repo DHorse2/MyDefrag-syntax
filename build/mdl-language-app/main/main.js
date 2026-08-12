@@ -7,19 +7,74 @@ const { createSplashWindowOptions, createWindowOptions } = require('./window-opt
 const { defaultProjectRoot, isProjectRoot } = require('./project-root');
 const { registerIpcHandlers } = require('./ipc-handlers');
 const { openSourceAtLine } = require('./source-opener');
+const {
+    attachAppDiagnostics,
+    attachWebContentsDiagnostics,
+    configureApplicationProfile,
+    createStartupDiagnostics,
+    serializedError
+} = require('./startup-diagnostics');
 
 const APP_ROOT = path.resolve(__dirname, '..');
 const DEVELOPMENT_ROOT = path.resolve(APP_ROOT, '..', '..');
+const STATUS_CHANNEL = 'language-maintenance:startup-status';
+const STATUS_GET_CHANNEL = 'language-maintenance:startup-status:get';
+const startupStartedAt = Date.now();
+const applicationProfile = configureApplicationProfile(app);
+const startupDiagnostics = createStartupDiagnostics(applicationProfile);
 
 let mainWindow = null;
 let splashWindow = null;
 let service = null;
 let allowClose = false;
+let startupStatus = {
+    phase: 'process-start',
+    message: 'Starting Electron...',
+    elapsedMs: 0,
+    timestamp: new Date().toISOString()
+};
 
 app.enableSandbox();
 app.commandLine.appendSwitch('disable-background-networking');
 app.commandLine.appendSwitch('disable-component-update');
 app.commandLine.appendSwitch('disable-domain-reliability');
+attachAppDiagnostics(app, startupDiagnostics);
+startupDiagnostics.record('process-start', {
+    argv: process.argv.slice(1),
+    isPackaged: app.isPackaged,
+    versions: process.versions,
+    profile: applicationProfile
+});
+
+ipcMain.handle(STATUS_GET_CHANNEL, () => startupStatus);
+
+function updateStartupStatus(phase, message, details = {}) {
+    startupStatus = {
+        phase,
+        message,
+        elapsedMs: Date.now() - startupStartedAt,
+        timestamp: new Date().toISOString()
+    };
+    startupDiagnostics.record('startup-phase', { ...startupStatus, ...details });
+    if (splashWindow && !splashWindow.isDestroyed()) {
+        splashWindow.webContents.send(STATUS_CHANNEL, startupStatus);
+    }
+}
+
+function closeSplashWindow() {
+    if (splashWindow && !splashWindow.isDestroyed()) {
+        splashWindow.close();
+    }
+}
+
+function revealMainWindow(reason) {
+    if (!mainWindow || mainWindow.isDestroyed()) { return; }
+    if (!mainWindow.isVisible()) {
+        mainWindow.show();
+    }
+    startupDiagnostics.record('main-window-shown', { reason });
+    closeSplashWindow();
+}
 
 async function selectProjectRoot() {
     const candidate = defaultProjectRoot({
@@ -77,18 +132,31 @@ async function confirmClose() {
 }
 
 async function createMainWindow() {
-    splashWindow = new BrowserWindow(createSplashWindowOptions());
-    splashWindow.once('ready-to-show', () => splashWindow?.show());
+    updateStartupStatus('splash-create', 'Opening the startup window...');
+    splashWindow = new BrowserWindow(createSplashWindowOptions(APP_ROOT));
+    attachWebContentsDiagnostics(splashWindow.webContents, 'splash', startupDiagnostics);
+    splashWindow.show();
     splashWindow.on('closed', () => {
         splashWindow = null;
     });
+    updateStartupStatus('splash-load', 'Loading the startup interface...');
     await splashWindow.loadFile(path.join(APP_ROOT, 'splash', 'index.html'));
 
+    updateStartupStatus('project-root', 'Locating the MyDefrag-syntax project...');
     const projectRoot = await selectProjectRoot();
+    updateStartupStatus('language-data', 'Loading project language data...', { projectRoot });
+    const languageLoadStartedAt = Date.now();
     service = new LanguageMaintenanceService(projectRoot);
     service.load();
+    updateStartupStatus(
+        'language-data-loaded',
+        `Loaded project language data in ${Date.now() - languageLoadStartedAt} ms.`,
+        { projectRoot }
+    );
 
+    updateStartupStatus('main-window-create', 'Creating the application window...');
     mainWindow = new BrowserWindow(createWindowOptions(APP_ROOT));
+    attachWebContentsDiagnostics(mainWindow.webContents, 'main', startupDiagnostics);
     mainWindow.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
     mainWindow.webContents.on('will-navigate', (event, url) => {
         if (url !== mainWindow.webContents.getURL()) {
@@ -103,7 +171,7 @@ async function createMainWindow() {
     mainWindow.on('closed', () => {
         mainWindow = null;
     });
-    mainWindow.once('ready-to-show', () => mainWindow.show());
+    mainWindow.once('ready-to-show', () => revealMainWindow('ready-to-show'));
 
     registerIpcHandlers({
         ipcMain,
@@ -114,16 +182,15 @@ async function createMainWindow() {
         closeApplication: confirmClose
     });
 
+    updateStartupStatus('main-window-load', 'Rendering the application window...');
     await mainWindow.loadFile(path.join(APP_ROOT, 'renderer', 'index.html'));
-    if (splashWindow && !splashWindow.isDestroyed()) {
-        splashWindow.close();
-    }
+    updateStartupStatus('main-window-loaded', 'Application window loaded; waiting for first paint.');
 }
 
 app.whenReady().then(createMainWindow).catch((error) => {
-    if (splashWindow && !splashWindow.isDestroyed()) {
-        splashWindow.close();
-    }
+    startupDiagnostics.record('startup-failed', { error: serializedError(error) });
+    updateStartupStatus('failed', `Startup failed: ${error.message}`);
+    closeSplashWindow();
     dialog.showErrorBox('MyDefrag Language Maintenance', error.message);
     app.quit();
 });

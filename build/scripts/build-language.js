@@ -448,7 +448,7 @@ function validateLanguageState(state, rootDir = ROOT) {
                 if (typeof entry.text !== 'string' || entry.text.length === 0) {
                     errors.push(`${label} text must be a non-empty string`);
                 }
-                if (!['potential', 'rejected', 'review'].includes(entry.status)) {
+                if (!['potential', 'review', 'rejected', 'code-edit', 'code-updated'].includes(entry.status)) {
                     errors.push(`${label} has invalid status ${entry.status}`);
                 }
                 if (typeof entry.path === 'string' && typeof entry.text === 'string') {
@@ -1066,6 +1066,130 @@ function buildCollisionReport(state) {
     };
 }
 
+function catalogEntryReference(entry) {
+    return {
+        key: entry.key,
+        component: entry.component,
+        category: entry.category,
+        role: entry.role
+    };
+}
+
+function catalogFormatKeyForCandidate(candidate, sourceText = null) {
+    const reference = candidate?.catalogReference;
+    if (reference?.kind === 'catalog.format-key' && typeof reference.key === 'string') {
+        return reference.key;
+    }
+
+    if (Number.isInteger(candidate?.startIndex) && typeof sourceText === 'string') {
+        const prefix = sourceText.slice(Math.max(0, candidate.startIndex - 256), candidate.startIndex);
+        if (/\bcatalog\s*\.\s*format\s*\(\s*$/.test(prefix)) {
+            return candidate.text;
+        }
+        return null;
+    }
+
+    if (Number.isInteger(candidate?.startColumn) && candidate.endLine === candidate.line) {
+        const prefix = candidate.fullLine.slice(0, candidate.startColumn);
+        if (/\bcatalog\s*\.\s*format\s*\(\s*$/.test(prefix)) {
+            return candidate.text;
+        }
+        return null;
+    }
+
+    const formatPattern = /\bcatalog\s*\.\s*format\s*\(\s*(['"`])((?:\\.|(?!\1).)*?)\1/g;
+    let match;
+    while ((match = formatPattern.exec(candidate?.fullLine || '')) !== null) {
+        if (match[2] === candidate.text) { return candidate.text; }
+    }
+    return null;
+}
+
+function expandCatalogFormatCandidates(state, candidates, sourceText = null) {
+    const catalogEntriesByKey = new Map((state.catalog.entries || []).map((entry) => [entry.key, entry]));
+    const existingResolved = new Set(candidates
+        .filter((candidate) => candidate?.catalogReference?.kind === 'catalog.format-text')
+        .map((candidate) => (
+            `${candidate.line}\0${candidate.fullLine}\0${candidate.catalogReference.key}\0${candidate.text}`
+        )));
+    const expanded = [];
+
+    for (const candidate of candidates) {
+        const key = catalogFormatKeyForCandidate(candidate, sourceText);
+        const catalogEntry = key == null ? null : catalogEntriesByKey.get(key);
+        if (!catalogEntry) {
+            expanded.push(candidate);
+            continue;
+        }
+
+        const current = {
+            ...candidate,
+            catalogReference: { kind: 'catalog.format-key', key }
+        };
+        const resolvedIdentity = `${candidate.line}\0${candidate.fullLine}\0${key}\0${catalogEntry.text}`;
+        if (catalogEntry.text !== candidate.text && !existingResolved.has(resolvedIdentity)) {
+            expanded.push({
+                line: candidate.line,
+                text: catalogEntry.text,
+                fullLine: candidate.fullLine,
+                historical: true,
+                catalogReference: { kind: 'catalog.format-text', key }
+            });
+            existingResolved.add(resolvedIdentity);
+        }
+        expanded.push(current);
+    }
+    return expanded;
+}
+
+function reportableMigrationCandidate(candidate) {
+    const item = {
+        line: candidate.line,
+        text: candidate.text,
+        fullLine: candidate.fullLine
+    };
+    if (candidate.historical === true) { item.historical = true; }
+    if (candidate.catalogReference) { item.catalogReference = candidate.catalogReference; }
+    return item;
+}
+
+function createMigrationCatalogMatcher(state, relativePath) {
+    const catalogEntriesByText = new Map();
+    const catalogEntriesByKey = new Map();
+    const catalogEntriesByNormalizedSource = new Map();
+    const normalizedRelativePath = String(relativePath || '').replaceAll('\\', '/').toLocaleLowerCase();
+
+    for (const entry of state.catalog.entries || []) {
+        const reference = catalogEntryReference(entry);
+        catalogEntriesByKey.set(entry.key, reference);
+        const exactMatches = catalogEntriesByText.get(entry.text) || [];
+        exactMatches.push(reference);
+        catalogEntriesByText.set(entry.text, exactMatches);
+
+        const normalizedSource = String(entry.source || '').replaceAll('\\', '/').toLocaleLowerCase();
+        if (normalizedSource !== normalizedRelativePath || !Number.isInteger(entry.sourceLine)) { continue; }
+        const sourceIdentity = `${entry.sourceLine}\0${entry.text}`;
+        const sourceMatches = catalogEntriesByNormalizedSource.get(sourceIdentity) || [];
+        sourceMatches.push(reference);
+        catalogEntriesByNormalizedSource.set(sourceIdentity, sourceMatches);
+    }
+
+    return (candidate) => {
+        const exactMatches = catalogEntriesByText.get(candidate.text) || [];
+        const referencedKey = candidate?.catalogReference?.key || catalogFormatKeyForCandidate(candidate);
+        const referencedMatch = referencedKey == null ? null : catalogEntriesByKey.get(referencedKey);
+        const normalizedText = normalizeText(candidate.text, state.normalizedWords);
+        const normalizedMatches = catalogEntriesByNormalizedSource.get(
+            `${candidate.line}\0${normalizedText}`
+        ) || [];
+        const matchesByKey = new Map();
+        for (const match of [...exactMatches, ...normalizedMatches, ...(referencedMatch ? [referencedMatch] : [])]) {
+            matchesByKey.set(match.key, match);
+        }
+        return Array.from(matchesByKey.values());
+    };
+}
+
 function buildMigrationReport(state, rootDir = ROOT) {
     const files = state.components.migrationInventory?.scanFiles || [];
     const candidateStatuses = state.components.migrationInventory?.candidateStatuses || [];
@@ -1073,17 +1197,6 @@ function buildMigrationReport(state, rootDir = ROOT) {
         `${entry.path.toLocaleLowerCase()}\0${entry.text}`,
         entry.status
     ]));
-    const catalogEntriesByText = new Map();
-    for (const entry of state.catalog.entries || []) {
-        const matches = catalogEntriesByText.get(entry.text) || [];
-        matches.push({
-            key: entry.key,
-            component: entry.component,
-            category: entry.category,
-            role: entry.role
-        });
-        catalogEntriesByText.set(entry.text, matches);
-    }
     const items = [];
 
     for (const inventoryEntry of files) {
@@ -1100,19 +1213,32 @@ function buildMigrationReport(state, rootDir = ROOT) {
         }
 
         const text = fs.readFileSync(absolutePath, 'utf8');
-        const extractedStrings = extractStringCandidates(text);
-        const candidates = extractedStrings
-            .filter((candidate) => !catalogEntriesByText.has(candidate.text))
-            .map((candidate) => ({
-                ...candidate,
+        const extractedStrings = expandCatalogFormatCandidates(
+            state,
+            extractStringCandidates(text, { includeLocations: true }),
+            text
+        );
+        const catalogEntriesForCandidate = createMigrationCatalogMatcher(state, relativePath);
+        const classifiedStrings = extractedStrings.map((candidate) => ({
+            candidate,
+            catalogEntries: catalogEntriesForCandidate(candidate)
+        }));
+        const candidates = classifiedStrings
+            .filter(({ catalogEntries }) => catalogEntries.length === 0)
+            .map(({ candidate }) => ({
+                ...reportableMigrationCandidate(candidate),
                 status: candidateStatusByIdentity.get(`${relativePath.toLocaleLowerCase()}\0${candidate.text}`) || 'potential'
             }));
-        const catalogedStrings = extractedStrings
-            .filter((candidate) => catalogEntriesByText.has(candidate.text))
-            .map((candidate) => ({
-                ...candidate,
-                status: 'in-catalog',
-                catalogEntries: catalogEntriesByText.get(candidate.text)
+        const catalogedStrings = classifiedStrings
+            .filter(({ catalogEntries }) => catalogEntries.length > 0)
+            .map(({ candidate, catalogEntries }) => ({
+                ...reportableMigrationCandidate(candidate),
+                status: ['code-edit', 'code-updated'].includes(
+                    candidateStatusByIdentity.get(`${relativePath.toLocaleLowerCase()}\0${candidate.text}`)
+                )
+                    ? candidateStatusByIdentity.get(`${relativePath.toLocaleLowerCase()}\0${candidate.text}`)
+                    : 'in-catalog',
+                catalogEntries
             }));
         items.push({
             file: relativePath,
@@ -1144,6 +1270,9 @@ function buildMigrationReport(state, rootDir = ROOT) {
  *
  * @param {string} text
  *     The complete source text to inspect.
+ * @param {object} [options]
+ * @param {boolean} [options.includeLocations]
+ *     Include exact string-literal offsets for validated transformation tools.
  *
  * @returns {Array<{line: number, text: string, fullLine: string}>}
  *     Candidate strings together with the source line on which each string
@@ -1161,7 +1290,7 @@ function isDirectRequireArgument(sourceText, openingQuoteIndex) {
     return sourceText.slice(cursor + 1, tokenEnd) === 'require';
 }
 
-function extractStringCandidates(text) {
+function extractStringCandidates(text, options = {}) {
     // Accumulates the accepted string candidates in source order.
     const candidates = [];
     const sourceLines = text.split(/\r?\n/);
@@ -1244,11 +1373,27 @@ function extractStringCandidates(text) {
          * line number.
          */
         const line = lineNumberAt(text, match.index);
-        candidates.push({
+        const candidate = {
             line,
             text: value,
             fullLine: sourceLines[line - 1] || ''
-        });
+        };
+        if (options.includeLocations === true) {
+            const endIndex = stringPattern.lastIndex;
+            const lineStartIndex = text.lastIndexOf('\n', match.index - 1) + 1;
+            candidate.endLine = lineNumberAt(text, endIndex - 1);
+            candidate.startIndex = match.index;
+            candidate.endIndex = endIndex;
+            candidate.startColumn = match.index - lineStartIndex;
+            candidate.endColumn = endIndex - lineStartIndex;
+            candidate.literal = text.slice(match.index, endIndex);
+            candidate.delimiter = match[1];
+            candidate.rawValue = rawValue;
+            candidate.literalKind = match[1] === '`'
+                ? 'template'
+                : match[1] === '"' ? 'double-quoted' : 'single-quoted';
+        }
+        candidates.push(candidate);
     }
 
     // Return all accepted candidates in the order in which they were found.
@@ -1752,8 +1897,7 @@ function formatHumanReadableReport(reports) {
         }
         lines.push(`Found in catalog: ${file.catalogedStringCount}`);
         for (const found of file.catalogedStrings) {
-            lines.push(...formatCandidate(found));
-            lines.push(`  Catalog: ${found.catalogEntries.map((entry) => entry.key).join(', ')}`);
+            lines.push(formatCatalogedCandidate(found));
         }
     }
 
@@ -1788,6 +1932,12 @@ function formatCandidate(candidate) {
     const wrapped = wrapText(candidate.text, 100 - prefix.length);
 
     return wrapped.map((line, index) => `${index === 0 ? prefix : continuation}${line}`);
+}
+
+function formatCatalogedCandidate(candidate) {
+    const prefix = `Line ${candidate.line} [${candidate.status || 'in-catalog'}]: `;
+    const catalogKeys = candidate.catalogEntries.map((entry) => entry.key).join(', ');
+    return `${prefix}${candidate.text} | Catalog: ${catalogKeys}`;
 }
 
 function wrapText(value, width) {
@@ -1826,6 +1976,8 @@ module.exports = {
     buildLanguageOutputs,
     buildLocaleComponentOutput,
     collectMissingCatalogEntryKeys,
+    createMigrationCatalogMatcher,
+    expandCatalogFormatCandidates,
     createBuildTranslationSuggestions,
     createNormalizedEnglishSuggestions,
     createLocaleComponentCatalog,

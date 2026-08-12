@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
     <title>Starting MyDefrag Language Maintenance</title>
     <link rel="stylesheet" href="splash.css">
 </head>
@@ -12,8 +12,11 @@
         <div class="mark" aria-hidden="true">M</div>
         <p class="eyebrow">MyDefrag</p>
         <h1>Language Maintenance</h1>
-        <p class="status">Loading project language data...</p>
+        <p id="startup-status" class="status">Starting Electron...</p>
+        <p id="startup-elapsed" class="elapsed" aria-live="polite"></p>
         <div class="progress" aria-hidden="true"><span></span></div>
+        <ol id="startup-history" class="history" aria-label="Completed startup phases"></ol>
     </main>
+    <script src="splash.js"></script>
 </body>
 </html>

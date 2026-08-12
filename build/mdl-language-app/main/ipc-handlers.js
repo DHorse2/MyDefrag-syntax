@@ -113,6 +113,15 @@ function registerIpcHandlers(options) {
     ipcMain.handle(CHANNELS.suggestCatalogKey, safeHandler((payload) => (
         service.suggestCatalogKey(payload)
     )));
+    ipcMain.handle(CHANNELS.previewMigrationSourceTransform, safeHandler((payload) => (
+        service.previewMigrationSourceTransform(payload)
+    )));
+    ipcMain.handle(CHANNELS.getMigrationSourceUpdateStatus, safeHandler((payload) => (
+        service.getMigrationSourceUpdateStatus(payload)
+    )));
+    ipcMain.handle(CHANNELS.replaceMigrationSourceLine, safeHandler((payload) => (
+        service.replaceMigrationSourceLine(payload)
+    )));
     ipcMain.handle(CHANNELS.getLanguageReport, safeHandler(() => service.getLanguageReport()));
     ipcMain.handle(CHANNELS.setLanguageReportDirty, safeHandler((dirty) => (
         service.setLanguageReportDirty(dirty)

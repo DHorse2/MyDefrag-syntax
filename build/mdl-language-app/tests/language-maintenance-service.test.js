@@ -290,6 +290,18 @@ test('adds, edits, tracks, reverts, and preserves unrelated fields', (t) => {
     assert.equal(result.state.dirty, true);
     assert.equal(result.state.views.catalog.records[0].futureField, 'preserve-me');
 
+    const renamed = service.applyRecord({
+        view: 'catalog',
+        originalIdentity: original.key,
+        record: { ...original, key: 'tooling.application.renamedExistingKey' }
+    });
+    assert.equal(renamed.ok, false);
+    assert.match(renamed.errors[0].message, /Existing catalog keys cannot be renamed/);
+    assert.equal(
+        service.snapshot().views.catalog.records.filter((entry) => entry.key === original.key).length,
+        1
+    );
+
     result = service.applyRecord({
         view: 'catalog',
         originalIdentity: null,
@@ -870,6 +882,59 @@ test('loads full-line candidates only for current migration inventory files', (t
     assert.match(result.error, /Rebuild/);
 });
 
+test('keeps a normalized catalog record bound to its source candidate after save and reload', async (t) => {
+    const rootDir = createFixture(t);
+    const relativePath = 'src/server/parser.js';
+    const sourceText = 'Enable MyDefrag parser debug logging.';
+    const normalizedText = 'Enable My Defragmenter parser debug logging.';
+    writeJson(rootDir, 'build/language/reports/migration-report.json', {
+        files: [{
+            file: relativePath,
+            component: 'parser',
+            status: 'scanned',
+            candidateCount: 1,
+            candidates: [{
+                line: 7,
+                text: sourceText,
+                fullLine: `    const message = '${sourceText}';`
+            }],
+            catalogedStringCount: 0,
+            catalogedStrings: []
+        }]
+    });
+    const service = createService(rootDir);
+    service.load();
+
+    const applied = service.applyRecord({
+        view: 'catalog',
+        originalIdentity: null,
+        record: {
+            key: 'parser.message.normalizedDebug.text',
+            component: 'parser',
+            category: 'diagnostic',
+            role: 'message',
+            text: normalizedText,
+            status: 'draft',
+            source: relativePath,
+            sourceLine: 7
+        }
+    });
+    assert.equal(applied.ok, true, JSON.stringify(applied.errors || []));
+    let candidates = service.getMigrationCandidates(relativePath);
+    assert.equal(candidates.file.candidateCount, 0);
+    assert.equal(candidates.file.catalogedStringCount, 1);
+    assert.equal(candidates.file.catalogedStrings[0].text, sourceText);
+    assert.equal(candidates.file.catalogedStrings[0].catalogEntries[0].key, 'parser.message.normalizedDebug.text');
+
+    const saved = await service.save();
+    assert.equal(saved.ok, true);
+    const reloaded = createService(rootDir);
+    reloaded.load();
+    candidates = reloaded.getMigrationCandidates(relativePath);
+    assert.equal(candidates.file.candidateCount, 0);
+    assert.equal(candidates.file.catalogedStrings[0].catalogEntries[0].key, 'parser.message.normalizedDebug.text');
+});
+
 test('migration report retains potential and catalog-found source strings', (t) => {
     const rootDir = createFixture(t);
     const parserSource = path.join(rootDir, 'src', 'server', 'parser.js');
@@ -900,6 +965,85 @@ test('migration report retains potential and catalog-found source strings', (t) 
     );
 });
 
+test('migration rebuild retains prior text and classifies the current catalog.format key', (t) => {
+    const rootDir = createFixture(t);
+    const relativePath = 'src/server/parser.js';
+    const parserSource = path.join(rootDir, ...relativePath.split('/'));
+    const priorText = "Unexpected token '{token}'";
+    const catalogKey = 'parser.diagnostic.unexpectedToken.message';
+    fs.mkdirSync(path.dirname(parserSource), { recursive: true });
+    fs.writeFileSync(parserSource, [
+        'const tMessage = catalog.format(',
+        `    "${catalogKey}",`,
+        '    { token }',
+        ').text;'
+    ].join('\n'), 'utf8');
+    const components = readJson(rootDir, 'language/canonical/components.json');
+    components.migrationInventory.candidateStatuses = [{
+        path: relativePath,
+        text: priorText,
+        status: 'code-updated'
+    }];
+    writeJson(rootDir, 'language/canonical/components.json', components);
+
+    const languageState = loadLanguageState(rootDir);
+    const report = buildMigrationReport(languageState, rootDir);
+    const parserReport = report.files.find((file) => file.file === relativePath);
+    const priorCandidate = parserReport.catalogedStrings.find((item) => item.text === priorText);
+    const currentCandidate = parserReport.catalogedStrings.find((item) => item.text === catalogKey);
+
+    assert.equal(parserReport.candidateCount, 0);
+    assert.equal(parserReport.catalogedStringCount, 2);
+    assert.equal(priorCandidate.historical, true);
+    assert.equal(priorCandidate.status, 'code-updated');
+    assert.equal(priorCandidate.catalogReference.kind, 'catalog.format-text');
+    assert.equal(currentCandidate.status, 'in-catalog');
+    assert.equal(currentCandidate.catalogReference.kind, 'catalog.format-key');
+    assert.equal(currentCandidate.catalogEntries[0].key, catalogKey);
+
+    writeJson(rootDir, 'build/language/reports/migration-report.json', report);
+    const service = createService(rootDir);
+    service.load();
+    const allCandidates = service.getMigrationCandidates(relativePath).file;
+    assert.equal(allCandidates.candidateCount, 0);
+    assert.equal(allCandidates.catalogedStringCount, 2);
+    assert.deepEqual(
+        allCandidates.catalogedStrings.map((item) => [item.text, item.status]),
+        [[priorText, 'code-updated'], [catalogKey, 'in-catalog']]
+    );
+});
+
+test('migration report recognizes normalized catalog text at its recorded source line', (t) => {
+    const rootDir = createFixture(t);
+    const relativePath = 'src/server/parser.js';
+    const parserSource = path.join(rootDir, ...relativePath.split('/'));
+    fs.mkdirSync(path.dirname(parserSource), { recursive: true });
+    fs.writeFileSync(parserSource, [
+        "const normalized = 'Enable MyDefrag parser debug logging.';",
+        "const unrelated = 'Other source message';"
+    ].join('\n'), 'utf8');
+    const languageState = loadLanguageState(rootDir);
+    languageState.catalog.entries.push({
+        key: 'parser.message.normalizedDebug.text',
+        component: 'parser',
+        category: 'diagnostic',
+        role: 'message',
+        text: 'Enable My Defragmenter parser debug logging.',
+        status: 'draft',
+        source: relativePath,
+        sourceLine: 1
+    });
+
+    const report = buildMigrationReport(languageState, rootDir);
+    const parserReport = report.files.find((file) => file.file === relativePath);
+
+    assert.equal(parserReport.candidateCount, 1);
+    assert.equal(parserReport.candidates[0].text, 'Other source message');
+    assert.equal(parserReport.catalogedStringCount, 1);
+    assert.equal(parserReport.catalogedStrings[0].text, 'Enable MyDefrag parser debug logging.');
+    assert.equal(parserReport.catalogedStrings[0].catalogEntries[0].key, 'parser.message.normalizedDebug.text');
+});
+
 test('migration report does not truncate candidate files at 200 strings', (t) => {
     const rootDir = createFixture(t);
     const relativePath = 'src/many-candidates.js';
@@ -921,7 +1065,7 @@ test('migration report does not truncate candidate files at 200 strings', (t) =>
     assert.equal(report.files[0].candidates.length, 205);
 });
 
-test('persists review and rejected candidate statuses by file and text', async (t) => {
+test('persists analyst workflow candidate statuses by file and text', async (t) => {
     const rootDir = createFixture(t);
     const relativePath = 'src/server/parser.js';
     const candidateText = 'Candidate parser message';
@@ -959,6 +1103,14 @@ test('persists review and rejected candidate statuses by file and text', async (
     result = service.setMigrationCandidateStatus({
         path: relativePath,
         text: candidateText,
+        status: 'code-edit'
+    });
+    assert.equal(result.ok, true);
+    assert.equal(service.getMigrationCandidates(relativePath).file.candidates[0].status, 'code-edit');
+
+    result = service.setMigrationCandidateStatus({
+        path: relativePath,
+        text: candidateText,
         status: 'rejected'
     });
     assert.equal(result.ok, true);
@@ -968,6 +1120,19 @@ test('persists review and rejected candidate statuses by file and text', async (
         )),
         { path: relativePath, text: candidateText, status: 'rejected' }
     );
+    let summary = service.getMigrationSummary().files.find((file) => file.path === relativePath);
+    assert.equal(summary.remainingCount, 0);
+    assert.equal(summary.completedCount, 1);
+    assert.equal(summary.statusCounts.rejected, 1);
+
+    result = service.setMigrationCandidateStatus({
+        path: relativePath,
+        text: candidateText,
+        status: 'code-updated'
+    });
+    assert.equal(result.ok, true);
+    summary = service.getMigrationSummary().files.find((file) => file.path === relativePath);
+    assert.equal(summary.statusCounts['code-updated'], 1);
     assert.equal(service.setMigrationCandidateStatus({
         path: relativePath,
         text: candidateText,
@@ -980,12 +1145,12 @@ test('persists review and rejected candidate statuses by file and text', async (
     assert.deepEqual(
         readJson(rootDir, 'language/canonical/components.json').migrationInventory.candidateStatuses
             .find((entry) => entry.path === relativePath && entry.text === candidateText),
-        { path: relativePath, text: candidateText, status: 'rejected' }
+        { path: relativePath, text: candidateText, status: 'code-updated' }
     );
 
     const reloaded = createService(rootDir);
     reloaded.load();
-    assert.equal(reloaded.getMigrationCandidates(relativePath).file.candidates[0].status, 'rejected');
+    assert.equal(reloaded.getMigrationCandidates(relativePath).file.candidates[0].status, 'code-updated');
     result = reloaded.setMigrationCandidateStatus({
         path: relativePath,
         text: candidateText,
@@ -1095,4 +1260,163 @@ test('rebuild is blocked while edits are unsaved', async (t) => {
     const result = await service.rebuild();
     assert.equal(result.ok, false);
     assert.equal(result.stage, 'unsaved');
+});
+
+test('previews and atomically replaces an exact migration source line', (t) => {
+    const rootDir = createFixture(t);
+    const parserSource = path.join(rootDir, 'src', 'server', 'parser.js');
+    fs.mkdirSync(path.dirname(parserSource), { recursive: true });
+    fs.writeFileSync(parserSource, [
+        'function reportFailure() {',
+        "    logger.message('Candidate parser message');",
+        '}'
+    ].join('\n'), 'utf8');
+    writeJson(rootDir, 'build/language/reports/migration-report.json', {
+        files: [{
+            file: 'src/server/parser.js',
+            component: 'parser',
+            status: 'scanned',
+            candidateCount: 1,
+            candidates: [{
+                line: 2,
+                text: 'Candidate parser message',
+                fullLine: "    logger.message('Candidate parser message');"
+            }],
+            catalogedStringCount: 0,
+            catalogedStrings: []
+        }]
+    });
+    const service = createService(rootDir);
+    const state = service.load();
+    const request = {
+        path: 'src/server/parser.js',
+        line: 2,
+        text: 'Candidate parser message',
+        catalogKey: 'parser.notification.candidate.message'
+    };
+    const catalogResult = service.applyRecord({
+        view: 'catalog',
+        originalIdentity: null,
+        record: {
+            key: request.catalogKey,
+            component: 'parser',
+            category: 'application',
+            role: 'summary',
+            text: request.text,
+            status: 'draft',
+            source: request.path,
+            sourceLine: request.line
+        }
+    });
+    assert.equal(catalogResult.ok, true, JSON.stringify(catalogResult.errors || []));
+
+    const preview = service.previewMigrationSourceTransform(request);
+    assert.equal(preview.ok, true);
+    assert.equal(preview.originalLine, "    logger.message('Candidate parser message');");
+    assert.deepEqual(preview.transformedLines, [
+        '    const tMessage = catalog.format("parser.notification.candidate.message").text;',
+        '    logger.message(tMessage);'
+    ]);
+    assert.equal(preview.sourceReplacement.enabled, true);
+    assert.match(preview.sourceVersion, /^[a-f0-9]{64}$/);
+    let sourceStatus = service.getMigrationSourceUpdateStatus(request);
+    assert.equal(sourceStatus.ok, true);
+    assert.equal(sourceStatus.originalPresent, true);
+    assert.equal(sourceStatus.sourceUpdated, false);
+
+    const replacement = service.replaceMigrationSourceLine({
+        ...request,
+        sourceVersion: preview.sourceVersion
+    });
+    assert.equal(replacement.ok, true);
+    assert.equal(replacement.candidateStatus, 'code-updated');
+    assert.equal(replacement.statusWarning, null);
+    assert.deepEqual(
+        replacement.state.migrationInventory.candidateStatuses.find((entry) => (
+            entry.path === request.path && entry.text === request.text
+        )),
+        { path: request.path, text: request.text, status: 'code-updated' }
+    );
+    assert.deepEqual(replacement.recoveryFiles, []);
+    assert.equal(fs.readFileSync(parserSource, 'utf8'), [
+        'function reportFailure() {',
+        ...preview.transformedLines,
+        '}'
+    ].join('\n'));
+    sourceStatus = service.getMigrationSourceUpdateStatus(request);
+    assert.equal(sourceStatus.ok, true);
+    assert.equal(sourceStatus.originalPresent, false);
+    assert.equal(sourceStatus.sourceUpdated, true);
+    const refreshedCandidate = service.getMigrationCandidates(request.path).file.catalogedStrings[0];
+    assert.equal(refreshedCandidate.status, 'code-updated');
+});
+
+test('source replacement rejects stale previews and non-JavaScript files without writing', (t) => {
+    const rootDir = createFixture(t);
+    const parserSource = path.join(rootDir, 'src', 'server', 'parser.js');
+    fs.mkdirSync(path.dirname(parserSource), { recursive: true });
+    const originalSource = "catalog.message('Stale candidate');\n";
+    fs.writeFileSync(parserSource, originalSource, 'utf8');
+    const packageSource = path.join(rootDir, 'package.json');
+    fs.writeFileSync(packageSource, '{"displayName":"Candidate package name"}\n', 'utf8');
+    writeJson(rootDir, 'build/language/reports/migration-report.json', {
+        files: [{
+            file: 'src/server/parser.js',
+            component: 'parser',
+            status: 'scanned',
+            candidateCount: 1,
+            candidates: [{ line: 1, text: 'Stale candidate', fullLine: originalSource.trimEnd() }],
+            catalogedStringCount: 0,
+            catalogedStrings: []
+        }, {
+            file: 'package.json',
+            component: 'package',
+            status: 'scanned',
+            candidateCount: 1,
+            candidates: [{ line: 1, text: 'Candidate package name', fullLine: '{"displayName":"Candidate package name"}' }],
+            catalogedStringCount: 0,
+            catalogedStrings: []
+        }]
+    });
+    const service = createService(rootDir);
+    service.load();
+    const request = {
+        path: 'src/server/parser.js',
+        line: 1,
+        text: 'Stale candidate',
+        catalogKey: 'parser.application.stale.message'
+    };
+    const staleCatalogResult = service.applyRecord({
+        view: 'catalog',
+        originalIdentity: null,
+        record: {
+            key: request.catalogKey,
+            component: 'parser',
+            category: 'application',
+            role: 'summary',
+            text: request.text,
+            status: 'draft',
+            source: request.path,
+            sourceLine: request.line
+        }
+    });
+    assert.equal(staleCatalogResult.ok, true, JSON.stringify(staleCatalogResult.errors || []));
+    const preview = service.previewMigrationSourceTransform(request);
+    assert.equal(preview.ok, true);
+    fs.writeFileSync(parserSource, `${originalSource}// external edit\n`, 'utf8');
+
+    const stale = service.replaceMigrationSourceLine({ ...request, sourceVersion: preview.sourceVersion });
+    assert.equal(stale.ok, false);
+    assert.equal(stale.code, 'SOURCE_CHANGED');
+    assert.equal(fs.readFileSync(parserSource, 'utf8'), `${originalSource}// external edit\n`);
+
+    const unsupported = service.previewMigrationSourceTransform({
+        path: 'package.json',
+        line: 1,
+        text: 'Candidate package name',
+        catalogKey: 'package.metadata.displayName'
+    });
+    assert.equal(unsupported.ok, false);
+    assert.equal(unsupported.code, 'SOURCE_TYPE_NOT_SUPPORTED');
+    assert.equal(fs.readFileSync(packageSource, 'utf8'), '{"displayName":"Candidate package name"}\n');
 });

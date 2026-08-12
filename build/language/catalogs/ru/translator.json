@@ -22,6 +22,13 @@
       "status": "machine-generated",
       "text": "Вывод команды «Сборка»"
     },
+    "translator.accessibility.candidateStatus.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Candidate status"
+    },
     "translator.accessibility.closeOperationResult.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -68,6 +75,13 @@
       "status": "machine-generated",
       "text": "Компонент для отсканированного файла миграции"
     },
+    "translator.accessibility.componentForScannedMigrationFiles.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Component for scanned migration files"
+    },
     "translator.accessibility.componentIdentifier.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -82,12 +96,42 @@
       "status": "machine-generated",
       "text": "Режим предварительного просмотра по умолчанию"
     },
+    "translator.accessibility.editCatalogRecordValue.label": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "entryKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Edit catalog record {entryKey}"
+    },
+    "translator.accessibility.filterCandidatesByStatus.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Filter candidates by status"
+    },
     "translator.accessibility.filterMigrationSourceFiles.label": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Фильтрация исходных файлов миграции"
+    },
+    "translator.accessibility.languageReportArtifactText.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Language report artifact text"
+    },
+    "translator.accessibility.localeTemplate.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locale template"
     },
     "translator.accessibility.maximizeValue.label": {
       "fallbackLocale": null,
@@ -155,6 +199,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Компонент среды выполнения"
+    },
+    "translator.accessibility.selectValue.label": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select {filePath}"
     },
     "translator.accessibility.selectedComponent.label": {
       "fallbackLocale": null,
@@ -284,6 +337,13 @@
       "status": "machine-generated",
       "text": "Добавить исходные файлы для миграции"
     },
+    "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Authored files under language/locales are always preserved."
+    },
     "translator.dialog.cancel.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -305,12 +365,44 @@
       "status": "machine-generated",
       "text": "Каталог компонентов: добавление записи"
     },
+    "translator.dialog.componentCatalogEditRecord.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Component Catalog Edit Record"
+    },
     "translator.dialog.confirmAuthoritativeChanges.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Подтвердить авторитетные изменения"
+    },
+    "translator.dialog.deleteCatalogOnSave.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete catalog on Save"
+    },
+    "translator.dialog.deleteGeneratedCatalogDataValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "catalogRemovals"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete generated catalog data: {catalogRemovals}"
+    },
+    "translator.dialog.deleteLocaleValue.title": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "id"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete locale {id}?"
     },
     "translator.dialog.discardAndReload.text": {
       "fallbackLocale": null,
@@ -339,6 +431,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Выйти без сохранения"
+    },
+    "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated locale catalogs will be preserved."
+    },
+    "translator.dialog.keepCatalogRecommended.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Keep catalog (recommended)"
     },
     "translator.dialog.languageBuildIsRunning.title": {
       "fallbackLocale": null,
@@ -381,6 +487,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Обслуживание языка программы «Дефрагментатор»"
+    },
+    "translator.dialog.noAuthoritativeFilesWillChange.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "No authoritative files will change."
     },
     "translator.dialog.noFilesWillChange.text": {
       "fallbackLocale": null,
@@ -438,6 +551,13 @@
       "status": "machine-generated",
       "text": "Сохранение не удалось, и операция была отменена"
     },
+    "translator.dialog.saveTheReportArtifactSeparately.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Save the report artifact separately"
+    },
     "translator.dialog.scanFile.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -445,12 +565,26 @@
       "status": "machine-generated",
       "text": "Сканировать файл"
     },
+    "translator.dialog.scanFolder.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Scan folder"
+    },
     "translator.dialog.scanMigrationSourceFile.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Сканировать исходный файл для миграции"
+    },
+    "translator.dialog.scanMigrationSourceFolder.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Scan migration source folder"
     },
     "translator.dialog.selectTheMydefragSyntaxRepository.title": {
       "fallbackLocale": null,
@@ -465,6 +599,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Начало обслуживания языка дефрагментатора"
+    },
+    "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "id"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The generated build/language/catalogs/{id} data will be kept by default."
     },
     "translator.dialog.unsavedLanguageChanges.title": {
       "fallbackLocale": null,
@@ -563,6 +706,13 @@
       "status": "machine-generated",
       "text": "Не удалось найти установку VS Codium или VS Code с поддержкой линейного режима; исходный файл был открыт с помощью приложения по умолчанию."
     },
+    "translator.message.aScannedSourcePathIsNotANormalized.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "A scanned source path is not a normalized repository relative file path."
+    },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -591,12 +741,40 @@
       "status": "machine-generated",
       "text": "После отмены сборки не поступило сообщение о завершении процесса."
     },
+    "translator.message.candidateStatusRejected.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Candidate status rejected"
+    },
+    "translator.message.candidateStatusUpdatedInMemory.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Candidate status updated in memory"
+    },
     "translator.message.catalogRecordAddedToInMemoryDraft.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Запись каталога добавлена в черновик в памяти"
+    },
+    "translator.message.catalogRecordIsNoLongerAvailable.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Catalog record is no longer available"
+    },
+    "translator.message.catalogRecordUpdatedInMemory.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Catalog record updated in memory"
     },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
       "fallbackLocale": null,
@@ -663,6 +841,15 @@
       "status": "machine-generated",
       "text": "Идентификатор дубликата компонента: {componentId}"
     },
+    "translator.message.duplicateLocaleIdValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "localeId"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Duplicate locale id: {localeId}"
+    },
     "translator.message.duplicateValueValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -680,6 +867,13 @@
       "status": "machine-generated",
       "text": "Существующие идентификаторы компонентов нельзя переименовывать."
     },
+    "translator.message.existingLocaleIdentifiersCannotBeRenamed.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Existing locale identifiers cannot be renamed."
+    },
     "translator.message.exitAndDiscardAllInMemoryChanges.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -693,6 +887,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Принудительное прекращение процесса сборки языка"
+    },
+    "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "relativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated locale catalog is not a directory: {relativePath}"
     },
     "translator.message.invalidComponentRequest.text": {
       "fallbackLocale": null,
@@ -708,12 +911,44 @@
       "status": "machine-generated",
       "text": "Неверный выбор файла."
     },
+    "translator.message.invalidLocaleIdentifierForCatalogRemovalValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "localeId"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Invalid locale identifier for catalog removal: {localeId}"
+    },
+    "translator.message.invalidLocaleRequest.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Invalid locale request."
+    },
+    "translator.message.invalidLocaleStatusValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "localeStatus"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Invalid locale status: {localeStatus}"
+    },
     "translator.message.invalidRecordRequest.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Недопустимый запрос на запись."
+    },
+    "translator.message.invalidScannedFileSelection.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Invalid scanned file selection."
     },
     "translator.message.languageBuildCancelled.text": {
       "fallbackLocale": null,
@@ -749,6 +984,71 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Данные о сохранении языка не загружены."
+    },
+    "translator.message.languageReportArtifactSaved.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Language report artifact saved"
+    },
+    "translator.message.languageReportArtifactWasNotSaved.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Language report artifact was not saved"
+    },
+    "translator.message.languageReportTextExceedsThe5000000.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Language report text exceeds the 5 000 000 character safety limit."
+    },
+    "translator.message.languageReportTextMustBeAString.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Language report text must be a string."
+    },
+    "translator.message.localeAdded.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locale added"
+    },
+    "translator.message.localeDeletedFromRegistry.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locale deleted from registry"
+    },
+    "translator.message.localeDirectionMustBeLtrOrRtl.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locale direction must be ltr or rtl."
+    },
+    "translator.message.localeUpdated.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locale updated"
+    },
+    "translator.message.localeValueNoLongerExists.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "id"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locale {id} no longer exists."
     },
     "translator.message.migrationAssignmentRejected.text": {
       "fallbackLocale": null,
@@ -822,6 +1122,13 @@
       "status": "machine-generated",
       "text": "Добавлены файлы миграции"
     },
+    "translator.message.migrationFilesAlreadyListed.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Migration files already listed"
+    },
     "translator.message.migrationFilesRejected.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -891,12 +1198,37 @@
       "status": "machine-generated",
       "text": "При перезагрузке все изменения языка, сохраненные в памяти, будут сброшены."
     },
+    "translator.message.removeValueFromTheLocaleRegistry.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "id"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Remove {id} from the locale registry?"
+    },
+    "translator.message.requiredLocaleValueCannotBeDeleted.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "id"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Required locale {id} cannot be deleted."
+    },
     "translator.message.runningLanguageBuildCommand.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Выполнение команды сборки языка"
+    },
+    "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Save or discard the Language Report edits before saving canonical language data."
     },
     "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
       "fallbackLocale": null,
@@ -919,6 +1251,13 @@
       "status": "machine-generated",
       "text": "Перед добавлением файлов выберите допустимый компонент."
     },
+    "translator.message.selectPotentialCandidateRejectedOrReview.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select Potential Candidate, Rejected, or Review."
+    },
     "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -927,6 +1266,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Выбранный файл находится за пределами корневого каталога репозитория: {absolutePath}"
+    },
+    "translator.message.selectedFolderIsOutsideTheRepositoryRootValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "folderPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Selected folder is outside the repository root: {folderPath}"
     },
     "translator.message.selectedPathIsNotAFileValue.text": {
       "fallbackLocale": null,
@@ -937,12 +1285,30 @@
       "status": "machine-generated",
       "text": "Выбранный путь не является файлом: {absolutePath}"
     },
+    "translator.message.selectedPathIsNotAFolderValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "folderPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Selected path is not a folder: {folderPath}"
+    },
     "translator.message.sourceFileOpened.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Исходный файл открыт"
+    },
+    "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "recordKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The catalog record {recordKey} changed or no longer exists."
     },
     "translator.message.theComponentChangedOrNoLongerExists.text": {
       "fallbackLocale": null,
@@ -964,6 +1330,27 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Процесс сборки языка не удалось остановить."
+    },
+    "translator.message.theLanguageReportChangedOnDiskReloadIt.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The language report changed on disk. Reload it before saving your edits."
+    },
+    "translator.message.theLocaleChangedOrNoLongerExists.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The locale changed or no longer exists."
+    },
+    "translator.message.theMigrationCandidatesCouldNotBeReloaded.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The migration candidates could not be reloaded."
     },
     "translator.message.theMigrationFileIsNoLongerListed.text": {
       "fallbackLocale": null,
@@ -1042,6 +1429,13 @@
       "status": "machine-generated",
       "text": "Выбранная строка больше не является текущим кандидатом на сканирование в рамках миграции."
     },
+    "translator.message.theSelectedTextIsNoLongerACurrent.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The selected text is no longer a current non catalog candidate."
+    },
     "translator.message.theSourceFileCouldNotBeOpened.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1063,6 +1457,20 @@
       "status": "machine-generated",
       "text": "Не удалось добавить отсканированный файл."
     },
+    "translator.message.unableToAddTheScannedFiles.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unable to add the scanned files."
+    },
+    "translator.message.unableToApplyLocale.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unable to apply locale"
+    },
     "translator.message.unableToApplyTheComponent.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1077,6 +1485,13 @@
       "status": "machine-generated",
       "text": "Не удалось назначить компонент."
     },
+    "translator.message.unableToDeleteLocale.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unable to delete locale"
+    },
     "translator.message.unableToLoadLanguageData.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1090,6 +1505,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Не удалось загрузить кандидатов на миграцию."
+    },
+    "translator.message.unableToLoadTheLanguageReportArtifact.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unable to load the language report artifact."
     },
     "translator.message.unableToOpenMigrationSource.text": {
       "fallbackLocale": null,
@@ -1117,12 +1539,54 @@
       "status": "machine-generated",
       "text": "Не удалось прочитать сборку / язык / отчеты / отчет о миграции .json: {errorMessage}"
     },
+    "translator.message.unableToRefreshCandidateCatalogStatus.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unable to refresh candidate catalog status"
+    },
     "translator.message.unableToRemoveTheFile.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Не удалось удалить файл."
+    },
+    "translator.message.unableToUpdateCandidateStatus.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unable to update candidate status."
+    },
+    "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use a locale identifier such as en, fr CA, or zh Hans."
+    },
+    "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use Save report artifact in the Language Report view before saving canonical language data."
+    },
+    "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use Save to persist the candidate status in language/canonical/components.json."
+    },
+    "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use Save to persist the Component Catalog change."
     },
     "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
       "fallbackLocale": null,
@@ -1145,12 +1609,37 @@
       "status": "machine-generated",
       "text": "Результат проверки"
     },
+    "translator.message.valueIsNotAFile.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "lANGUAGE_REPORT_PATH"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{lANGUAGE_REPORT_PATH} is not a file."
+    },
+    "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "resultRelativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{resultRelativePath} was written directly. A future report build may replace these edits."
+    },
     "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Перед выходом дождитесь завершения сборки."
+    },
+    "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Wait for the language build to finish before saving the report artifact."
     },
     "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
       "fallbackLocale": null,
@@ -1266,6 +1755,20 @@
       "status": "machine-generated",
       "text": "Создание авторитетных языковых файлов"
     },
+    "translator.ui.add1SelectedFile.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Add 1 selected file"
+    },
+    "translator.ui.addCategory.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Add category"
+    },
     "translator.ui.addComponent.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1280,6 +1783,13 @@
       "status": "machine-generated",
       "text": "Добавить файлы."
     },
+    "translator.ui.addLocale.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Add locale"
+    },
     "translator.ui.addRecord.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1287,12 +1797,35 @@
       "status": "machine-generated",
       "text": "Добавить запись"
     },
+    "translator.ui.addRole.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Add role"
+    },
+    "translator.ui.addSelectedFiles.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Add selected files"
+    },
     "translator.ui.addToSourceFiles.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Добавить в исходные файлы"
+    },
+    "translator.ui.addValueSelectedFiles.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "count"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Add {count} selected files"
     },
     "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
       "fallbackLocale": null,
@@ -1302,6 +1835,16 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Добавлено в исходные файлы в компоненте «{componentSelectValue}». По-прежнему необходимо сохранить изменения."
+    },
+    "translator.ui.addedValueFileSUnderComponentValueSave.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "resultAddedFilesCount",
+        "componentSelectValue"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Added {resultAddedFilesCount} file(s) under component {componentSelectValue}. Save is still required."
     },
     "translator.ui.allCandidates.text": {
       "fallbackLocale": null,
@@ -1318,6 +1861,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Все кандидаты: {filePath}"
+    },
+    "translator.ui.allCanonicalLocaleTemplatesAreAlreadyRegistered.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "All canonical locale templates are already registered"
     },
     "translator.ui.allComponentDetails.text": {
       "fallbackLocale": null,
@@ -1339,6 +1889,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Все компоненты, без фильтра по компонентам"
+    },
+    "translator.ui.allStatuses.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "All statuses"
     },
     "translator.ui.allowDeeplCalls.text": {
       "fallbackLocale": null,
@@ -1370,6 +1927,13 @@
       "status": "machine-generated",
       "text": "Анализ контекста источника."
     },
+    "translator.ui.applyChanges.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Apply changes"
+    },
     "translator.ui.applyInMemory.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1397,6 +1961,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Назначить новые файлы"
+    },
+    "translator.ui.assignSelectedFilesTo.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Assign selected files to"
     },
     "translator.ui.assignToComponent.text": {
       "fallbackLocale": null,
@@ -1437,6 +2008,22 @@
       "status": "machine-generated",
       "text": "значок {validationOk}"
     },
+    "translator.ui.buildLanguageCatalogsValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "currentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "build/language/catalogs/{currentId}"
+    },
+    "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Candidate decisions are saved with the migration inventory."
+    },
     "translator.ui.candidateDetails.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1458,12 +2045,33 @@
       "status": "machine-generated",
       "text": "Языковые настройки вывода каталога"
     },
+    "translator.ui.categories.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Categories"
+    },
+    "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Choices mirror language/canonical/language locales.json. Registered locales remain visible but cannot be selected."
+    },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Выберите компонент из официального каталога компонентов .json."
+    },
+    "translator.ui.clear.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Clear"
     },
     "translator.ui.clearEditor.text": {
       "fallbackLocale": null,
@@ -1485,6 +2093,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Компонент"
+    },
+    "translator.ui.componentCatalog.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Component Catalog"
     },
     "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
       "fallbackLocale": null,
@@ -1532,6 +2147,13 @@
       "status": "machine-generated",
       "text": "Ссылка недоступна: {fileError}"
     },
+    "translator.ui.deleteLocale.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete locale"
+    },
     "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1555,12 +2177,33 @@
       "status": "machine-generated",
       "text": "Обнаруженные заполнители: {arrayFromNewSetNamesSort}"
     },
+    "translator.ui.diagnosticMessages.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Diagnostic Messages"
+    },
     "translator.ui.discardAllInMemoryChanges.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Отменить все изменения в памяти?"
+    },
+    "translator.ui.discardUnsavedLanguageReportEditsAndReloadThe.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Discard unsaved Language Report edits and reload the artifact?"
+    },
+    "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Edit a matching record here without leaving All Candidates."
     },
     "translator.ui.editComponent.text": {
       "fallbackLocale": null,
@@ -1592,6 +2235,43 @@
       "status": "machine-generated",
       "text": "Редактировать {componentId}"
     },
+    "translator.ui.editValue.text2": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "currentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Edit {currentId}"
+    },
+    "translator.ui.editingTheCurrentGeneratedReport.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Editing the current generated report."
+    },
+    "translator.ui.existingCategories.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Existing Categories"
+    },
+    "translator.ui.existingRoles.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Existing Roles"
+    },
+    "translator.ui.filterStatus.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Filter status"
+    },
     "translator.ui.filteredToComponentValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1600,6 +2280,45 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Фильтр по компоненту: {selectedComponent}"
+    },
+    "translator.ui.generatedArtifactManualEditsCanBeOverwrittenThe.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated artifact: manual edits can be overwritten the next time the language report is built."
+    },
+    "translator.ui.generatedCatalogValueWillBeDeletedWhenYou.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "currentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated catalog {currentId} will be deleted when you Save."
+    },
+    "translator.ui.generatedCatalogValueWillBePreserved.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "currentId"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated catalog {currentId} will be preserved."
+    },
+    "translator.ui.generatedCatalogsDeleted.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated catalogs deleted"
+    },
+    "translator.ui.generatedCatalogsScheduledForDeletion.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generated catalogs scheduled for deletion"
     },
     "translator.ui.generatedFiles.text": {
       "fallbackLocale": null,
@@ -1636,6 +2355,16 @@
       "status": "machine-generated",
       "text": "В каталоге"
     },
+    "translator.ui.inspectedValueFileSScannedValueAsText.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "scannedFolderInspectedFileCount",
+        "scannedFolderScannedFileCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Inspected {scannedFolderInspectedFileCount} file(s); scanned {scannedFolderScannedFileCount} as text."
+    },
     "translator.ui.invalidValueErrorS.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1652,6 +2381,20 @@
       "status": "machine-generated",
       "text": ").join(', ')}"
     },
+    "translator.ui.languageReport.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Language Report"
+    },
+    "translator.ui.leftToRightLtr.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Left to right (ltr)"
+    },
     "translator.ui.lineValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1660,6 +2403,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Строка {candidateLine}"
+    },
+    "translator.ui.loadingLanguageReportArtifact.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Loading language report artifact."
     },
     "translator.ui.loadingPotentialFoundCoverage.text": {
       "fallbackLocale": null,
@@ -1675,12 +2425,26 @@
       "status": "machine-generated",
       "text": "Загрузка языковых данных проекта."
     },
+    "translator.ui.locales.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Locales"
+    },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Обслуживает языковые ресурсы /, канонические ресурсы /, компоненты .json → перечень миграций .scanFiles"
+    },
+    "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Maintains language/locales/locales.json. Deleting a locale preserves authored source files and keeps generated catalog data by default."
     },
     "translator.ui.maintainsValue.text": {
       "fallbackLocale": null,
@@ -1728,6 +2492,13 @@
       "status": "machine-generated",
       "text": "Записи в реестре миграции"
     },
+    "translator.ui.nextLine.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Next (line)"
+    },
     "translator.ui.no.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1756,12 +2527,26 @@
       "status": "machine-generated",
       "text": "Файл не выбран."
     },
+    "translator.ui.noFilesContainingCandidateStringsWereFoundIn.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "No files containing candidate strings were found in this folder."
+    },
     "translator.ui.noFilesMatchTheCurrentFilter.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ни один файл не соответствует текущему фильтру."
+    },
+    "translator.ui.noFolderSelected.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "No folder selected."
     },
     "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
       "fallbackLocale": null,
@@ -1776,6 +2561,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Файлы-источники для миграции не указаны."
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "No next candidate matches the current status filter."
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "No previous candidate matches the current status filter."
     },
     "translator.ui.noRecordsMatchTheCurrentFilters.text": {
       "fallbackLocale": null,
@@ -1818,6 +2617,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Не подтверждено"
+    },
+    "translator.ui.notes.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Notes"
     },
     "translator.ui.openComponentCatalog.text": {
       "fallbackLocale": null,
@@ -1889,12 +2695,61 @@
       "status": "machine-generated",
       "text": "Подготовка к сохранению с включенными вызовами API Deep L"
     },
+    "translator.ui.previousLine.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Previous (line)"
+    },
+    "translator.ui.recommendedCategories.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Recommended Categories"
+    },
+    "translator.ui.recommendedRoles.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Recommended Roles"
+    },
     "translator.ui.recoveryFilesRetained.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Сохранены файлы восстановления"
+    },
+    "translator.ui.recursivelyInspectARepositoryFolderThenAddSelected.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Recursively inspect a repository folder, then add selected candidate bearing files in one operation."
+    },
+    "translator.ui.refreshingCatalogMatches.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Refreshing catalog matches."
+    },
+    "translator.ui.reject.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Reject"
+    },
+    "translator.ui.reloadReportFromDisk.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Reload report from disk"
     },
     "translator.ui.remove.text": {
       "fallbackLocale": null,
@@ -1919,6 +2774,43 @@
       "status": "machine-generated",
       "text": "Инструмент для обслуживания репозитория"
     },
+    "translator.ui.requiredLocale.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Required locale"
+    },
+    "translator.ui.resizeCandidateListAndCandidateEditor.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Resize candidate list and candidate editor"
+    },
+    "translator.ui.resizeLocaleListAndLocaleEditor.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Resize locale list and locale editor"
+    },
+    "translator.ui.resizeValueListAndEditor.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "definitionTitle"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Resize {definitionTitle} list and editor"
+    },
+    "translator.ui.resizeWorkspaceAndOperationResults.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Resize workspace and operation results"
+    },
     "translator.ui.restore.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1933,6 +2825,13 @@
       "status": "machine-generated",
       "text": "Восстановление последнего загруженного черновика и его проверка"
     },
+    "translator.ui.retry.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Retry"
+    },
     "translator.ui.revertingLanguageData.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1940,12 +2839,33 @@
       "status": "machine-generated",
       "text": "Восстановление языковых данных"
     },
+    "translator.ui.rightToLeftRtl.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Right to left (rtl)"
+    },
+    "translator.ui.roles.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Roles"
+    },
     "translator.ui.runtime.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Время выполнения"
+    },
+    "translator.ui.saveReportArtifact.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Save report artifact"
     },
     "translator.ui.scanFailedValue.text": {
       "fallbackLocale": null,
@@ -1963,6 +2883,13 @@
       "status": "machine-generated",
       "text": "Отсканировать файл."
     },
+    "translator.ui.scanFolder.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Scan folder."
+    },
     "translator.ui.scanSourceFile.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1979,6 +2906,22 @@
       "status": "machine-generated",
       "text": "Исходный файл для сканирования: {scannedFilePath}"
     },
+    "translator.ui.scanSourceFolder.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Scan source folder"
+    },
+    "translator.ui.scanSourceFolderValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "scannedFolderPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Scan source folder: {scannedFolderPath}"
+    },
     "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1994,6 +2937,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Выполняется сканирование выбранного файла."
+    },
+    "translator.ui.scanningSelectedFolder.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Scanning selected folder."
     },
     "translator.ui.scope.text": {
       "fallbackLocale": null,
@@ -2016,6 +2966,13 @@
       "status": "machine-generated",
       "text": "Поиск и фильтрация"
     },
+    "translator.ui.selectACategory.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "(select a category)"
+    },
     "translator.ui.selectAComponent.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2030,12 +2987,40 @@
       "status": "machine-generated",
       "text": "Выберите файл, чтобы отобразить все строки, отобранные функцией «Извлечь возможные варианты строк»."
     },
+    "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select a folder to find files containing candidate strings."
+    },
+    "translator.ui.selectALocaleOrAddANewOne.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select a locale or add a new one."
+    },
+    "translator.ui.selectALocaleTemplate.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select a locale template"
+    },
     "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Выберите кандидата, о котором поступило сообщение, чтобы проверить его статус."
+    },
+    "translator.ui.selectARole.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "(select a role)"
     },
     "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
       "fallbackLocale": null,
@@ -2044,12 +3029,26 @@
       "status": "machine-generated",
       "text": "Перед добавлением записи выберите конкретный компонент."
     },
+    "translator.ui.selectAllNew.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select all new"
+    },
     "translator.ui.selectFile.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Выберите файл."
+    },
+    "translator.ui.selectFolder.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select folder."
     },
     "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
       "fallbackLocale": null,
@@ -2066,6 +3065,22 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Выбрано: {scannedFilePath}"
+    },
+    "translator.ui.selectedValue.text2": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "scannedFolderPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Selected: {scannedFolderPath}"
+    },
+    "translator.ui.semanticKeywords.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Semantic Keywords"
     },
     "translator.ui.setPreviewDefault.text": {
       "fallbackLocale": null,
@@ -2088,12 +3103,65 @@
       "status": "machine-generated",
       "text": "Отображение записей из всех компонентов"
     },
+    "translator.ui.skippedValueFileOrFolderPathS.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "skipped"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Skipped {skipped} file or folder path(s)."
+    },
+    "translator.ui.status.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Status"
+    },
     "translator.ui.statusInCatalog.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Статус: В каталоге"
+    },
+    "translator.ui.stoppedAtTheValueFileSafetyLimit.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "scannedFolderLimitsMaximumFiles"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Stopped at the {scannedFolderLimitsMaximumFiles} file safety limit."
+    },
+    "translator.ui.textDirection.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Text direction"
+    },
+    "translator.ui.theInventoryIsUnchangedUntilSelectedFilesAre.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The inventory is unchanged until selected files are added."
+    },
+    "translator.ui.theReportDoesNotExistYetSavingWill.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The report does not exist yet. Saving will create it."
+    },
+    "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "This locale is required by the language builder."
     },
     "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
       "fallbackLocale": null,
@@ -2166,6 +3234,57 @@
       "status": "machine-generated",
       "text": "Валидация пройдена с {validationWarningsCount} предупреждением(-ями)."
     },
+    "translator.ui.valueCandidateBearingFileSValuePotentialCandidate.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "scannedFolderCandidateFileCount",
+        "scannedFolderCandidateCount",
+        "scannedFolderCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{scannedFolderCandidateFileCount} candidate bearing file(s), {scannedFolderCandidateCount} potential candidate(s), {scannedFolderCatalogedStringCount} found in catalog"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "scannedFileCandidateCount",
+        "scannedFileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{scannedFileCandidateCount} non catalog candidate(s), {scannedFileCatalogedStringCount} found in catalog"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text2": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "fileCandidateCount",
+        "fileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{fileCandidateCount} non catalog candidate(s), {fileCatalogedStringCount} found in catalog"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text3": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "candidateRowsLengthCatalogedCount",
+        "catalogedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{candidateRowsLengthCatalogedCount} non catalog candidate(s), {catalogedCount} found in catalog"
+    },
+    "translator.ui.valueNonCatalogValueFoundInCatalog.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "fileCandidateCount",
+        "fileCatalogedStringCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{fileCandidateCount} non catalog {fileCatalogedStringCount} found in catalog"
+    },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -2196,6 +3315,17 @@
       "status": "machine-generated",
       "text": "{fileCandidateCount} в каталоге обнаружен потенциальный продукт {fileCatalogedStringCount}"
     },
+    "translator.ui.valuePotentialValueInCatalogValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "fileCandidateCount",
+        "fileCatalogedStringCount",
+        "inventoryText"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{fileCandidateCount} potential {fileCatalogedStringCount} in catalog{inventoryText}"
+    },
     "translator.ui.valueRecordS.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -2213,6 +3343,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "{filesCount} исходный(е) файл(ы)"
+    },
+    "translator.ui.view.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "View"
     },
     "translator.ui.viewCandidates.text": {
       "fallbackLocale": null,

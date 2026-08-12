@@ -1108,7 +1108,8 @@ async function activate(context) {
             const editor = vscode.window.activeTextEditor;
             const sourceUri = uri || (editor && editor.document.uri);
             if (!sourceUri) {
-                vscode.window.showWarningMessage('No MyDefrag document is active.');
+                const tMessage = catalog.format("extension.message.noActiveDocument.warning").text;
+                vscode.window.showWarningMessage(tMessage);
                 return;
             }
             const mergedPath = sourceUri.fsPath.replace(/(\.\w+)$/, '.merged$1');

@@ -201,12 +201,327 @@
     "candidateStatuses": [
       {
         "path": "package.json",
+        "text": "./snippets/mydfrg.code-snippets",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "./src/extension.js",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "./src/language-configuration.json",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "./syntaxes/mydfrg.tmLanguage.json",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": ".myd",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": ".MyD",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": ".MYD",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": ".mydc",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": ".MyDc",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": ".MYDC",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": ".user",
         "status": "rejected"
       },
       {
         "path": "package.json",
+        "text": ".user/logs",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "@vscode/vsce",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/.git/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/.user/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/.vs/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/.vscode/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/*.log",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/*.tmp.MyDc",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/Archive/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/artifacts/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/Backup/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/Bu/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/Compile*",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/dist/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/Download/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/GithubIo/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/Log/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/Logs/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/MdmSysTools/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/node_modules/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/resources/",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/TaylorDoVs0_2/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/TaylorDoVs0_3/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "**/TaylorDoVs0_4/**",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(arrow-circle-up)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(arrow-down)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(arrow-left)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(arrow-right)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(arrow-up)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(clear-all)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(close)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(debug-step-over)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(discard)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(eye-closed)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(filter)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(list-flat)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(list-tree)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(pass-filled)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(refresh)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(send)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "$(thumbsup-filled)",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "activationEvents",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "addVsCodiumToExplorer:local",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "ajv",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "aliases",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "array",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "boolean",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "brace-expansion@>=2.0.0 <2.1.4",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "build",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": "categories",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "clean",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "command",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "commandPalette",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "commands",
         "status": "rejected"
       },
       {
@@ -226,7 +541,22 @@
       },
       {
         "path": "package.json",
+        "text": "dependencies",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "deploy:local",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": "description",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "devDependencies",
         "status": "rejected"
       },
       {
@@ -236,7 +566,92 @@
       },
       {
         "path": "package.json",
+        "text": "editor/title",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "editor/title/context",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "electron",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "electron ./build/mdl-language-app/main/main.js --project-root .",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "electron ./build/mdl-locale-app/main/main.js --project-root .",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "electron-builder",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "electron-builder --config build/mdl-language-app/electron-builder.yml --win dir",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "electron-builder --config build/mdl-language-app/electron-builder.yml --win nsis",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "electron-builder --config build/mdl-locale-app/electron-builder.yml --win dir",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "electron-builder --config build/mdl-locale-app/electron-builder.yml --win nsis",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "enablement",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "enableNetwwork:local",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": "engines",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "enum",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "Error",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "explorer",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "extensions",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "fast-uri@>=3.0.0 <3.1.5",
         "status": "rejected"
       },
       {
@@ -246,7 +661,317 @@
       },
       {
         "path": "package.json",
+        "text": "grammars",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "group",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "Hint",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "icon",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "id",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "Information",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "items",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "jsonc-parser",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "language",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "language:app",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "language:app:pack",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "language:app:package",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "language:build",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "language:catalogs:apps",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "language:report",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "language:validate",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "languages",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "links",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "listSymLinks:local",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "liveUpdate:local",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "locale:app",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "locale:app:pack",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "locale:app:package",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "main",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "maximum",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mdm.openFileAtPosition",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "menus",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "minimum",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "MyDefrag Diagnostics",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "MyDefrag: Mark as Valid Syntax",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "MyDefrag: Previous File",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.configureFolders",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.debugOn",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.clearFilter",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.closeView",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.filter",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.fixedItem",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.ignoreItem",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.next",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.nextFile",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.prevFile",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.previous",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.refresh",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.reset",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.sendIt",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.showTable",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.showTree",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.skipItem",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.top",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.diagnostics.validSyntax",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.exclude",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.fragmentParentLevel",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.logDir",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.openPreview",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.openSettings",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.referenceContainsMacros",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.referenceFileFoundLevel",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.referenceFileNotFoundLevel",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.referenceRelativePathLevel",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": "mydfrg.userDir",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrg.verboseLevel",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydfrgDiagnostics",
         "status": "rejected"
       },
       {
@@ -256,7 +981,252 @@
       },
       {
         "path": "package.json",
+        "text": "navigation",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@1",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@10",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@11",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@12",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@13",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@14",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@15",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@16",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@2",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@3",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@4",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@5",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@6",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@7",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@8",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "navigation@9",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "node --test \\\"./build/mdl-language-app/tests/*.test.js\\\"",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "node --test \\\"./build/mdl-locale-app/tests/*.test.js\\\"",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "node ./build/scripts/build-language.js build",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "node ./build/scripts/build-language.js report",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "node ./build/scripts/build-language.js validate",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "node ./build/scripts/generate-electron-component-catalogs.js --write",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "node ./build/scripts/test-language-report.js",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "node ./build/scripts/test-language-runtime.js",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "None",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "npm run build",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "number",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "onCommand:mdm.openFileAtPosition",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "onCommand:mydfrg.configureFolders",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "onCommand:mydfrg.openPreview",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "onCommand:mydfrg.openSettings",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "onLanguage:bat",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "onLanguage:mydfrg",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "onStartupFinished",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "onView:mydfrgDiagnostics",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "overrides",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "pack:vsix",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "path",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "powershell -ExecutionPolicy Bypass -File ./scripts/add-VsCodium-ToExplorer.ps1",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1 -SkipInstall",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "powershell -ExecutionPolicy Bypass -File ./scripts/update-live-MyDefrag.ps1",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "prepare",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": "properties",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "publish:vsx",
         "status": "rejected"
       },
       {
@@ -271,12 +1241,77 @@
       },
       {
         "path": "package.json",
+        "text": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "resources/icons/logo.svg",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "rimraf",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "rimraf dist out .vscodeignore",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "scopeName",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "scripts",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "snippets",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "source.mydfrg",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": "string",
         "status": "rejected"
       },
       {
         "path": "package.json",
+        "text": "test:language",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "test:language-app",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "test:language-report",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "test:locale-app",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": "title",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "true",
         "status": "rejected"
       },
       {
@@ -296,12 +1331,162 @@
       },
       {
         "path": "package.json",
+        "text": "view == mydfrgDiagnostics",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "view == mydfrgDiagnostics && mydfrgDiagnostics.filterActive",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "view == mydfrgDiagnostics && mydfrgDiagnostics.viewMode == table",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "view == mydfrgDiagnostics && mydfrgDiagnostics.viewMode == tree",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "view/title",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "views",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "vsce",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": "vscode",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "vscode-languageclient",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "vscode-languageserver",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "vscode-languageserver-textdocument",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "Warning",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "when",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "active",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "D:\\",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "debugOn",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "exclude",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "Extension",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "files",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "fragmentParentLevel",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "initialize",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "initialized",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "mydfrg",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "No MyDefrag document is active.",
+        "status": "code-updated"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "referenceContainsMacros",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "referenceFileFoundLevel",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "referenceFileNotFoundLevel",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "referenceRelativePathLevel",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "search",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "textDocument/didOpen",
         "status": "rejected"
       },
       {
         "path": "src/extension.js",
         "text": "use strict",
+        "status": "rejected"
+      },
+      {
+        "path": "src/extension.js",
+        "text": "verboseLevel",
         "status": "rejected"
       }
     ]

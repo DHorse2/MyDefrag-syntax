@@ -45,6 +45,23 @@ test('atomic transaction commit retains source and removes backups', (t) => {
     assert.deepEqual(fs.readdirSync(path.dirname(filePath)), ['example.json']);
 });
 
+test('atomic transaction rejects stale expected source without changing the file', (t) => {
+    const rootDir = tempRoot(t);
+    const relativePath = 'src/example.js';
+    const filePath = path.join(rootDir, relativePath);
+    fs.mkdirSync(path.dirname(filePath), { recursive: true });
+    fs.writeFileSync(filePath, 'const value = "current";\n');
+    const repository = new CanonicalDataRepository(rootDir);
+
+    assert.throws(() => repository.beginTransaction([{
+        relativePath,
+        content: 'const value = "replacement";\n',
+        expectedContent: 'const value = "stale";\n'
+    }]), (error) => error.code === 'SOURCE_CHANGED');
+    assert.equal(fs.readFileSync(filePath, 'utf8'), 'const value = "current";\n');
+    assert.deepEqual(fs.readdirSync(path.dirname(filePath)), ['example.js']);
+});
+
 test('repository converts selected files to safe project-relative paths', (t) => {
     const rootDir = tempRoot(t);
     const filePath = path.join(rootDir, 'src', 'nested', 'source.js');

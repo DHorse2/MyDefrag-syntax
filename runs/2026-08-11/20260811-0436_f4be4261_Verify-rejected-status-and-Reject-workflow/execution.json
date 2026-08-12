@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "f4be4261",
+  "startedAt": "2026-08-11T11:36:47.364Z",
+  "finishedAt": "2026-08-11T11:59:02.732Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "Verify rejected status and Reject workflow"
+  ],
+  "promptPaths": [
+    "direct-user-request"
+  ],
+  "outputs": [
+    "runs/2026-08-11/20260811-0436_f4be4261_Verify-rejected-status-and-Reject-workflow/execution-record.md"
+  ],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

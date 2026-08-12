@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "83bdbb21",
+  "startedAt": "2026-08-12T03:37:21.646Z",
+  "finishedAt": "2026-08-12T03:41:17.355Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "\\ Diagnose intermittent post-idle language app startup stall\\"
+  ],
+  "promptPaths": [
+    "\\ad-hoc:user-follow-up\\\\"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

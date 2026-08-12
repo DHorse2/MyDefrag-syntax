@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "ce8fd417",
+  "startedAt": "2026-08-12T04:12:14.252Z",
+  "finishedAt": "2026-08-12T04:17:07.333Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "\\ Add Chromium and port-exhaustion Notice\\"
+  ],
+  "promptPaths": [
+    "ad-hoc:user-notice-request"
+  ],
+  "outputs": [
+    "docs/language-app-startup-port-exhaustion-notice.md"
+  ],
+  "artifacts": [
+    "docs/language-app-startup-port-exhaustion-notice.md"
+  ],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

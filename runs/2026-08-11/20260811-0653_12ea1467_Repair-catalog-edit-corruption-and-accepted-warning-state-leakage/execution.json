@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "12ea1467",
+  "startedAt": "2026-08-11T13:53:12.646Z",
+  "finishedAt": "2026-08-11T14:15:12.322Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "Repair catalog edit corruption and accepted-warning state leakage"
+  ],
+  "promptPaths": [
+    "direct-user-request"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

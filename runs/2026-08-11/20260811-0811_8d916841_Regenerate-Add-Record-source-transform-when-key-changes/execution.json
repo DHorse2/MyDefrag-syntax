@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "8d916841",
+  "startedAt": "2026-08-11T15:11:14.360Z",
+  "finishedAt": "2026-08-11T15:17:03.443Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "Regenerate Add Record source transform when key changes"
+  ],
+  "promptPaths": [
+    "direct:user"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

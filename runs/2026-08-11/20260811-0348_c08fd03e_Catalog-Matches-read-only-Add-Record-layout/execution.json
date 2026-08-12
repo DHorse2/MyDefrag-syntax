@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "c08fd03e",
+  "startedAt": "2026-08-11T10:48:54.774Z",
+  "finishedAt": "2026-08-11T10:57:09.006Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "Catalog Matches read-only Add Record layout"
+  ],
+  "promptPaths": [
+    "direct-user-request"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

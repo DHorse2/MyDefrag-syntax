@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "51f71ea8",
+  "startedAt": "2026-08-12T06:47:29.026Z",
+  "finishedAt": null,
+  "status": "running",
+  "executionRecordMode": "Detailed",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "MyDefrag-syntax"
+  ],
+  "tasks": [
+    "Align GitHub main with local code"
+  ],
+  "promptPaths": [
+    "conversation:user-request"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

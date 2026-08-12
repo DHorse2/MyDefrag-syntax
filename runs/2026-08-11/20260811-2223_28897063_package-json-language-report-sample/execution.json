@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "28897063",
+  "startedAt": "2026-08-12T05:23:40.691Z",
+  "finishedAt": "2026-08-12T05:45:08.272Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "MyDefrag-syntax"
+  ],
+  "tasks": [
+    "package-json-language-report-sample"
+  ],
+  "promptPaths": [
+    "ad-hoc-user-request"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

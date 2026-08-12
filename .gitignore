@@ -1,7 +1,6 @@
 # Repository-local AI and tooling state
 /.agents/
-/.AI/Computers/
-/.AI/Prompts/currentTask-*.md
+/.AI/
 /.cline/
 /.clinerules/
 /.codex/
@@ -51,12 +50,8 @@ pnpm-debug.log*
 *.local
 
 # Temporary files and caches
-/.AI/
 /.cache/
-/.codex/
-/.obsidian/
-/.ollama/
-/artifacts/
+/.tmp/
 /temp/
 /tmp/
 *.bak

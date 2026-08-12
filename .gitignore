@@ -51,8 +51,12 @@ pnpm-debug.log*
 *.local
 
 # Temporary files and caches
+/.AI/
 /.cache/
-/.tmp/
+/.codex/
+/.obsidian/
+/.ollama/
+/artifacts/
 /temp/
 /tmp/
 *.bak

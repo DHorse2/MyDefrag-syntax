@@ -1,11 +1,17 @@
 # Repository-local AI and tooling state
 /.agents/
+/.AI/Computers/
+/.AI/Prompts/currentTask-*.md
 /.cline/
 /.clinerules/
 /.codex/
 /.obsidian/
 /.ollama/
 /.user/
+/.dependency-backup/
+
+# Local comparison output
+/dircmd.md
 
 # Dependencies
 /node_modules/
@@ -22,6 +28,14 @@
 /.nyc_output/
 *.vsix
 *.tgz
+
+# Run-record runtime profiles and packaged validation output
+/runs/**/electron-profile/
+/runs/**/electron-profile-*/
+/runs/**/electron-user-data/
+/runs/**/electron-user-data-*/
+/runs/**/validation/packaged-app/
+/runs/**/validation/udp-capture/
 
 # Logs and diagnostic output
 *.log

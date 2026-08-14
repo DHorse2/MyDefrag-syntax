@@ -25,8 +25,15 @@ class ThemeIcon {
     }
 }
 
+class MarkdownString {
+    constructor(value) {
+        this.value = value;
+    }
+}
+
 const vscodeMock = {
     EventEmitter,
+    MarkdownString,
     ThemeIcon,
     TreeItem,
     TreeItemCollapsibleState: {
@@ -105,4 +112,20 @@ test('table mode is flat and filter matches file, message, token, and severity',
     provider.setFilter('two.MyDc missing');
     assert.equal(provider.getChildren().length, 1);
     assert.equal(provider.getChildren()[0].label, 'Missing value');
+});
+
+test('diagnostic hover displays Help and exposes a trusted open-Help command', () => {
+    const navigator = createNavigator();
+    navigator.extensionRoot = require('node:path').resolve(__dirname, '..', '..');
+    navigator.visibleDiagnostics[0].helpDocuments = [{
+        text: 'description',
+        path: 'Settings/Description.md'
+    }];
+    const provider = new DiagnosticTreeProvider(navigator);
+    const tooltip = provider.getChildren(provider.getChildren()[0])[0].tooltip;
+
+    assert.ok(tooltip instanceof MarkdownString);
+    assert.match(tooltip.value, /Settings \\- Description/);
+    assert.match(tooltip.value, /command:mydfrg\.openHelp/);
+    assert.deepEqual(tooltip.isTrusted, { enabledCommands: ['mydfrg.openHelp'] });
 });

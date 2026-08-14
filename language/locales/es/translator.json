@@ -1,0 +1,1758 @@
+{
+  "locale": "es",
+  "component": "translator",
+  "entries": {
+    "translator.accessibility.allowDeeplCallsDuringSaveAndRebuild.label": {
+      "text": "Permitir llamadas «Deep L» durante el proceso de guardado y reconstrucción",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.applicationNavigation.label": {
+      "text": "Navegación por la aplicación",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.buildCommandOutput.label": {
+      "text": "Salida del comando «construir»",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.closeOperationResult.label": {
+      "text": "Resultado de la operación de cierre",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.closeValue.label": {
+      "text": "Cerrar {windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentAssignedToValue.label": {
+      "text": "Componente asignado a {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentDescription.label": {
+      "text": "Descripción del componente",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForAddedMigrationFiles.label": {
+      "text": "Componente para añadir archivos de migración",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForScannedMigrationFile.label": {
+      "text": "Componente para el archivo de migración escaneado",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentIdentifier.label": {
+      "text": "Identificador del componente",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.defaultPreviewMode.label": {
+      "text": "Modo de vista previa predeterminado",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterMigrationSourceFiles.label": {
+      "text": "Filtrar archivos de origen de la migración",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.maximizeValue.label": {
+      "text": "Aprovecha al máximo {windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.migrationCandidatesForValue.label": {
+      "text": "Candidatos a la migración a {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.minimizeValue.label": {
+      "text": "Minimizar {windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.normalizedText.label": {
+      "text": "Texto normalizado",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.openValueAtLineValue.label": {
+      "text": "Abre el archivo «{filePath}» en la línea «{candidateLine}»",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.operationInProgress.label": {
+      "text": "Operación en curso",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.removeValue.label": {
+      "text": "Eliminar «{filePath}»",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.runtimeComponent.label": {
+      "text": "Componente de tiempo de ejecución",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.selectedComponent.label": {
+      "text": "Componente seleccionado",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.showComponentsHome.label": {
+      "text": "Mostrar la página de inicio de «Componentes»",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.suggestedKey.label": {
+      "text": "Clave sugerida",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.viewMigrationCandidatesForValue.label": {
+      "text": "Ver candidatos a la migración para {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.windowControls.label": {
+      "text": "Controles de la ventana",
+      "status": "machine-generated"
+    },
+    "translator.action.exit.label": {
+      "text": "Salir",
+      "status": "machine-generated"
+    },
+    "translator.action.previewModes.label": {
+      "text": "Modos de vista previa",
+      "status": "machine-generated"
+    },
+    "translator.action.rebuild.label": {
+      "text": "Reconstruir",
+      "status": "machine-generated"
+    },
+    "translator.action.reloadData.label": {
+      "text": "Actualizar datos",
+      "status": "machine-generated"
+    },
+    "translator.action.revert.label": {
+      "text": "Deshacer",
+      "status": "machine-generated"
+    },
+    "translator.action.save.label": {
+      "text": "Guardar",
+      "status": "machine-generated"
+    },
+    "translator.action.stopBuild.label": {
+      "text": "Detener la compilación",
+      "status": "machine-generated"
+    },
+    "translator.action.validate.label": {
+      "text": "Validar",
+      "status": "machine-generated"
+    },
+    "translator.dialog.addFiles.text": {
+      "text": "Añadir archivos",
+      "status": "machine-generated"
+    },
+    "translator.dialog.addMigrationSourceFiles.title": {
+      "text": "Añadir archivos de origen de la migración",
+      "status": "machine-generated"
+    },
+    "translator.dialog.cancel.text": {
+      "text": "Cancelar",
+      "status": "machine-generated"
+    },
+    "translator.dialog.close.title": {
+      "text": "Cerrar",
+      "status": "machine-generated"
+    },
+    "translator.dialog.componentCatalogAddRecord.title": {
+      "text": "Catálogo de componentes: Añadir registro",
+      "status": "machine-generated"
+    },
+    "translator.dialog.confirmAuthoritativeChanges.title": {
+      "text": "Confirmar los cambios definitivos",
+      "status": "machine-generated"
+    },
+    "translator.dialog.discardAndReload.text": {
+      "text": "Deshacer y volver a cargar",
+      "status": "machine-generated"
+    },
+    "translator.dialog.discardUnsavedChanges.title": {
+      "text": "¿Deseas descartar los cambios no guardados?",
+      "status": "machine-generated"
+    },
+    "translator.dialog.draftReverted.title": {
+      "text": "Borrador revertido",
+      "status": "machine-generated"
+    },
+    "translator.dialog.exitWithoutSaving.text": {
+      "text": "Salir sin guardar",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageBuildIsRunning.title": {
+      "text": "Se está ejecutando la compilación del lenguaje",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageRebuildFailed.title": {
+      "text": "Error al reconstruir el idioma",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageRebuildSucceeded.title": {
+      "text": "La reconstrucción del idioma se ha realizado correctamente",
+      "status": "machine-generated"
+    },
+    "translator.dialog.maximize.title": {
+      "text": "Maximizar",
+      "status": "machine-generated"
+    },
+    "translator.dialog.minimize.title": {
+      "text": "Minimizar",
+      "status": "machine-generated"
+    },
+    "translator.dialog.mydefragLanguageMaintenance.text": {
+      "text": "Mantenimiento del idioma de My Defragmenter",
+      "status": "machine-generated"
+    },
+    "translator.dialog.nothingToSave.title": {
+      "text": "No hay nada que guardar",
+      "status": "machine-generated"
+    },
+    "translator.dialog.returnToBuild.text": {
+      "text": "Volver a la compilación",
+      "status": "machine-generated"
+    },
+    "translator.dialog.revertFailed.title": {
+      "text": "La reversión ha fallado",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveAndBuildSucceeded.title": {
+      "text": "Se ha guardado y creado correctamente",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveAndRebuild.text": {
+      "text": "Guardar y volver a crear",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveBlocked.title": {
+      "text": "Guardar bloqueado",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "El guardado ha fallado y se ha revertido",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanFile.text": {
+      "text": "Escanear archivo",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanMigrationSourceFile.title": {
+      "text": "Escanear el archivo de origen de la migración",
+      "status": "machine-generated"
+    },
+    "translator.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "Selecciona el repositorio de sintaxis «My Defragmenter»",
+      "status": "machine-generated"
+    },
+    "translator.dialog.startingMydefragLanguageMaintenance.title": {
+      "text": "Inicio del mantenimiento del lenguaje de mi desfragmentador",
+      "status": "machine-generated"
+    },
+    "translator.dialog.unsavedLanguageChanges.title": {
+      "text": "Cambios de idioma no guardados",
+      "status": "machine-generated"
+    },
+    "translator.dialog.valueFailed.title": {
+      "text": "{title} falló",
+      "status": "machine-generated"
+    },
+    "translator.directive.language.text": {
+      "text": "; @mydfrg idioma {locale}",
+      "status": "machine-generated"
+    },
+    "translator.heading.languageMaintenance.text": {
+      "text": "Preservación de la lengua",
+      "status": "machine-generated"
+    },
+    "translator.heading.languageOperation.text": {
+      "text": "Funcionamiento del lenguaje",
+      "status": "machine-generated"
+    },
+    "translator.heading.operationResult.text": {
+      "text": "Resultado de la operación",
+      "status": "machine-generated"
+    },
+    "translator.input.filterSourceFilePaths.placeholder": {
+      "text": "Filtrar rutas de los archivos de origen",
+      "status": "machine-generated"
+    },
+    "translator.input.searchAllFields.placeholder": {
+      "text": "Buscar en todos los campos",
+      "status": "machine-generated"
+    },
+    "translator.input.searchComponentIdOrDescription.placeholder": {
+      "text": "Buscar por ID o descripción del componente",
+      "status": "machine-generated"
+    },
+    "translator.input.searchComponents.placeholder": {
+      "text": "Buscar componentes",
+      "status": "machine-generated"
+    },
+    "translator.input.searchValue.placeholder": {
+      "text": "Buscar en {definitionTitle}",
+      "status": "machine-generated"
+    },
+    "translator.message.aLanguageBuildIsAlreadyRunning.text": {
+      "text": "Ya se está ejecutando una compilación del lenguaje.",
+      "status": "machine-generated"
+    },
+    "translator.message.aLineAwareVscodiumOrVsCodeInstallation.text": {
+      "text": "No se ha encontrado una instalación de VS Codium o VS Code compatible con la función de línea de código; el archivo fuente se ha abierto con su aplicación predeterminada.",
+      "status": "machine-generated"
+    },
+    "translator.message.applicationFailedToStart.text": {
+      "text": "No se ha podido iniciar la aplicación",
+      "status": "machine-generated"
+    },
+    "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
+      "text": "No se ha seleccionado un repositorio de sintaxis válido de «Mi Desfragmentador».",
+      "status": "machine-generated"
+    },
+    "translator.message.buildCancelledByUser.text": {
+      "text": "El usuario ha cancelado la compilación.",
+      "status": "machine-generated"
+    },
+    "translator.message.buildProcessDidNotReportTerminationAfterCancellation.text": {
+      "text": "El proceso de compilación no notificó su finalización tras la cancelación.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordAddedToInMemoryDraft.text": {
+      "text": "Se ha añadido un registro de catálogo al borrador en memoria",
+      "status": "machine-generated"
+    },
+    "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
+      "text": "Elige el repositorio al que pertenecen el idioma / (canónico) y el idioma / (compilado).",
+      "status": "machine-generated"
+    },
+    "translator.message.componentAddedInMemory.text": {
+      "text": "Componente añadido en memoria",
+      "status": "machine-generated"
+    },
+    "translator.message.componentAssignmentIsStaleRebuildRequired.text": {
+      "text": "La asignación de componentes está desactualizada; es necesario volver a compilar.",
+      "status": "machine-generated"
+    },
+    "translator.message.componentChangeRejected.text": {
+      "text": "Se ha rechazado el cambio de componente",
+      "status": "machine-generated"
+    },
+    "translator.message.componentUpdatedInMemory.text": {
+      "text": "Componente actualizado en memoria",
+      "status": "machine-generated"
+    },
+    "translator.message.deeplApiCallsAreEnabledForThisRebuild.text": {
+      "text": "Las llamadas a la API de Deep L están habilitadas para esta reconstrucción",
+      "status": "machine-generated"
+    },
+    "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
+      "text": "Deep L está desactivado; se utiliza inglés normalizado",
+      "status": "machine-generated"
+    },
+    "translator.message.draftUpdated.text": {
+      "text": "Borrador actualizado",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateComponentIdValue.text": {
+      "text": "ID de componente duplicado: {componentId}",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateValueValue.text": {
+      "text": "Duplicado de «{definitionIdentityKey}»: {identity}",
+      "status": "machine-generated"
+    },
+    "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
+      "text": "No se pueden cambiar los nombres de los identificadores de componentes existentes.",
+      "status": "machine-generated"
+    },
+    "translator.message.exitAndDiscardAllInMemoryChanges.text": {
+      "text": "¿Salir y descartar todos los cambios realizados en la memoria?",
+      "status": "machine-generated"
+    },
+    "translator.message.forcingTheLanguageBuildProcessToStop.text": {
+      "text": "Forzar la interrupción del proceso de compilación del lenguaje",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidComponentRequest.text": {
+      "text": "Solicitud de componente no válida.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidFileSelection.text": {
+      "text": "Selección de archivo no válida.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidRecordRequest.text": {
+      "text": "Solicitud de registro no válida.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCancelled.text": {
+      "text": "Compilación de idioma cancelada",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCommandCompleted.text": {
+      "text": "Se ha completado el comando de compilación del lenguaje",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCommandFailed.text": {
+      "text": "Error en el comando de compilación del lenguaje",
+      "status": "machine-generated"
+    },
+    "translator.message.languageDataReloaded.text": {
+      "text": "Datos lingüísticos actualizados",
+      "status": "machine-generated"
+    },
+    "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "No se han cargado los datos sobre la conservación de la lengua.",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationAssignmentRejected.text": {
+      "text": "Solicitud de migración rechazada",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationCandidatesAreUnavailableBecauseTheReportStatus.text": {
+      "text": "Los candidatos a la migración no están disponibles porque el estado del informe es «{reportFileStatus}».",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationCandidatesUnavailable.text": {
+      "text": "No hay candidatos para la migración disponibles",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationComponentAssignmentUpdated.text": {
+      "text": "Se ha actualizado la asignación de componentes de migración",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileAdded.text": {
+      "text": "Se ha añadido el archivo de migración",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileAlreadyListed.text": {
+      "text": "El archivo de migración ya aparece en la lista",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRejected.text": {
+      "text": "Archivo de migración rechazado",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRemovalFailed.text": {
+      "text": "No se ha podido eliminar el archivo de migración",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRemoved.text": {
+      "text": "Se ha eliminado el archivo de migración",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesAdded.text": {
+      "text": "Se han añadido archivos de migración",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesRejected.text": {
+      "text": "Archivos de migración rechazados",
+      "status": "machine-generated"
+    },
+    "translator.message.noApplicableSchemaIsAvailableForValue.text": {
+      "text": "No hay ningún esquema aplicable disponible para {viewName}.",
+      "status": "machine-generated"
+    },
+    "translator.message.noLanguageBuildIsRunning.text": {
+      "text": "No hay ninguna compilación de lenguaje en ejecución.",
+      "status": "machine-generated"
+    },
+    "translator.message.noNewFilesAdded.text": {
+      "text": "No se han añadido archivos nuevos",
+      "status": "machine-generated"
+    },
+    "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
+      "text": "No es un repositorio de idiomas de My Defragmenter. Falta: {missing}",
+      "status": "machine-generated"
+    },
+    "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
+      "text": "No aparece en el informe de migración; es necesario volver a compilarlo.",
+      "status": "machine-generated"
+    },
+    "translator.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "La ruta sale de la raíz del repositorio: {relativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.recordRejected.text": {
+      "text": "Registro rechazado",
+      "status": "machine-generated"
+    },
+    "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
+      "text": "Al recargar la página, se perderán todos los cambios de idioma guardados en la memoria.",
+      "status": "machine-generated"
+    },
+    "translator.message.runningLanguageBuildCommand.text": {
+      "text": "Ejecución del comando de compilación del lenguaje",
+      "status": "machine-generated"
+    },
+    "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
+      "text": "Guarda o revierte los cambios realizados en la memoria antes de volver a compilar.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectAValidComponent.text": {
+      "text": "Selecciona un componente válido.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectAValidComponentBeforeAddingFiles.text": {
+      "text": "Selecciona un componente válido antes de añadir archivos.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
+      "text": "El archivo seleccionado se encuentra fuera de la raíz del repositorio: {absolutePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedPathIsNotAFileValue.text": {
+      "text": "La ruta seleccionada no es un archivo: {absolutePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceFileOpened.text": {
+      "text": "Se ha abierto el archivo de origen",
+      "status": "machine-generated"
+    },
+    "translator.message.theComponentChangedOrNoLongerExists.text": {
+      "text": "El componente ha cambiado o ya no existe.",
+      "status": "machine-generated"
+    },
+    "translator.message.theConfiguredLanguageBuilderDoesNotExposeExtractstringcandidates.text": {
+      "text": "El generador de idiomas configurado no muestra los candidatos de cadena extraídos.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
+      "text": "No se ha podido detener el proceso de compilación del lenguaje.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationFileIsNoLongerListed.text": {
+      "text": "El archivo de migración ya no aparece en la lista.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportComponentAssignmentIsStaleRebuild.text": {
+      "text": "La asignación del componente del informe de migración está desactualizada. Vuelve a generar los archivos de salida de los idiomas.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportDoesNotContainThisFile.text": {
+      "text": "El informe de migración no incluye este archivo. Vuelve a generar los archivos de idioma.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportDoesNotIncludeCatalogFound.text": {
+      "text": "El informe de migración no incluye las cadenas encontradas en el catálogo. Vuelve a generar los archivos de idioma.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportIsMissingFullCandidateSource.text": {
+      "text": "En el informe de migración faltan líneas completas del código fuente candidato. Vuelve a generar los resultados de traducción.",
+      "status": "machine-generated"
+    },
+    "translator.message.theRecordChangedOrNoLongerExists.text": {
+      "text": "El registro ha cambiado o ya no existe.",
+      "status": "machine-generated"
+    },
+    "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
+      "text": "El puente de precarga restringida no está disponible.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineIsNotACurrentMigration.text": {
+      "text": "La línea seleccionada no es una candidata actual para la migración.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineIsNotACurrentReported.text": {
+      "text": "La línea seleccionada no es una cadena de migración registrada actualmente.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringIsNoLongerACurrent.text": {
+      "text": "La cadena seleccionada ya no es una candidata a migración que se esté analizando actualmente.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileCouldNotBeOpened.text": {
+      "text": "No se ha podido abrir el archivo de origen.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddFiles.text": {
+      "text": "No se pueden añadir archivos.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddTheScannedFile.text": {
+      "text": "No se ha podido añadir el archivo escaneado.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToApplyTheComponent.text": {
+      "text": "No se ha podido aplicar el componente.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAssignTheComponent.text": {
+      "text": "No se ha podido asignar el componente.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadLanguageData.text": {
+      "text": "No se han podido cargar los datos de idioma.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadMigrationCandidates.text": {
+      "text": "No se han podido cargar los candidatos a la migración.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToOpenMigrationSource.text": {
+      "text": "No se puede abrir la fuente de migración",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToOpenValueValue.text": {
+      "text": "No se puede abrir {targetRelativePath}: {error}",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
+      "text": "No se puede leer la compilación /, el informe de idioma /, el informe de migración / y el informe de migración .json: {errorMessage}",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToRemoveTheFile.text": {
+      "text": "No se ha podido eliminar el archivo.",
+      "status": "machine-generated"
+    },
+    "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
+      "text": "Validación de los cambios de idioma; las llamadas a la API de Deep L están habilitadas",
+      "status": "machine-generated"
+    },
+    "translator.message.validatingLanguageChangesDeeplIsDisabled.text": {
+      "text": "Validación de los cambios de idioma; Deep L está desactivado",
+      "status": "machine-generated"
+    },
+    "translator.message.validationResult.text": {
+      "text": "Resultado de la validación",
+      "status": "machine-generated"
+    },
+    "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "Espera a que termine la compilación antes de salir.",
+      "status": "machine-generated"
+    },
+    "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
+      "text": "A la espera de que finalice el proceso de compilación del lenguaje",
+      "status": "machine-generated"
+    },
+    "translator.message.writeValueAuthoritativeFileS.text": {
+      "text": "¿Escribir en uno o varios archivos de autorid{normalizedCount}?",
+      "status": "machine-generated"
+    },
+    "translator.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "Captura de los archivos generados para la reversión",
+      "status": "machine-generated"
+    },
+    "translator.progress.checkingGeneratedFileChanges.status": {
+      "text": "Comprobación de los cambios en los archivos generados",
+      "status": "machine-generated"
+    },
+    "translator.progress.committingLanguageChanges.status": {
+      "text": "Aplicar cambios en el idioma",
+      "status": "machine-generated"
+    },
+    "translator.progress.rebuildingLanguageOutputs.status": {
+      "text": "Reconstrucción de las expresiones lingüísticas",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "Restauración de archivos de referencia y generados",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringFilesAfterAnError.status": {
+      "text": "Recuperación de archivos tras un error",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringGeneratedFiles.status": {
+      "text": "Restauración de archivos generados",
+      "status": "machine-generated"
+    },
+    "translator.progress.savingLanguageData.status": {
+      "text": "Guardar datos lingüísticos",
+      "status": "machine-generated"
+    },
+    "translator.progress.startingSaveAndRebuild.status": {
+      "text": "Inicio de la copia de seguridad y la reconstrucción",
+      "status": "machine-generated"
+    },
+    "translator.progress.stoppingLanguageBuild.status": {
+      "text": "Detener la compilación del lenguaje",
+      "status": "machine-generated"
+    },
+    "translator.progress.unableToStartLanguageBuild.status": {
+      "text": "No se ha podido iniciar la compilación del idioma",
+      "status": "machine-generated"
+    },
+    "translator.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "Utiliza la opción «Detener compilación» en la ventana de progreso y, a continuación, espera a que finalice la reversión antes de cerrar la aplicación.",
+      "status": "machine-generated"
+    },
+    "translator.progress.waitingForSaveConfirmation.status": {
+      "text": "A la espera de la confirmación del guardado",
+      "status": "machine-generated"
+    },
+    "translator.progress.writingAuthoritativeLanguageFiles.status": {
+      "text": "Creación de archivos de idioma oficiales",
+      "status": "machine-generated"
+    },
+    "translator.ui.addComponent.text": {
+      "text": "Añadir componente",
+      "status": "machine-generated"
+    },
+    "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
+      "text": "Se ha añadido a los archivos fuente en el componente «{componentSelectValue}». Aún es necesario guardar los cambios.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addFiles.text": {
+      "text": "Añadir archivos.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addRecord.text": {
+      "text": "Añadir registro",
+      "status": "machine-generated"
+    },
+    "translator.ui.addToSourceFiles.text": {
+      "text": "Añadir a los archivos fuente",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCandidates.text": {
+      "text": "Todos los candidatos",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCandidatesValue.text": {
+      "text": "Todos los candidatos: {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponentDetails.text": {
+      "text": "Detalles de todos los componentes",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponents.text": {
+      "text": "Todos los componentes",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponentsNoComponentFilter.text": {
+      "text": "Todos los componentes | Sin filtro de componentes",
+      "status": "machine-generated"
+    },
+    "translator.ui.allowDeeplCalls.text": {
+      "text": "Permitir llamadas «Deep L»",
+      "status": "machine-generated"
+    },
+    "translator.ui.alreadyInSourceFiles.text": {
+      "text": "Ya están en los archivos fuente",
+      "status": "machine-generated"
+    },
+    "translator.ui.alreadyListedUnderComponentValue.text": {
+      "text": "Ya figura en la lista de componentes {scannedFileInventoryComponent}.",
+      "status": "machine-generated"
+    },
+    "translator.ui.analyzingSourceContext.text": {
+      "text": "Analizando el contexto de origen.",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyInMemory.text": {
+      "text": "Aplicar en memoria",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyNormalizedText.text": {
+      "text": "Aplicar texto normalizado",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyToInMemoryDraft.text": {
+      "text": "Aplicar al borrador en memoria",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignNewFilesTo.text": {
+      "text": "Asignar nuevos archivos a",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignToComponent.text": {
+      "text": "Asignar a un componente",
+      "status": "machine-generated"
+    },
+    "translator.ui.authoritativeFiles.text": {
+      "text": "Archivos de referencia",
+      "status": "machine-generated"
+    },
+    "translator.ui.availableComponents.text": {
+      "text": "Componentes disponibles",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text": {
+      "text": "insignia {stateDirty}",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text2": {
+      "text": "insignia {validationOk}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateDetails.text": {
+      "text": "Datos del candidato",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogMatches.text": {
+      "text": "Resultados del catálogo",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogOutputLocales.text": {
+      "text": "Configuraciones regionales de salida del catálogo",
+      "status": "machine-generated"
+    },
+    "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
+      "text": "Elige un componente del inventario oficial de componentes .json.",
+      "status": "machine-generated"
+    },
+    "translator.ui.clearEditor.text": {
+      "text": "Borrar el editor",
+      "status": "machine-generated"
+    },
+    "translator.ui.closeCandidates.text": {
+      "text": "Candidatos más cercanos",
+      "status": "machine-generated"
+    },
+    "translator.ui.component.text": {
+      "text": "Componente",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
+      "text": "En «Catálogo de componentes» y «Mensajes de diagnóstico» se mostrarán los registros de todos los componentes.",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentDetails.text": {
+      "text": "Detalles del componente",
+      "status": "machine-generated"
+    },
+    "translator.ui.components.text": {
+      "text": "Componentes",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentSelection.text": {
+      "text": "Selección de componentes",
+      "status": "machine-generated"
+    },
+    "translator.ui.coverageUnavailableValue.text": {
+      "text": "No hay cobertura disponible: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.coverageUnavailableValue.text2": {
+      "text": "No hay cobertura disponible: {fileError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
+      "text": "Derivado del mensaje del catálogo canónico seleccionado.",
+      "status": "machine-generated"
+    },
+    "translator.ui.description.text": {
+      "text": "Descripción",
+      "status": "machine-generated"
+    },
+    "translator.ui.detectedPlaceholdersValue.text": {
+      "text": "Marcadores de posición detectados: {arrayFromNewSetNamesSort}",
+      "status": "machine-generated"
+    },
+    "translator.ui.discardAllInMemoryChanges.text": {
+      "text": "¿Desea descartar todos los cambios realizados en la memoria?",
+      "status": "machine-generated"
+    },
+    "translator.ui.editComponent.text": {
+      "text": "Editar componente",
+      "status": "machine-generated"
+    },
+    "translator.ui.editRecord.text": {
+      "text": "Editar registro",
+      "status": "machine-generated"
+    },
+    "translator.ui.editValue.text": {
+      "text": "Editar {componentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.filteredToComponentValue.text": {
+      "text": "Filtrado por componente: {selectedComponent}",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedFiles.text": {
+      "text": "Archivos generados",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedFilesChanged.text": {
+      "text": "Se han modificado los archivos generados",
+      "status": "machine-generated"
+    },
+    "translator.ui.hideLeftPanel.text": {
+      "text": "Ocultar el panel de la izquierda",
+      "status": "machine-generated"
+    },
+    "translator.ui.identifier.text": {
+      "text": "Identificador",
+      "status": "machine-generated"
+    },
+    "translator.ui.invalidValueErrorS.text": {
+      "text": "No válido (error(es) de {validationErrorsCount})",
+      "status": "machine-generated"
+    },
+    "translator.ui.join.text": {
+      "text": ").join(', ')}",
+      "status": "machine-generated"
+    },
+    "translator.ui.lineValue.text": {
+      "text": "Línea{candidateLine}",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingPotentialFoundCoverage.text": {
+      "text": "Se ha encontrado cobertura para el «/» de Carga de Potencial.",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingProjectLanguageData.text": {
+      "text": "Cargando los datos de idioma del proyecto.",
+      "status": "machine-generated"
+    },
+    "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
+      "text": "Mantiene los componentes de idioma /, canónicos /, .json → Inventario de migraciones .scanFiles",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationCoverageUnavailable.text": {
+      "text": "No hay información disponible sobre la migración",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationCoverageValue.text": {
+      "text": "cobertura sobre migración {fileCatalogedStringCount}",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventory.text": {
+      "text": "Inventario de migraciones",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventory.text2": {
+      "text": "Inventario de migraciones",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventoryEntries.text": {
+      "text": "Entradas del inventario de migración",
+      "status": "machine-generated"
+    },
+    "translator.ui.no.text": {
+      "text": "No",
+      "status": "machine-generated"
+    },
+    "translator.ui.noCandidateStringsWereFoundInThisFile.text": {
+      "text": "No se han encontrado cadenas candidatas en este archivo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noComponentMatchesTheSearch.text": {
+      "text": "No se ha encontrado ningún componente que coincida con la búsqueda.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFileSelected.text": {
+      "text": "No se ha seleccionado ningún archivo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFilesMatchTheCurrentFilter.text": {
+      "text": "No hay ningún archivo que se ajuste al filtro actual.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
+      "text": "No se han detectado candidatos a la migración en este archivo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noMigrationSourceFilesAreListed.text": {
+      "text": "No aparece ningún archivo de origen de migración en la lista.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noRecordsMatchTheCurrentFilters.text": {
+      "text": "No hay registros que se ajusten a los filtros actuales.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noScanResultsAreAvailable.text": {
+      "text": "No hay resultados de escaneo disponibles.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noStableSourceConstructWasFound.text": {
+      "text": "No se ha encontrado ninguna construcción de origen estable.",
+      "status": "machine-generated"
+    },
+    "translator.ui.notSet.text": {
+      "text": "(sin definir)",
+      "status": "machine-generated"
+    },
+    "translator.ui.notValidated.text": {
+      "text": "No validado",
+      "status": "machine-generated"
+    },
+    "translator.ui.noUnsavedChanges.text": {
+      "text": "No hay cambios sin guardar",
+      "status": "machine-generated"
+    },
+    "translator.ui.openSource.text": {
+      "text": "Código abierto",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
+      "text": "Preparación de una reconstrucción normalizada con Deep L desactivado",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingNormalizedSaveWithDeeplDisabled.text": {
+      "text": "Preparación de un guardado normalizado con Deep L desactivado",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text": {
+      "text": "Preparación de la reconstrucción con las llamadas a la API de Deep L habilitadas",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
+      "text": "Preparación del guardado con las llamadas a la API de Deep L activadas",
+      "status": "machine-generated"
+    },
+    "translator.ui.recoveryFilesRetained.text": {
+      "text": "Archivos de recuperación conservados",
+      "status": "machine-generated"
+    },
+    "translator.ui.remove.text": {
+      "text": "Eliminar",
+      "status": "machine-generated"
+    },
+    "translator.ui.removeValueFromTheMigrationInventory.text": {
+      "text": "¿Se debe eliminar «{filePath}» del inventario de migración?",
+      "status": "machine-generated"
+    },
+    "translator.ui.repositoryMaintenanceTool.text": {
+      "text": "Herramienta de mantenimiento del repositorio",
+      "status": "machine-generated"
+    },
+    "translator.ui.restore.text": {
+      "text": "Restaurar",
+      "status": "machine-generated"
+    },
+    "translator.ui.restoringTheLastLoadedDraftAndValidatingIt.text": {
+      "text": "Recuperar el último borrador cargado y validarlo",
+      "status": "machine-generated"
+    },
+    "translator.ui.revertingLanguageData.text": {
+      "text": "Revertido de los datos lingüísticos",
+      "status": "machine-generated"
+    },
+    "translator.ui.runtime.text": {
+      "text": "Duración",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFailedValue.text": {
+      "text": "Error al escanear: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFile.text": {
+      "text": "Escanear el archivo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
+      "text": "Se han analizado una o varias cadenas de candidatos de «{scannedFileExtractedCount}» sin modificar el inventario.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanningSelectedFile.text": {
+      "text": "Se está escaneando el archivo seleccionado.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFile.text": {
+      "text": "Escanear el archivo original",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFileValue.text": {
+      "text": "Archivo original escaneado: {scannedFilePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scope.text": {
+      "text": "Ámbito de aplicación",
+      "status": "machine-generated"
+    },
+    "translator.ui.search.text": {
+      "text": "Buscar",
+      "status": "machine-generated"
+    },
+    "translator.ui.searchAndFilter.text": {
+      "text": "Buscar y filtrar",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAComponent.text": {
+      "text": "(selecciona un componente)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
+      "text": "Selecciona un archivo para mostrar todas las cadenas aceptadas por la función «Extraer candidatos de cadena».",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
+      "text": "Selecciona un candidato denunciado para consultar su estado.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
+      "text": "Selecciona un componente concreto antes de añadir un registro.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectedValue.text": {
+      "text": "Seleccionado: {scannedFilePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectFile.text": {
+      "text": "Selecciona un archivo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
+      "text": "Selecciona un archivo del repositorio para examinarlo sin añadirlo al inventario de fuentes.",
+      "status": "machine-generated"
+    },
+    "translator.ui.setPreviewDefault.text": {
+      "text": "Establecer vista previa por defecto",
+      "status": "machine-generated"
+    },
+    "translator.ui.showingRecordsFromAllComponents.text": {
+      "text": "Se muestran los registros de todos los componentes",
+      "status": "machine-generated"
+    },
+    "translator.ui.showLeftPanel.text": {
+      "text": "Mostrar el panel izquierdo",
+      "status": "machine-generated"
+    },
+    "translator.ui.statusInCatalog.text": {
+      "text": "Estado: En catálogo",
+      "status": "machine-generated"
+    },
+    "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
+      "text": "Vista previa orientada a la traducción mediante sustituciones de palabras canónicas.",
+      "status": "machine-generated"
+    },
+    "translator.ui.uncheckedBuildsUseNormalizedEnglishAndDoNot.title": {
+      "text": "Las compilaciones sin comprobar utilizan inglés normalizado y no hacen referencia a Deep L.",
+      "status": "machine-generated"
+    },
+    "translator.ui.unsavedChanges.text": {
+      "text": "Cambios sin guardar",
+      "status": "machine-generated"
+    },
+    "translator.ui.unsavedChangesRemainInMemoryContinueToAnother.text": {
+      "text": "Los cambios no guardados permanecen en la memoria. ¿Quieres pasar a otra vista?",
+      "status": "machine-generated"
+    },
+    "translator.ui.useSuggestedKey.text": {
+      "text": "Utiliza la clave sugerida",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationFailedWithValueErrorS.text": {
+      "text": "La validación ha fallado debido a un error o errores de «{validationErrorsCount}».",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationListValue.text": {
+      "text": "Lista de validación {kind}",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationPassedWithValueWarningS.text": {
+      "text": "La validación se ha superado con {validationWarningsCount} advertencia(s).",
+      "status": "machine-generated"
+    },
+    "translator.ui.validValueWarningS.text": {
+      "text": "Válido (advertencia(s) de {validationWarningsCount})",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueRecordS.text": {
+      "text": "{recordsCount} registro(s)",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueSourceFileS.text": {
+      "text": "{filesCount} archivo(s) de origen",
+      "status": "machine-generated"
+    },
+    "translator.ui.viewHeadingDataViewToolbar.text": {
+      "text": "Ver datos de encabezado Ver barra de herramientas",
+      "status": "machine-generated"
+    },
+    "translator.ui.yes.text": {
+      "text": "Sí",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.candidateStatus.label": {
+      "text": "Condición de candidato",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForScannedMigrationFiles.label": {
+      "text": "Componente para archivos de migración escaneados",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.editCatalogRecordValue.label": {
+      "text": "Editar ficha del catálogo {entryKey}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByStatus.label": {
+      "text": "Filtrar candidatos por estado",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.languageReportArtifactText.label": {
+      "text": "Texto del informe lingüístico",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.localeTemplate.label": {
+      "text": "Plantilla de configuración regional",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.selectValue.label": {
+      "text": "Selecciona «{filePath}»",
+      "status": "machine-generated"
+    },
+    "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
+      "text": "Los archivos creados en las configuraciones de idioma / siempre se conservan.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.componentCatalogEditRecord.title": {
+      "text": "Catálogo de componentes: Editar registro",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteCatalogOnSave.text": {
+      "text": "Eliminar el catálogo al guardar",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteGeneratedCatalogDataValue.text": {
+      "text": "Eliminar los datos del catálogo generados: {catalogRemovals}",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteLocaleValue.title": {
+      "text": "¿Eliminar la configuración regional «{id}»?",
+      "status": "machine-generated"
+    },
+    "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
+      "text": "Se conservarán los catálogos de configuración regional generados.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.keepCatalogRecommended.text": {
+      "text": "Conservar el catálogo (recomendado)",
+      "status": "machine-generated"
+    },
+    "translator.dialog.noAuthoritativeFilesWillChange.text": {
+      "text": "No se modificará ningún archivo de referencia.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveTheReportArtifactSeparately.title": {
+      "text": "Guarda el artefacto del informe por separado",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanFolder.text": {
+      "text": "Escanear carpeta",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanMigrationSourceFolder.title": {
+      "text": "Analizar la carpeta de origen de la migración",
+      "status": "machine-generated"
+    },
+    "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
+      "text": "Los datos generados de «construir» /, «idioma» /, «catálogos» / y «{id}» se conservarán de forma predeterminada.",
+      "status": "machine-generated"
+    },
+    "translator.message.aScannedSourcePathIsNotANormalized.text": {
+      "text": "Una ruta de origen escaneada no es una ruta de archivo relativa normalizada del repositorio.",
+      "status": "machine-generated"
+    },
+    "translator.message.candidateStatusRejected.text": {
+      "text": "Se ha denegado la condición de candidato",
+      "status": "machine-generated"
+    },
+    "translator.message.candidateStatusUpdatedInMemory.text": {
+      "text": "Estado del candidato actualizado en memoria",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordIsNoLongerAvailable.text": {
+      "text": "El registro del catálogo ya no está disponible",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordUpdatedInMemory.text": {
+      "text": "Registro del catálogo actualizado en memoria",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateLocaleIdValue.text": {
+      "text": "ID de configuración regional duplicado: {localeId}",
+      "status": "machine-generated"
+    },
+    "translator.message.existingLocaleIdentifiersCannotBeRenamed.text": {
+      "text": "No es posible cambiar el nombre de los identificadores de configuración regional existentes.",
+      "status": "machine-generated"
+    },
+    "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
+      "text": "El catálogo de configuraciones regionales generado no es un directorio: {relativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleIdentifierForCatalogRemovalValue.text": {
+      "text": "Identificador de configuración regional no válido para la eliminación del catálogo: {localeId}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleRequest.text": {
+      "text": "Solicitud de configuración regional no válida.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleStatusValue.text": {
+      "text": "Estado de configuración regional no válido: {localeStatus}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidScannedFileSelection.text": {
+      "text": "Selección de archivo escaneado no válida.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportArtifactSaved.text": {
+      "text": "Se ha guardado el informe de idioma",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportArtifactWasNotSaved.text": {
+      "text": "No se ha guardado el artefacto del informe de idioma",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportTextExceedsThe5000000.text": {
+      "text": "El texto del informe lingüístico supera el límite de seguridad de 5 000 000 de caracteres.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportTextMustBeAString.text": {
+      "text": "El texto del informe de idioma debe ser una cadena de caracteres.",
+      "status": "machine-generated"
+    },
+    "translator.message.localeAdded.text": {
+      "text": "Se ha añadido una configuración regional",
+      "status": "machine-generated"
+    },
+    "translator.message.localeDeletedFromRegistry.text": {
+      "text": "Configuración regional eliminada del registro",
+      "status": "machine-generated"
+    },
+    "translator.message.localeDirectionMustBeLtrOrRtl.text": {
+      "text": "La dirección de la configuración regional debe ser «ltr» o «rtl».",
+      "status": "machine-generated"
+    },
+    "translator.message.localeUpdated.text": {
+      "text": "Se ha actualizado la configuración regional",
+      "status": "machine-generated"
+    },
+    "translator.message.localeValueNoLongerExists.text": {
+      "text": "La configuración regional «{id}» ya no existe.",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesAlreadyListed.text": {
+      "text": "Archivos de migración ya incluidos en la lista",
+      "status": "machine-generated"
+    },
+    "translator.message.removeValueFromTheLocaleRegistry.text": {
+      "text": "¿Se debe eliminar «{id}» del registro de configuración regional?",
+      "status": "machine-generated"
+    },
+    "translator.message.requiredLocaleValueCannotBeDeleted.text": {
+      "text": "No se puede eliminar la configuración regional requerida «{id}».",
+      "status": "machine-generated"
+    },
+    "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
+      "text": "Guarda o descarta los cambios realizados en el informe lingüístico antes de guardar los datos lingüísticos canónicos.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedFolderIsOutsideTheRepositoryRootValue.text": {
+      "text": "La carpeta seleccionada se encuentra fuera de la raíz del repositorio: {folderPath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedPathIsNotAFolderValue.text": {
+      "text": "La ruta seleccionada no es una carpeta: {folderPath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectPotentialCandidateRejectedOrReview.text": {
+      "text": "Selecciona «Candidato potencial», «Rechazado» o «Revisar».",
+      "status": "machine-generated"
+    },
+    "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
+      "text": "El registro del catálogo {recordKey} ha cambiado o ya no existe.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLanguageReportChangedOnDiskReloadIt.text": {
+      "text": "El informe de idiomas ha cambiado en el disco. Vuelve a cargarlo antes de guardar los cambios.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLocaleChangedOrNoLongerExists.text": {
+      "text": "La ubicación ha cambiado o ya no existe.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationCandidatesCouldNotBeReloaded.text": {
+      "text": "No se han podido volver a cargar los candidatos a la migración.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedTextIsNoLongerACurrent.text": {
+      "text": "El texto seleccionado ya no es un candidato a ser excluido del catálogo.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddTheScannedFiles.text": {
+      "text": "No se han podido añadir los archivos escaneados.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToApplyLocale.text": {
+      "text": "No se puede aplicar la configuración regional",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToDeleteLocale.text": {
+      "text": "No se puede eliminar la configuración regional",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadTheLanguageReportArtifact.text": {
+      "text": "No se ha podido cargar el artefacto del informe de idiomas.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToRefreshCandidateCatalogStatus.text": {
+      "text": "No se ha podido actualizar el estado del catálogo de candidatos",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToUpdateCandidateStatus.text": {
+      "text": "No se ha podido actualizar el estado del candidato.",
+      "status": "machine-generated"
+    },
+    "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
+      "text": "Utiliza un identificador de configuración regional como «en», «fr CA» o «zh Hans».",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
+      "text": "Utiliza la opción «Guardar artefacto de informe» en la vista «Informe de idiomas» antes de guardar los datos de idiomas canónicos.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
+      "text": "Utiliza «Guardar» para conservar el estado de candidato en los componentes de idioma /, canónicos / y .json.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
+      "text": "Utiliza «Guardar» para aplicar los cambios en el catálogo de componentes.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueIsNotAFile.text": {
+      "text": "{lANGUAGE_REPORT_PATH} no es un archivo.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
+      "text": "{resultRelativePath} Se ha redactado directamente. Es posible que una futura versión del informe sustituya estas modificaciones.",
+      "status": "machine-generated"
+    },
+    "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
+      "text": "Espera a que finalice la compilación del lenguaje antes de guardar el artefacto del informe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.add1SelectedFile.text": {
+      "text": "Añadir 1 archivo seleccionado",
+      "status": "machine-generated"
+    },
+    "translator.ui.addCategory.text": {
+      "text": "Añadir categoría",
+      "status": "machine-generated"
+    },
+    "translator.ui.addedValueFileSUnderComponentValueSave.text": {
+      "text": "Se han añadido uno o varios archivos «{resultAddedFilesCount}» en el componente «{componentSelectValue}». Aún es necesario guardarlos.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addLocale.text": {
+      "text": "Añadir configuración regional",
+      "status": "machine-generated"
+    },
+    "translator.ui.addRole.text": {
+      "text": "Añadir función",
+      "status": "machine-generated"
+    },
+    "translator.ui.addSelectedFiles.text": {
+      "text": "Añadir los archivos seleccionados",
+      "status": "machine-generated"
+    },
+    "translator.ui.addValueSelectedFiles.text": {
+      "text": "Añadir los archivos seleccionados c{count}",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCanonicalLocaleTemplatesAreAlreadyRegistered.text": {
+      "text": "Todas las plantillas de configuración regional canónicas ya están registradas",
+      "status": "machine-generated"
+    },
+    "translator.ui.allStatuses.text": {
+      "text": "Todos los estados",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyChanges.text": {
+      "text": "Aplicar los cambios",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignSelectedFilesTo.text": {
+      "text": "Asignar los archivos seleccionados a",
+      "status": "machine-generated"
+    },
+    "translator.ui.buildLanguageCatalogsValue.text": {
+      "text": "construir / idioma / catálogos / {currentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
+      "text": "Las decisiones sobre los candidatos se guardan junto con el inventario de migración.",
+      "status": "machine-generated"
+    },
+    "translator.ui.categories.text": {
+      "text": "Categorías",
+      "status": "machine-generated"
+    },
+    "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
+      "text": "Las opciones reflejan el idioma /, la configuración canónica / y las configuraciones regionales de idioma .json. Las configuraciones regionales registradas siguen siendo visibles, pero no se pueden seleccionar.",
+      "status": "machine-generated"
+    },
+    "translator.ui.clear.text": {
+      "text": "Borrar",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentCatalog.text": {
+      "text": "Catálogo de componentes",
+      "status": "machine-generated"
+    },
+    "translator.ui.deleteLocale.text": {
+      "text": "Eliminar configuración regional",
+      "status": "machine-generated"
+    },
+    "translator.ui.diagnosticMessages.text": {
+      "text": "Mensajes de diagnóstico",
+      "status": "machine-generated"
+    },
+    "translator.ui.discardUnsavedLanguageReportEditsAndReloadThe.text": {
+      "text": "¿Desea descartar los cambios no guardados en el informe de idiomas y volver a cargar el artefacto?",
+      "status": "machine-generated"
+    },
+    "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
+      "text": "Edita aquí un registro que coincida sin salir de «Todos los candidatos».",
+      "status": "machine-generated"
+    },
+    "translator.ui.editingTheCurrentGeneratedReport.text": {
+      "text": "Editar el informe generado actualmente.",
+      "status": "machine-generated"
+    },
+    "translator.ui.editValue.text2": {
+      "text": "Editar {currentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingCategories.text": {
+      "text": "Categorías existentes",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingRoles.text": {
+      "text": "Puestos actuales",
+      "status": "machine-generated"
+    },
+    "translator.ui.filterStatus.text": {
+      "text": "Estado del filtro",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedArtifactManualEditsCanBeOverwrittenThe.text": {
+      "text": "Artefacto generado: las modificaciones manuales pueden sobrescribirse la próxima vez que se genere el informe de idiomas.",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogsDeleted.text": {
+      "text": "Se han eliminado los catálogos generados",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogsScheduledForDeletion.text": {
+      "text": "Catálogos generados cuya eliminación está programada",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogValueWillBeDeletedWhenYou.text": {
+      "text": "El catálogo generado «{currentId}» se eliminará al guardar.",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogValueWillBePreserved.text": {
+      "text": "Se conservará el catálogo generado «{currentId}».",
+      "status": "machine-generated"
+    },
+    "translator.ui.inspectedValueFileSScannedValueAsText.text": {
+      "text": "Se han inspeccionado los archivos «{scannedFolderInspectedFileCount}»; se ha escaneado «{scannedFolderScannedFileCount}» como texto.",
+      "status": "machine-generated"
+    },
+    "translator.ui.languageReport.text": {
+      "text": "Informe lingüístico",
+      "status": "machine-generated"
+    },
+    "translator.ui.leftToRightLtr.text": {
+      "text": "De izquierda a derecha (izq.-dcha.)",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingLanguageReportArtifact.text": {
+      "text": "Cargando el artefacto del informe de idiomas.",
+      "status": "machine-generated"
+    },
+    "translator.ui.locales.text": {
+      "text": "Localizaciones",
+      "status": "machine-generated"
+    },
+    "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
+      "text": "Mantiene las configuraciones de idioma /, las configuraciones regionales / y las configuraciones regionales .json. Al eliminar una configuración regional, se conservan los archivos fuente creados y, de forma predeterminada, se mantienen los datos del catálogo generados.",
+      "status": "machine-generated"
+    },
+    "translator.ui.nextLine.text": {
+      "text": "Siguiente (línea)",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFilesContainingCandidateStringsWereFoundIn.text": {
+      "text": "No se han encontrado archivos que contengan cadenas candidatas en esta carpeta.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFolderSelected.text": {
+      "text": "No se ha seleccionado ninguna carpeta.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
+      "text": "No hay ningún candidato que cumpla con el filtro de estado actual.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
+      "text": "Ningún candidato anterior cumple los criterios del filtro de estado actual.",
+      "status": "machine-generated"
+    },
+    "translator.ui.notes.text": {
+      "text": "Notas",
+      "status": "machine-generated"
+    },
+    "translator.ui.previousLine.text": {
+      "text": "Anterior (línea)",
+      "status": "machine-generated"
+    },
+    "translator.ui.recommendedCategories.text": {
+      "text": "Categorías recomendadas",
+      "status": "machine-generated"
+    },
+    "translator.ui.recommendedRoles.text": {
+      "text": "Puestos recomendados",
+      "status": "machine-generated"
+    },
+    "translator.ui.recursivelyInspectARepositoryFolderThenAddSelected.text": {
+      "text": "Inspecciona de forma recursiva una carpeta del repositorio y, a continuación, añade los archivos candidatos seleccionados en una sola operación.",
+      "status": "machine-generated"
+    },
+    "translator.ui.refreshingCatalogMatches.text": {
+      "text": "Actualización de las coincidencias del catálogo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.reject.text": {
+      "text": "Rechazar",
+      "status": "machine-generated"
+    },
+    "translator.ui.reloadReportFromDisk.text": {
+      "text": "Volver a cargar el informe desde el disco",
+      "status": "machine-generated"
+    },
+    "translator.ui.requiredLocale.text": {
+      "text": "Configuración regional obligatoria",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeCandidateListAndCandidateEditor.text": {
+      "text": "Ajustar el tamaño de la lista de candidatos y del editor de candidatos",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeLocaleListAndLocaleEditor.text": {
+      "text": "Ajustar el tamaño de la lista de configuraciones regionales y del editor de configuraciones regionales",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeValueListAndEditor.text": {
+      "text": "Ajustar el tamaño de la lista y el editor de «{definitionTitle}»",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeWorkspaceAndOperationResults.text": {
+      "text": "Ajustar el tamaño del espacio de trabajo y los resultados de las operaciones",
+      "status": "machine-generated"
+    },
+    "translator.ui.retry.text": {
+      "text": "Volver a intentarlo",
+      "status": "machine-generated"
+    },
+    "translator.ui.rightToLeftRtl.text": {
+      "text": "De derecha a izquierda (rtl)",
+      "status": "machine-generated"
+    },
+    "translator.ui.roles.text": {
+      "text": "Funciones",
+      "status": "machine-generated"
+    },
+    "translator.ui.saveReportArtifact.text": {
+      "text": "Guardar el artefacto del informe",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFolder.text": {
+      "text": "Escanear carpeta.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanningSelectedFolder.text": {
+      "text": "Se está analizando la carpeta seleccionada.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFolder.text": {
+      "text": "Escanear la carpeta de origen",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFolderValue.text": {
+      "text": "Carpeta de origen de la exploración: {scannedFolderPath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectACategory.text": {
+      "text": "(selecciona una categoría)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
+      "text": "Selecciona una carpeta para buscar archivos que contengan las cadenas candidatas.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAllNew.text": {
+      "text": "Seleccionar todas las novedades",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectALocaleOrAddANewOne.text": {
+      "text": "Selecciona una configuración regional o añade una nueva.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectALocaleTemplate.text": {
+      "text": "Selecciona una plantilla de configuración regional",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectARole.text": {
+      "text": "(selecciona un rol)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectedValue.text2": {
+      "text": "Seleccionado: {scannedFolderPath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectFolder.text": {
+      "text": "Selecciona una carpeta.",
+      "status": "machine-generated"
+    },
+    "translator.ui.semanticKeywords.text": {
+      "text": "Palabras clave semánticas",
+      "status": "machine-generated"
+    },
+    "translator.ui.skippedValueFileOrFolderPathS.text": {
+      "text": "Se han omitido una o varias rutas de archivos o carpetas de «{skipped}».",
+      "status": "machine-generated"
+    },
+    "translator.ui.status.text": {
+      "text": "Estado",
+      "status": "machine-generated"
+    },
+    "translator.ui.stoppedAtTheValueFileSafetyLimit.text": {
+      "text": "Se ha producido un error al alcanzar el límite de seguridad de archivos de «{scannedFolderLimitsMaximumFiles}».",
+      "status": "machine-generated"
+    },
+    "translator.ui.textDirection.text": {
+      "text": "Dirección del texto",
+      "status": "machine-generated"
+    },
+    "translator.ui.theInventoryIsUnchangedUntilSelectedFilesAre.text": {
+      "text": "El inventario permanece sin cambios hasta que se añaden los archivos seleccionados.",
+      "status": "machine-generated"
+    },
+    "translator.ui.theReportDoesNotExistYetSavingWill.text": {
+      "text": "El informe aún no existe. Al guardarlo, se creará.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
+      "text": "El generador de idiomas requiere esta configuración regional.",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueCandidateBearingFileSValuePotentialCandidate.text": {
+      "text": "{scannedFolderCandidateFileCount} archivo(s) de candidato(s), {scannedFolderCandidateCount} candidato(s) potencial(es), {scannedFolderCatalogedStringCount} que se encuentra(n) en el catálogo",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text": {
+      "text": "{scannedFileCandidateCount} candidatos que no figuran en el catálogo; {scannedFileCatalogedStringCount} aparece en el catálogo",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text2": {
+      "text": "{fileCandidateCount} candidatos que no figuran en el catálogo; {fileCatalogedStringCount} aparece en el catálogo",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text3": {
+      "text": "{candidateRowsLengthCatalogedCount} candidatos que no figuran en el catálogo; {catalogedCount} aparece en el catálogo",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogValueFoundInCatalog.text": {
+      "text": "{fileCandidateCount} no figura en el catálogo {fileCatalogedStringCount}, pero aparece en el catálogo",
+      "status": "machine-generated"
+    },
+    "translator.ui.valuePotentialValueInCatalogValue.text": {
+      "text": "{fileCandidateCount} {fileCatalogedStringCount}, disponible en el catálogo {inventoryText}",
+      "status": "machine-generated"
+    },
+    "translator.ui.view.text": {
+      "text": "Ver",
+      "status": "machine-generated"
+    }
+  }
+}

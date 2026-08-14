@@ -1,0 +1,22 @@
+{
+  "locale": "pt",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "BEGIN [profundidade {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "FIM [profundidade {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "Incluir ficheiros. (Foram processados {count}s ficheiros)",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** AVISO: Falta a inclusão («{uri}») ***",
+      "status": "machine-generated"
+    }
+  }
+}

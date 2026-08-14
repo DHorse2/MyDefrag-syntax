@@ -1,0 +1,138 @@
+{
+  "locale": "ha",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "Harsunan shirye-shirye",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "Haske na tsarin rubutu don harshen rubutun My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "Haske na tsarin rubutu don harshen rubutun My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "Maƙalar bayanai na mai amfani na My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "Mai rushewar taron",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "Maƙalar fayilolin rajistar My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "Ku kunna rajistar kuskure na ƙarin My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "Matakin bayyanar maganganun ƙarin Defragmenter na. Yin rikodin kuskure yana buƙatar mydfrg debug a kunna.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "Matakin tsanani na gano maganganu da ake samu ne kawai ta bude babban fayil na iyaye.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "Matakin tsanani na gano kuskure ga maganganun da ke ɗauke da makro na lokacin aiwatarwa.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "Matakin tsanani na gano kuskure ga maganganun da aka sami fayilolin manufa.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "Matakin tsanani na gano kuskure ga maganganun da ba a samu fayilolin da ake nufi ba.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "Matakin tsanani na ganowa ga saƙonnin iyaye na guntun da aka kiyasta.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "Tsarin Glob don a ware daga tantancewar My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "Rubutun Defragmenter na",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "Buɗe Fayil a Matsayi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "Mai rushewar taron fayiloli na: Binciken gaba",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "Mai rushewar taro na: Binciken baya",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "Mai Tsara Defragment na: Fayil na Gaba",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "Defragmenter dina: Mark Diagnostic Fixed",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "Defragmenter dina: Watsar da Gano Matsala",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "Mai Defragment dina: Tsallake Gano Matsala",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "Defragmenter dina: Aika Gano-kuskure zuwa Wakili",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "Mai rushewar fayil dina: Gano matsala na farko",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "Mai Tsara Defragment dina: Sake saita Jagorar Gano Matsala",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "Mai Defragment dina: Sabunta Gano Matsaloli",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "Mai Defragment dina: Tace Gano-kurakurai",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "Mai Defragment dina: Cire Tacewar Gano Matsala",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "My Defragmenter: Nuna binciken matsala a matsayin itace",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "Defragmenter dina: Nuna binciken matsala a matsayin tebur",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "Defragmenter dina: Rufe Mai Binciken Ganewar",
+      "status": "machine-generated"
+    }
+  }
+}

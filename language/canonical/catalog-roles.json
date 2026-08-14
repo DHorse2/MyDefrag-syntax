@@ -139,6 +139,14 @@
     {
       "id": "value",
       "description": "Displayed value text associated with a field, property, metric, or state."
+    },
+    {
+      "id": "link",
+      "description": "Any URI or URL link that is points to part of the project (internal)."
+    },
+    {
+      "id": "externalLink",
+      "description": "Any link that points to sites or data external to the project."
     }
   ]
 }

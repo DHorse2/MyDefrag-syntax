@@ -277,6 +277,7 @@ class LocaleMaintenanceService {
         const changes = this.repository.changedDocuments(localeId, componentId, this.draftDocument, this.canonicalEntries());
         report(onProgress, { phase: 'snapshot', message: 'Capturing generated files for rollback', cancellable: false });
         const generatedBefore = this.buildIntegration.snapshot();
+        const durableLocaleBefore = this.buildIntegration.snapshotDurableLocaleSources();
         let transaction;
         try {
             report(onProgress, { phase: 'write', message: 'Writing authoritative locale files', cancellable: false });
@@ -289,6 +290,7 @@ class LocaleMaintenanceService {
                 report(onProgress, { phase: 'rollback', message: 'Restoring authoritative and generated files', cancellable: false });
                 transaction.rollback();
                 this.buildIntegration.restore(generatedBefore);
+                this.buildIntegration.restoreDurableLocaleSources(durableLocaleBefore);
                 return {
                     ok: false,
                     stage: 'build',
@@ -302,6 +304,11 @@ class LocaleMaintenanceService {
             report(onProgress, { phase: 'compare', message: 'Checking generated file changes', cancellable: false });
             const generatedAfter = this.buildIntegration.snapshot();
             const generatedFiles = this.buildIntegration.diff(generatedBefore, generatedAfter);
+            const durableLocaleAfter = this.buildIntegration.snapshotDurableLocaleSources();
+            const durableLocaleFiles = this.buildIntegration.diff(
+                durableLocaleBefore,
+                durableLocaleAfter
+            );
             report(onProgress, { phase: 'commit', message: 'Committing locale source changes', cancellable: false });
             const recoveryFiles = transaction.commit();
             return {
@@ -309,6 +316,7 @@ class LocaleMaintenanceService {
                 stage: 'complete',
                 authoritativeFiles: preview.authoritativeFiles,
                 generatedFiles,
+                durableLocaleFiles,
                 recoveryFiles,
                 build,
                 state: this.load({ localeId, componentId })
@@ -317,6 +325,7 @@ class LocaleMaintenanceService {
             report(onProgress, { phase: 'rollback', message: 'Restoring files after an error', cancellable: false });
             if (transaction) { transaction.rollback(); }
             this.buildIntegration.restore(generatedBefore);
+            this.buildIntegration.restoreDurableLocaleSources(durableLocaleBefore);
             return {
                 ok: false,
                 stage: 'write',
@@ -342,11 +351,20 @@ class LocaleMaintenanceService {
         if (this.hasChanges()) {
             return { ok: false, stage: 'unsaved', error: 'Save or revert changes before rebuilding.' };
         }
-        return await this.buildIntegration.rebuildWithRollback([
+        const result = await this.buildIntegration.rebuildWithRollback([
             'build-component',
             this.selectedLocale,
             this.selectedComponent
         ], onProgress);
+        return {
+            ...result,
+            state: result.ok
+                ? this.load({
+                    localeId: this.selectedLocale,
+                    componentId: this.selectedComponent
+                })
+                : this.snapshot()
+        };
     }
 
     cancelBuild() {

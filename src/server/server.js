@@ -21,6 +21,7 @@ const { start } = require('repl');
 console?.error('SERVER: modules loaded');
 const { tokenize, configureTokenizer } = require('./tokenizer');
 const { Parser, parseStates, configureParser } = require('./parser');
+const { provideHelpHover } = require('./hoverProvider');
 const {
     KEYWORDS,
     KEYWORDS_MAP,
@@ -51,9 +52,12 @@ let logger;
 let parserLogger;
 const ini = require('../shared/ini')
 const util = require('../utilities/util')
+const { normalizeSeveritySetting, normalizeVerboseLevel } = require('../shared/config');
+const { isFeatureEnabled } = require('../shared/featureToggles');
 var source = "Server"
 var iniData = {};
 var isDebugOn = false;
+var hoverEnabled = true;
 var verboseLevel = 5;
 var isLogOn = true;
 var isStrictMode = false;
@@ -65,41 +69,16 @@ var fragmentParentLevel = 4;
 var iniErrors = [];
 
 /**
- * Converts a VSCodium setting value into an LSP diagnostic severity.
- *
- * @param {string|number} value The configured severity name or number.
- * @param {number} defaultValue The severity to use when the setting is invalid.
- * @returns {number} An LSP diagnostic severity value.
- */
-function normalizeSeveritySetting(value, defaultValue) {
-    const severityNames = {
-        error: ini.severity.Error,
-        warning: ini.severity.Warning,
-        information: ini.severity.Information,
-        info: ini.severity.Information,
-        hint: ini.severity.Hint
-    };
-    const normalizedName = String(value ?? '').toLowerCase();
-    const numericValue = Number(value);
-
-    if (Number.isFinite(numericValue) && numericValue >= 0 && numericValue <= 4) {
-        return numericValue;
-    }
-
-    return severityNames[normalizedName] ?? defaultValue;
-}
-
-/**
  * Builds normalized MyDefrag server configuration from VSCodium settings.
  *
  * @param {object} settings The mydfrg settings object sent by the client.
  * @returns {object} Normalized MyDefrag server configuration.
  */
 function buildMyDefragConfig(settings = {}) {
-    const configuredVerboseLevel = Number(settings.verboseLevel ?? verboseLevel);
-    const nextVerboseLevel = Number.isFinite(configuredVerboseLevel)
-        ? Math.min(Math.max(configuredVerboseLevel, 0), 10)
-        : verboseLevel;
+    const nextVerboseLevel = normalizeVerboseLevel(
+        settings.verboseLevel,
+        verboseLevel
+    );
 
     return {
         source: "Server",
@@ -107,6 +86,7 @@ function buildMyDefragConfig(settings = {}) {
             severity: ini.severity
         },
         isDebugOn: Boolean(settings.debugOn ?? isDebugOn),
+        hoverEnabled: isFeatureEnabled(settings.hoverEnabled),
         verboseLevel: nextVerboseLevel,
         isLogOn,
         referenceRelativePathLevel: normalizeSeveritySetting(
@@ -153,6 +133,7 @@ function applyMyDefragConfig(nextConfig) {
         fragmentParentLevel,
         iniErrors
     } = config);
+    hoverEnabled = isFeatureEnabled(config.hoverEnabled);
 }
 
 // Module-level config cache
@@ -299,8 +280,6 @@ connection.onInitialize(async (params) => {
             textDocumentSync: TextDocumentSyncKind.Incremental,
             completionProvider: { resolveProvider: true },
             hoverProvider: true,
-            definitionProvider: true,
-            referencesProvider: true,
         }
     };
 });
@@ -1170,16 +1149,22 @@ async function scanAllFiles(folderUri, options = {}) {
 // MyDefrag pre-defined variables.
 //#region connection Management. .Parse 
 //  On Completion and Hover ──────────────────────────────────────────────────────
-// (ToDo On Completion and Hover are stubs for now)
+// Completion remains a stub; hover is backed by the converted Help corpus.
 // ─────────────────────────────────────────────────────────────────────────────────
 
 connection.onCompletion(() => { // ToDo onCompletion
     logger.dbg(6, 'server.js:onCompletion: MyDefrag server connection on Completion');
     return [];
 });
-connection.onHover(() => { // ToDo onHover
+connection.onHover((params) => {
     logger.dbg(6, 'server.js:onHover: MyDefrag server connection on Hover');
-    return null;
+    if (!hoverEnabled) {
+        return null;
+    }
+    const document = documents.get(params.textDocument.uri);
+    return provideHelpHover(document, params.position, {
+        extensionRoot: path.resolve(__dirname, '..', '..')
+    });
 });
 connection.onInitialized(() => {
     // ─────────────────────────────────────────────────────────────────────────────────

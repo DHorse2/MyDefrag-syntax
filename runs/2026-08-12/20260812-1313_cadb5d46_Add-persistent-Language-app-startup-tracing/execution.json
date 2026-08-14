@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "cadb5d46",
+  "startedAt": "2026-08-12T20:13:31.827Z",
+  "finishedAt": "2026-08-12T20:17:50.177Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "Add persistent Language app startup tracing"
+  ],
+  "promptPaths": [
+    "Ad hoc user request"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

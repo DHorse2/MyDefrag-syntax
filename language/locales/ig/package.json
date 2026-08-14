@@ -1,0 +1,138 @@
+{
+  "locale": "ig",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "Asụsụ mmemme",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "Ịkọ agba syntax maka asụsụ ndetu My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "Ịkọ agba syntax maka asụsụ ndetu My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "Nchekwa maka data ndị ọrụ My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "Ngwa Defragment m",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "Ndepụta maka faịlụ ndekọ My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "Gwuo ndekọ njehie mgbakwunye Defragmenter m.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "Ọkwa nkọwa nke mgbakwunye Defragmenter m. Ndekọ njehie chọrọ ka mydfrg debug bụrụ On.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "Ọkwa njirimara maka ntụaka ndị a chọtara naanị site n'ịga n'elu folda ndị nne.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "Ọkwa njọ nchọpụta maka ntụaka ndị nwere makro oge mmejuputa.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "Ọkwa njọ nchọpụta maka ntụaka ndị e chọtara faịlụ ebumnuche ha.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "Ọkwa njọ nchọpụta maka ntụaka faịlụ ebumnuche a na-apụghị ịchọta.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "Ọkwa njọ nchọpụta maka ozi nne na nna nke akụkụ a tụrụ aro.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "Ụkpụrụ glob iji wepụ na nnwale My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "Akwụkwọ Ntuziaka Defragmenter M",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "Mepee faịlụ na ọnọdụ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "Defragmenter m: Nchọpụta na-esote",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "Ngwa Defragmenter m: Nyocha gara aga",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "Defragmenter m: Faịlụ na-esote",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "Defragmenter m: Mkpado Nyochaa edoziwo",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "Defragmenter m: Chefuo nyocha",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "Defragmenter m: Gafe nyocha",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "Defragmenter m: Zipu nchọpụta nye onye nnọchi anya",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "Defragmenter m: Nyocha Mbụ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "Defragmenter m: Tọgharịa Nchịkwa Nchọpụta",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "Defragmenter m: Melite nyocha",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "Defragmenter m: Nyochaa nzacha",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "Defragmenter m: Hichapụ nzacha nchọpụta",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "Defragmenter m: Gosi nchọpụta dị ka osisi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "Defragmenter m: Gosi nchọpụta dị ka tebụl",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "Defragmenter m: Mechie Nchọpụta Nyochaa",
+      "status": "machine-generated"
+    }
+  }
+}

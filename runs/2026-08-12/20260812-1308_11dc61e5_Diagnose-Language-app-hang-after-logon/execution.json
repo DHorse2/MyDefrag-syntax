@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "11dc61e5",
+  "startedAt": "2026-08-12T20:08:14.869Z",
+  "finishedAt": "2026-08-12T20:09:16.874Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "MyDefrag-syntax"
+  ],
+  "tasks": [
+    "\\ Diagnose Language app hang after logon\\"
+  ],
+  "promptPaths": [
+    "\\Ad"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

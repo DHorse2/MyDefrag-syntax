@@ -131,6 +131,21 @@ try {
         }
     })}\n`, 'utf8');
 
+    const frenchCanadianSource = path.join(
+        fixtureRoot,
+        'language',
+        'locales',
+        'fr-CA',
+        'extension.json'
+    );
+    const frenchCanadianDocument = JSON.parse(fs.readFileSync(frenchCanadianSource, 'utf8'));
+    delete frenchCanadianDocument.entries['extension.product.displayName'];
+    fs.writeFileSync(
+        frenchCanadianSource,
+        `${JSON.stringify(frenchCanadianDocument, null, 2)}\n`,
+        'utf8'
+    );
+
     result = run(buildScript, 'report', fixtureRoot);
     assert.strictEqual(result.status, 0, result.stderr || result.stdout);
     assert.match(result.stderr, /Translation API: DeepL is not configured in this process/);
@@ -343,7 +358,7 @@ try {
         'build',
         'language',
         'catalogs',
-        'fr-CA',
+        'yo',
         'extension.json'
     );
     const extensionCatalog = JSON.parse(fs.readFileSync(extensionCatalogPath, 'utf8'));
@@ -359,7 +374,7 @@ try {
         'build',
         'language',
         'catalogs',
-        'fr-CA',
+        'yo',
         'diagnosticExplorer.json'
     ), 'utf8'));
     assert.equal(
@@ -374,10 +389,10 @@ try {
         'reports',
         'translation-completeness.json'
     ), 'utf8'));
-    const frenchCanadian = completeness.locales.find((locale) => locale.locale === 'fr-CA');
-    assert.equal(frenchCanadian.entries.machineGenerated, 0);
-    assert.equal(frenchCanadian.entries.translated, 0);
-    assert.equal(frenchCanadian.entries.fallback, frenchCanadian.entries.total);
+    const yoruba = completeness.locales.find((locale) => locale.locale === 'yo');
+    assert.equal(yoruba.entries.machineGenerated, 0);
+    assert.equal(yoruba.entries.translated, 0);
+    assert.equal(yoruba.entries.fallback, yoruba.entries.total);
 
     const preservedKey = 'extension.product.displayName';
     const missingKey = Object.keys(extensionCatalog.entries)
@@ -402,7 +417,7 @@ try {
     assert.strictEqual(secondResult.status, 0, secondResult.stderr || secondResult.stdout);
     assert.match(
         secondResult.stdout,
-        /Normalized English: Translation API bypassed; generating normalized draft values for 1 locale\(s\) with missing entries: fr-CA/
+        /Normalized English: Translation API bypassed; generating normalized draft values for 1 locale\(s\) with missing entries: yo/
     );
     assert.match(secondResult.stdout, /Normalized English result: 1 value\(s\), 0 warning\(s\)/);
     assert.match(
@@ -413,6 +428,29 @@ try {
     const extensionCatalogAfterUpdate = JSON.parse(fs.readFileSync(extensionCatalogPath, 'utf8'));
     assert.deepStrictEqual(extensionCatalogAfterUpdate.entries[preservedKey], analystEntry);
     assert.ok(extensionCatalogAfterUpdate.entries[missingKey]);
+    const durableExtensionCatalog = JSON.parse(fs.readFileSync(path.join(
+        normalizedFixtureRoot,
+        'language',
+        'locales',
+        'yo',
+        'extension.json'
+    ), 'utf8'));
+    assert.deepStrictEqual(durableExtensionCatalog.entries[preservedKey], {
+        text: analystEntry.text,
+        status: analystEntry.status
+    });
+    const completenessAfterUpdate = JSON.parse(fs.readFileSync(path.join(
+        normalizedFixtureRoot,
+        'build',
+        'language',
+        'reports',
+        'translation-completeness.json'
+    ), 'utf8'));
+    const yorubaAfterUpdate = completenessAfterUpdate.locales
+        .find((locale) => locale.locale === 'yo');
+    assert.equal(yorubaAfterUpdate.entries.translated, 1);
+    assert.equal(yorubaAfterUpdate.entries.fallback, yorubaAfterUpdate.entries.total - 1);
+    assert.equal(yorubaAfterUpdate.entries.missing, 0);
     const extensionAfterUpdateBytes = fs.readFileSync(extensionCatalogPath);
     const normalizedBuildReport = JSON.parse(fs.readFileSync(path.join(
         normalizedFixtureRoot,
@@ -427,11 +465,11 @@ try {
         deepLCharactersPassed: 0
     });
     assert.equal(
-        normalizedBuildReport.catalogLocales.find((locale) => locale.locale === 'fr-CA').status,
+        normalizedBuildReport.catalogLocales.find((locale) => locale.locale === 'yo').status,
         'updated-existing'
     );
     assert.equal(
-        normalizedBuildReport.catalogLocales.find((locale) => locale.locale === 'fr-CA').entriesAdded,
+        normalizedBuildReport.catalogLocales.find((locale) => locale.locale === 'yo').entriesAdded,
         1
     );
 
@@ -485,7 +523,7 @@ try {
         'build',
         'language',
         'catalogs',
-        'fr-CA',
+        'yo',
         'extension.json'
     ), 'utf8'));
     assert.equal(

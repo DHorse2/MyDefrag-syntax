@@ -1,0 +1,22 @@
+{
+  "locale": "fr",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "DÉBUT [{depth} de profondeur] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "FIN [{depth} de profondeur] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "Fichiers à inclure. ({count} fichier(s) traité(s))",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** AVERTISSEMENT : inclusion manquante (« {uri} ») ***",
+      "status": "machine-generated"
+    }
+  }
+}

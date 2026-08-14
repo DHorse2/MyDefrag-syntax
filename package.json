@@ -33,6 +33,16 @@
                     "default": true,
                     "description": "Enable MyDefrag extension debug logging."
                 },
+                "mydfrg.hoverEnabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show MyDefrag Help when hovering over supported directives and keywords."
+                },
+                "mydfrg.wordPredictionEnabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show inline MyDefrag keyword predictions while typing."
+                },
                 "mydfrg.verboseLevel": {
                     "type": "number",
                     "default": 5,
@@ -212,6 +222,26 @@
                 "title": "Open Preview"
             },
             {
+                "command": "mydfrg.hover.disable",
+                "title": "MyDefrag: Turn Off Hover",
+                "icon": "$(eye)"
+            },
+            {
+                "command": "mydfrg.hover.enable",
+                "title": "MyDefrag: Turn On Hover",
+                "icon": "$(eye-closed)"
+            },
+            {
+                "command": "mydfrg.wordPrediction.disable",
+                "title": "MyDefrag: Turn Off Word Prediction",
+                "icon": "$(sparkle)"
+            },
+            {
+                "command": "mydfrg.wordPrediction.enable",
+                "title": "MyDefrag: Turn On Word Prediction",
+                "icon": "$(circle-slash)"
+            },
+            {
                 "command": "mdm.openFileAtPosition",
                 "title": "Open File at Position"
             },
@@ -233,6 +263,11 @@
                 "command": "mydfrg.diagnostics.nextFile",
                 "title": "MyDefrag: Next File",
                 "icon": "$(arrow-right)"
+            },
+            {
+                "command": "mydfrg.diagnostics.openHelp",
+                "title": "MyDefrag: Open Help for Diagnostic",
+                "icon": "$(book)"
             },
             {
                 "command": "mydfrg.diagnostics.fixedItem",
@@ -312,12 +347,39 @@
         "menus": {
             "editor/title": [
                 {
+                    "command": "mydfrg.hover.disable",
+                    "when": "editorLangId == mydfrg && mydfrg.hoverEnabled",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "mydfrg.hover.enable",
+                    "when": "editorLangId == mydfrg && !mydfrg.hoverEnabled",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "mydfrg.wordPrediction.disable",
+                    "when": "editorLangId == mydfrg && mydfrg.wordPredictionEnabled",
+                    "group": "navigation@2"
+                },
+                {
+                    "command": "mydfrg.wordPrediction.enable",
+                    "when": "editorLangId == mydfrg && !mydfrg.wordPredictionEnabled",
+                    "group": "navigation@2"
+                },
+                {
                     "command": "mydfrg.openPreview",
                     "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
                     "group": "navigation"
                 }
             ],
             "editor/title/context": [
+                {
+                    "command": "mydfrg.openPreview",
+                    "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
+                    "group": "navigation"
+                }
+            ],
+            "explorer/context": [
                 {
                     "command": "mydfrg.openPreview",
                     "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
@@ -351,64 +413,69 @@
                     "group": "navigation@5"
                 },
                 {
-                    "command": "mydfrg.diagnostics.fixedItem",
+                    "command": "mydfrg.diagnostics.openHelp",
                     "when": "view == mydfrgDiagnostics",
                     "group": "navigation@6"
                 },
                 {
-                    "command": "mydfrg.diagnostics.ignoreItem",
+                    "command": "mydfrg.diagnostics.fixedItem",
                     "when": "view == mydfrgDiagnostics",
                     "group": "navigation@7"
                 },
                 {
-                    "command": "mydfrg.diagnostics.skipItem",
+                    "command": "mydfrg.diagnostics.ignoreItem",
                     "when": "view == mydfrgDiagnostics",
                     "group": "navigation@8"
                 },
                 {
-                    "command": "mydfrg.diagnostics.validSyntax",
+                    "command": "mydfrg.diagnostics.skipItem",
                     "when": "view == mydfrgDiagnostics",
                     "group": "navigation@9"
                 },
                 {
-                    "command": "mydfrg.diagnostics.sendIt",
+                    "command": "mydfrg.diagnostics.validSyntax",
                     "when": "view == mydfrgDiagnostics",
                     "group": "navigation@10"
                 },
                 {
+                    "command": "mydfrg.diagnostics.sendIt",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@11"
+                },
+                {
                     "command": "mydfrg.diagnostics.showTable",
                     "when": "view == mydfrgDiagnostics && mydfrgDiagnostics.viewMode == tree",
-                    "group": "navigation@11"
+                    "group": "navigation@12"
                 },
                 {
                     "command": "mydfrg.diagnostics.showTree",
                     "when": "view == mydfrgDiagnostics && mydfrgDiagnostics.viewMode == table",
-                    "group": "navigation@11"
+                    "group": "navigation@12"
                 },
                 {
                     "command": "mydfrg.diagnostics.filter",
                     "when": "view == mydfrgDiagnostics",
-                    "group": "navigation@12"
+                    "group": "navigation@13"
                 },
                 {
                     "command": "mydfrg.diagnostics.clearFilter",
                     "when": "view == mydfrgDiagnostics && mydfrgDiagnostics.filterActive",
-                    "group": "navigation@13"
+                    "group": "navigation@14"
                 },
                 {
                     "command": "mydfrg.diagnostics.refresh",
                     "when": "view == mydfrgDiagnostics",
-                    "group": "navigation@14"
+                    "group": "navigation@15"
                 },
                 {
                     "command": "mydfrg.diagnostics.reset",
                     "when": "view == mydfrgDiagnostics",
-                    "group": "navigation@15"
+                    "group": "navigation@16"
                 },
                 {
                     "command": "mydfrg.diagnostics.closeView",
                     "when": "view == mydfrgDiagnostics",
-                    "group": "navigation@16"
+                    "group": "navigation@17"
                 }
             ],
             "commandPalette": [
@@ -440,33 +507,65 @@
         "onLanguage:mydfrg",
         "onLanguage:bat",
         "onCommand:mydfrg.openPreview",
+        "onCommand:mydfrg.hover.disable",
+        "onCommand:mydfrg.hover.enable",
+        "onCommand:mydfrg.wordPrediction.disable",
+        "onCommand:mydfrg.wordPrediction.enable",
         "onCommand:mdm.openFileAtPosition",
         "onCommand:mydfrg.openSettings",
         "onCommand:mydfrg.configureFolders"
     ],
     "scripts": {
+        "test": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Fast",
+        "test:all": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite All",
+        "test:fast": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Fast",
+        "test:core": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Core",
+        "test:server": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Server",
+        "test:parser": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Parser",
+        "test:tokenizer": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Tokenizer",
+        "test:language-data": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageData",
+        "test:completion": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Completion",
+        "test:shared": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Shared",
+        "test:utilities": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Utilities",
+        "test:diagnostics": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Diagnostics",
+        "test:manifest": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Manifest",
+        "test:package": "npm run test:manifest",
+        "test:coverage": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Coverage",
+        "test:extension": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Extension",
+        "test:extension:unit": "npm run test:extension",
+        "test:apps": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Apps",
+        "test:scripts": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Syntax",
         "deploy:local": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1",
         "liveUpdate:local": "powershell -ExecutionPolicy Bypass -File ./scripts/update-live-MyDefrag.ps1",
         "pack:vsix": "powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1",
         "publish:vsx": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1",
         "clean": "rimraf dist out .vscodeignore",
+        "inventory:comments": "node ./scripts/Inventory-CodeComments.cjs --write",
+        "inventory:documentation": "node ./scripts/Inventory-Documentation.cjs --write",
+        "inventory:logger": "node ./scripts/Inventory-LoggerStrings.cjs --write",
+        "inventory:master": "node ./scripts/Inventory-Master.cjs --write",
         "build": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1 -SkipInstall",
         "language:catalogs:apps": "node ./build/scripts/generate-electron-component-catalogs.js --write",
         "language:validate": "node ./build/scripts/build-language.js validate",
         "language:build": "node ./build/scripts/build-language.js build",
         "language:report": "node ./build/scripts/build-language.js report",
+        "language:translate-fallbacks": "node ./build/scripts/translate-language-fallbacks.js",
         "language:app": "electron ./build/mdl-language-app/main/main.js --project-root .",
         "language:diagnostics:install": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1",
         "language:diagnostics:uninstall": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1 -Uninstall",
         "language:app:pack": "electron-builder --config build/mdl-language-app/electron-builder.yml --win dir",
         "language:app:package": "electron-builder --config build/mdl-language-app/electron-builder.yml --win nsis",
-        "test:language-app": "node --test \"./build/mdl-language-app/tests/*.test.js\"",
+        "test:language-app": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageApp",
         "locale:app": "electron ./build/mdl-locale-app/main/main.js --project-root .",
         "locale:app:pack": "electron-builder --config build/mdl-locale-app/electron-builder.yml --win dir",
         "locale:app:package": "electron-builder --config build/mdl-locale-app/electron-builder.yml --win nsis",
-        "test:locale-app": "node --test \"./build/mdl-locale-app/tests/*.test.js\"",
-        "test:language-report": "node ./build/scripts/test-language-report.js",
-        "test:language": "node ./build/scripts/test-language-runtime.js",
+        "test:locale-app": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LocaleApp",
+        "test:language-report": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageReport",
+        "test:language": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageRuntime",
+        "test:language:all": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Language",
+        "test:language:validate": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageValidation",
+        "test:ci": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Fast",
+        "test:list": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -List",
         "prepare": "npm run build",
         "enableNetwwork:local": "powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1",
         "listSymLinks:local": "powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1",

@@ -13,20 +13,10 @@
 // If outputFile is omitted, output is written alongside the entry file
 // with a .merged.MyDc extension.
 // server.js
-const {
-  createConnection,
-  TextDocuments,
-  DiagnosticSeverity,
-  ProposedFeatures,
-  TextDocumentSyncKind,
-  Diagnostic,
-} = require('vscode-languageserver/node');
-const { TextDocument } = require('vscode-languageserver-textdocument');
 const fs = require("fs");
 const path = require('path');
 const console = require('console');
-const { URI } = require('vscode-languageserver/node');
-const { fileURLToPath, pathToFileURL } = require('url');
+const { pathToFileURL } = require('url');
 // ─────────────────────────────────────────────────────────────────────────────────
 // Constants
 // ─────────────────────────────────────────────────────────────────────────────────
@@ -37,6 +27,7 @@ paths.ensureDirectories();
 // ─────────────────────────────────────────────────────────────────────────────────
 // Debug logger — writes to stderr so it doesn't pollute stdout/output file
 const Logger = require('../shared/logger');
+console.log = console.error.bind(console);
 // ─────────────────────────────────────────────────────────────────────────────────
 // Initialize
 const isServer = false;
@@ -61,9 +52,7 @@ const INCLUDE_RE = /!include\s+"([^"]+)"!/g;
 // Width of each numeric column (padded). Increase if you have >9999 lines.
 const COL_W = 6;
 //
-const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
-const connection = createConnection(ProposedFeatures.all);
-const documents = new TextDocuments(TextDocument);
+const INI_PATH = path.join(PARENT_DIR, "..", "mydefrag-syntax.ini");
 // ─────────────────────────────────────────────────────────────────────────────────
 var batLinkDebounceTimer = null;
 var batLinkDebounceValue = 15000;
@@ -88,8 +77,8 @@ try { // ---- Initialization ----
   throw new Error(message);
 }
 // logger.initialize(source, connection, isServer, diagnostics, iniData, config)
-logger = Logger.createLogger(channelName, source, config);
-if (ini.iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Information, ini.iniErrors) }
+const logger = Logger.createLogger(channelName, source, config);
+if (iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Information, new Set(), iniErrors) }
 // ─────────────────────────────────────────────────────────────────────────────────
 // Formatting helpers
 // ─────────────────────────────────────────────────────────────────────────────────
@@ -181,7 +170,7 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
     return { lines: [annotLine(indent, `*** WARNING: Missing include ("${missingUri}") ***`)], filePath, outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // FILE NOT FOUND
   }
   logger.dbg(7, `    File exists OK`);
-  linkVisited.add(filePath);
+  linkVisited.push(filePath);
 
   // ── Read and split into logical lines ────────────────────────────────────
   const raw = fs.readFileSync(filePath, "utf8");

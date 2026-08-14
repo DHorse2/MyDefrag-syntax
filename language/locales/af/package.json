@@ -1,0 +1,138 @@
+{
+  "locale": "af",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "Programmeringstale",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "Sintaksie-beklemtoning vir die My Defragmenter-skriptaal",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "Sintaksie-beklemtoning vir die My Defragmenter-skriptaal",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "Gids vir my Defragmenter-gebruiker se data.",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "My Defragmenteerder",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "Gids vir my Defragmenter-loglêers.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "Aktiveer foutopsporing vir die My Defragmenter-uitbreiding.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "My Defragmenter-uitbreiding se verbositeitsvlak. Foutopsporingslogging vereis dat mydfrg debug aan is.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "Diagnostiese erns vir verwysings wat slegs gevind word deur op ouer vouers te navigeer.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "Diagnostiese erns vir verwysings wat uitvoeringstyd-makros bevat.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "Diagnostiese erns vir verwysings waarvan die teikenlêers gevind is.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "Diagnostiese erns vir verwysings waarvan die teikenlêers nie gevind word nie.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "Diagnostiese erns vir afgeleide fragment-ouerboodskappe.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "Glob-patrone om uit my Defragmenter-validering uit te sluit",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "My Defragmenteerder-skrif",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "Open lêer by posisie",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "My Defragmenteerder: Volgende Diagnostiek",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "My Defragmenter: Vorige diagnostiek",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "My Defragmenteerder: Volgende Lêer",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "My Defragmenteerder: Merk diagnostiese foute as reggestel",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "My Defragmenter: Ignoreer diagnostiek",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "My Defragmenter: Slaan diagnostiek oor",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "My Defragmenter: Stuur diagnostiek na agent",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "My Defragmenter: Eerste diagnose",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "My Defragmenter: Stel diagnostiese navigasie terug",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "My Defragmenter: Vernieuw diagnostiek",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "My Defragmenter: Filterdiagnostiek",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "My Defragmenter: Maak die diagnostiese filter skoon",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "My Defragmenter: Wys diagnostiek as boom",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "My Defragmenter: Wys diagnostiek as tabel",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "My Defragmenter: Sluit Diagnostiese Verkenner",
+      "status": "machine-generated"
+    }
+  }
+}

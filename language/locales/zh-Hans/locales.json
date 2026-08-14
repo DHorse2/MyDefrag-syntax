@@ -1,0 +1,526 @@
+{
+  "locale": "zh-Hans",
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "text": "构建命令的输出",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.component.label": {
+      "text": "组件",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.locale.label": {
+      "text": "区域设置",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "text": "维护措施",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "text": "操作正在进行中",
+      "status": "machine-generated"
+    },
+    "locales.action.applyInMemory.label": {
+      "text": "在内存中应用",
+      "status": "machine-generated"
+    },
+    "locales.action.close.label": {
+      "text": "关闭",
+      "status": "machine-generated"
+    },
+    "locales.action.exit.label": {
+      "text": "退出",
+      "status": "machine-generated"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "text": "生成 API 翻译",
+      "status": "machine-generated"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "text": "重建所选组件",
+      "status": "machine-generated"
+    },
+    "locales.action.reload.label": {
+      "text": "重新加载",
+      "status": "machine-generated"
+    },
+    "locales.action.revert.label": {
+      "text": "还原",
+      "status": "machine-generated"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "text": "保存并重建",
+      "status": "machine-generated"
+    },
+    "locales.action.stopBuild.label": {
+      "text": "停止构建",
+      "status": "machine-generated"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "text": "使用英语作为备用语言",
+      "status": "machine-generated"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "text": "使用规范化英语",
+      "status": "machine-generated"
+    },
+    "locales.action.validate.label": {
+      "text": "验证",
+      "status": "machine-generated"
+    },
+    "locales.dialog.cancel.text": {
+      "text": "取消",
+      "status": "machine-generated"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "text": "确认语言环境源文件的更改",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "text": "丢弃并重新加载",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "text": "是否要删除未保存的翻译？",
+      "status": "machine-generated"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "text": "不保存直接退出",
+      "status": "machine-generated"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "text": "正在构建区域设置组件",
+      "status": "machine-generated"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "text": "我的磁盘碎片整理工具区域设置维护",
+      "status": "machine-generated"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "text": "不会有任何文件发生更改。",
+      "status": "machine-generated"
+    },
+    "locales.dialog.returnToBuild.text": {
+      "text": "返回构建",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "text": "保存和组件构建成功",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "text": "保存并重建组件",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "text": "保存操作因验证被阻止",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "保存失败并已回滚",
+      "status": "machine-generated"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "选择“我的碎片整理程序”语法库",
+      "status": "machine-generated"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "text": "未保存的区域设置更改",
+      "status": "machine-generated"
+    },
+    "locales.heading.catalog.text": {
+      "text": "产品目录",
+      "status": "machine-generated"
+    },
+    "locales.heading.localeOperation.text": {
+      "text": "区域设置操作",
+      "status": "machine-generated"
+    },
+    "locales.heading.operationResult.text": {
+      "text": "操作结果",
+      "status": "machine-generated"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "text": "选择区域设置和组件",
+      "status": "machine-generated"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "text": "根据当前区域设置值生成翻译",
+      "status": "machine-generated"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "text": "关键词、源文本、译文、状态",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "text": "API 翻译被拒绝",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "text": "API 翻译不可用",
+      "status": "machine-generated"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "text": "应用程序启动失败",
+      "status": "machine-generated"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "text": "未选择有效的“我的碎片整理程序”语言环境存储库。",
+      "status": "machine-generated"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "text": "标准英语不是 API 的翻译目标。",
+      "status": "machine-generated"
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "text": "该目录键属于组件{canonicalComponent}。",
+      "status": "machine-generated"
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "text": "选择拥有/语言区域设置的仓库，并构建/语言。",
+      "status": "machine-generated"
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "text": "组件重建失败",
+      "status": "machine-generated"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "text": "在更改区域设置或组件之前，请先放弃或保存更改。",
+      "status": "machine-generated"
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "text": "此处仅阅读英文标准文本。",
+      "status": "machine-generated"
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "text": "英文文本为规范版本，必须在“我的碎片整理程序 语言维护”中进行维护。",
+      "status": "machine-generated"
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "text": "在生成 API 翻译之前，请输入或填写“当前区域设置”的值。",
+      "status": "machine-generated"
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "text": "是否要退出并丢弃所选组件的翻译？",
+      "status": "machine-generated"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "text": "在替换该值之前，先生成 API 翻译。",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "text": "{relativePath} 中生成的区域设置目录标识不匹配：",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "text": "生成的区域设置目录无效：",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "text": "生成的翻译必须先应用，然后才能从源数据中删除。",
+      "status": "machine-generated"
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "尚未加载区域设置维护数据。",
+      "status": "machine-generated"
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "text": "这不是 My Defragmenter 的语言库。缺失：{missing}",
+      "status": "machine-generated"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "路径超出了仓库根目录范围：{relativePath}",
+      "status": "machine-generated"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "text": "占位符必须完全为：{expected}。",
+      "status": "machine-generated"
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "text": "重新加载将丢弃对所选区域设置组件所做的更改。",
+      "status": "machine-generated"
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "text": "在重新构建之前，请保存或还原更改。",
+      "status": "machine-generated"
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "text": "已重建选定组件",
+      "status": "machine-generated"
+    },
+    "locales.message.selectionFailed.text": {
+      "text": "选择失败",
+      "status": "machine-generated"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "text": "无法使用区域设置组件的架构。",
+      "status": "machine-generated"
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "text": "主进程翻译的“当前区域设置”值与实际值不符。请重新启动“区域设置维护”并重试。",
+      "status": "machine-generated"
+    },
+    "locales.message.translationRejected.text": {
+      "text": "翻译被拒绝",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "text": "未知目录键：{key}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "text": "未知组件：{componentId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "text": "未知组件：{documentComponent}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "text": "所选组件的键未知：{payloadKey}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "text": "未知区域设置：{localeId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "text": "未知区域设置：{documentLocale}",
+      "status": "machine-generated"
+    },
+    "locales.message.validationResult.text": {
+      "text": "验证结果",
+      "status": "machine-generated"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "请等待构建完成后再退出。",
+      "status": "machine-generated"
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "text": "是否允许{normalizedCount}写入受保护的文件？",
+      "status": "machine-generated"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "捕获生成的文件以便回滚",
+      "status": "machine-generated"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "text": "检查生成的文件更改",
+      "status": "machine-generated"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "text": "提交区域设置源代码的更改",
+      "status": "machine-generated"
+    },
+    "locales.progress.preparingSave.status": {
+      "text": "正在准备保存",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "还原权威文件和生成的文件",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "text": "发生错误后恢复文件",
+      "status": "machine-generated"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "text": "保存区域设置组件",
+      "status": "machine-generated"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "text": "开始保存并重建组件",
+      "status": "machine-generated"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "text": "停止组件构建",
+      "status": "machine-generated"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "在进度窗口中使用“停止构建”选项，然后等待回滚完成再关闭应用程序。",
+      "status": "machine-generated"
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "text": "正在等待保存确认",
+      "status": "machine-generated"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "text": "编写权威的区域设置文件",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "徽章 {stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "徽章 {stateValidationOk}",
+      "status": "machine-generated"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "text": "标准英语",
+      "status": "machine-generated"
+    },
+    "locales.ui.catalogKey.text": {
+      "text": "目录键",
+      "status": "machine-generated"
+    },
+    "locales.ui.componentStrings.text": {
+      "text": "组件字符串",
+      "status": "machine-generated"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "text": "当前区域设置值",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "text": "Deep L 尚未配置。请在启动应用程序前设置 Deepl API。",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "text": "Deep L 已替换当前区域设置值。请在内存中应用该更改以保留该设置。",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "text": "是否丢弃内存转换中的更改？",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "text": "是否要丢弃未保存的翻译并更改选择？",
+      "status": "machine-generated"
+    },
+    "locales.ui.englishFallback.text": {
+      "text": "英语备用语言",
+      "status": "machine-generated"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "text": "根据当前区域设置值生成翻译。翻译结果仅替换该字段的内容。",
+      "status": "machine-generated"
+    },
+    "locales.ui.generatedValue.text": {
+      "text": "生成时间：{stateGeneratedFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.key.text": {
+      "text": "关键",
+      "status": "machine-generated"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "text": "最新的 Deep L 结果",
+      "status": "machine-generated"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "text": "规范化英语",
+      "status": "machine-generated"
+    },
+    "locales.ui.notValidated.text": {
+      "text": "未验证",
+      "status": "machine-generated"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "text": "没有未保存的更改",
+      "status": "machine-generated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "text": "准备组件重建",
+      "status": "machine-generated"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "text": "重建区域设置组件",
+      "status": "machine-generated"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "text": "请求进行Deep L翻译。",
+      "status": "machine-generated"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "text": "必填占位符",
+      "status": "machine-generated"
+    },
+    "locales.ui.reviewStatus.text": {
+      "text": "审核状态",
+      "status": "machine-generated"
+    },
+    "locales.ui.search.text": {
+      "text": "搜索",
+      "status": "machine-generated"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "text": "选择一个目录条目",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceText.text": {
+      "text": "源文本",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceValue.text": {
+      "text": "来源：{stateAuthoritativeFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.status.text": {
+      "text": "状态",
+      "status": "machine-generated"
+    },
+    "locales.ui.structuredEditor.text": {
+      "text": "结构化编辑器",
+      "status": "machine-generated"
+    },
+    "locales.ui.translation.text": {
+      "text": "翻译",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationScope.text": {
+      "text": "翻译范围",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "text": "无翻译。",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "text": "翻译员桌面工具",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorNotes.text": {
+      "text": "译者注",
+      "status": "machine-generated"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "text": "未保存的更改",
+      "status": "machine-generated"
+    },
+    "locales.ui.valid.text": {
+      "text": "有效",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "text": "{stateCompletenessFallback} 英语备用语言",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "text": "{rowApiTranslationProvider} 结果已准备就绪。在内存中应用以保留当前区域设置值。",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTotal.text": {
+      "text": "{stateCompletenessTotal} 总计",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTranslated.text": {
+      "text": "{stateCompletenessTranslated} 已翻译",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "text": "{stateValidationErrorsCount} 验证错误",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
+      "text": "调整当前区域设置值及 API 建议",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
+      "text": "调整语言环境目录和翻译编辑器的尺寸",
+      "status": "machine-generated"
+    }
+  }
+}

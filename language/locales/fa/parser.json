@@ -1,0 +1,14 @@
+{
+  "locale": "fa",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "انتظار می‌رفت {expected} اما یافت شد {actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "توکن غیرمنتظره '{token}'",
+      "status": "machine-generated"
+    }
+  }
+}

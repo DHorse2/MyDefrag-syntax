@@ -1,0 +1,1758 @@
+{
+  "locale": "zh-Hans",
+  "component": "translator",
+  "entries": {
+    "translator.accessibility.allowDeeplCallsDuringSaveAndRebuild.label": {
+      "text": "在“保存”和“重建”过程中允许进行 Deep L 调用",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.applicationNavigation.label": {
+      "text": "应用程序导航",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.buildCommandOutput.label": {
+      "text": "构建命令的输出",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.closeOperationResult.label": {
+      "text": "关闭操作结果",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.closeValue.label": {
+      "text": "关闭 {windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentAssignedToValue.label": {
+      "text": "分配给{filePath}的组件",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentDescription.label": {
+      "text": "组件描述",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForAddedMigrationFiles.label": {
+      "text": "用于添加迁移文件的组件",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForScannedMigrationFile.label": {
+      "text": "已扫描迁移文件的组件",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentIdentifier.label": {
+      "text": "组件标识符",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.defaultPreviewMode.label": {
+      "text": "默认预览模式",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterMigrationSourceFiles.label": {
+      "text": "筛选迁移源文件",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.maximizeValue.label": {
+      "text": "将{windowLabel}最大化",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.migrationCandidatesForValue.label": {
+      "text": "{filePath} 的迁移候选方案",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.minimizeValue.label": {
+      "text": "将{windowLabel}最小化",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.normalizedText.label": {
+      "text": "规范化文本",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.openValueAtLineValue.label": {
+      "text": "打开文件 {filePath}，找到第 {candidateLine} 行",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.operationInProgress.label": {
+      "text": "操作正在进行中",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.removeValue.label": {
+      "text": "卸载{filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.runtimeComponent.label": {
+      "text": "运行时组件",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.selectedComponent.label": {
+      "text": "选定的组件",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.showComponentsHome.label": {
+      "text": "显示组件主页",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.suggestedKey.label": {
+      "text": "建议的键",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.viewMigrationCandidatesForValue.label": {
+      "text": "查看{filePath}的迁移候选项",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.windowControls.label": {
+      "text": "窗口控件",
+      "status": "machine-generated"
+    },
+    "translator.action.exit.label": {
+      "text": "退出",
+      "status": "machine-generated"
+    },
+    "translator.action.previewModes.label": {
+      "text": "预览模式",
+      "status": "machine-generated"
+    },
+    "translator.action.rebuild.label": {
+      "text": "重建",
+      "status": "machine-generated"
+    },
+    "translator.action.reloadData.label": {
+      "text": "重新加载数据",
+      "status": "machine-generated"
+    },
+    "translator.action.revert.label": {
+      "text": "还原",
+      "status": "machine-generated"
+    },
+    "translator.action.save.label": {
+      "text": "保存",
+      "status": "machine-generated"
+    },
+    "translator.action.stopBuild.label": {
+      "text": "停止构建",
+      "status": "machine-generated"
+    },
+    "translator.action.validate.label": {
+      "text": "验证",
+      "status": "machine-generated"
+    },
+    "translator.dialog.addFiles.text": {
+      "text": "添加文件",
+      "status": "machine-generated"
+    },
+    "translator.dialog.addMigrationSourceFiles.title": {
+      "text": "添加迁移源文件",
+      "status": "machine-generated"
+    },
+    "translator.dialog.cancel.text": {
+      "text": "取消",
+      "status": "machine-generated"
+    },
+    "translator.dialog.close.title": {
+      "text": "关闭",
+      "status": "machine-generated"
+    },
+    "translator.dialog.componentCatalogAddRecord.title": {
+      "text": "元器件目录 添加记录",
+      "status": "machine-generated"
+    },
+    "translator.dialog.confirmAuthoritativeChanges.title": {
+      "text": "确认权威性变更",
+      "status": "machine-generated"
+    },
+    "translator.dialog.discardAndReload.text": {
+      "text": "丢弃并重新加载",
+      "status": "machine-generated"
+    },
+    "translator.dialog.discardUnsavedChanges.title": {
+      "text": "是否要放弃未保存的更改？",
+      "status": "machine-generated"
+    },
+    "translator.dialog.draftReverted.title": {
+      "text": "草稿已撤回",
+      "status": "machine-generated"
+    },
+    "translator.dialog.exitWithoutSaving.text": {
+      "text": "不保存直接退出",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageBuildIsRunning.title": {
+      "text": "正在运行语言构建",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageRebuildFailed.title": {
+      "text": "语言重建失败",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageRebuildSucceeded.title": {
+      "text": "语言重建成功",
+      "status": "machine-generated"
+    },
+    "translator.dialog.maximize.title": {
+      "text": "最大化",
+      "status": "machine-generated"
+    },
+    "translator.dialog.minimize.title": {
+      "text": "最小化",
+      "status": "machine-generated"
+    },
+    "translator.dialog.mydefragLanguageMaintenance.text": {
+      "text": "我的磁盘碎片整理工具语言维护",
+      "status": "machine-generated"
+    },
+    "translator.dialog.nothingToSave.title": {
+      "text": "没有要保存的内容",
+      "status": "machine-generated"
+    },
+    "translator.dialog.returnToBuild.text": {
+      "text": "返回构建",
+      "status": "machine-generated"
+    },
+    "translator.dialog.revertFailed.title": {
+      "text": "回滚失败",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveAndBuildSucceeded.title": {
+      "text": "保存和构建成功",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveAndRebuild.text": {
+      "text": "保存并重建",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveBlocked.title": {
+      "text": "保存被阻止",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "保存失败并已回滚",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanFile.text": {
+      "text": "扫描文件",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanMigrationSourceFile.title": {
+      "text": "扫描迁移源文件",
+      "status": "machine-generated"
+    },
+    "translator.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "选择“我的碎片整理程序”语法库",
+      "status": "machine-generated"
+    },
+    "translator.dialog.startingMydefragLanguageMaintenance.title": {
+      "text": "开始我的“磁盘碎片整理”语言维护工作",
+      "status": "machine-generated"
+    },
+    "translator.dialog.unsavedLanguageChanges.title": {
+      "text": "未保存的语言更改",
+      "status": "machine-generated"
+    },
+    "translator.dialog.valueFailed.title": {
+      "text": "{title} 失败",
+      "status": "machine-generated"
+    },
+    "translator.directive.language.text": {
+      "text": "; @mydfrg 语言 {locale}",
+      "status": "machine-generated"
+    },
+    "translator.heading.languageMaintenance.text": {
+      "text": "语言维护",
+      "status": "machine-generated"
+    },
+    "translator.heading.languageOperation.text": {
+      "text": "语言操作",
+      "status": "machine-generated"
+    },
+    "translator.heading.operationResult.text": {
+      "text": "操作结果",
+      "status": "machine-generated"
+    },
+    "translator.input.filterSourceFilePaths.placeholder": {
+      "text": "过滤源文件路径",
+      "status": "machine-generated"
+    },
+    "translator.input.searchAllFields.placeholder": {
+      "text": "搜索所有字段",
+      "status": "machine-generated"
+    },
+    "translator.input.searchComponentIdOrDescription.placeholder": {
+      "text": "搜索组件 ID 或描述",
+      "status": "machine-generated"
+    },
+    "translator.input.searchComponents.placeholder": {
+      "text": "搜索组件",
+      "status": "machine-generated"
+    },
+    "translator.input.searchValue.placeholder": {
+      "text": "搜索 {definitionTitle}",
+      "status": "machine-generated"
+    },
+    "translator.message.aLanguageBuildIsAlreadyRunning.text": {
+      "text": "语言构建正在运行。",
+      "status": "machine-generated"
+    },
+    "translator.message.aLineAwareVscodiumOrVsCodeInstallation.text": {
+      "text": "未找到支持行号的 VS Codium 或 VS Code 安装；源文件已通过其默认应用程序打开。",
+      "status": "machine-generated"
+    },
+    "translator.message.applicationFailedToStart.text": {
+      "text": "应用程序启动失败",
+      "status": "machine-generated"
+    },
+    "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
+      "text": "未选择有效的“我的碎片整理程序”语法存储库。",
+      "status": "machine-generated"
+    },
+    "translator.message.buildCancelledByUser.text": {
+      "text": "构建被用户取消。",
+      "status": "machine-generated"
+    },
+    "translator.message.buildProcessDidNotReportTerminationAfterCancellation.text": {
+      "text": "取消后，构建过程未报告已终止。",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordAddedToInMemoryDraft.text": {
+      "text": "将书目记录添加到内存中的草稿中",
+      "status": "machine-generated"
+    },
+    "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
+      "text": "选择拥有语言 / canonical 并构建 / language 的仓库。",
+      "status": "machine-generated"
+    },
+    "translator.message.componentAddedInMemory.text": {
+      "text": "组件已添加到内存中",
+      "status": "machine-generated"
+    },
+    "translator.message.componentAssignmentIsStaleRebuildRequired.text": {
+      "text": "组件分配已过时；需要重新构建。",
+      "status": "machine-generated"
+    },
+    "translator.message.componentChangeRejected.text": {
+      "text": "组件更改被拒绝",
+      "status": "machine-generated"
+    },
+    "translator.message.componentUpdatedInMemory.text": {
+      "text": "内存中的组件已更新",
+      "status": "machine-generated"
+    },
+    "translator.message.deeplApiCallsAreEnabledForThisRebuild.text": {
+      "text": "此重建已启用 Deep L API 调用",
+      "status": "machine-generated"
+    },
+    "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
+      "text": "Deep L 已禁用；使用标准化英语",
+      "status": "machine-generated"
+    },
+    "translator.message.draftUpdated.text": {
+      "text": "更新草案",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateComponentIdValue.text": {
+      "text": "组件 ID 重复：{componentId}",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateValueValue.text": {
+      "text": "{definitionIdentityKey} 的重复问题：{identity}",
+      "status": "machine-generated"
+    },
+    "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
+      "text": "现有组件标识符无法重命名。",
+      "status": "machine-generated"
+    },
+    "translator.message.exitAndDiscardAllInMemoryChanges.text": {
+      "text": "退出并丢弃内存中的所有更改吗？",
+      "status": "machine-generated"
+    },
+    "translator.message.forcingTheLanguageBuildProcessToStop.text": {
+      "text": "强制停止语言构建过程",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidComponentRequest.text": {
+      "text": "组件请求无效。",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidFileSelection.text": {
+      "text": "文件选择无效。",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidRecordRequest.text": {
+      "text": "记录请求无效。",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCancelled.text": {
+      "text": "语言构建已取消",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCommandCompleted.text": {
+      "text": "语言构建命令已完成",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCommandFailed.text": {
+      "text": "语言构建命令失败",
+      "status": "machine-generated"
+    },
+    "translator.message.languageDataReloaded.text": {
+      "text": "语言数据更新",
+      "status": "machine-generated"
+    },
+    "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "尚未加载语言维护数据。",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationAssignmentRejected.text": {
+      "text": "迁移任务被拒绝",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationCandidatesAreUnavailableBecauseTheReportStatus.text": {
+      "text": "由于报告状态为“{reportFileStatus}”，因此无法使用迁移候选项。",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationCandidatesUnavailable.text": {
+      "text": "无法找到迁移候选项",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationComponentAssignmentUpdated.text": {
+      "text": "迁移组件分配已更新",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileAdded.text": {
+      "text": "已添加迁移文件",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileAlreadyListed.text": {
+      "text": "迁移文件已列出",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRejected.text": {
+      "text": "迁移文件被拒绝",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRemovalFailed.text": {
+      "text": "迁移文件删除失败",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRemoved.text": {
+      "text": "迁移文件已删除",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesAdded.text": {
+      "text": "已添加迁移文件",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesRejected.text": {
+      "text": "迁移文件被拒绝",
+      "status": "machine-generated"
+    },
+    "translator.message.noApplicableSchemaIsAvailableForValue.text": {
+      "text": "{viewName} 没有可用的模式。",
+      "status": "machine-generated"
+    },
+    "translator.message.noLanguageBuildIsRunning.text": {
+      "text": "当前没有正在运行的语言构建任务。",
+      "status": "machine-generated"
+    },
+    "translator.message.noNewFilesAdded.text": {
+      "text": "未添加新文件",
+      "status": "machine-generated"
+    },
+    "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
+      "text": "这不是 My Defragmenter 的语言库。缺失：{missing}",
+      "status": "machine-generated"
+    },
+    "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
+      "text": "未出现在迁移报告中；需要重新构建。",
+      "status": "machine-generated"
+    },
+    "translator.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "路径超出了仓库根目录范围：{relativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.recordRejected.text": {
+      "text": "记录被拒绝",
+      "status": "machine-generated"
+    },
+    "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
+      "text": "重新加载将清除内存中所有语言设置的更改。",
+      "status": "machine-generated"
+    },
+    "translator.message.runningLanguageBuildCommand.text": {
+      "text": "运行语言构建命令",
+      "status": "machine-generated"
+    },
+    "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
+      "text": "在重新构建之前，请保存或还原内存中的更改。",
+      "status": "machine-generated"
+    },
+    "translator.message.selectAValidComponent.text": {
+      "text": "请选择一个有效的组件。",
+      "status": "machine-generated"
+    },
+    "translator.message.selectAValidComponentBeforeAddingFiles.text": {
+      "text": "在添加文件之前，请先选择一个有效的组件。",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
+      "text": "所选文件位于仓库根目录之外：{absolutePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedPathIsNotAFileValue.text": {
+      "text": "所选路径不是文件：{absolutePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceFileOpened.text": {
+      "text": "已打开源文件",
+      "status": "machine-generated"
+    },
+    "translator.message.theComponentChangedOrNoLongerExists.text": {
+      "text": "该组件已更改或不再存在。",
+      "status": "machine-generated"
+    },
+    "translator.message.theConfiguredLanguageBuilderDoesNotExposeExtractstringcandidates.text": {
+      "text": "已配置的语言构建器未提供“提取字符串候选项”功能。",
+      "status": "machine-generated"
+    },
+    "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
+      "text": "无法停止语言构建过程。",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationFileIsNoLongerListed.text": {
+      "text": "迁移文件已不再显示在列表中。",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportComponentAssignmentIsStaleRebuild.text": {
+      "text": "迁移报告组件的分配已过期。请重新生成语言输出。",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportDoesNotContainThisFile.text": {
+      "text": "迁移报告中未包含此文件。请重新生成语言输出。",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportDoesNotIncludeCatalogFound.text": {
+      "text": "迁移报告中未包含在目录中找到的字符串。请重新生成语言输出。",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportIsMissingFullCandidateSource.text": {
+      "text": "迁移报告中缺少完整的候选源代码行。请重新生成语言输出。",
+      "status": "machine-generated"
+    },
+    "translator.message.theRecordChangedOrNoLongerExists.text": {
+      "text": "该记录已更改或已不存在。",
+      "status": "machine-generated"
+    },
+    "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
+      "text": "受限预加载桥不可用。",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineIsNotACurrentMigration.text": {
+      "text": "所选线路目前并非迁移候选对象。",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineIsNotACurrentReported.text": {
+      "text": "所选行并非当前已报告的迁移字符串。",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringIsNoLongerACurrent.text": {
+      "text": "所选字符串已不再是当前正在扫描的迁移候选项。",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileCouldNotBeOpened.text": {
+      "text": "无法打开源文件。",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddFiles.text": {
+      "text": "无法添加文件。",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddTheScannedFile.text": {
+      "text": "无法添加扫描文件。",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToApplyTheComponent.text": {
+      "text": "无法应用该组件。",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAssignTheComponent.text": {
+      "text": "无法分配该组件。",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadLanguageData.text": {
+      "text": "无法加载语言数据。",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadMigrationCandidates.text": {
+      "text": "无法加载迁移候选项。",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToOpenMigrationSource.text": {
+      "text": "无法打开迁移源",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToOpenValueValue.text": {
+      "text": "无法打开 {targetRelativePath}：{error}",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
+      "text": "无法读取构建 / 语言 / 报告 / 迁移报告 .json：{errorMessage}",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToRemoveTheFile.text": {
+      "text": "无法删除该文件。",
+      "status": "machine-generated"
+    },
+    "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
+      "text": "验证语言更改；已启用 Deep L API 调用",
+      "status": "machine-generated"
+    },
+    "translator.message.validatingLanguageChangesDeeplIsDisabled.text": {
+      "text": "验证语言更改；深度学习已禁用",
+      "status": "machine-generated"
+    },
+    "translator.message.validationResult.text": {
+      "text": "验证结果",
+      "status": "machine-generated"
+    },
+    "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "请等待构建完成后再退出。",
+      "status": "machine-generated"
+    },
+    "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
+      "text": "等待语言构建过程结束",
+      "status": "machine-generated"
+    },
+    "translator.message.writeValueAuthoritativeFileS.text": {
+      "text": "是否要写入{normalizedCount}中的权威文件？",
+      "status": "machine-generated"
+    },
+    "translator.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "捕获生成的文件以备回滚",
+      "status": "machine-generated"
+    },
+    "translator.progress.checkingGeneratedFileChanges.status": {
+      "text": "检查生成的文件更改",
+      "status": "machine-generated"
+    },
+    "translator.progress.committingLanguageChanges.status": {
+      "text": "提交语言更改",
+      "status": "machine-generated"
+    },
+    "translator.progress.rebuildingLanguageOutputs.status": {
+      "text": "重建语言输出",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "还原权威文件和生成的文件",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringFilesAfterAnError.status": {
+      "text": "发生错误后恢复文件",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringGeneratedFiles.status": {
+      "text": "恢复生成的文件",
+      "status": "machine-generated"
+    },
+    "translator.progress.savingLanguageData.status": {
+      "text": "保存语言数据",
+      "status": "machine-generated"
+    },
+    "translator.progress.startingSaveAndRebuild.status": {
+      "text": "开始保存并重建",
+      "status": "machine-generated"
+    },
+    "translator.progress.stoppingLanguageBuild.status": {
+      "text": "停止语言构建",
+      "status": "machine-generated"
+    },
+    "translator.progress.unableToStartLanguageBuild.status": {
+      "text": "无法启动语言构建",
+      "status": "machine-generated"
+    },
+    "translator.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "在进度窗口中使用“停止构建”选项，然后等待回滚完成再关闭应用程序。",
+      "status": "machine-generated"
+    },
+    "translator.progress.waitingForSaveConfirmation.status": {
+      "text": "正在等待保存确认",
+      "status": "machine-generated"
+    },
+    "translator.progress.writingAuthoritativeLanguageFiles.status": {
+      "text": "编写权威语言文件",
+      "status": "machine-generated"
+    },
+    "translator.ui.addComponent.text": {
+      "text": "添加组件",
+      "status": "machine-generated"
+    },
+    "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
+      "text": "已添加到{componentSelectValue}组件下的源文件中。仍需保存。",
+      "status": "machine-generated"
+    },
+    "translator.ui.addFiles.text": {
+      "text": "添加文件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.addRecord.text": {
+      "text": "添加记录",
+      "status": "machine-generated"
+    },
+    "translator.ui.addToSourceFiles.text": {
+      "text": "添加到源文件中",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCandidates.text": {
+      "text": "所有候选人",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCandidatesValue.text": {
+      "text": "所有候选人：{filePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponentDetails.text": {
+      "text": "所有组件详情",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponents.text": {
+      "text": "所有组件",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponentsNoComponentFilter.text": {
+      "text": "所有组件 | 不包含任何组件的筛选条件",
+      "status": "machine-generated"
+    },
+    "translator.ui.allowDeeplCalls.text": {
+      "text": "允许 Deep L 调用",
+      "status": "machine-generated"
+    },
+    "translator.ui.alreadyInSourceFiles.text": {
+      "text": "已存在于源文件中",
+      "status": "machine-generated"
+    },
+    "translator.ui.alreadyListedUnderComponentValue.text": {
+      "text": "已列入{scannedFileInventoryComponent}组件下。",
+      "status": "machine-generated"
+    },
+    "translator.ui.analyzingSourceContext.text": {
+      "text": "正在分析源上下文。",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyInMemory.text": {
+      "text": "在内存中应用",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyNormalizedText.text": {
+      "text": "应用规范化文本",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyToInMemoryDraft.text": {
+      "text": "应用到内存草稿中",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignNewFilesTo.text": {
+      "text": "将新文件分配给",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignToComponent.text": {
+      "text": "分配给组件",
+      "status": "machine-generated"
+    },
+    "translator.ui.authoritativeFiles.text": {
+      "text": "权威文件",
+      "status": "machine-generated"
+    },
+    "translator.ui.availableComponents.text": {
+      "text": "可用组件",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text": {
+      "text": "徽章 {stateDirty}",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text2": {
+      "text": "徽章 {validationOk}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateDetails.text": {
+      "text": "候选人详情",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogMatches.text": {
+      "text": "目录匹配结果",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogOutputLocales.text": {
+      "text": "目录输出语言环境",
+      "status": "machine-generated"
+    },
+    "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
+      "text": "从权威组件库 .json 中选择一个组件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.clearEditor.text": {
+      "text": "清除编辑器",
+      "status": "machine-generated"
+    },
+    "translator.ui.closeCandidates.text": {
+      "text": "接近的候选人",
+      "status": "machine-generated"
+    },
+    "translator.ui.component.text": {
+      "text": "组件",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
+      "text": "“组件目录”和“诊断信息”将显示来自每个组件的记录。",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentDetails.text": {
+      "text": "组件详情",
+      "status": "machine-generated"
+    },
+    "translator.ui.components.text": {
+      "text": "组件",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentSelection.text": {
+      "text": "元器件选型",
+      "status": "machine-generated"
+    },
+    "translator.ui.coverageUnavailableValue.text": {
+      "text": "无法访问：{resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.coverageUnavailableValue.text2": {
+      "text": "无法访问：{fileError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
+      "text": "源自所选的规范目录消息。",
+      "status": "machine-generated"
+    },
+    "translator.ui.description.text": {
+      "text": "描述",
+      "status": "machine-generated"
+    },
+    "translator.ui.detectedPlaceholdersValue.text": {
+      "text": "检测到的占位符：{arrayFromNewSetNamesSort}",
+      "status": "machine-generated"
+    },
+    "translator.ui.discardAllInMemoryChanges.text": {
+      "text": "是否丢弃内存中的所有更改？",
+      "status": "machine-generated"
+    },
+    "translator.ui.editComponent.text": {
+      "text": "编辑组件",
+      "status": "machine-generated"
+    },
+    "translator.ui.editRecord.text": {
+      "text": "编辑记录",
+      "status": "machine-generated"
+    },
+    "translator.ui.editValue.text": {
+      "text": "编辑 {componentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.filteredToComponentValue.text": {
+      "text": "按组件筛选：{selectedComponent}",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedFiles.text": {
+      "text": "生成的文件",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedFilesChanged.text": {
+      "text": "生成的文件已更改",
+      "status": "machine-generated"
+    },
+    "translator.ui.hideLeftPanel.text": {
+      "text": "隐藏左侧面板",
+      "status": "machine-generated"
+    },
+    "translator.ui.identifier.text": {
+      "text": "标识符",
+      "status": "machine-generated"
+    },
+    "translator.ui.invalidValueErrorS.text": {
+      "text": "无效（{validationErrorsCount} 错误）",
+      "status": "machine-generated"
+    },
+    "translator.ui.join.text": {
+      "text": ").join(', ')}",
+      "status": "machine-generated"
+    },
+    "translator.ui.lineValue.text": {
+      "text": "第{candidateLine}行",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingPotentialFoundCoverage.text": {
+      "text": "正在加载/的潜在报道。",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingProjectLanguageData.text": {
+      "text": "正在加载项目语言数据。",
+      "status": "machine-generated"
+    },
+    "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
+      "text": "维护语言 / 规范 / 组件 .json → 迁移清单 .scanFiles",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationCoverageUnavailable.text": {
+      "text": "无法提供迁移相关信息",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationCoverageValue.text": {
+      "text": "迁移报道 {fileCatalogedStringCount}",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventory.text": {
+      "text": "迁移清单",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventory.text2": {
+      "text": "迁移清单",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventoryEntries.text": {
+      "text": "迁移清单条目",
+      "status": "machine-generated"
+    },
+    "translator.ui.no.text": {
+      "text": "不",
+      "status": "machine-generated"
+    },
+    "translator.ui.noCandidateStringsWereFoundInThisFile.text": {
+      "text": "未在此文件中找到任何候选字符串。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noComponentMatchesTheSearch.text": {
+      "text": "没有符合搜索条件的组件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFileSelected.text": {
+      "text": "未选择文件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFilesMatchTheCurrentFilter.text": {
+      "text": "没有文件符合当前筛选条件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
+      "text": "未报告该文件有任何迁移候选项。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noMigrationSourceFilesAreListed.text": {
+      "text": "未列出任何迁移源文件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noRecordsMatchTheCurrentFilters.text": {
+      "text": "没有记录符合当前的筛选条件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noScanResultsAreAvailable.text": {
+      "text": "没有扫描结果。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noStableSourceConstructWasFound.text": {
+      "text": "未找到稳定的源构造。",
+      "status": "machine-generated"
+    },
+    "translator.ui.notSet.text": {
+      "text": "(未设置)",
+      "status": "machine-generated"
+    },
+    "translator.ui.notValidated.text": {
+      "text": "未验证",
+      "status": "machine-generated"
+    },
+    "translator.ui.noUnsavedChanges.text": {
+      "text": "没有未保存的更改",
+      "status": "machine-generated"
+    },
+    "translator.ui.openSource.text": {
+      "text": "开源",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
+      "text": "在禁用 Deep L 的情况下准备标准化重建",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingNormalizedSaveWithDeeplDisabled.text": {
+      "text": "在禁用 Deep L 的情况下准备归一化保存",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text": {
+      "text": "在启用 Deep L API 调用的情况下准备重建",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
+      "text": "在启用 Deep L API 调用时准备保存",
+      "status": "machine-generated"
+    },
+    "translator.ui.recoveryFilesRetained.text": {
+      "text": "保留了恢复文件",
+      "status": "machine-generated"
+    },
+    "translator.ui.remove.text": {
+      "text": "删除",
+      "status": "machine-generated"
+    },
+    "translator.ui.removeValueFromTheMigrationInventory.text": {
+      "text": "是否从迁移清单中移除{filePath}？",
+      "status": "machine-generated"
+    },
+    "translator.ui.repositoryMaintenanceTool.text": {
+      "text": "仓库维护工具",
+      "status": "machine-generated"
+    },
+    "translator.ui.restore.text": {
+      "text": "还原",
+      "status": "machine-generated"
+    },
+    "translator.ui.restoringTheLastLoadedDraftAndValidatingIt.text": {
+      "text": "恢复上次加载的草稿并对其进行验证",
+      "status": "machine-generated"
+    },
+    "translator.ui.revertingLanguageData.text": {
+      "text": "还原语言数据",
+      "status": "machine-generated"
+    },
+    "translator.ui.runtime.text": {
+      "text": "运行时",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFailedValue.text": {
+      "text": "扫描失败：{resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFile.text": {
+      "text": "扫描文件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
+      "text": "扫描了{scannedFileExtractedCount}中的候选字符串，且未更改库存。",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanningSelectedFile.text": {
+      "text": "正在扫描所选文件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFile.text": {
+      "text": "扫描源文件",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFileValue.text": {
+      "text": "源文件扫描件：{scannedFilePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scope.text": {
+      "text": "范围",
+      "status": "machine-generated"
+    },
+    "translator.ui.search.text": {
+      "text": "搜索",
+      "status": "machine-generated"
+    },
+    "translator.ui.searchAndFilter.text": {
+      "text": "搜索和筛选",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAComponent.text": {
+      "text": "（选择一个组件）",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
+      "text": "选择一个文件，以显示“提取字符串候选项”功能所接受的所有字符串。",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
+      "text": "选择一名被举报的候选人，以查看其状态。",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
+      "text": "在添加记录之前，请先选择一个特定的组件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectedValue.text": {
+      "text": "已选中：{scannedFilePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectFile.text": {
+      "text": "选择文件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
+      "text": "选择一个仓库文件进行检查，但不将其添加到源库存中。",
+      "status": "machine-generated"
+    },
+    "translator.ui.setPreviewDefault.text": {
+      "text": "设置预览默认值",
+      "status": "machine-generated"
+    },
+    "translator.ui.showingRecordsFromAllComponents.text": {
+      "text": "显示来自所有组件的记录",
+      "status": "machine-generated"
+    },
+    "translator.ui.showLeftPanel.text": {
+      "text": "显示左侧面板",
+      "status": "machine-generated"
+    },
+    "translator.ui.statusInCatalog.text": {
+      "text": "状态：已收录",
+      "status": "machine-generated"
+    },
+    "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
+      "text": "使用规范词替换的翻译导向预览。",
+      "status": "machine-generated"
+    },
+    "translator.ui.uncheckedBuildsUseNormalizedEnglishAndDoNot.title": {
+      "text": "未经过检查的构建版本使用规范化的英语，且不调用 Deep L。",
+      "status": "machine-generated"
+    },
+    "translator.ui.unsavedChanges.text": {
+      "text": "未保存的更改",
+      "status": "machine-generated"
+    },
+    "translator.ui.unsavedChangesRemainInMemoryContinueToAnother.text": {
+      "text": "未保存的更改仍保存在内存中。是否继续切换到另一个视图？",
+      "status": "machine-generated"
+    },
+    "translator.ui.useSuggestedKey.text": {
+      "text": "使用建议的键",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationFailedWithValueErrorS.text": {
+      "text": "验证失败，出现{validationErrorsCount}个错误。",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationListValue.text": {
+      "text": "验证列表 {kind}",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationPassedWithValueWarningS.text": {
+      "text": "验证通过，存在{validationWarningsCount}个警告。",
+      "status": "machine-generated"
+    },
+    "translator.ui.validValueWarningS.text": {
+      "text": "有效（{validationWarningsCount} 警告）",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueRecordS.text": {
+      "text": "{recordsCount} 记录(s)",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueSourceFileS.text": {
+      "text": "{filesCount} 源文件",
+      "status": "machine-generated"
+    },
+    "translator.ui.viewHeadingDataViewToolbar.text": {
+      "text": "查看标题数据 查看工具栏",
+      "status": "machine-generated"
+    },
+    "translator.ui.yes.text": {
+      "text": "是",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.candidateStatus.label": {
+      "text": "候选人身份",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForScannedMigrationFiles.label": {
+      "text": "用于扫描迁移文件的组件",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.editCatalogRecordValue.label": {
+      "text": "编辑目录记录 {entryKey}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByStatus.label": {
+      "text": "按状态筛选候选人",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.languageReportArtifactText.label": {
+      "text": "语言报告文档正文",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.localeTemplate.label": {
+      "text": "区域设置模板",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.selectValue.label": {
+      "text": "选择{filePath}",
+      "status": "machine-generated"
+    },
+    "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
+      "text": "/ 语言区域下的已编写文件将始终被保留。",
+      "status": "machine-generated"
+    },
+    "translator.dialog.componentCatalogEditRecord.title": {
+      "text": "元器件目录：编辑记录",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteCatalogOnSave.text": {
+      "text": "保存时删除目录",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteGeneratedCatalogDataValue.text": {
+      "text": "删除生成的目录数据：{catalogRemovals}",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteLocaleValue.title": {
+      "text": "删除语言环境{id}？",
+      "status": "machine-generated"
+    },
+    "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
+      "text": "生成的区域设置目录将被保留。",
+      "status": "machine-generated"
+    },
+    "translator.dialog.keepCatalogRecommended.text": {
+      "text": "保留目录（推荐）",
+      "status": "machine-generated"
+    },
+    "translator.dialog.noAuthoritativeFilesWillChange.text": {
+      "text": "不会更改任何权威文件。",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveTheReportArtifactSeparately.title": {
+      "text": "将报告工件单独保存",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanFolder.text": {
+      "text": "扫描文件夹",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanMigrationSourceFolder.title": {
+      "text": "扫描迁移源文件夹",
+      "status": "machine-generated"
+    },
+    "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
+      "text": "生成的构建 / 语言 / 目录 / {id} 数据将默认保留。",
+      "status": "machine-generated"
+    },
+    "translator.message.aScannedSourcePathIsNotANormalized.text": {
+      "text": "已扫描的源路径并非规范化的仓库相对文件路径。",
+      "status": "machine-generated"
+    },
+    "translator.message.candidateStatusRejected.text": {
+      "text": "候选人资格被驳回",
+      "status": "machine-generated"
+    },
+    "translator.message.candidateStatusUpdatedInMemory.text": {
+      "text": "内存中的候选状态已更新",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordIsNoLongerAvailable.text": {
+      "text": "该馆藏记录已不可用简体中文（大陆）",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordUpdatedInMemory.text": {
+      "text": "内存中的目录记录已更新",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateLocaleIdValue.text": {
+      "text": "区域设置 ID 重复：{localeId}",
+      "status": "machine-generated"
+    },
+    "translator.message.existingLocaleIdentifiersCannotBeRenamed.text": {
+      "text": "现有区域设置标识符无法重命名。",
+      "status": "machine-generated"
+    },
+    "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
+      "text": "生成的语言环境目录不是一个目录：{relativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleIdentifierForCatalogRemovalValue.text": {
+      "text": "删除目录时使用的区域设置标识符无效：{localeId}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleRequest.text": {
+      "text": "区域设置请求无效。",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleStatusValue.text": {
+      "text": "无效的区域设置状态：{localeStatus}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidScannedFileSelection.text": {
+      "text": "所选的扫描文件无效。",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportArtifactSaved.text": {
+      "text": "语言报告文档已保存",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportArtifactWasNotSaved.text": {
+      "text": "语言报告工件未保存",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportTextExceedsThe5000000.text": {
+      "text": "语言报告正文超过了 5 000 000 个字符的安全限制。",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportTextMustBeAString.text": {
+      "text": "语言报告文本必须是一个字符串。",
+      "status": "machine-generated"
+    },
+    "translator.message.localeAdded.text": {
+      "text": "已添加语言环境",
+      "status": "machine-generated"
+    },
+    "translator.message.localeDeletedFromRegistry.text": {
+      "text": "已从注册表中删除该区域设置",
+      "status": "machine-generated"
+    },
+    "translator.message.localeDirectionMustBeLtrOrRtl.text": {
+      "text": "区域设置的方向必须为 ltr 或 rtl。",
+      "status": "machine-generated"
+    },
+    "translator.message.localeUpdated.text": {
+      "text": "区域设置已更新",
+      "status": "machine-generated"
+    },
+    "translator.message.localeValueNoLongerExists.text": {
+      "text": "区域设置 {id} 已不存在。",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesAlreadyListed.text": {
+      "text": "已列出的迁移文件",
+      "status": "machine-generated"
+    },
+    "translator.message.removeValueFromTheLocaleRegistry.text": {
+      "text": "是否应从区域设置注册表中删除{id}？",
+      "status": "machine-generated"
+    },
+    "translator.message.requiredLocaleValueCannotBeDeleted.text": {
+      "text": "无法删除必需的区域设置{id}。",
+      "status": "machine-generated"
+    },
+    "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
+      "text": "在保存规范语言数据之前，请先保存或放弃对语言报告所做的编辑。",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedFolderIsOutsideTheRepositoryRootValue.text": {
+      "text": "所选文件夹位于仓库根目录之外：{folderPath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedPathIsNotAFolderValue.text": {
+      "text": "所选路径不是文件夹：{folderPath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectPotentialCandidateRejectedOrReview.text": {
+      "text": "选择“潜在候选人”、“已拒绝”或“审核”。",
+      "status": "machine-generated"
+    },
+    "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
+      "text": "目录记录 {recordKey} 已更改或不再存在。",
+      "status": "machine-generated"
+    },
+    "translator.message.theLanguageReportChangedOnDiskReloadIt.text": {
+      "text": "磁盘上的语言报告已发生更改。请在保存编辑内容之前重新加载该报告。",
+      "status": "machine-generated"
+    },
+    "translator.message.theLocaleChangedOrNoLongerExists.text": {
+      "text": "该区域已更改或已不存在。",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationCandidatesCouldNotBeReloaded.text": {
+      "text": "无法重新加载迁移候选项。",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedTextIsNoLongerACurrent.text": {
+      "text": "所选文本已不再是当前的非目录候选作品。",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddTheScannedFiles.text": {
+      "text": "无法添加扫描的文件。",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToApplyLocale.text": {
+      "text": "无法应用区域设置",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToDeleteLocale.text": {
+      "text": "无法删除语言环境",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadTheLanguageReportArtifact.text": {
+      "text": "无法加载语言报告工件。",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToRefreshCandidateCatalogStatus.text": {
+      "text": "无法刷新候选人目录状态",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToUpdateCandidateStatus.text": {
+      "text": "无法更新候选人状态。",
+      "status": "machine-generated"
+    },
+    "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
+      "text": "请使用诸如 en、fr CA 或 zh Hans 之类的区域设置标识符。",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
+      "text": "在保存规范语言数据之前，请在“语言报告”视图中使用“保存报告工件”功能。",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
+      "text": "使用“保存”按钮将候选状态持久化到语言/、规范/和组件.json中。",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
+      "text": "点击“保存”以将组件目录的更改永久保存。",
+      "status": "machine-generated"
+    },
+    "translator.message.valueIsNotAFile.text": {
+      "text": "{lANGUAGE_REPORT_PATH} 不是一个文件。",
+      "status": "machine-generated"
+    },
+    "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
+      "text": "{resultRelativePath} 是直接撰写的。未来的报告版本可能会替换这些修改。",
+      "status": "machine-generated"
+    },
+    "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
+      "text": "请等待语言构建完成后，再保存报告工件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.add1SelectedFile.text": {
+      "text": "添加 1 个选定的文件",
+      "status": "machine-generated"
+    },
+    "translator.ui.addCategory.text": {
+      "text": "添加分类",
+      "status": "machine-generated"
+    },
+    "translator.ui.addedValueFileSUnderComponentValueSave.text": {
+      "text": "在组件 {componentSelectValue} 下添加了 {resultAddedFilesCount} 文件。仍需保存。",
+      "status": "machine-generated"
+    },
+    "translator.ui.addLocale.text": {
+      "text": "添加区域设置",
+      "status": "machine-generated"
+    },
+    "translator.ui.addRole.text": {
+      "text": "添加角色",
+      "status": "machine-generated"
+    },
+    "translator.ui.addSelectedFiles.text": {
+      "text": "添加选定的文件",
+      "status": "machine-generated"
+    },
+    "translator.ui.addValueSelectedFiles.text": {
+      "text": "将选定的文件添加到{count}中",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCanonicalLocaleTemplatesAreAlreadyRegistered.text": {
+      "text": "所有标准区域设置模板均已注册",
+      "status": "machine-generated"
+    },
+    "translator.ui.allStatuses.text": {
+      "text": "所有状态",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyChanges.text": {
+      "text": "应用更改",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignSelectedFilesTo.text": {
+      "text": "将选定的文件分配给",
+      "status": "machine-generated"
+    },
+    "translator.ui.buildLanguageCatalogsValue.text": {
+      "text": "构建 / 语言 / 目录 / {currentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
+      "text": "候选方案的决策结果将与迁移清单一同保存。",
+      "status": "machine-generated"
+    },
+    "translator.ui.categories.text": {
+      "text": "分类",
+      "status": "machine-generated"
+    },
+    "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
+      "text": "“选项”页面与“语言”页面 / 以及“规范”页面 / 中的“语言”和“区域设置”页面 .json 内容一致。已注册的区域设置仍可见，但无法被选中。",
+      "status": "machine-generated"
+    },
+    "translator.ui.clear.text": {
+      "text": "清除",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentCatalog.text": {
+      "text": "元器件目录",
+      "status": "machine-generated"
+    },
+    "translator.ui.deleteLocale.text": {
+      "text": "删除语言环境",
+      "status": "machine-generated"
+    },
+    "translator.ui.diagnosticMessages.text": {
+      "text": "诊断信息",
+      "status": "machine-generated"
+    },
+    "translator.ui.discardUnsavedLanguageReportEditsAndReloadThe.text": {
+      "text": "是否要丢弃未保存的语言报告编辑内容并重新加载工件？",
+      "status": "machine-generated"
+    },
+    "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
+      "text": "无需离开“所有候选人”页面，即可在此处编辑匹配的记录。",
+      "status": "machine-generated"
+    },
+    "translator.ui.editingTheCurrentGeneratedReport.text": {
+      "text": "编辑当前生成的报告。",
+      "status": "machine-generated"
+    },
+    "translator.ui.editValue.text2": {
+      "text": "编辑 {currentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingCategories.text": {
+      "text": "现有分类",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingRoles.text": {
+      "text": "现有职位",
+      "status": "machine-generated"
+    },
+    "translator.ui.filterStatus.text": {
+      "text": "过滤器状态",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedArtifactManualEditsCanBeOverwrittenThe.text": {
+      "text": "生成的构建产物：手动编辑的内容可能会在下一次生成语言报告时被覆盖。",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogsDeleted.text": {
+      "text": "已删除生成的目录",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogsScheduledForDeletion.text": {
+      "text": "计划删除的生成的目录",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogValueWillBeDeletedWhenYou.text": {
+      "text": "保存后，生成的目录 {currentId} 将被删除。",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogValueWillBePreserved.text": {
+      "text": "生成的目录 {currentId} 将被保留。",
+      "status": "machine-generated"
+    },
+    "translator.ui.inspectedValueFileSScannedValueAsText.text": {
+      "text": "已检查{scannedFolderInspectedFileCount}文件；已将{scannedFolderScannedFileCount}作为文本进行扫描。",
+      "status": "machine-generated"
+    },
+    "translator.ui.languageReport.text": {
+      "text": "语言报告",
+      "status": "machine-generated"
+    },
+    "translator.ui.leftToRightLtr.text": {
+      "text": "从左到右（从左到右）",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingLanguageReportArtifact.text": {
+      "text": "正在加载语言报告工件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.locales.text": {
+      "text": "区域设置",
+      "status": "machine-generated"
+    },
+    "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
+      "text": "维护语言 /、区域设置 / 以及区域设置 .json。默认情况下，删除区域设置时会保留原始源文件，并保留生成的目录数据。",
+      "status": "machine-generated"
+    },
+    "translator.ui.nextLine.text": {
+      "text": "下一行",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFilesContainingCandidateStringsWereFoundIn.text": {
+      "text": "在此文件夹中未找到包含候选字符串的文件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFolderSelected.text": {
+      "text": "未选择任何文件夹。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
+      "text": "没有符合当前状态筛选条件的下一位候选人。",
+      "status": "machine-generated"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
+      "text": "没有之前的候选人符合当前的状态筛选条件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.notes.text": {
+      "text": "注释",
+      "status": "machine-generated"
+    },
+    "translator.ui.previousLine.text": {
+      "text": "上一行",
+      "status": "machine-generated"
+    },
+    "translator.ui.recommendedCategories.text": {
+      "text": "推荐分类",
+      "status": "machine-generated"
+    },
+    "translator.ui.recommendedRoles.text": {
+      "text": "推荐角色",
+      "status": "machine-generated"
+    },
+    "translator.ui.recursivelyInspectARepositoryFolderThenAddSelected.text": {
+      "text": "递归检查仓库文件夹，然后一次性添加选定的候选轴承文件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.refreshingCatalogMatches.text": {
+      "text": "刷新目录匹配结果。",
+      "status": "machine-generated"
+    },
+    "translator.ui.reject.text": {
+      "text": "拒绝",
+      "status": "machine-generated"
+    },
+    "translator.ui.reloadReportFromDisk.text": {
+      "text": "从磁盘重新加载报告",
+      "status": "machine-generated"
+    },
+    "translator.ui.requiredLocale.text": {
+      "text": "必需的区域设置",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeCandidateListAndCandidateEditor.text": {
+      "text": "调整候选列表和候选编辑器的尺寸",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeLocaleListAndLocaleEditor.text": {
+      "text": "调整语言环境列表和语言环境编辑器的尺寸",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeValueListAndEditor.text": {
+      "text": "调整{definitionTitle}列表和编辑器的尺寸",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeWorkspaceAndOperationResults.text": {
+      "text": "调整工作区大小和操作结果",
+      "status": "machine-generated"
+    },
+    "translator.ui.retry.text": {
+      "text": "重试",
+      "status": "machine-generated"
+    },
+    "translator.ui.rightToLeftRtl.text": {
+      "text": "从右到左（rtl）",
+      "status": "machine-generated"
+    },
+    "translator.ui.roles.text": {
+      "text": "角色",
+      "status": "machine-generated"
+    },
+    "translator.ui.saveReportArtifact.text": {
+      "text": "保存报告工件",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFolder.text": {
+      "text": "扫描文件夹。",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanningSelectedFolder.text": {
+      "text": "正在扫描所选文件夹。",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFolder.text": {
+      "text": "扫描源文件夹",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFolderValue.text": {
+      "text": "扫描源文件夹：{scannedFolderPath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectACategory.text": {
+      "text": "（选择一个类别）",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
+      "text": "选择一个文件夹，以查找包含候选字符串的文件。",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAllNew.text": {
+      "text": "全选新内容",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectALocaleOrAddANewOne.text": {
+      "text": "选择一个区域设置或添加一个新的区域设置。",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectALocaleTemplate.text": {
+      "text": "选择一个区域设置模板",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectARole.text": {
+      "text": "（选择角色）",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectedValue.text2": {
+      "text": "已选中：{scannedFolderPath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectFolder.text": {
+      "text": "选择文件夹。",
+      "status": "machine-generated"
+    },
+    "translator.ui.semanticKeywords.text": {
+      "text": "语义关键词",
+      "status": "machine-generated"
+    },
+    "translator.ui.skippedValueFileOrFolderPathS.text": {
+      "text": "跳过了{skipped}文件或文件夹路径。",
+      "status": "machine-generated"
+    },
+    "translator.ui.status.text": {
+      "text": "状态",
+      "status": "machine-generated"
+    },
+    "translator.ui.stoppedAtTheValueFileSafetyLimit.text": {
+      "text": "因达到{scannedFolderLimitsMaximumFiles}文件大小限制而停止。",
+      "status": "machine-generated"
+    },
+    "translator.ui.textDirection.text": {
+      "text": "文本方向",
+      "status": "machine-generated"
+    },
+    "translator.ui.theInventoryIsUnchangedUntilSelectedFilesAre.text": {
+      "text": "在添加选定的文件之前，库存保持不变。",
+      "status": "machine-generated"
+    },
+    "translator.ui.theReportDoesNotExistYetSavingWill.text": {
+      "text": "该报告尚不存在。保存后将生成该报告。",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
+      "text": "语言构建器需要此区域设置。",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueCandidateBearingFileSValuePotentialCandidate.text": {
+      "text": "{scannedFolderCandidateFileCount} 候选轴承文件，{scannedFolderCandidateCount} 潜在候选产品，{scannedFolderCatalogedStringCount} 在产品目录中找到",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text": {
+      "text": "{scannedFileCandidateCount} 非目录候选词，目录中已找到“{scannedFileCatalogedStringCount}”",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text2": {
+      "text": "{fileCandidateCount} 非目录候选词，目录中已找到“{fileCatalogedStringCount}”",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text3": {
+      "text": "{candidateRowsLengthCatalogedCount} 非目录候选词，目录中已找到{catalogedCount}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogValueFoundInCatalog.text": {
+      "text": "{fileCandidateCount} 在目录中发现了未收录的{fileCatalogedStringCount}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valuePotentialValueInCatalogValue.text": {
+      "text": "{fileCandidateCount} 目录 {inventoryText} 中可能包含 {fileCatalogedStringCount}",
+      "status": "machine-generated"
+    },
+    "translator.ui.view.text": {
+      "text": "查看",
+      "status": "machine-generated"
+    }
+  }
+}

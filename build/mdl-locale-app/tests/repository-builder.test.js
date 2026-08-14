@@ -46,6 +46,117 @@ test('component source participates in validation and targeted generation', (t) 
     assert.equal(generated.entries['parser.diagnostic.unexpectedToken.message'].fallbackLocale, null);
 });
 
+test('targeted generation preserves and durably records an unrelated generated translation', (t) => {
+    const rootDir = createFixture(t);
+    const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    const state = builder.loadLanguageState(rootDir);
+    const validation = builder.validateLanguageState(state, rootDir);
+    const canonical = state.catalog.entries.find((entry) => (
+        entry.component === 'extension'
+        && !(state.localeCatalogs.am?.entries || []).some((item) => item.key === entry.key)
+    ));
+    const generatedPath = path.join(
+        rootDir,
+        'build/language/catalogs/am/extension.json'
+    );
+    fs.mkdirSync(path.dirname(generatedPath), { recursive: true });
+    fs.writeFileSync(generatedPath, `${JSON.stringify({
+        locale: 'am',
+        component: 'extension',
+        generatedAt: new Date(0).toISOString(),
+        entries: {
+            [canonical.key]: {
+                text: 'TRADUCTION CONSERVÉE',
+                status: 'machine-generated',
+                sourceStatus: canonical.status,
+                fallbackLocale: null,
+                placeholders: canonical.placeholders || []
+            },
+            'extension.retired.translation.text': {
+                text: 'TRADUCTION HISTORIQUE',
+                status: 'machine-generated',
+                sourceStatus: 'deprecated',
+                fallbackLocale: null,
+                placeholders: []
+            }
+        }
+    }, null, 2)}\n`, 'utf8');
+
+    builder.buildLocaleComponentOutput(
+        state,
+        validation,
+        'am',
+        'extension',
+        rootDir
+    );
+
+    const generated = readJson(rootDir, 'build/language/catalogs/am/extension.json');
+    const authoritative = readJson(rootDir, 'language/locales/am/extension.json');
+    assert.equal(generated.entries[canonical.key].text, 'TRADUCTION CONSERVÉE');
+    assert.equal(generated.entries[canonical.key].fallbackLocale, null);
+    assert.equal(
+        generated.entries['extension.retired.translation.text'].text,
+        'TRADUCTION HISTORIQUE'
+    );
+    assert.deepEqual(authoritative.entries[canonical.key], {
+        text: 'TRADUCTION CONSERVÉE',
+        status: 'machine-generated'
+    });
+    assert.equal(
+        Object.prototype.hasOwnProperty.call(
+            authoritative.entries,
+            'extension.retired.translation.text'
+        ),
+        false
+    );
+});
+
+test('targeted generation replaces a translation with fallback only for an exact approved key', (t) => {
+    const rootDir = createFixture(t);
+    const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    const state = builder.loadLanguageState(rootDir);
+    const validation = builder.validateLanguageState(state, rootDir);
+    const canonical = state.catalog.entries.find((entry) => (
+        entry.component === 'extension'
+        && !(state.localeCatalogs.yo?.entries || []).some((item) => item.key === entry.key)
+    ));
+    const generatedPath = path.join(
+        rootDir,
+        'build/language/catalogs/yo/extension.json'
+    );
+    fs.mkdirSync(path.dirname(generatedPath), { recursive: true });
+    fs.writeFileSync(generatedPath, `${JSON.stringify({
+        locale: 'yo',
+        component: 'extension',
+        entries: {
+            [canonical.key]: {
+                text: 'TRADUCTION À RETIRER',
+                status: 'machine-generated',
+                sourceStatus: canonical.status,
+                fallbackLocale: null,
+                placeholders: canonical.placeholders || []
+            }
+        }
+    }, null, 2)}\n`, 'utf8');
+
+    builder.buildLocaleComponentOutput(
+        state,
+        validation,
+        'yo',
+        'extension',
+        rootDir,
+        { allowFallbackReplacementKeys: [canonical.key] }
+    );
+
+    const generated = readJson(rootDir, 'build/language/catalogs/yo/extension.json');
+    assert.equal(generated.entries[canonical.key].text, canonical.text);
+    assert.equal(generated.entries[canonical.key].fallbackLocale, 'en');
+    assert.equal(
+        fs.existsSync(path.join(rootDir, 'language/locales/yo/extension.json')),
+        false
+    );
+});
+
 test('component source rejects keys owned by another component', (t) => {
     const rootDir = createFixture(t);
     const componentPath = path.join(rootDir, 'language/locales/zh-Hans/parser.json');
@@ -64,13 +175,21 @@ test('component source rejects keys owned by another component', (t) => {
 test('default component generation fills only missing values with API translations', async (t) => {
     const rootDir = createFixture(t);
     const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
-    const state = builder.loadLanguageState(rootDir);
-    const authoredKeys = new Set((state.localeCatalogs['zh-Hans'].entries || []).map((entry) => entry.key));
-    const normalizationProbe = state.catalog.entries.find((entry) => (
+    const initialState = builder.loadLanguageState(rootDir);
+    const localeDocument = readJson(rootDir, 'language/locales/sw/extension.json');
+    const missingKey = initialState.catalog.entries.find((entry) => (
         entry.component === 'extension'
-        && !authoredKeys.has(entry.key)
         && (entry.placeholders || []).length === 0
-    ));
+        && localeDocument.entries[entry.key]
+    )).key;
+    delete localeDocument.entries[missingKey];
+    fs.writeFileSync(
+        path.join(rootDir, 'language/locales/sw/extension.json'),
+        `${JSON.stringify(localeDocument, null, 2)}\n`,
+        'utf8'
+    );
+    const state = builder.loadLanguageState(rootDir);
+    const normalizationProbe = state.catalog.entries.find((entry) => entry.key === missingKey);
     normalizationProbe.text = '$(check) serverJs:connection.onInitialize: SERVER loading configuration MyDefrag (.MyDc / .MyD) https://example.com/a-b.js ${uri.toString()}';
     const requests = [];
     const translator = {
@@ -88,7 +207,7 @@ test('default component generation fills only missing values with API translatio
     };
     const translation = await builder.createBuildTranslationSuggestions(state, {
         translator,
-        localeIds: ['zh-Hans'],
+        localeIds: ['sw'],
         componentId: 'extension'
     });
     const validation = builder.validateLanguageState(state, rootDir);
@@ -98,7 +217,7 @@ test('default component generation fills only missing values with API translatio
         translationUsage: translation.usage,
         translationMode: 'deepl'
     });
-    const generated = readJson(rootDir, 'build/language/catalogs/zh-Hans/extension.json');
+    const generated = readJson(rootDir, 'build/language/catalogs/sw/extension.json');
     const buildReport = readJson(rootDir, 'build/language/reports/language-build-report.json');
 
     assert.equal(translation.warnings.length, 0);
@@ -122,7 +241,7 @@ test('default component generation fills only missing values with API translatio
     assert.ok(requests[0].items.every((item) => !item.text.includes('MyDefrag')));
     assert.equal(
         generated.entries['extension.command.openPreview.title'].text,
-        state.localeCatalogs['zh-Hans'].entries.find((entry) => (
+        state.localeCatalogs.sw.entries.find((entry) => (
             entry.key === 'extension.command.openPreview.title'
         )).text
     );
@@ -130,6 +249,10 @@ test('default component generation fills only missing values with API translatio
     assert.ok(generatedEntry);
     assert.equal(generatedEntry.status, 'machine-generated');
     assert.equal(generatedEntry.fallbackLocale, null);
+    const durable = readJson(rootDir, 'language/locales/sw/extension.json');
+    assert.equal(durable.entries[
+        Object.keys(generated.entries).find((key) => generated.entries[key] === generatedEntry)
+    ].text, generatedEntry.text);
 });
 
 test('API translation failure warns, falls back, and does not fail generation', async (t) => {
@@ -142,7 +265,7 @@ test('API translation failure warns, falls back, and does not fail generation', 
     };
     const translation = await builder.createBuildTranslationSuggestions(state, {
         translator,
-        localeIds: ['fr-CA'],
+        localeIds: ['am'],
         componentId: 'parser'
     });
     const validation = builder.validateLanguageState(state, rootDir);
@@ -151,7 +274,7 @@ test('API translation failure warns, falls back, and does not fail generation', 
         translationSuggestions: translation.suggestions,
         translationWarnings: translation.warnings
     });
-    const generated = readJson(rootDir, 'build/language/catalogs/fr-CA/parser.json');
+    const generated = readJson(rootDir, 'build/language/catalogs/am/parser.json');
     const buildReport = readJson(rootDir, 'build/language/reports/language-build-report.json');
     const canonical = state.catalog.entries.find((entry) => (
         entry.key === 'parser.diagnostic.unexpectedToken.message'
@@ -212,7 +335,7 @@ test('placeholder-invalid API output warns and is excluded from generated sugges
     };
     const translation = await builder.createBuildTranslationSuggestions(state, {
         translator,
-        localeIds: ['fr-CA'],
+        localeIds: ['am'],
         componentId: 'parser'
     });
 

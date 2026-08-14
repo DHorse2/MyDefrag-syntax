@@ -41,7 +41,7 @@ test('configures an application-specific profile without changing the shared Ele
     ]);
 });
 
-test('writes append-only JSONL startup events and captures Electron lifecycle failures', (context) => {
+test('writes append-only startup events, compact call traces, and Electron failures', (context) => {
     const logDirectory = fs.mkdtempSync(path.join(os.tmpdir(), 'mydefrag-startup-log-'));
     context.after(() => fs.rmSync(logDirectory, { recursive: true, force: true }));
     let tick = 0;
@@ -55,6 +55,9 @@ test('writes append-only JSONL startup events and captures Electron lifecycle fa
 
     attachAppDiagnostics(app, diagnostics);
     attachWebContentsDiagnostics(webContents, 'splash', diagnostics);
+    diagnostics.trace('createMainWindow', 'enter');
+    diagnostics.trace('splashWindow.loadFile');
+    diagnostics.trace('splashWindow.loadFile', 'return');
     diagnostics.record('process-start', { profile: 'dedicated' });
     app.emit('child-process-gone', {}, {
         type: 'Utility',
@@ -73,6 +76,12 @@ test('writes append-only JSONL startup events and captures Electron lifecycle fa
     assert.equal(entries[1].details.name, 'Network Service');
     assert.equal(entries[2].details.label, 'splash');
     assert.ok(entries.every((entry) => entry.processId === 321));
+
+    const traceLines = fs.readFileSync(diagnostics.traceLogPath, 'utf8').trim().split(/\r?\n/);
+    assert.equal(traceLines.length, 3);
+    assert.match(traceLines[0], /^\d{4}-\d{2}-\d{2}T.+ \+1ms pid=321 enter createMainWindow$/);
+    assert.match(traceLines[1], / pid=321 call splashWindow\.loadFile$/);
+    assert.match(traceLines[2], / pid=321 return splashWindow\.loadFile$/);
 });
 
 test('temporary UDP monitor has a preserving uninstall path and permanent capture scripts', () => {
@@ -102,6 +111,10 @@ test('main process configures its dedicated profile before enabling the sandbox 
     assert.ok(profileIndex >= 0);
     assert.ok(sandboxIndex > profileIndex);
     assert.match(mainSource, /attachAppDiagnostics\(app, startupDiagnostics\)/);
+    assert.match(mainSource, /startupDiagnostics\.trace\('app\.whenReady'\)/);
+    assert.match(mainSource, /startupDiagnostics\.trace\('splashWindow\.loadFile'\)/);
+    assert.match(mainSource, /startupDiagnostics\.trace\('service\.load'\)/);
+    assert.match(mainSource, /startupDiagnostics\.trace\('mainWindow\.loadFile'\)/);
     assert.match(mainSource, /splashWindow\.show\(\)/);
     assert.match(mainSource, /mainWindow\.once\('ready-to-show'/);
     assert.doesNotMatch(mainSource, /main-window-show-fallback/);

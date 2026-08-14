@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "1d9dad1f",
+  "startedAt": "2026-08-14T00:40:14.337Z",
+  "finishedAt": "2026-08-14T00:59:02.526Z",
+  "status": "completed",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "Diagnose and fix Ctrl-click definition failure and duplicate hover commands"
+  ],
+  "promptPaths": [
+    "interactive user request"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

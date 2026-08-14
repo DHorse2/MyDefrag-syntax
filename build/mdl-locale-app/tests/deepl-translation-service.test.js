@@ -94,6 +94,24 @@ test('posts translation text with header authentication and preserves placeholde
     assert.equal(observed.options.body.includes('fixture-secret'), false);
 });
 
+test('omits custom instructions for targets where DeepL does not support them', async () => {
+    let body;
+    const translator = new DeepLTranslationService({
+        config: { apiKey: 'fixture', endpoint: 'https://deepl.test/v2/translate', timeoutMs: 5000 },
+        fetch: async (_url, options) => {
+            body = JSON.parse(options.body);
+            return {
+                ok: true,
+                status: 200,
+                json: async () => ({ translations: [{ text: 'Fungua hakiki' }] })
+            };
+        }
+    });
+    const result = await translator.translateText({ text: 'Open Preview', targetLocale: 'sw' });
+    assert.equal(result.ok, true);
+    assert.equal(Object.hasOwn(body, 'custom_instructions'), false);
+});
+
 test('returns an unusable result when placeholder markup is lost', async () => {
     const translator = new DeepLTranslationService({
         config: { apiKey: 'fixture', endpoint: 'https://deepl.test/v2/translate', timeoutMs: 5000 },
@@ -139,4 +157,62 @@ test('missing configuration fails safely without making a request', async () => 
     assert.equal(result.ok, false);
     assert.match(result.error, /DeeplApi or DEEPL_API_KEY/);
     assert.equal(requests, 0);
+});
+
+test('retrieves live target support and usage without exposing the credential', async () => {
+    const requests = [];
+    const translator = new DeepLTranslationService({
+        config: {
+            apiKey: 'fixture-secret:fx',
+            endpoint: 'https://api-free.deepl.test/v2/translate',
+            timeoutMs: 5000
+        },
+        fetch: async (url, options) => {
+            requests.push({ url, authorization: options.headers.Authorization });
+            if (url.includes('/v3/languages')) {
+                return {
+                    ok: true,
+                    status: 200,
+                    json: async () => ([{
+                        lang: 'am',
+                        name: 'Amharic',
+                        usable_as_target: true,
+                        status: 'stable',
+                        features: { tag_handling: { status: 'stable' } }
+                    }])
+                };
+            }
+            return {
+                ok: true,
+                status: 200,
+                json: async () => ({ character_count: 12, character_limit: 1000 })
+            };
+        }
+    });
+
+    const support = await translator.supportedTargetLanguages();
+    const usage = await translator.usage();
+    assert.deepEqual(support.languages, [{
+        code: 'am',
+        name: 'Amharic',
+        status: 'stable',
+        tagHandling: 'stable'
+    }]);
+    assert.equal(usage.characterCount, 12);
+    assert.equal(usage.characterLimit, 1000);
+    assert.equal(requests[0].url, 'https://api-free.deepl.test/v3/languages?resource=translate_text&include=beta');
+    assert.equal(requests[1].url, 'https://api-free.deepl.test/v2/usage');
+    assert.equal(requests[0].authorization, 'DeepL-Auth-Key fixture-secret:fx');
+});
+
+test('classifies quota exhaustion so a runner can stop cleanly', async () => {
+    const translator = new DeepLTranslationService({
+        config: { apiKey: 'fixture', endpoint: 'https://deepl.test/v2/translate', timeoutMs: 5000 },
+        fetch: async () => ({ ok: false, status: 456 })
+    });
+    const result = await translator.translateText({ text: 'Open Preview', targetLocale: 'fr-CA' });
+    assert.equal(result.ok, false);
+    assert.equal(result.httpStatus, 456);
+    assert.equal(result.errorCategory, 'quota-exhausted');
+    assert.equal(result.retryable, false);
 });

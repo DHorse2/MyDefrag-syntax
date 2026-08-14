@@ -1,0 +1,138 @@
+{
+  "locale": "ru",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "Языки программирования",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "Подсветка синтаксиса для языка сценариев «My Defragmenter»",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "Подсветка синтаксиса для языка сценариев «My Defragmenter»",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "Каталог с пользовательскими данными программы «My Defragmenter».",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "Моя программа дефрагментации",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "Каталог для файлов журнала программы «My Defragmenter».",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "Включить отладочную регистрацию расширения «Мой дефрагментатор».",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "Уровень подробности расширения «My Defragmenter». Для ведения отладочного журнала необходимо включить параметр «mydfrg debug On».",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "Степень сложности диагностики для ссылок, обнаруженных только при переходе по родительским папкам.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "Степень серьезности диагностики для ссылок, содержащих макросы времени выполнения.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "Уровень диагностической серьезности для ссылок, целевые файлы которых найдены.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "Уровень серьезности диагностического сообщения для ссылок, целевые файлы которых не найдены.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "Степень диагностической значимости для сообщений-родителей выведенных фрагментов.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "Шаблоны Glob, которые следует исключить из проверки «Мой дефрагментатор»",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "Мой скрипт для дефрагментации",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "Открыть файл в указанном месте",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "«Мой дефрагментатор»: следующая диагностика",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "«Мой дефрагментатор»: предыдущая диагностика",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "Моя программа дефрагментации: Следующий файл",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "«Мой дефрагментатор»: отметка «Диагностика» — «Исправлено»",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "«Мой дефрагментатор»: игнорировать диагностику",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "«Мой дефрагментатор»: Пропустить диагностику",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "«Мой дефрагментатор»: отправить результаты диагностики агенту",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "«Мой дефрагментатор»: первая диагностика",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "«Мой дефрагментатор»: Сброс диагностической навигации",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "«Мой дефрагментатор»: обновление диагностики",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "«Мой дефрагментатор»: диагностика фильтров",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "«Мой дефрагментатор»: очистить фильтр диагностики",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "«Мой дефрагментатор»: отображение результатов диагностики в виде дерева",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "«Мой дефрагментатор»: отобразить результаты диагностики в виде таблицы",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "«Мой дефрагментатор»: Закрыть «Диагностический просмотрщик»",
+      "status": "machine-generated"
+    }
+  }
+}

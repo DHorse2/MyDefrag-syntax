@@ -731,6 +731,16 @@
       },
       {
         "path": "package.json",
+        "text": "language:diagnostics:install",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "language:diagnostics:uninstall",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": "language:report",
         "status": "rejected"
       },
@@ -802,6 +812,11 @@
       {
         "path": "package.json",
         "text": "MyDefrag Diagnostics",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "mydefrag-syntax",
         "status": "rejected"
       },
       {
@@ -1196,6 +1211,16 @@
       },
       {
         "path": "package.json",
+        "text": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
+        "text": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1 -Uninstall",
+        "status": "rejected"
+      },
+      {
+        "path": "package.json",
         "text": "powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1",
         "status": "rejected"
       },
@@ -1322,7 +1347,7 @@
       {
         "path": "package.json",
         "text": "url",
-        "status": "review"
+        "status": "rejected"
       },
       {
         "path": "package.json",

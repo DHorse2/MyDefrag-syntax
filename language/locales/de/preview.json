@@ -1,0 +1,22 @@
+{
+  "locale": "de",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "BEGIN [Tiefe {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "ENDE [Tiefe {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "Dateien einbinden. (Es wurden {count}-Datei(en) verarbeitet)",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** WARNUNG: Fehlendes Include („{uri}“) ***",
+      "status": "machine-generated"
+    }
+  }
+}

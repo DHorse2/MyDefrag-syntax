@@ -1,0 +1,526 @@
+{
+  "locale": "fa",
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "text": "خروجی دستور ساخت",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.component.label": {
+      "text": "جزء",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.locale.label": {
+      "text": "محل",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "text": "اقدامات نگهداری",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "text": "عملیات در حال انجام",
+      "status": "machine-generated"
+    },
+    "locales.action.applyInMemory.label": {
+      "text": "در حافظه اعمال کنید",
+      "status": "machine-generated"
+    },
+    "locales.action.close.label": {
+      "text": "بستن",
+      "status": "machine-generated"
+    },
+    "locales.action.exit.label": {
+      "text": "خروج",
+      "status": "machine-generated"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "text": "تولید ترجمهٔ API",
+      "status": "machine-generated"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "text": "بازسازی مؤلفهٔ انتخاب‌شده",
+      "status": "machine-generated"
+    },
+    "locales.action.reload.label": {
+      "text": "بارگذاری مجدد",
+      "status": "machine-generated"
+    },
+    "locales.action.revert.label": {
+      "text": "بازگشت",
+      "status": "machine-generated"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "text": "ذخیره و بازسازی",
+      "status": "machine-generated"
+    },
+    "locales.action.stopBuild.label": {
+      "text": "ساخت را متوقف کن",
+      "status": "machine-generated"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "text": "از متن پشتیبان انگلیسی استفاده کنید",
+      "status": "machine-generated"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "text": "از انگلیسی استاندارد استفاده کنید",
+      "status": "machine-generated"
+    },
+    "locales.action.validate.label": {
+      "text": "اعتبارسنجی",
+      "status": "machine-generated"
+    },
+    "locales.dialog.cancel.text": {
+      "text": "لغو",
+      "status": "machine-generated"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "text": "تغییرات منبع منطقه‌ای را تأیید کنید",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "text": "انداختن و بارگذاری مجدد",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "text": "مترجمه‌ها را که ذخیره نشده‌اند، حذف کنید؟",
+      "status": "machine-generated"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "text": "خروج بدون ذخیره",
+      "status": "machine-generated"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "text": "ساخت کامپوننت Locale در حال اجرا است.",
+      "status": "machine-generated"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "text": "نگهداری محلی دفرگمنت‌کننده من",
+      "status": "machine-generated"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "text": "هیچ فایلی تغییر نخواهد کرد.",
+      "status": "machine-generated"
+    },
+    "locales.dialog.returnToBuild.text": {
+      "text": "بازگشت به ساخت",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "text": "ذخیره و ساخت کامپوننت با موفقیت انجام شد",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "text": "ذخیره و بازسازی مؤلفه",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "text": "ذخیره مسدود شده توسط اعتبارسنجی",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "ذخیره با موفقیت انجام نشد و بازگشت داده شد",
+      "status": "machine-generated"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "مخزن نحوی My Defragmenter را انتخاب کنید",
+      "status": "machine-generated"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "text": "تغییرات ناحیهٔ زمانی ذخیره نشده‌اند",
+      "status": "machine-generated"
+    },
+    "locales.heading.catalog.text": {
+      "text": "فهرست",
+      "status": "machine-generated"
+    },
+    "locales.heading.localeOperation.text": {
+      "text": "عملیات محلی",
+      "status": "machine-generated"
+    },
+    "locales.heading.operationResult.text": {
+      "text": "نتیجهٔ عملیات",
+      "status": "machine-generated"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "text": "یک مکان و مؤلفه را انتخاب کنید",
+      "status": "machine-generated"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "text": "ایجاد یک ترجمه از مقدار locale فعلی",
+      "status": "machine-generated"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "text": "کلید، منبع، ترجمه، وضعیت",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "text": "مترجمی API رد شد",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "text": "مترجم API در دسترس نیست",
+      "status": "machine-generated"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "text": "راه‌اندازی برنامه ناموفق بود",
+      "status": "machine-generated"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "text": "یک مخزن محلی معتبر My Defragmenter انتخاب نشد.",
+      "status": "machine-generated"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "text": "انگلیسی کانونیکال هدف ترجمهٔ API نیست.",
+      "status": "machine-generated"
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "text": "کلید کاتالوگ متعلق به مؤلفه {canonicalComponent} است.",
+      "status": "machine-generated"
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "text": "مخزنی را که مالک لوکال‌های زبان / است انتخاب کنید و زبان / را بسازید.",
+      "status": "machine-generated"
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "text": "بازسازی مؤلفه ناموفق بود",
+      "status": "machine-generated"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "text": "قبل از تغییر لوکال یا کامپوننت، تغییرات را رد یا ذخیره کنید.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "text": "متن کانونیک انگلیسی تنها در اینجا خوانده می‌شود.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "text": "متن انگلیسی کانونیکال است و باید در نگهداری زبان My Defragmenter حفظ شود.",
+      "status": "machine-generated"
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "text": "قبل از تولید ترجمهٔ API، مقدار فعلی locale را وارد یا پر کنید.",
+      "status": "machine-generated"
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "text": "خروج و دور انداختن ترجمه‌های مؤلفهٔ انتخاب‌شده؟",
+      "status": "machine-generated"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "text": "قبل از جایگزینی مقدار، یک ترجمهٔ API تولید کنید.",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "text": "نامطابقت شناسهٔ کاتالوگ locale تولیدشده در {relativePath}:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "text": "فهرست محلی تولیدشده نامعتبر است:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "text": "مترجمه‌های تولیدشده باید اعمال شوند تا قبل از اینکه از داده‌های نویسنده‌شده حذف شوند.",
+      "status": "machine-generated"
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "داده‌های نگهداری مکان بارگذاری نشده‌اند.",
+      "status": "machine-generated"
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "text": "این یک مخزن محلی My Defragmenter نیست.   مفقود: {missing}",
+      "status": "machine-generated"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "مسیر از ریشه مخزن فرار می‌کند: {relativePath}",
+      "status": "machine-generated"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "text": "جای‌گاه‌دارها باید دقیقاً: {expected}.",
+      "status": "machine-generated"
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "text": "بارگذاری مجدد تغییرات مربوط به مؤلفهٔ منطقهٔ انتخابی را نادیده می‌گیرد.",
+      "status": "machine-generated"
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "text": "تغییرات را قبل از بازسازی ذخیره یا لغو کنید.",
+      "status": "machine-generated"
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "text": "جزء منتخب بازسازی شد",
+      "status": "machine-generated"
+    },
+    "locales.message.selectionFailed.text": {
+      "text": "انتخاب ناموفق بود",
+      "status": "machine-generated"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "text": "اسکماِ کامپوننتِ مکان در دسترس نیست.",
+      "status": "machine-generated"
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "text": "فرآیند اصلی مقدار locale جاری متفاوتی را ترجمه کرد. نگهداری locale را مجدداً راه‌اندازی کرده و دوباره امتحان کنید.",
+      "status": "machine-generated"
+    },
+    "locales.message.translationRejected.text": {
+      "text": "مترجم: این متن را ترجمه نکردم",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "text": "کلید کاتالوگ نامشخص: {key}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "text": "جزء ناشناخته: {componentId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "text": "جزء ناشناخته: {documentComponent}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "text": "کلید ناشناخته برای مؤلفهٔ انتخاب‌شده: {payloadKey}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "text": "مکان نامشخص: {localeId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "text": "مکان نامشخص: {documentLocale}",
+      "status": "machine-generated"
+    },
+    "locales.message.validationResult.text": {
+      "text": "نتیجه اعتبارسنجی",
+      "status": "machine-generated"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "قبل از خروج، منتظر بمانید تا ساخت کامل شود.",
+      "status": "machine-generated"
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "text": "برای فایل‌های معتبر {normalizedCount} بنویسید؟",
+      "status": "machine-generated"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "به‌دست آوردن فایل‌های تولیدشده برای بازگشت به عقب",
+      "status": "machine-generated"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "text": "بررسی تغییرات فایل تولیدشده",
+      "status": "machine-generated"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "text": "ثبت تغییرات منبع محلی",
+      "status": "machine-generated"
+    },
+    "locales.progress.preparingSave.status": {
+      "text": "آماده‌سازی ذخیره",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "بازیابی فایل‌های معتبر و تولیدشده",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "text": "بازیابی فایل‌ها پس از خطا",
+      "status": "machine-generated"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "text": "ذخیرهٔ مؤلفهٔ مکان",
+      "status": "machine-generated"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "text": "شروع ذخیره و بازسازی کامپوننت",
+      "status": "machine-generated"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "text": "متوقف کردن ساخت کامپوننت",
+      "status": "machine-generated"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "در پنجرهٔ پیشرفت، از توقف ساخت استفاده کنید، سپس قبل از بستن برنامه منتظر تکمیل بازگشت به وضعیت قبلی باشید.",
+      "status": "machine-generated"
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "text": "در انتظار تأیید ذخیره",
+      "status": "machine-generated"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "text": "نوشتن فایل‌های locale معتبر",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "نشان {stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "نشان {stateValidationOk}",
+      "status": "machine-generated"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "text": "انگلیسی مرجع",
+      "status": "machine-generated"
+    },
+    "locales.ui.catalogKey.text": {
+      "text": "کلید کاتالوگ",
+      "status": "machine-generated"
+    },
+    "locales.ui.componentStrings.text": {
+      "text": "رشته‌های مؤلفه",
+      "status": "machine-generated"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "text": "ارزش فعلی مکان",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "text": "Deep L پیکربندی نشده است. قبل از راه‌اندازی برنامه، Deepl Api را تنظیم کنید.",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "text": "Deep L مقدار فعلی محل را جایگزین کرد. برای حفظ آن در حافظه اعمال کنید.",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "text": "تغییرات تبدیل حافظه را دور بینداز؟",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "text": "مترجمه‌هاي ذخیره‌نشده را دور بریزید و انتخاب را تغییر دهید؟",
+      "status": "machine-generated"
+    },
+    "locales.ui.englishFallback.text": {
+      "text": "متن پشتیبان انگلیسی",
+      "status": "machine-generated"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "text": "یک ترجمه بر اساس مقدار locale فعلی تولید کنید. نتیجه تنها آن فیلد را جایگزین می‌کند.",
+      "status": "machine-generated"
+    },
+    "locales.ui.generatedValue.text": {
+      "text": "تولید شده: {stateGeneratedFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.key.text": {
+      "text": "کلید",
+      "status": "machine-generated"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "text": "آخرین نتیجه دیپ‌ال",
+      "status": "machine-generated"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "text": "انگلیسی استاندارد",
+      "status": "machine-generated"
+    },
+    "locales.ui.notValidated.text": {
+      "text": "تأیید نشده",
+      "status": "machine-generated"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "text": "هیچ تغییر نجات‌نیافته وجود ندارد",
+      "status": "machine-generated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "text": "آماده‌سازی بازسازی مؤلفه",
+      "status": "machine-generated"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "text": "بازسازی کامپوننت محلی",
+      "status": "machine-generated"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "text": "درخواست ترجمه با دیپ‌ال",
+      "status": "machine-generated"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "text": "جای‌گذاری‌های لازم",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
+      "text": "تغییر اندازه مقدار locale فعلی و پیشنهاد API",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
+      "text": "تغییر اندازهٔ کاتالوگ محلی و ویرایشگر ترجمه",
+      "status": "machine-generated"
+    },
+    "locales.ui.reviewStatus.text": {
+      "text": "وضعیت بازبینی",
+      "status": "machine-generated"
+    },
+    "locales.ui.search.text": {
+      "text": "جستجو",
+      "status": "machine-generated"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "text": "یک مدخل کاتالوگ را انتخاب کنید",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceText.text": {
+      "text": "متن منبع",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceValue.text": {
+      "text": "منبع: {stateAuthoritativeFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.status.text": {
+      "text": "وضعیت",
+      "status": "machine-generated"
+    },
+    "locales.ui.structuredEditor.text": {
+      "text": "ویرایشگر ساختاریافته",
+      "status": "machine-generated"
+    },
+    "locales.ui.translation.text": {
+      "text": "ترجمه",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationScope.text": {
+      "text": "دامنهٔ ترجمه",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "text": "مترجم در دسترس نیست.",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "text": "ابزار دسکتاپ مترجم",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorNotes.text": {
+      "text": "یادداشت‌های مترجم",
+      "status": "machine-generated"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "text": "تغییرات ذخیره نشده",
+      "status": "machine-generated"
+    },
+    "locales.ui.valid.text": {
+      "text": "معتبر",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "text": "{stateCompletenessFallback} متن پشتیبان انگلیسی",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "text": "{rowApiTranslationProvider} نتیجه آماده است. برای حفظ مقدار فعلی لوکال، آن را در حافظه اعمال کنید.",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTotal.text": {
+      "text": "{stateCompletenessTotal} مجموع",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTranslated.text": {
+      "text": "{stateCompletenessTranslated} ترجمه‌شده",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "text": "{stateValidationErrorsCount} خطای(های) اعتبارسنجی",
+      "status": "machine-generated"
+    }
+  }
+}

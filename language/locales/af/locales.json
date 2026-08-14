@@ -1,0 +1,526 @@
+{
+  "locale": "af",
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "text": "Bou opdraguitvoer",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.component.label": {
+      "text": "Komponent",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.locale.label": {
+      "text": "Plek",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "text": "onderhoudsaksies",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "text": "Operasie aan die gang",
+      "status": "machine-generated"
+    },
+    "locales.action.applyInMemory.label": {
+      "text": "Pas toe ter nagedagtenis",
+      "status": "machine-generated"
+    },
+    "locales.action.close.label": {
+      "text": "Sluit",
+      "status": "machine-generated"
+    },
+    "locales.action.exit.label": {
+      "text": "Uitgang",
+      "status": "machine-generated"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "text": "Génereer API-vertaling",
+      "status": "machine-generated"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "text": "Herbou gekose komponent",
+      "status": "machine-generated"
+    },
+    "locales.action.reload.label": {
+      "text": "Laai weer in",
+      "status": "machine-generated"
+    },
+    "locales.action.revert.label": {
+      "text": "Keer terug",
+      "status": "machine-generated"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "text": "Bêre en herbou",
+      "status": "machine-generated"
+    },
+    "locales.action.stopBuild.label": {
+      "text": "Stop bou",
+      "status": "machine-generated"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "text": "Gebruik Engelse terugval",
+      "status": "machine-generated"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "text": "Gebruik genormaliseerde Engels",
+      "status": "machine-generated"
+    },
+    "locales.action.validate.label": {
+      "text": "Valideer",
+      "status": "machine-generated"
+    },
+    "locales.dialog.cancel.text": {
+      "text": "Kanselleer",
+      "status": "machine-generated"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "text": "Bevestig plaaslike bronveranderings",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "text": "Gooi weg en laai weer in",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "text": "Verwerp ongespaarde vertalings?",
+      "status": "machine-generated"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "text": "Sluit af sonder om te stoor",
+      "status": "machine-generated"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "text": "Plaaslike komponentbou is aan die gang",
+      "status": "machine-generated"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "text": "My Defragmenter Plaaslike Onderhoud",
+      "status": "machine-generated"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "text": "Geen lêers sal verander nie.",
+      "status": "machine-generated"
+    },
+    "locales.dialog.returnToBuild.text": {
+      "text": "Keer terug na bou",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "text": "Bewaar en komponentbou het geslaag",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "text": "Bewaar en herbou komponent",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "text": "Bewaring deur validering geblokkeer",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "Bewaring het misluk en is teruggedraai",
+      "status": "machine-generated"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "Kies die My Defragmenter-sintaaksbewaarplek",
+      "status": "machine-generated"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "text": "Onbewaarde plaaslike veranderinge",
+      "status": "machine-generated"
+    },
+    "locales.heading.catalog.text": {
+      "text": "Katalog",
+      "status": "machine-generated"
+    },
+    "locales.heading.localeOperation.text": {
+      "text": "Plaaslike werking",
+      "status": "machine-generated"
+    },
+    "locales.heading.operationResult.text": {
+      "text": "Operasie-resultaat",
+      "status": "machine-generated"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "text": "Kies 'n lokaliteit en komponent",
+      "status": "machine-generated"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "text": "Génereer 'n vertaling vanaf die huidige lokaalwaarde",
+      "status": "machine-generated"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "text": "Sleutel, bron, vertaling, status",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "text": "API-vertaling geweier",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "text": "API-vertaling nie beskikbaar nie",
+      "status": "machine-generated"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "text": "Toepassing kon nie begin nie",
+      "status": "machine-generated"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "text": "'n geldige My Defragmenter-lokaalbewaarplek is nie gekies nie.",
+      "status": "machine-generated"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "text": "Kanonieke Engels is nie 'n API-vertaaldoelwit nie.",
+      "status": "machine-generated"
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "text": "Katalogsleutel behoort aan komponent {canonicalComponent}.",
+      "status": "machine-generated"
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "text": "Kies die bewaarplek wat die taal/-lokalise en bou die /-taal.",
+      "status": "machine-generated"
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "text": "Komponentherbou het misluk",
+      "status": "machine-generated"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "text": "Gooi veranderinge weg of bewaar dit voordat u die lokaal of komponent verander.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "text": "Hier word slegs die Engelse kanonieke teks gelees.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "text": "Die Engelse teks is kanonies en moet in My Defragmenter Taalonderhoud onderhou word.",
+      "status": "machine-generated"
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "text": "Voer of vul die huidige lokasiewaarde in voordat jy 'n API-vertaling genereer.",
+      "status": "machine-generated"
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "text": "Verlaat en gooi die gekose komponentvertalings weg?",
+      "status": "machine-generated"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "text": "Génereer 'n API-vertaling voordat jy die waarde vervang.",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "text": "Gegenererede lokaal-katalogus-identiteitsongelykheid in {relativePath}:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "text": "gegenereerde lokaal-katalogus is ongeldig:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "text": "gegenereerde vertalings moet toegepas word voordat hulle uit geskryfde data verwyder kan word.",
+      "status": "machine-generated"
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "Plekonderhoudsdata is nie gelaai nie.",
+      "status": "machine-generated"
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "text": "Nie 'n My Defragmenter-lokaalbewaarplek nie. Ontbreek: {missing}",
+      "status": "machine-generated"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "Pad ontsnap aan die repositoriumwortel: {relativePath}",
+      "status": "machine-generated"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "text": "Plaasvervangers moet presies wees: {expected}.",
+      "status": "machine-generated"
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "text": "Herlaai sal veranderinge aan die gekose lokaalkomponent weggooi.",
+      "status": "machine-generated"
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "text": "Bewaar of herroep veranderinge voordat jy weer opbou.",
+      "status": "machine-generated"
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "text": "Gekose komponent herbou",
+      "status": "machine-generated"
+    },
+    "locales.message.selectionFailed.text": {
+      "text": "Kiesing het misluk",
+      "status": "machine-generated"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "text": "Die skema vir die lokaal-komponent is nie beskikbaar nie.",
+      "status": "machine-generated"
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "text": "Die hoofproses het 'n ander huidige lokasiewaarde vertaal. Herbegin die lokasieonderhoud en probeer weer.",
+      "status": "machine-generated"
+    },
+    "locales.message.translationRejected.text": {
+      "text": "Vertaling verwerp",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "text": "Onbekende katalogusleutel: {key}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "text": "Onbekende komponent: {componentId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "text": "Onbekende komponent: {documentComponent}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "text": "Onbekende sleutel vir gekose komponent: {payloadKey}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "text": "Onbekende ligging: {localeId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "text": "Onbekende ligging: {documentLocale}",
+      "status": "machine-generated"
+    },
+    "locales.message.validationResult.text": {
+      "text": "Valideringsresultaat",
+      "status": "machine-generated"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "Wag totdat die bou voltooi is voordat jy uitstap.",
+      "status": "machine-generated"
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "text": "Skryf gesaghebbende lêer(e) vir {normalizedCount}?",
+      "status": "machine-generated"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "Vasvang van gegenereerde lêers vir terugrol",
+      "status": "machine-generated"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "text": "Kontroleer gegenereerde lêerveranderings",
+      "status": "machine-generated"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "text": "Beperk plaaslike bronveranderings",
+      "status": "machine-generated"
+    },
+    "locales.progress.preparingSave.status": {
+      "text": "Bereiding bewaar",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "Restourering van gesaghebbende en gegenereerde lêers",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "text": "Restourering van lêers na 'n fout",
+      "status": "machine-generated"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "text": "Bewaring van die lokaalkomponent",
+      "status": "machine-generated"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "text": "Begin veilige en komponentheropbou",
+      "status": "machine-generated"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "text": "Stop komponentbou",
+      "status": "machine-generated"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "Gebruik Stop Build in die vorderingvenster, en wag dan totdat die terugrol voltooi is voordat jy die toepassing sluit.",
+      "status": "machine-generated"
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "text": "Wag vir bevestiging van die redding",
+      "status": "machine-generated"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "text": "Skryf gesaghebbende lokaalbestande",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "kenteken{stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "kenteken{stateValidationOk}",
+      "status": "machine-generated"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "text": "Kanonieke Engels",
+      "status": "machine-generated"
+    },
+    "locales.ui.catalogKey.text": {
+      "text": "Katalogsleutel",
+      "status": "machine-generated"
+    },
+    "locales.ui.componentStrings.text": {
+      "text": "Komponentreekse",
+      "status": "machine-generated"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "text": "Huidige lokaalwaarde",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "text": "Deep L is nie gekonfigureer nie. Stel Deepl Api in voordat jy die toepassing begin.",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "text": "Deep L het die huidige lokaalwaarde vervang. Pas dit in die geheue toe om dit te behou.",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "text": "Verwerp veranderinge in geheuevertaling?",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "text": "Gooi ongespaarde vertalings weg en verander die keuse?",
+      "status": "machine-generated"
+    },
+    "locales.ui.englishFallback.text": {
+      "text": "Engelse uitwyking",
+      "status": "machine-generated"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "text": "Génereer 'n vertaling vanaf die huidige lokaalwaarde. Die resultaat vervang slegs daardie veld.",
+      "status": "machine-generated"
+    },
+    "locales.ui.generatedValue.text": {
+      "text": "gegenereer: {stateGeneratedFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.key.text": {
+      "text": "Sleutel",
+      "status": "machine-generated"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "text": "Laatse Deep L-resultaat",
+      "status": "machine-generated"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "text": "Genormaliseerde Engels",
+      "status": "machine-generated"
+    },
+    "locales.ui.notValidated.text": {
+      "text": "Nie gevalideer nie",
+      "status": "machine-generated"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "text": "Geen ongespaarde veranderinge",
+      "status": "machine-generated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "text": "Voorbereiding vir komponentherbou",
+      "status": "machine-generated"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "text": "Heropbou van plaaslike komponent",
+      "status": "machine-generated"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "text": "Versoek 'n Deep L-vertaling.",
+      "status": "machine-generated"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "text": "Benodigde plekhouers",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
+      "text": "Herformaat die huidige locale-waarde en API-voorstel",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
+      "text": "Verander die grootte van die plaaslike katalogus en die vertalingsredigeerder",
+      "status": "machine-generated"
+    },
+    "locales.ui.reviewStatus.text": {
+      "text": "Oorsigstatus",
+      "status": "machine-generated"
+    },
+    "locales.ui.search.text": {
+      "text": "Soek",
+      "status": "machine-generated"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "text": "Kies 'n katalogusopname",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceText.text": {
+      "text": "Bronteks",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceValue.text": {
+      "text": "Bron: {stateAuthoritativeFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.status.text": {
+      "text": "Status",
+      "status": "machine-generated"
+    },
+    "locales.ui.structuredEditor.text": {
+      "text": "Gestruktureerde redigeerder",
+      "status": "machine-generated"
+    },
+    "locales.ui.translation.text": {
+      "text": "Vertaling",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationScope.text": {
+      "text": "Vertalingsomvang",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "text": "Vertaling nie beskikbaar nie.",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "text": "Vertaler-desktopgereedskap",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorNotes.text": {
+      "text": "Vertaler se notas",
+      "status": "machine-generated"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "text": "Onbewaarde veranderinge",
+      "status": "machine-generated"
+    },
+    "locales.ui.valid.text": {
+      "text": "Geldig",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "text": "{stateCompletenessFallback} Engelse uitwyking",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "text": "{rowApiTranslationProvider} Resultaat gereed. Pas in geheue toe om die huidige lokaalwaarde te behou.",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTotal.text": {
+      "text": "{stateCompletenessTotal} totaal",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTranslated.text": {
+      "text": "{stateCompletenessTranslated} vertaal",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "text": "{stateValidationErrorsCount} geldigheidfout(e)",
+      "status": "machine-generated"
+    }
+  }
+}

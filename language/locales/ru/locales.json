@@ -1,0 +1,526 @@
+{
+  "locale": "ru",
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "text": "Вывод команды «Сборка»",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.component.label": {
+      "text": "Компонент",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.locale.label": {
+      "text": "Локаль",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "text": "Мероприятия по техническому обслуживанию",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "text": "Операция в процессе выполнения",
+      "status": "machine-generated"
+    },
+    "locales.action.applyInMemory.label": {
+      "text": "Применить в памяти",
+      "status": "machine-generated"
+    },
+    "locales.action.close.label": {
+      "text": "Закрыть",
+      "status": "machine-generated"
+    },
+    "locales.action.exit.label": {
+      "text": "Выход",
+      "status": "machine-generated"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "text": "Сгенерировать перевод API",
+      "status": "machine-generated"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "text": "Пересобрать выбранный компонент",
+      "status": "machine-generated"
+    },
+    "locales.action.reload.label": {
+      "text": "Обновить",
+      "status": "machine-generated"
+    },
+    "locales.action.revert.label": {
+      "text": "Вернуть предыдущее состояние",
+      "status": "machine-generated"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "text": "Сохранить и перестроить",
+      "status": "machine-generated"
+    },
+    "locales.action.stopBuild.label": {
+      "text": "Остановить сборку",
+      "status": "machine-generated"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "text": "Использовать английский язык в качестве запасного варианта",
+      "status": "machine-generated"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "text": "Используйте нормализованный английский",
+      "status": "machine-generated"
+    },
+    "locales.action.validate.label": {
+      "text": "Проверить",
+      "status": "machine-generated"
+    },
+    "locales.dialog.cancel.text": {
+      "text": "Отменить",
+      "status": "machine-generated"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "text": "Подтвердить изменения в исходном коде локализации",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "text": "Сбросить и перезагрузить",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "text": "Удалить несохраненные переводы?",
+      "status": "machine-generated"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "text": "Выйти без сохранения",
+      "status": "machine-generated"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "text": "Идет сборка локального компонента",
+      "status": "machine-generated"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "text": "Настройка языка программы дефрагментации",
+      "status": "machine-generated"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "text": "Никакие файлы не будут изменены.",
+      "status": "machine-generated"
+    },
+    "locales.dialog.returnToBuild.text": {
+      "text": "Вернуться к сборке",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "text": "Сохранение и сборка компонента прошли успешно",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "text": "Сохранить и пересобрать компонент",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "text": "Сохранение заблокировано в результате проверки",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "Сохранение не удалось, и операция была отменена",
+      "status": "machine-generated"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "Выберите репозиторий синтаксиса «Мой дефрагментатор»",
+      "status": "machine-generated"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "text": "Несохраненные изменения локали",
+      "status": "machine-generated"
+    },
+    "locales.heading.catalog.text": {
+      "text": "Каталог",
+      "status": "machine-generated"
+    },
+    "locales.heading.localeOperation.text": {
+      "text": "Работа с локалями",
+      "status": "machine-generated"
+    },
+    "locales.heading.operationResult.text": {
+      "text": "Результат операции",
+      "status": "machine-generated"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "text": "Выберите языковую локаль и компонент",
+      "status": "machine-generated"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "text": "Создать перевод на основе текущего значения локали",
+      "status": "machine-generated"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "text": "Ключ, исходный текст, перевод, статус",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "text": "Отказ в переводе API",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "text": "Перевод API недоступен",
+      "status": "machine-generated"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "text": "Не удалось запустить приложение",
+      "status": "machine-generated"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "text": "Не был выбран действительный репозиторий локалей для My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "text": "Стандартный английский язык не является целевым языком перевода API.",
+      "status": "machine-generated"
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "text": "Ключ каталога относится к компоненту «{canonicalComponent}».",
+      "status": "machine-generated"
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "text": "Выберите репозиторий, в котором хранятся языковые локали /, и создайте языковую версию /.",
+      "status": "machine-generated"
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "text": "Ошибка при восстановлении компонента",
+      "status": "machine-generated"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "text": "Перед сменой локали или компонента отмените или сохраните изменения.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "text": "Здесь читается исключительно канонический текст на английском языке.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "text": "Английский текст является каноническим и должен поддерживаться в разделе «Языковое обслуживание» My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "text": "Перед генерацией перевода через API введите или заполните значение «Текущая локаль».",
+      "status": "machine-generated"
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "text": "Удалить и отменить выбранные переводы компонентов?",
+      "status": "machine-generated"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "text": "Перед заменой значения сгенерируйте перевод API.",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "text": "В файле «{relativePath}» обнаружено несоответствие идентификаторов в каталоге локалей:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "text": "Сгенерированный каталог локалей является недействительным:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "text": "Сгенерированные переводы необходимо применить, прежде чем их можно будет удалить из исходных данных.",
+      "status": "machine-generated"
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "Данные по обслуживанию локали не загружены.",
+      "status": "machine-generated"
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "text": "Это не репозиторий локалей для My Defragmenter. Отсутствует: {missing}",
+      "status": "machine-generated"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "Путь выходит за пределы корневого каталога репозитория: {relativePath}",
+      "status": "machine-generated"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "text": "Заполнители должны иметь следующий формат: {expected}.",
+      "status": "machine-generated"
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "text": "При перезагрузке изменения, внесенные в выбранный компонент локали, будут сброшены.",
+      "status": "machine-generated"
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "text": "Перед перекомпиляцией сохраните или отмените изменения.",
+      "status": "machine-generated"
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "text": "Восстановлен выбранный компонент",
+      "status": "machine-generated"
+    },
+    "locales.message.selectionFailed.text": {
+      "text": "Выбор не удался",
+      "status": "machine-generated"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "text": "Схема компонента локали недоступна.",
+      "status": "machine-generated"
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "text": "Основной процесс использовал другое значение текущей локали. Перезапустите модуль обслуживания локалей и повторите попытку.",
+      "status": "machine-generated"
+    },
+    "locales.message.translationRejected.text": {
+      "text": "Перевод отклонен",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "text": "Неизвестный ключ каталога: {key}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "text": "Неизвестный компонент: {componentId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "text": "Неизвестный компонент: {documentComponent}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "text": "Неизвестный ключ для выбранного компонента: {payloadKey}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "text": "Неизвестная локаль: {localeId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "text": "Неизвестная локаль: {documentLocale}",
+      "status": "machine-generated"
+    },
+    "locales.message.validationResult.text": {
+      "text": "Результат проверки",
+      "status": "machine-generated"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "Перед выходом дождитесь завершения сборки.",
+      "status": "machine-generated"
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "text": "Записать в авторитетный(ые) файл(ы) {normalizedCount}?",
+      "status": "machine-generated"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "Сохранение сгенерированных файлов для отката",
+      "status": "machine-generated"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "text": "Проверка изменений в сгенерированном файле",
+      "status": "machine-generated"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "text": "Фиксация изменений в исходном коде локали",
+      "status": "machine-generated"
+    },
+    "locales.progress.preparingSave.status": {
+      "text": "Подготовка к сохранению",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "Восстановление авторитетных и сгенерированных файлов",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "text": "Восстановление файлов после ошибки",
+      "status": "machine-generated"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "text": "Сохранение компонента локали",
+      "status": "machine-generated"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "text": "Запуск сохранения и пересчёта компонентов",
+      "status": "machine-generated"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "text": "Остановка сборки компонента",
+      "status": "machine-generated"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "Воспользуйтесь командой «Остановить сборку» в окне прогресса, а затем дождитесь завершения отката, прежде чем закрывать приложение.",
+      "status": "machine-generated"
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "text": "Ожидание подтверждения сохранения",
+      "status": "machine-generated"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "text": "Создание авторитетных файлов локализации",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "значок {stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "значок {stateValidationOk}",
+      "status": "machine-generated"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "text": "Канонический английский язык",
+      "status": "machine-generated"
+    },
+    "locales.ui.catalogKey.text": {
+      "text": "Ключ каталога",
+      "status": "machine-generated"
+    },
+    "locales.ui.componentStrings.text": {
+      "text": "Строки компонентов",
+      "status": "machine-generated"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "text": "Текущее значение локали",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "text": "Deep L не настроен. Перед запуском приложения необходимо настроить Deepl API.",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "text": "Deep L заменило текущее значение локали. Примените изменения в памяти, чтобы сохранить их.",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "text": "Отменить изменения при преобразовании памяти?",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "text": "Удалить несохраненные переводы и изменить выбор?",
+      "status": "machine-generated"
+    },
+    "locales.ui.englishFallback.text": {
+      "text": "Резервный вариант на английском языке",
+      "status": "machine-generated"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "text": "Создать перевод на основе текущего значения локали. Результат заменит только это поле.",
+      "status": "machine-generated"
+    },
+    "locales.ui.generatedValue.text": {
+      "text": "Создано: {stateGeneratedFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.key.text": {
+      "text": "Ключ",
+      "status": "machine-generated"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "text": "Последние результаты Deep L",
+      "status": "machine-generated"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "text": "Нормализованный английский",
+      "status": "machine-generated"
+    },
+    "locales.ui.notValidated.text": {
+      "text": "Не подтверждено",
+      "status": "machine-generated"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "text": "Нет несохраненных изменений",
+      "status": "machine-generated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "text": "Подготовка к пересборке компонента",
+      "status": "machine-generated"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "text": "Восстановление компонента локали",
+      "status": "machine-generated"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "text": "Запрос на перевод с помощью Deep L.",
+      "status": "machine-generated"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "text": "Обязательные поля",
+      "status": "machine-generated"
+    },
+    "locales.ui.reviewStatus.text": {
+      "text": "Статус проверки",
+      "status": "machine-generated"
+    },
+    "locales.ui.search.text": {
+      "text": "Поиск",
+      "status": "machine-generated"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "text": "Выберите запись из каталога",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceText.text": {
+      "text": "Исходный текст",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceValue.text": {
+      "text": "Источник: {stateAuthoritativeFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.status.text": {
+      "text": "Статус",
+      "status": "machine-generated"
+    },
+    "locales.ui.structuredEditor.text": {
+      "text": "Структурированный редактор",
+      "status": "machine-generated"
+    },
+    "locales.ui.translation.text": {
+      "text": "Перевод",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationScope.text": {
+      "text": "Объем перевода",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "text": "Перевод недоступен.",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "text": "Настольное приложение для переводчиков",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorNotes.text": {
+      "text": "Примечания переводчика",
+      "status": "machine-generated"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "text": "Несохраненные изменения",
+      "status": "machine-generated"
+    },
+    "locales.ui.valid.text": {
+      "text": "Действительно",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "text": "{stateCompletenessFallback} Резервный вариант на английском языке",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "text": "{rowApiTranslationProvider} Результат готов. Примените в памяти, чтобы сохранить текущее значение локали.",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTotal.text": {
+      "text": "{stateCompletenessTotal} всего",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTranslated.text": {
+      "text": "{stateCompletenessTranslated} переведено",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "text": "{stateValidationErrorsCount} ошибка(и) валидации",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
+      "text": "Изменение размера текущего значения локали и предложение по API",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
+      "text": "Изменение размера каталога локалей и редактора переводов",
+      "status": "machine-generated"
+    }
+  }
+}

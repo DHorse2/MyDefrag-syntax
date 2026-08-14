@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "d82500bc",
+  "startedAt": "2026-08-13T05:50:07.290Z",
+  "finishedAt": "2026-08-13T05:57:01.892Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "Determine what has parts of D:\\Script\\MyDefrag-syntax locked"
+  ],
+  "promptPaths": [
+    "Direct user request"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

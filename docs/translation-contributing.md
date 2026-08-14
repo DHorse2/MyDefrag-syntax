@@ -40,7 +40,8 @@ Allowed review states are:
    `catalogOverrides.sample.json` for representative samples, until a permanent
    keyword-file workflow is defined.
 5. Add only translated keys or keywords that have actually been reviewed or
-   clearly marked.
+   clearly marked. Accepted API translations are stored with
+   `machine-generated` status and remain reviewable source assets.
 6. Run validation:
 
    ```text
@@ -54,10 +55,11 @@ Allowed review states are:
    npm run language:build
    ```
 
-   The broad builder skips every existing locale directory without writing its
-   files. MyDefrag Locale Maintenance uses the explicit targeted component
-   action after each accepted component save, so translators do not delete
-   generated directories.
+   The broad builder preserves every existing generated entry and adds only
+   missing canonical keys. Before updating output, it additively persists
+   non-fallback generated translations under `language/locales/`. MyDefrag
+   Locale Maintenance uses the non-destructive targeted component action after
+   each accepted component save; neither action deletes generated directories.
 
 ## Catalog Entries
 
@@ -97,9 +99,9 @@ Named placeholders use braces:
 Expected {expected} but found {actual}
 ```
 
-Translated text must preserve the same placeholder names. The current builder
-validates canonical placeholders but does not yet enforce locale-override
-placeholder parity, so reviewers must check translated placeholders explicitly.
+Translated text must preserve the same placeholder names. Validation enforces
+placeholder parity for canonical, authored, and newly generated translated
+values.
 
 ## Completeness Reports
 
@@ -141,6 +143,8 @@ Any future comment or string translation must be an explicit user action.
 
 ## Low-Resource Operation
 
-Keep contributions compact. Do not add generated full-project translated trees,
-external service requirements, or runtime-only validation work that would slow
-editor startup on low-end Windows systems.
+Keep contributions compact. Do not add fallback-only English values to permanent
+locale sources, external service requirements, or runtime-only validation work
+that would slow editor startup on low-end Windows systems. Durable component
+sources should contain real translated values, including clearly marked
+machine-generated translations awaiting review.

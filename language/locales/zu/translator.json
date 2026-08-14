@@ -1,0 +1,1758 @@
+{
+  "locale": "zu",
+  "component": "translator",
+  "entries": {
+    "translator.directive.language.text": {
+      "text": "; @mydfrg ulimi {locale}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.allowDeeplCallsDuringSaveAndRebuild.label": {
+      "text": "Vumela izingcingo ze-Deep L ngesikhathi sokugcina nokwakha kabusha",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.applicationNavigation.label": {
+      "text": "Ukuzulazula kohlelo lokusebenza",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.buildCommandOutput.label": {
+      "text": "Yakha umphumela womyalelo",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.candidateStatus.label": {
+      "text": "Isimo somfakisicelo",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.closeOperationResult.label": {
+      "text": "Vala umphumela womsebenzi",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.closeValue.label": {
+      "text": "Vala i{windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentAssignedToValue.label": {
+      "text": "Ingxenye enikezwe ku{filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentDescription.label": {
+      "text": "Incazelo yengxenye",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForAddedMigrationFiles.label": {
+      "text": "Ingxenye yamafayela okuthuthela engeziwe",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForScannedMigrationFile.label": {
+      "text": "Ingxenye yefayela lokufuduka eliskeniwe",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForScannedMigrationFiles.label": {
+      "text": "Ingxenye yamafayela okuthutha askeniwe",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentIdentifier.label": {
+      "text": "Isichazi sesakhi",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.defaultPreviewMode.label": {
+      "text": "Imodi yokubuka kwangaphambilini eyisisekelo",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.editCatalogRecordValue.label": {
+      "text": "Hlela irekhodi lekhatalogi {entryKey}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByStatus.label": {
+      "text": "Hlunga abafakisicelo ngesimo",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterMigrationSourceFiles.label": {
+      "text": "Hlunga amafayela womthombo wokufuduka",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.languageReportArtifactText.label": {
+      "text": "Umbhalo we-artifact yombiko wolimi",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.localeTemplate.label": {
+      "text": "Itempulethi yendawo",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.maximizeValue.label": {
+      "text": "Thuthukisa i{windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.migrationCandidatesForValue.label": {
+      "text": "Abafaneleka ukufuduka ku{filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.minimizeValue.label": {
+      "text": "Yinciphisa i{windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.normalizedText.label": {
+      "text": "Umbhalo owenziwe jwayelekile",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.openValueAtLineValue.label": {
+      "text": "Vula i-{filePath} kumugqa we-{candidateLine}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.operationInProgress.label": {
+      "text": "Ukuqhuba kusekhona",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.removeValue.label": {
+      "text": "Susa i{filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.runtimeComponent.label": {
+      "text": "Ingxenye yesikhathi sokusebenza",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.selectedComponent.label": {
+      "text": "Ingxenye ekhethiwe",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.selectValue.label": {
+      "text": "Khetha i{filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.showComponentsHome.label": {
+      "text": "Bonisa ikhaya lezinto ezakhiwe ngazo",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.suggestedKey.label": {
+      "text": "Isiphakamiso sokhiye",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.viewMigrationCandidatesForValue.label": {
+      "text": "Buka abafaneleka ukufuduka ku{filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.windowControls.label": {
+      "text": "Izilawuli zewindi",
+      "status": "machine-generated"
+    },
+    "translator.action.exit.label": {
+      "text": "Phuma",
+      "status": "machine-generated"
+    },
+    "translator.action.previewModes.label": {
+      "text": "Izindlela Zokubuka Ngaphambi",
+      "status": "machine-generated"
+    },
+    "translator.action.rebuild.label": {
+      "text": "Yakha kabusha",
+      "status": "machine-generated"
+    },
+    "translator.action.reloadData.label": {
+      "text": "Layisha kabusha idatha",
+      "status": "machine-generated"
+    },
+    "translator.action.revert.label": {
+      "text": "Buyela emuva",
+      "status": "machine-generated"
+    },
+    "translator.action.save.label": {
+      "text": "Gcina",
+      "status": "machine-generated"
+    },
+    "translator.action.stopBuild.label": {
+      "text": "Misa ukwakha",
+      "status": "machine-generated"
+    },
+    "translator.action.validate.label": {
+      "text": "Qinisekisa",
+      "status": "machine-generated"
+    },
+    "translator.dialog.addFiles.text": {
+      "text": "Engeza amafayela",
+      "status": "machine-generated"
+    },
+    "translator.dialog.addMigrationSourceFiles.title": {
+      "text": "Engeza amafayela womthombo wokufuduka",
+      "status": "machine-generated"
+    },
+    "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
+      "text": "Amafayela abhalwe ngaphansi kwezindawo zolimi ze/ ahlala egcinwa.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.cancel.text": {
+      "text": "Khansela",
+      "status": "machine-generated"
+    },
+    "translator.dialog.close.title": {
+      "text": "Vala",
+      "status": "machine-generated"
+    },
+    "translator.dialog.componentCatalogAddRecord.title": {
+      "text": "Ikhatalogi Yezingxenye: Faka Irekhodi",
+      "status": "machine-generated"
+    },
+    "translator.dialog.componentCatalogEditRecord.title": {
+      "text": "Hlela irekhodi lekhatalogi yezingxenye",
+      "status": "machine-generated"
+    },
+    "translator.dialog.confirmAuthoritativeChanges.title": {
+      "text": "Qinisekisa izinguquko ezigunyaziwe",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteCatalogOnSave.text": {
+      "text": "Susa ikhatalogi lapho ugcina",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteGeneratedCatalogDataValue.text": {
+      "text": "Susa idatha yekhatalogi ekhiqiziwe: {catalogRemovals}",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteLocaleValue.title": {
+      "text": "Susa i-locale {id}?",
+      "status": "machine-generated"
+    },
+    "translator.dialog.discardAndReload.text": {
+      "text": "Lahlela bese ulayisha kabusha",
+      "status": "machine-generated"
+    },
+    "translator.dialog.discardUnsavedChanges.title": {
+      "text": "Uyilahla izinguquko ezingagcinwanga?",
+      "status": "machine-generated"
+    },
+    "translator.dialog.draftReverted.title": {
+      "text": "Isishicilelo esidlule sibuyiselwe",
+      "status": "machine-generated"
+    },
+    "translator.dialog.exitWithoutSaving.text": {
+      "text": "Phuma ngaphandle kokulondoloza",
+      "status": "machine-generated"
+    },
+    "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
+      "text": "Izinkatalogi zasendaweni ezikhiqiziwe zizogcinwa.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.keepCatalogRecommended.text": {
+      "text": "Gcina ikhatalogi (kunconywa)",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageBuildIsRunning.title": {
+      "text": "Ukwakhiwa kolimi kuyaqhubeka",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageRebuildFailed.title": {
+      "text": "Ukulungiswa kabusha kolimi kwehlulekile",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageRebuildSucceeded.title": {
+      "text": "Ukulungiswa kabusha kolimi kuphumelele",
+      "status": "machine-generated"
+    },
+    "translator.dialog.maximize.title": {
+      "text": "Khuphula kakhulu",
+      "status": "machine-generated"
+    },
+    "translator.dialog.minimize.title": {
+      "text": "Nciphisa",
+      "status": "machine-generated"
+    },
+    "translator.dialog.mydefragLanguageMaintenance.text": {
+      "text": "Ukugcinwa Kolimi Kwami Kwe-Defragmenter",
+      "status": "machine-generated"
+    },
+    "translator.dialog.noAuthoritativeFilesWillChange.text": {
+      "text": "Akukho amafayela anegunya azoshintsha.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.nothingToSave.title": {
+      "text": "Ayikho okufanele kugcinwe",
+      "status": "machine-generated"
+    },
+    "translator.dialog.returnToBuild.text": {
+      "text": "Buyela ekwakheni",
+      "status": "machine-generated"
+    },
+    "translator.dialog.revertFailed.title": {
+      "text": "Ukuphendula kwehlulekile",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveAndBuildSucceeded.title": {
+      "text": "Londoloza nokwakha kuphumelele",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveAndRebuild.text": {
+      "text": "Londoloza futhi wakhe kabusha",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveBlocked.title": {
+      "text": "Londoloza okuvinjelwe",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "Ukugcinwa kwehlulekile futhi kwabuyiselwa emuva",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveTheReportArtifactSeparately.title": {
+      "text": "Gcina i-artifact yombiko ngokwehlukana",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanFile.text": {
+      "text": "Skena ifayela",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanFolder.text": {
+      "text": "Hlola ifolda",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanMigrationSourceFile.title": {
+      "text": "Hlola ifayela lomthombo lokufuduka",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanMigrationSourceFolder.title": {
+      "text": "Hlola ifolda umthombo wokufuduka",
+      "status": "machine-generated"
+    },
+    "translator.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "Khetha isitoreji se-syntax se-My Defragmenter",
+      "status": "machine-generated"
+    },
+    "translator.dialog.startingMydefragLanguageMaintenance.title": {
+      "text": "Ukuqala ukugcinwa kolimi lwe-Defragmenter yami",
+      "status": "machine-generated"
+    },
+    "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
+      "text": "Idatha ekhiqizwe yi-build ye-/ language / catalogs / {id} izogcinwa ngokujwayelekile.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.unsavedLanguageChanges.title": {
+      "text": "Izinguquko zolimi ezingagcinwanga",
+      "status": "machine-generated"
+    },
+    "translator.dialog.valueFailed.title": {
+      "text": "{title} wahluleka",
+      "status": "machine-generated"
+    },
+    "translator.heading.languageMaintenance.text": {
+      "text": "Ukulondolozwa kolimi",
+      "status": "machine-generated"
+    },
+    "translator.heading.languageOperation.text": {
+      "text": "Ukusebenza kolimi",
+      "status": "machine-generated"
+    },
+    "translator.heading.operationResult.text": {
+      "text": "Umphumela womsebenzi",
+      "status": "machine-generated"
+    },
+    "translator.input.filterSourceFilePaths.placeholder": {
+      "text": "Hlunga imizila yamafayela omthombo",
+      "status": "machine-generated"
+    },
+    "translator.input.searchAllFields.placeholder": {
+      "text": "Sesha zonke izinkambu",
+      "status": "machine-generated"
+    },
+    "translator.input.searchComponentIdOrDescription.placeholder": {
+      "text": "Sesha i-ID yekhomponenti noma incazelo",
+      "status": "machine-generated"
+    },
+    "translator.input.searchComponents.placeholder": {
+      "text": "Sesha izingxenye",
+      "status": "machine-generated"
+    },
+    "translator.input.searchValue.placeholder": {
+      "text": "Sesha {definitionTitle}",
+      "status": "machine-generated"
+    },
+    "translator.message.aLanguageBuildIsAlreadyRunning.text": {
+      "text": "Ukwakhiwa kolimi sekusebenza.",
+      "status": "machine-generated"
+    },
+    "translator.message.aLineAwareVscodiumOrVsCodeInstallation.text": {
+      "text": "Akutholakali ukufakwa kwe-VS Codium noma i-VS Code okwaziyo umugqa; ifayela lomthombo livulwe uhlelo lokusebenza olujwayelekile lwayo.",
+      "status": "machine-generated"
+    },
+    "translator.message.applicationFailedToStart.text": {
+      "text": "Isicelo sihlehlile ukuqala",
+      "status": "machine-generated"
+    },
+    "translator.message.aScannedSourcePathIsNotANormalized.text": {
+      "text": "Indlela yomthombo eskeniwe ayiyona indlela yefayela ejwayelekile yendawo yokugcina.",
+      "status": "machine-generated"
+    },
+    "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
+      "text": "Ayikhethwanga isitoreji esivumelekile se-syntax se-My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "translator.message.buildCancelledByUser.text": {
+      "text": "Ukwakhiwa kumisiwe ngumsebenzisi.",
+      "status": "machine-generated"
+    },
+    "translator.message.buildProcessDidNotReportTerminationAfterCancellation.text": {
+      "text": "Inqubo yokwakha ayizange ibike ukuvalwa ngemva kokukhansela.",
+      "status": "machine-generated"
+    },
+    "translator.message.candidateStatusRejected.text": {
+      "text": "Isimo somfakisicelo sinqatshiwe",
+      "status": "machine-generated"
+    },
+    "translator.message.candidateStatusUpdatedInMemory.text": {
+      "text": "Isimo somfakisicelo sisethuliwe ememori",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordAddedToInMemoryDraft.text": {
+      "text": "Irekhodi lekhatalogu selifakiwe kudrafti yesikhumbuzo",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordIsNoLongerAvailable.text": {
+      "text": "Irekhodi lekhatalogi asisekho",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordUpdatedInMemory.text": {
+      "text": "Irekhodi lekhatalogu selivuselelwe ememori",
+      "status": "machine-generated"
+    },
+    "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
+      "text": "Khetha isitoreji esiphethe ulimi lwe-/ canonical kanye nolimi lokwakha i-/.",
+      "status": "machine-generated"
+    },
+    "translator.message.componentAddedInMemory.text": {
+      "text": "Ingxenye yengezwe ememori",
+      "status": "machine-generated"
+    },
+    "translator.message.componentAssignmentIsStaleRebuildRequired.text": {
+      "text": "Ukudluliselwa kwezingxenye sekuphelelwe yisikhathi; kudingeka kwakhiwe kabusha.",
+      "status": "machine-generated"
+    },
+    "translator.message.componentChangeRejected.text": {
+      "text": "Ukushintshwa kwengxenye kwenqatshiwe",
+      "status": "machine-generated"
+    },
+    "translator.message.componentUpdatedInMemory.text": {
+      "text": "Ingxenye isivuselelwe ememori",
+      "status": "machine-generated"
+    },
+    "translator.message.deeplApiCallsAreEnabledForThisRebuild.text": {
+      "text": "Izicelo ze-API ze-Deep L sezivuliwe kulokhu kwakhiwa kabusha.",
+      "status": "machine-generated"
+    },
+    "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
+      "text": "I-Deep L ivaliwe; kusetshenziswa isiNgisi esijwayelekile.",
+      "status": "machine-generated"
+    },
+    "translator.message.draftUpdated.text": {
+      "text": "Isishicilelo esibuyekeziwe",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateComponentIdValue.text": {
+      "text": "I-ID yengxenye ephindwe kabili: {componentId}",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateLocaleIdValue.text": {
+      "text": "I-ID yendawo ephindwe kabili: {localeId}",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateValueValue.text": {
+      "text": "Ikhophi ye-{definitionIdentityKey}: {identity}",
+      "status": "machine-generated"
+    },
+    "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
+      "text": "Izazisi zezingxenye ezikhona azikwazi ukubizwa kabusha.",
+      "status": "machine-generated"
+    },
+    "translator.message.existingLocaleIdentifiersCannotBeRenamed.text": {
+      "text": "Izazisi zendawo ezikhona azikwazi ukubizwa kabusha.",
+      "status": "machine-generated"
+    },
+    "translator.message.exitAndDiscardAllInMemoryChanges.text": {
+      "text": "Phuma bese ulahla zonke izinguquko ememori?",
+      "status": "machine-generated"
+    },
+    "translator.message.forcingTheLanguageBuildProcessToStop.text": {
+      "text": "Ukunyanzela inqubo yokwakha ulimi ukuthi imiswe",
+      "status": "machine-generated"
+    },
+    "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
+      "text": "Ikhatalogi yendawo ekhiqiziwe ayiyona ifolda: {relativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidComponentRequest.text": {
+      "text": "Isicelo sekhomponenti esingalungile.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidFileSelection.text": {
+      "text": "Ukukhethwa kwefayela okungamukelekile.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleIdentifierForCatalogRemovalValue.text": {
+      "text": "Isichasiselo sendawo esingalungile sokususwa kwekhatalogi: {localeId}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleRequest.text": {
+      "text": "Isicelo sendawo engalungile.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleStatusValue.text": {
+      "text": "Isimo sendawo esingalungile: {localeStatus}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidRecordRequest.text": {
+      "text": "Isicelo sokurekhoda esingalungile.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidScannedFileSelection.text": {
+      "text": "Ukukhethwa kwefayela eliskeniwe akulungile.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCancelled.text": {
+      "text": "Ukwakhiwa kolimi kumisiwe",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCommandCompleted.text": {
+      "text": "Umyalo wokwakha ulimi usuqediwe",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCommandFailed.text": {
+      "text": "Umyalo wokwakha ulimi wehlulekile",
+      "status": "machine-generated"
+    },
+    "translator.message.languageDataReloaded.text": {
+      "text": "Idatha yolimi ilayishiwe kabusha",
+      "status": "machine-generated"
+    },
+    "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "Idatha yokugcinwa kolimi ayilayishiwe.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportArtifactSaved.text": {
+      "text": "Isivikelo sombiko wolimi sigcinwe",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportArtifactWasNotSaved.text": {
+      "text": "Umsebenzi wokubika ulimi awugcinwanga",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportTextExceedsThe5000000.text": {
+      "text": "Umbhalo wombiko wolimi udlula umkhawulo wokuphepha wezinhlamvu ezingu-5 000 000.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportTextMustBeAString.text": {
+      "text": "Umbhalo wombiko wolimi kumele ube uchungechunge lwezinhlamvu.",
+      "status": "machine-generated"
+    },
+    "translator.message.localeAdded.text": {
+      "text": "Indawo yengezwe",
+      "status": "machine-generated"
+    },
+    "translator.message.localeDeletedFromRegistry.text": {
+      "text": "Indawo isusiwe ku-rejistiri",
+      "status": "machine-generated"
+    },
+    "translator.message.localeDirectionMustBeLtrOrRtl.text": {
+      "text": "Uhlangothi lwendlela lwendawo kumele lube ltr noma rtl.",
+      "status": "machine-generated"
+    },
+    "translator.message.localeUpdated.text": {
+      "text": "Indawo isivuselelwe",
+      "status": "machine-generated"
+    },
+    "translator.message.localeValueNoLongerExists.text": {
+      "text": "Indawo ethi {id} ayisekho.",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationAssignmentRejected.text": {
+      "text": "Umsebenzi wokufuduka wenqatshiwe",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationCandidatesAreUnavailableBecauseTheReportStatus.text": {
+      "text": "Abafanelwe ukudluliselwa abatholakali ngoba isimo sombiko sithi '{reportFileStatus}'.",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationCandidatesUnavailable.text": {
+      "text": "Abafakizicelo bokufuduka abatholakali",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationComponentAssignmentUpdated.text": {
+      "text": "Isabelo sekhomponenti yokufuduka sesibuyekezwe",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileAdded.text": {
+      "text": "Ifayela lokufuduka lengezwe",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileAlreadyListed.text": {
+      "text": "Ifayela lokufuduka seludwetshiwe",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRejected.text": {
+      "text": "Ifayela lokufuduka linqatshiwe",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRemovalFailed.text": {
+      "text": "Ukususwa kwefayela lokufuduka kwehlulekile",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRemoved.text": {
+      "text": "Ifayela lokufuduka lisusiwe",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesAdded.text": {
+      "text": "Amafayela okufuduka afakiwe",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesAlreadyListed.text": {
+      "text": "Amafayela okuthutha asevele ahlelwe ohlwini",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesRejected.text": {
+      "text": "Amafayela okuthutha anqatshwe",
+      "status": "machine-generated"
+    },
+    "translator.message.noApplicableSchemaIsAvailableForValue.text": {
+      "text": "Ayikho i-schema efanelekayo etholakala ku-{viewName}.",
+      "status": "machine-generated"
+    },
+    "translator.message.noLanguageBuildIsRunning.text": {
+      "text": "Akukho ukwakhiwa kolimi okwamanje okwenzekayo.",
+      "status": "machine-generated"
+    },
+    "translator.message.noNewFilesAdded.text": {
+      "text": "Akukho amafayela amasha engeziwe",
+      "status": "machine-generated"
+    },
+    "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
+      "text": "Akuyona i-repositori yolimi ye-My Defragmenter. Okushodayo: {missing}",
+      "status": "machine-generated"
+    },
+    "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
+      "text": "Ayikho embikweni wokufuduka; kudingeka ukwakhiwa kabusha.",
+      "status": "machine-generated"
+    },
+    "translator.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "Indlela iphuma emgogodleni we-repository: {relativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.recordRejected.text": {
+      "text": "Irekhodi lenqatshiwe",
+      "status": "machine-generated"
+    },
+    "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
+      "text": "Ukulayisha kabusha kuzosusa zonke izinguquko zolimi ezikhunjeni.",
+      "status": "machine-generated"
+    },
+    "translator.message.removeValueFromTheLocaleRegistry.text": {
+      "text": "Susa i-{id} ku-rejista yendawo?",
+      "status": "machine-generated"
+    },
+    "translator.message.requiredLocaleValueCannotBeDeleted.text": {
+      "text": "Indawo edingekayo {id} ayikwazi ukusulwa.",
+      "status": "machine-generated"
+    },
+    "translator.message.runningLanguageBuildCommand.text": {
+      "text": "Kuyalelwa umyalo wokwakha ulimi",
+      "status": "machine-generated"
+    },
+    "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
+      "text": "Gcina noma ususe izinguquko kuMbiko Wolimi ngaphambi kokugcina idatha yolimi olusemthethweni.",
+      "status": "machine-generated"
+    },
+    "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
+      "text": "Londoloza noma buyisela izinguquko zomemori ngaphambi kokwakha kabusha.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectAValidComponent.text": {
+      "text": "Khetha ingxenye evumelekile.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectAValidComponentBeforeAddingFiles.text": {
+      "text": "Khetha ingxenye evumelekile ngaphambi kokwengeza amafayela.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
+      "text": "Ifayela elikhethiwe lisesimweni sangaphandle kwengcambu yediphozithi: {absolutePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedFolderIsOutsideTheRepositoryRootValue.text": {
+      "text": "Ifolda ekhethiwe isengaphandle kwengcambu yediphozithi: {folderPath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedPathIsNotAFileValue.text": {
+      "text": "Indlela ekhethiwe ayiyona ifayela: {absolutePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedPathIsNotAFolderValue.text": {
+      "text": "Indlela ekhethiwe ayiyona ifolda: {folderPath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectPotentialCandidateRejectedOrReview.text": {
+      "text": "Khetha umfakisicelo ongaba khona, onqatshelwe, noma ukuhlola.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceFileOpened.text": {
+      "text": "Ifayela lomthombo livuliwe",
+      "status": "machine-generated"
+    },
+    "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
+      "text": "Irekhodi lekhatalogu elingu{recordKey} lishintshile noma alisekho.",
+      "status": "machine-generated"
+    },
+    "translator.message.theComponentChangedOrNoLongerExists.text": {
+      "text": "Ingxenye ishintshile noma ayisekho.",
+      "status": "machine-generated"
+    },
+    "translator.message.theConfiguredLanguageBuilderDoesNotExposeExtractstringcandidates.text": {
+      "text": "Umakhi wolimi olulungiselelwe awudaluli abakhethiweyo bomugqa.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
+      "text": "Inqubo yokwakha ulimi ayizange imiswe.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLanguageReportChangedOnDiskReloadIt.text": {
+      "text": "Umbiko wolimi ushintshe kudiski. Lulayishe kabusha ngaphambi kokugcina izinguquko zakho.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLocaleChangedOrNoLongerExists.text": {
+      "text": "Indawo ishintshile noma ayisekho.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationCandidatesCouldNotBeReloaded.text": {
+      "text": "Abafakizicelo bokufuduka abakwazanga ukulayishwa kabusha.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationFileIsNoLongerListed.text": {
+      "text": "Ifayela lokufuduka alisasekho ohlwini.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportComponentAssignmentIsStaleRebuild.text": {
+      "text": "Umsebenzi wezingxenye zomibiko yokufuduka awuvuselelwanga. Yakha kabusha imiphumela yezilimi.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportDoesNotContainThisFile.text": {
+      "text": "Umbiko wokufuduka awunayo le fayela. Yakha kabusha imiphumela yezilimi.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportDoesNotIncludeCatalogFound.text": {
+      "text": "Umbiko wokufuduka awufaki imigqa etholakale kukhatalogi. Yakha kabusha imiphumela yezilimi.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportIsMissingFullCandidateSource.text": {
+      "text": "Umbiko wokufuduka awunazo imigqa ephelele yemithombo yabafakisicelo. Yakha kabusha imiphumela yezilimi.",
+      "status": "machine-generated"
+    },
+    "translator.message.theRecordChangedOrNoLongerExists.text": {
+      "text": "Irekhodi lishintshile noma alisekho.",
+      "status": "machine-generated"
+    },
+    "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
+      "text": "Ibhuloho lokulayisha ngaphambi elinqatshelwe alitholakali.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineIsNotACurrentMigration.text": {
+      "text": "Umugqa okhethiwe awuyona isicelo sokufuduka esikhona.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineIsNotACurrentReported.text": {
+      "text": "Umugqa okhethiwe awuyona intambo yokufuduka ebikiwe njengamanje.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringIsNoLongerACurrent.text": {
+      "text": "Uchungechunge olukhethiwe aluseyona isicelo sokufuduka esiskenwayo njengamanje.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedTextIsNoLongerACurrent.text": {
+      "text": "Umbhalo okhethiwe awusayena umfakisicelo wamanje ongakabi kukatalogi.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileCouldNotBeOpened.text": {
+      "text": "Ifayela lomthombo alikwazanga ukuvulwa.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddFiles.text": {
+      "text": "Akunakwenzeka ukwengeza amafayela.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddTheScannedFile.text": {
+      "text": "Angikwazi ukwengeza ifayela eliskeniwe.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddTheScannedFiles.text": {
+      "text": "Angikwazi ukwengeza amafayela askeniwe.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToApplyLocale.text": {
+      "text": "Akukwazi ukufaka i-locale",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToApplyTheComponent.text": {
+      "text": "Akunakufakwa ingxenye.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAssignTheComponent.text": {
+      "text": "Akunakwenzeka ukwabela ingxenye.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToDeleteLocale.text": {
+      "text": "Akunakususa isifunda solimi",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadLanguageData.text": {
+      "text": "Akukwazi ukulayisha idatha yolimi.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadMigrationCandidates.text": {
+      "text": "Akukwazi ukulayisha abafanelekayo bokuthuthela.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadTheLanguageReportArtifact.text": {
+      "text": "Akukwazi ukulayisha i-artifact yombiko wolimi.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToOpenMigrationSource.text": {
+      "text": "Akukwazi ukuvula umthombo wokufuduka",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToOpenValueValue.text": {
+      "text": "Akukwazi ukuvula {targetRelativePath}: {error}",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
+      "text": "Akukwazi ukufunda isakhiwo / ulimi / imibiko / umbiko wokufuduka .json: {errorMessage}",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToRefreshCandidateCatalogStatus.text": {
+      "text": "Akwenzeki ukuvuselela isimo sekhatalogi yabafakisicelo",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToRemoveTheFile.text": {
+      "text": "Angikwazi ukususa ifayela.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToUpdateCandidateStatus.text": {
+      "text": "Akunakwenzeka ukuvuselela isimo somfakisicelo.",
+      "status": "machine-generated"
+    },
+    "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
+      "text": "Sebenzisa umkhombi wendawo njenge-en, fr, CA, noma zh Hans.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
+      "text": "Sebenzisa inketho ethi 'Gcina i-artifact yombiko' embikweni wezilimi ngaphambi kokugcina idatha yezilimi ezisemthethweni.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
+      "text": "Sebenzisa 'Save' ukugcina isimo somfakisicelo kumakhomphath/, i-/ esemthethweni kanye ne-.json.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
+      "text": "Sebenzisa Igcina ukugcina ushintsho kuKhathalogi Yezingxenye.",
+      "status": "machine-generated"
+    },
+    "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
+      "text": "Ukuqinisekisa izinguquko zolimi; izicelo ze-API ze-Deep L sezivuliwe",
+      "status": "machine-generated"
+    },
+    "translator.message.validatingLanguageChangesDeeplIsDisabled.text": {
+      "text": "Ukuqinisekisa izinguquko zolimi; I-Deep L ivaliwe",
+      "status": "machine-generated"
+    },
+    "translator.message.validationResult.text": {
+      "text": "Umphumela wokuqinisekisa",
+      "status": "machine-generated"
+    },
+    "translator.message.valueIsNotAFile.text": {
+      "text": "{lANGUAGE_REPORT_PATH} akuyona ifayela.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
+      "text": "{resultRelativePath} Kubhalwe ngqo. Ukwakhiwa kombiko ozayo kungase kushintshe lezi zinguquko.",
+      "status": "machine-generated"
+    },
+    "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "Linda ukuthi ukwakhiwa kuqede ngaphambi kokuphuma.",
+      "status": "machine-generated"
+    },
+    "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
+      "text": "Linda ukuthi ukwakhiwa kolimi kuqede ngaphambi kokugcina i-artifact yombiko.",
+      "status": "machine-generated"
+    },
+    "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
+      "text": "Ngilinde inqubo yokwakha ulimi imiswe",
+      "status": "machine-generated"
+    },
+    "translator.message.writeValueAuthoritativeFileS.text": {
+      "text": "Bhala amafayela anokwethenjelwa e{normalizedCount}?",
+      "status": "machine-generated"
+    },
+    "translator.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "Ukuthwebula amafayela akhiqiziwe ukuze kubuyiselwe esimweni sangaphambilini",
+      "status": "machine-generated"
+    },
+    "translator.progress.checkingGeneratedFileChanges.status": {
+      "text": "Ukuhlola izinguquko zamafayela akhiqiziwe",
+      "status": "machine-generated"
+    },
+    "translator.progress.committingLanguageChanges.status": {
+      "text": "Ukufaka izinguquko zolimi",
+      "status": "machine-generated"
+    },
+    "translator.progress.rebuildingLanguageOutputs.status": {
+      "text": "Ukwakha kabusha imiphumela yolimi",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "Ukubuyisela amafayela anegunya nawadalwe",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringFilesAfterAnError.status": {
+      "text": "Ukubuyisela amafayela ngemuva kwephutha",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringGeneratedFiles.status": {
+      "text": "Ukubuyisela amafayela akhiqiziwe",
+      "status": "machine-generated"
+    },
+    "translator.progress.savingLanguageData.status": {
+      "text": "Ukulondoloza idatha yolimi",
+      "status": "machine-generated"
+    },
+    "translator.progress.startingSaveAndRebuild.status": {
+      "text": "Ukuqala ukulondoloza nokwakha kabusha",
+      "status": "machine-generated"
+    },
+    "translator.progress.stoppingLanguageBuild.status": {
+      "text": "Misa ukwakhiwa kolimi",
+      "status": "machine-generated"
+    },
+    "translator.progress.unableToStartLanguageBuild.status": {
+      "text": "Akukwazi ukuqala ukwakhiwa kolimi",
+      "status": "machine-generated"
+    },
+    "translator.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "Sebenzisa i-Stop Build ewindini lenqubekela phambili, bese ulinda ukuthi ukubuyiselwa emuva kuqedwe ngaphambi kokuvala uhlelo lokusebenza.",
+      "status": "machine-generated"
+    },
+    "translator.progress.waitingForSaveConfirmation.status": {
+      "text": "Ukulinda ukuqinisekiswa kokulondoloza",
+      "status": "machine-generated"
+    },
+    "translator.progress.writingAuthoritativeLanguageFiles.status": {
+      "text": "Ukubhala amafayela olimi anokwethenjelwa",
+      "status": "machine-generated"
+    },
+    "translator.ui.add1SelectedFile.text": {
+      "text": "Engeza ifayela elilodwa elikhethiwe",
+      "status": "machine-generated"
+    },
+    "translator.ui.addCategory.text": {
+      "text": "Engeza isigaba",
+      "status": "machine-generated"
+    },
+    "translator.ui.addComponent.text": {
+      "text": "Engeza ingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
+      "text": "Kwengezwe kumafayela omthombo ngaphansi kwezingxenye ze-{componentSelectValue}. Kusadingeka ukulondoloza.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addedValueFileSUnderComponentValueSave.text": {
+      "text": "Kwengezwe amafayela e{resultAddedFilesCount} ngaphansi kwezingxenye ze{componentSelectValue}. Kusadingeka ukulondoloza.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addFiles.text": {
+      "text": "Engeza amafayela.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addLocale.text": {
+      "text": "Engeza isifunda",
+      "status": "machine-generated"
+    },
+    "translator.ui.addRecord.text": {
+      "text": "Engeza irekhodi",
+      "status": "machine-generated"
+    },
+    "translator.ui.addRole.text": {
+      "text": "Engeza indima",
+      "status": "machine-generated"
+    },
+    "translator.ui.addSelectedFiles.text": {
+      "text": "Engeza amafayela akhethiwe",
+      "status": "machine-generated"
+    },
+    "translator.ui.addToSourceFiles.text": {
+      "text": "Engeza kumafayela omthombo",
+      "status": "machine-generated"
+    },
+    "translator.ui.addValueSelectedFiles.text": {
+      "text": "Engeza amafayela akhethiwe e{count}",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCandidates.text": {
+      "text": "Bonke abafakisicelo",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCandidatesValue.text": {
+      "text": "Bonke abafakizicelo: {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCanonicalLocaleTemplatesAreAlreadyRegistered.text": {
+      "text": "Zonke izifanekiso zendawo ezisemthethweni sezibhalisiwe",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponentDetails.text": {
+      "text": "Yonke imininingwane yezingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponents.text": {
+      "text": "Zonke izingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponentsNoComponentFilter.text": {
+      "text": "Zonke izingxenye, akukho kuhlunga kwezingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.allowDeeplCalls.text": {
+      "text": "Vumela izingcingo ze-Deep L",
+      "status": "machine-generated"
+    },
+    "translator.ui.allStatuses.text": {
+      "text": "Zonke izimo",
+      "status": "machine-generated"
+    },
+    "translator.ui.alreadyInSourceFiles.text": {
+      "text": "Sekusele kumafayela omthombo",
+      "status": "machine-generated"
+    },
+    "translator.ui.alreadyListedUnderComponentValue.text": {
+      "text": "Sekuludwe ngaphansi kwezingxenye ze-{scannedFileInventoryComponent}.",
+      "status": "machine-generated"
+    },
+    "translator.ui.analyzingSourceContext.text": {
+      "text": "Ukuhlaziya umongo womthombo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyChanges.text": {
+      "text": "Faka izinguquko",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyInMemory.text": {
+      "text": "Faka ekukhumbulweni",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyNormalizedText.text": {
+      "text": "Faka umbhalo ohlelekile",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyToInMemoryDraft.text": {
+      "text": "Faka isicelo ku-drafti yesikhumbuzo",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignNewFilesTo.text": {
+      "text": "Beka amafayela amasha ku",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignSelectedFilesTo.text": {
+      "text": "Beka amafayela akhethiwe ku",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignToComponent.text": {
+      "text": "Beka ekwakhiweni",
+      "status": "machine-generated"
+    },
+    "translator.ui.authoritativeFiles.text": {
+      "text": "Amafayela anegunya",
+      "status": "machine-generated"
+    },
+    "translator.ui.availableComponents.text": {
+      "text": "Izinto ezitholakalayo",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text": {
+      "text": "Ibheji ye{stateDirty}",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text2": {
+      "text": "Ibheji ye{validationOk}",
+      "status": "machine-generated"
+    },
+    "translator.ui.buildLanguageCatalogsValue.text": {
+      "text": "akha ulimi lwe/ / izikhalogi / {currentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
+      "text": "Izinqumo zabafakisicelo zigcinwa kuhlu lokuthutha.",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateDetails.text": {
+      "text": "Imininingwane yomfakisicelo",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogMatches.text": {
+      "text": "Ukufanisa kwekhatalogi",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogOutputLocales.text": {
+      "text": "Izindawo zokukhipha ikhatalogi",
+      "status": "machine-generated"
+    },
+    "translator.ui.categories.text": {
+      "text": "Izigaba",
+      "status": "machine-generated"
+    },
+    "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
+      "text": "Izinketho zibonisa ulimi lwe-/, i-canonical /, nezindawo zolimi ze-.json. Izindawo ezibhalisiwe zisabonakala kodwa azikwazi ukukhethwa.",
+      "status": "machine-generated"
+    },
+    "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
+      "text": "Khetha ingxenye ohlwini lwezingxenye ezithembekile ze-.json.",
+      "status": "machine-generated"
+    },
+    "translator.ui.clear.text": {
+      "text": "Kusobala",
+      "status": "machine-generated"
+    },
+    "translator.ui.clearEditor.text": {
+      "text": "Uhlelo lokuhlela olucacile",
+      "status": "machine-generated"
+    },
+    "translator.ui.closeCandidates.text": {
+      "text": "Vala abafanelekayo",
+      "status": "machine-generated"
+    },
+    "translator.ui.component.text": {
+      "text": "Ingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentCatalog.text": {
+      "text": "Ikhatalogi Yezingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
+      "text": "Ikhatalogi Yezingxenye nemilayezo yokuxilonga kuzoveza amarekhodi avela kuzo zonke izingxenye.",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentDetails.text": {
+      "text": "Imininingwane yezingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.components.text": {
+      "text": "Izingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentSelection.text": {
+      "text": "Ukukhethwa kwezingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.coverageUnavailableValue.text": {
+      "text": "Akutholakali ukumbozwa: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.coverageUnavailableValue.text2": {
+      "text": "Akutholakali: {fileError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.deleteLocale.text": {
+      "text": "Susa i-locale",
+      "status": "machine-generated"
+    },
+    "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
+      "text": "Kutholwe kumyalezo wokhathalogi we-canonical okhethiwe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.description.text": {
+      "text": "Incazelo",
+      "status": "machine-generated"
+    },
+    "translator.ui.detectedPlaceholdersValue.text": {
+      "text": "Izindawo zokubeka ezitholwe: {arrayFromNewSetNamesSort}",
+      "status": "machine-generated"
+    },
+    "translator.ui.diagnosticMessages.text": {
+      "text": "Imilayezo yokuxilonga",
+      "status": "machine-generated"
+    },
+    "translator.ui.discardAllInMemoryChanges.text": {
+      "text": "Ukhipha zonke izinguquko ememori?",
+      "status": "machine-generated"
+    },
+    "translator.ui.discardUnsavedLanguageReportEditsAndReloadThe.text": {
+      "text": "Uyilahla yini izinguquko ezingakagcinwa embikweni wolimi bese ulayisha kabusha i-artifact?",
+      "status": "machine-generated"
+    },
+    "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
+      "text": "Hlela irekhodi elihambisanayo lapha ngaphandle kokuphuma kuwo wonke abafakwayo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.editComponent.text": {
+      "text": "Hlela ingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.editingTheCurrentGeneratedReport.text": {
+      "text": "Ukuhlela umbiko okwamanje okukhiqiziwe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.editRecord.text": {
+      "text": "Hlela irekhodi",
+      "status": "machine-generated"
+    },
+    "translator.ui.editValue.text": {
+      "text": "Hlela i-{componentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.editValue.text2": {
+      "text": "Hlela i-{currentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingCategories.text": {
+      "text": "Izigaba ezikhona",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingRoles.text": {
+      "text": "Izindima ezikhona",
+      "status": "machine-generated"
+    },
+    "translator.ui.filteredToComponentValue.text": {
+      "text": "Kuhlungiwe kuya engxenyeni: {selectedComponent}",
+      "status": "machine-generated"
+    },
+    "translator.ui.filterStatus.text": {
+      "text": "Isimo sokuhlunga",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedArtifactManualEditsCanBeOverwrittenThe.text": {
+      "text": "Umkhiqizo okhiqiziwe: izinguquko ezenziwe ngesandla zingabhunjwa ngesikhathi esilandelayo lapho kubunjwa umbiko wolimi.",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogsDeleted.text": {
+      "text": "Amakhathalogi akhiqiziwe asusiwe",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogsScheduledForDeletion.text": {
+      "text": "Izikhatalogi ezakhiwe ezihlelwe ukususwa",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogValueWillBeDeletedWhenYou.text": {
+      "text": "Ikhatalogi ethi {currentId} ezakhiwe izosuswa lapho ugcina.",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogValueWillBePreserved.text": {
+      "text": "Ikhatalogi ekhiqiziwe ethi {currentId} izogcinwa.",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedFiles.text": {
+      "text": "Amafayela akhiqiziwe",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedFilesChanged.text": {
+      "text": "Amafayela akhiqiziwe ashintshile",
+      "status": "machine-generated"
+    },
+    "translator.ui.hideLeftPanel.text": {
+      "text": "Fihla iphaneli yesobunxele",
+      "status": "machine-generated"
+    },
+    "translator.ui.identifier.text": {
+      "text": "Isazisi",
+      "status": "machine-generated"
+    },
+    "translator.ui.inspectedValueFileSScannedValueAsText.text": {
+      "text": "Kuhlolwe amafayela e{scannedFolderInspectedFileCount}; kuskena i{scannedFolderScannedFileCount} njengombhalo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.invalidValueErrorS.text": {
+      "text": "Akulungile (amaphutha e-{validationErrorsCount})",
+      "status": "machine-generated"
+    },
+    "translator.ui.join.text": {
+      "text": ").join(', ')}",
+      "status": "machine-generated"
+    },
+    "translator.ui.languageReport.text": {
+      "text": "Umbiko Wolimi",
+      "status": "machine-generated"
+    },
+    "translator.ui.leftToRightLtr.text": {
+      "text": "Kusuka kwesobunxele kuya kwesokudla (ltr)",
+      "status": "machine-generated"
+    },
+    "translator.ui.lineValue.text": {
+      "text": "Umugqa we{candidateLine}",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingLanguageReportArtifact.text": {
+      "text": "Kulayishwa i-artifact yombiko wolimi.",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingPotentialFoundCoverage.text": {
+      "text": "Ukufaka amandla angaba khona, i/ ithole ukumbozwa.",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingProjectLanguageData.text": {
+      "text": "Kulayishwa idatha yolimi lwephrojekthi.",
+      "status": "machine-generated"
+    },
+    "translator.ui.locales.text": {
+      "text": "Izindawo",
+      "status": "machine-generated"
+    },
+    "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
+      "text": "Igcina izilimi / izingxenye ezisemthethweni ze-/ .json → ukudluliselwa Uhlu lokuhlola .scanFiles",
+      "status": "machine-generated"
+    },
+    "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
+      "text": "Igcina izilimi ze/, izindawo ze/, nezindawo ze.json. Ukususa i-locale kugcina amafayela omthombo abhalwe ngababhali futhi kugcina ngokuzenzakalelayo idatha yekhatalogu ekhiqiziwe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationCoverageUnavailable.text": {
+      "text": "Akutholakali ukumbozwa kokufuduka",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationCoverageValue.text": {
+      "text": "Ukufakwa kwezindatshana zokufuduka {fileCatalogedStringCount}",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventory.text": {
+      "text": "Uhlu lokuthutha",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventory.text2": {
+      "text": "Uhlu Lokuthutha",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventoryEntries.text": {
+      "text": "Izinto zokufuduka ezibhalwe ohlwini",
+      "status": "machine-generated"
+    },
+    "translator.ui.nextLine.text": {
+      "text": "Okulandelayo (umugqa)",
+      "status": "machine-generated"
+    },
+    "translator.ui.no.text": {
+      "text": "Cha",
+      "status": "machine-generated"
+    },
+    "translator.ui.noCandidateStringsWereFoundInThisFile.text": {
+      "text": "Akukho imicu yomfakisicelo ezitholakele kulo fayela.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noComponentMatchesTheSearch.text": {
+      "text": "Akukho ingxenye ehambisana nokusesha.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFilesContainingCandidateStringsWereFoundIn.text": {
+      "text": "Akukho amafayela aqukethe imigqa yezicelo ezitholakele kulesi sakhiwo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFileSelected.text": {
+      "text": "Akukho ifayela elikhethiwe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFilesMatchTheCurrentFilter.text": {
+      "text": "Akukho amafayela ahambisana nesihlungi samanje.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFolderSelected.text": {
+      "text": "Ayikho ifolda ekhethiwe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
+      "text": "Akukho abafakizicelo bokufuduka ababikiwe kule fayela.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noMigrationSourceFilesAreListed.text": {
+      "text": "Akukho amafayela womthombo wokufuduka alandelwayo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
+      "text": "Akekho umfakisicelo olandelayo ohambisana nesihlungi sesimo samanje.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
+      "text": "Akekho umfakisicelo wangaphambilini ohambelana nesihlungi sesimo samanje.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noRecordsMatchTheCurrentFilters.text": {
+      "text": "Akukho amarekhodi ahambisana nezihlungi zamanje.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noScanResultsAreAvailable.text": {
+      "text": "Akukho miphumela yokuskena etholakalayo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noStableSourceConstructWasFound.text": {
+      "text": "Akutholakali isakhiwo somthombo esizinzile.",
+      "status": "machine-generated"
+    },
+    "translator.ui.notes.text": {
+      "text": "Amaphawula",
+      "status": "machine-generated"
+    },
+    "translator.ui.notSet.text": {
+      "text": "(akusethwanga)",
+      "status": "machine-generated"
+    },
+    "translator.ui.notValidated.text": {
+      "text": "Akuzange kuqinisekiswe",
+      "status": "machine-generated"
+    },
+    "translator.ui.noUnsavedChanges.text": {
+      "text": "Akukho izinguquko ezingagcinwanga",
+      "status": "machine-generated"
+    },
+    "translator.ui.openSource.text": {
+      "text": "Umthombo ovulekile",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
+      "text": "Ukulungiselela ukwakhiwa kabusha okuvamile ngaphandle kwe-Deep L",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingNormalizedSaveWithDeeplDisabled.text": {
+      "text": "Ukulungiselela ukulondoloza okuvamile lapho i-Deep L ivaliwe",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text": {
+      "text": "Kulungiselelwa ukwakhiwa kabusha ngokuvula izicelo ze-API ze-Deep L",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
+      "text": "Ukulungiselela ukulondoloza ngemibizo ye-API ye-Deep L esebenzayo",
+      "status": "machine-generated"
+    },
+    "translator.ui.previousLine.text": {
+      "text": "Okwedlule (umugqa)",
+      "status": "machine-generated"
+    },
+    "translator.ui.recommendedCategories.text": {
+      "text": "Izigaba ezinconyiwe",
+      "status": "machine-generated"
+    },
+    "translator.ui.recommendedRoles.text": {
+      "text": "Izindima ezinconyiwe",
+      "status": "machine-generated"
+    },
+    "translator.ui.recoveryFilesRetained.text": {
+      "text": "Amafayela wokululama agcinwe",
+      "status": "machine-generated"
+    },
+    "translator.ui.recursivelyInspectARepositoryFolderThenAddSelected.text": {
+      "text": "Hlola ifolda yediphozithi ngokuphindaphindiwe, bese wengeza amafayela akhethiwe anophawu lwekhandidethi ngasikhathi sinye.",
+      "status": "machine-generated"
+    },
+    "translator.ui.refreshingCatalogMatches.text": {
+      "text": "Ukufanisa okusha kwekhathalogi.",
+      "status": "machine-generated"
+    },
+    "translator.ui.reject.text": {
+      "text": "Nqaba",
+      "status": "machine-generated"
+    },
+    "translator.ui.reloadReportFromDisk.text": {
+      "text": "Layisha kabusha umbiko kusuka kudiski",
+      "status": "machine-generated"
+    },
+    "translator.ui.remove.text": {
+      "text": "Susa",
+      "status": "machine-generated"
+    },
+    "translator.ui.removeValueFromTheMigrationInventory.text": {
+      "text": "Susa i-{filePath} kuhlu lokuthutha?",
+      "status": "machine-generated"
+    },
+    "translator.ui.repositoryMaintenanceTool.text": {
+      "text": "Ithuluzi lokugcinwa kwesitoreji",
+      "status": "machine-generated"
+    },
+    "translator.ui.requiredLocale.text": {
+      "text": "Isifunda esidingekayo",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeCandidateListAndCandidateEditor.text": {
+      "text": "Shintsha usayizi wohlelo lokuhlunga abakhethiweyo kanye nomhleli wabafakizicelo",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeLocaleListAndLocaleEditor.text": {
+      "text": "Shintsha usayizi wohlelo lwezindawo zolimi kanye nomhleli wezindawo zolimi",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeValueListAndEditor.text": {
+      "text": "Lungisa usayizi wohlelo lokuhlunga noluhlela lwe-{definitionTitle}",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeWorkspaceAndOperationResults.text": {
+      "text": "Shintsha usayizi wendawo yokusebenza nemiphumela yokusebenza",
+      "status": "machine-generated"
+    },
+    "translator.ui.restore.text": {
+      "text": "Buyisela",
+      "status": "machine-generated"
+    },
+    "translator.ui.restoringTheLastLoadedDraftAndValidatingIt.text": {
+      "text": "Ukubuyisela isishicilelo sokugcina esilayishiwe nokusivumelanisa",
+      "status": "machine-generated"
+    },
+    "translator.ui.retry.text": {
+      "text": "Zama futhi",
+      "status": "machine-generated"
+    },
+    "translator.ui.revertingLanguageData.text": {
+      "text": "Ukubuyisela idatha yolimi",
+      "status": "machine-generated"
+    },
+    "translator.ui.rightToLeftRtl.text": {
+      "text": "Kusuka kwesokudla kuya kwesobunxele (rtl)",
+      "status": "machine-generated"
+    },
+    "translator.ui.roles.text": {
+      "text": "Izindima",
+      "status": "machine-generated"
+    },
+    "translator.ui.runtime.text": {
+      "text": "Isikhathi sokusebenza",
+      "status": "machine-generated"
+    },
+    "translator.ui.saveReportArtifact.text": {
+      "text": "Gcina i-artifact yombiko",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFailedValue.text": {
+      "text": "Ukuhlola kwehlulekile: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFile.text": {
+      "text": "Hlola ifayela.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFolder.text": {
+      "text": "Hlola ifolda.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
+      "text": "Kuhlungwe izintambo zabacandida ze-{scannedFileExtractedCount} ngaphandle kokushintsha uhlu lwezimpahla.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanningSelectedFile.text": {
+      "text": "Ukuskena ifayela elikhethiwe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanningSelectedFolder.text": {
+      "text": "Ukuskena ifolda ekhethiwe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFile.text": {
+      "text": "Hlola ifayela lomthombo",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFileValue.text": {
+      "text": "Hlola ifayela lomthombo: {scannedFilePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFolder.text": {
+      "text": "Hlola ifolda yomthombo",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFolderValue.text": {
+      "text": "Hlola ifolda yomthombo: {scannedFolderPath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scope.text": {
+      "text": "Umkhawulo",
+      "status": "machine-generated"
+    },
+    "translator.ui.search.text": {
+      "text": "Funa",
+      "status": "machine-generated"
+    },
+    "translator.ui.searchAndFilter.text": {
+      "text": "Sesha futhi uhlunge",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectACategory.text": {
+      "text": "(khetha isigaba)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAComponent.text": {
+      "text": "(khetha ingxenye)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
+      "text": "Khetha ifayela lokubonisa zonke izintambo ezamukelwe yi-extract String Candidates.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
+      "text": "Khetha ifolda ukuze uthole amafayela aqukethe imigqa engaba khona.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAllNew.text": {
+      "text": "Khetha konke okusha",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectALocaleOrAddANewOne.text": {
+      "text": "Khetha indawo noma engeza entsha.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectALocaleTemplate.text": {
+      "text": "Khetha itempulethi yendawo",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
+      "text": "Khetha umfakisicelo obikiwe ukuze ubheke isimo sakhe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectARole.text": {
+      "text": "(khetha indima)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
+      "text": "Khetha ingxenye ethile ngaphambi kokwengeza irekhodi.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectedValue.text": {
+      "text": "Okukhethiwe: {scannedFilePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectedValue.text2": {
+      "text": "Okukhethiwe: {scannedFolderPath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectFile.text": {
+      "text": "Khetha ifayela.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectFolder.text": {
+      "text": "Khetha ifolda.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
+      "text": "Khetha ifayela elilodwa le-repository ukuze ulihlole ngaphandle kokulifaka ohlwini lwezinto zomthombo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.semanticKeywords.text": {
+      "text": "Amagama angukhiye anencazelo",
+      "status": "machine-generated"
+    },
+    "translator.ui.setPreviewDefault.text": {
+      "text": "Seta ukubuka kwangaphambilini njengokujwayelekile",
+      "status": "machine-generated"
+    },
+    "translator.ui.showingRecordsFromAllComponents.text": {
+      "text": "Ukubonisa amarekhodi avela kuzo zonke izingxenye",
+      "status": "machine-generated"
+    },
+    "translator.ui.showLeftPanel.text": {
+      "text": "Bonisa iphaneli yesobunxele",
+      "status": "machine-generated"
+    },
+    "translator.ui.skippedValueFileOrFolderPathS.text": {
+      "text": "Kwashiywa indlela yefayela noma yefolda ye-{skipped}.",
+      "status": "machine-generated"
+    },
+    "translator.ui.status.text": {
+      "text": "Isimo",
+      "status": "machine-generated"
+    },
+    "translator.ui.statusInCatalog.text": {
+      "text": "Isimo: Kukhathalogi",
+      "status": "machine-generated"
+    },
+    "translator.ui.stoppedAtTheValueFileSafetyLimit.text": {
+      "text": "Kumiswe emkhawulweni wokuphepha wefayela ye-{scannedFolderLimitsMaximumFiles}.",
+      "status": "machine-generated"
+    },
+    "translator.ui.textDirection.text": {
+      "text": "Ukuqondisa umbhalo",
+      "status": "machine-generated"
+    },
+    "translator.ui.theInventoryIsUnchangedUntilSelectedFilesAre.text": {
+      "text": "Uhlu alushintshi kuze kufakwe amafayela akhethiwe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.theReportDoesNotExistYetSavingWill.text": {
+      "text": "Umbiko awukakabi khona okwamanje. Ukugcina kuzowudala.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
+      "text": "Le ndawo idingwa ngumakhi wolimi.",
+      "status": "machine-generated"
+    },
+    "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
+      "text": "Ukubuka kwangaphambilini okugxile ekuhumusheni kusetshenziswa izishintsho zamagama ezisemthethweni.",
+      "status": "machine-generated"
+    },
+    "translator.ui.uncheckedBuildsUseNormalizedEnglishAndDoNot.title": {
+      "text": "Ukwakhiwa okungahloliwe kusebenzisa isiNgisi esijwayelekile futhi akubizi i-Deep L.",
+      "status": "machine-generated"
+    },
+    "translator.ui.unsavedChanges.text": {
+      "text": "Izinguquko ezingagcinwanga",
+      "status": "machine-generated"
+    },
+    "translator.ui.unsavedChangesRemainInMemoryContinueToAnother.text": {
+      "text": "Izinguquko ezingagcinwanga zisekhona ememori.  Uyaqhubeka uye kwenye imboniselo?",
+      "status": "machine-generated"
+    },
+    "translator.ui.useSuggestedKey.text": {
+      "text": "Sebenzisa isihluthulelo esiphakanyisiwe",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationFailedWithValueErrorS.text": {
+      "text": "Ukuqinisekiswa kwehlulekile ngenxa yamaphutha e{validationErrorsCount}.",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationListValue.text": {
+      "text": "uhlu lokuqinisekisa {kind}",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationPassedWithValueWarningS.text": {
+      "text": "Ukuqinisekiswa kuphumelele nezixwayiso ezivela ku-{validationWarningsCount}.",
+      "status": "machine-generated"
+    },
+    "translator.ui.validValueWarningS.text": {
+      "text": "Kuvumelekile (izixwayiso ze-{validationWarningsCount})",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueCandidateBearingFileSValuePotentialCandidate.text": {
+      "text": "{scannedFolderCandidateFileCount} amafayela abafakisicelo, {scannedFolderCandidateCount} abafakisicelo abangaba khona, {scannedFolderCatalogedStringCount} kutholakale kukhatalogi",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text": {
+      "text": "{scannedFileCandidateCount} izicelo ezingekho kukhathalogi, {scannedFileCatalogedStringCount} etholakala kukhathalogi",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text2": {
+      "text": "{fileCandidateCount} izicelo ezingekho kukhathalogi, {fileCatalogedStringCount} etholakala kukhathalogi",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text3": {
+      "text": "{candidateRowsLengthCatalogedCount} izicelo ezingekho kukhathalogi, {catalogedCount} etholakala kukhathalogi",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogValueFoundInCatalog.text": {
+      "text": "{fileCandidateCount} {fileCatalogedStringCount} engakayifakwanga kukhathalogi itholakala kukhathalogi",
+      "status": "machine-generated"
+    },
+    "translator.ui.valuePotentialValueInCatalogValue.text": {
+      "text": "{fileCandidateCount} {fileCatalogedStringCount} ongaba khona ekhatalogini ethi {inventoryText}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueRecordS.text": {
+      "text": "{recordsCount} irekhodi/irekhodi",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueSourceFileS.text": {
+      "text": "{filesCount} Amarekhodi angavela",
+      "status": "machine-generated"
+    },
+    "translator.ui.view.text": {
+      "text": "Buka",
+      "status": "machine-generated"
+    },
+    "translator.ui.viewHeadingDataViewToolbar.text": {
+      "text": "Buka idatha yesihloko Buka ibha yamathuluzi",
+      "status": "machine-generated"
+    },
+    "translator.ui.yes.text": {
+      "text": "Yebo",
+      "status": "machine-generated"
+    }
+  }
+}

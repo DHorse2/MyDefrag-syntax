@@ -97,11 +97,16 @@ test('registers Problems-style Explorer toolbar commands and close behavior', as
 
     const paths = require('../shared/path');
     paths.configurePaths({ userDir: tempDir, logDir: tempDir });
-    const context = { subscriptions: [] };
+    const context = {
+        extensionPath: path.resolve(__dirname, '..', '..'),
+        subscriptions: []
+    };
     const registration = registerDiagnosticNavigation(context);
     await registration.refresh();
 
     for (const command of [
+        'mydfrg.openHelp',
+        'mydfrg.diagnostics.openHelp',
         'mydfrg.diagnostics.previous',
         'mydfrg.diagnostics.next',
         'mydfrg.diagnostics.prevFile',
@@ -123,4 +128,10 @@ test('registers Problems-style Explorer toolbar commands and close behavior', as
 
     await commands.get('mydfrg.diagnostics.closeView')();
     assert.ok(executed.some(([command]) => command === 'workbench.action.closeSidebar'));
+
+    await commands.get('mydfrg.openHelp')('Settings/Description.md');
+    assert.ok(executed.some(([command, uri]) => {
+        return command === 'markdown.showPreviewToSide'
+            && /Settings[\\/]Description\.md$/.test(uri.fsPath);
+    }));
 });

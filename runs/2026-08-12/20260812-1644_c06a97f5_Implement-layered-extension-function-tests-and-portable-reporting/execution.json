@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "c06a97f5",
+  "startedAt": "2026-08-12T23:44:48.991Z",
+  "finishedAt": "2026-08-13T00:14:33.460Z",
+  "status": "completed",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "MyDefrag-syntax"
+  ],
+  "tasks": [
+    "Implement approved command structure, repository-relative reporting paths, and function-oriented extension tests"
+  ],
+  "promptPaths": [],
+  "outputs": [
+    "package.json",
+    "scripts/Test-MyDefragSyntax.ps1",
+    "scripts/node-test-jsonl-reporter.js",
+    "docs/testing.md"
+  ],
+  "artifacts": [
+    "artifacts/test-results/MyDefragSyntax-TestReport-latest.md",
+    "artifacts/test-results/MyDefragSyntax-TestReport-latest.json",
+    "artifacts/test-results/MyDefragSyntax-TestReport-latest.xml"
+  ],
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

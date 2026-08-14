@@ -1,0 +1,22 @@
+{
+  "locale": "xh",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "I-Defragmenter yam: Akukho uhlolo lwangoku.",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) I-Defragmenter Yam {index} / {total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) Uhlolo lwe-Defragmenter 0",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "Uhlalutyo: {current} / {eligible} / {all} ({remaining} eseleyo, iifayile ze-{remainingFiles} / {traversableFiles} / {totalFiles}, i-{fixed} ilungisiwe, i-{ignored} ayihoywanga, i-{skipped} itsibisiwe)",
+      "status": "machine-generated"
+    }
+  }
+}

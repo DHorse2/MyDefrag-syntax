@@ -23,11 +23,11 @@
       "text": "Salida del comando «construir»"
     },
     "translator.accessibility.candidateStatus.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status"
+      "status": "machine-generated",
+      "text": "Condición de candidato"
     },
     "translator.accessibility.closeOperationResult.label": {
       "fallbackLocale": null,
@@ -76,11 +76,11 @@
       "text": "Componente para el archivo de migración escaneado"
     },
     "translator.accessibility.componentForScannedMigrationFiles.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component for scanned migration files"
+      "status": "machine-generated",
+      "text": "Componente para archivos de migración escaneados"
     },
     "translator.accessibility.componentIdentifier.label": {
       "fallbackLocale": null,
@@ -97,20 +97,20 @@
       "text": "Modo de vista previa predeterminado"
     },
     "translator.accessibility.editCatalogRecordValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "entryKey"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit catalog record {entryKey}"
+      "status": "machine-generated",
+      "text": "Editar ficha del catálogo {entryKey}"
     },
     "translator.accessibility.filterCandidatesByStatus.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filter candidates by status"
+      "status": "machine-generated",
+      "text": "Filtrar candidatos por estado"
     },
     "translator.accessibility.filterMigrationSourceFiles.label": {
       "fallbackLocale": null,
@@ -120,18 +120,18 @@
       "text": "Filtrar archivos de origen de la migración"
     },
     "translator.accessibility.languageReportArtifactText.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact text"
+      "status": "machine-generated",
+      "text": "Texto del informe lingüístico"
     },
     "translator.accessibility.localeTemplate.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale template"
+      "status": "machine-generated",
+      "text": "Plantilla de configuración regional"
     },
     "translator.accessibility.maximizeValue.label": {
       "fallbackLocale": null,
@@ -201,13 +201,13 @@
       "text": "Componente de tiempo de ejecución"
     },
     "translator.accessibility.selectValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select {filePath}"
+      "status": "machine-generated",
+      "text": "Selecciona «{filePath}»"
     },
     "translator.accessibility.selectedComponent.label": {
       "fallbackLocale": null,
@@ -338,11 +338,11 @@
       "text": "Añadir archivos de origen de la migración"
     },
     "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Authored files under language/locales are always preserved."
+      "status": "machine-generated",
+      "text": "Los archivos creados en las configuraciones de idioma / siempre se conservan."
     },
     "translator.dialog.cancel.text": {
       "fallbackLocale": null,
@@ -366,11 +366,11 @@
       "text": "Catálogo de componentes: Añadir registro"
     },
     "translator.dialog.componentCatalogEditRecord.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog Edit Record"
+      "status": "machine-generated",
+      "text": "Catálogo de componentes: Editar registro"
     },
     "translator.dialog.confirmAuthoritativeChanges.title": {
       "fallbackLocale": null,
@@ -380,29 +380,29 @@
       "text": "Confirmar los cambios definitivos"
     },
     "translator.dialog.deleteCatalogOnSave.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete catalog on Save"
+      "status": "machine-generated",
+      "text": "Eliminar el catálogo al guardar"
     },
     "translator.dialog.deleteGeneratedCatalogDataValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "catalogRemovals"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete generated catalog data: {catalogRemovals}"
+      "status": "machine-generated",
+      "text": "Eliminar los datos del catálogo generados: {catalogRemovals}"
     },
     "translator.dialog.deleteLocaleValue.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete locale {id}?"
+      "status": "machine-generated",
+      "text": "¿Eliminar la configuración regional «{id}»?"
     },
     "translator.dialog.discardAndReload.text": {
       "fallbackLocale": null,
@@ -433,18 +433,18 @@
       "text": "Salir sin guardar"
     },
     "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated locale catalogs will be preserved."
+      "status": "machine-generated",
+      "text": "Se conservarán los catálogos de configuración regional generados."
     },
     "translator.dialog.keepCatalogRecommended.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Keep catalog (recommended)"
+      "status": "machine-generated",
+      "text": "Conservar el catálogo (recomendado)"
     },
     "translator.dialog.languageBuildIsRunning.title": {
       "fallbackLocale": null,
@@ -489,11 +489,11 @@
       "text": "Mantenimiento del idioma de My Defragmenter"
     },
     "translator.dialog.noAuthoritativeFilesWillChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No authoritative files will change."
+      "status": "machine-generated",
+      "text": "No se modificará ningún archivo de referencia."
     },
     "translator.dialog.noFilesWillChange.text": {
       "fallbackLocale": null,
@@ -552,11 +552,11 @@
       "text": "El guardado ha fallado y se ha revertido"
     },
     "translator.dialog.saveTheReportArtifactSeparately.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save the report artifact separately"
+      "status": "machine-generated",
+      "text": "Guarda el artefacto del informe por separado"
     },
     "translator.dialog.scanFile.text": {
       "fallbackLocale": null,
@@ -566,11 +566,11 @@
       "text": "Escanear archivo"
     },
     "translator.dialog.scanFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan folder"
+      "status": "machine-generated",
+      "text": "Escanear carpeta"
     },
     "translator.dialog.scanMigrationSourceFile.title": {
       "fallbackLocale": null,
@@ -580,11 +580,11 @@
       "text": "Escanear el archivo de origen de la migración"
     },
     "translator.dialog.scanMigrationSourceFolder.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan migration source folder"
+      "status": "machine-generated",
+      "text": "Analizar la carpeta de origen de la migración"
     },
     "translator.dialog.selectTheMydefragSyntaxRepository.title": {
       "fallbackLocale": null,
@@ -601,13 +601,13 @@
       "text": "Inicio del mantenimiento del lenguaje de mi desfragmentador"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The generated build/language/catalogs/{id} data will be kept by default."
+      "status": "machine-generated",
+      "text": "Los datos generados de «construir» /, «idioma» /, «catálogos» / y «{id}» se conservarán de forma predeterminada."
     },
     "translator.dialog.unsavedLanguageChanges.title": {
       "fallbackLocale": null,
@@ -707,11 +707,11 @@
       "text": "No se ha encontrado una instalación de VS Codium o VS Code compatible con la función de línea de código; el archivo fuente se ha abierto con su aplicación predeterminada."
     },
     "translator.message.aScannedSourcePathIsNotANormalized.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A scanned source path is not a normalized repository relative file path."
+      "status": "machine-generated",
+      "text": "Una ruta de origen escaneada no es una ruta de archivo relativa normalizada del repositorio."
     },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
       "fallbackLocale": null,
@@ -742,18 +742,18 @@
       "text": "El proceso de compilación no notificó su finalización tras la cancelación."
     },
     "translator.message.candidateStatusRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status rejected"
+      "status": "machine-generated",
+      "text": "Se ha denegado la condición de candidato"
     },
     "translator.message.candidateStatusUpdatedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status updated in memory"
+      "status": "machine-generated",
+      "text": "Estado del candidato actualizado en memoria"
     },
     "translator.message.catalogRecordAddedToInMemoryDraft.text": {
       "fallbackLocale": null,
@@ -763,18 +763,18 @@
       "text": "Se ha añadido un registro de catálogo al borrador en memoria"
     },
     "translator.message.catalogRecordIsNoLongerAvailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog record is no longer available"
+      "status": "machine-generated",
+      "text": "El registro del catálogo ya no está disponible"
     },
     "translator.message.catalogRecordUpdatedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog record updated in memory"
+      "status": "machine-generated",
+      "text": "Registro del catálogo actualizado en memoria"
     },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
       "fallbackLocale": null,
@@ -842,13 +842,13 @@
       "text": "ID de componente duplicado: {componentId}"
     },
     "translator.message.duplicateLocaleIdValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Duplicate locale id: {localeId}"
+      "status": "machine-generated",
+      "text": "ID de configuración regional duplicado: {localeId}"
     },
     "translator.message.duplicateValueValue.text": {
       "fallbackLocale": null,
@@ -868,11 +868,11 @@
       "text": "No se pueden cambiar los nombres de los identificadores de componentes existentes."
     },
     "translator.message.existingLocaleIdentifiersCannotBeRenamed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing locale identifiers cannot be renamed."
+      "status": "machine-generated",
+      "text": "No es posible cambiar el nombre de los identificadores de configuración regional existentes."
     },
     "translator.message.exitAndDiscardAllInMemoryChanges.text": {
       "fallbackLocale": null,
@@ -889,13 +889,13 @@
       "text": "Forzar la interrupción del proceso de compilación del lenguaje"
     },
     "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "relativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated locale catalog is not a directory: {relativePath}"
+      "status": "machine-generated",
+      "text": "El catálogo de configuraciones regionales generado no es un directorio: {relativePath}"
     },
     "translator.message.invalidComponentRequest.text": {
       "fallbackLocale": null,
@@ -912,29 +912,29 @@
       "text": "Selección de archivo no válida."
     },
     "translator.message.invalidLocaleIdentifierForCatalogRemovalValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale identifier for catalog removal: {localeId}"
+      "status": "machine-generated",
+      "text": "Identificador de configuración regional no válido para la eliminación del catálogo: {localeId}"
     },
     "translator.message.invalidLocaleRequest.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale request."
+      "status": "machine-generated",
+      "text": "Solicitud de configuración regional no válida."
     },
     "translator.message.invalidLocaleStatusValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeStatus"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale status: {localeStatus}"
+      "status": "machine-generated",
+      "text": "Estado de configuración regional no válido: {localeStatus}"
     },
     "translator.message.invalidRecordRequest.text": {
       "fallbackLocale": null,
@@ -944,11 +944,11 @@
       "text": "Solicitud de registro no válida."
     },
     "translator.message.invalidScannedFileSelection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid scanned file selection."
+      "status": "machine-generated",
+      "text": "Selección de archivo escaneado no válida."
     },
     "translator.message.languageBuildCancelled.text": {
       "fallbackLocale": null,
@@ -986,69 +986,69 @@
       "text": "No se han cargado los datos sobre la conservación de la lengua."
     },
     "translator.message.languageReportArtifactSaved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact saved"
+      "status": "machine-generated",
+      "text": "Se ha guardado el informe de idioma"
     },
     "translator.message.languageReportArtifactWasNotSaved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact was not saved"
+      "status": "machine-generated",
+      "text": "No se ha guardado el artefacto del informe de idioma"
     },
     "translator.message.languageReportTextExceedsThe5000000.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report text exceeds the 5 000 000 character safety limit."
+      "status": "machine-generated",
+      "text": "El texto del informe lingüístico supera el límite de seguridad de 5 000 000 de caracteres."
     },
     "translator.message.languageReportTextMustBeAString.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report text must be a string."
+      "status": "machine-generated",
+      "text": "El texto del informe de idioma debe ser una cadena de caracteres."
     },
     "translator.message.localeAdded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale added"
+      "status": "machine-generated",
+      "text": "Se ha añadido una configuración regional"
     },
     "translator.message.localeDeletedFromRegistry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale deleted from registry"
+      "status": "machine-generated",
+      "text": "Configuración regional eliminada del registro"
     },
     "translator.message.localeDirectionMustBeLtrOrRtl.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale direction must be ltr or rtl."
+      "status": "machine-generated",
+      "text": "La dirección de la configuración regional debe ser «ltr» o «rtl»."
     },
     "translator.message.localeUpdated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale updated"
+      "status": "machine-generated",
+      "text": "Se ha actualizado la configuración regional"
     },
     "translator.message.localeValueNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale {id} no longer exists."
+      "status": "machine-generated",
+      "text": "La configuración regional «{id}» ya no existe."
     },
     "translator.message.migrationAssignmentRejected.text": {
       "fallbackLocale": null,
@@ -1123,11 +1123,11 @@
       "text": "Se han añadido archivos de migración"
     },
     "translator.message.migrationFilesAlreadyListed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration files already listed"
+      "status": "machine-generated",
+      "text": "Archivos de migración ya incluidos en la lista"
     },
     "translator.message.migrationFilesRejected.text": {
       "fallbackLocale": null,
@@ -1199,22 +1199,22 @@
       "text": "Al recargar la página, se perderán todos los cambios de idioma guardados en la memoria."
     },
     "translator.message.removeValueFromTheLocaleRegistry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Remove {id} from the locale registry?"
+      "status": "machine-generated",
+      "text": "¿Se debe eliminar «{id}» del registro de configuración regional?"
     },
     "translator.message.requiredLocaleValueCannotBeDeleted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Required locale {id} cannot be deleted."
+      "status": "machine-generated",
+      "text": "No se puede eliminar la configuración regional requerida «{id}»."
     },
     "translator.message.runningLanguageBuildCommand.text": {
       "fallbackLocale": null,
@@ -1224,11 +1224,11 @@
       "text": "Ejecución del comando de compilación del lenguaje"
     },
     "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save or discard the Language Report edits before saving canonical language data."
+      "status": "machine-generated",
+      "text": "Guarda o descarta los cambios realizados en el informe lingüístico antes de guardar los datos lingüísticos canónicos."
     },
     "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
       "fallbackLocale": null,
@@ -1252,11 +1252,11 @@
       "text": "Selecciona un componente válido antes de añadir archivos."
     },
     "translator.message.selectPotentialCandidateRejectedOrReview.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select Potential Candidate, Rejected, or Review."
+      "status": "machine-generated",
+      "text": "Selecciona «Candidato potencial», «Rechazado» o «Revisar»."
     },
     "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -1268,13 +1268,13 @@
       "text": "El archivo seleccionado se encuentra fuera de la raíz del repositorio: {absolutePath}"
     },
     "translator.message.selectedFolderIsOutsideTheRepositoryRootValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "folderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected folder is outside the repository root: {folderPath}"
+      "status": "machine-generated",
+      "text": "La carpeta seleccionada se encuentra fuera de la raíz del repositorio: {folderPath}"
     },
     "translator.message.selectedPathIsNotAFileValue.text": {
       "fallbackLocale": null,
@@ -1286,13 +1286,13 @@
       "text": "La ruta seleccionada no es un archivo: {absolutePath}"
     },
     "translator.message.selectedPathIsNotAFolderValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "folderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected path is not a folder: {folderPath}"
+      "status": "machine-generated",
+      "text": "La ruta seleccionada no es una carpeta: {folderPath}"
     },
     "translator.message.sourceFileOpened.text": {
       "fallbackLocale": null,
@@ -1302,13 +1302,13 @@
       "text": "Se ha abierto el archivo de origen"
     },
     "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "recordKey"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The catalog record {recordKey} changed or no longer exists."
+      "status": "machine-generated",
+      "text": "El registro del catálogo {recordKey} ha cambiado o ya no existe."
     },
     "translator.message.theComponentChangedOrNoLongerExists.text": {
       "fallbackLocale": null,
@@ -1332,25 +1332,25 @@
       "text": "No se ha podido detener el proceso de compilación del lenguaje."
     },
     "translator.message.theLanguageReportChangedOnDiskReloadIt.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The language report changed on disk. Reload it before saving your edits."
+      "status": "machine-generated",
+      "text": "El informe de idiomas ha cambiado en el disco. Vuelve a cargarlo antes de guardar los cambios."
     },
     "translator.message.theLocaleChangedOrNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The locale changed or no longer exists."
+      "status": "machine-generated",
+      "text": "La ubicación ha cambiado o ya no existe."
     },
     "translator.message.theMigrationCandidatesCouldNotBeReloaded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration candidates could not be reloaded."
+      "status": "machine-generated",
+      "text": "No se han podido volver a cargar los candidatos a la migración."
     },
     "translator.message.theMigrationFileIsNoLongerListed.text": {
       "fallbackLocale": null,
@@ -1430,11 +1430,11 @@
       "text": "La cadena seleccionada ya no es una candidata a migración que se esté analizando actualmente."
     },
     "translator.message.theSelectedTextIsNoLongerACurrent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The selected text is no longer a current non catalog candidate."
+      "status": "machine-generated",
+      "text": "El texto seleccionado ya no es un candidato a ser excluido del catálogo."
     },
     "translator.message.theSourceFileCouldNotBeOpened.text": {
       "fallbackLocale": null,
@@ -1458,18 +1458,18 @@
       "text": "No se ha podido añadir el archivo escaneado."
     },
     "translator.message.unableToAddTheScannedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to add the scanned files."
+      "status": "machine-generated",
+      "text": "No se han podido añadir los archivos escaneados."
     },
     "translator.message.unableToApplyLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to apply locale"
+      "status": "machine-generated",
+      "text": "No se puede aplicar la configuración regional"
     },
     "translator.message.unableToApplyTheComponent.text": {
       "fallbackLocale": null,
@@ -1486,11 +1486,11 @@
       "text": "No se ha podido asignar el componente."
     },
     "translator.message.unableToDeleteLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to delete locale"
+      "status": "machine-generated",
+      "text": "No se puede eliminar la configuración regional"
     },
     "translator.message.unableToLoadLanguageData.text": {
       "fallbackLocale": null,
@@ -1507,11 +1507,11 @@
       "text": "No se han podido cargar los candidatos a la migración."
     },
     "translator.message.unableToLoadTheLanguageReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to load the language report artifact."
+      "status": "machine-generated",
+      "text": "No se ha podido cargar el artefacto del informe de idiomas."
     },
     "translator.message.unableToOpenMigrationSource.text": {
       "fallbackLocale": null,
@@ -1540,11 +1540,11 @@
       "text": "No se puede leer la compilación /, el informe de idioma /, el informe de migración / y el informe de migración .json: {errorMessage}"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to refresh candidate catalog status"
+      "status": "machine-generated",
+      "text": "No se ha podido actualizar el estado del catálogo de candidatos"
     },
     "translator.message.unableToRemoveTheFile.text": {
       "fallbackLocale": null,
@@ -1554,39 +1554,39 @@
       "text": "No se ha podido eliminar el archivo."
     },
     "translator.message.unableToUpdateCandidateStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to update candidate status."
+      "status": "machine-generated",
+      "text": "No se ha podido actualizar el estado del candidato."
     },
     "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use a locale identifier such as en, fr CA, or zh Hans."
+      "status": "machine-generated",
+      "text": "Utiliza un identificador de configuración regional como «en», «fr CA» o «zh Hans»."
     },
     "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save report artifact in the Language Report view before saving canonical language data."
+      "status": "machine-generated",
+      "text": "Utiliza la opción «Guardar artefacto de informe» en la vista «Informe de idiomas» antes de guardar los datos de idiomas canónicos."
     },
     "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save to persist the candidate status in language/canonical/components.json."
+      "status": "machine-generated",
+      "text": "Utiliza «Guardar» para conservar el estado de candidato en los componentes de idioma /, canónicos / y .json."
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save to persist the Component Catalog change."
+      "status": "machine-generated",
+      "text": "Utiliza «Guardar» para aplicar los cambios en el catálogo de componentes."
     },
     "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
       "fallbackLocale": null,
@@ -1610,22 +1610,22 @@
       "text": "Resultado de la validación"
     },
     "translator.message.valueIsNotAFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "lANGUAGE_REPORT_PATH"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{lANGUAGE_REPORT_PATH} is not a file."
+      "status": "machine-generated",
+      "text": "{lANGUAGE_REPORT_PATH} no es un archivo."
     },
     "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultRelativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{resultRelativePath} was written directly. A future report build may replace these edits."
+      "status": "machine-generated",
+      "text": "{resultRelativePath} Se ha redactado directamente. Es posible que una futura versión del informe sustituya estas modificaciones."
     },
     "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
       "fallbackLocale": null,
@@ -1635,11 +1635,11 @@
       "text": "Espera a que termine la compilación antes de salir."
     },
     "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Wait for the language build to finish before saving the report artifact."
+      "status": "machine-generated",
+      "text": "Espera a que finalice la compilación del lenguaje antes de guardar el artefacto del informe."
     },
     "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
       "fallbackLocale": null,
@@ -1756,18 +1756,18 @@
       "text": "Creación de archivos de idioma oficiales"
     },
     "translator.ui.add1SelectedFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add 1 selected file"
+      "status": "machine-generated",
+      "text": "Añadir 1 archivo seleccionado"
     },
     "translator.ui.addCategory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add category"
+      "status": "machine-generated",
+      "text": "Añadir categoría"
     },
     "translator.ui.addComponent.text": {
       "fallbackLocale": null,
@@ -1784,11 +1784,11 @@
       "text": "Añadir archivos."
     },
     "translator.ui.addLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add locale"
+      "status": "machine-generated",
+      "text": "Añadir configuración regional"
     },
     "translator.ui.addRecord.text": {
       "fallbackLocale": null,
@@ -1798,18 +1798,18 @@
       "text": "Añadir registro"
     },
     "translator.ui.addRole.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add role"
+      "status": "machine-generated",
+      "text": "Añadir función"
     },
     "translator.ui.addSelectedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add selected files"
+      "status": "machine-generated",
+      "text": "Añadir los archivos seleccionados"
     },
     "translator.ui.addToSourceFiles.text": {
       "fallbackLocale": null,
@@ -1819,13 +1819,13 @@
       "text": "Añadir a los archivos fuente"
     },
     "translator.ui.addValueSelectedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "count"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add {count} selected files"
+      "status": "machine-generated",
+      "text": "Añadir los archivos seleccionados c{count}"
     },
     "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
       "fallbackLocale": null,
@@ -1837,14 +1837,14 @@
       "text": "Se ha añadido a los archivos fuente en el componente «{componentSelectValue}». Aún es necesario guardar los cambios."
     },
     "translator.ui.addedValueFileSUnderComponentValueSave.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultAddedFilesCount",
         "componentSelectValue"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Added {resultAddedFilesCount} file(s) under component {componentSelectValue}. Save is still required."
+      "status": "machine-generated",
+      "text": "Se han añadido uno o varios archivos «{resultAddedFilesCount}» en el componente «{componentSelectValue}». Aún es necesario guardarlos."
     },
     "translator.ui.allCandidates.text": {
       "fallbackLocale": null,
@@ -1863,11 +1863,11 @@
       "text": "Todos los candidatos: {filePath}"
     },
     "translator.ui.allCanonicalLocaleTemplatesAreAlreadyRegistered.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All canonical locale templates are already registered"
+      "status": "machine-generated",
+      "text": "Todas las plantillas de configuración regional canónicas ya están registradas"
     },
     "translator.ui.allComponentDetails.text": {
       "fallbackLocale": null,
@@ -1891,11 +1891,11 @@
       "text": "Todos los componentes | Sin filtro de componentes"
     },
     "translator.ui.allStatuses.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All statuses"
+      "status": "machine-generated",
+      "text": "Todos los estados"
     },
     "translator.ui.allowDeeplCalls.text": {
       "fallbackLocale": null,
@@ -1928,11 +1928,11 @@
       "text": "Analizando el contexto de origen."
     },
     "translator.ui.applyChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply changes"
+      "status": "machine-generated",
+      "text": "Aplicar los cambios"
     },
     "translator.ui.applyInMemory.text": {
       "fallbackLocale": null,
@@ -1963,11 +1963,11 @@
       "text": "Asignar nuevos archivos a"
     },
     "translator.ui.assignSelectedFilesTo.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Assign selected files to"
+      "status": "machine-generated",
+      "text": "Asignar los archivos seleccionados a"
     },
     "translator.ui.assignToComponent.text": {
       "fallbackLocale": null,
@@ -2009,20 +2009,20 @@
       "text": "insignia {validationOk}"
     },
     "translator.ui.buildLanguageCatalogsValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "build/language/catalogs/{currentId}"
+      "status": "machine-generated",
+      "text": "construir / idioma / catálogos / {currentId}"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate decisions are saved with the migration inventory."
+      "status": "machine-generated",
+      "text": "Las decisiones sobre los candidatos se guardan junto con el inventario de migración."
     },
     "translator.ui.candidateDetails.text": {
       "fallbackLocale": null,
@@ -2046,18 +2046,18 @@
       "text": "Configuraciones regionales de salida del catálogo"
     },
     "translator.ui.categories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Categories"
+      "status": "machine-generated",
+      "text": "Categorías"
     },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Choices mirror language/canonical/language locales.json. Registered locales remain visible but cannot be selected."
+      "status": "machine-generated",
+      "text": "Las opciones reflejan el idioma /, la configuración canónica / y las configuraciones regionales de idioma .json. Las configuraciones regionales registradas siguen siendo visibles, pero no se pueden seleccionar."
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
       "fallbackLocale": null,
@@ -2067,11 +2067,11 @@
       "text": "Elige un componente del inventario oficial de componentes .json."
     },
     "translator.ui.clear.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Clear"
+      "status": "machine-generated",
+      "text": "Borrar"
     },
     "translator.ui.clearEditor.text": {
       "fallbackLocale": null,
@@ -2095,11 +2095,11 @@
       "text": "Componente"
     },
     "translator.ui.componentCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog"
+      "status": "machine-generated",
+      "text": "Catálogo de componentes"
     },
     "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
       "fallbackLocale": null,
@@ -2148,11 +2148,11 @@
       "text": "No hay cobertura disponible: {fileError}"
     },
     "translator.ui.deleteLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete locale"
+      "status": "machine-generated",
+      "text": "Eliminar configuración regional"
     },
     "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
       "fallbackLocale": null,
@@ -2178,11 +2178,11 @@
       "text": "Marcadores de posición detectados: {arrayFromNewSetNamesSort}"
     },
     "translator.ui.diagnosticMessages.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic Messages"
+      "status": "machine-generated",
+      "text": "Mensajes de diagnóstico"
     },
     "translator.ui.discardAllInMemoryChanges.text": {
       "fallbackLocale": null,
@@ -2192,18 +2192,18 @@
       "text": "¿Desea descartar todos los cambios realizados en la memoria?"
     },
     "translator.ui.discardUnsavedLanguageReportEditsAndReloadThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard unsaved Language Report edits and reload the artifact?"
+      "status": "machine-generated",
+      "text": "¿Desea descartar los cambios no guardados en el informe de idiomas y volver a cargar el artefacto?"
     },
     "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit a matching record here without leaving All Candidates."
+      "status": "machine-generated",
+      "text": "Edita aquí un registro que coincida sin salir de «Todos los candidatos»."
     },
     "translator.ui.editComponent.text": {
       "fallbackLocale": null,
@@ -2236,41 +2236,41 @@
       "text": "Editar {componentId}"
     },
     "translator.ui.editValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit {currentId}"
+      "status": "machine-generated",
+      "text": "Editar {currentId}"
     },
     "translator.ui.editingTheCurrentGeneratedReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Editing the current generated report."
+      "status": "machine-generated",
+      "text": "Editar el informe generado actualmente."
     },
     "translator.ui.existingCategories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing Categories"
+      "status": "machine-generated",
+      "text": "Categorías existentes"
     },
     "translator.ui.existingRoles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing Roles"
+      "status": "machine-generated",
+      "text": "Puestos actuales"
     },
     "translator.ui.filterStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filter status"
+      "status": "machine-generated",
+      "text": "Estado del filtro"
     },
     "translator.ui.filteredToComponentValue.text": {
       "fallbackLocale": null,
@@ -2282,43 +2282,43 @@
       "text": "Filtrado por componente: {selectedComponent}"
     },
     "translator.ui.generatedArtifactManualEditsCanBeOverwrittenThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated artifact: manual edits can be overwritten the next time the language report is built."
+      "status": "machine-generated",
+      "text": "Artefacto generado: las modificaciones manuales pueden sobrescribirse la próxima vez que se genere el informe de idiomas."
     },
     "translator.ui.generatedCatalogValueWillBeDeletedWhenYou.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalog {currentId} will be deleted when you Save."
+      "status": "machine-generated",
+      "text": "El catálogo generado «{currentId}» se eliminará al guardar."
     },
     "translator.ui.generatedCatalogValueWillBePreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalog {currentId} will be preserved."
+      "status": "machine-generated",
+      "text": "Se conservará el catálogo generado «{currentId}»."
     },
     "translator.ui.generatedCatalogsDeleted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalogs deleted"
+      "status": "machine-generated",
+      "text": "Se han eliminado los catálogos generados"
     },
     "translator.ui.generatedCatalogsScheduledForDeletion.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalogs scheduled for deletion"
+      "status": "machine-generated",
+      "text": "Catálogos generados cuya eliminación está programada"
     },
     "translator.ui.generatedFiles.text": {
       "fallbackLocale": null,
@@ -2356,14 +2356,14 @@
       "text": "En el catálogo"
     },
     "translator.ui.inspectedValueFileSScannedValueAsText.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderInspectedFileCount",
         "scannedFolderScannedFileCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Inspected {scannedFolderInspectedFileCount} file(s); scanned {scannedFolderScannedFileCount} as text."
+      "status": "machine-generated",
+      "text": "Se han inspeccionado los archivos «{scannedFolderInspectedFileCount}»; se ha escaneado «{scannedFolderScannedFileCount}» como texto."
     },
     "translator.ui.invalidValueErrorS.text": {
       "fallbackLocale": null,
@@ -2382,18 +2382,18 @@
       "text": ").join(', ')}"
     },
     "translator.ui.languageReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language Report"
+      "status": "machine-generated",
+      "text": "Informe lingüístico"
     },
     "translator.ui.leftToRightLtr.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Left to right (ltr)"
+      "status": "machine-generated",
+      "text": "De izquierda a derecha (izq.-dcha.)"
     },
     "translator.ui.lineValue.text": {
       "fallbackLocale": null,
@@ -2405,11 +2405,11 @@
       "text": "Línea{candidateLine}"
     },
     "translator.ui.loadingLanguageReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Loading language report artifact."
+      "status": "machine-generated",
+      "text": "Cargando el artefacto del informe de idiomas."
     },
     "translator.ui.loadingPotentialFoundCoverage.text": {
       "fallbackLocale": null,
@@ -2426,11 +2426,11 @@
       "text": "Cargando los datos de idioma del proyecto."
     },
     "translator.ui.locales.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locales"
+      "status": "machine-generated",
+      "text": "Localizaciones"
     },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
       "fallbackLocale": null,
@@ -2440,11 +2440,11 @@
       "text": "Mantiene los componentes de idioma /, canónicos /, .json → Inventario de migraciones .scanFiles"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains language/locales/locales.json. Deleting a locale preserves authored source files and keeps generated catalog data by default."
+      "status": "machine-generated",
+      "text": "Mantiene las configuraciones de idioma /, las configuraciones regionales / y las configuraciones regionales .json. Al eliminar una configuración regional, se conservan los archivos fuente creados y, de forma predeterminada, se mantienen los datos del catálogo generados."
     },
     "translator.ui.maintainsValue.text": {
       "fallbackLocale": null,
@@ -2493,11 +2493,11 @@
       "text": "Entradas del inventario de migración"
     },
     "translator.ui.nextLine.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Next (line)"
+      "status": "machine-generated",
+      "text": "Siguiente (línea)"
     },
     "translator.ui.no.text": {
       "fallbackLocale": null,
@@ -2528,11 +2528,11 @@
       "text": "No se ha seleccionado ningún archivo."
     },
     "translator.ui.noFilesContainingCandidateStringsWereFoundIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files containing candidate strings were found in this folder."
+      "status": "machine-generated",
+      "text": "No se han encontrado archivos que contengan cadenas candidatas en esta carpeta."
     },
     "translator.ui.noFilesMatchTheCurrentFilter.text": {
       "fallbackLocale": null,
@@ -2542,11 +2542,11 @@
       "text": "No hay ningún archivo que se ajuste al filtro actual."
     },
     "translator.ui.noFolderSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No folder selected."
+      "status": "machine-generated",
+      "text": "No se ha seleccionado ninguna carpeta."
     },
     "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
       "fallbackLocale": null,
@@ -2563,18 +2563,18 @@
       "text": "No aparece ningún archivo de origen de migración en la lista."
     },
     "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No next candidate matches the current status filter."
+      "status": "machine-generated",
+      "text": "No hay ningún candidato que cumpla con el filtro de estado actual."
     },
     "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No previous candidate matches the current status filter."
+      "status": "machine-generated",
+      "text": "Ningún candidato anterior cumple los criterios del filtro de estado actual."
     },
     "translator.ui.noRecordsMatchTheCurrentFilters.text": {
       "fallbackLocale": null,
@@ -2619,11 +2619,11 @@
       "text": "No validado"
     },
     "translator.ui.notes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Notes"
+      "status": "machine-generated",
+      "text": "Notas"
     },
     "translator.ui.openComponentCatalog.text": {
       "fallbackLocale": null,
@@ -2696,25 +2696,25 @@
       "text": "Preparación del guardado con las llamadas a la API de Deep L activadas"
     },
     "translator.ui.previousLine.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Previous (line)"
+      "status": "machine-generated",
+      "text": "Anterior (línea)"
     },
     "translator.ui.recommendedCategories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recommended Categories"
+      "status": "machine-generated",
+      "text": "Categorías recomendadas"
     },
     "translator.ui.recommendedRoles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recommended Roles"
+      "status": "machine-generated",
+      "text": "Puestos recomendados"
     },
     "translator.ui.recoveryFilesRetained.text": {
       "fallbackLocale": null,
@@ -2724,32 +2724,32 @@
       "text": "Archivos de recuperación conservados"
     },
     "translator.ui.recursivelyInspectARepositoryFolderThenAddSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recursively inspect a repository folder, then add selected candidate bearing files in one operation."
+      "status": "machine-generated",
+      "text": "Inspecciona de forma recursiva una carpeta del repositorio y, a continuación, añade los archivos candidatos seleccionados en una sola operación."
     },
     "translator.ui.refreshingCatalogMatches.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Refreshing catalog matches."
+      "status": "machine-generated",
+      "text": "Actualización de las coincidencias del catálogo."
     },
     "translator.ui.reject.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reject"
+      "status": "machine-generated",
+      "text": "Rechazar"
     },
     "translator.ui.reloadReportFromDisk.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reload report from disk"
+      "status": "machine-generated",
+      "text": "Volver a cargar el informe desde el disco"
     },
     "translator.ui.remove.text": {
       "fallbackLocale": null,
@@ -2775,41 +2775,41 @@
       "text": "Herramienta de mantenimiento del repositorio"
     },
     "translator.ui.requiredLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Required locale"
+      "status": "machine-generated",
+      "text": "Configuración regional obligatoria"
     },
     "translator.ui.resizeCandidateListAndCandidateEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize candidate list and candidate editor"
+      "status": "machine-generated",
+      "text": "Ajustar el tamaño de la lista de candidatos y del editor de candidatos"
     },
     "translator.ui.resizeLocaleListAndLocaleEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize locale list and locale editor"
+      "status": "machine-generated",
+      "text": "Ajustar el tamaño de la lista de configuraciones regionales y del editor de configuraciones regionales"
     },
     "translator.ui.resizeValueListAndEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionTitle"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize {definitionTitle} list and editor"
+      "status": "machine-generated",
+      "text": "Ajustar el tamaño de la lista y el editor de «{definitionTitle}»"
     },
     "translator.ui.resizeWorkspaceAndOperationResults.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize workspace and operation results"
+      "status": "machine-generated",
+      "text": "Ajustar el tamaño del espacio de trabajo y los resultados de las operaciones"
     },
     "translator.ui.restore.text": {
       "fallbackLocale": null,
@@ -2826,11 +2826,11 @@
       "text": "Recuperar el último borrador cargado y validarlo"
     },
     "translator.ui.retry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Retry"
+      "status": "machine-generated",
+      "text": "Volver a intentarlo"
     },
     "translator.ui.revertingLanguageData.text": {
       "fallbackLocale": null,
@@ -2840,18 +2840,18 @@
       "text": "Revertido de los datos lingüísticos"
     },
     "translator.ui.rightToLeftRtl.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Right to left (rtl)"
+      "status": "machine-generated",
+      "text": "De derecha a izquierda (rtl)"
     },
     "translator.ui.roles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Roles"
+      "status": "machine-generated",
+      "text": "Funciones"
     },
     "translator.ui.runtime.text": {
       "fallbackLocale": null,
@@ -2861,11 +2861,11 @@
       "text": "Duración"
     },
     "translator.ui.saveReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save report artifact"
+      "status": "machine-generated",
+      "text": "Guardar el artefacto del informe"
     },
     "translator.ui.scanFailedValue.text": {
       "fallbackLocale": null,
@@ -2884,11 +2884,11 @@
       "text": "Escanear el archivo."
     },
     "translator.ui.scanFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan folder."
+      "status": "machine-generated",
+      "text": "Escanear carpeta."
     },
     "translator.ui.scanSourceFile.text": {
       "fallbackLocale": null,
@@ -2907,20 +2907,20 @@
       "text": "Archivo original escaneado: {scannedFilePath}"
     },
     "translator.ui.scanSourceFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source folder"
+      "status": "machine-generated",
+      "text": "Escanear la carpeta de origen"
     },
     "translator.ui.scanSourceFolderValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source folder: {scannedFolderPath}"
+      "status": "machine-generated",
+      "text": "Carpeta de origen de la exploración: {scannedFolderPath}"
     },
     "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
       "fallbackLocale": null,
@@ -2939,11 +2939,11 @@
       "text": "Se está escaneando el archivo seleccionado."
     },
     "translator.ui.scanningSelectedFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scanning selected folder."
+      "status": "machine-generated",
+      "text": "Se está analizando la carpeta seleccionada."
     },
     "translator.ui.scope.text": {
       "fallbackLocale": null,
@@ -2967,11 +2967,11 @@
       "text": "Buscar y filtrar"
     },
     "translator.ui.selectACategory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(select a category)"
+      "status": "machine-generated",
+      "text": "(selecciona una categoría)"
     },
     "translator.ui.selectAComponent.text": {
       "fallbackLocale": null,
@@ -2988,25 +2988,25 @@
       "text": "Selecciona un archivo para mostrar todas las cadenas aceptadas por la función «Extraer candidatos de cadena»."
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a folder to find files containing candidate strings."
+      "status": "machine-generated",
+      "text": "Selecciona una carpeta para buscar archivos que contengan las cadenas candidatas."
     },
     "translator.ui.selectALocaleOrAddANewOne.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a locale or add a new one."
+      "status": "machine-generated",
+      "text": "Selecciona una configuración regional o añade una nueva."
     },
     "translator.ui.selectALocaleTemplate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a locale template"
+      "status": "machine-generated",
+      "text": "Selecciona una plantilla de configuración regional"
     },
     "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
       "fallbackLocale": null,
@@ -3016,11 +3016,11 @@
       "text": "Selecciona un candidato denunciado para consultar su estado."
     },
     "translator.ui.selectARole.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(select a role)"
+      "status": "machine-generated",
+      "text": "(selecciona un rol)"
     },
     "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
       "fallbackLocale": null,
@@ -3030,11 +3030,11 @@
       "text": "Selecciona un componente concreto antes de añadir un registro."
     },
     "translator.ui.selectAllNew.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select all new"
+      "status": "machine-generated",
+      "text": "Seleccionar todas las novedades"
     },
     "translator.ui.selectFile.text": {
       "fallbackLocale": null,
@@ -3044,11 +3044,11 @@
       "text": "Selecciona un archivo."
     },
     "translator.ui.selectFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select folder."
+      "status": "machine-generated",
+      "text": "Selecciona una carpeta."
     },
     "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
       "fallbackLocale": null,
@@ -3067,20 +3067,20 @@
       "text": "Seleccionado: {scannedFilePath}"
     },
     "translator.ui.selectedValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected: {scannedFolderPath}"
+      "status": "machine-generated",
+      "text": "Seleccionado: {scannedFolderPath}"
     },
     "translator.ui.semanticKeywords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Semantic Keywords"
+      "status": "machine-generated",
+      "text": "Palabras clave semánticas"
     },
     "translator.ui.setPreviewDefault.text": {
       "fallbackLocale": null,
@@ -3104,20 +3104,20 @@
       "text": "Se muestran los registros de todos los componentes"
     },
     "translator.ui.skippedValueFileOrFolderPathS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "skipped"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Skipped {skipped} file or folder path(s)."
+      "status": "machine-generated",
+      "text": "Se han omitido una o varias rutas de archivos o carpetas de «{skipped}»."
     },
     "translator.ui.status.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Status"
+      "status": "machine-generated",
+      "text": "Estado"
     },
     "translator.ui.statusInCatalog.text": {
       "fallbackLocale": null,
@@ -3127,41 +3127,41 @@
       "text": "Estado: En catálogo"
     },
     "translator.ui.stoppedAtTheValueFileSafetyLimit.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderLimitsMaximumFiles"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Stopped at the {scannedFolderLimitsMaximumFiles} file safety limit."
+      "status": "machine-generated",
+      "text": "Se ha producido un error al alcanzar el límite de seguridad de archivos de «{scannedFolderLimitsMaximumFiles}»."
     },
     "translator.ui.textDirection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Text direction"
+      "status": "machine-generated",
+      "text": "Dirección del texto"
     },
     "translator.ui.theInventoryIsUnchangedUntilSelectedFilesAre.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The inventory is unchanged until selected files are added."
+      "status": "machine-generated",
+      "text": "El inventario permanece sin cambios hasta que se añaden los archivos seleccionados."
     },
     "translator.ui.theReportDoesNotExistYetSavingWill.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The report does not exist yet. Saving will create it."
+      "status": "machine-generated",
+      "text": "El informe aún no existe. Al guardarlo, se creará."
     },
     "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "This locale is required by the language builder."
+      "status": "machine-generated",
+      "text": "El generador de idiomas requiere esta configuración regional."
     },
     "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
       "fallbackLocale": null,
@@ -3235,55 +3235,55 @@
       "text": "La validación se ha superado con {validationWarningsCount} advertencia(s)."
     },
     "translator.ui.valueCandidateBearingFileSValuePotentialCandidate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderCandidateFileCount",
         "scannedFolderCandidateCount",
         "scannedFolderCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFolderCandidateFileCount} candidate bearing file(s), {scannedFolderCandidateCount} potential candidate(s), {scannedFolderCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFolderCandidateFileCount} archivo(s) de candidato(s), {scannedFolderCandidateCount} candidato(s) potencial(es), {scannedFolderCatalogedStringCount} que se encuentra(n) en el catálogo"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileCandidateCount",
         "scannedFileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFileCandidateCount} non catalog candidate(s), {scannedFileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFileCandidateCount} candidatos que no figuran en el catálogo; {scannedFileCatalogedStringCount} aparece en el catálogo"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} non catalog candidate(s), {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} candidatos que no figuran en el catálogo; {fileCatalogedStringCount} aparece en el catálogo"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text3": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "candidateRowsLengthCatalogedCount",
         "catalogedCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{candidateRowsLengthCatalogedCount} non catalog candidate(s), {catalogedCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{candidateRowsLengthCatalogedCount} candidatos que no figuran en el catálogo; {catalogedCount} aparece en el catálogo"
     },
     "translator.ui.valueNonCatalogValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} non catalog {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} no figura en el catálogo {fileCatalogedStringCount}, pero aparece en el catálogo"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text": {
       "fallbackLocale": null,
@@ -3316,15 +3316,15 @@
       "text": "{fileCandidateCount} {fileCatalogedStringCount}o potencial encontrado en el catálogo"
     },
     "translator.ui.valuePotentialValueInCatalogValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount",
         "inventoryText"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential {fileCatalogedStringCount} in catalog{inventoryText}"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} {fileCatalogedStringCount}, disponible en el catálogo {inventoryText}"
     },
     "translator.ui.valueRecordS.text": {
       "fallbackLocale": null,
@@ -3345,11 +3345,11 @@
       "text": "{filesCount} archivo(s) de origen"
     },
     "translator.ui.view.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View"
+      "status": "machine-generated",
+      "text": "Ver"
     },
     "translator.ui.viewCandidates.text": {
       "fallbackLocale": null,

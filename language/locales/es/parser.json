@@ -1,0 +1,14 @@
+{
+  "locale": "es",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "Esperaba «{expected}», pero he encontrado «{actual}».",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Símbolo inesperado «{token}»",
+      "status": "machine-generated"
+    }
+  }
+}

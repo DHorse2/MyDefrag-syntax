@@ -24,6 +24,7 @@ class DiagnosticNavigator {
      * @param {string} options.stateFile Absolute path to writable diagnostic state JSON.
      * @param {string} options.legacyStateFile Legacy diagnostic state JSON used only when stateFile does not exist.
      * @param {object} [options.languageData] Existing project keyword/language data.
+     * @param {string} [options.extensionRoot] Installed extension root containing docs.
      * @param {Function} [options.diagnosticsProvider] Returns VS Code diagnostics grouped by URI.
      */
     constructor(options = {}) {
@@ -48,6 +49,7 @@ class DiagnosticNavigator {
         this.dismissedFiles = new Set(); // remove todo???
 
         this.keywordLookup = new KeywordLookup(options.languageData || {});
+        this.extensionRoot = options.extensionRoot || path.resolve(__dirname, '..', '..');
         this.diagnosticsProvider = options.diagnosticsProvider || null;
 
         this.allDiagnostics = [];
@@ -215,6 +217,7 @@ class DiagnosticNavigator {
             message: String(diagnostic.message || ''),
             token: keyword.token,
             keywordExists: keyword.exists,
+            helpDocuments: keyword.helpDocuments || [],
             raw: diagnostic
         });
     }

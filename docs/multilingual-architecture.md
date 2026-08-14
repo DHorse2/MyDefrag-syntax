@@ -51,8 +51,11 @@ npm run language:build
 Translator-owned component overrides are permanent sparse files at
 `language/locales/<locale>/<component>.json`. MyDefrag Locale Maintenance edits
 those files and uses the targeted `build-component` action to refresh the
-corresponding generated runtime catalog. Generated files under
-`build/language/catalogs/` remain derived and must not be hand-edited.
+corresponding generated runtime catalog. Before a writing build changes output,
+existing non-fallback generated translations and accepted API translations are
+merged additively into these permanent component sources. Generated files under
+`build/language/catalogs/` remain derived and must not be hand-edited; they are
+never the sole durable copy of a translation.
 
 ## Canonical Versus Localized Source
 

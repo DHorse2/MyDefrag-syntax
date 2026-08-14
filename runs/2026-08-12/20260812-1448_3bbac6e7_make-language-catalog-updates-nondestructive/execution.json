@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "3bbac6e7",
+  "startedAt": "2026-08-12T21:48:47.961Z",
+  "finishedAt": "2026-08-12T22:17:45.733Z",
+  "status": "completed",
+  "executionRecordMode": "Detailed",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "make-language-catalog-updates-nondestructive"
+  ],
+  "promptPaths": [
+    "chat-user-request"
+  ],
+  "outputs": [
+    "build/language/reports/english-fallback-locales.md",
+    "language/locales",
+    "build/scripts/build-language.js",
+    "build/mdl-language-app/services/build-integration.js",
+    "build/mdl-locale-app/services/locale-maintenance-service.js"
+  ],
+  "artifacts": [
+    "build/language/reports/english-fallback-locales.md",
+    "runs/2026-08-12/20260812-1448_3bbac6e7_make-language-catalog-updates-nondestructive/execution-record.md"
+  ],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

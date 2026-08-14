@@ -9,186 +9,186 @@
       "text": "Langages de programmation"
     },
     "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Clear Diagnostic Filter"
+      "status": "machine-generated",
+      "text": "Mon Défragmenteur : Effacer le filtre de diagnostic"
     },
     "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Close Diagnostics Explorer"
+      "status": "machine-generated",
+      "text": "Mon Défragmenteur : Fermer l'Explorateur de diagnostics"
     },
     "package.contributes.commands.mydfrg.diagnostics.filter.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Filter Diagnostics"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : Diagnostic des filtres"
     },
     "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Mark Diagnostic Fixed"
+      "status": "machine-generated",
+      "text": "Mon Défragmenteur : diagnostic « Marque » corrigé"
     },
     "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Ignore Diagnostic"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : Ignorer le diagnostic"
     },
     "package.contributes.commands.mydfrg.diagnostics.next.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Next Diagnostic"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : diagnostic suivant"
     },
     "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Next File"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : Fichier suivant"
     },
     "package.contributes.commands.mydfrg.diagnostics.previous.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Previous Diagnostic"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : diagnostic précédent"
     },
     "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Refresh Diagnostics"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : Actualiser les diagnostics"
     },
     "package.contributes.commands.mydfrg.diagnostics.reset.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Reset Diagnostic Navigation"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : Réinitialiser la navigation de diagnostic"
     },
     "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Send Diagnostic to Agent"
+      "status": "machine-generated",
+      "text": "Mon Défragmenteur : Envoyer un rapport de diagnostic à l’agent"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Show Diagnostics as Table"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : Afficher les diagnostics sous forme de tableau"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Show Diagnostics as Tree"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : Afficher les diagnostics sous forme d'arborescence"
     },
     "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Skip Diagnostic"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : Ignorer le diagnostic"
     },
     "package.contributes.commands.mydfrg.diagnostics.top.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: First Diagnostic"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur : premier diagnostic"
     },
     "package.contributes.commands.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open File at Position"
+      "status": "machine-generated",
+      "text": "Ouvrir le fichier à la position"
     },
     "package.contributes.configuration.properties.mydfrg.debugOn.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Enable My Defragmenter extension debug logging."
+      "status": "machine-generated",
+      "text": "Activer la journalisation de débogage de l'extension « Mon Défragmenteur »."
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Glob patterns to exclude from My Defragmenter validation"
+      "status": "machine-generated",
+      "text": "Modèles « Glob » à exclure de la validation de « My Defragmenter »"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Directory for My Defragmenter log files."
+      "status": "machine-generated",
+      "text": "Répertoire contenant les fichiers-journaux de « Mon Défragmenteur »."
     },
     "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic severity for references containing execution time macros."
+      "status": "machine-generated",
+      "text": "Niveau de gravité du diagnostic pour les références contenant des macros de temps d'exécution."
     },
     "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic severity for references whose target files are found."
+      "status": "machine-generated",
+      "text": "Niveau de gravité du diagnostic pour les références dont les fichiers cibles ont été trouvés."
     },
     "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic severity for references whose target files are not found."
+      "status": "machine-generated",
+      "text": "Niveau de gravité du diagnostic pour les références dont les fichiers cibles sont introuvables."
     },
     "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic severity for references found only by walking up parent folders."
+      "status": "machine-generated",
+      "text": "Gravité du diagnostic pour les références trouvées uniquement en remontant dans les dossiers parents."
     },
     "package.contributes.configuration.properties.mydfrg.userDir.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Directory for My Defragmenter user data."
+      "status": "machine-generated",
+      "text": "Répertoire contenant les données utilisateur de My Defragmenter."
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter extension verbosity level. Debug logging requires mydfrg debug On."
+      "status": "machine-generated",
+      "text": "Niveau de détail de l'extension « Mon Défragmenteur ». La journalisation de débogage nécessite que l'option « mydfrg debug » soit activée."
     },
     "package.contributes.languages.aliases": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter Script"
+      "status": "machine-generated",
+      "text": "Mon script de défragmentation"
     },
     "package.description": {
       "fallbackLocale": null,
@@ -198,38 +198,38 @@
       "text": "Mise en évidence de la syntaxe pour le langage de script « My Defragmenter »"
     },
     "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic severity for inferred fragment parent messages."
+      "status": "machine-generated",
+      "text": "Niveau de gravité du diagnostic pour les messages parents des fragments déduits."
     },
     "package.metadata.contributes.configuration.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter"
+      "status": "machine-generated",
+      "text": "Mon défragmenteur"
     },
     "package.metadata.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Syntax highlighting for My Defragmenter scripting language"
+      "status": "machine-generated",
+      "text": "Mise en évidence de la syntaxe pour le langage de script « My Defragmenter »"
     },
     "package.metadata.publisher": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
+      "status": "machine-generated",
       "text": "macrodm"
     },
     "package.path.repository.url": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
+      "status": "machine-generated",
       "text": "https://github.com/DHorse2/MyDefrag-syntax"
     }
   },

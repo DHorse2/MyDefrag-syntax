@@ -1,0 +1,138 @@
+{
+  "locale": "ar",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "لغات البرمجة",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "تمييز بناء الجملة في لغة البرمجة النصية «My Defragmenter»",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "تمييز بناء الجملة في لغة البرمجة النصية «My Defragmenter»",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "الدليل الخاص ببيانات مستخدم «My Defragmenter».",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "المجلد الذي يحتوي على ملفات سجل أداة «My Defragmenter».",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "تمكين تسجيل أخطاء تصحيح ملحق «My Defragmenter».",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "مستوى تفصيل ملحق «My Defragmenter». يتطلب تسجيل أخطاء التصحيح تشغيل خيار «mydfrg debug On».",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "تحديد درجة خطورة المشكلات المتعلقة بالمراجع التي تم العثور عليها فقط من خلال التصفح الصاعد للمجلدات الأصلية.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "درجة خطورة التشخيص للمراجع التي تحتوي على ماكروات وقت التنفيذ.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "درجة خطورة التشخيص للمراجع التي تم العثور على ملفاتها المستهدفة.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "مستوى خطورة التشخيص للمراجع التي لم يتم العثور على ملفاتها المستهدفة.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "درجة خطورة التشخيص للرسائل الأصلية المستنتجة من الأجزاء.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "أنماط Glob التي يجب استبعادها من عملية التحقق في «My Defragmenter»",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "برنامج «Defragmenter» الخاص بي",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "فتح الملف عند الموضع المحدد",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: التشخيص التالي",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: التشخيص السابق",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: الملف التالي",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: تم تحديد المشكلة وإصلاحها",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: تجاهل التشخيص",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: تخطي التشخيص",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: إرسال تقرير التشخيص إلى الوكيل",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: التشخيص الأولي",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: إعادة تعيين التنقل التشخيصي",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: تحديث التشخيصات",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: تشخيص المرشحات",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: مسح مرشح التشخيص",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: عرض التشخيصات في شكل شجرة",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: عرض التشخيصات في شكل جدول",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "برنامج «My Defragmenter»: إغلاق «Diagnostics Explorer»",
+      "status": "machine-generated"
+    }
+  }
+}

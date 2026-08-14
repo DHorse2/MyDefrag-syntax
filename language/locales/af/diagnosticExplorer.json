@@ -1,0 +1,22 @@
+{
+  "locale": "af",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "My Defragmenter: Geen huidige diagnose.",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) My Defragmenter {index} / {total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) My Defragmenter 0-diagnostiek",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "Diagnostiek: {current} / {eligible} / {all} ({remaining} oorblywende lêers, {remainingFiles} / {traversableFiles} / {totalFiles} lêers, {fixed} herstel, {ignored} geïgnoreer, {skipped} oorgeslaan)",
+      "status": "machine-generated"
+    }
+  }
+}

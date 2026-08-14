@@ -1,0 +1,22 @@
+{
+  "locale": "de",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "Mein Defragmentierer: Derzeit keine Diagnose.",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) Mein Defragmentierer {index} / {total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) „Mein Defragmenter 0“ – Diagnose",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "Diagnose: {current} / {eligible} / {all} ({remaining} verbleiben, {remainingFiles} / {traversableFiles} / {totalFiles} Dateien, behoben {fixed}, ignoriert {ignored}, übersprungen {skipped})",
+      "status": "machine-generated"
+    }
+  }
+}

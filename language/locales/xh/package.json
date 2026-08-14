@@ -1,0 +1,138 @@
+{
+  "locale": "xh",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "Iilwimi Zokucwangcisa",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "Ukugqanyiswa kwesintaksi kolwimi lweskripthi lwe-My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "Ukugqanyiswa kwesintaksi kolwimi lweskripthi lwe-My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "umakrodom",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "Ikhatalogu yedatha yomsebenzisi weMy Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "I-Defragmenter yam",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "Ikhatalogu yeefayile zelog zeMy Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "Vumela i-debug logging yolwandiso lwe-My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "Inqanaba lamanqaku olwandiso lwe-Defragmenter yam. Ukuloga i-debug kufuna i-mydfrg debug ibe yiyo.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "Ubunzima bokuxilonga iireferensi ezifunyanwa kuphela ngokungena kwiifolda ezingumzali.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "Ubunzima bokuxilonga kwiireferensi ezineemakro zexesha lokusebenza.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "Ubunzima bokuxilonga kweereferensi ezifayile zazo ezijolisweyo zifunyenwe.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "Ubunzima bokuxilonga iireferensi ezineefayile ezijoliswe kuzo ezingafunyanwanga.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "Ubunzima bokuxilonga kwimiyalezo yabazali bezicatshulwa eziqikelelweyo.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "Iipateni zeGlob eziza kususwa kuqinisekiso lwe-My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "Isikripthi sam sokwenza i-defrag",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "Vula ifayile kwindawo",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "I-Defragmenter Yam: Olandelayo Uvavanyo",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "I-Defragmenter yam: Uhlolo lwangaphambili",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "I-Defragmenter yam: Ifayile elandelayo",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "I-Defragmenter yam: Uhlalutyo lweziphene olulungisiweyo",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "I-Defragmenter yam: Yiyeke ukuhlola",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "I-Defragmenter yam: Tsibela ukuvavanya",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "I-Defragmenter Yam: Thumela uHlolo kwi-Arhente",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "I-Defragmenter Yam: Uhlolo Lokuqala",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "I-Defragmenter yam: Seta ngokutsha ukuhamba kohlalutyo",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "I-Defragmenter yam: Hlaziya i-Diagnostics",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "I-Defragmenter Yam: Ukuhluzwa kweDiagnostiki",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "I-Defragmenter yam: Sula iSihluzo soHlolo",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "I-Defragmenter yam: Bonisa i-Diagnostics njengomthi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "I-Defragmenter Yam: Bonisa i-Diagnostics njengeTheyibhile",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "I-Defragmenter yam: Vala i-Diagnostics Explorer",
+      "status": "machine-generated"
+    }
+  }
+}

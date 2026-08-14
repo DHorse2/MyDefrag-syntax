@@ -8,6 +8,8 @@
 const path = require('path');
 const paths = require('../shared/path');
 const vscode = require('vscode');
+const languageData = require('../server/languageData');
+const { resolveHelpFile } = require('../shared/helpDocumentation');
 const { DiagnosticNavigator } = require('./diagnosticNavigator');
 const {
     DiagnosticTreeProvider,
@@ -46,6 +48,8 @@ function registerDiagnosticNavigation(context) {
     const navigator = new DiagnosticNavigator({
         stateFile,
         legacyStateFile,
+        languageData,
+        extensionRoot: context.extensionPath || path.resolve(__dirname, '..', '..'),
         diagnosticsProvider: () => vscode.languages.getDiagnostics()
     });
     // {
@@ -146,7 +150,36 @@ function registerDiagnosticNavigation(context) {
         await openCurrent();
     };
 
+    const openHelp = async (relativePath) => {
+        const helpPath = resolveHelpFile(navigator.extensionRoot, relativePath);
+        if (!helpPath) {
+            vscode.window.showWarningMessage('MyDefrag: The requested Help page is invalid.');
+            return;
+        }
+
+        const uri = vscode.Uri.file(helpPath);
+        try {
+            await vscode.commands.executeCommand('markdown.showPreviewToSide', uri);
+        } catch (_err) {
+            const doc = await vscode.workspace.openTextDocument(uri);
+            await vscode.window.showTextDocument(doc, { preview: false });
+        }
+    };
+
     context.subscriptions.push(
+        vscode.commands.registerCommand('mydfrg.openHelp', async (relativePath) => {
+            await openHelp(relativePath);
+        }),
+
+        vscode.commands.registerCommand('mydfrg.diagnostics.openHelp', async () => {
+            const helpDocument = navigator.current()?.helpDocuments?.[0];
+            if (!helpDocument) {
+                vscode.window.showInformationMessage('MyDefrag: No Help page is available for the current diagnostic.');
+                return;
+            }
+            await openHelp(helpDocument.path);
+        }),
+
         vscode.commands.registerCommand('mydfrg.diagnostics.refresh', async () => {
             await refresh();
         }),

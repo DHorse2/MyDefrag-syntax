@@ -1,0 +1,22 @@
+{
+  "locale": "fa",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "دفرگمنت‌کنندهٔ من: هیچ تشخیص فعلی وجود ندارد.",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) Defragmenter من {index} / {total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) تشخیص‌های Defragmenter 0",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "تشخیصی: {current} / {eligible} / {all} ({remaining} باقی‌مانده، {remainingFiles} / {traversableFiles} / {totalFiles} فایل‌ها، {fixed} تعمیر شده، {ignored} نادیده گرفته شده، {skipped} رد شده)",
+      "status": "machine-generated"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "locale": "pt",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "O meu Desfragmentador: Não há diagnóstico neste momento.",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) O meu desfragmentador {index} / {total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) Diagnóstico do My Defragmenter 0",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "Diagnóstico: {current} / {eligible} / {all} ({remaining} ainda por resolver, {remainingFiles} / {traversableFiles} / {totalFiles} ficheiros, corrigidos {fixed}, ignorados {ignored}, omitidos {skipped})",
+      "status": "machine-generated"
+    }
+  }
+}

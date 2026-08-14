@@ -2,6 +2,11 @@
 
 const path = require('path');
 const vscode = require('vscode');
+const {
+    createHelpCommandTrust,
+    createHelpCommandUri,
+    renderHelpMarkdown
+} = require('../shared/helpDocumentation');
 
 const VIEW_MODE_TREE = 'tree';
 const VIEW_MODE_TABLE = 'table';
@@ -171,7 +176,7 @@ class DiagnosticTreeProvider {
         item.description = includeFile
             ? `${severity}  ${path.basename(diagnostic.filePath)}:${location}`
             : `${severity}  ${location}`;
-        item.tooltip = diagnosticTooltip(diagnostic);
+        item.tooltip = diagnosticTooltip(diagnostic, this.navigator.extensionRoot);
         item.iconPath = new vscode.ThemeIcon(key === currentKey ? 'target' : severityIcon(diagnostic.severity));
         item.command = {
             command: 'mydfrg.diagnostics.select',
@@ -231,16 +236,35 @@ function matchesFilter(diagnostic, filterText) {
  * @param {object} diagnostic
  * @returns {string}
  */
-function diagnosticTooltip(diagnostic) {
+function diagnosticTooltip(diagnostic, extensionRoot) {
     const token = diagnostic.token
         ? `\nToken: ${diagnostic.token} (${diagnostic.keywordExists ? 'known' : 'unknown'})`
         : '';
-    return [
+    const diagnosticText = [
         diagnostic.message,
         diagnostic.filePath,
         `Line ${diagnostic.line + 1}, Column ${diagnostic.character + 1}`,
         `Severity: ${severityLabel(diagnostic.severity)}${token}`
     ].join('\n');
+    const helpMarkdown = renderHelpMarkdown(diagnostic.helpDocuments, {
+        extensionRoot,
+        linkForPage(page) {
+            return createHelpCommandUri(page.path);
+        }
+    });
+
+    if (!helpMarkdown) return diagnosticText;
+
+    const tooltip = new vscode.MarkdownString(
+        `${escapeMarkdown(diagnosticText).replace(/\n/g, '  \n')}\n\n---\n\n${helpMarkdown}`
+    );
+    tooltip.isTrusted = createHelpCommandTrust();
+    tooltip.supportThemeIcons = true;
+    return tooltip;
+}
+
+function escapeMarkdown(value) {
+    return String(value || '').replace(/([\\`*_{}\[\]()#+.!|-])/g, '\\$1');
 }
 
 function severityLabel(severity) {

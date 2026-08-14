@@ -1,0 +1,22 @@
+{
+  "locale": "ru",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "«Мой дефрагментатор»: Диагностика в данный момент не проводится.",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) Мой дефрагментатор {index} / {total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) Диагностика программы «My Defragmenter 0»",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "Диагностика: {current} / {eligible} / {all} ({remaining} остались, {remainingFiles} / {traversableFiles} / {totalFiles} файлы, исправлено {fixed}, проигнорировано {ignored}, пропущено {skipped})",
+      "status": "machine-generated"
+    }
+  }
+}

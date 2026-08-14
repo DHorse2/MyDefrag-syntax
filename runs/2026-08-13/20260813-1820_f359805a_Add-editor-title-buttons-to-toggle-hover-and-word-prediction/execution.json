@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "f359805a",
+  "startedAt": "2026-08-14T01:20:31.922Z",
+  "finishedAt": "2026-08-14T01:28:45.956Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "Add editor title buttons to toggle hover and word prediction"
+  ],
+  "promptPaths": [
+    "interactive user request"
+  ],
+  "outputs": [
+    "package.json",
+    "src/extension.js",
+    "src/server/server.js",
+    "src/completion/completionPointProvider.js",
+    "src/shared/featureToggles.js"
+  ],
+  "artifacts": [
+    "artifacts/test-results/MyDefragSyntax-TestReport-20260813-182535-356-38100.md",
+    "artifacts/test-results/MyDefragSyntax-TestReport-20260813-182353-547-29452.md"
+  ],
+  "metrics": {
+    "focusedTestsPassed": 15,
+    "lspIntegrationTestsPassed": 2,
+    "serverNamedTestsPassed": 24,
+    "fastSuiteGroupsPassed": 11,
+    "fastSuiteGroupsFailedUnrelated": 2
+  },
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

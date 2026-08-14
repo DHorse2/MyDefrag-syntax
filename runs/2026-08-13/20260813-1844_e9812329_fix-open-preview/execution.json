@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "e9812329",
+  "startedAt": "2026-08-14T01:44:23.948Z",
+  "finishedAt": "2026-08-14T01:56:38.256Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "MyDefrag-syntax"
+  ],
+  "tasks": [
+    "fix-open-preview"
+  ],
+  "promptPaths": [
+    "AGENTS.md"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

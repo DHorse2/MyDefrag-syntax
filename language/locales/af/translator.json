@@ -1,0 +1,1758 @@
+{
+  "locale": "af",
+  "component": "translator",
+  "entries": {
+    "translator.directive.language.text": {
+      "text": "; @mydfrg taal{locale}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.allowDeeplCallsDuringSaveAndRebuild.label": {
+      "text": "Toelaat Deep L-oproepe tydens Stoor en Herbou",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.applicationNavigation.label": {
+      "text": "Aansoeknavigasie",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.buildCommandOutput.label": {
+      "text": "Bou opdraguitvoer",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.candidateStatus.label": {
+      "text": "Kandidaatstatus",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.closeOperationResult.label": {
+      "text": "Sluit operasie-uitslag",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.closeValue.label": {
+      "text": "Sluit {windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentAssignedToValue.label": {
+      "text": "Komponent toegewys aan {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentDescription.label": {
+      "text": "Komponentbeskrywing",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForAddedMigrationFiles.label": {
+      "text": "Komponent vir bygevoegde migrasielêers",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForScannedMigrationFile.label": {
+      "text": "Komponent vir geskandeerde migrasielêer",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForScannedMigrationFiles.label": {
+      "text": "Komponent vir geskandeerde migrasielêers",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentIdentifier.label": {
+      "text": "Komponentidentifiseerder",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.defaultPreviewMode.label": {
+      "text": "Standaard-voorskoumodus",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.editCatalogRecordValue.label": {
+      "text": "Bewerk katalogusopname{entryKey}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByStatus.label": {
+      "text": "Filtreer kandidate volgens status",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterMigrationSourceFiles.label": {
+      "text": "Filtreer migrasiebronlêers",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.languageReportArtifactText.label": {
+      "text": "Taalverslag-artefaattekst",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.localeTemplate.label": {
+      "text": "Plek sjabloon",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.maximizeValue.label": {
+      "text": "Maximeer {windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.migrationCandidatesForValue.label": {
+      "text": "Migrasiekandidate vir {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.minimizeValue.label": {
+      "text": "Minimaliseer {windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.normalizedText.label": {
+      "text": "Genormaliseerde teks",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.openValueAtLineValue.label": {
+      "text": "Open {filePath} by reël {candidateLine}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.operationInProgress.label": {
+      "text": "Operasie aan die gang",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.removeValue.label": {
+      "text": "Verwyder {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.runtimeComponent.label": {
+      "text": "Uitvoeringskomponent",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.selectedComponent.label": {
+      "text": "Gekose komponent",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.selectValue.label": {
+      "text": "Kies {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.showComponentsHome.label": {
+      "text": "Wys komponente-tuiskerm",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.suggestedKey.label": {
+      "text": "Voorgestelde sleutel",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.viewMigrationCandidatesForValue.label": {
+      "text": "Beskou migrasiekandidate vir {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.windowControls.label": {
+      "text": "Vensterbeheerknoppies",
+      "status": "machine-generated"
+    },
+    "translator.action.exit.label": {
+      "text": "Uitgang",
+      "status": "machine-generated"
+    },
+    "translator.action.previewModes.label": {
+      "text": "Voorskou-modusse",
+      "status": "machine-generated"
+    },
+    "translator.action.rebuild.label": {
+      "text": "Heropbou",
+      "status": "machine-generated"
+    },
+    "translator.action.reloadData.label": {
+      "text": "Laai data weer in",
+      "status": "machine-generated"
+    },
+    "translator.action.revert.label": {
+      "text": "Keer terug",
+      "status": "machine-generated"
+    },
+    "translator.action.save.label": {
+      "text": "Bewaar",
+      "status": "machine-generated"
+    },
+    "translator.action.stopBuild.label": {
+      "text": "Stop bou",
+      "status": "machine-generated"
+    },
+    "translator.action.validate.label": {
+      "text": "Valideer",
+      "status": "machine-generated"
+    },
+    "translator.dialog.addFiles.text": {
+      "text": "Voeg lêers by",
+      "status": "machine-generated"
+    },
+    "translator.dialog.addMigrationSourceFiles.title": {
+      "text": "Voeg migrasiebronlêers by",
+      "status": "machine-generated"
+    },
+    "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
+      "text": "Lêers wat deur author geskryf is onder die taal/-lokalise is altyd behou.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.cancel.text": {
+      "text": "Kanselleer",
+      "status": "machine-generated"
+    },
+    "translator.dialog.close.title": {
+      "text": "Sluit",
+      "status": "machine-generated"
+    },
+    "translator.dialog.componentCatalogAddRecord.title": {
+      "text": "Komponentkatalogus Voeg rekord by",
+      "status": "machine-generated"
+    },
+    "translator.dialog.componentCatalogEditRecord.title": {
+      "text": "Komponentkatalogus: Redigering van rekord",
+      "status": "machine-generated"
+    },
+    "translator.dialog.confirmAuthoritativeChanges.title": {
+      "text": "Bevestig gesaghebbende veranderinge",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteCatalogOnSave.text": {
+      "text": "Verwyder katalogus by Stoor",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteGeneratedCatalogDataValue.text": {
+      "text": "Verwyder gegenereerde katalogusdata: {catalogRemovals}",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteLocaleValue.title": {
+      "text": "Verwyder plaaslike instelling{id}?",
+      "status": "machine-generated"
+    },
+    "translator.dialog.discardAndReload.text": {
+      "text": "Gooi weg en laai weer in",
+      "status": "machine-generated"
+    },
+    "translator.dialog.discardUnsavedChanges.title": {
+      "text": "Verwerp ongespaarde veranderinge?",
+      "status": "machine-generated"
+    },
+    "translator.dialog.draftReverted.title": {
+      "text": "Ontwerp teruggestuur",
+      "status": "machine-generated"
+    },
+    "translator.dialog.exitWithoutSaving.text": {
+      "text": "Sluit af sonder om te stoor",
+      "status": "machine-generated"
+    },
+    "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
+      "text": "gegenereerde lokaal-katalogusse sal bewaar word.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.keepCatalogRecommended.text": {
+      "text": "Hou katalogus (aanbeveel)",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageBuildIsRunning.title": {
+      "text": "Taalbou is aan die gang",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageRebuildFailed.title": {
+      "text": "Taalherbou het misluk",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageRebuildSucceeded.title": {
+      "text": "Taalherbou het geslaag",
+      "status": "machine-generated"
+    },
+    "translator.dialog.maximize.title": {
+      "text": "Maximeer",
+      "status": "machine-generated"
+    },
+    "translator.dialog.minimize.title": {
+      "text": "Minimaliseer",
+      "status": "machine-generated"
+    },
+    "translator.dialog.mydefragLanguageMaintenance.text": {
+      "text": "My Defragmenteerder Taalonderhoud",
+      "status": "machine-generated"
+    },
+    "translator.dialog.noAuthoritativeFilesWillChange.text": {
+      "text": "Geen gesaghebbende lêers sal verander nie.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.nothingToSave.title": {
+      "text": "Niks om te stoor nie",
+      "status": "machine-generated"
+    },
+    "translator.dialog.returnToBuild.text": {
+      "text": "Keer terug na bou",
+      "status": "machine-generated"
+    },
+    "translator.dialog.revertFailed.title": {
+      "text": "Terugkeer het misluk",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveAndBuildSucceeded.title": {
+      "text": "Bewaar en bou het geslaag",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveAndRebuild.text": {
+      "text": "Bewaar en herbou",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveBlocked.title": {
+      "text": "Bewaar geblokkeer",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "Bewaring het misluk en is teruggedraai",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveTheReportArtifactSeparately.title": {
+      "text": "Bewaar die verslagartefaat afsonderlik",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanFile.text": {
+      "text": "Skandeer lêer",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanFolder.text": {
+      "text": "Skandeer vouer",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanMigrationSourceFile.title": {
+      "text": "Skandeer migrasiebronlêer",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanMigrationSourceFolder.title": {
+      "text": "Skandeer migrasiebronlêergids",
+      "status": "machine-generated"
+    },
+    "translator.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "Kies die My Defragmenter-sintaxisbewaarplek",
+      "status": "machine-generated"
+    },
+    "translator.dialog.startingMydefragLanguageMaintenance.title": {
+      "text": "Begin my defragmenteerder-taalonderhoud",
+      "status": "machine-generated"
+    },
+    "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
+      "text": "Die gegenereerde build-/-/-taal--katalogus-/-{id}-data sal standaard bewaar word.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.unsavedLanguageChanges.title": {
+      "text": "Onbewaarde taalveranderings",
+      "status": "machine-generated"
+    },
+    "translator.dialog.valueFailed.title": {
+      "text": "{title} gefaal",
+      "status": "machine-generated"
+    },
+    "translator.heading.languageMaintenance.text": {
+      "text": "Taalonderhoud",
+      "status": "machine-generated"
+    },
+    "translator.heading.languageOperation.text": {
+      "text": "Taalbedrywigheid",
+      "status": "machine-generated"
+    },
+    "translator.heading.operationResult.text": {
+      "text": "Operasie-resultaat",
+      "status": "machine-generated"
+    },
+    "translator.input.filterSourceFilePaths.placeholder": {
+      "text": "Filtreer bronlêerpaaie",
+      "status": "machine-generated"
+    },
+    "translator.input.searchAllFields.placeholder": {
+      "text": "Soek in alle velde",
+      "status": "machine-generated"
+    },
+    "translator.input.searchComponentIdOrDescription.placeholder": {
+      "text": "Soek komponent-ID of beskrywing",
+      "status": "machine-generated"
+    },
+    "translator.input.searchComponents.placeholder": {
+      "text": "Soek komponente",
+      "status": "machine-generated"
+    },
+    "translator.input.searchValue.placeholder": {
+      "text": "Soek {definitionTitle}",
+      "status": "machine-generated"
+    },
+    "translator.message.aLanguageBuildIsAlreadyRunning.text": {
+      "text": "'n taalbou is reeds aan die gang.",
+      "status": "machine-generated"
+    },
+    "translator.message.aLineAwareVscodiumOrVsCodeInstallation.text": {
+      "text": "'n VS-installasie met lynbewustheid of 'n VS-Codium- of VS-Code-installasie is nie gevind nie; die bronslêer is met sy standaardtoepassing oopgemaak.",
+      "status": "machine-generated"
+    },
+    "translator.message.applicationFailedToStart.text": {
+      "text": "Toepassing kon nie begin nie",
+      "status": "machine-generated"
+    },
+    "translator.message.aScannedSourcePathIsNotANormalized.text": {
+      "text": "'n geskandeerde bronpad is nie 'n genormaliseerde bewaarplek-relatiewe lêerpad nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
+      "text": "'n geldige My Defragmenter-sintaaksbewaarplek is nie gekies nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.buildCancelledByUser.text": {
+      "text": "Bou deur gebruiker gekanselleer.",
+      "status": "machine-generated"
+    },
+    "translator.message.buildProcessDidNotReportTerminationAfterCancellation.text": {
+      "text": "Die bouproses het nie na kansellasie beëindiging gerapporteer nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.candidateStatusRejected.text": {
+      "text": "Kandidaatstatus verwerp",
+      "status": "machine-generated"
+    },
+    "translator.message.candidateStatusUpdatedInMemory.text": {
+      "text": "Kandidaatstatus in die geheue opgedateer",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordAddedToInMemoryDraft.text": {
+      "text": "Katalogusopname by die konsep in die geheue gevoeg",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordIsNoLongerAvailable.text": {
+      "text": "Katalogusopname is nie meer beskikbaar nie",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordUpdatedInMemory.text": {
+      "text": "Katalogusopname in die geheue opgedateer",
+      "status": "machine-generated"
+    },
+    "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
+      "text": "Kies die bewaarplek wat die taal/-kanonieke en die /-taalbou besit.",
+      "status": "machine-generated"
+    },
+    "translator.message.componentAddedInMemory.text": {
+      "text": "Komponent in geheue bygevoeg",
+      "status": "machine-generated"
+    },
+    "translator.message.componentAssignmentIsStaleRebuildRequired.text": {
+      "text": "Komponenttoewysing is verouderd; herbou benodig.",
+      "status": "machine-generated"
+    },
+    "translator.message.componentChangeRejected.text": {
+      "text": "Komponentverandering verwerp",
+      "status": "machine-generated"
+    },
+    "translator.message.componentUpdatedInMemory.text": {
+      "text": "Komponent in die geheue opgedateer",
+      "status": "machine-generated"
+    },
+    "translator.message.deeplApiCallsAreEnabledForThisRebuild.text": {
+      "text": "Deep L API-oproepe is vir hierdie herbou geaktiveer.",
+      "status": "machine-generated"
+    },
+    "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
+      "text": "Deep L is gedeaktiveer; gebruik genormaliseerde Engels",
+      "status": "machine-generated"
+    },
+    "translator.message.draftUpdated.text": {
+      "text": "Ontwerp bygewerk",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateComponentIdValue.text": {
+      "text": "Duplikaat komponent-ID: {componentId}",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateLocaleIdValue.text": {
+      "text": "Duplikaat-lokal-ID: {localeId}",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateValueValue.text": {
+      "text": "Duplikaat {definitionIdentityKey}: {identity}",
+      "status": "machine-generated"
+    },
+    "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
+      "text": "Bestaande komponentidentifiseerders kan nie hernoem word nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.existingLocaleIdentifiersCannotBeRenamed.text": {
+      "text": "Bestaande lokalidentifiseerders kan nie hernoem word nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.exitAndDiscardAllInMemoryChanges.text": {
+      "text": "Verlaat en gooi alle veranderinge in die geheue weg?",
+      "status": "machine-generated"
+    },
+    "translator.message.forcingTheLanguageBuildProcessToStop.text": {
+      "text": "Dwing die taalbouproses om te stop",
+      "status": "machine-generated"
+    },
+    "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
+      "text": "Die gegenereerde lokaalkatalogus is nie 'n gids nie: {relativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidComponentRequest.text": {
+      "text": "Ongeldige komponentversoek.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidFileSelection.text": {
+      "text": "Ongeldige lêerkeuse.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleIdentifierForCatalogRemovalValue.text": {
+      "text": "Ongeldige lokalisator-identifiseerder vir katalogusverwydering: {localeId}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleRequest.text": {
+      "text": "Ongeldige lokaalversoek.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleStatusValue.text": {
+      "text": "Ongeldige streekformaatstatus: {localeStatus}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidRecordRequest.text": {
+      "text": "Ongeldige rekordversoek.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidScannedFileSelection.text": {
+      "text": "Ongeldige geskandeerde lêerkeuse.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCancelled.text": {
+      "text": "Taalbou gekanselleer",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCommandCompleted.text": {
+      "text": "Taalbou-opdrag voltooi",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCommandFailed.text": {
+      "text": "Taal-opbou-opdrag het misluk",
+      "status": "machine-generated"
+    },
+    "translator.message.languageDataReloaded.text": {
+      "text": "Taaldata herlaai",
+      "status": "machine-generated"
+    },
+    "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "Taalonderhoudsdata is nie gelaai nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportArtifactSaved.text": {
+      "text": "Taalverslag-artefaat gestoor",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportArtifactWasNotSaved.text": {
+      "text": "Taalverslag-artefaat is nie gestoor nie",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportTextExceedsThe5000000.text": {
+      "text": "Die taalverslagteks oorskry die 5 000 000-karakter veiligheidslimiet.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportTextMustBeAString.text": {
+      "text": "Die taalverslagteks moet 'n string wees.",
+      "status": "machine-generated"
+    },
+    "translator.message.localeAdded.text": {
+      "text": "Plek bygevoeg",
+      "status": "machine-generated"
+    },
+    "translator.message.localeDeletedFromRegistry.text": {
+      "text": "Plek uit die register verwyder",
+      "status": "machine-generated"
+    },
+    "translator.message.localeDirectionMustBeLtrOrRtl.text": {
+      "text": "Die taalrigting moet ltr of rtl wees.",
+      "status": "machine-generated"
+    },
+    "translator.message.localeUpdated.text": {
+      "text": "Plek opgedateer",
+      "status": "machine-generated"
+    },
+    "translator.message.localeValueNoLongerExists.text": {
+      "text": "{id}-lokale bestaan nie meer nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationAssignmentRejected.text": {
+      "text": "Migrasietoewysing verwerp",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationCandidatesAreUnavailableBecauseTheReportStatus.text": {
+      "text": "Migrasiekandidate is nie beskikbaar nie omdat die verslagstatus {reportFileStatus} is.",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationCandidatesUnavailable.text": {
+      "text": "Migrasiekandidate onbeskikbaar",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationComponentAssignmentUpdated.text": {
+      "text": "Opdrag vir die migrasie-komponent is bygewerk.",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileAdded.text": {
+      "text": "Migrasielêer bygevoeg",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileAlreadyListed.text": {
+      "text": "Migrasielêer reeds gelys",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRejected.text": {
+      "text": "Migrasielêer verwerp",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRemovalFailed.text": {
+      "text": "Verwydering van migrasielêer misluk",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRemoved.text": {
+      "text": "Migrasielêer verwyder",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesAdded.text": {
+      "text": "Migrasielêers bygevoeg",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesAlreadyListed.text": {
+      "text": "Migrasielêers reeds gelys",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesRejected.text": {
+      "text": "Migrasielêers verwerp",
+      "status": "machine-generated"
+    },
+    "translator.message.noApplicableSchemaIsAvailableForValue.text": {
+      "text": "Geen toepaslike skema is beskikbaar vir {viewName} nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.noLanguageBuildIsRunning.text": {
+      "text": "Geen taalbou word tans uitgevoer nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.noNewFilesAdded.text": {
+      "text": "Geen nuwe lêers bygevoeg nie",
+      "status": "machine-generated"
+    },
+    "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
+      "text": "Nie 'n My Defragmenter-taalbewaarplek nie. Ontbreek: {missing}",
+      "status": "machine-generated"
+    },
+    "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
+      "text": "Nie in die migrasieverslag teenwoordig nie; herbou benodig.",
+      "status": "machine-generated"
+    },
+    "translator.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "Pad ontsnap aan die repositoriumwortel: {relativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.recordRejected.text": {
+      "text": "Rekord verwerp",
+      "status": "machine-generated"
+    },
+    "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
+      "text": "Herlaai sal alle taalfooiers in die geheue verwerp.",
+      "status": "machine-generated"
+    },
+    "translator.message.removeValueFromTheLocaleRegistry.text": {
+      "text": "Verwyder {id} uit die plaaslike register?",
+      "status": "machine-generated"
+    },
+    "translator.message.requiredLocaleValueCannotBeDeleted.text": {
+      "text": "Die vereiste lokasie{id} kan nie verwyder word nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.runningLanguageBuildCommand.text": {
+      "text": "Voer taalbou-opdrag uit",
+      "status": "machine-generated"
+    },
+    "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
+      "text": "Bewaar of verwerp die wysigings aan die Taalverslag voordat u kanonieke taalgegewens stoor.",
+      "status": "machine-generated"
+    },
+    "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
+      "text": "Bewaar of herhaal geheueveranderings voordat jy weer opbou.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectAValidComponent.text": {
+      "text": "Kies 'n geldige komponent.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectAValidComponentBeforeAddingFiles.text": {
+      "text": "Kies 'n geldige komponent voordat jy lêers byvoeg.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
+      "text": "Gekose lêer is buite die bewaarplekwortel: {absolutePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedFolderIsOutsideTheRepositoryRootValue.text": {
+      "text": "Gekose vouer is buite die bewaarplekwortel: {folderPath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedPathIsNotAFileValue.text": {
+      "text": "Gekose pad is nie 'n lêer nie: {absolutePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedPathIsNotAFolderValue.text": {
+      "text": "Gekose pad is nie 'n vouer nie: {folderPath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectPotentialCandidateRejectedOrReview.text": {
+      "text": "Kies potensiële kandidaat, verwerp of hersien.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceFileOpened.text": {
+      "text": "Bronlêer oopgemaak",
+      "status": "machine-generated"
+    },
+    "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
+      "text": "Die katalogusopname {recordKey} is verander of bestaan nie meer nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theComponentChangedOrNoLongerExists.text": {
+      "text": "Die komponent het verander of bestaan nie meer nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theConfiguredLanguageBuilderDoesNotExposeExtractstringcandidates.text": {
+      "text": "Die gekonfigureerde taalbouer maak nie String-kandidate ekstraherbaar nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
+      "text": "Die taalbouproses kon nie gestop word nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLanguageReportChangedOnDiskReloadIt.text": {
+      "text": "Die taalverslag het op die skyf verander. Laai dit weer in voordat jy jou wysigings stoor.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLocaleChangedOrNoLongerExists.text": {
+      "text": "Die ligging het verander of bestaan nie meer nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationCandidatesCouldNotBeReloaded.text": {
+      "text": "Die migrasiekandidate kon nie herlaai word nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationFileIsNoLongerListed.text": {
+      "text": "Die migrasielêer word nie meer gelys nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportComponentAssignmentIsStaleRebuild.text": {
+      "text": "Die migrasieverslagkomponenttoewysing is verouderd. Bou die taaluitgange weer op.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportDoesNotContainThisFile.text": {
+      "text": "Die migrasieverslag bevat nie hierdie lêer nie. Bou die taaluitgange weer op.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportDoesNotIncludeCatalogFound.text": {
+      "text": "Die migrasieverslag sluit nie katalogusgevonde snare in nie. Herbou die taaluitgawes.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportIsMissingFullCandidateSource.text": {
+      "text": "Die migrasieverslag ontbreek volledige kandidaat-bronreëls. Herbou die taaluitgange.",
+      "status": "machine-generated"
+    },
+    "translator.message.theRecordChangedOrNoLongerExists.text": {
+      "text": "Die rekord is verander of bestaan nie meer nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
+      "text": "Die beperkte voorlaaibrug is nie beskikbaar nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineIsNotACurrentMigration.text": {
+      "text": "Die geselekteerde reël is nie 'n huidige migrasiekandidaat nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineIsNotACurrentReported.text": {
+      "text": "Die geselekteerde reël is nie 'n tans gerapporteerde migrasiestring nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringIsNoLongerACurrent.text": {
+      "text": "Die geselekteerde string is nie meer 'n tans geskandeerde migrasiekandidaat nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedTextIsNoLongerACurrent.text": {
+      "text": "Die geselekteerde teks is nie meer 'n huidige nie-kataloguskandidaat nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileCouldNotBeOpened.text": {
+      "text": "Die bronlêer kon nie oopgemaak word nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddFiles.text": {
+      "text": "Kan nie lêers byvoeg nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddTheScannedFile.text": {
+      "text": "Kan nie die geskandeerde lêer byvoeg nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddTheScannedFiles.text": {
+      "text": "Kan nie die geskandeerde lêers byvoeg nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToApplyLocale.text": {
+      "text": "Kan nie die lokaal toepas nie",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToApplyTheComponent.text": {
+      "text": "Kan nie die komponent toepas nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAssignTheComponent.text": {
+      "text": "Kan die komponent nie toewys nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToDeleteLocale.text": {
+      "text": "Kan nie die streekinstelling verwyder nie",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadLanguageData.text": {
+      "text": "Kan nie taalgegewens laai nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadMigrationCandidates.text": {
+      "text": "Kan nie migrasiekandidate laai nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadTheLanguageReportArtifact.text": {
+      "text": "Kan nie die taalverslag-artefaat laai nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToOpenMigrationSource.text": {
+      "text": "Onmoontlik om die migrasiebron oop te maak",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToOpenValueValue.text": {
+      "text": "Kan nie {targetRelativePath} oopmaak nie: {error}",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
+      "text": "Kan nie build /-taal / lees nie. Verslae /-migrasieverslag .json: {errorMessage}",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToRefreshCandidateCatalogStatus.text": {
+      "text": "Onmoontlik om die status van die kandidaatkatalogus te verfris",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToRemoveTheFile.text": {
+      "text": "Kan nie die lêer verwyder nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToUpdateCandidateStatus.text": {
+      "text": "Kan nie die kandidaatstatus opdateer nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
+      "text": "Gebruik 'n lokaliseerder-identifiseerder soos en, fr CA, of zh Hans.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
+      "text": "Gebruik 'Bewaar verslagartefaat' in die Taalverslag-uitsig voordat jy kanonieke taalgegewens stoor.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
+      "text": "Gebruik Stoor om die kandidaatstatus in taal/-kanonieke /-komponente .json te behou.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
+      "text": "Gebruik Stoor om die verandering in die Komponentkatalogus te behou.",
+      "status": "machine-generated"
+    },
+    "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
+      "text": "Bevestiging van taalveranderings; Deep L API-oproepe is geaktiveer",
+      "status": "machine-generated"
+    },
+    "translator.message.validatingLanguageChangesDeeplIsDisabled.text": {
+      "text": "Validering van taalveranderings; Deep L is gedeaktiveer",
+      "status": "machine-generated"
+    },
+    "translator.message.validationResult.text": {
+      "text": "Valideringsresultaat",
+      "status": "machine-generated"
+    },
+    "translator.message.valueIsNotAFile.text": {
+      "text": "{lANGUAGE_REPORT_PATH} is nie 'n lêer nie.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
+      "text": "{resultRelativePath} is direk geskryf. 'n toekomstige verslagbou kan hierdie wysigings vervang.",
+      "status": "machine-generated"
+    },
+    "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "Wag totdat die bou voltooi is voordat jy uitstap.",
+      "status": "machine-generated"
+    },
+    "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
+      "text": "Wag totdat die taalbou voltooi is voordat jy die verslagartefak stoor.",
+      "status": "machine-generated"
+    },
+    "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
+      "text": "Wag dat die taalbouproses ophou",
+      "status": "machine-generated"
+    },
+    "translator.message.writeValueAuthoritativeFileS.text": {
+      "text": "Skryf gesaghebbende lêer(e) vir {normalizedCount}?",
+      "status": "machine-generated"
+    },
+    "translator.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "Invang van gegenereerde lêers vir terugrol",
+      "status": "machine-generated"
+    },
+    "translator.progress.checkingGeneratedFileChanges.status": {
+      "text": "Kontroleer gegenereerde lêerveranderings",
+      "status": "machine-generated"
+    },
+    "translator.progress.committingLanguageChanges.status": {
+      "text": "Vaslegging van taalveranderings",
+      "status": "machine-generated"
+    },
+    "translator.progress.rebuildingLanguageOutputs.status": {
+      "text": "Heropbou van taaluitgange",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "Restourering van gesaghebbende en gegenereerde lêers",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringFilesAfterAnError.status": {
+      "text": "Restourering van lêers na 'n fout",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringGeneratedFiles.status": {
+      "text": "Restourering van gegenereerde lêers",
+      "status": "machine-generated"
+    },
+    "translator.progress.savingLanguageData.status": {
+      "text": "Bewaring van taaldata",
+      "status": "machine-generated"
+    },
+    "translator.progress.startingSaveAndRebuild.status": {
+      "text": "Begin stoor en herbou",
+      "status": "machine-generated"
+    },
+    "translator.progress.stoppingLanguageBuild.status": {
+      "text": "Stel taalbou in",
+      "status": "machine-generated"
+    },
+    "translator.progress.unableToStartLanguageBuild.status": {
+      "text": "Kan nie taalbou begin nie",
+      "status": "machine-generated"
+    },
+    "translator.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "Gebruik Stop in die vorderingvenster, en wag dan totdat die terugrol voltooi is voordat jy die toepassing sluit.",
+      "status": "machine-generated"
+    },
+    "translator.progress.waitingForSaveConfirmation.status": {
+      "text": "Wag vir bevestiging van die redding",
+      "status": "machine-generated"
+    },
+    "translator.progress.writingAuthoritativeLanguageFiles.status": {
+      "text": "Skryf gesaghebbende taalbestande",
+      "status": "machine-generated"
+    },
+    "translator.ui.add1SelectedFile.text": {
+      "text": "Voeg 1 geselekteerde lêer by",
+      "status": "machine-generated"
+    },
+    "translator.ui.addCategory.text": {
+      "text": "Voeg kategorie by",
+      "status": "machine-generated"
+    },
+    "translator.ui.addComponent.text": {
+      "text": "Voeg komponent by",
+      "status": "machine-generated"
+    },
+    "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
+      "text": "Bygevoeg by die bronlêers onder die komponent {componentSelectValue}. Stoor is steeds nodig.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addedValueFileSUnderComponentValueSave.text": {
+      "text": "{resultAddedFilesCount}-lêer(e) by komponent {componentSelectValue} gevoeg. Stoor is steeds nodig.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addFiles.text": {
+      "text": "Voeg lêers by.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addLocale.text": {
+      "text": "Voeg plaaslike inligting by",
+      "status": "machine-generated"
+    },
+    "translator.ui.addRecord.text": {
+      "text": "Voeg rekord by",
+      "status": "machine-generated"
+    },
+    "translator.ui.addRole.text": {
+      "text": "Voeg rol by",
+      "status": "machine-generated"
+    },
+    "translator.ui.addSelectedFiles.text": {
+      "text": "Voeg geselekteerde lêers by",
+      "status": "machine-generated"
+    },
+    "translator.ui.addToSourceFiles.text": {
+      "text": "Voeg by bronlêers",
+      "status": "machine-generated"
+    },
+    "translator.ui.addValueSelectedFiles.text": {
+      "text": "Voeg geselekteerde lêers by {count}",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCandidates.text": {
+      "text": "Alle kandidate",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCandidatesValue.text": {
+      "text": "Alle kandidate: {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCanonicalLocaleTemplatesAreAlreadyRegistered.text": {
+      "text": "Al die kanonieke lokaal-sjablone is reeds geregistreer.",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponentDetails.text": {
+      "text": "Alle komponentbesonderhede",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponents.text": {
+      "text": "Alle komponente",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponentsNoComponentFilter.text": {
+      "text": "Alle komponente geen komponentfilter",
+      "status": "machine-generated"
+    },
+    "translator.ui.allowDeeplCalls.text": {
+      "text": "Toelaat Deep L-oproepe",
+      "status": "machine-generated"
+    },
+    "translator.ui.allStatuses.text": {
+      "text": "Alle statusse",
+      "status": "machine-generated"
+    },
+    "translator.ui.alreadyInSourceFiles.text": {
+      "text": "Alreeds in bronlêers",
+      "status": "machine-generated"
+    },
+    "translator.ui.alreadyListedUnderComponentValue.text": {
+      "text": "Alreeds gelys onder komponent {scannedFileInventoryComponent}.",
+      "status": "machine-generated"
+    },
+    "translator.ui.analyzingSourceContext.text": {
+      "text": "Ontleed bronkonteks.",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyChanges.text": {
+      "text": "Pas veranderinge toe",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyInMemory.text": {
+      "text": "Pas toe ter nagedagtenis",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyNormalizedText.text": {
+      "text": "Pas genormaliseerde teks toe",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyToInMemoryDraft.text": {
+      "text": "Dien in vir die gedenk-ontwerp",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignNewFilesTo.text": {
+      "text": "Wys nuwe lêers toe aan",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignSelectedFilesTo.text": {
+      "text": "Wys geselekteerde lêers toe aan",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignToComponent.text": {
+      "text": "Wys aan komponent",
+      "status": "machine-generated"
+    },
+    "translator.ui.authoritativeFiles.text": {
+      "text": "Outoritatiewe lêers",
+      "status": "machine-generated"
+    },
+    "translator.ui.availableComponents.text": {
+      "text": "Beskikbare komponente",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text": {
+      "text": "kenteken {stateDirty}",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text2": {
+      "text": "kenteken{validationOk}",
+      "status": "machine-generated"
+    },
+    "translator.ui.buildLanguageCatalogsValue.text": {
+      "text": "bou / taal / katalogusse / {currentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
+      "text": "Kandidaatbesluite word saam met die migrasie-inventaris gestoor.",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateDetails.text": {
+      "text": "Kandidaatbesonderhede",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogMatches.text": {
+      "text": "Kataloguswedstryde",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogOutputLocales.text": {
+      "text": "Katalogus-uitsetlokasies",
+      "status": "machine-generated"
+    },
+    "translator.ui.categories.text": {
+      "text": "Kategorieë",
+      "status": "machine-generated"
+    },
+    "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
+      "text": "Kiesopsies weerspieël taal/-kanonieke /-taal-lokalise .json. Geregistreerde lokalise bly sigbaar, maar kan nie gekies word nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
+      "text": "Kies 'n komponent uit die gesaghebbende komponente-inventaris .json.",
+      "status": "machine-generated"
+    },
+    "translator.ui.clear.text": {
+      "text": "Klaar",
+      "status": "machine-generated"
+    },
+    "translator.ui.clearEditor.text": {
+      "text": "Skoonmaak redigeerder",
+      "status": "machine-generated"
+    },
+    "translator.ui.closeCandidates.text": {
+      "text": "Sluit kandidate",
+      "status": "machine-generated"
+    },
+    "translator.ui.component.text": {
+      "text": "Komponent",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentCatalog.text": {
+      "text": "Komponentkatalogus",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
+      "text": "Komponentkatalogus en diagnostiese boodskappe sal rekords van elke komponent vertoon.",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentDetails.text": {
+      "text": "Komponentbesonderhede",
+      "status": "machine-generated"
+    },
+    "translator.ui.components.text": {
+      "text": "Komponente",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentSelection.text": {
+      "text": "Komponentkeuse",
+      "status": "machine-generated"
+    },
+    "translator.ui.coverageUnavailableValue.text": {
+      "text": "Dekking nie beskikbaar nie: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.coverageUnavailableValue.text2": {
+      "text": "Dekking nie beskikbaar nie: {fileError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.deleteLocale.text": {
+      "text": "Verwyder streekformaat",
+      "status": "machine-generated"
+    },
+    "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
+      "text": "Afgelei uit die gekose kanonieke katalogusboodskap.",
+      "status": "machine-generated"
+    },
+    "translator.ui.description.text": {
+      "text": "Beskrywing",
+      "status": "machine-generated"
+    },
+    "translator.ui.detectedPlaceholdersValue.text": {
+      "text": "Opgespoorde plekhouers: {arrayFromNewSetNamesSort}",
+      "status": "machine-generated"
+    },
+    "translator.ui.diagnosticMessages.text": {
+      "text": "Diagnostiese boodskappe",
+      "status": "machine-generated"
+    },
+    "translator.ui.discardAllInMemoryChanges.text": {
+      "text": "Gooi alle veranderinge in die geheue weg?",
+      "status": "machine-generated"
+    },
+    "translator.ui.discardUnsavedLanguageReportEditsAndReloadThe.text": {
+      "text": "Gooi ongespaarde wysigings aan die Taalverslag weg en laai die artefak weer in?",
+      "status": "machine-generated"
+    },
+    "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
+      "text": "Redig hier 'n ooreenstemmende rekord sonder om All Candidates te verlaat.",
+      "status": "machine-generated"
+    },
+    "translator.ui.editComponent.text": {
+      "text": "Bewerk komponent",
+      "status": "machine-generated"
+    },
+    "translator.ui.editingTheCurrentGeneratedReport.text": {
+      "text": "Bewerk die tans gegenereerde verslag.",
+      "status": "machine-generated"
+    },
+    "translator.ui.editRecord.text": {
+      "text": "Redigering van rekord",
+      "status": "machine-generated"
+    },
+    "translator.ui.editValue.text": {
+      "text": "Wysig {componentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.editValue.text2": {
+      "text": "Wysig {currentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingCategories.text": {
+      "text": "Bestaande kategorieë",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingRoles.text": {
+      "text": "Bestaande rolle",
+      "status": "machine-generated"
+    },
+    "translator.ui.filteredToComponentValue.text": {
+      "text": "Gefiltreer na komponent: {selectedComponent}",
+      "status": "machine-generated"
+    },
+    "translator.ui.filterStatus.text": {
+      "text": "Filtermodusstatus",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedArtifactManualEditsCanBeOverwrittenThe.text": {
+      "text": "gegenereerde artefak: handmatige wysigings kan die volgende keer oorskryf word wanneer die taalverslag opgestel word.",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogsDeleted.text": {
+      "text": "gegenereerde katalogusse verwyder",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogsScheduledForDeletion.text": {
+      "text": "gegenereerde katalogusse wat geskeduleer is vir verwydering",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogValueWillBeDeletedWhenYou.text": {
+      "text": "Die gegenereerde katalogus {currentId} sal verwyder word wanneer jy Stoor.",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogValueWillBePreserved.text": {
+      "text": "Die gegenereerde katalogus {currentId} sal bewaar word.",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedFiles.text": {
+      "text": "gegenereerde lêers",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedFilesChanged.text": {
+      "text": "gegenereerde lêers het verander",
+      "status": "machine-generated"
+    },
+    "translator.ui.hideLeftPanel.text": {
+      "text": "Verberg die linkerpaneel",
+      "status": "machine-generated"
+    },
+    "translator.ui.identifier.text": {
+      "text": "Identifiseerder",
+      "status": "machine-generated"
+    },
+    "translator.ui.inspectedValueFileSScannedValueAsText.text": {
+      "text": "{scannedFolderInspectedFileCount}-lêers geïnspekteer; {scannedFolderScannedFileCount} as teks geskandeer.",
+      "status": "machine-generated"
+    },
+    "translator.ui.invalidValueErrorS.text": {
+      "text": "Ongeldig ({validationErrorsCount}-fout(e))",
+      "status": "machine-generated"
+    },
+    "translator.ui.join.text": {
+      "text": ").join(', ')}",
+      "status": "machine-generated"
+    },
+    "translator.ui.languageReport.text": {
+      "text": "Taalverslag",
+      "status": "machine-generated"
+    },
+    "translator.ui.leftToRightLtr.text": {
+      "text": "Van links na regs (ltr)",
+      "status": "machine-generated"
+    },
+    "translator.ui.lineValue.text": {
+      "text": "Lyn{candidateLine}",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingLanguageReportArtifact.text": {
+      "text": "Laai taalverslagartefaat.",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingPotentialFoundCoverage.text": {
+      "text": "Laai potensiaal/ het dekking gevind.",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingProjectLanguageData.text": {
+      "text": "Laai projektaal-data.",
+      "status": "machine-generated"
+    },
+    "translator.ui.locales.text": {
+      "text": "Plekke",
+      "status": "machine-generated"
+    },
+    "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
+      "text": "Handhaaf taal/-kanonieke /-komponente .json → migrasie-inventaris .scanFiles",
+      "status": "machine-generated"
+    },
+    "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
+      "text": "Handhaaf taal/-lokalise /-lokalise .json. Deur 'n lokalise te verwyder, behou geskryfde bronlêers en gegenereerde katalogusdata standaard.",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationCoverageUnavailable.text": {
+      "text": "Migrasiedekking nie beskikbaar nie",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationCoverageValue.text": {
+      "text": "migrasiedekking {fileCatalogedStringCount}",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventory.text": {
+      "text": "Migrasie-inventaris",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventory.text2": {
+      "text": "Migrasie-inventaris",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventoryEntries.text": {
+      "text": "Migrasie-inventarisinskrywings",
+      "status": "machine-generated"
+    },
+    "translator.ui.nextLine.text": {
+      "text": "Volgende (reël)",
+      "status": "machine-generated"
+    },
+    "translator.ui.no.text": {
+      "text": "Nee",
+      "status": "machine-generated"
+    },
+    "translator.ui.noCandidateStringsWereFoundInThisFile.text": {
+      "text": "Geen kandidaat-stringe is in hierdie lêer gevind nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noComponentMatchesTheSearch.text": {
+      "text": "Geen komponent stem ooreen met die soektog nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFilesContainingCandidateStringsWereFoundIn.text": {
+      "text": "Geen lêers wat kandidaat-stringe bevat, is in hierdie vouer gevind nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFileSelected.text": {
+      "text": "Geen lêer geselekteer nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFilesMatchTheCurrentFilter.text": {
+      "text": "Geen lêers pas by die huidige filter nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFolderSelected.text": {
+      "text": "Geen vouer is gekies nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
+      "text": "Geen migrasiekandidate is vir hierdie lêer gerapporteer nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noMigrationSourceFilesAreListed.text": {
+      "text": "Geen migrasiebronlêers word gelys nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
+      "text": "Geen volgende kandidaat stem ooreen met die huidige statusfilter nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
+      "text": "Geen vorige kandidaat stem ooreen met die huidige statusfilter nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noRecordsMatchTheCurrentFilters.text": {
+      "text": "Geen rekords ooreenstem met die huidige filters nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noScanResultsAreAvailable.text": {
+      "text": "Geen skanderingsresultate is beskikbaar nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noStableSourceConstructWasFound.text": {
+      "text": "Geen stabiele bronkonstruksie is gevind nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.notes.text": {
+      "text": "Aantekeninge",
+      "status": "machine-generated"
+    },
+    "translator.ui.notSet.text": {
+      "text": "(nie ingestel nie)",
+      "status": "machine-generated"
+    },
+    "translator.ui.notValidated.text": {
+      "text": "Nie gevalideer nie",
+      "status": "machine-generated"
+    },
+    "translator.ui.noUnsavedChanges.text": {
+      "text": "Geen ongespaarde veranderinge",
+      "status": "machine-generated"
+    },
+    "translator.ui.openSource.text": {
+      "text": "Oopbron",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
+      "text": "Bereiding van genormaliseerde herbou met Deep L gedeaktiveer",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingNormalizedSaveWithDeeplDisabled.text": {
+      "text": "Bereiding van genormaliseerde stoor met Deep L gedeaktiveer",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text": {
+      "text": "Bereiding van herbou met Deep L-API-oproepe geaktiveer",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
+      "text": "Bereiding met Deep L-API-oproepe geaktiveer",
+      "status": "machine-generated"
+    },
+    "translator.ui.previousLine.text": {
+      "text": "Vorige (lyn)",
+      "status": "machine-generated"
+    },
+    "translator.ui.recommendedCategories.text": {
+      "text": "Aanbevole kategorieë",
+      "status": "machine-generated"
+    },
+    "translator.ui.recommendedRoles.text": {
+      "text": "Aanbevole rolle",
+      "status": "machine-generated"
+    },
+    "translator.ui.recoveryFilesRetained.text": {
+      "text": "Herstelbestande lêers behou",
+      "status": "machine-generated"
+    },
+    "translator.ui.recursivelyInspectARepositoryFolderThenAddSelected.text": {
+      "text": "Inspekteer rekursief 'n bewaarplek-gids en voeg dan in een operasie geselekteerde kandidaat-draerlêers by.",
+      "status": "machine-generated"
+    },
+    "translator.ui.refreshingCatalogMatches.text": {
+      "text": "Verfrissende kataloguswedstryde.",
+      "status": "machine-generated"
+    },
+    "translator.ui.reject.text": {
+      "text": "Verwerp",
+      "status": "machine-generated"
+    },
+    "translator.ui.reloadReportFromDisk.text": {
+      "text": "Laai verslag vanaf skyf weer in",
+      "status": "machine-generated"
+    },
+    "translator.ui.remove.text": {
+      "text": "Verwyder",
+      "status": "machine-generated"
+    },
+    "translator.ui.removeValueFromTheMigrationInventory.text": {
+      "text": "Verwyder {filePath} uit die migrasie-inventaris?",
+      "status": "machine-generated"
+    },
+    "translator.ui.repositoryMaintenanceTool.text": {
+      "text": "Repositoriumonderhoudsgereedskap",
+      "status": "machine-generated"
+    },
+    "translator.ui.requiredLocale.text": {
+      "text": "Vereiste lokasie",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeCandidateListAndCandidateEditor.text": {
+      "text": "Herformaat kandidaatlys en kandidaatredigeerder",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeLocaleListAndLocaleEditor.text": {
+      "text": "Herformaat die lokaliselys en die lokaliseredigeerder",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeValueListAndEditor.text": {
+      "text": "Herformaat {definitionTitle}-lys en -redigeerder",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeWorkspaceAndOperationResults.text": {
+      "text": "Herformaat werkruimte en operasie-resultate",
+      "status": "machine-generated"
+    },
+    "translator.ui.restore.text": {
+      "text": "Herstel",
+      "status": "machine-generated"
+    },
+    "translator.ui.restoringTheLastLoadedDraftAndValidatingIt.text": {
+      "text": "Restoureer die laaste gelaaide konsep en valideer dit",
+      "status": "machine-generated"
+    },
+    "translator.ui.retry.text": {
+      "text": "Probeer weer",
+      "status": "machine-generated"
+    },
+    "translator.ui.revertingLanguageData.text": {
+      "text": "Terugstuur van taalgegewens",
+      "status": "machine-generated"
+    },
+    "translator.ui.rightToLeftRtl.text": {
+      "text": "Regs na links (rtl)",
+      "status": "machine-generated"
+    },
+    "translator.ui.roles.text": {
+      "text": "Rolle",
+      "status": "machine-generated"
+    },
+    "translator.ui.runtime.text": {
+      "text": "Uitvoeringsduur",
+      "status": "machine-generated"
+    },
+    "translator.ui.saveReportArtifact.text": {
+      "text": "Bewaar verslagartefaat",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFailedValue.text": {
+      "text": "Skandering misluk: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFile.text": {
+      "text": "Skandeer lêer.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFolder.text": {
+      "text": "Skandeer vouer.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
+      "text": "Het {scannedFileExtractedCount}-kandidaat-string(e) geskandeer sonder om die inventaris te verander.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanningSelectedFile.text": {
+      "text": "Skandeer geselekteerde lêer.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanningSelectedFolder.text": {
+      "text": "Skandeer gekose vouer.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFile.text": {
+      "text": "Skandeer bronlêer",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFileValue.text": {
+      "text": "Skandeer bronlêer: {scannedFilePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFolder.text": {
+      "text": "Skandeer bronmap",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFolderValue.text": {
+      "text": "Skandeer bronmap: {scannedFolderPath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scope.text": {
+      "text": "Omvang",
+      "status": "machine-generated"
+    },
+    "translator.ui.search.text": {
+      "text": "Soek",
+      "status": "machine-generated"
+    },
+    "translator.ui.searchAndFilter.text": {
+      "text": "Soek en filter",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectACategory.text": {
+      "text": "(Kies 'n kategorie)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAComponent.text": {
+      "text": "(kies 'n komponent)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
+      "text": "Kies 'n lêer om elke string wat deur extract String Candidates aanvaar word, te vertoon.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
+      "text": "Kies 'n vouer om lêers te vind wat kandidaat-stringe bevat.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAllNew.text": {
+      "text": "Kies alles nuut",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectALocaleOrAddANewOne.text": {
+      "text": "Kies 'n ligging of voeg 'n nuwe een by.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectALocaleTemplate.text": {
+      "text": "Kies 'n lokaletemplaat",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
+      "text": "Kies 'n gerapporteerde kandidaat om sy status te hersien.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectARole.text": {
+      "text": "(kies 'n rol)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
+      "text": "Kies 'n spesifieke komponent voordat jy 'n rekord byvoeg.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectedValue.text": {
+      "text": "Uitgekoos: {scannedFilePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectedValue.text2": {
+      "text": "Uitgekoos: {scannedFolderPath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectFile.text": {
+      "text": "Kies lêer.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectFolder.text": {
+      "text": "Kies vouer.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
+      "text": "Kies een bergingslêer om te ondersoek sonder om dit by die broninventaris te voeg.",
+      "status": "machine-generated"
+    },
+    "translator.ui.semanticKeywords.text": {
+      "text": "Semantiese Sleutelwoorde",
+      "status": "machine-generated"
+    },
+    "translator.ui.setPreviewDefault.text": {
+      "text": "Stel voorkyk standaard in",
+      "status": "machine-generated"
+    },
+    "translator.ui.showingRecordsFromAllComponents.text": {
+      "text": "Toon rekords van alle komponente",
+      "status": "machine-generated"
+    },
+    "translator.ui.showLeftPanel.text": {
+      "text": "Wys linkerpaneel",
+      "status": "machine-generated"
+    },
+    "translator.ui.skippedValueFileOrFolderPathS.text": {
+      "text": "{skipped}-lêer- of -gidsbane oorgeslaan.",
+      "status": "machine-generated"
+    },
+    "translator.ui.status.text": {
+      "text": "Status",
+      "status": "machine-generated"
+    },
+    "translator.ui.statusInCatalog.text": {
+      "text": "Status: In katalogus",
+      "status": "machine-generated"
+    },
+    "translator.ui.stoppedAtTheValueFileSafetyLimit.text": {
+      "text": "By die lêerveiligheidslimiet van {scannedFolderLimitsMaximumFiles} gestop.",
+      "status": "machine-generated"
+    },
+    "translator.ui.textDirection.text": {
+      "text": "Tekstrigting",
+      "status": "machine-generated"
+    },
+    "translator.ui.theInventoryIsUnchangedUntilSelectedFilesAre.text": {
+      "text": "Die inventaris bly onveranderd totdat geselekteerde lêers bygevoeg word.",
+      "status": "machine-generated"
+    },
+    "translator.ui.theReportDoesNotExistYetSavingWill.text": {
+      "text": "Die verslag bestaan nog nie. Deur te stoor sal dit geskep word.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
+      "text": "Hierdie ligging word deur die taalbouer vereis.",
+      "status": "machine-generated"
+    },
+    "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
+      "text": "Voorbeskouing gerig op vertaling deur kanonieke woordvervangings.",
+      "status": "machine-generated"
+    },
+    "translator.ui.uncheckedBuildsUseNormalizedEnglishAndDoNot.title": {
+      "text": "Onbeheerde bouwerk gebruik gestandaardiseerde Engels en roep nie Deep L aan nie.",
+      "status": "machine-generated"
+    },
+    "translator.ui.unsavedChanges.text": {
+      "text": "Onbewaarde veranderinge",
+      "status": "machine-generated"
+    },
+    "translator.ui.unsavedChangesRemainInMemoryContinueToAnother.text": {
+      "text": "Onbehoude veranderinge bly in die geheue. Gaan voort na 'n ander uitsig?",
+      "status": "machine-generated"
+    },
+    "translator.ui.useSuggestedKey.text": {
+      "text": "Gebruik die voorgestelde sleutel",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationFailedWithValueErrorS.text": {
+      "text": "Validering het misluk met {validationErrorsCount}-fout(e).",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationListValue.text": {
+      "text": "valideringslys {kind}",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationPassedWithValueWarningS.text": {
+      "text": "Validering geslaag met {validationWarningsCount}-waarskuwings.",
+      "status": "machine-generated"
+    },
+    "translator.ui.validValueWarningS.text": {
+      "text": "Geldig ({validationWarningsCount}-waarskuwings)",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueCandidateBearingFileSValuePotentialCandidate.text": {
+      "text": "{scannedFolderCandidateFileCount} kandidaat met lêer(e), {scannedFolderCandidateCount} moontlike kandidaat(e), {scannedFolderCatalogedStringCount} gevind in katalogus",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text": {
+      "text": "{scannedFileCandidateCount} nie-kataloguskandidaat(e), {scannedFileCatalogedStringCount} in katalogus gevind",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text2": {
+      "text": "{fileCandidateCount} nie-kataloguskandidaat(e), {fileCatalogedStringCount} in katalogus gevind",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text3": {
+      "text": "{candidateRowsLengthCatalogedCount} nie-kataloguskandidaat(e), {catalogedCount} in katalogus gevind",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogValueFoundInCatalog.text": {
+      "text": "{fileCandidateCount} {fileCatalogedStringCount} nie in katalogus gevind nie",
+      "status": "machine-generated"
+    },
+    "translator.ui.valuePotentialValueInCatalogValue.text": {
+      "text": "{fileCandidateCount} Potensiële {fileCatalogedStringCount} in katalogus {inventoryText}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueRecordS.text": {
+      "text": "{recordsCount} opname(s)",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueSourceFileS.text": {
+      "text": "{filesCount} Bronlêer(e)",
+      "status": "machine-generated"
+    },
+    "translator.ui.view.text": {
+      "text": "Kyk",
+      "status": "machine-generated"
+    },
+    "translator.ui.viewHeadingDataViewToolbar.text": {
+      "text": "Beskrywing: Kyk kopgegewens, Kyk gereedskapbalk",
+      "status": "machine-generated"
+    },
+    "translator.ui.yes.text": {
+      "text": "Ja",
+      "status": "machine-generated"
+    }
+  }
+}

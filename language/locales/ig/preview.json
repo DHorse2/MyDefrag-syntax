@@ -1,0 +1,22 @@
+{
+  "locale": "ig",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "MALITE [omimi {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "Njedebe [omimi {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "Tinye faịlụ. (E rụrụ faịlụ{count})",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** Ịdọ aka ná ntị: Echefughị include (\"{uri}\") ***",
+      "status": "machine-generated"
+    }
+  }
+}

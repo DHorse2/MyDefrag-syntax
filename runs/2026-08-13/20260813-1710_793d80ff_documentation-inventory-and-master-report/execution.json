@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "793d80ff",
+  "startedAt": "2026-08-14T00:10:16.382Z",
+  "finishedAt": "2026-08-14T00:18:36.328Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "MyDefrag-syntax"
+  ],
+  "tasks": [
+    "documentation-inventory-and-master-report"
+  ],
+  "promptPaths": [],
+  "outputs": [
+    "scripts/Inventory-Documentation.cjs",
+    "scripts/Documentation-Report.md",
+    "scripts/Documentation-Files.md",
+    "scripts/Inventory-Master.cjs",
+    "scripts/Inventory-Report.md",
+    "package.json"
+  ],
+  "artifacts": [
+    "scripts/Documentation-Report.md",
+    "scripts/Documentation-Files.md",
+    "scripts/Inventory-Report.md"
+  ],
+  "metrics": {
+    "filesScanned": 880,
+    "textFiles": 816,
+    "binaryFiles": 64,
+    "words": 258101,
+    "allFileBytes": 4516628,
+    "textBytes": 2212696,
+    "binaryBytes": 2303932,
+    "textCharacters": 2210361,
+    "duplicateTextFiles": 204,
+    "uniqueContentWords": 214872,
+    "targetLocales": 17,
+    "documentationDeepLUpperBound": 37576137,
+    "aggregateDeepLUpperBound": 39061359,
+    "validationIssues": 0
+  },
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

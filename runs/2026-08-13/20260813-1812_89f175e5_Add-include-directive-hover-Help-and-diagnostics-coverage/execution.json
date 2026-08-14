@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "89f175e5",
+  "startedAt": "2026-08-14T01:12:16.280Z",
+  "finishedAt": "2026-08-14T01:17:09.765Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "Add include directive hover Help and diagnostics coverage"
+  ],
+  "promptPaths": [
+    "interactive user request"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

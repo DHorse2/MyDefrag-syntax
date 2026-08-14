@@ -1,0 +1,14 @@
+{
+  "locale": "af",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "Verwag '{expected}, maar gevind '{actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Onverwagte token '{token}'",
+      "status": "machine-generated"
+    }
+  }
+}

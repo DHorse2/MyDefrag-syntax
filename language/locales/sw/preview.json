@@ -1,0 +1,22 @@
+{
+  "locale": "sw",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "ANZA [kina{depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "MWISHO [undani{depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "Jumuisha Faili. (Faili za{count} zimesindikwa)",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** ONYO: Include inakosekana (\"{uri}\") ***",
+      "status": "machine-generated"
+    }
+  }
+}

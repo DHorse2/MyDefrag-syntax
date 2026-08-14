@@ -31,6 +31,14 @@ const paths = require('./shared/path');
 paths.ensureDirectories();
 const util = require('./utilities/util')
 const Logger = require('./shared/logger');
+const { normalizeSeveritySetting, normalizeVerboseLevel } = require('./shared/config');
+const {
+    buildOpenFileCommandArguments,
+    hasDocumentLinkRange,
+    resolveDocumentLinkPath
+} = require('./shared/documentLinks');
+const { createHelpCommandTrust } = require('./shared/helpDocumentation');
+const { createFeatureToggleController } = require('./shared/featureToggles');
 const languageData = require('./server/languageData');
 const { CompletionPointProvider } = require('./completion/completionPointProvider');
 const { registerDiagnosticNavigation } = require('./diagnostics/registerDiagnosticNavigation');
@@ -56,6 +64,8 @@ let referenceContainsMacrosLevel;
 let referenceFileFoundLevel;
 let referenceFileNotFoundLevel;
 let fragmentParentLevel;
+let hoverEnabled;
+let wordPredictionEnabled;
 let iniErrors = [];
 
 // ─────────────────────────────────────────────────────────────────────────────────
@@ -94,41 +104,13 @@ function loadExcludeConfig() {
 }
 
 /**
- * Converts a VSCodium setting value into an LSP diagnostic severity.
- *
- * @param {string|number} value The configured severity name or number.
- * @param {number} defaultValue The severity to use when the setting is invalid.
- * @returns {number} An LSP diagnostic severity value.
- */
-function normalizeSeveritySetting(value, defaultValue) {
-    const severityNames = {
-        error: ini.severity.Error,
-        warning: ini.severity.Warning,
-        information: ini.severity.Information,
-        info: ini.severity.Information,
-        hint: ini.severity.Hint
-    };
-    const normalizedName = String(value ?? '').toLowerCase();
-    const numericValue = Number(value);
-
-    if (Number.isFinite(numericValue) && numericValue >= 0 && numericValue <= 4) {
-        return numericValue;
-    }
-
-    return severityNames[normalizedName] ?? defaultValue;
-}
-
-/**
  * Reads MyDefrag extension settings from the VSCodium configuration API.
  *
  * @returns {object} Normalized MyDefrag extension configuration.
  */
 function loadMyDefragConfig() {
     const settings = vscode.workspace.getConfiguration('mydfrg');
-    const configuredVerboseLevel = Number(settings.get('verboseLevel'));
-    const nextVerboseLevel = Number.isFinite(configuredVerboseLevel)
-        ? Math.min(Math.max(configuredVerboseLevel, 0), 10)
-        : 5;
+    const nextVerboseLevel = normalizeVerboseLevel(settings.get('verboseLevel'), 5);
 
     return {
         source,
@@ -136,6 +118,8 @@ function loadMyDefragConfig() {
             severity: ini.severity
         },
         isDebugOn: Boolean(settings.get('debugOn')),
+        hoverEnabled: settings.get('hoverEnabled') !== false,
+        wordPredictionEnabled: settings.get('wordPredictionEnabled') !== false,
         verboseLevel: nextVerboseLevel,
         isLogOn: true,
         referenceRelativePathLevel: normalizeSeveritySetting(
@@ -173,6 +157,8 @@ function applyMyDefragConfig(nextConfig) {
         source,
         iniData,
         isDebugOn,
+        hoverEnabled,
+        wordPredictionEnabled,
         verboseLevel,
         isLogOn,
         referenceRelativePathLevel,
@@ -414,6 +400,8 @@ async function activate(context) {
     let batLinkProvider;
     let inlineCompletionProvider;
     let inlineCompletionRegistration;
+    const featureToggleController = createFeatureToggleController({ vscode });
+    const featureToggleCommands = featureToggleController.registerCommands();
 
     function isDiagnosticsDocument(document) {
         return document?.uri?.scheme === 'file' &&
@@ -437,6 +425,7 @@ async function activate(context) {
             mydfrg: {
                 exclude: mydfrg.get('exclude') || [],
                 debugOn: mydfrg.get('debugOn'),
+                hoverEnabled: mydfrg.get('hoverEnabled'),
                 verboseLevel: mydfrg.get('verboseLevel'),
                 referenceRelativePathLevel: mydfrg.get('referenceRelativePathLevel'),
                 referenceContainsMacros: mydfrg.get('referenceContainsMacros'),
@@ -458,6 +447,7 @@ async function activate(context) {
     try { // ---- Initialization ----
         try { // VSCodium Settings Init
             applyMyDefragConfig(loadMyDefragConfig());
+            await featureToggleController.sync(config);
         } catch (errResult) {
             const message = `extension.js:activate:settings:initialize Error returned from initialization: ${errResult.message}`;
             console?.error(message);
@@ -558,7 +548,8 @@ async function activate(context) {
             vscode,
             languageData,
             logger,
-            config
+            config,
+            isEnabled: () => wordPredictionEnabled
         });
         inlineCompletionRegistration = vscode.languages.registerInlineCompletionItemProvider(
             { language: 'mydfrg' },
@@ -608,7 +599,6 @@ async function activate(context) {
                     const includeLinks = [];
                     const fileLinks = [];
                     const commandLinks = [];
-                    let isDuplicate = false;
                     const toZeroBased = (s) => parseInt(s) - 1;
 
                     // Internal trace diagnostics are for extension debugging only.
@@ -694,13 +684,16 @@ async function activate(context) {
                     const filePathMatch = (match) => match[1];
                     const line = (match) => toZeroBased(match[2]);
                     const col = (match) => toZeroBased(match[3]);
-                    const currentDir = () => path.dirname(document.uri.fsPath);
-                    const absolutePath = (currentDir, filePath) => path.resolve(document.fileName, filePath);
+                    const collectedLinks = () => [
+                        ...includeLinks,
+                        ...fileLinks,
+                        ...commandLinks
+                    ];
 
                     // vscode.Uri.file() handles the path correctly on Windows
                     const target = (filePath, line, col) => vscode.Uri.parse(
                         `command:mdm.openFileAtPosition?${encodeURIComponent(
-                            JSON.stringify({ path: filePath, line, col })
+                            JSON.stringify(buildOpenFileCommandArguments(filePath, line, col))
                         )}`
                     );
                     const displayLine = (text, line) => {
@@ -733,12 +726,12 @@ async function activate(context) {
                         const includePath = match[1];
                         const quoteStart = match.index + match[0].indexOf('"') + 1;
                         const start = document.positionAt(quoteStart);
-                        const end = new vscode.Position(start.line, match.index + fullMatch(match).length);
+                        const end = document.positionAt(quoteStart + includePath.length);
                         const range = new vscode.Range(start, end);
                         // normalize slashes
                         const normalised = includePath.replace(/\\/g, path.sep);
                         // resolve relative OR absolute
-                        const targetUri = vscode.Uri.file(absolutePath(currentDir, includePath));
+                        const targetPath = resolveDocumentLinkPath(document.fileName, normalised);
                         const lineText = docLine(range.start.line, {
                             caller: 'includeLink',
                             includeFile: includePath,
@@ -746,13 +739,8 @@ async function activate(context) {
                             statement: match[0]
                         });
 
-                        isDuplicate = includeLinks.some(link =>
-                            link.range.start.line === start.line &&
-                            link.range.start.character === start &&
-                            link.range.end.character === end
-                        );
-                        if (!isDuplicate) {
-                            includeLinks.push(new vscode.DocumentLink(range, target(targetUri, start.line, start)));
+                        if (!hasDocumentLinkRange(collectedLinks(), range)) {
+                            includeLinks.push(new vscode.DocumentLink(range, target(targetPath, 0, 0)));
                             logger.dbg(5, `INCLUDE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${lineText}`);
                         }
                         linkSet = true;
@@ -782,14 +770,12 @@ async function activate(context) {
                             const start = new vscode.Position(i, match.index);
                             const end = new vscode.Position(i, match.index + fullMatch(match).length);
                             const range = new vscode.Range(start, end);
-                            const targetUri = vscode.Uri.file(absolutePath(currentDir, includePath));
-                            isDuplicate = fileLinks.some(link =>
-                                link.range.start.line === i &&
-                                link.range.start.character === start &&
-                                link.range.end.character === end
-                            );
-                            if (!isDuplicate) {
-                                fileLinks.push(new vscode.DocumentLink(range, target(targetUri, i, start)));
+                            const targetPath = resolveDocumentLinkPath(document.fileName, includePath);
+                            if (!hasDocumentLinkRange(collectedLinks(), range)) {
+                                fileLinks.push(new vscode.DocumentLink(
+                                    range,
+                                    target(targetPath, line(match), col(match))
+                                ));
                                 logger.dbg(5, `FILE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${docLine(range.start.line, {
                                     caller: 'fileUriLinkLog',
                                     includeFile: includePath,
@@ -813,14 +799,9 @@ async function activate(context) {
                         const start = document.positionAt(quoteStart);
                         const end = document.positionAt(quoteStart + execPath.length);
                         const range = new vscode.Range(start, end);
-                        const targetUri = vscode.Uri.file(absolutePath(currentDir, execPath));
-                        isDuplicate = commandLinks.some(link =>
-                            link.range.start.line === start.line &&
-                            link.range.start.character === start &&
-                            link.range.end.character === end
-                        );
-                        if (!isDuplicate) {
-                            commandLinks.push(new vscode.DocumentLink(range, target(targetUri, start.line, start)));
+                        const targetPath = resolveDocumentLinkPath(document.fileName, execPath);
+                        if (!hasDocumentLinkRange(collectedLinks(), range)) {
+                            commandLinks.push(new vscode.DocumentLink(range, target(targetPath, 0, 0)));
                             logger.dbg(5, `BATCH/Command file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${docLine(range.start.line, {
                                 caller: 'commandLinkLog',
                                 includeFile: execPath,
@@ -1072,26 +1053,36 @@ async function activate(context) {
                     maxBuffer: 1024 * 1024 * 50
                 }
             );
+            const stderr = result.stderr ? result.stderr.toString() : '';
+            const stdout = result.stdout ? result.stdout.toString() : '';
             // result.stdout
             // result.stderr
             // result.error
             // result.status
             // ─────────────────────────────────────────────────────────────────────────────────
-            // Send stderr to OUTPUT window  ───────────────────────────────────────────────────
-            if (result.stderr.length) {
-                logger.err(null, `Error, in preparing preview summary!`, result.stderr);
-            } else {
-                logger.info(null, `Finished preview summary!`)
-            }
-            // ─────────────────────────────────────────────────────────────────────────────────
             // Error Handling  ─────────────────────────────────────────────────────────────────
             if (result.error) {
-                const nextMessage = `ERROR: Preview generation failed:\n\n${result.error.msg}`;
+                const nextMessage = `ERROR: Preview generation failed:\n\n${result.error.message}`;
                 logger.err(null, nextMessage)
                 return `${nextMessage}`;
             }
+            if (result.status !== 0) {
+                const failureDetail = stderr.trim() || `Preview processor exited with status ${result.status}.`;
+                const nextMessage = `ERROR: Preview generation failed:\n\n${failureDetail}`;
+                logger.err(null, nextMessage);
+                return nextMessage;
+            }
+            if (stderr.length) {
+                logger.dbg(8, `Preview processor diagnostics:\n${stderr}`);
+            }
+            logger.info(null, `Finished preview summary!`)
+            if (!stdout.length) {
+                const nextMessage = 'ERROR: Preview generation produced no content.';
+                logger.err(null, nextMessage);
+                return nextMessage;
+            }
             // ─────────────────────────────────────────────────────────────────────────────────
-            return result.stdout.toString();
+            return stdout;
             // ─────────────────────────────────────────────────────────────────────────────────
         } catch (errResult) {
             const message = `extension.js:activate:generatePreview: Unexpected error Generating Preview of document: ${errResult.message}`;
@@ -1112,8 +1103,11 @@ async function activate(context) {
                 vscode.window.showWarningMessage(tMessage);
                 return;
             }
-            const mergedPath = sourceUri.fsPath.replace(/(\.\w+)$/, '.merged$1');
-            const previewUri = vscode.Uri.parse(`mydfrg-preview:${mergedPath}`);
+            const mergedPath = sourceUri.path.replace(/(\.\w+)$/, '.merged$1');
+            const previewUri = sourceUri.with({
+                scheme: 'mydfrg-preview',
+                path: mergedPath
+            });
             const doc = await vscode.workspace.openTextDocument(previewUri);
             await vscode.window.showTextDocument(
                 doc,
@@ -1194,6 +1188,9 @@ async function activate(context) {
     };
     const clientOptions = {
         documentSelector: [{ scheme: 'file', language: 'mydfrg' }],
+        markdown: {
+            isTrusted: createHelpCommandTrust()
+        },
         synchronize: {
             fileEvents: vscode.workspace.createFileSystemWatcher('**/*.{MyDc,mydc,MYDC,MyD,myd,MYD}'),
             configurationSection: ['mydfrg', 'files', 'search']
@@ -1233,6 +1230,7 @@ async function activate(context) {
         ) {
             loadExcludeConfig();
             applyMyDefragConfig(loadMyDefragConfig());
+            await featureToggleController.sync(config);
 
             logger = Logger.createLogger(channelName, source, config, {
                 outputChannel: connection,
@@ -1254,6 +1252,7 @@ async function activate(context) {
     context.subscriptions.push(definitionProvider);
     context.subscriptions.push(referenceProvider);
     context.subscriptions.push(inlineCompletionRegistration);
+    context.subscriptions.push(...featureToggleCommands);
     context.subscriptions.push(linkProvider);
     context.subscriptions.push(batLinkProvider);
     context.subscriptions.push(openPreviewCommand);

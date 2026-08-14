@@ -9,6 +9,130 @@
     "package.description": {
       "text": "我的碎片整理程序脚本语言的语法高亮",
       "status": "approved"
+    },
+    "package.metadata.description": {
+      "text": "My Defragmenter 脚本语言的语法高亮",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "“我的碎片整理程序”用户数据的目录。",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "我的磁盘碎片整理工具",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "“我的磁盘碎片整理工具”日志文件的目录。",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "启用“我的碎片整理程序”扩展的调试日志记录。",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "我的“磁盘碎片整理程序”扩展的详细程度级别。调试日志记录需要开启 mydfrg debug。",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "仅通过向上遍历父文件夹才能找到的引用所对应的诊断严重性。",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "针对包含运行时宏的引用，其诊断严重程度。",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "对于已找到目标文件的引用，其诊断严重程度。",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "针对目标文件未找到的引用，其诊断严重程度。",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "推断片段父消息的诊断严重程度。",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "应从“我的碎片整理工具”验证中排除的Glob模式",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "我的磁盘碎片整理脚本",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "在指定位置打开文件",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "我的磁盘碎片整理工具：下一步诊断",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "我的磁盘碎片整理工具：之前的诊断",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "我的磁盘碎片整理工具：下一个文件",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "我的磁盘碎片整理工具：标记诊断已修复",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "我的磁盘碎片整理工具：忽略诊断",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "我的磁盘碎片整理工具：跳过诊断",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "我的磁盘碎片整理工具：将诊断信息发送给代理",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "我的磁盘碎片整理工具：首次诊断",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "我的磁盘碎片整理工具：重置诊断导航",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "我的磁盘碎片整理工具：刷新诊断",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "我的磁盘碎片整理工具：过滤器诊断",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "我的磁盘碎片整理工具：清除诊断过滤器",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "我的磁盘碎片整理工具：以树形结构显示诊断信息",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "我的磁盘碎片整理工具：以表格形式显示诊断信息",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "我的磁盘碎片整理工具：关闭诊断资源管理器",
+      "status": "machine-generated"
     }
   }
 }

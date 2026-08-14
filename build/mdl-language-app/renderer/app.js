@@ -200,6 +200,9 @@ function showResult(title, result) {
     if (result.generatedFiles?.length) {
         appendFiles(resultContent, 'Generated files', result.generatedFiles);
     }
+    if (result.durableLocaleFiles?.length) {
+        appendFiles(resultContent, 'Durable locale files', result.durableLocaleFiles);
+    }
     if (result.generatedCatalogRemovals?.length) {
         appendFiles(resultContent, 'Generated catalogs scheduled for deletion', result.generatedCatalogRemovals);
     }
@@ -211,6 +214,9 @@ function showResult(title, result) {
     }
     if (result.changedFiles?.length) {
         appendFiles(resultContent, 'Generated files changed', result.changedFiles);
+    }
+    if (result.durableLocaleFiles?.length) {
+        appendFiles(resultContent, 'Durable locale files changed', result.durableLocaleFiles);
     }
     const buildResult = result.build || ((result.stdout || result.stderr) ? result : null);
     if (buildResult) {

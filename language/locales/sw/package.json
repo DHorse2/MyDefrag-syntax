@@ -1,0 +1,138 @@
+{
+  "locale": "sw",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "Lugha za Programu",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "Uangazaji wa sintaksia kwa lugha ya skripti ya My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "Uangazi wa sintaksia kwa lugha ya skripti ya My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "Saraka ya data za mtumiaji wa My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "Defragmenter yangu",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "Orodha ya faili za kumbukumbu za My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "Wezesha uandikaji wa hitilafu wa kiendelezi cha My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "Kiwango cha kina cha uandishi wa taarifa za nyongeza ya Defragmenter yangu. Uandishi wa kumbukumbu za utatuzi unahitaji mydfrg debug iwe hai.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "Ukali wa utambuzi kwa marejeleo yanayopatikana tu kwa kupitia folda za wazazi.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "Ukali wa utambuzi kwa marejeleo yanayojumuisha makro za wakati wa utekelezaji.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "Ukali wa utambuzi kwa marejeleo ambayo faili zake lengwa zimepatikana.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "Ukali wa utambuzi kwa marejeleo ambayo faili zake lengwa hazijapatikana.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "Ukali wa utambuzi kwa ujumbe wa mzazi wa vipande vilivyodhaniwa.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "Mifumo ya globu ya kutengwa katika uthibitishaji wa My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "Skripti yangu ya Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "Fungua Faili katika Nafasi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "Defragmenter yangu: Uchunguzi unaofuata",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "Defragmenter yangu: Uchunguzi uliopita",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "Defragmenter yangu: Faili Linalofuata",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "Defragmenter yangu: Marekebisho ya utambuzi yamekamilika",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "Defragmenter yangu: Puuza utambuzi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "Defragmenter yangu: Ruka utambuzi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "Defragmenter yangu: Tuma Uchunguzi kwa Mwakala",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "Defragmenter yangu: Uchunguzi wa kwanza",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "Defragmenter yangu: Weka upya urambazaji wa utambuzi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "Defragmenter yangu: Sasisha Uchunguzi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "Defragmenter yangu: Chuja utambuzi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "Defragmenter yangu: Safisha kichujio cha utambuzi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "Defragmenter yangu: Onyesha utambuzi kama mti",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "Defragmenter yangu: Onyesha utambuzi kama jedwali",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "Defragmenter yangu: Funga Diagnostics Explorer",
+      "status": "machine-generated"
+    }
+  }
+}

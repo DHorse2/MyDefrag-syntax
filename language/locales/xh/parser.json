@@ -1,0 +1,14 @@
+{
+  "locale": "xh",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "Bekulindelwe i{expected} kodwa kufunyenwe i{actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Itokeni engalindelekanga '{token}'",
+      "status": "machine-generated"
+    }
+  }
+}

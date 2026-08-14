@@ -1,0 +1,526 @@
+{
+  "locale": "ar",
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "text": "مخرجات أمر «بناء»",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.component.label": {
+      "text": "المكون",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.locale.label": {
+      "text": "الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "text": "إجراءات الصيانة",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "text": "العملية جارية",
+      "status": "machine-generated"
+    },
+    "locales.action.applyInMemory.label": {
+      "text": "التطبيق في الذاكرة",
+      "status": "machine-generated"
+    },
+    "locales.action.close.label": {
+      "text": "إغلاق",
+      "status": "machine-generated"
+    },
+    "locales.action.exit.label": {
+      "text": "خروج",
+      "status": "machine-generated"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "text": "إنشاء ترجمة واجهة برمجة التطبيقات (API)",
+      "status": "machine-generated"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "text": "إعادة بناء المكون المحدد",
+      "status": "machine-generated"
+    },
+    "locales.action.reload.label": {
+      "text": "إعادة التحميل",
+      "status": "machine-generated"
+    },
+    "locales.action.revert.label": {
+      "text": "الرجوع",
+      "status": "machine-generated"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "text": "حفظ وإعادة البناء",
+      "status": "machine-generated"
+    },
+    "locales.action.stopBuild.label": {
+      "text": "إيقاف البناء",
+      "status": "machine-generated"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "text": "استخدام اللغة الإنجليزية كلغة بديلة",
+      "status": "machine-generated"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "text": "استخدم اللغة الإنجليزية المعيارية",
+      "status": "machine-generated"
+    },
+    "locales.action.validate.label": {
+      "text": "التحقق من الصحة",
+      "status": "machine-generated"
+    },
+    "locales.dialog.cancel.text": {
+      "text": "إلغاء",
+      "status": "machine-generated"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "text": "تأكيد التغييرات في مصدر الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "text": "إلغاء التحميل وإعادة التحميل",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "text": "هل تريد حذف الترجمات غير المحفوظة؟",
+      "status": "machine-generated"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "text": "الخروج دون حفظ",
+      "status": "machine-generated"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "text": "يجري حالياً إنشاء مكون الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "text": "صيانة الإعدادات الإقليمية لأداة إلغاء التجزئة الخاصة بي",
+      "status": "machine-generated"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "text": "لن تتغير أي ملفات.",
+      "status": "machine-generated"
+    },
+    "locales.dialog.returnToBuild.text": {
+      "text": "العودة إلى عملية البناء",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "text": "تم الحفظ ونجح إنشاء المكون",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "text": "حفظ المكون وإعادة بنائه",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "text": "تم حظر الحفظ بسبب عملية التحقق من الصحة",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "فشل الحفظ وتم التراجع عنه",
+      "status": "machine-generated"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "حدد مستودع صيغ «My Defragmenter»",
+      "status": "machine-generated"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "text": "تغييرات الإعدادات المحلية غير المحفوظة",
+      "status": "machine-generated"
+    },
+    "locales.heading.catalog.text": {
+      "text": "الكتالوج",
+      "status": "machine-generated"
+    },
+    "locales.heading.localeOperation.text": {
+      "text": "التشغيل المحلي",
+      "status": "machine-generated"
+    },
+    "locales.heading.operationResult.text": {
+      "text": "نتيجة العملية",
+      "status": "machine-generated"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "text": "اختر الإعدادات اللغوية والمكون",
+      "status": "machine-generated"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "text": "إنشاء ترجمة بناءً على قيمة الإعدادات المحلية الحالية",
+      "status": "machine-generated"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "text": "المفتاح، المصدر، الترجمة، الحالة",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "text": "تم رفض ترجمة واجهة برمجة التطبيقات (API)",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "text": "ترجمة واجهة برمجة التطبيقات (API) غير متاحة",
+      "status": "machine-generated"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "text": "فشل تشغيل التطبيق",
+      "status": "machine-generated"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "text": "لم يتم تحديد مستودع إعدادات لغة صالح لـ «My Defragmenter».",
+      "status": "machine-generated"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "text": "اللغة الإنجليزية القياسية ليست هدفًا لترجمة واجهة برمجة التطبيقات (API).",
+      "status": "machine-generated"
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "text": "مفتاح الكتالوج ينتمي إلى المكون {canonicalComponent}.",
+      "status": "machine-generated"
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "text": "اختر المستودع الذي يحتوي على الإعدادات المحلية للغة /، وقم بإنشاء لغة /.",
+      "status": "machine-generated"
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "text": "فشل إعادة بناء المكون",
+      "status": "machine-generated"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "text": "قم بإلغاء التغييرات أو حفظها قبل تغيير الإعدادات اللغوية أو المكون.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "text": "لا يُقرأ هنا سوى النص القياسي باللغة الإنجليزية.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "text": "النص الإنجليزي هو النص المرجعي ويجب الحفاظ عليه في قسم «صيانة اللغة» في My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "text": "أدخل أو حدد قيمة الإعدادات المحلية الحالية قبل إنشاء ترجمة عبر واجهة برمجة التطبيقات (API).",
+      "status": "machine-generated"
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "text": "هل تريد الخروج وإلغاء ترجمات المكونات المحددة؟",
+      "status": "machine-generated"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "text": "قم بإنشاء ترجمة واجهة برمجة التطبيقات (API) قبل استبدال القيمة.",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "text": "حدث عدم تطابق في هوية كتالوج الإعدادات المحلية في {relativePath}:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "text": "كتالوج الإعدادات المحلية الذي تم إنشاؤه غير صالح:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "text": "يجب تطبيق الترجمات التي تم إنشاؤها قبل أن يتسنى إزالتها من البيانات التي تم تأليفها.",
+      "status": "machine-generated"
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "لم يتم تحميل بيانات صيانة الإعدادات المحلية.",
+      "status": "machine-generated"
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "text": "ليس مستودع الإعدادات الإقليمية لـ «My Defragmenter». مفقود: {missing}",
+      "status": "machine-generated"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "المسار يتجاوز جذر المستودع: {relativePath}",
+      "status": "machine-generated"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "text": "يجب أن تكون العناصر النائبة بالصيغة التالية بالضبط: {expected}.",
+      "status": "machine-generated"
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "text": "ستؤدي عملية إعادة التحميل إلى إلغاء التغييرات التي أُجريت على مكون الإعدادات اللغوية المحدد.",
+      "status": "machine-generated"
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "text": "احفظ التغييرات أو أعدها إلى حالتها السابقة قبل إعادة الإنشاء.",
+      "status": "machine-generated"
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "text": "إعادة بناء المكون المحدد",
+      "status": "machine-generated"
+    },
+    "locales.message.selectionFailed.text": {
+      "text": "فشل الاختيار",
+      "status": "machine-generated"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "text": "مخطط مكون الإعدادات المحلية غير متاح.",
+      "status": "machine-generated"
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "text": "قامت العملية الرئيسية بترجمة قيمة مختلفة لـ«الإعدادات المحلية الحالية». أعد تشغيل «صيانة الإعدادات المحلية» وحاول مرة أخرى.",
+      "status": "machine-generated"
+    },
+    "locales.message.translationRejected.text": {
+      "text": "تم رفض الترجمة",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "text": "مفتاح كتالوج غير معروف: {key}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "text": "مكون غير معروف: {componentId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "text": "مكون غير معروف: {documentComponent}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "text": "مفتاح غير معروف للمكون المحدد: {payloadKey}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "text": "إعدادات لغة غير معروفة: {localeId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "text": "إعدادات لغة غير معروفة: {documentLocale}",
+      "status": "machine-generated"
+    },
+    "locales.message.validationResult.text": {
+      "text": "نتيجة التحقق من الصحة",
+      "status": "machine-generated"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "انتظر حتى ينتهي عملية التجميع قبل الخروج.",
+      "status": "machine-generated"
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "text": "هل يمكن الكتابة إلى الملف (الملفات) المرجعي (المرجعية) {normalizedCount}؟",
+      "status": "machine-generated"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "حفظ الملفات التي تم إنشاؤها من أجل التراجع",
+      "status": "machine-generated"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "text": "التحقق من التغييرات التي طرأت على الملف الذي تم إنشاؤه",
+      "status": "machine-generated"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "text": "تسجيل التغييرات في مصدر الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "locales.progress.preparingSave.status": {
+      "text": "التحضير للحفظ",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "استعادة الملفات المرجعية والملفات التي تم إنشاؤها",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "text": "استعادة الملفات بعد حدوث خطأ",
+      "status": "machine-generated"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "text": "حفظ مكون الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "text": "بدء عملية الحفظ وإعادة بناء المكونات",
+      "status": "machine-generated"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "text": "إيقاف عملية إنشاء المكون",
+      "status": "machine-generated"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "استخدم خيار «إيقاف البناء» في نافذة التقدم، ثم انتظر حتى تكتمل عملية التراجع قبل إغلاق التطبيق.",
+      "status": "machine-generated"
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "text": "في انتظار تأكيد الحفظ",
+      "status": "machine-generated"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "text": "كتابة ملفات الإعدادات المحلية الموثوقة",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "شارة {stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "شارة {stateValidationOk}",
+      "status": "machine-generated"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "text": "اللغة الإنجليزية القياسية",
+      "status": "machine-generated"
+    },
+    "locales.ui.catalogKey.text": {
+      "text": "مفتاح الكتالوج",
+      "status": "machine-generated"
+    },
+    "locales.ui.componentStrings.text": {
+      "text": "سلاسل المكونات",
+      "status": "machine-generated"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "text": "قيمة الإعدادات المحلية الحالية",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "text": "لم يتم تكوين Deep L. يرجى تكوين Deepl Api قبل تشغيل التطبيق.",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "text": "استبدل «Deep L» القيمة الحالية للإعدادات المحلية. قم بتطبيق التغيير في الذاكرة للاحتفاظ به.",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "text": "هل يتم تجاهل التغييرات في ترجمة الذاكرة؟",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "text": "هل تريد حذف الترجمات التي لم يتم حفظها وتغيير التحديد؟",
+      "status": "machine-generated"
+    },
+    "locales.ui.englishFallback.text": {
+      "text": "اللغة الإنجليزية كخيار بديل",
+      "status": "machine-generated"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "text": "إنشاء ترجمة استنادًا إلى قيمة الإعدادات المحلية الحالية. وتستبدل النتيجة هذا الحقل فقط.",
+      "status": "machine-generated"
+    },
+    "locales.ui.generatedValue.text": {
+      "text": "تم إنشاؤه: {stateGeneratedFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.key.text": {
+      "text": "المفتاح",
+      "status": "machine-generated"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "text": "أحدث نتائج Deep L",
+      "status": "machine-generated"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "text": "اللغة الإنجليزية المعيارية",
+      "status": "machine-generated"
+    },
+    "locales.ui.notValidated.text": {
+      "text": "لم يتم التحقق من صحتها",
+      "status": "machine-generated"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "text": "لا توجد تغييرات لم يتم حفظها",
+      "status": "machine-generated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "text": "التحضير لإعادة بناء المكون",
+      "status": "machine-generated"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "text": "إعادة إنشاء مكون الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "text": "طلب ترجمة باستخدام Deep L.",
+      "status": "machine-generated"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "text": "الرموز النائبة الإلزامية",
+      "status": "machine-generated"
+    },
+    "locales.ui.reviewStatus.text": {
+      "text": "حالة المراجعة",
+      "status": "machine-generated"
+    },
+    "locales.ui.search.text": {
+      "text": "بحث",
+      "status": "machine-generated"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "text": "اختر عنصرًا من الكتالوج",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceText.text": {
+      "text": "النص الأصلي",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceValue.text": {
+      "text": "المصدر: {stateAuthoritativeFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.status.text": {
+      "text": "الحالة",
+      "status": "machine-generated"
+    },
+    "locales.ui.structuredEditor.text": {
+      "text": "محرر منظم",
+      "status": "machine-generated"
+    },
+    "locales.ui.translation.text": {
+      "text": "الترجمة",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationScope.text": {
+      "text": "نطاق الترجمة",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "text": "الترجمة غير متوفرة.",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "text": "أداة سطح المكتب للمترجم",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorNotes.text": {
+      "text": "ملاحظات المترجم",
+      "status": "machine-generated"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "text": "التغييرات غير المحفوظة",
+      "status": "machine-generated"
+    },
+    "locales.ui.valid.text": {
+      "text": "صالح",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "text": "{stateCompletenessFallback} اللغة الإنجليزية كخيار بديل",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "text": "{rowApiTranslationProvider} النتيجة جاهزة. قم بالتطبيق في الذاكرة للاحتفاظ بقيمة الإعدادات المحلية الحالية.",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTotal.text": {
+      "text": "{stateCompletenessTotal} الإجمالي",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTranslated.text": {
+      "text": "{stateCompletenessTranslated} مترجم",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "text": "{stateValidationErrorsCount} خطأ (أخطاء) في التحقق من الصحة",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
+      "text": "تعديل حجم قيمة الإعدادات المحلية الحالية واقتراح واجهة برمجة التطبيقات (API)",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
+      "text": "تغيير حجم كتالوج الإعدادات المحلية ومحرر الترجمة",
+      "status": "machine-generated"
+    }
+  }
+}

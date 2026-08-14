@@ -1,0 +1,22 @@
+{
+  "locale": "es",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "COMENZAR [profundidad {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "FIN [profundidad {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "Incluir archivos. (Se han procesado {count}s archivos)",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** ADVERTENCIA: Falta la llamada a «{uri}» ***",
+      "status": "machine-generated"
+    }
+  }
+}

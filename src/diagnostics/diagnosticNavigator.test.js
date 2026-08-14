@@ -112,3 +112,32 @@ test('selects displayed diagnostics and navigates backward without losing charac
     assert.equal(navigator.previous().character, 1);
     assert.equal(navigator.previous().character, 1);
 });
+
+test('normalized diagnostics carry Help metadata from language data', (t) => {
+    const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'mydfrg-diagnostics-'));
+    t.after(() => fs.rmSync(tempDir, { recursive: true, force: true }));
+
+    const navigator = new DiagnosticNavigator({
+        diagnosticsFile: path.join(tempDir, 'missing-diagnostics.json'),
+        stateFile: path.join(tempDir, 'state.json'),
+        languageData: require('../server/languageData'),
+        diagnosticsProvider: () => [[
+            { scheme: 'file', fsPath: 'C:\\repo\\sample.MyDc' },
+            [{
+                severity: 0,
+                message: "Unexpected keyword 'Description'",
+                range: { start: { line: 1, character: 2 } }
+            }, {
+                severity: 0,
+                message: "Unexpected token '!include'",
+                range: { start: { line: 2, character: 2 } }
+            }]
+        ]]
+    });
+
+    assert.equal(navigator.visibleDiagnostics[0].token, 'Description');
+    assert.equal(navigator.visibleDiagnostics[0].helpDocuments[0].path, 'Settings/Description.md');
+    assert.equal(navigator.visibleDiagnostics[1].token, 'include');
+    assert.equal(navigator.visibleDiagnostics[1].keywordExists, true);
+    assert.equal(navigator.visibleDiagnostics[1].helpDocuments[0].path, 'Scripts/Macros.md');
+});

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "62b1d3b0",
+  "startedAt": "2026-08-12T22:24:24.839Z",
+  "finishedAt": "2026-08-13T02:54:53.886Z",
+  "status": "completed",
+  "executionRecordMode": "Detailed",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "translate-untranslated-language-catalogs-with-deepl"
+  ],
+  "promptPaths": [
+    "chat-user-request"
+  ],
+  "outputs": [
+    "build/language/reports/deepl-catalog-entry-calls.md",
+    "build/language/reports/english-fallback-locales.md",
+    "build/scripts/translate-language-fallbacks.js"
+  ],
+  "artifacts": [
+    "build/language/reports/deepl-catalog-entry-calls.md",
+    "build/language/reports/english-fallback-locales.md",
+    "build/scripts/translate-language-fallbacks.js"
+  ],
+  "metrics": {
+    "elapsedMilliseconds": 16229047,
+    "apiCallReportRows": 7634,
+    "finalRunApiCalls": 5546,
+    "acceptedTranslations": 5688,
+    "currentFallbackEntries": 1258,
+    "rejectedEntries": 12,
+    "unsupportedEntries": 1246,
+    "validationEvents": 7,
+    "artifacts": 3
+  },
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

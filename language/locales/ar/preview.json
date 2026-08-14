@@ -1,0 +1,22 @@
+{
+  "locale": "ar",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "BEGIN [depth {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "نهاية [عمق {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "تضمين الملفات. (تمت معالجة ملف (ملفات) {count}",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** تحذير: ملف تضمين مفقود (\"{uri}\") ***",
+      "status": "machine-generated"
+    }
+  }
+}

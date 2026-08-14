@@ -1,0 +1,42 @@
+{
+  "locale": "fr",
+  "component": "extension",
+  "entries": {
+    "extension.command.configureFolders.title": {
+      "text": "Mon défragmenteur : Configurer les dossiers",
+      "status": "machine-generated"
+    },
+    "extension.command.openPreview.title": {
+      "text": "Ouvrir l'aperçu",
+      "status": "machine-generated"
+    },
+    "extension.command.openSettings.title": {
+      "text": "Mon défragmenteur : Ouvrir les paramètres",
+      "status": "machine-generated"
+    },
+    "extension.message.noActiveDocument.warning": {
+      "text": "Aucun document « Mon Défragmenteur » n'est actif.",
+      "status": "machine-generated"
+    },
+    "extension.product.displayName": {
+      "text": "Mon script de défragmentation (.MyDc / .MyD)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.fragment.text": {
+      "text": "Mon fragment de défragmenteur (.mydc)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.script.text": {
+      "text": "Mon script de défragmentation (.myd)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.unknown.text": {
+      "text": "Mon défragmenteur Type de document inconnu",
+      "status": "machine-generated"
+    },
+    "extension.window.channelName": {
+      "text": "Syntaxe de mon défragmenteur",
+      "status": "machine-generated"
+    }
+  }
+}

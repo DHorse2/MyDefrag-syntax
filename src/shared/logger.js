@@ -268,8 +268,15 @@ function createLogger(channelName, thisSource = "Unknown", config = {}, options 
 function logArrayToConsole(logger, thisChannelName, thisSeverity = iniData.severity.Error, thisLoggedMessages = null, logArray, ...args) {
     try { // ── Log Array To Console ─────────────────────────────────────────────────────────
         if (thisLoggedMessages === null || thisLoggedMessages === undefined) {
-            loggedMessages = [];
-        } else { loggedMessages = thisLoggedMessages; }
+            loggedMessages = new Set();
+        } else if (
+            typeof thisLoggedMessages.has === 'function' &&
+            typeof thisLoggedMessages.add === 'function'
+        ) {
+            loggedMessages = thisLoggedMessages;
+        } else {
+            loggedMessages = new Set(thisLoggedMessages);
+        }
 
         let i = 0;
         while (i < logArray.length) {

@@ -1,5 +1,14 @@
 {
   "locale": "zh-Hans",
   "component": "parser",
-  "entries": {}
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "预期为 {expected}，但实际为 {actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "遇到意外标记“{token}”",
+      "status": "machine-generated"
+    }
+  }
 }

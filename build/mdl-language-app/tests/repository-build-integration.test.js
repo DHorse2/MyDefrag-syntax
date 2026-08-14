@@ -116,10 +116,16 @@ test('build failure streams output and restores generated outputs', async (t) =>
     fs.mkdirSync(reportDir, { recursive: true });
     const reportPath = path.join(reportDir, 'report.json');
     fs.writeFileSync(reportPath, '{"before":true}\n');
+    const localeDir = path.join(rootDir, 'language', 'locales', 'fr-CA');
+    fs.mkdirSync(localeDir, { recursive: true });
+    const localePath = path.join(localeDir, 'extension.json');
+    fs.writeFileSync(localePath, '{"before":"translation"}\n');
     let invocation;
     const spawn = (executable, args, options) => {
         invocation = { executable, args, options };
         fs.writeFileSync(reportPath, '{"partial":true}\n');
+        fs.writeFileSync(localePath, '{"partial":"translation"}\n');
+        fs.writeFileSync(path.join(localeDir, 'parser.json'), '{"added":true}\n');
         return fakeChild((child) => {
             child.stderr.write('failure\n');
             child.stderr.end();
@@ -141,6 +147,8 @@ test('build failure streams output and restores generated outputs', async (t) =>
     assert.ok(progress.some((update) => update.phase === 'build-output' && update.stream === 'stderr'));
     assert.ok(progress.some((update) => update.phase === 'rollback'));
     assert.equal(fs.readFileSync(reportPath, 'utf8'), '{"before":true}\n');
+    assert.equal(fs.readFileSync(localePath, 'utf8'), '{"before":"translation"}\n');
+    assert.equal(fs.existsSync(path.join(localeDir, 'parser.json')), false);
 });
 
 test('running build can be cancelled without blocking the caller', async () => {

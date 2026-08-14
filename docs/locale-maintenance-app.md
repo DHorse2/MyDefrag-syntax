@@ -195,10 +195,13 @@ The editor layers locale data in this order:
 3. Canonical English fallback.
 
 Generated translations are displayed without marking the authored draft dirty.
-Editing and applying one promotes it into the authoritative
-`language/locales/<locale>/<component>.json` file. Authored values always take
-precedence over generated output. Generated entries that explicitly use
-`fallbackLocale: "en"` remain displayed as English fallback.
+Editing and applying one promotes it immediately into the authoritative
+`language/locales/<locale>/<component>.json` draft. Save and Rebuild also
+promote every existing non-fallback translation in the selected generated
+component before regenerating output, so generated output is never its only
+durable copy. Authored values always take precedence over generated output.
+Generated entries that explicitly use `fallbackLocale: "en"` remain displayed
+as English fallback and are not promoted as translations.
 
 1. Select a locale from the registry-backed Locale selector.
 2. Select a component from the canonical Component selector.
@@ -298,18 +301,22 @@ frozen application. **Stop build** terminates the child process and keeps the
 progress window open until rollback finishes. The main window cannot close
 while a build or rollback is active.
 
-The targeted builder action is the only broad-builder companion allowed to
-overwrite an existing runtime component file. The ordinary `language:build`
-command retains its create-only locale-directory protection.
+The targeted builder action merges the selected runtime component
+non-destructively. It preserves existing translated and historical entries,
+overlays authoritative values, refreshes canonical metadata, and adds new
+canonical keys. A translated value can become English fallback only through the
+builder's exact-key `--AllowFallbackReplacement` command-line approval. The
+ordinary `language:build` command retains its additive locale-directory
+protection.
 
 When DeepL is configured, generated default component tables use it only for
 canonical entries that have no authored locale value. Existing aggregate or
 per-component values always win. A usable API result is written only to the
-generated table with `machine-generated` status; it is not written to permanent
-translator source. Missing configuration, HTTP failure, empty output, or a
-placeholder mismatch emits a warning, uses canonical English fallback, and
-does not fail the build. Independent canonical validation and write failures
-remain build failures.
+generated table with `machine-generated` status and is also transactionally
+merged into permanent translator source. Missing configuration, HTTP failure,
+empty output, or a placeholder mismatch emits a warning, uses canonical English
+fallback, and does not fail the build. Independent canonical validation and
+write failures remain build failures.
 
 If writing or building fails, authoritative sources and generated outputs are
 restored. The app reports failure rather than claiming a partial save. A backup
@@ -351,9 +358,9 @@ translation unless the main process confirms that it translated the exact
 
 ### Save Fails During the Build
 
-The app restores both source and generated output. Review captured standard
-output and error text, correct the reported validation or environment problem,
-and retry.
+The app restores durable locale sources as well as generated output. Review
+captured standard output and error text, correct the reported validation or
+environment problem, and retry.
 
 ### Save or Rebuild Takes Longer Than Expected
 

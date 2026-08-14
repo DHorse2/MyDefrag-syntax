@@ -1,0 +1,526 @@
+{
+  "locale": "es",
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "text": "Salida del comando «construir»",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.component.label": {
+      "text": "Componente",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.locale.label": {
+      "text": "Configuración regional",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "text": "Tareas de mantenimiento",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "text": "Operación en curso",
+      "status": "machine-generated"
+    },
+    "locales.action.applyInMemory.label": {
+      "text": "Aplicar en memoria",
+      "status": "machine-generated"
+    },
+    "locales.action.close.label": {
+      "text": "Cerrar",
+      "status": "machine-generated"
+    },
+    "locales.action.exit.label": {
+      "text": "Salir",
+      "status": "machine-generated"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "text": "Generar traducción de la API",
+      "status": "machine-generated"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "text": "Reconstruir el componente seleccionado",
+      "status": "machine-generated"
+    },
+    "locales.action.reload.label": {
+      "text": "Actualizar",
+      "status": "machine-generated"
+    },
+    "locales.action.revert.label": {
+      "text": "Deshacer",
+      "status": "machine-generated"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "text": "Guardar y volver a crear",
+      "status": "machine-generated"
+    },
+    "locales.action.stopBuild.label": {
+      "text": "Detener la compilación",
+      "status": "machine-generated"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "text": "Utilizar el inglés como opción alternativa",
+      "status": "machine-generated"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "text": "Utiliza inglés normalizado",
+      "status": "machine-generated"
+    },
+    "locales.action.validate.label": {
+      "text": "Validar",
+      "status": "machine-generated"
+    },
+    "locales.dialog.cancel.text": {
+      "text": "Cancelar",
+      "status": "machine-generated"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "text": "Confirmar los cambios en el código fuente de la configuración regional",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "text": "Deshacer y volver a cargar",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "text": "¿Desea descartar las traducciones no guardadas?",
+      "status": "machine-generated"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "text": "Salir sin guardar",
+      "status": "machine-generated"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "text": "Se está ejecutando la compilación del componente de configuración regional",
+      "status": "machine-generated"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "text": "Mantenimiento de la configuración regional de mi desfragmentador",
+      "status": "machine-generated"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "text": "No se modificará ningún archivo.",
+      "status": "machine-generated"
+    },
+    "locales.dialog.returnToBuild.text": {
+      "text": "Volver a la compilación",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "text": "Se ha guardado correctamente y la compilación de componentes se ha realizado con éxito",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "text": "Guardar y reconstruir el componente",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "text": "La grabación ha sido bloqueada por la validación",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "El guardado ha fallado y se ha revertido",
+      "status": "machine-generated"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "Selecciona el repositorio de sintaxis «My Defragmenter»",
+      "status": "machine-generated"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "text": "Cambios en la configuración regional no guardados",
+      "status": "machine-generated"
+    },
+    "locales.heading.catalog.text": {
+      "text": "Catálogo",
+      "status": "machine-generated"
+    },
+    "locales.heading.localeOperation.text": {
+      "text": "Funcionamiento según la configuración regional",
+      "status": "machine-generated"
+    },
+    "locales.heading.operationResult.text": {
+      "text": "Resultado de la operación",
+      "status": "machine-generated"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "text": "Selecciona una configuración regional y un componente",
+      "status": "machine-generated"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "text": "Generar una traducción a partir del valor de la configuración regional actual",
+      "status": "machine-generated"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "text": "Clave, fuente, traducción, estado",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "text": "Traducción de la API rechazada",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "text": "Traducción de la API no disponible",
+      "status": "machine-generated"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "text": "No se ha podido iniciar la aplicación",
+      "status": "machine-generated"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "text": "No se ha seleccionado un repositorio de configuración regional válido para «My Defragmenter».",
+      "status": "machine-generated"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "text": "El inglés canónico no es un destino de traducción de la API.",
+      "status": "machine-generated"
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "text": "La clave de catálogo corresponde al componente «{canonicalComponent}».",
+      "status": "machine-generated"
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "text": "Elige el repositorio que contiene las configuraciones regionales de / y crea /.",
+      "status": "machine-generated"
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "text": "Error al reconstruir el componente",
+      "status": "machine-generated"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "text": "Descarta o guarda los cambios antes de cambiar la configuración regional o el componente.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "text": "Aquí solo se lee el texto canónico en inglés.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "text": "El texto en inglés es el canónico y debe mantenerse en «Mantenimiento del idioma de My Defragmenter».",
+      "status": "machine-generated"
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "text": "Introduce o rellena el valor de la configuración regional actual antes de generar una traducción mediante la API.",
+      "status": "machine-generated"
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "text": "¿Quieres salir y descartar las traducciones de los componentes seleccionados?",
+      "status": "machine-generated"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "text": "Genera una traducción de la API antes de sustituir el valor.",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "text": "Se ha producido una discrepancia en la identidad del catálogo de configuraciones regionales generado en {relativePath}:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "text": "El catálogo de configuraciones regionales generado no es válido:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "text": "Las traducciones generadas deben aplicarse antes de poder eliminarlas de los datos de autoría.",
+      "status": "machine-generated"
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "No se han cargado los datos de mantenimiento de la configuración regional.",
+      "status": "machine-generated"
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "text": "No es un repositorio de configuración regional de My Defragmenter. Falta: {missing}",
+      "status": "machine-generated"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "La ruta se sale de la raíz del repositorio: {relativePath}",
+      "status": "machine-generated"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "text": "Los marcadores de posición deben ser exactamente: {expected}.",
+      "status": "machine-generated"
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "text": "Al volver a cargar la página, se descartarán los cambios realizados en el componente de configuración regional seleccionado.",
+      "status": "machine-generated"
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "text": "Guarda o revierte los cambios antes de volver a compilar.",
+      "status": "machine-generated"
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "text": "Componente seleccionado reconstruido",
+      "status": "machine-generated"
+    },
+    "locales.message.selectionFailed.text": {
+      "text": "La selección ha fallado",
+      "status": "machine-generated"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "text": "El esquema del componente de configuración regional no está disponible.",
+      "status": "machine-generated"
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "text": "El proceso principal ha traducido un valor de configuración regional actual diferente. Reinicia el mantenimiento de la configuración regional e inténtalo de nuevo.",
+      "status": "machine-generated"
+    },
+    "locales.message.translationRejected.text": {
+      "text": "Traducción rechazada",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "text": "Clave de catálogo desconocida: {key}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "text": "Componente desconocido: {componentId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "text": "Componente desconocido: {documentComponent}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "text": "Clave desconocida para el componente seleccionado: {payloadKey}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "text": "Localización desconocida: {localeId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "text": "Localización desconocida: {documentLocale}",
+      "status": "machine-generated"
+    },
+    "locales.message.validationResult.text": {
+      "text": "Resultado de la validación",
+      "status": "machine-generated"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "Espera a que termine la compilación antes de salir.",
+      "status": "machine-generated"
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "text": "¿Escribir en uno o varios archivos de autorid{normalizedCount}?",
+      "status": "machine-generated"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "Captura de los archivos generados para la reversión",
+      "status": "machine-generated"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "text": "Comprobación de los cambios en los archivos generados",
+      "status": "machine-generated"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "text": "Confirmar los cambios en el código fuente de la configuración regional",
+      "status": "machine-generated"
+    },
+    "locales.progress.preparingSave.status": {
+      "text": "Preparando el guardado",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "Restauración de archivos de referencia y generados",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "text": "Recuperación de archivos tras un error",
+      "status": "machine-generated"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "text": "Guardar el componente de configuración regional",
+      "status": "machine-generated"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "text": "Inicio de la copia de seguridad y la reconstrucción de componentes",
+      "status": "machine-generated"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "text": "Detener la compilación de un componente",
+      "status": "machine-generated"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "Utiliza la opción «Detener compilación» en la ventana de progreso y, a continuación, espera a que finalice la reversión antes de cerrar la aplicación.",
+      "status": "machine-generated"
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "text": "A la espera de la confirmación del guardado",
+      "status": "machine-generated"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "text": "Cómo crear archivos de configuración regional válidos",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "insignia {stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "insignia {stateValidationOk}",
+      "status": "machine-generated"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "text": "Inglés canónico",
+      "status": "machine-generated"
+    },
+    "locales.ui.catalogKey.text": {
+      "text": "Clave de catálogo",
+      "status": "machine-generated"
+    },
+    "locales.ui.componentStrings.text": {
+      "text": "Cadenas de componentes",
+      "status": "machine-generated"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "text": "Valor actual de la configuración regional",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "text": "Deep L no está configurado. Configura la API de Deep L antes de iniciar la aplicación.",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "text": "Deep L ha sustituido el valor actual de la configuración regional. Aplícalo en memoria para conservarlo.",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "text": "¿Descartar los cambios en la traducción de memoria?",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "text": "¿Desea descartar las traducciones no guardadas y cambiar la selección?",
+      "status": "machine-generated"
+    },
+    "locales.ui.englishFallback.text": {
+      "text": "Versión alternativa en inglés",
+      "status": "machine-generated"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "text": "Genera una traducción a partir del valor actual de la configuración regional. El resultado sustituye únicamente ese campo.",
+      "status": "machine-generated"
+    },
+    "locales.ui.generatedValue.text": {
+      "text": "Generado: {stateGeneratedFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.key.text": {
+      "text": "Clave",
+      "status": "machine-generated"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "text": "Último resultado de Deep L",
+      "status": "machine-generated"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "text": "Inglés normalizado",
+      "status": "machine-generated"
+    },
+    "locales.ui.notValidated.text": {
+      "text": "No validado",
+      "status": "machine-generated"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "text": "No hay cambios sin guardar",
+      "status": "machine-generated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "text": "Preparación de la reconstrucción de componentes",
+      "status": "machine-generated"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "text": "Reconstrucción del componente de configuración regional",
+      "status": "machine-generated"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "text": "Solicito una traducción con Deep L.",
+      "status": "machine-generated"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "text": "Campos obligatorios",
+      "status": "machine-generated"
+    },
+    "locales.ui.reviewStatus.text": {
+      "text": "Estado de la revisión",
+      "status": "machine-generated"
+    },
+    "locales.ui.search.text": {
+      "text": "Buscar",
+      "status": "machine-generated"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "text": "Selecciona una entrada del catálogo",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceText.text": {
+      "text": "Texto original",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceValue.text": {
+      "text": "Fuente: {stateAuthoritativeFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.status.text": {
+      "text": "Estado",
+      "status": "machine-generated"
+    },
+    "locales.ui.structuredEditor.text": {
+      "text": "Editor estructurado",
+      "status": "machine-generated"
+    },
+    "locales.ui.translation.text": {
+      "text": "Traducción",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationScope.text": {
+      "text": "Alcance de la traducción",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "text": "Traducción no disponible.",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "text": "Herramienta de traducción para ordenador",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorNotes.text": {
+      "text": "Notas del traductor",
+      "status": "machine-generated"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "text": "Cambios sin guardar",
+      "status": "machine-generated"
+    },
+    "locales.ui.valid.text": {
+      "text": "Válido",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "text": "{stateCompletenessFallback} Versión alternativa en inglés",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "text": "{rowApiTranslationProvider} Resultado listo. Aplicar en memoria para conservar el valor actual de la configuración regional.",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTotal.text": {
+      "text": "{stateCompletenessTotal} total",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTranslated.text": {
+      "text": "{stateCompletenessTranslated} traducido",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "text": "{stateValidationErrorsCount} error(es) de validación",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
+      "text": "Ajustar el valor actual de la configuración regional y sugerencia sobre la API",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
+      "text": "Ajustar el tamaño del catálogo de configuraciones regionales y del editor de traducciones",
+      "status": "machine-generated"
+    }
+  }
+}

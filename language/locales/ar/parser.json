@@ -1,0 +1,14 @@
+{
+  "locale": "ar",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "كنت أتوقع {expected} لكنني وجدت {actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "رمز غير متوقع «{token}»",
+      "status": "machine-generated"
+    }
+  }
+}

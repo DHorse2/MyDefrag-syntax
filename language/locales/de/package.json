@@ -1,0 +1,138 @@
+{
+  "locale": "de",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "Programmiersprachen",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "Syntaxhervorhebung für die Skriptsprache „My Defragmenter“",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "Syntaxhervorhebung für die Skriptsprache „My Defragmenter“",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "Verzeichnis für die Benutzerdaten von „My Defragmenter“.",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "Mein Defragmentierer",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "Verzeichnis für die Protokolldateien von „My Defragmenter“.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "Debug-Protokollierung für die Erweiterung „My Defragmenter“ aktivieren.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "Die Ausführlichkeitsstufe meiner Defragmenter-Erweiterung. Für die Debug-Protokollierung muss „mydfrg debug On“ aktiviert sein.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "Diagnose-Schweregrad für Verweise, die nur durch Durchsuchen der übergeordneten Ordner gefunden wurden.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "Diagnose-Schweregrad für Referenzen, die Makros für die Ausführungszeit enthalten.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "Diagnose-Schweregrad für Referenzen, deren Zieldateien gefunden wurden.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "Diagnose-Schweregrad für Verweise, deren Zieldateien nicht gefunden wurden.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "Diagnose-Schweregrad für abgeleitete Fragment-Elternmeldungen.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "Glob-Muster, die bei der Überprüfung durch „Meine Defragmentierung“ ausgeschlossen werden sollen",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "Mein Defragmentierungsskript",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "Datei an dieser Stelle öffnen",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "Mein Defragmentierer: Nächste Diagnose",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "Mein Defragmentierer: Vorherige Diagnose",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "Mein Defragmentierer: Nächste Datei",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "Mein Defragmentierer: Markierung „Diagnose“ behoben",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "Mein Defragmentierer: Diagnose ignorieren",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "Mein Defragmentierer: Diagnose überspringen",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "Mein Defragmentierer: Diagnose an den Agenten senden",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "Mein Defragmentierer: Erste Diagnose",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "Mein Defragmentierer: Diagnose-Navigation zurücksetzen",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "Mein Defragmentierer: Diagnose aktualisieren",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "Mein Defragmentierer: Filterdiagnose",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "Mein Defragmentierer: Diagnosefilter löschen",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "Mein Defragmentierer: Diagnose als Baumstruktur anzeigen",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "Mein Defragmentierer: Diagnose als Tabelle anzeigen",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "Mein Defragmentierer: Diagnostik-Explorer schließen",
+      "status": "machine-generated"
+    }
+  }
+}

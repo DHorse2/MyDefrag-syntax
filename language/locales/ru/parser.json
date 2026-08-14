@@ -1,0 +1,14 @@
+{
+  "locale": "ru",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "Ожидалось {expected}, но найдено {actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Неожиданный токен «{token}»",
+      "status": "machine-generated"
+    }
+  }
+}

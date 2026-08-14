@@ -1,0 +1,518 @@
+{
+  "locale": "ha",
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "text": "Fitar da umarnin gini",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.component.label": {
+      "text": "Sashi",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.locale.label": {
+      "text": "Wuri",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "text": "Ayyukan kula",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "text": "Ana gudanar da aiki",
+      "status": "machine-generated"
+    },
+    "locales.action.applyInMemory.label": {
+      "text": "Aiwatar a cikin ƙwaƙwalwa",
+      "status": "machine-generated"
+    },
+    "locales.action.close.label": {
+      "text": "Rufe",
+      "status": "machine-generated"
+    },
+    "locales.action.exit.label": {
+      "text": "Fita",
+      "status": "machine-generated"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "text": "Samarda fassara ta API",
+      "status": "machine-generated"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "text": "Gina sabuwar sigar ɓangaren da aka zaɓa",
+      "status": "machine-generated"
+    },
+    "locales.action.reload.label": {
+      "text": "Sake loda",
+      "status": "machine-generated"
+    },
+    "locales.action.revert.label": {
+      "text": "Dawo",
+      "status": "machine-generated"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "text": "Ajiye kuma sake gina",
+      "status": "machine-generated"
+    },
+    "locales.action.stopBuild.label": {
+      "text": "Dakatar da gini",
+      "status": "machine-generated"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "text": "Yi amfani da Turanci a matsayin madadin",
+      "status": "machine-generated"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "text": "Yi amfani da Turanci mai daidaitacce",
+      "status": "machine-generated"
+    },
+    "locales.action.validate.label": {
+      "text": "Tabbatar",
+      "status": "machine-generated"
+    },
+    "locales.dialog.cancel.text": {
+      "text": "Soke",
+      "status": "machine-generated"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "text": "Tabbatar da canje-canjen tushen yankin",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "text": "Ku zubar da shi sannan ku sake loda",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "text": "A yi watsi da fassarorin da ba a adana ba?",
+      "status": "machine-generated"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "text": "Fita ba tare da adanawa ba",
+      "status": "machine-generated"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "text": "Ana gudanar da ginin sashin Locale",
+      "status": "machine-generated"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "text": "Kula da Defragmenter na Yankin",
+      "status": "machine-generated"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "text": "Ba za a canza kowane fayil ba.",
+      "status": "machine-generated"
+    },
+    "locales.dialog.returnToBuild.text": {
+      "text": "Komawa ga gini",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "text": "Ajiye kuma ginin sashi ya yi nasara",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "text": "Ajiye kuma sake gina sashi",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "text": "An hana ajiye saboda tantancewa",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "Ajiya ta gaza kuma an mayar da ita baya",
+      "status": "machine-generated"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "Zaɓi ma'ajiyar nahawun My Defragmenter",
+      "status": "machine-generated"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "text": "Canje-canjen yankin da ba a adana ba",
+      "status": "machine-generated"
+    },
+    "locales.heading.catalog.text": {
+      "text": "Jerin kaya",
+      "status": "machine-generated"
+    },
+    "locales.heading.localeOperation.text": {
+      "text": "Aiki na gida",
+      "status": "machine-generated"
+    },
+    "locales.heading.operationResult.text": {
+      "text": "Sakamakon aiki",
+      "status": "machine-generated"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "text": "Zaɓi wuri da sashi",
+      "status": "machine-generated"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "text": "Samarda fassara daga ƙimar yankin halin yanzu",
+      "status": "machine-generated"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "text": "Mabuɗi, tushe, fassara, matsayi",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "text": "An ƙi fassara API",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "text": "Ba a samu fassara ta API ba",
+      "status": "machine-generated"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "text": "Aikace-aikacen ya kasa farawa",
+      "status": "machine-generated"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "text": "Ba a zaɓi ingantaccen ma'ajiyar yankin My Defragmenter ba.",
+      "status": "machine-generated"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "text": "Canonical English ba manufa ce ta fassara API ba.",
+      "status": "machine-generated"
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "text": "Mabudin katalog yana cikin sashi {canonicalComponent}.",
+      "status": "machine-generated"
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "text": "Zaɓi ma'ajiyar da ke da wuraren yare na /, sannan gina yaren /.",
+      "status": "machine-generated"
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "text": "An gaza sake gina sashi",
+      "status": "machine-generated"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "text": "Ƙi yi watsi da canje-canje ko ajiye su kafin canza yankin harshe ko sashi.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "text": "Anan ne kawai ake karanta rubutun ƙa'ida na Turanci.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "text": "Rubutun Turanci shi ne na asali kuma dole ne a kula da shi a cikin My Defragmenter Language Maintenance.",
+      "status": "machine-generated"
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "text": "Shigar ko cika ƙimar yankin halin yanzu kafin ƙirƙirar fassarar API.",
+      "status": "machine-generated"
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "text": "Fita kuma a zubar da fassarar sassan da aka zaɓa?",
+      "status": "machine-generated"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "text": "Samarda fassarar API kafin maye gurbin ƙimar.",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "text": "An samu rashin daidaito tsakanin katalog ɗin yanki da ainihi a cikin {relativePath}:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "text": "An samar da kundin yankin da ba daidai ba:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "text": "Fassarorin da aka samar dole ne a yi amfani da su kafin a iya cire su daga bayanan da aka rubuta.",
+      "status": "machine-generated"
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "Ba a loda bayanan kula na yankin ba.",
+      "status": "machine-generated"
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "text": "Ba ma'ajiyar yankin My Defragmenter ba. Ana rasa: {missing}",
+      "status": "machine-generated"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "Hanyar tana tserewa daga tushen ajiya: {relativePath}",
+      "status": "machine-generated"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "text": "Masu maye gurbi dole ne su kasance daidai: {expected}.",
+      "status": "machine-generated"
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "text": "Sake loda zai yi watsi da canje-canje ga ɓangaren yankin da aka zaɓa.",
+      "status": "machine-generated"
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "text": "Ajiye ko dawo da canje-canje kafin sake ginawa.",
+      "status": "machine-generated"
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "text": "An sake gina bangare da aka zaɓa",
+      "status": "machine-generated"
+    },
+    "locales.message.selectionFailed.text": {
+      "text": "Zaɓi ya gaza",
+      "status": "machine-generated"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "text": "Tsarin sashi na wuri ba shi da samuwa.",
+      "status": "machine-generated"
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "text": "Babban tsarin ya fassara wani daban ƙimar yankin halin yanzu. Sake kunna kula da yankin kuma sake gwadawa.",
+      "status": "machine-generated"
+    },
+    "locales.message.translationRejected.text": {
+      "text": "An ƙi fassara",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "text": "Mabudin katalogi da ba a sani ba: {key}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "text": "Sashi da ba a sani ba: {componentId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "text": "Sashi da ba a sani ba: {documentComponent}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "text": "Mabuɗin da ba a sani ba don sashi da aka zaɓa: {payloadKey}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "text": "Matsayi da ba a sani ba: {localeId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "text": "Matsayi da ba a sani ba: {documentLocale}",
+      "status": "machine-generated"
+    },
+    "locales.message.validationResult.text": {
+      "text": "Sakamakon tabbatarwa",
+      "status": "machine-generated"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "Jira ginin ya ƙare kafin ka fita.",
+      "status": "machine-generated"
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "text": "Rubuta fayiloli masu iko na {normalizedCount}?",
+      "status": "machine-generated"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "Kama fayilolin da aka samar don janyewa",
+      "status": "machine-generated"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "text": "Duba canje-canjen fayil ɗin da aka samar",
+      "status": "machine-generated"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "text": "Yin canje-canje ga tushen yankin",
+      "status": "machine-generated"
+    },
+    "locales.progress.preparingSave.status": {
+      "text": "Shirya ajiye",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "Dawo da fayilolin iko da na samarwa",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "text": "Maido da fayiloli bayan kuskure",
+      "status": "machine-generated"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "text": "Ajiye sashin yankin",
+      "status": "machine-generated"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "text": "Fara ajiye da sake gina sashi",
+      "status": "machine-generated"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "text": "Tsayar da ginin sashi",
+      "status": "machine-generated"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "Yi amfani da Stop Build a cikin taga ci gaba, sannan ka jira dawowa baya ta kammala kafin ka rufe manhajar.",
+      "status": "machine-generated"
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "text": "Ana jiran tabbacin ajiyar",
+      "status": "machine-generated"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "text": "Rubuta fayilolin wuri masu iko",
+      "status": "machine-generated"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "text": "Turanci na hukuma",
+      "status": "machine-generated"
+    },
+    "locales.ui.catalogKey.text": {
+      "text": "Maɓallin katalogi",
+      "status": "machine-generated"
+    },
+    "locales.ui.componentStrings.text": {
+      "text": "Zaren sassa",
+      "status": "machine-generated"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "text": "Kimar wurin yanzu",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "text": "Deep L ba a saita ba. Saita Deepl Api kafin kaddamar da manhaja.",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "text": "Deep L ya maye gurbin ƙimar yankin na yanzu. Aiwatar a cikin ƙwaƙwalwa don adana shi.",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "text": "A yi watsi da canje-canjen fassarar ƙwaƙwalwa?",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "text": "A yi watsi da fassarorin da ba a adana ba kuma a canza zaɓi?",
+      "status": "machine-generated"
+    },
+    "locales.ui.englishFallback.text": {
+      "text": "Turanci na madadin",
+      "status": "machine-generated"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "text": "Samarda fassara daga ƙimar yankin halin yanzu. Sakamakon zai maye gurbin wannan filin kawai.",
+      "status": "machine-generated"
+    },
+    "locales.ui.generatedValue.text": {
+      "text": "An samar: {stateGeneratedFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.key.text": {
+      "text": "Mabuɗi",
+      "status": "machine-generated"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "text": "Sakamakon Deep L na baya-bayan nan",
+      "status": "machine-generated"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "text": "Turanci da aka daidaita",
+      "status": "machine-generated"
+    },
+    "locales.ui.notValidated.text": {
+      "text": "Ba a tabbatar ba",
+      "status": "machine-generated"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "text": "Babu canje-canje da ba a adana ba",
+      "status": "machine-generated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "text": "Ana shirin sake gina sashi",
+      "status": "machine-generated"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "text": "Gina sabuwar sashin gida",
+      "status": "machine-generated"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "text": "Ana neman fassara ta Deep L.",
+      "status": "machine-generated"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "text": "Masu cike gurbi da ake buƙata",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
+      "text": "Daidaita girman ƙimar yankin na yanzu da shawarar API",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
+      "text": "Saiti girman kundin yankin da edita na fassara",
+      "status": "machine-generated"
+    },
+    "locales.ui.reviewStatus.text": {
+      "text": "Matsayin bita",
+      "status": "machine-generated"
+    },
+    "locales.ui.search.text": {
+      "text": "Nemo",
+      "status": "machine-generated"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "text": "Zaɓi shigarwa a cikin katalog",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceText.text": {
+      "text": "Rubutun tushe",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceValue.text": {
+      "text": "Tushen: {stateAuthoritativeFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.status.text": {
+      "text": "Matsayi",
+      "status": "machine-generated"
+    },
+    "locales.ui.structuredEditor.text": {
+      "text": "Editoci mai tsari",
+      "status": "machine-generated"
+    },
+    "locales.ui.translation.text": {
+      "text": "Fassarar",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationScope.text": {
+      "text": "Fadin fassara",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "text": "Ba a samu fassara ba.",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "text": "Kayan aikin tebur na mai fassara",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorNotes.text": {
+      "text": "Bayanan mai fassara",
+      "status": "machine-generated"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "text": "Sanan canje-canje",
+      "status": "machine-generated"
+    },
+    "locales.ui.valid.text": {
+      "text": "Ingantacce",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "text": "{stateCompletenessFallback} Turanci na madadin",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "text": "{rowApiTranslationProvider} Sakamako ya shirya. Aiwatar a cikin ƙwaƙwalwa don adana ƙimar yankin na yanzu.",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTotal.text": {
+      "text": "{stateCompletenessTotal} Jimlar",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTranslated.text": {
+      "text": "{stateCompletenessTranslated} An fassara",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "text": "{stateValidationErrorsCount} Kuskuren tabbaci",
+      "status": "machine-generated"
+    }
+  }
+}

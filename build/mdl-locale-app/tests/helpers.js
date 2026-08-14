@@ -32,12 +32,15 @@ class StubBuildIntegration {
     constructor(result = { ok: true, status: 0, signal: null, stdout: 'component build passed\n', stderr: '' }) {
         this.result = result;
         this.restoreCount = 0;
+        this.durableRestoreCount = 0;
         this.runArguments = [];
     }
     snapshot() { return new Map(); }
+    snapshotDurableLocaleSources() { return new Map(); }
     run(args) { this.runArguments.push(args); return this.result; }
     diff() { return []; }
     restore() { this.restoreCount += 1; }
+    restoreDurableLocaleSources() { this.durableRestoreCount += 1; }
     rebuildWithRollback(args) {
         this.runArguments.push(args);
         return { ...this.result, changedFiles: [], rolledBack: !this.result.ok };

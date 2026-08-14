@@ -1,0 +1,14 @@
+{
+  "locale": "sw",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "Ilitarajiwa {expected} lakini ilipatikana {actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Tokeni isiyotarajiwa '{token}'",
+      "status": "machine-generated"
+    }
+  }
+}

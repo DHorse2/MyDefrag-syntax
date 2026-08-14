@@ -12,7 +12,7 @@
         {
           "fullLine": "    \"name\": \"mydefrag-syntax\",",
           "line": 2,
-          "status": "potential",
+          "status": "rejected",
           "text": "mydefrag-syntax"
         },
         {
@@ -60,7 +60,7 @@
         {
           "fullLine": "        \"url\": \"https://github.com/DHorse2/MyDefrag-syntax\"",
           "line": 9,
-          "status": "review",
+          "status": "rejected",
           "text": "url"
         },
         {
@@ -2574,25 +2574,25 @@
         {
           "fullLine": "        \"language:diagnostics:install\": \"powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1\",",
           "line": 459,
-          "status": "potential",
+          "status": "rejected",
           "text": "language:diagnostics:install"
         },
         {
           "fullLine": "        \"language:diagnostics:install\": \"powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1\",",
           "line": 459,
-          "status": "potential",
+          "status": "rejected",
           "text": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1"
         },
         {
           "fullLine": "        \"language:diagnostics:uninstall\": \"powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1 -Uninstall\",",
           "line": 460,
-          "status": "potential",
+          "status": "rejected",
           "text": "language:diagnostics:uninstall"
         },
         {
           "fullLine": "        \"language:diagnostics:uninstall\": \"powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1 -Uninstall\",",
           "line": 460,
-          "status": "potential",
+          "status": "rejected",
           "text": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1 -Uninstall"
         },
         {
@@ -11828,7 +11828,7 @@
       "status": "scanned"
     },
     {
-      "candidateCount": 47,
+      "candidateCount": 92,
       "candidates": [
         {
           "fullLine": "'use strict';",
@@ -11849,266 +11849,536 @@
           "text": "language-maintenance:startup-status:get"
         },
         {
+          "fullLine": "startupDiagnostics.trace('createStartupDiagnostics', 'return');",
+          "line": 25,
+          "status": "potential",
+          "text": "createStartupDiagnostics"
+        },
+        {
+          "fullLine": "startupDiagnostics.trace('createStartupDiagnostics', 'return');",
+          "line": 25,
+          "status": "potential",
+          "text": "return"
+        },
+        {
           "fullLine": "    phase: 'process-start',",
-          "line": 31,
+          "line": 32,
           "status": "potential",
           "text": "process-start"
         },
         {
           "fullLine": "    message: 'Starting Electron...',",
-          "line": 32,
+          "line": 33,
           "status": "potential",
           "text": "Starting Electron..."
         },
         {
           "fullLine": "app.commandLine.appendSwitch('disable-background-networking');",
-          "line": 38,
+          "line": 39,
           "status": "potential",
           "text": "disable-background-networking"
         },
         {
           "fullLine": "app.commandLine.appendSwitch('disable-component-update');",
-          "line": 39,
+          "line": 40,
           "status": "potential",
           "text": "disable-component-update"
         },
         {
           "fullLine": "app.commandLine.appendSwitch('disable-domain-reliability');",
-          "line": 40,
+          "line": 41,
           "status": "potential",
           "text": "disable-domain-reliability"
         },
         {
+          "fullLine": "startupDiagnostics.trace('attachAppDiagnostics', 'return');",
+          "line": 43,
+          "status": "potential",
+          "text": "attachAppDiagnostics"
+        },
+        {
+          "fullLine": "startupDiagnostics.trace('attachAppDiagnostics', 'return');",
+          "line": 43,
+          "status": "potential",
+          "text": "return"
+        },
+        {
           "fullLine": "startupDiagnostics.record('process-start', {",
-          "line": 42,
+          "line": 44,
           "status": "potential",
           "text": "process-start"
         },
         {
+          "fullLine": "    startupDiagnostics.trace(`updateStartupStatus(${phase})`);",
+          "line": 54,
+          "status": "potential",
+          "text": "updateStartupStatus(${phase})"
+        },
+        {
           "fullLine": "    startupDiagnostics.record('startup-phase', { ...startupStatus, ...details });",
-          "line": 58,
+          "line": 61,
           "status": "potential",
           "text": "startup-phase"
         },
         {
+          "fullLine": "    startupDiagnostics.trace('closeSplashWindow', 'enter');",
+          "line": 68,
+          "status": "potential",
+          "text": "closeSplashWindow"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('closeSplashWindow', 'enter');",
+          "line": 68,
+          "status": "potential",
+          "text": "enter"
+        },
+        {
+          "fullLine": "        startupDiagnostics.trace('splashWindow.close');",
+          "line": 70,
+          "status": "potential",
+          "text": "splashWindow.close"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace(`revealMainWindow(${reason})`, 'enter');",
+          "line": 76,
+          "status": "potential",
+          "text": "revealMainWindow(${reason})"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace(`revealMainWindow(${reason})`, 'enter');",
+          "line": 76,
+          "status": "potential",
+          "text": "enter"
+        },
+        {
+          "fullLine": "        startupDiagnostics.trace('mainWindow.show');",
+          "line": 79,
+          "status": "potential",
+          "text": "mainWindow.show"
+        },
+        {
           "fullLine": "    startupDiagnostics.record('main-window-shown', { reason });",
-          "line": 75,
+          "line": 82,
           "status": "potential",
           "text": "main-window-shown"
         },
         {
+          "fullLine": "    startupDiagnostics.trace('selectProjectRoot', 'enter');",
+          "line": 87,
+          "status": "potential",
+          "text": "selectProjectRoot"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('selectProjectRoot', 'enter');",
+          "line": 87,
+          "status": "potential",
+          "text": "enter"
+        },
+        {
+          "fullLine": "        startupDiagnostics.trace('selectProjectRoot', 'return');",
+          "line": 95,
+          "status": "potential",
+          "text": "selectProjectRoot"
+        },
+        {
+          "fullLine": "        startupDiagnostics.trace('selectProjectRoot', 'return');",
+          "line": 95,
+          "status": "potential",
+          "text": "return"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('dialog.showOpenDialog');",
+          "line": 99,
+          "status": "potential",
+          "text": "dialog.showOpenDialog"
+        },
+        {
           "fullLine": "        properties: ['openDirectory']",
-          "line": 93,
+          "line": 103,
           "status": "potential",
           "text": "openDirectory"
         },
         {
+          "fullLine": "    startupDiagnostics.trace('selectProjectRoot', 'return');",
+          "line": 109,
+          "status": "potential",
+          "text": "selectProjectRoot"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('selectProjectRoot', 'return');",
+          "line": 109,
+          "status": "potential",
+          "text": "return"
+        },
+        {
           "fullLine": "            type: 'warning',",
-          "line": 105,
+          "line": 116,
           "status": "potential",
           "text": "warning"
         },
         {
           "fullLine": "        type: 'warning',",
-          "line": 121,
+          "line": 132,
           "status": "potential",
           "text": "warning"
         },
         {
+          "fullLine": "    startupDiagnostics.trace('createMainWindow', 'enter');",
+          "line": 146,
+          "status": "potential",
+          "text": "createMainWindow"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('createMainWindow', 'enter');",
+          "line": 146,
+          "status": "potential",
+          "text": "enter"
+        },
+        {
           "fullLine": "    updateStartupStatus('splash-create', 'Opening the startup window...');",
-          "line": 135,
+          "line": 147,
           "status": "potential",
           "text": "splash-create"
         },
         {
           "fullLine": "    updateStartupStatus('splash-create', 'Opening the startup window...');",
-          "line": 135,
+          "line": 147,
           "status": "potential",
           "text": "Opening the startup window..."
         },
         {
+          "fullLine": "    startupDiagnostics.trace('BrowserWindow(splash)', 'construct');",
+          "line": 148,
+          "status": "potential",
+          "text": "BrowserWindow(splash)"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('BrowserWindow(splash)', 'construct');",
+          "line": 148,
+          "status": "potential",
+          "text": "construct"
+        },
+        {
           "fullLine": "    attachWebContentsDiagnostics(splashWindow.webContents, 'splash', startupDiagnostics);",
-          "line": 137,
+          "line": 150,
           "status": "potential",
           "text": "splash"
         },
         {
+          "fullLine": "    startupDiagnostics.trace('splashWindow.show');",
+          "line": 151,
+          "status": "potential",
+          "text": "splashWindow.show"
+        },
+        {
           "fullLine": "    splashWindow.on('closed', () => {",
-          "line": 139,
+          "line": 153,
           "status": "potential",
           "text": "closed"
         },
         {
           "fullLine": "    updateStartupStatus('splash-load', 'Loading the startup interface...');",
-          "line": 142,
+          "line": 156,
           "status": "potential",
           "text": "splash-load"
         },
         {
           "fullLine": "    updateStartupStatus('splash-load', 'Loading the startup interface...');",
-          "line": 142,
+          "line": 156,
           "status": "potential",
           "text": "Loading the startup interface..."
         },
         {
+          "fullLine": "    startupDiagnostics.trace('splashWindow.loadFile');",
+          "line": 157,
+          "status": "potential",
+          "text": "splashWindow.loadFile"
+        },
+        {
           "fullLine": "    await splashWindow.loadFile(path.join(APP_ROOT, 'splash', 'index.html'));",
-          "line": 143,
+          "line": 158,
           "status": "potential",
           "text": "splash"
         },
         {
           "fullLine": "    await splashWindow.loadFile(path.join(APP_ROOT, 'splash', 'index.html'));",
-          "line": 143,
+          "line": 158,
           "status": "potential",
           "text": "index.html"
         },
         {
+          "fullLine": "    startupDiagnostics.trace('splashWindow.loadFile', 'return');",
+          "line": 159,
+          "status": "potential",
+          "text": "splashWindow.loadFile"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('splashWindow.loadFile', 'return');",
+          "line": 159,
+          "status": "potential",
+          "text": "return"
+        },
+        {
           "fullLine": "    updateStartupStatus('project-root', 'Locating the MyDefrag-syntax project...');",
-          "line": 145,
+          "line": 161,
           "status": "potential",
           "text": "project-root"
         },
         {
           "fullLine": "    updateStartupStatus('project-root', 'Locating the MyDefrag-syntax project...');",
-          "line": 145,
+          "line": 161,
           "status": "potential",
           "text": "Locating the MyDefrag-syntax project..."
         },
         {
+          "fullLine": "    startupDiagnostics.trace('selectProjectRoot');",
+          "line": 162,
+          "status": "potential",
+          "text": "selectProjectRoot"
+        },
+        {
           "fullLine": "    updateStartupStatus('language-data', 'Loading project language data...', { projectRoot });",
-          "line": 147,
+          "line": 164,
           "status": "potential",
           "text": "language-data"
         },
         {
+          "fullLine": "    startupDiagnostics.trace('LanguageMaintenanceService', 'construct');",
+          "line": 166,
+          "status": "potential",
+          "text": "LanguageMaintenanceService"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('LanguageMaintenanceService', 'construct');",
+          "line": 166,
+          "status": "potential",
+          "text": "construct"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('service.load');",
+          "line": 168,
+          "status": "potential",
+          "text": "service.load"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('service.load', 'return');",
+          "line": 170,
+          "status": "potential",
+          "text": "service.load"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('service.load', 'return');",
+          "line": 170,
+          "status": "potential",
+          "text": "return"
+        },
+        {
           "fullLine": "        'language-data-loaded',",
-          "line": 152,
+          "line": 172,
           "status": "potential",
           "text": "language-data-loaded"
         },
         {
           "fullLine": "        `Loaded project language data in ${Date.now() - languageLoadStartedAt} ms.`,",
-          "line": 153,
+          "line": 173,
           "status": "potential",
           "text": "Loaded project language data in ${Date.now() - languageLoadStartedAt} ms."
         },
         {
           "fullLine": "    updateStartupStatus('main-window-create', 'Creating the application window...');",
-          "line": 157,
+          "line": 177,
           "status": "potential",
           "text": "main-window-create"
         },
         {
           "fullLine": "    updateStartupStatus('main-window-create', 'Creating the application window...');",
-          "line": 157,
+          "line": 177,
           "status": "potential",
           "text": "Creating the application window..."
         },
         {
+          "fullLine": "    startupDiagnostics.trace('BrowserWindow(main)', 'construct');",
+          "line": 178,
+          "status": "potential",
+          "text": "BrowserWindow(main)"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('BrowserWindow(main)', 'construct');",
+          "line": 178,
+          "status": "potential",
+          "text": "construct"
+        },
+        {
           "fullLine": "    attachWebContentsDiagnostics(mainWindow.webContents, 'main', startupDiagnostics);",
-          "line": 159,
+          "line": 180,
           "status": "potential",
           "text": "main"
         },
         {
           "fullLine": "    mainWindow.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));",
-          "line": 160,
+          "line": 181,
           "status": "potential",
           "text": "deny"
         },
         {
           "fullLine": "    mainWindow.webContents.on('will-navigate', (event, url) => {",
-          "line": 161,
+          "line": 182,
           "status": "potential",
           "text": "will-navigate"
         },
         {
           "fullLine": "    mainWindow.on('close', (event) => {",
-          "line": 166,
+          "line": 187,
           "status": "potential",
           "text": "close"
         },
         {
           "fullLine": "    mainWindow.on('closed', () => {",
-          "line": 171,
+          "line": 192,
           "status": "potential",
           "text": "closed"
         },
         {
           "fullLine": "    mainWindow.once('ready-to-show', () => revealMainWindow('ready-to-show'));",
-          "line": 174,
+          "line": 195,
           "status": "potential",
           "text": "ready-to-show"
         },
         {
           "fullLine": "    mainWindow.once('ready-to-show', () => revealMainWindow('ready-to-show'));",
-          "line": 174,
+          "line": 195,
           "status": "potential",
           "text": "ready-to-show"
         },
         {
+          "fullLine": "    startupDiagnostics.trace('registerIpcHandlers');",
+          "line": 197,
+          "status": "potential",
+          "text": "registerIpcHandlers"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('registerIpcHandlers', 'return');",
+          "line": 206,
+          "status": "potential",
+          "text": "registerIpcHandlers"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('registerIpcHandlers', 'return');",
+          "line": 206,
+          "status": "potential",
+          "text": "return"
+        },
+        {
           "fullLine": "    updateStartupStatus('main-window-load', 'Rendering the application window...');",
-          "line": 185,
+          "line": 208,
           "status": "potential",
           "text": "main-window-load"
         },
         {
           "fullLine": "    updateStartupStatus('main-window-load', 'Rendering the application window...');",
-          "line": 185,
+          "line": 208,
           "status": "potential",
           "text": "Rendering the application window..."
         },
         {
+          "fullLine": "    startupDiagnostics.trace('mainWindow.loadFile');",
+          "line": 209,
+          "status": "potential",
+          "text": "mainWindow.loadFile"
+        },
+        {
           "fullLine": "    await mainWindow.loadFile(path.join(APP_ROOT, 'renderer', 'index.html'));",
-          "line": 186,
+          "line": 210,
           "status": "potential",
           "text": "renderer"
         },
         {
           "fullLine": "    await mainWindow.loadFile(path.join(APP_ROOT, 'renderer', 'index.html'));",
-          "line": 186,
+          "line": 210,
           "status": "potential",
           "text": "index.html"
         },
         {
+          "fullLine": "    startupDiagnostics.trace('mainWindow.loadFile', 'return');",
+          "line": 211,
+          "status": "potential",
+          "text": "mainWindow.loadFile"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('mainWindow.loadFile', 'return');",
+          "line": 211,
+          "status": "potential",
+          "text": "return"
+        },
+        {
           "fullLine": "    updateStartupStatus('main-window-loaded', 'Application window loaded; waiting for first paint.');",
-          "line": 187,
+          "line": 212,
           "status": "potential",
           "text": "main-window-loaded"
         },
         {
           "fullLine": "    updateStartupStatus('main-window-loaded', 'Application window loaded; waiting for first paint.');",
-          "line": 187,
+          "line": 212,
           "status": "potential",
           "text": "Application window loaded; waiting for first paint."
         },
         {
+          "fullLine": "    startupDiagnostics.trace('createMainWindow', 'return');",
+          "line": 213,
+          "status": "potential",
+          "text": "createMainWindow"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('createMainWindow', 'return');",
+          "line": 213,
+          "status": "potential",
+          "text": "return"
+        },
+        {
+          "fullLine": "startupDiagnostics.trace('app.whenReady');",
+          "line": 216,
+          "status": "potential",
+          "text": "app.whenReady"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('createMainWindow', 'throw');",
+          "line": 218,
+          "status": "potential",
+          "text": "createMainWindow"
+        },
+        {
+          "fullLine": "    startupDiagnostics.trace('createMainWindow', 'throw');",
+          "line": 218,
+          "status": "potential",
+          "text": "throw"
+        },
+        {
           "fullLine": "    startupDiagnostics.record('startup-failed', { error: serializedError(error) });",
-          "line": 191,
+          "line": 219,
           "status": "potential",
           "text": "startup-failed"
         },
         {
           "fullLine": "    updateStartupStatus('failed', `Startup failed: ${error.message}`);",
-          "line": 192,
+          "line": 220,
           "status": "potential",
           "text": "failed"
         },
         {
           "fullLine": "    updateStartupStatus('failed', `Startup failed: ${error.message}`);",
-          "line": 192,
+          "line": 220,
           "status": "potential",
           "text": "Startup failed: ${error.message}"
         },
         {
           "fullLine": "app.on('window-all-closed', () => app.quit());",
-          "line": 198,
+          "line": 226,
           "status": "potential",
           "text": "window-all-closed"
         },
         {
           "fullLine": "app.on('activate', () => {",
-          "line": 200,
+          "line": 228,
           "status": "potential",
           "text": "activate"
         }
@@ -12131,7 +12401,7 @@
             }
           ],
           "fullLine": "        title: 'Select the MyDefrag-syntax repository',",
-          "line": 91,
+          "line": 101,
           "status": "in-catalog",
           "text": "Select the MyDefrag-syntax repository"
         },
@@ -12145,7 +12415,7 @@
             }
           ],
           "fullLine": "        message: 'Choose the repository that owns language/canonical and build/language.',",
-          "line": 92,
+          "line": 102,
           "status": "in-catalog",
           "text": "Choose the repository that owns language/canonical and build/language."
         },
@@ -12159,7 +12429,7 @@
             }
           ],
           "fullLine": "        throw new Error('A valid MyDefrag-syntax repository was not selected.');",
-          "line": 97,
+          "line": 107,
           "status": "in-catalog",
           "text": "A valid MyDefrag-syntax repository was not selected."
         },
@@ -12179,7 +12449,7 @@
             }
           ],
           "fullLine": "            buttons: ['Return to build'],",
-          "line": 106,
+          "line": 117,
           "status": "in-catalog",
           "text": "Return to build"
         },
@@ -12193,7 +12463,7 @@
             }
           ],
           "fullLine": "            title: 'Language build is running',",
-          "line": 109,
+          "line": 120,
           "status": "in-catalog",
           "text": "Language build is running"
         },
@@ -12213,7 +12483,7 @@
             }
           ],
           "fullLine": "            message: 'Wait for the build to finish before exiting.',",
-          "line": 110,
+          "line": 121,
           "status": "in-catalog",
           "text": "Wait for the build to finish before exiting."
         },
@@ -12233,7 +12503,7 @@
             }
           ],
           "fullLine": "            detail: 'Use Stop build in the progress window, then wait for rollback to complete before closing the application.'",
-          "line": 111,
+          "line": 122,
           "status": "in-catalog",
           "text": "Use Stop build in the progress window, then wait for rollback to complete before closing the application."
         },
@@ -12253,7 +12523,7 @@
             }
           ],
           "fullLine": "        buttons: ['Exit without saving', 'Cancel'],",
-          "line": 122,
+          "line": 133,
           "status": "in-catalog",
           "text": "Exit without saving"
         },
@@ -12273,7 +12543,7 @@
             }
           ],
           "fullLine": "        buttons: ['Exit without saving', 'Cancel'],",
-          "line": 122,
+          "line": 133,
           "status": "in-catalog",
           "text": "Cancel"
         },
@@ -12287,7 +12557,7 @@
             }
           ],
           "fullLine": "        title: 'Unsaved language changes',",
-          "line": 125,
+          "line": 136,
           "status": "in-catalog",
           "text": "Unsaved language changes"
         },
@@ -12301,7 +12571,7 @@
             }
           ],
           "fullLine": "        message: 'Exit and discard all in-memory changes?'",
-          "line": 126,
+          "line": 137,
           "status": "in-catalog",
           "text": "Exit and discard all in-memory changes?"
         },
@@ -12315,7 +12585,7 @@
             }
           ],
           "fullLine": "    updateStartupStatus('language-data', 'Loading project language data...', { projectRoot });",
-          "line": 147,
+          "line": 164,
           "status": "in-catalog",
           "text": "Loading project language data..."
         },
@@ -12329,7 +12599,7 @@
             }
           ],
           "fullLine": "    dialog.showErrorBox('MyDefrag Language Maintenance', error.message);",
-          "line": 194,
+          "line": 222,
           "status": "in-catalog",
           "text": "MyDefrag Language Maintenance"
         }

@@ -1,0 +1,14 @@
+{
+  "locale": "ig",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "A tụrụ anya {expected} ma chọtara {actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Akara a na-atụghị anya ya '{token}'",
+      "status": "machine-generated"
+    }
+  }
+}

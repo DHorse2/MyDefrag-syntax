@@ -1,0 +1,14 @@
+{
+  "locale": "fr",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "On s'attendait à {expected} mais on a trouvé {actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Jeton inattendu « {token} »",
+      "status": "machine-generated"
+    }
+  }
+}

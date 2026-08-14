@@ -34,10 +34,15 @@ class KeywordLookup {
             return { token: null, exists: false };
         }
 
-        return {
+        const result = {
             token: clean,
             exists: this.keywords.has(clean.toLowerCase())
         };
+        const helpDocuments = this.getHelpDocuments(clean);
+        if (helpDocuments.length > 0) {
+            result.helpDocuments = helpDocuments;
+        }
+        return result;
     }
 
     /**
@@ -53,16 +58,16 @@ class KeywordLookup {
         if (diagnostic.token) return this.cleanToken(diagnostic.token);
 
         const message = String(diagnostic.message || '');
-        const quoted = message.match(/["'`](\w+)["'`]/);
+        const quoted = message.match(/["'`]!?([A-Za-z_][A-Za-z0-9_]*)/);
         if (quoted) return this.cleanToken(quoted[1]);
 
-        const afterKeyword = message.match(/keyword\s+([A-Za-z_][A-Za-z0-9_]*)/i);
+        const afterKeyword = message.match(/keyword\s+["'`]?!?([A-Za-z_][A-Za-z0-9_]*)/i);
         if (afterKeyword) return this.cleanToken(afterKeyword[1]);
 
-        const afterToken = message.match(/token\s+([A-Za-z_][A-Za-z0-9_]*)/i);
+        const afterToken = message.match(/token\s+["'`]?!?([A-Za-z_][A-Za-z0-9_]*)/i);
         if (afterToken) return this.cleanToken(afterToken[1]);
 
-        const unknown = message.match(/unknown\s+([A-Za-z_][A-Za-z0-9_]*)/i);
+        const unknown = message.match(/unknown\s+["'`]?!?([A-Za-z_][A-Za-z0-9_]*)/i);
         if (unknown) return this.cleanToken(unknown[1]);
 
         return null;
@@ -76,6 +81,33 @@ class KeywordLookup {
         if (!token) return null;
         const match = String(token).match(/[A-Za-z_][A-Za-z0-9_]*/);
         return match ? match[0] : null;
+    }
+
+    /**
+     * Resolve Help metadata exposed by languageData without making diagnostics
+     * depend on the Help filesystem.
+     *
+     * @param {string} token
+     * @returns {Array<{path: string, text?: string, description?: string}>}
+     */
+    getHelpDocuments(token) {
+        if (typeof this.languageData.getKeywordHelpDocuments === 'function') {
+            const documents = this.languageData.getKeywordHelpDocuments(token);
+            if (documents.length > 0) return documents;
+        }
+
+        if (typeof this.languageData.isPredefinedIdentifier === 'function') {
+            const identifier = this.languageData.isPredefinedIdentifier(token);
+            if (identifier?.help?.[0]) {
+                return [{
+                    text: identifier.text,
+                    description: `${identifier.description} (${identifier.units}).`,
+                    path: identifier.help[0]
+                }];
+            }
+        }
+
+        return [];
     }
 
     /**

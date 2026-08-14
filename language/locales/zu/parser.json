@@ -1,0 +1,14 @@
+{
+  "locale": "zu",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "Bekulindeleke i{expected} kodwa kutholakale i{actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Ithokheni engalindelekile '{token}'",
+      "status": "machine-generated"
+    }
+  }
+}

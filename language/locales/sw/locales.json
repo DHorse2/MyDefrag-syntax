@@ -1,0 +1,518 @@
+{
+  "locale": "sw",
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "text": "Jenga matokeo ya amri",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.component.label": {
+      "text": "Sehemu",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.locale.label": {
+      "text": "Eneo",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "text": "Hatua za matengenezo",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "text": "Operesheni inaendelea",
+      "status": "machine-generated"
+    },
+    "locales.action.applyInMemory.label": {
+      "text": "Tumia katika kumbukumbu",
+      "status": "machine-generated"
+    },
+    "locales.action.close.label": {
+      "text": "Funga",
+      "status": "machine-generated"
+    },
+    "locales.action.exit.label": {
+      "text": "Toka",
+      "status": "machine-generated"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "text": "Tengeneza tafsiri ya API",
+      "status": "machine-generated"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "text": "Jenga upya kipengele kilichochaguliwa",
+      "status": "machine-generated"
+    },
+    "locales.action.reload.label": {
+      "text": "Pakia tena",
+      "status": "machine-generated"
+    },
+    "locales.action.revert.label": {
+      "text": "Jibu",
+      "status": "machine-generated"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "text": "Hifadhi na kujenga upya",
+      "status": "machine-generated"
+    },
+    "locales.action.stopBuild.label": {
+      "text": "Acha kujenga",
+      "status": "machine-generated"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "text": "Tumia Kiingereza kama mbadala",
+      "status": "machine-generated"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "text": "Tumia Kiingereza kilichosanifiwa",
+      "status": "machine-generated"
+    },
+    "locales.action.validate.label": {
+      "text": "Thibitisha",
+      "status": "machine-generated"
+    },
+    "locales.dialog.cancel.text": {
+      "text": "Futa",
+      "status": "machine-generated"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "text": "Thibitisha mabadiliko ya chanzo cha eneo",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "text": "Tupa na upakie tena",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "text": "Tupa tafsiri zisizohifadhiwa?",
+      "status": "machine-generated"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "text": "Toka bila kuhifadhi",
+      "status": "machine-generated"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "text": "Ujenzi wa kipengele cha eneo unaendelea",
+      "status": "machine-generated"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "text": "Matengenezo ya Eneo la Defragmenter yangu",
+      "status": "machine-generated"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "text": "Hakuna faili zitakazobadilika.",
+      "status": "machine-generated"
+    },
+    "locales.dialog.returnToBuild.text": {
+      "text": "Rudi kwenye ujenzi",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "text": "Uokoaji na ujenzi wa kipengele umefanikiwa",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "text": "Hifadhi na kujenga upya kipengele",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "text": "Hifadhi imezuiwa na uthibitishaji",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "Uokoaji limeshindikana na kurejeshwa nyuma",
+      "status": "machine-generated"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "Chagua hazina ya sintaksi ya My Defragmenter",
+      "status": "machine-generated"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "text": "Mabadiliko ya eneo yasiyohifadhiwa",
+      "status": "machine-generated"
+    },
+    "locales.heading.catalog.text": {
+      "text": "Orodha",
+      "status": "machine-generated"
+    },
+    "locales.heading.localeOperation.text": {
+      "text": "Uendeshaji wa eneo",
+      "status": "machine-generated"
+    },
+    "locales.heading.operationResult.text": {
+      "text": "Matokeo ya operesheni",
+      "status": "machine-generated"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "text": "Chagua eneo na kipengele",
+      "status": "machine-generated"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "text": "Tengeneza tafsiri kutoka kwa thamani ya eneo la sasa",
+      "status": "machine-generated"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "text": "Ufunguo, chanzo, tafsiri, hali",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "text": "Ufasiri wa API umekataliwa",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "text": "Tafsiri ya API haipatikani",
+      "status": "machine-generated"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "text": "Programu imeshindwa kuanzishwa",
+      "status": "machine-generated"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "text": "Hifadhi halali ya eneo la My Defragmenter haikuchaguliwa.",
+      "status": "machine-generated"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "text": "Kiingereza cha kanoniki si lengo la tafsiri ya API.",
+      "status": "machine-generated"
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "text": "Ufunguo wa katalogi unamilikiwa na kipengele{canonicalComponent}.",
+      "status": "machine-generated"
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "text": "Chagua hazina inayomiliki maeneo ya lugha ya / na jenga lugha ya /.",
+      "status": "machine-generated"
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "text": "Ujenzi upya wa kipengele umeshindikana",
+      "status": "machine-generated"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "text": "Tupa au hifadhi mabadiliko kabla ya kubadilisha eneo au kipengele.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "text": "Hapa pekee ndipo maandiko rasmi ya Kiingereza husomwa.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "text": "Maandishi ya Kiingereza ni rasmi na lazima yadumishwe katika Matengenezo ya Lugha ya My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "text": "Ingiza au jaza thamani ya eneo la sasa kabla ya kutengeneza tafsiri ya API.",
+      "status": "machine-generated"
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "text": "Toka na utupe tafsiri za vipengele vilivyochaguliwa?",
+      "status": "machine-generated"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "text": "Tengeneza tafsiri ya API kabla ya kubadilisha thamani.",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "text": "Tofauti ya utambulisho wa katalogi ya eneo ilitokea katika{relativePath}:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "text": "Katalugu ya eneo iliyotengenezwa si halali:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "text": "Tafsiri zilizotengenezwa lazima zitumike kabla hazijaondolewa kutoka kwenye data iliyotungwa.",
+      "status": "machine-generated"
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "Data za matengenezo ya eneo hazijapakuliwa.",
+      "status": "machine-generated"
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "text": "Sio hifadhidata ya eneo la My Defragmenter. Inakosekana: {missing}",
+      "status": "machine-generated"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "Njia inatoka kwenye mizizi ya hifadhi: {relativePath}",
+      "status": "machine-generated"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "text": "Vizaziwekaji lazima ziwe hasa: {expected}.",
+      "status": "machine-generated"
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "text": "Kupakia upya kutapuuza mabadiliko kwenye kipengele cha eneo lililochaguliwa.",
+      "status": "machine-generated"
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "text": "Hifadhi au rudisha mabadiliko kabla ya kujenga upya.",
+      "status": "machine-generated"
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "text": "Sehemu iliyochaguliwa imejengwa upya",
+      "status": "machine-generated"
+    },
+    "locales.message.selectionFailed.text": {
+      "text": "Uteuzi umeshindikana",
+      "status": "machine-generated"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "text": "Muundo wa sehemu ya eneo haupatikani.",
+      "status": "machine-generated"
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "text": "Mchakato mkuu umetafsiri thamani tofauti ya eneo la sasa. Anzisha upya Matengenezo ya Eneo na jaribu tena.",
+      "status": "machine-generated"
+    },
+    "locales.message.translationRejected.text": {
+      "text": "Tafsiri imekataliwa",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "text": "Ufunguo wa katalogi usiojulikana: {key}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "text": "Sehemu isiyojulikana: {componentId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "text": "Sehemu isiyojulikana: {documentComponent}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "text": "Ufunguo usiojulikana kwa kipengele kilichochaguliwa: {payloadKey}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "text": "Mahali pasipotajwa: {localeId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "text": "Mahali pasipotajwa: {documentLocale}",
+      "status": "machine-generated"
+    },
+    "locales.message.validationResult.text": {
+      "text": "Matokeo ya uthibitishaji",
+      "status": "machine-generated"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "Subiri ujenzi ukamilike kabla ya kutoka.",
+      "status": "machine-generated"
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "text": "Andika faili za mamlaka za{normalizedCount}?",
+      "status": "machine-generated"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "Kuchukua faili zilizotengenezwa kwa ajili ya kurejesha hali ya awali",
+      "status": "machine-generated"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "text": "Kukagua mabadiliko ya faili zilizotengenezwa",
+      "status": "machine-generated"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "text": "Kuhifadhi mabadiliko ya chanzo la eneo",
+      "status": "machine-generated"
+    },
+    "locales.progress.preparingSave.status": {
+      "text": "Kuandaa kuhifadhi",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "Kurejesha faili rasmi na zilizotengenezwa",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "text": "Kurejesha faili baada ya hitilafu",
+      "status": "machine-generated"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "text": "Kijenzi cha eneo la kuhifadhi",
+      "status": "machine-generated"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "text": "Kuanzisha uhifadhi na ujenzi upya wa vipengele",
+      "status": "machine-generated"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "text": "Kusitisha ujenzi wa sehemu",
+      "status": "machine-generated"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "Tumia 'Stop build' kwenye dirisha la maendeleo, kisha subiri urejeshaji ukamilike kabla ya kufunga programu.",
+      "status": "machine-generated"
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "text": "Inasubiri uthibitisho wa uhifadhi",
+      "status": "machine-generated"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "text": "Kuandika faili za eneo zenye mamlaka",
+      "status": "machine-generated"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "text": "Kiingereza rasmi",
+      "status": "machine-generated"
+    },
+    "locales.ui.catalogKey.text": {
+      "text": "Orodha funguo",
+      "status": "machine-generated"
+    },
+    "locales.ui.componentStrings.text": {
+      "text": "Mistari ya vipengele",
+      "status": "machine-generated"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "text": "Thamani ya eneo la sasa",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "text": "Deep L haijasetiwa. Weka Deepl Api kabla ya kuanzisha programu.",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "text": "Deep L ilibadilisha thamani ya eneo la sasa. Tumia kwenye kumbukumbu ili kuihifadhi.",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "text": "Tupa mabadiliko ya tafsiri ya kumbukumbu?",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "text": "Tupa tafsiri zisizohifadhiwa na kubadilisha uteuzi?",
+      "status": "machine-generated"
+    },
+    "locales.ui.englishFallback.text": {
+      "text": "Lugha mbadala ya Kiingereza",
+      "status": "machine-generated"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "text": "Tengeneza tafsiri kutoka kwa thamani ya eneo la sasa. Matokeo hubadilisha tu uwanja huo.",
+      "status": "machine-generated"
+    },
+    "locales.ui.generatedValue.text": {
+      "text": "Imetengenezwa: {stateGeneratedFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.key.text": {
+      "text": "Ufunguo",
+      "status": "machine-generated"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "text": "Matokeo ya hivi karibuni ya Deep L",
+      "status": "machine-generated"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "text": "Kiingereza kilichosanifishwa",
+      "status": "machine-generated"
+    },
+    "locales.ui.notValidated.text": {
+      "text": "Haijathibitishwa",
+      "status": "machine-generated"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "text": "Hakuna mabadiliko yasiyohifadhiwa",
+      "status": "machine-generated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "text": "Kuandaa ujenzi upya wa kipengele",
+      "status": "machine-generated"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "text": "Kujenga upya kipengele cha eneo",
+      "status": "machine-generated"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "text": "Kuomba tafsiri ya Deep L.",
+      "status": "machine-generated"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "text": "Vijazo vinavyohitajika",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
+      "text": "Badilisha ukubwa wa thamani ya eneo la sasa na pendekezo la API",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
+      "text": "Badilisha ukubwa wa katalogi ya eneo na kihariri cha tafsiri",
+      "status": "machine-generated"
+    },
+    "locales.ui.reviewStatus.text": {
+      "text": "Hali ya mapitio",
+      "status": "machine-generated"
+    },
+    "locales.ui.search.text": {
+      "text": "Tafuta",
+      "status": "machine-generated"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "text": "Chagua kipengee cha katalogi",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceText.text": {
+      "text": "Maandishi ya chanzo",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceValue.text": {
+      "text": "Chanzo: {stateAuthoritativeFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.status.text": {
+      "text": "Hali",
+      "status": "machine-generated"
+    },
+    "locales.ui.structuredEditor.text": {
+      "text": "Mhariri uliopangwa",
+      "status": "machine-generated"
+    },
+    "locales.ui.translation.text": {
+      "text": "Tafsiri",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationScope.text": {
+      "text": "Wigo wa tafsiri",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "text": "Tafsiri haipatikani.",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "text": "Zana ya dawati ya mtafsiri",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorNotes.text": {
+      "text": "Maelezo ya mfasiri",
+      "status": "machine-generated"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "text": "Mabadiliko yasiyohifadhiwa",
+      "status": "machine-generated"
+    },
+    "locales.ui.valid.text": {
+      "text": "Halali",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "text": "{stateCompletenessFallback} Lugha mbadala ya Kiingereza",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "text": "{rowApiTranslationProvider} Matokeo tayari. Tumia kwenye kumbukumbu ili kuhifadhi thamani ya eneo la sasa.",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTotal.text": {
+      "text": "{stateCompletenessTotal} jumla",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTranslated.text": {
+      "text": "{stateCompletenessTranslated} imefasiriwa",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "text": "{stateValidationErrorsCount} Hitilafu za uthibitishaji",
+      "status": "machine-generated"
+    }
+  }
+}

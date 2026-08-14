@@ -1,0 +1,14 @@
+{
+  "locale": "de",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "Erwartet wurde „{expected}“, gefunden wurde jedoch „{actual}“",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Unerwartetes Token „{token}“",
+      "status": "machine-generated"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "624c6f13",
+  "startedAt": "2026-08-13T22:36:59.502Z",
+  "finishedAt": "2026-08-13T23:00:04.549Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "MyDefrag-syntax"
+  ],
+  "tasks": [
+    "Integrate Help documentation with hover and Diagnostics panel"
+  ],
+  "promptPaths": [
+    "AGENTS.md user-request"
+  ],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

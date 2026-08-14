@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "50177e68",
+  "startedAt": "2026-08-13T00:26:42.544Z",
+  "finishedAt": "2026-08-13T00:37:11.068Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "mdm-mydefrag-syntax"
+  ],
+  "tasks": [
+    "group-test-report-toc-and-inventory-by-domain"
+  ],
+  "promptPaths": [],
+  "outputs": [
+    "scripts/Test-MyDefragSyntax.ps1",
+    "docs/testing.md"
+  ],
+  "artifacts": [
+    "artifacts/test-results/MyDefragSyntax-TestReport-latest.md",
+    "artifacts/test-results/MyDefragSyntax-TestReport-latest.json",
+    "artifacts/test-results/MyDefragSyntax-TestReport-latest.xml"
+  ],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

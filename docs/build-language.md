@@ -17,6 +17,7 @@
   - [`locales`](#locales)
   - [`localeCatalogs`](#localecatalogs)
 - [API-Assisted Missing Values](#api-assisted-missing-values)
+- [Fallback Translation Runner](#fallback-translation-runner)
 - [Cross-File Contracts](#cross-file-contracts)
 - [Generated Outputs](#generated-outputs)
 - [Maintenance Guidance](#maintenance-guidance)
@@ -45,8 +46,12 @@ defaults to `build`.
   or invalid, writes nothing, and exits nonzero on errors.
 - `build` (`npm run language:build`) validates, creates missing locale and
   component outputs, and additively updates existing component files. Existing
-  entry keys are never replaced or removed. When DeepL is configured, only
-  missing generated entry keys receive API translations.
+  entry keys are never replaced or removed. Before generated output is changed,
+  every current non-fallback generated translation is transactionally merged
+  into its permanent `language/locales/<locale>/<component>.json` source. When
+  DeepL is configured, only missing generated entry keys receive API
+  translations, and accepted translations are persisted through the same
+  source path.
   The terminal also states whether DeepL is configured in the current process,
   which locales are eligible, how many suggestions were accepted, and how many
   warnings occurred. If every canonical key already exists in its generated
@@ -71,14 +76,47 @@ defaults to `build`.
   Language Maintenance can edit this human-readable artifact directly, but the
   next `report`, `build`, or applicable rebuild operation may replace those
   manual changes.
-- `build-component <locale> <component>` validates all authored inputs,
-  overwrites only the explicitly selected generated component catalog, and then
-  refreshes aggregate maps and reports. MyDefrag Locale Maintenance invokes this
-  action after an accepted component-source save. Missing entry values may use
-  DeepL while authored values remain unchanged.
+- `build-component <locale> <component>` validates all authored inputs, merges
+  the explicitly selected generated component catalog non-destructively, and
+  then refreshes aggregate maps and reports. Existing translations are persisted
+  and preserved, authored values are overlaid, and newly introduced canonical
+  keys are added. MyDefrag Locale Maintenance invokes this action after an
+  accepted component-source save. Missing entry values may use DeepL while
+  authored and unrelated generated values remain unchanged.
+- `--AllowFallbackReplacement=<exact-catalog-key>` can be added to
+  `build-component` as the explicit opt-in for replacing one named translation
+  with English fallback. The option is rejected by other actions and when the
+  key does not belong to the selected component.
 
 An unknown action is an error. Every writing action stops before generation when
 validation reports an error.
+
+## Fallback Translation Runner
+
+`npm run language:translate-fallbacks` runs the reusable
+`build/scripts/translate-language-fallbacks.js` workflow. It queries DeepL's
+current target-language inventory and character usage before translating,
+skips unsupported locales, and submits one catalog entry per API request.
+
+Each usable response is checked for protected runtime syntax and placeholders,
+then immediately written to both the permanent locale component source and its
+generated component catalog. HTTP 429 responses use bounded exponential retry.
+HTTP 456 or a preflight quota shortfall pauses cleanly, so rerunning the command
+continues from the remaining generated English fallback entries.
+
+The default resumable audit is
+`build/language/reports/deepl-catalog-entry-calls.md`. It contains one physical
+table row per API request, ends with a summary of entries that remain rejected,
+records start and end quota usage, and never records the credential. A
+repository-wide runner lock rejects a second concurrent process; an abandoned
+lock is recovered only after its recorded process is no longer running.
+Supported options
+are `--PreflightOnly`, repeated `--Locale=<id>`, `--MaxCalls=<count>`,
+`--RetryLimit=<count>`, `--RetryBaseMs=<milliseconds>`, and
+`--SystemicFailureLimit=<count>`, `--CallsPerMinute=<count>`, and
+`--Report=<path>`. Translation calls default to 30 per minute and honor a
+provider `Retry-After` response. The systemic-failure circuit breaker stops a
+run after repeated non-retryable HTTP request errors.
 
 ## Electron App Catalog Extraction
 
@@ -344,12 +382,18 @@ are shielded with ignored XML tags for DeepL and must each be restored exactly;
 a missing or duplicated marker makes the API result unusable.
 
 For every entry considered by broad `build` and `report` actions, the precedence
-order is:
+and durability order is:
 
-1. Existing generated component entry, preserved as a complete entry object.
-2. Existing authored locale value for a missing generated key.
-3. Usable API translation with `machine-generated` status.
-4. Canonical English text with `fallbackLocale: "en"`.
+1. Existing non-fallback generated translations are transactionally persisted
+   into permanent per-locale component sources when they are not already
+   authored.
+2. Existing generated component entries are preserved as complete entry
+   objects.
+3. Existing authored locale values supply missing generated keys and overlay
+   the selected component during a targeted build.
+4. Usable API translations receive `machine-generated` status and are persisted
+   into permanent per-locale component sources.
+5. Canonical English text uses `fallbackLocale: "en"` and remains generated-only.
 
 `--UseNormalized` replaces the API step for `build` and `report`; it never
 constructs or calls the DeepL service. Existing authored locale values still
@@ -363,8 +407,9 @@ Missing configuration, unsupported languages, HTTP errors, empty results, and
 placeholder mismatches produce warnings and select canonical fallback. These
 translation-only failures never fail the build. Invalid canonical input,
 output-path conflicts, and write failures retain their existing failure
-behavior. API translations are generated output only; the builder never writes
-them into `language/locales/`.
+behavior. Accepted API translations and existing non-fallback generated
+translations are durable source data under `language/locales/`. English fallback
+values are not promoted as translations.
 
 ## Cross-File Contracts
 
@@ -410,6 +455,9 @@ build/language/
 Before either generation action, the builder checks every registered locale
 below `build/language/catalogs/`:
 
+- Existing non-fallback translations are first copied additively into permanent
+  per-locale component sources using staged temporary files and rollback
+  backups. Existing source entries always win.
 - A missing locale directory is created and receives a complete component
   catalog set.
 - A missing component file inside an existing locale is created.
@@ -425,13 +473,18 @@ below `build/language/catalogs/`:
 The shared `catalogs/` directory and its locale directories are never deleted.
 The build and human-readable reports list every registered locale as
 `generated`, `updated-existing`, or `unchanged-existing`, with machine-readable
-counts for entries added and component files created or updated.
+counts for entries added and component files created or updated. Translation
+completeness is calculated from the actual post-build component catalogs and
+keyword maps; it includes explicit missing counts and does not discard preserved
+machine-generated values from its totals.
 
-`build-component <locale> <component>` is the narrow replacement action. It
-validates both identifiers against their registries and overwrites only
-`build/language/catalogs/<locale>/<component>.json` before refreshing aggregate
-maps and reports. Other existing locale component files retain the historical
-skip behavior during this targeted action.
+`build-component <locale> <component>` is the narrow selected-component action.
+It validates both identifiers against their registries, persists existing
+translations, overlays authoritative values, refreshes canonical metadata, adds
+missing keys, and preserves unrelated or historical entry objects. A
+translated-to-English-fallback transition is permitted only for an exact key
+named with `--AllowFallbackReplacement`. Other existing locale component files
+retain the historical skip behavior during this targeted action.
 
 The `report` action also writes:
 

@@ -42,6 +42,15 @@ function createStartupDiagnostics(profile, options = {}) {
     const startedAt = now();
     const sessionId = `${startedAt.toISOString().replace(/[:.]/g, '-')}-${processId}`;
     const logPath = path.join(profile.logDirectory, `startup-${startedAt.toISOString().slice(0, 10)}.jsonl`);
+    const traceLogPath = path.join(profile.logDirectory, `startup-trace-${startedAt.toISOString().slice(0, 10)}.log`);
+
+    function appendLine(filePath, line) {
+        try {
+            fileSystem.appendFileSync(filePath, line, 'utf8');
+        } catch (error) {
+            console.error(`Unable to write startup diagnostics: ${error.message}`);
+        }
+    }
 
     function record(event, details = {}) {
         const entry = {
@@ -51,15 +60,19 @@ function createStartupDiagnostics(profile, options = {}) {
             event,
             details
         };
-        try {
-            fileSystem.appendFileSync(logPath, `${JSON.stringify(entry)}\n`, 'utf8');
-        } catch (error) {
-            console.error(`Unable to write startup diagnostics: ${error.message}`);
-        }
+        appendLine(logPath, `${JSON.stringify(entry)}\n`);
         return entry;
     }
 
-    return { logPath, record, sessionId };
+    function trace(name, action = 'call') {
+        const timestamp = now();
+        const elapsedMs = timestamp.getTime() - startedAt.getTime();
+        const line = `${timestamp.toISOString()} +${elapsedMs}ms pid=${processId} ${action} ${name}`;
+        appendLine(traceLogPath, `${line}\n`);
+        return line;
+    }
+
+    return { logPath, record, sessionId, trace, traceLogPath };
 }
 
 function attachAppDiagnostics(app, diagnostics) {

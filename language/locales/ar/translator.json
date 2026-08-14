@@ -1,0 +1,1758 @@
+{
+  "locale": "ar",
+  "component": "translator",
+  "entries": {
+    "translator.accessibility.allowDeeplCallsDuringSaveAndRebuild.label": {
+      "text": "السماح بإجراء مكالمات Deep L أثناء عمليات الحفظ وإعادة البناء",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.applicationNavigation.label": {
+      "text": "التنقل بين تطبيقات",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.buildCommandOutput.label": {
+      "text": "مخرجات أمر «بناء»",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.closeOperationResult.label": {
+      "text": "إغلاق نتيجة العملية",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.closeValue.label": {
+      "text": "إغلاق {windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentAssignedToValue.label": {
+      "text": "المكون المخصص لـ {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentDescription.label": {
+      "text": "وصف المكون",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForAddedMigrationFiles.label": {
+      "text": "مكون لملفات الترحيل المضافة",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForScannedMigrationFile.label": {
+      "text": "مكون لملف الترحيل الممسوح ضوئيًا",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentIdentifier.label": {
+      "text": "معرّف المكون",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.defaultPreviewMode.label": {
+      "text": "وضع المعاينة الافتراضي",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterMigrationSourceFiles.label": {
+      "text": "تصفية ملفات مصدر الترحيل",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.maximizeValue.label": {
+      "text": "أقصى {windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.migrationCandidatesForValue.label": {
+      "text": "المرشحون للهجرة إلى {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.minimizeValue.label": {
+      "text": "تصغير نافذة {windowLabel}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.normalizedText.label": {
+      "text": "النص المعياري",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.openValueAtLineValue.label": {
+      "text": "افتح الملف «{filePath}» عند السطر «{candidateLine}»",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.operationInProgress.label": {
+      "text": "العملية جارية",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.removeValue.label": {
+      "text": "إزالة برنامج «{filePath}»",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.runtimeComponent.label": {
+      "text": "مكون وقت التشغيل",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.selectedComponent.label": {
+      "text": "المكون المحدد",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.showComponentsHome.label": {
+      "text": "عرض الصفحة الرئيسية لـ «المكونات»",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.suggestedKey.label": {
+      "text": "المفتاح المقترح",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.viewMigrationCandidatesForValue.label": {
+      "text": "عرض المرشحين للترحيل إلى {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.windowControls.label": {
+      "text": "عناصر التحكم في النوافذ",
+      "status": "machine-generated"
+    },
+    "translator.action.exit.label": {
+      "text": "خروج",
+      "status": "machine-generated"
+    },
+    "translator.action.previewModes.label": {
+      "text": "أوضاع المعاينة",
+      "status": "machine-generated"
+    },
+    "translator.action.rebuild.label": {
+      "text": "إعادة البناء",
+      "status": "machine-generated"
+    },
+    "translator.action.reloadData.label": {
+      "text": "إعادة تحميل البيانات",
+      "status": "machine-generated"
+    },
+    "translator.action.revert.label": {
+      "text": "الرجوع",
+      "status": "machine-generated"
+    },
+    "translator.action.save.label": {
+      "text": "حفظ",
+      "status": "machine-generated"
+    },
+    "translator.action.stopBuild.label": {
+      "text": "إيقاف البناء",
+      "status": "machine-generated"
+    },
+    "translator.action.validate.label": {
+      "text": "التحقق من الصحة",
+      "status": "machine-generated"
+    },
+    "translator.dialog.addFiles.text": {
+      "text": "إضافة ملفات",
+      "status": "machine-generated"
+    },
+    "translator.dialog.addMigrationSourceFiles.title": {
+      "text": "إضافة ملفات مصدر الترحيل",
+      "status": "machine-generated"
+    },
+    "translator.dialog.cancel.text": {
+      "text": "إلغاء",
+      "status": "machine-generated"
+    },
+    "translator.dialog.close.title": {
+      "text": "إغلاق",
+      "status": "machine-generated"
+    },
+    "translator.dialog.componentCatalogAddRecord.title": {
+      "text": "كتالوج المكونات - إضافة سجل",
+      "status": "machine-generated"
+    },
+    "translator.dialog.confirmAuthoritativeChanges.title": {
+      "text": "تأكيد التغييرات الرسمية",
+      "status": "machine-generated"
+    },
+    "translator.dialog.discardAndReload.text": {
+      "text": "إلغاء التحميل وإعادة التحميل",
+      "status": "machine-generated"
+    },
+    "translator.dialog.discardUnsavedChanges.title": {
+      "text": "هل تريد إلغاء التغييرات التي لم يتم حفظها؟",
+      "status": "machine-generated"
+    },
+    "translator.dialog.draftReverted.title": {
+      "text": "تم التراجع عن المسودة",
+      "status": "machine-generated"
+    },
+    "translator.dialog.exitWithoutSaving.text": {
+      "text": "الخروج دون حفظ",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageBuildIsRunning.title": {
+      "text": "يجري حالياً إنشاء إصدار اللغة",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageRebuildFailed.title": {
+      "text": "فشل إعادة بناء اللغة",
+      "status": "machine-generated"
+    },
+    "translator.dialog.languageRebuildSucceeded.title": {
+      "text": "تمت إعادة بناء اللغة بنجاح",
+      "status": "machine-generated"
+    },
+    "translator.dialog.maximize.title": {
+      "text": "تكبير",
+      "status": "machine-generated"
+    },
+    "translator.dialog.minimize.title": {
+      "text": "تصغير",
+      "status": "machine-generated"
+    },
+    "translator.dialog.mydefragLanguageMaintenance.text": {
+      "text": "صيانة لغة أداة إلغاء التجزئة الخاصة بي",
+      "status": "machine-generated"
+    },
+    "translator.dialog.nothingToSave.title": {
+      "text": "لا يوجد ما يمكن حفظه",
+      "status": "machine-generated"
+    },
+    "translator.dialog.returnToBuild.text": {
+      "text": "العودة إلى عملية البناء",
+      "status": "machine-generated"
+    },
+    "translator.dialog.revertFailed.title": {
+      "text": "فشل التراجع",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveAndBuildSucceeded.title": {
+      "text": "تم الحفظ والإنشاء بنجاح",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveAndRebuild.text": {
+      "text": "حفظ وإعادة إنشاء",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveBlocked.title": {
+      "text": "تم حفظ \"محظور\"",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "فشل الحفظ وتم التراجع عنه",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanFile.text": {
+      "text": "مسح الملف ضوئيًا",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanMigrationSourceFile.title": {
+      "text": "مسح ملف مصدر الترحيل ضوئيًّا",
+      "status": "machine-generated"
+    },
+    "translator.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "حدد مستودع صيغ «My Defragmenter»",
+      "status": "machine-generated"
+    },
+    "translator.dialog.startingMydefragLanguageMaintenance.title": {
+      "text": "البدء في صيانة لغة أداة إلغاء التجزئة",
+      "status": "machine-generated"
+    },
+    "translator.dialog.unsavedLanguageChanges.title": {
+      "text": "تغييرات اللغة غير المحفوظة",
+      "status": "machine-generated"
+    },
+    "translator.dialog.valueFailed.title": {
+      "text": "{title} فشل",
+      "status": "machine-generated"
+    },
+    "translator.directive.language.text": {
+      "text": "; @mydfrg اللغة {locale}",
+      "status": "machine-generated"
+    },
+    "translator.heading.languageMaintenance.text": {
+      "text": "الحفاظ على اللغة",
+      "status": "machine-generated"
+    },
+    "translator.heading.languageOperation.text": {
+      "text": "عملية اللغة",
+      "status": "machine-generated"
+    },
+    "translator.heading.operationResult.text": {
+      "text": "نتيجة العملية",
+      "status": "machine-generated"
+    },
+    "translator.input.filterSourceFilePaths.placeholder": {
+      "text": "تصفية مسارات الملفات المصدرية",
+      "status": "machine-generated"
+    },
+    "translator.input.searchAllFields.placeholder": {
+      "text": "البحث في جميع الحقول",
+      "status": "machine-generated"
+    },
+    "translator.input.searchComponentIdOrDescription.placeholder": {
+      "text": "ابحث عن معرّف المكون أو وصفه",
+      "status": "machine-generated"
+    },
+    "translator.input.searchComponents.placeholder": {
+      "text": "مكونات البحث",
+      "status": "machine-generated"
+    },
+    "translator.input.searchValue.placeholder": {
+      "text": "البحث في موقع «{definitionTitle}»",
+      "status": "machine-generated"
+    },
+    "translator.message.aLanguageBuildIsAlreadyRunning.text": {
+      "text": "هناك عملية تجميع لغة قيد التشغيل بالفعل.",
+      "status": "machine-generated"
+    },
+    "translator.message.aLineAwareVscodiumOrVsCodeInstallation.text": {
+      "text": "لم يتم العثور على تثبيت لـ VS Codium أو VS Code يدعم عرض الأسطر؛ تم فتح ملف المصدر باستخدام التطبيق الافتراضي الخاص به.",
+      "status": "machine-generated"
+    },
+    "translator.message.applicationFailedToStart.text": {
+      "text": "فشل تشغيل التطبيق",
+      "status": "machine-generated"
+    },
+    "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
+      "text": "لم يتم تحديد مستودع صيغ صالح لـ «My Defragmenter».",
+      "status": "machine-generated"
+    },
+    "translator.message.buildCancelledByUser.text": {
+      "text": "تم إلغاء عملية البناء من قِبل المستخدم.",
+      "status": "machine-generated"
+    },
+    "translator.message.buildProcessDidNotReportTerminationAfterCancellation.text": {
+      "text": "لم تُبلّغ عملية البناء عن إنهاء بعد الإلغاء.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordAddedToInMemoryDraft.text": {
+      "text": "تمت إضافة سجل الكتالوج إلى المسودة الموجودة في الذاكرة",
+      "status": "machine-generated"
+    },
+    "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
+      "text": "اختر المستودع الذي يحتوي على اللغة / (النسخة القياسية) واللغة / (النسخة المُجمَّعة).",
+      "status": "machine-generated"
+    },
+    "translator.message.componentAddedInMemory.text": {
+      "text": "تمت إضافة المكون إلى الذاكرة",
+      "status": "machine-generated"
+    },
+    "translator.message.componentAssignmentIsStaleRebuildRequired.text": {
+      "text": "تعيين المكونات قديم؛ يلزم إعادة البناء.",
+      "status": "machine-generated"
+    },
+    "translator.message.componentChangeRejected.text": {
+      "text": "تم رفض تغيير المكون",
+      "status": "machine-generated"
+    },
+    "translator.message.componentUpdatedInMemory.text": {
+      "text": "تم تحديث المكون في الذاكرة",
+      "status": "machine-generated"
+    },
+    "translator.message.deeplApiCallsAreEnabledForThisRebuild.text": {
+      "text": "تم تمكين استدعاءات واجهة برمجة تطبيقات Deep L في عملية إعادة البناء هذه",
+      "status": "machine-generated"
+    },
+    "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
+      "text": "تم تعطيل Deep L؛ ويجري استخدام اللغة الإنجليزية المعيارية",
+      "status": "machine-generated"
+    },
+    "translator.message.draftUpdated.text": {
+      "text": "تم تحديث المسودة",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateComponentIdValue.text": {
+      "text": "معرّف مكون مكرر: {componentId}",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateValueValue.text": {
+      "text": "نسخة مكررة من «{definitionIdentityKey}»: {identity}",
+      "status": "machine-generated"
+    },
+    "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
+      "text": "لا يمكن إعادة تسمية معرّفات المكونات الموجودة.",
+      "status": "machine-generated"
+    },
+    "translator.message.exitAndDiscardAllInMemoryChanges.text": {
+      "text": "الخروج وإلغاء جميع التغييرات الموجودة في الذاكرة؟",
+      "status": "machine-generated"
+    },
+    "translator.message.forcingTheLanguageBuildProcessToStop.text": {
+      "text": "إجبار عملية تجميع اللغة على التوقف",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidComponentRequest.text": {
+      "text": "طلب مكون غير صالح.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidFileSelection.text": {
+      "text": "اختيار ملف غير صالح.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidRecordRequest.text": {
+      "text": "طلب سجل غير صالح.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCancelled.text": {
+      "text": "تم إلغاء إصدار اللغة",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCommandCompleted.text": {
+      "text": "اكتمل تنفيذ أمر إنشاء اللغة",
+      "status": "machine-generated"
+    },
+    "translator.message.languageBuildCommandFailed.text": {
+      "text": "فشل أمر إنشاء إصدار اللغة",
+      "status": "machine-generated"
+    },
+    "translator.message.languageDataReloaded.text": {
+      "text": "إعادة تحميل بيانات اللغة",
+      "status": "machine-generated"
+    },
+    "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "لم يتم تحميل بيانات الحفاظ على اللغة.",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationAssignmentRejected.text": {
+      "text": "تم رفض طلب الهجرة",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationCandidatesAreUnavailableBecauseTheReportStatus.text": {
+      "text": "مرشحو الترحيل غير متاحين لأن حالة التقرير هي «{reportFileStatus}».",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationCandidatesUnavailable.text": {
+      "text": "مرشحو الهجرة غير متاحين",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationComponentAssignmentUpdated.text": {
+      "text": "تم تحديث تخصيص مكون الهجرة",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileAdded.text": {
+      "text": "تمت إضافة ملف الهجرة",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileAlreadyListed.text": {
+      "text": "ملف الترحيل مدرج بالفعل",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRejected.text": {
+      "text": "تم رفض ملف الهجرة",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRemovalFailed.text": {
+      "text": "فشل إزالة ملف الترحيل",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFileRemoved.text": {
+      "text": "تمت إزالة ملف الترحيل",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesAdded.text": {
+      "text": "تمت إضافة ملفات الترحيل",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesRejected.text": {
+      "text": "ملفات الهجرة المرفوضة",
+      "status": "machine-generated"
+    },
+    "translator.message.noApplicableSchemaIsAvailableForValue.text": {
+      "text": "لا يتوفر مخطط قابل للتطبيق لـ {viewName}.",
+      "status": "machine-generated"
+    },
+    "translator.message.noLanguageBuildIsRunning.text": {
+      "text": "لا توجد عملية تجميع لغة قيد التشغيل.",
+      "status": "machine-generated"
+    },
+    "translator.message.noNewFilesAdded.text": {
+      "text": "لم تتم إضافة أي ملفات جديدة",
+      "status": "machine-generated"
+    },
+    "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
+      "text": "ليس مستودع لغات لبرنامج «My Defragmenter». مفقود: {missing}",
+      "status": "machine-generated"
+    },
+    "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
+      "text": "غير موجود في تقرير الترحيل؛ يلزم إعادة البناء.",
+      "status": "machine-generated"
+    },
+    "translator.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "المسار يتجاوز جذر المستودع: {relativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.recordRejected.text": {
+      "text": "تم رفض السجل",
+      "status": "machine-generated"
+    },
+    "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
+      "text": "ستؤدي عملية إعادة التحميل إلى إلغاء جميع التغييرات التي أُجريت على اللغة والمخزنة في الذاكرة.",
+      "status": "machine-generated"
+    },
+    "translator.message.runningLanguageBuildCommand.text": {
+      "text": "تنفيذ أمر إنشاء لغة",
+      "status": "machine-generated"
+    },
+    "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
+      "text": "احفظ التغييرات أو أعدها إلى حالتها في الذاكرة قبل إعادة البناء.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectAValidComponent.text": {
+      "text": "اختر مكونًا صالحًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectAValidComponentBeforeAddingFiles.text": {
+      "text": "يرجى تحديد مكون صالح قبل إضافة الملفات.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
+      "text": "الملف المحدد يقع خارج جذر المستودع: {absolutePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedPathIsNotAFileValue.text": {
+      "text": "المسار المحدد ليس ملفًا: {absolutePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceFileOpened.text": {
+      "text": "تم فتح الملف المصدر",
+      "status": "machine-generated"
+    },
+    "translator.message.theComponentChangedOrNoLongerExists.text": {
+      "text": "تم تغيير المكون أو لم يعد موجودًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.theConfiguredLanguageBuilderDoesNotExposeExtractstringcandidates.text": {
+      "text": "لا يعرض مُنشئ اللغة الذي تم تكوينه المرشحات المستخرجة للسلسلة.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
+      "text": "تعذر إيقاف عملية تجميع اللغة.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationFileIsNoLongerListed.text": {
+      "text": "لم يعد ملف الترحيل مدرجًا في القائمة.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportComponentAssignmentIsStaleRebuild.text": {
+      "text": "مهمة مكون تقرير الترحيل قديمة. أعد إنشاء مخرجات اللغة.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportDoesNotContainThisFile.text": {
+      "text": "لا يحتوي تقرير الترحيل على هذا الملف. أعد إنشاء مخرجات اللغة.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportDoesNotIncludeCatalogFound.text": {
+      "text": "لا يتضمن تقرير الترحيل سلاسل النصوص الموجودة في الكتالوج. أعد إنشاء مخرجات اللغة.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationReportIsMissingFullCandidateSource.text": {
+      "text": "تفتقر تقرير الترحيل إلى الأسطر الكاملة لمصادر المرشحين. أعد إنشاء مخرجات اللغة.",
+      "status": "machine-generated"
+    },
+    "translator.message.theRecordChangedOrNoLongerExists.text": {
+      "text": "تم تغيير السجل أو لم يعد موجودًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
+      "text": "جسر التحميل المسبق المقيد غير متاح.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineIsNotACurrentMigration.text": {
+      "text": "الخط المختار ليس مرشحاً حاليًا لعملية الترحيل.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineIsNotACurrentReported.text": {
+      "text": "السطر المحدد ليس سلسلة هجرة مُبلغ عنها حاليًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringIsNoLongerACurrent.text": {
+      "text": "لم تعد السلسلة المحددة مرشحة حالية للهجرة قيد الفحص.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileCouldNotBeOpened.text": {
+      "text": "تعذر فتح الملف المصدر.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddFiles.text": {
+      "text": "تعذر إضافة الملفات.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddTheScannedFile.text": {
+      "text": "تعذر إضافة الملف الممسوح ضوئيًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToApplyTheComponent.text": {
+      "text": "تعذر تطبيق المكون.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAssignTheComponent.text": {
+      "text": "تعذر تعيين المكون.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadLanguageData.text": {
+      "text": "تعذر تحميل بيانات اللغة.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadMigrationCandidates.text": {
+      "text": "تعذر تحميل العناصر المرشحة للترحيل.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToOpenMigrationSource.text": {
+      "text": "تعذر فتح مصدر الترحيل",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToOpenValueValue.text": {
+      "text": "تعذر فتح الرابط {targetRelativePath}: {error}",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
+      "text": "تعذر قراءة ملف البناء /، تقرير اللغة /، تقرير /، تقرير الترحيل .json: {errorMessage}",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToRemoveTheFile.text": {
+      "text": "تعذر إزالة الملف.",
+      "status": "machine-generated"
+    },
+    "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
+      "text": "التحقق من صحة التغييرات اللغوية؛ تم تمكين استدعاءات واجهة برمجة تطبيقات Deep L",
+      "status": "machine-generated"
+    },
+    "translator.message.validatingLanguageChangesDeeplIsDisabled.text": {
+      "text": "التحقق من صحة التغييرات اللغوية؛ تم تعطيل Deep L",
+      "status": "machine-generated"
+    },
+    "translator.message.validationResult.text": {
+      "text": "نتيجة التحقق من الصحة",
+      "status": "machine-generated"
+    },
+    "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "انتظر حتى ينتهي عملية التجميع قبل الخروج.",
+      "status": "machine-generated"
+    },
+    "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
+      "text": "في انتظار انتهاء عملية تجميع اللغة",
+      "status": "machine-generated"
+    },
+    "translator.message.writeValueAuthoritativeFileS.text": {
+      "text": "هل يمكن الكتابة إلى الملف (الملفات) المرجعي (المرجعية) {normalizedCount}؟",
+      "status": "machine-generated"
+    },
+    "translator.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "حفظ الملفات التي تم إنشاؤها من أجل التراجع عن التغييرات",
+      "status": "machine-generated"
+    },
+    "translator.progress.checkingGeneratedFileChanges.status": {
+      "text": "التحقق من التغييرات التي طرأت على الملف الذي تم إنشاؤه",
+      "status": "machine-generated"
+    },
+    "translator.progress.committingLanguageChanges.status": {
+      "text": "تسجيل التغييرات اللغوية",
+      "status": "machine-generated"
+    },
+    "translator.progress.rebuildingLanguageOutputs.status": {
+      "text": "إعادة بناء المخرجات اللغوية",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "استعادة الملفات المرجعية والملفات التي تم إنشاؤها",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringFilesAfterAnError.status": {
+      "text": "استعادة الملفات بعد حدوث خطأ",
+      "status": "machine-generated"
+    },
+    "translator.progress.restoringGeneratedFiles.status": {
+      "text": "استعادة الملفات التي تم إنشاؤها",
+      "status": "machine-generated"
+    },
+    "translator.progress.savingLanguageData.status": {
+      "text": "حفظ بيانات اللغة",
+      "status": "machine-generated"
+    },
+    "translator.progress.startingSaveAndRebuild.status": {
+      "text": "بدء عملية الحفظ وإعادة البناء",
+      "status": "machine-generated"
+    },
+    "translator.progress.stoppingLanguageBuild.status": {
+      "text": "إيقاف عملية إنشاء اللغة",
+      "status": "machine-generated"
+    },
+    "translator.progress.unableToStartLanguageBuild.status": {
+      "text": "تعذر بدء عملية إنشاء نسخة اللغة",
+      "status": "machine-generated"
+    },
+    "translator.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "استخدم خيار «إيقاف البناء» في نافذة التقدم، ثم انتظر حتى تكتمل عملية التراجع قبل إغلاق التطبيق.",
+      "status": "machine-generated"
+    },
+    "translator.progress.waitingForSaveConfirmation.status": {
+      "text": "في انتظار تأكيد الحفظ",
+      "status": "machine-generated"
+    },
+    "translator.progress.writingAuthoritativeLanguageFiles.status": {
+      "text": "كتابة ملفات اللغات الموثوقة",
+      "status": "machine-generated"
+    },
+    "translator.ui.addComponent.text": {
+      "text": "إضافة مكون",
+      "status": "machine-generated"
+    },
+    "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
+      "text": "تمت إضافتها إلى ملفات المصدر ضمن المكون «{componentSelectValue}». ولا يزال من الضروري حفظ التغييرات.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addFiles.text": {
+      "text": "أضف الملفات.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addRecord.text": {
+      "text": "إضافة سجل",
+      "status": "machine-generated"
+    },
+    "translator.ui.addToSourceFiles.text": {
+      "text": "إضافة إلى ملفات المصدر",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCandidates.text": {
+      "text": "جميع المرشحين",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCandidatesValue.text": {
+      "text": "جميع المرشحين: {filePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponentDetails.text": {
+      "text": "تفاصيل جميع المكونات",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponents.text": {
+      "text": "جميع المكونات",
+      "status": "machine-generated"
+    },
+    "translator.ui.allComponentsNoComponentFilter.text": {
+      "text": "جميع المكونات | لا توجد مكونات | تصفية",
+      "status": "machine-generated"
+    },
+    "translator.ui.allowDeeplCalls.text": {
+      "text": "السماح بمكالمات Deep L",
+      "status": "machine-generated"
+    },
+    "translator.ui.alreadyInSourceFiles.text": {
+      "text": "موجودة بالفعل في ملفات المصدر",
+      "status": "machine-generated"
+    },
+    "translator.ui.alreadyListedUnderComponentValue.text": {
+      "text": "تم إدراجه بالفعل ضمن المكون {scannedFileInventoryComponent}.",
+      "status": "machine-generated"
+    },
+    "translator.ui.analyzingSourceContext.text": {
+      "text": "تحليل سياق المصدر.",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyInMemory.text": {
+      "text": "التطبيق في الذاكرة",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyNormalizedText.text": {
+      "text": "تطبيق النص المعياري",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyToInMemoryDraft.text": {
+      "text": "إضافة إلى مسودة في الذاكرة",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignNewFilesTo.text": {
+      "text": "تعيين الملفات الجديدة إلى",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignToComponent.text": {
+      "text": "تعيين إلى المكون",
+      "status": "machine-generated"
+    },
+    "translator.ui.authoritativeFiles.text": {
+      "text": "الملفات المرجعية",
+      "status": "machine-generated"
+    },
+    "translator.ui.availableComponents.text": {
+      "text": "المكونات المتوفرة",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text": {
+      "text": "شارة {stateDirty}",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text2": {
+      "text": "شارة {validationOk}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateDetails.text": {
+      "text": "تفاصيل المرشح",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogMatches.text": {
+      "text": "نتائج البحث في الكتالوج",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogOutputLocales.text": {
+      "text": "إعدادات اللغة لإخراج الكتالوج",
+      "status": "machine-generated"
+    },
+    "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
+      "text": "اختر مكونًا من قائمة المكونات المعتمدة .json.",
+      "status": "machine-generated"
+    },
+    "translator.ui.clearEditor.text": {
+      "text": "مسح المحرر",
+      "status": "machine-generated"
+    },
+    "translator.ui.closeCandidates.text": {
+      "text": "المرشحون المتقاربون",
+      "status": "machine-generated"
+    },
+    "translator.ui.component.text": {
+      "text": "المكون",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
+      "text": "سيعرض «كتالوج المكونات» و«رسائل التشخيص» السجلات الخاصة بكل مكون.",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentDetails.text": {
+      "text": "تفاصيل المكونات",
+      "status": "machine-generated"
+    },
+    "translator.ui.components.text": {
+      "text": "المكونات",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentSelection.text": {
+      "text": "اختيار المكونات",
+      "status": "machine-generated"
+    },
+    "translator.ui.coverageUnavailableValue.text": {
+      "text": "التغطية غير متوفرة: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.coverageUnavailableValue.text2": {
+      "text": "التغطية غير متوفرة: {fileError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
+      "text": "مستمد من رسالة الدليل القياسي المحددة.",
+      "status": "machine-generated"
+    },
+    "translator.ui.description.text": {
+      "text": "الوصف",
+      "status": "machine-generated"
+    },
+    "translator.ui.detectedPlaceholdersValue.text": {
+      "text": "العناصر النائبة التي تم اكتشافها: {arrayFromNewSetNamesSort}",
+      "status": "machine-generated"
+    },
+    "translator.ui.discardAllInMemoryChanges.text": {
+      "text": "هل تريد إلغاء جميع التغييرات الموجودة في الذاكرة؟",
+      "status": "machine-generated"
+    },
+    "translator.ui.editComponent.text": {
+      "text": "تحرير المكون",
+      "status": "machine-generated"
+    },
+    "translator.ui.editRecord.text": {
+      "text": "تحرير السجل",
+      "status": "machine-generated"
+    },
+    "translator.ui.editValue.text": {
+      "text": "تحرير {componentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.filteredToComponentValue.text": {
+      "text": "تم التصفية حسب المكون: {selectedComponent}",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedFiles.text": {
+      "text": "الملفات التي تم إنشاؤها",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedFilesChanged.text": {
+      "text": "تم تغيير الملفات التي تم إنشاؤها",
+      "status": "machine-generated"
+    },
+    "translator.ui.hideLeftPanel.text": {
+      "text": "إخفاء اللوحة اليسرى",
+      "status": "machine-generated"
+    },
+    "translator.ui.identifier.text": {
+      "text": "المعرّف",
+      "status": "machine-generated"
+    },
+    "translator.ui.invalidValueErrorS.text": {
+      "text": "غير صالح (أخطاء في {validationErrorsCount})",
+      "status": "machine-generated"
+    },
+    "translator.ui.join.text": {
+      "text": ").join(', ')}",
+      "status": "machine-generated"
+    },
+    "translator.ui.lineValue.text": {
+      "text": "السطر{candidateLine}",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingPotentialFoundCoverage.text": {
+      "text": "تم العثور على تغطية محتملة لـ/.",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingProjectLanguageData.text": {
+      "text": "جاري تحميل بيانات لغة المشروع.",
+      "status": "machine-generated"
+    },
+    "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
+      "text": "يحتفظ باللغة / المعيارية / المكونات .json → قائمة الترحيل .scanFiles",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationCoverageUnavailable.text": {
+      "text": "تغطية الهجرة غير متوفرة",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationCoverageValue.text": {
+      "text": "تغطية أخبار الهجرة {fileCatalogedStringCount}",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventory.text": {
+      "text": "قائمة الهجرة",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventory.text2": {
+      "text": "قائمة الجالية",
+      "status": "machine-generated"
+    },
+    "translator.ui.migrationInventoryEntries.text": {
+      "text": "بنود جرد الهجرة",
+      "status": "machine-generated"
+    },
+    "translator.ui.no.text": {
+      "text": "لا",
+      "status": "machine-generated"
+    },
+    "translator.ui.noCandidateStringsWereFoundInThisFile.text": {
+      "text": "لم يتم العثور على أي سلاسل مرشحة في هذا الملف.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noComponentMatchesTheSearch.text": {
+      "text": "لا توجد مكونات مطابقة لنتائج البحث.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFileSelected.text": {
+      "text": "لم يتم تحديد أي ملف.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFilesMatchTheCurrentFilter.text": {
+      "text": "لا توجد ملفات تتطابق مع المعايير الحالية.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
+      "text": "لم يتم الإبلاغ عن أي مرشحين للترحيل في هذا الملف.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noMigrationSourceFilesAreListed.text": {
+      "text": "لم يتم إدراج أي ملفات مصدر للترحيل.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noRecordsMatchTheCurrentFilters.text": {
+      "text": "لا توجد سجلات تتطابق مع المعايير الحالية.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noScanResultsAreAvailable.text": {
+      "text": "لا توجد نتائج مسح متاحة.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noStableSourceConstructWasFound.text": {
+      "text": "لم يتم العثور على بنية مصدر مستقرة.",
+      "status": "machine-generated"
+    },
+    "translator.ui.notSet.text": {
+      "text": "(لم يتم تحديده)",
+      "status": "machine-generated"
+    },
+    "translator.ui.notValidated.text": {
+      "text": "لم يتم التحقق من صحتها",
+      "status": "machine-generated"
+    },
+    "translator.ui.noUnsavedChanges.text": {
+      "text": "لا توجد تغييرات لم يتم حفظها",
+      "status": "machine-generated"
+    },
+    "translator.ui.openSource.text": {
+      "text": "المصدر المفتوح",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
+      "text": "إعداد عملية إعادة بناء مُعَدَّلة مع تعطيل ميزة Deep L",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingNormalizedSaveWithDeeplDisabled.text": {
+      "text": "إعداد حفظ معادلة مع تعطيل ميزة Deep L",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text": {
+      "text": "التحضير لإعادة البناء مع تمكين استدعاءات واجهة برمجة التطبيقات Deep L",
+      "status": "machine-generated"
+    },
+    "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
+      "text": "التحضير للحفظ مع تمكين استدعاءات واجهة برمجة تطبيقات Deep L",
+      "status": "machine-generated"
+    },
+    "translator.ui.recoveryFilesRetained.text": {
+      "text": "تم الاحتفاظ بملفات الاستعادة",
+      "status": "machine-generated"
+    },
+    "translator.ui.remove.text": {
+      "text": "إزالة",
+      "status": "machine-generated"
+    },
+    "translator.ui.removeValueFromTheMigrationInventory.text": {
+      "text": "هل يتم حذف «{filePath}» من قائمة الترحيل؟",
+      "status": "machine-generated"
+    },
+    "translator.ui.repositoryMaintenanceTool.text": {
+      "text": "أداة صيانة المستودع",
+      "status": "machine-generated"
+    },
+    "translator.ui.restore.text": {
+      "text": "استعادة",
+      "status": "machine-generated"
+    },
+    "translator.ui.restoringTheLastLoadedDraftAndValidatingIt.text": {
+      "text": "استعادة آخر مسودة تم تحميلها والتحقق من صحتها",
+      "status": "machine-generated"
+    },
+    "translator.ui.revertingLanguageData.text": {
+      "text": "استعادة بيانات اللغة",
+      "status": "machine-generated"
+    },
+    "translator.ui.runtime.text": {
+      "text": "مدة التشغيل",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFailedValue.text": {
+      "text": "فشل المسح الضوئي: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFile.text": {
+      "text": "مسح الملف ضوئيًا.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
+      "text": "تم فحص سلسلة (سلاسل) المرشحين {scannedFileExtractedCount} دون تغيير قائمة المخزون.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanningSelectedFile.text": {
+      "text": "جاري مسح الملف المحدد.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFile.text": {
+      "text": "مسح ملف المصدر ضوئيًا",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFileValue.text": {
+      "text": "ملف المصدر الممسوح ضوئيًا: {scannedFilePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.scope.text": {
+      "text": "النطاق",
+      "status": "machine-generated"
+    },
+    "translator.ui.search.text": {
+      "text": "بحث",
+      "status": "machine-generated"
+    },
+    "translator.ui.searchAndFilter.text": {
+      "text": "البحث والتصفية",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAComponent.text": {
+      "text": "(اختر مكونًا)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
+      "text": "اختر ملفًا لعرض كل سلسلة تقبلها ميزة «استخراج السلاسل المرشحة».",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
+      "text": "اختر مرشحًا تم الإبلاغ عنه لمراجعة حالته.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
+      "text": "حدد مكونًا معينًا قبل إضافة سجل.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectedValue.text": {
+      "text": "تم اختيار: {scannedFilePath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectFile.text": {
+      "text": "اختر ملفًا.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
+      "text": "اختر ملف مستودع واحد لفحصه دون إضافته إلى قائمة جرد المصادر.",
+      "status": "machine-generated"
+    },
+    "translator.ui.setPreviewDefault.text": {
+      "text": "تعيين المعاينة كخيار افتراضي",
+      "status": "machine-generated"
+    },
+    "translator.ui.showingRecordsFromAllComponents.text": {
+      "text": "عرض السجلات من جميع المكونات",
+      "status": "machine-generated"
+    },
+    "translator.ui.showLeftPanel.text": {
+      "text": "إظهار اللوحة اليسرى",
+      "status": "machine-generated"
+    },
+    "translator.ui.statusInCatalog.text": {
+      "text": "الحالة: موجود في الكتالوج",
+      "status": "machine-generated"
+    },
+    "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
+      "text": "معاينة موجهة للترجمة باستخدام الاستبدالات القياسية للكلمات.",
+      "status": "machine-generated"
+    },
+    "translator.ui.uncheckedBuildsUseNormalizedEnglishAndDoNot.title": {
+      "text": "تستخدم الإصدارات غير الخاضعة للفحص اللغة الإنجليزية المعيارية ولا تستدعي Deep L.",
+      "status": "machine-generated"
+    },
+    "translator.ui.unsavedChanges.text": {
+      "text": "التغييرات غير المحفوظة",
+      "status": "machine-generated"
+    },
+    "translator.ui.unsavedChangesRemainInMemoryContinueToAnother.text": {
+      "text": "التغييرات التي لم يتم حفظها لا تزال موجودة في الذاكرة. هل تريد المتابعة إلى عرض آخر؟",
+      "status": "machine-generated"
+    },
+    "translator.ui.useSuggestedKey.text": {
+      "text": "استخدم المفتاح المقترح",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationFailedWithValueErrorS.text": {
+      "text": "فشل التحقق بسبب ({validationErrorsCount}) خطأ (أخطاء).",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationListValue.text": {
+      "text": "قائمة التحقق {kind}",
+      "status": "machine-generated"
+    },
+    "translator.ui.validationPassedWithValueWarningS.text": {
+      "text": "تم اجتياز عملية التحقق مع وجود تحذير(تحذيرات) {validationWarningsCount}.",
+      "status": "machine-generated"
+    },
+    "translator.ui.validValueWarningS.text": {
+      "text": "صالح (تحذير(ات) {validationWarningsCount})",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueRecordS.text": {
+      "text": "{recordsCount} السجل (السجلات)",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueSourceFileS.text": {
+      "text": "{filesCount} ملف (ملفات) المصدر",
+      "status": "machine-generated"
+    },
+    "translator.ui.viewHeadingDataViewToolbar.text": {
+      "text": "عرض بيانات العناوين عرض شريط الأدوات",
+      "status": "machine-generated"
+    },
+    "translator.ui.yes.text": {
+      "text": "نعم",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.candidateStatus.label": {
+      "text": "وضع المرشح",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.componentForScannedMigrationFiles.label": {
+      "text": "مكون لملفات الترحيل الممسوحة ضوئيًا",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.editCatalogRecordValue.label": {
+      "text": "تحرير سجل الكتالوج {entryKey}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByStatus.label": {
+      "text": "تصفية المرشحين حسب الحالة",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.languageReportArtifactText.label": {
+      "text": "نص التقرير اللغوي",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.localeTemplate.label": {
+      "text": "قالب الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.selectValue.label": {
+      "text": "اختر «{filePath}»",
+      "status": "machine-generated"
+    },
+    "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
+      "text": "يتم دائمًا الاحتفاظ بالملفات التي تم إنشاؤها ضمن الإعدادات المحلية للغة /.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.componentCatalogEditRecord.title": {
+      "text": "تحرير سجل في كتالوج المكونات",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteCatalogOnSave.text": {
+      "text": "حذف الكتالوج عند الحفظ",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteGeneratedCatalogDataValue.text": {
+      "text": "حذف بيانات الكتالوج التي تم إنشاؤها: {catalogRemovals}",
+      "status": "machine-generated"
+    },
+    "translator.dialog.deleteLocaleValue.title": {
+      "text": "هل تريد حذف الإعدادات المحلية {id}؟",
+      "status": "machine-generated"
+    },
+    "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
+      "text": "سيتم الاحتفاظ بكتالوجات الإعدادات المحلية التي تم إنشاؤها.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.keepCatalogRecommended.text": {
+      "text": "الاحتفاظ بالكتالوج (موصى به)",
+      "status": "machine-generated"
+    },
+    "translator.dialog.noAuthoritativeFilesWillChange.text": {
+      "text": "لن تتغير أي ملفات مرجعية.",
+      "status": "machine-generated"
+    },
+    "translator.dialog.saveTheReportArtifactSeparately.title": {
+      "text": "حفظ ملف التقرير بشكل منفصل",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanFolder.text": {
+      "text": "مسح المجلد",
+      "status": "machine-generated"
+    },
+    "translator.dialog.scanMigrationSourceFolder.title": {
+      "text": "مسح مجلد مصدر الترحيل",
+      "status": "machine-generated"
+    },
+    "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
+      "text": "سيتم الاحتفاظ بشكل افتراضي ببيانات «/» و«/» و«/» و«{id}» التي تم إنشاؤها.",
+      "status": "machine-generated"
+    },
+    "translator.message.aScannedSourcePathIsNotANormalized.text": {
+      "text": "مسار المصدر الذي تم مسحه ضوئيًا ليس مسارًا نسبيًا مُعَدَّلًا للمستودع.",
+      "status": "machine-generated"
+    },
+    "translator.message.candidateStatusRejected.text": {
+      "text": "رفض منح صفة المرشح",
+      "status": "machine-generated"
+    },
+    "translator.message.candidateStatusUpdatedInMemory.text": {
+      "text": "تم تحديث حالة المرشح في الذاكرة",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordIsNoLongerAvailable.text": {
+      "text": "لم يعد سجل الكتالوج متاحًا",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogRecordUpdatedInMemory.text": {
+      "text": "تم تحديث سجل الكتالوج في الذاكرة",
+      "status": "machine-generated"
+    },
+    "translator.message.duplicateLocaleIdValue.text": {
+      "text": "معرّف الإعدادات المحلية مكرر: {localeId}",
+      "status": "machine-generated"
+    },
+    "translator.message.existingLocaleIdentifiersCannotBeRenamed.text": {
+      "text": "لا يمكن إعادة تسمية معرّفات الإعدادات المحلية الحالية.",
+      "status": "machine-generated"
+    },
+    "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
+      "text": "كتالوج الإعدادات المحلية الذي تم إنشاؤه ليس مجلدًا: {relativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleIdentifierForCatalogRemovalValue.text": {
+      "text": "معرّف الإعدادات المحلية غير صالح لإزالة الكتالوج: {localeId}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleRequest.text": {
+      "text": "طلب إعدادات لغة غير صالح.",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidLocaleStatusValue.text": {
+      "text": "حالة الإعدادات المحلية غير صالحة: {localeStatus}",
+      "status": "machine-generated"
+    },
+    "translator.message.invalidScannedFileSelection.text": {
+      "text": "اختيار ملف ممسوح ضوئيًا غير صالح.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportArtifactSaved.text": {
+      "text": "تم حفظ ملف تقرير اللغة",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportArtifactWasNotSaved.text": {
+      "text": "لم يتم حفظ ملف تقرير اللغة",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportTextExceedsThe5000000.text": {
+      "text": "يتجاوز نص تقرير اللغة الحد الآمن البالغ 5 000 000 حرف.",
+      "status": "machine-generated"
+    },
+    "translator.message.languageReportTextMustBeAString.text": {
+      "text": "يجب أن يكون نص تقرير اللغة عبارة عن سلسلة أحرف.",
+      "status": "machine-generated"
+    },
+    "translator.message.localeAdded.text": {
+      "text": "تمت إضافة الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "translator.message.localeDeletedFromRegistry.text": {
+      "text": "تم حذف الإعدادات المحلية من السجل",
+      "status": "machine-generated"
+    },
+    "translator.message.localeDirectionMustBeLtrOrRtl.text": {
+      "text": "يجب أن يكون اتجاه اللغة «ltr» أو «rtl».",
+      "status": "machine-generated"
+    },
+    "translator.message.localeUpdated.text": {
+      "text": "تم تحديث الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "translator.message.localeValueNoLongerExists.text": {
+      "text": "لم يعد الإعداد المحلي {id} موجودًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.migrationFilesAlreadyListed.text": {
+      "text": "ملفات الترحيل المدرجة بالفعل",
+      "status": "machine-generated"
+    },
+    "translator.message.removeValueFromTheLocaleRegistry.text": {
+      "text": "هل يجب إزالة «{id}» من سجل الإعدادات اللغوية؟",
+      "status": "machine-generated"
+    },
+    "translator.message.requiredLocaleValueCannotBeDeleted.text": {
+      "text": "يتعذر حذف الإعدادات المحلية المطلوبة {id}.",
+      "status": "machine-generated"
+    },
+    "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
+      "text": "احفظ التعديلات التي أجريتها على «تقرير اللغة» أو قم بإلغائها قبل حفظ بيانات اللغة القياسية.",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedFolderIsOutsideTheRepositoryRootValue.text": {
+      "text": "المجلد المحدد يقع خارج جذر المستودع: {folderPath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectedPathIsNotAFolderValue.text": {
+      "text": "المسار المحدد ليس مجلدًا: {folderPath}",
+      "status": "machine-generated"
+    },
+    "translator.message.selectPotentialCandidateRejectedOrReview.text": {
+      "text": "اختر «مرشح محتمل» أو «مرفوض» أو «مراجعة».",
+      "status": "machine-generated"
+    },
+    "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
+      "text": "تم تغيير سجل الكتالوج {recordKey} أو لم يعد موجودًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLanguageReportChangedOnDiskReloadIt.text": {
+      "text": "تم تغيير تقرير اللغة على القرص. يرجى إعادة تحميله قبل حفظ تعديلاتك.",
+      "status": "machine-generated"
+    },
+    "translator.message.theLocaleChangedOrNoLongerExists.text": {
+      "text": "تم تغيير الموقع أو لم يعد موجودًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.theMigrationCandidatesCouldNotBeReloaded.text": {
+      "text": "تعذر إعادة تحميل عمليات الترحيل المرشحة.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedTextIsNoLongerACurrent.text": {
+      "text": "لم يعد النص المحدد مرشحاً حاليًا لعدم إدراجه في الفهرس.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToAddTheScannedFiles.text": {
+      "text": "تعذر إضافة الملفات الممسوحة ضوئيًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToApplyLocale.text": {
+      "text": "تعذر تطبيق الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToDeleteLocale.text": {
+      "text": "تعذر حذف الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToLoadTheLanguageReportArtifact.text": {
+      "text": "تعذر تحميل ملف تقرير اللغة.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToRefreshCandidateCatalogStatus.text": {
+      "text": "تعذر تحديث حالة كتالوج المرشحين",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToUpdateCandidateStatus.text": {
+      "text": "تعذر تحديث حالة المرشح.",
+      "status": "machine-generated"
+    },
+    "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
+      "text": "استخدم معرّف الإعدادات المحلية مثل en أو fr CA أو zh Hans.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
+      "text": "استخدم خيار «حفظ عنصر التقرير» في عرض «تقرير اللغة» قبل حفظ بيانات اللغة القياسية.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
+      "text": "استخدم زر «حفظ» لتثبيت حالة المرشح في مكونات اللغة / والمعيارية / و.json.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
+      "text": "استخدم زر «حفظ» لتثبيت التغييرات التي أجريتها على «كتالوج المكونات».",
+      "status": "machine-generated"
+    },
+    "translator.message.valueIsNotAFile.text": {
+      "text": "{lANGUAGE_REPORT_PATH} ليس ملفًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
+      "text": "{resultRelativePath} تمت كتابتها مباشرةً. وقد تحل نسخة مستقبلية من التقرير محل هذه التعديلات.",
+      "status": "machine-generated"
+    },
+    "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
+      "text": "انتظر حتى ينتهي إنشاء النسخة اللغوية قبل حفظ ملف التقرير.",
+      "status": "machine-generated"
+    },
+    "translator.ui.add1SelectedFile.text": {
+      "text": "أضف ملفًا واحدًا من الملفات المحددة",
+      "status": "machine-generated"
+    },
+    "translator.ui.addCategory.text": {
+      "text": "إضافة فئة",
+      "status": "machine-generated"
+    },
+    "translator.ui.addedValueFileSUnderComponentValueSave.text": {
+      "text": "تمت إضافة ملف (ملفات) {resultAddedFilesCount} ضمن المكون {componentSelectValue}. ولا يزال من الضروري حفظ التغييرات.",
+      "status": "machine-generated"
+    },
+    "translator.ui.addLocale.text": {
+      "text": "إضافة إعدادات اللغة",
+      "status": "machine-generated"
+    },
+    "translator.ui.addRole.text": {
+      "text": "إضافة دور",
+      "status": "machine-generated"
+    },
+    "translator.ui.addSelectedFiles.text": {
+      "text": "إضافة الملفات المحددة",
+      "status": "machine-generated"
+    },
+    "translator.ui.addValueSelectedFiles.text": {
+      "text": "إضافة الملفات المحددة في {count}",
+      "status": "machine-generated"
+    },
+    "translator.ui.allCanonicalLocaleTemplatesAreAlreadyRegistered.text": {
+      "text": "تم تسجيل جميع قوالب الإعدادات المحلية القياسية بالفعل",
+      "status": "machine-generated"
+    },
+    "translator.ui.allStatuses.text": {
+      "text": "جميع الحالات",
+      "status": "machine-generated"
+    },
+    "translator.ui.applyChanges.text": {
+      "text": "تطبيق التغييرات",
+      "status": "machine-generated"
+    },
+    "translator.ui.assignSelectedFilesTo.text": {
+      "text": "تعيين الملفات المحددة إلى",
+      "status": "machine-generated"
+    },
+    "translator.ui.buildLanguageCatalogsValue.text": {
+      "text": "build / language / catalogs / {currentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
+      "text": "يتم حفظ قرارات المرشحين مع قائمة الترحيل.",
+      "status": "machine-generated"
+    },
+    "translator.ui.categories.text": {
+      "text": "الفئات",
+      "status": "machine-generated"
+    },
+    "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
+      "text": "خيارات «Mirror Language» / و«Canonical» / و«Language Locales» .json. تظل الإعدادات المحلية المسجلة مرئية ولكن لا يمكن اختيارها.",
+      "status": "machine-generated"
+    },
+    "translator.ui.clear.text": {
+      "text": "مسح",
+      "status": "machine-generated"
+    },
+    "translator.ui.componentCatalog.text": {
+      "text": "كتالوج المكونات",
+      "status": "machine-generated"
+    },
+    "translator.ui.deleteLocale.text": {
+      "text": "حذف الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "translator.ui.diagnosticMessages.text": {
+      "text": "رسائل التشخيص",
+      "status": "machine-generated"
+    },
+    "translator.ui.discardUnsavedLanguageReportEditsAndReloadThe.text": {
+      "text": "هل تريد إلغاء التعديلات التي لم يتم حفظها على «تقرير اللغة» وإعادة تحميل العنصر؟",
+      "status": "machine-generated"
+    },
+    "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
+      "text": "يمكنك تعديل السجل المطابق هنا دون مغادرة صفحة «جميع المرشحين».",
+      "status": "machine-generated"
+    },
+    "translator.ui.editingTheCurrentGeneratedReport.text": {
+      "text": "تحرير التقرير الذي تم إنشاؤه حالياً.",
+      "status": "machine-generated"
+    },
+    "translator.ui.editValue.text2": {
+      "text": "تحرير {currentId}",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingCategories.text": {
+      "text": "الفئات الحالية",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingRoles.text": {
+      "text": "الوظائف الشاغرة حالياً",
+      "status": "machine-generated"
+    },
+    "translator.ui.filterStatus.text": {
+      "text": "حالة المرشح",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedArtifactManualEditsCanBeOverwrittenThe.text": {
+      "text": "العنصر الذي تم إنشاؤه: قد يتم استبدال التعديلات اليدوية عند إنشاء تقرير اللغة في المرة التالية.",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogsDeleted.text": {
+      "text": "تم حذف الكتالوجات التي تم إنشاؤها",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogsScheduledForDeletion.text": {
+      "text": "الكتالوجات التي تم إنشاؤها والمقرر حذفها",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogValueWillBeDeletedWhenYou.text": {
+      "text": "سيتم حذف الكتالوج الذي تم إنشاؤه {currentId} عند الضغط على «حفظ».",
+      "status": "machine-generated"
+    },
+    "translator.ui.generatedCatalogValueWillBePreserved.text": {
+      "text": "سيتم الاحتفاظ بالكتالوج الذي تم إنشاؤه {currentId}.",
+      "status": "machine-generated"
+    },
+    "translator.ui.inspectedValueFileSScannedValueAsText.text": {
+      "text": "تم فحص ملف (ملفات) {scannedFolderInspectedFileCount}؛ وتم مسح {scannedFolderScannedFileCount} ضوئيًا كنص.",
+      "status": "machine-generated"
+    },
+    "translator.ui.languageReport.text": {
+      "text": "تقرير اللغة",
+      "status": "machine-generated"
+    },
+    "translator.ui.leftToRightLtr.text": {
+      "text": "من اليسار إلى اليمين (ltr)",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingLanguageReportArtifact.text": {
+      "text": "جاري تحميل ملف تقرير اللغة.",
+      "status": "machine-generated"
+    },
+    "translator.ui.locales.text": {
+      "text": "الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
+      "text": "يحتفظ باللغة / والإعدادات المحلية / والإعدادات المحلية .json. ويؤدي حذف إعداد محلي ما إلى الاحتفاظ بملفات المصدر الأصلية والحفاظ على بيانات الكتالوج التي تم إنشاؤها بشكل افتراضي.",
+      "status": "machine-generated"
+    },
+    "translator.ui.nextLine.text": {
+      "text": "التالي (السطر)",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFilesContainingCandidateStringsWereFoundIn.text": {
+      "text": "لم يتم العثور على أي ملفات تحتوي على سلاسل مرشحة في هذا المجلد.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noFolderSelected.text": {
+      "text": "لم يتم تحديد أي مجلد.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
+      "text": "لا يوجد مرشح تالي يستوفي معايير التصفية الحالية.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
+      "text": "لا يوجد مرشح سابق يستوفي معايير التصفية الحالية.",
+      "status": "machine-generated"
+    },
+    "translator.ui.notes.text": {
+      "text": "ملاحظات",
+      "status": "machine-generated"
+    },
+    "translator.ui.previousLine.text": {
+      "text": "السطر السابق",
+      "status": "machine-generated"
+    },
+    "translator.ui.recommendedCategories.text": {
+      "text": "الفئات الموصى بها",
+      "status": "machine-generated"
+    },
+    "translator.ui.recommendedRoles.text": {
+      "text": "الأدوار الموصى بها",
+      "status": "machine-generated"
+    },
+    "translator.ui.recursivelyInspectARepositoryFolderThenAddSelected.text": {
+      "text": "افحص مجلد المستودع بشكل متكرر، ثم أضف الملفات المرشحة المختارة في عملية واحدة.",
+      "status": "machine-generated"
+    },
+    "translator.ui.refreshingCatalogMatches.text": {
+      "text": "تجديد نتائج مطابقة الكتالوج.",
+      "status": "machine-generated"
+    },
+    "translator.ui.reject.text": {
+      "text": "رفض",
+      "status": "machine-generated"
+    },
+    "translator.ui.reloadReportFromDisk.text": {
+      "text": "إعادة تحميل التقرير من القرص",
+      "status": "machine-generated"
+    },
+    "translator.ui.requiredLocale.text": {
+      "text": "الإعدادات الإقليمية المطلوبة",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeCandidateListAndCandidateEditor.text": {
+      "text": "تغيير حجم قائمة المرشحين ومحرر المرشحين",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeLocaleListAndLocaleEditor.text": {
+      "text": "تغيير حجم قائمة الإعدادات المحلية ومحرر الإعدادات المحلية",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeValueListAndEditor.text": {
+      "text": "تغيير حجم قائمة ومحرر «{definitionTitle}»",
+      "status": "machine-generated"
+    },
+    "translator.ui.resizeWorkspaceAndOperationResults.text": {
+      "text": "تغيير حجم مساحة العمل ونتائج العمليات",
+      "status": "machine-generated"
+    },
+    "translator.ui.retry.text": {
+      "text": "إعادة المحاولة",
+      "status": "machine-generated"
+    },
+    "translator.ui.rightToLeftRtl.text": {
+      "text": "من اليمين إلى اليسار (rtl)",
+      "status": "machine-generated"
+    },
+    "translator.ui.roles.text": {
+      "text": "الأدوار",
+      "status": "machine-generated"
+    },
+    "translator.ui.saveReportArtifact.text": {
+      "text": "حفظ عنصر التقرير",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanFolder.text": {
+      "text": "مسح المجلد.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanningSelectedFolder.text": {
+      "text": "جاري مسح المجلد المحدد.",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFolder.text": {
+      "text": "مسح مجلد المصدر",
+      "status": "machine-generated"
+    },
+    "translator.ui.scanSourceFolderValue.text": {
+      "text": "مجلد مصدر الملفات الممسوحة ضوئيًا: {scannedFolderPath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectACategory.text": {
+      "text": "(اختر فئة)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
+      "text": "اختر مجلدًا للبحث عن الملفات التي تحتوي على سلاسل نصية مرشحة.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectAllNew.text": {
+      "text": "تحديد جميع العناصر الجديدة",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectALocaleOrAddANewOne.text": {
+      "text": "اختر إعدادات لغة أو أضف إعدادات جديدة.",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectALocaleTemplate.text": {
+      "text": "اختر قالب الإعدادات الإقليمية",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectARole.text": {
+      "text": "(اختر دورًا)",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectedValue.text2": {
+      "text": "تم اختيار: {scannedFolderPath}",
+      "status": "machine-generated"
+    },
+    "translator.ui.selectFolder.text": {
+      "text": "اختر مجلدًا.",
+      "status": "machine-generated"
+    },
+    "translator.ui.semanticKeywords.text": {
+      "text": "الكلمات المفتاحية الدلالية",
+      "status": "machine-generated"
+    },
+    "translator.ui.skippedValueFileOrFolderPathS.text": {
+      "text": "تم تخطي مسار (مسارات) ملف أو مجلد «{skipped}».",
+      "status": "machine-generated"
+    },
+    "translator.ui.status.text": {
+      "text": "الحالة",
+      "status": "machine-generated"
+    },
+    "translator.ui.stoppedAtTheValueFileSafetyLimit.text": {
+      "text": "توقف عند الحد الأقصى لأمان الملفات في «{scannedFolderLimitsMaximumFiles}».",
+      "status": "machine-generated"
+    },
+    "translator.ui.textDirection.text": {
+      "text": "اتجاه النص",
+      "status": "machine-generated"
+    },
+    "translator.ui.theInventoryIsUnchangedUntilSelectedFilesAre.text": {
+      "text": "يظل الجرد دون تغيير إلى أن تتم إضافة الملفات المحددة.",
+      "status": "machine-generated"
+    },
+    "translator.ui.theReportDoesNotExistYetSavingWill.text": {
+      "text": "التقرير غير موجود حتى الآن. سيؤدي الحفظ إلى إنشائه.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
+      "text": "هذا الإعداد الإقليمي مطلوب من قِبل مُنشئ اللغة.",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueCandidateBearingFileSValuePotentialCandidate.text": {
+      "text": "{scannedFolderCandidateFileCount} ملف (ملفات) المرشح، {scannedFolderCandidateCount} المرشح (المرشحون) المحتملون، {scannedFolderCatalogedStringCount} الموجودون في الكتالوج",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text": {
+      "text": "{scannedFileCandidateCount} مرشح (مرشحون) غير مدرجين في الدليل، تم العثور على {scannedFileCatalogedStringCount} في الدليل",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text2": {
+      "text": "{fileCandidateCount} مرشح (مرشحون) غير مدرجين في الدليل، تم العثور على {fileCatalogedStringCount} في الدليل",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogCandidateSValueFoundIn.text3": {
+      "text": "{candidateRowsLengthCatalogedCount} مرشح (مرشحون) غير مدرجين في الدليل، تم العثور على {catalogedCount} في الدليل",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueNonCatalogValueFoundInCatalog.text": {
+      "text": "{fileCandidateCount} {fileCatalogedStringCount} غير مدرج في الكتالوج، تم العثور عليه في الكتالوج",
+      "status": "machine-generated"
+    },
+    "translator.ui.valuePotentialValueInCatalogValue.text": {
+      "text": "{fileCandidateCount} المنتج المحتمل {fileCatalogedStringCount} في الكتالوج {inventoryText}",
+      "status": "machine-generated"
+    },
+    "translator.ui.view.text": {
+      "text": "عرض",
+      "status": "machine-generated"
+    }
+  }
+}

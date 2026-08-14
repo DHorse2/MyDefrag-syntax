@@ -1,0 +1,138 @@
+{
+  "locale": "fr",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "Langages de programmation",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "Mise en évidence de la syntaxe pour le langage de script « My Defragmenter »",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "Mise en évidence de la syntaxe pour le langage de script « My Defragmenter »",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "Répertoire contenant les données utilisateur de My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "Mon défragmenteur",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "Répertoire contenant les fichiers journaux de « Mon Défragmenteur ».",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "Activer la journalisation de débogage de l'extension « My Defragmenter ».",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "Niveau de détail de l'extension « Mon Défragmenteur ». La journalisation de débogage nécessite que l'option « mydfrg debug On » soit activée.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "Gravité du diagnostic pour les références trouvées uniquement en remontant dans les dossiers parents.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "Niveau de gravité du diagnostic pour les références contenant des macros de temps d'exécution.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "Niveau de gravité du diagnostic pour les références dont les fichiers cibles ont été trouvés.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "Niveau de gravité du diagnostic pour les références dont les fichiers cibles sont introuvables.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "Niveau de gravité du diagnostic pour les messages parents des fragments déduits.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "Modèles « Glob » à exclure de la validation de « My Defragmenter »",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "Mon script de défragmentation",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "Ouvrir le fichier à la position",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "Mon défragmenteur : diagnostic suivant",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "Mon défragmenteur : diagnostic précédent",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "Mon défragmenteur : Fichier suivant",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "Mon Défragmenteur : diagnostic « Marque » corrigé",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "Mon défragmenteur : ignorer le diagnostic",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "Mon défragmenteur : ignorer le diagnostic",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "Mon Défragmenteur : envoyer un rapport de diagnostic à l'agent",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "Mon défragmenteur : premier diagnostic",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "Mon Défragmenteur : Réinitialiser la navigation dans le diagnostic",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "Mon Défragmenteur : Actualiser les diagnostics",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "Mon défragmenteur : Diagnostic des filtres",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "Mon Défragmenteur : Effacer le filtre de diagnostic",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "Mon Défragmenteur : Afficher les diagnostics sous forme d'arborescence",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "Mon défragmenteur : afficher les diagnostics sous forme de tableau",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "Mon Défragmenteur : Fermer l'Explorateur de diagnostics",
+      "status": "machine-generated"
+    }
+  }
+}

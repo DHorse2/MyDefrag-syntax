@@ -1,0 +1,22 @@
+{
+  "locale": "ig",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "Defragmenter m: Enweghị nchọpụta ugbu a.",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) Defragmenter m {index} / {total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) Nyocha 0 nke Defragmenter m",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "Nyocha: {current} / {eligible} / {all} ({remaining} fọdụrụ, faịlụ {remainingFiles} / {traversableFiles} / {totalFiles}, edoziwo {fixed}, echefuru {ignored}, hapụrụ {skipped})",
+      "status": "machine-generated"
+    }
+  }
+}

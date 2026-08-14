@@ -1,0 +1,22 @@
+{
+  "locale": "ar",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "أداة إلغاء التجزئة الخاصة بي: لا توجد تشخيصات حالية.",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) برنامج «My Defragmenter» {index} / {total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) تشخيصات برنامج «My Defragmenter 0»",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "التشخيص: {current} / {eligible} / {all} ({remaining} متبقية، {remainingFiles} / {traversableFiles} / {totalFiles} ملفات، تم إصلاح {fixed}، تم تجاهل {ignored}، تم تخطي {skipped})",
+      "status": "machine-generated"
+    }
+  }
+}

@@ -52,10 +52,10 @@ test('loads the selected component and saves a schema-valid translation', async 
 
 test('loads generated API translations without hiding them or dirtying authored data', async (t) => {
     const rootDir = createFixture(t);
-    const generatedDir = path.join(rootDir, 'build', 'language', 'catalogs', 'fr-CA');
+    const generatedDir = path.join(rootDir, 'build', 'language', 'catalogs', 'am');
     fs.mkdirSync(generatedDir, { recursive: true });
     fs.writeFileSync(path.join(generatedDir, 'extension.json'), `${JSON.stringify({
-        locale: 'fr-CA',
+        locale: 'am',
         component: 'extension',
         generatedAt: new Date(0).toISOString(),
         entries: {
@@ -79,7 +79,7 @@ test('loads generated API translations without hiding them or dirtying authored 
     const integration = new StubBuildIntegration();
     const service = new LocaleMaintenanceService(rootDir, { buildIntegration: integration });
     service.load();
-    const selected = service.select({ localeId: 'fr-CA', componentId: 'extension' });
+    const selected = service.select({ localeId: 'am', componentId: 'extension' });
     assert.equal(selected.ok, true);
     const generated = selected.state.rows.find((row) => (
         row.key === 'extension.command.openSettings.title'
@@ -111,7 +111,7 @@ test('loads generated API translations without hiding them or dirtying authored 
     assert.equal(promoted.translationOrigin, 'authored');
     assert.equal(applied.state.dirty, true);
     assert.equal((await service.save()).ok, true);
-    assert.equal(readJson(rootDir, 'language/locales/fr-CA/extension.json').entries[
+    assert.equal(readJson(rootDir, 'language/locales/am/extension.json').entries[
         generated.key
     ].text, generated.translationText);
 });
@@ -290,6 +290,109 @@ test('save completes through the real component subprocess and streams progress'
     assert.ok(progress.some((update) => update.phase === 'build' && update.cancellable));
     assert.ok(progress.some((update) => update.phase === 'build-output' && update.stream === 'stdout'));
     assert.ok(progress.some((update) => update.phase === 'commit'));
+});
+
+test('saving one authored value preserves and persists an unrelated generated translation', async (t) => {
+    const rootDir = createFixture(t);
+    const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    const initialState = builder.loadLanguageState(rootDir);
+    const canonicalEntries = initialState.catalog.entries.filter((entry) => entry.component === 'extension');
+    const generatedOnly = canonicalEntries.find((entry) => (
+        entry.key !== 'extension.command.openPreview.title'
+        &&
+        !(initialState.localeCatalogs.am?.entries || []).some((item) => item.key === entry.key)
+    ));
+    const generatedDir = path.join(rootDir, 'build/language/catalogs/am');
+    fs.mkdirSync(generatedDir, { recursive: true });
+    fs.writeFileSync(path.join(generatedDir, 'extension.json'), `${JSON.stringify({
+        locale: 'am',
+        component: 'extension',
+        generatedAt: new Date(0).toISOString(),
+        entries: {
+            [generatedOnly.key]: {
+                text: '必须保留的生成翻译',
+                status: 'machine-generated',
+                sourceStatus: generatedOnly.status,
+                fallbackLocale: null,
+                placeholders: generatedOnly.placeholders || []
+            }
+        }
+    }, null, 2)}\n`, 'utf8');
+    const integration = new BuildIntegration(rootDir, {
+        spawn: (executable, args, options) => spawn(executable, args, {
+            ...options,
+            env: { ...options.env, DeeplApi: '', DEEPL_API_KEY: '' }
+        })
+    });
+    const service = new LocaleMaintenanceService(rootDir, { buildIntegration: integration });
+    service.load();
+    service.select({ localeId: 'am', componentId: 'extension' });
+    service.applyTranslation({
+        key: 'extension.command.openPreview.title',
+        text: '保存预览',
+        status: 'reviewed'
+    });
+
+    const result = await service.save();
+
+    assert.equal(result.ok, true);
+    const generated = readJson(rootDir, 'build/language/catalogs/am/extension.json');
+    const authoritative = readJson(rootDir, 'language/locales/am/extension.json');
+    assert.equal(generated.entries[generatedOnly.key].text, '必须保留的生成翻译');
+    assert.equal(generated.entries[generatedOnly.key].fallbackLocale, null);
+    assert.deepEqual(authoritative.entries[generatedOnly.key], {
+        text: '必须保留的生成翻译',
+        status: 'machine-generated'
+    });
+});
+
+test('rebuilding reloads a preserved generated translation as durable authored state', async (t) => {
+    const rootDir = createFixture(t);
+    const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    const componentPath = path.join(rootDir, 'language/locales/fr-CA/extension.json');
+    const componentDocument = readJson(rootDir, 'language/locales/fr-CA/extension.json');
+    const generatedOnlyKey = Object.keys(componentDocument.entries)[0];
+    delete componentDocument.entries[generatedOnlyKey];
+    fs.writeFileSync(componentPath, `${JSON.stringify(componentDocument, null, 2)}\n`, 'utf8');
+    const initialState = builder.loadLanguageState(rootDir);
+    const canonical = initialState.catalog.entries.find((entry) => entry.key === generatedOnlyKey);
+    const generatedDir = path.join(rootDir, 'build/language/catalogs/fr-CA');
+    fs.mkdirSync(generatedDir, { recursive: true });
+    fs.writeFileSync(path.join(generatedDir, 'extension.json'), `${JSON.stringify({
+        locale: 'fr-CA',
+        component: 'extension',
+        generatedAt: new Date(0).toISOString(),
+        entries: {
+            [canonical.key]: {
+                text: 'TRADUCTION DURABLE',
+                status: 'machine-generated',
+                sourceStatus: canonical.status,
+                fallbackLocale: null,
+                placeholders: canonical.placeholders || []
+            }
+        }
+    }, null, 2)}\n`, 'utf8');
+    const integration = new BuildIntegration(rootDir, {
+        spawn: (executable, args, options) => spawn(executable, args, {
+            ...options,
+            env: { ...options.env, DeeplApi: '', DEEPL_API_KEY: '' }
+        })
+    });
+    const service = new LocaleMaintenanceService(rootDir, { buildIntegration: integration });
+    service.load();
+    service.select({ localeId: 'fr-CA', componentId: 'extension' });
+
+    const result = await service.rebuild();
+
+    assert.equal(result.ok, true);
+    const row = result.state.rows.find((item) => item.key === canonical.key);
+    assert.equal(row.translationText, 'TRADUCTION DURABLE');
+    assert.equal(row.authored, true);
+    assert.equal(row.translationOrigin, 'authored');
+    assert.deepEqual(
+        readJson(rootDir, 'language/locales/fr-CA/extension.json').entries[canonical.key],
+        { text: 'TRADUCTION DURABLE', status: 'machine-generated' }
+    );
 });
 
 test('English canonical text is read-only in the locale application', (t) => {

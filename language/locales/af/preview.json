@@ -1,0 +1,22 @@
+{
+  "locale": "af",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "BEGIN [diepte {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "EINDE [diepte {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "Sluit lêers in. ({count}-lêer(e) verwerk)",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** WAARSKUWING: Verkeerde insluiting (\"{uri}\") ***",
+      "status": "machine-generated"
+    }
+  }
+}

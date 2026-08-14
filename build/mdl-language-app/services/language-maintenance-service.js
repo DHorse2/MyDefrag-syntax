@@ -1343,6 +1343,7 @@ class LanguageMaintenanceService {
         const changes = this.repository.changedDocuments(this.originalState, this.draftState);
         report(onProgress, { phase: 'snapshot', message: 'Capturing generated files for rollback', cancellable: false });
         const generatedBefore = this.buildIntegration.snapshot();
+        const durableLocaleBefore = this.buildIntegration.snapshotDurableLocaleSources();
         let transaction;
         let catalogRemoval;
         try {
@@ -1355,6 +1356,7 @@ class LanguageMaintenanceService {
                 catalogRemoval.rollback();
                 transaction.rollback();
                 this.buildIntegration.restore(generatedBefore);
+                this.buildIntegration.restoreDurableLocaleSources(durableLocaleBefore);
                 return {
                     ok: false,
                     stage: 'build',
@@ -1370,6 +1372,11 @@ class LanguageMaintenanceService {
             report(onProgress, { phase: 'compare', message: 'Checking generated file changes', cancellable: false });
             const generatedAfter = this.buildIntegration.snapshot();
             const generatedFiles = this.buildIntegration.diff(generatedBefore, generatedAfter);
+            const durableLocaleAfter = this.buildIntegration.snapshotDurableLocaleSources();
+            const durableLocaleFiles = this.buildIntegration.diff(
+                durableLocaleBefore,
+                durableLocaleAfter
+            );
             report(onProgress, { phase: 'commit', message: 'Committing language changes', cancellable: false });
             const catalogsRemoved = catalogRemoval.files;
             catalogRemoval.commit();
@@ -1381,6 +1388,7 @@ class LanguageMaintenanceService {
                 buildMode: selectedBuild.mode,
                 authoritativeFiles: preview.authoritativeFiles,
                 generatedFiles,
+                durableLocaleFiles,
                 catalogsRemoved,
                 recoveryFiles,
                 build,
@@ -1395,6 +1403,7 @@ class LanguageMaintenanceService {
                 catalogRemoval.rollback();
             }
             this.buildIntegration.restore(generatedBefore);
+            this.buildIntegration.restoreDurableLocaleSources(durableLocaleBefore);
             return {
                 ok: false,
                 stage: 'write',

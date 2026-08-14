@@ -14,12 +14,14 @@ class CompletionPointProvider {
      * @param {object} dependencies.languageData Existing language-data module.
      * @param {object} [dependencies.logger] Optional extension logger.
      * @param {object} [dependencies.config] Optional extension configuration.
+     * @param {Function} [dependencies.isEnabled] Optional live enabled-state reader.
      */
-    constructor({ vscode, languageData, logger, config } = {}) {
+    constructor({ vscode, languageData, logger, config, isEnabled } = {}) {
         this.vscode = vscode;
         this.languageData = languageData;
         this.logger = logger;
         this.config = config;
+        this.isEnabled = isEnabled;
     }
 
     /**
@@ -30,6 +32,10 @@ class CompletionPointProvider {
      */
     provide(request = {}) {
         const { document, position, token } = request;
+
+        if (this.isEnabled && !this.isEnabled()) {
+            return [];
+        }
 
         if (!document || !position || token?.isCancellationRequested) {
             return [];

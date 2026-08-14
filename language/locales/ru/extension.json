@@ -1,0 +1,42 @@
+{
+  "locale": "ru",
+  "component": "extension",
+  "entries": {
+    "extension.command.configureFolders.title": {
+      "text": "«Мой дефрагментатор»: настройка папок",
+      "status": "machine-generated"
+    },
+    "extension.command.openPreview.title": {
+      "text": "Открыть предварительный просмотр",
+      "status": "machine-generated"
+    },
+    "extension.command.openSettings.title": {
+      "text": "«Мой дефрагментатор»: открыть настройки",
+      "status": "machine-generated"
+    },
+    "extension.message.noActiveDocument.warning": {
+      "text": "В данный момент не запущен ни один документ «My Defragmenter».",
+      "status": "machine-generated"
+    },
+    "extension.product.displayName": {
+      "text": "Мой скрипт для дефрагментации (.MyDc / .MyD)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.fragment.text": {
+      "text": "«Мой фрагмент дефрагментатора» (.mydc)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.script.text": {
+      "text": "Мой скрипт для дефрагментации (.myd)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.unknown.text": {
+      "text": "Моя программа дефрагментации Неизвестный тип документа",
+      "status": "machine-generated"
+    },
+    "extension.window.channelName": {
+      "text": "Синтаксис команды «Дефрагментатор»",
+      "status": "machine-generated"
+    }
+  }
+}

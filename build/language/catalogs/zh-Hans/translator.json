@@ -23,11 +23,11 @@
       "text": "构建命令的输出"
     },
     "translator.accessibility.candidateStatus.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status"
+      "status": "machine-generated",
+      "text": "候选人身份"
     },
     "translator.accessibility.closeOperationResult.label": {
       "fallbackLocale": null,
@@ -76,11 +76,11 @@
       "text": "已扫描迁移文件的组件"
     },
     "translator.accessibility.componentForScannedMigrationFiles.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component for scanned migration files"
+      "status": "machine-generated",
+      "text": "用于扫描迁移文件的组件"
     },
     "translator.accessibility.componentIdentifier.label": {
       "fallbackLocale": null,
@@ -97,20 +97,20 @@
       "text": "默认预览模式"
     },
     "translator.accessibility.editCatalogRecordValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "entryKey"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit catalog record {entryKey}"
+      "status": "machine-generated",
+      "text": "编辑目录记录 {entryKey}"
     },
     "translator.accessibility.filterCandidatesByStatus.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filter candidates by status"
+      "status": "machine-generated",
+      "text": "按状态筛选候选人"
     },
     "translator.accessibility.filterMigrationSourceFiles.label": {
       "fallbackLocale": null,
@@ -120,18 +120,18 @@
       "text": "筛选迁移源文件"
     },
     "translator.accessibility.languageReportArtifactText.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact text"
+      "status": "machine-generated",
+      "text": "语言报告文档正文"
     },
     "translator.accessibility.localeTemplate.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale template"
+      "status": "machine-generated",
+      "text": "区域设置模板"
     },
     "translator.accessibility.maximizeValue.label": {
       "fallbackLocale": null,
@@ -201,13 +201,13 @@
       "text": "运行时组件"
     },
     "translator.accessibility.selectValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select {filePath}"
+      "status": "machine-generated",
+      "text": "选择{filePath}"
     },
     "translator.accessibility.selectedComponent.label": {
       "fallbackLocale": null,
@@ -338,11 +338,11 @@
       "text": "添加迁移源文件"
     },
     "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Authored files under language/locales are always preserved."
+      "status": "machine-generated",
+      "text": "/ 语言区域下的已编写文件将始终被保留。"
     },
     "translator.dialog.cancel.text": {
       "fallbackLocale": null,
@@ -366,11 +366,11 @@
       "text": "元器件目录 添加记录"
     },
     "translator.dialog.componentCatalogEditRecord.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog Edit Record"
+      "status": "machine-generated",
+      "text": "元器件目录：编辑记录"
     },
     "translator.dialog.confirmAuthoritativeChanges.title": {
       "fallbackLocale": null,
@@ -380,29 +380,29 @@
       "text": "确认权威性变更"
     },
     "translator.dialog.deleteCatalogOnSave.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete catalog on Save"
+      "status": "machine-generated",
+      "text": "保存时删除目录"
     },
     "translator.dialog.deleteGeneratedCatalogDataValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "catalogRemovals"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete generated catalog data: {catalogRemovals}"
+      "status": "machine-generated",
+      "text": "删除生成的目录数据：{catalogRemovals}"
     },
     "translator.dialog.deleteLocaleValue.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete locale {id}?"
+      "status": "machine-generated",
+      "text": "删除语言环境{id}？"
     },
     "translator.dialog.discardAndReload.text": {
       "fallbackLocale": null,
@@ -433,18 +433,18 @@
       "text": "不保存直接退出"
     },
     "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated locale catalogs will be preserved."
+      "status": "machine-generated",
+      "text": "生成的区域设置目录将被保留。"
     },
     "translator.dialog.keepCatalogRecommended.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Keep catalog (recommended)"
+      "status": "machine-generated",
+      "text": "保留目录（推荐）"
     },
     "translator.dialog.languageBuildIsRunning.title": {
       "fallbackLocale": null,
@@ -489,11 +489,11 @@
       "text": "我的磁盘碎片整理工具语言维护"
     },
     "translator.dialog.noAuthoritativeFilesWillChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No authoritative files will change."
+      "status": "machine-generated",
+      "text": "不会更改任何权威文件。"
     },
     "translator.dialog.noFilesWillChange.text": {
       "fallbackLocale": null,
@@ -552,11 +552,11 @@
       "text": "保存失败并已回滚"
     },
     "translator.dialog.saveTheReportArtifactSeparately.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save the report artifact separately"
+      "status": "machine-generated",
+      "text": "将报告工件单独保存"
     },
     "translator.dialog.scanFile.text": {
       "fallbackLocale": null,
@@ -566,11 +566,11 @@
       "text": "扫描文件"
     },
     "translator.dialog.scanFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan folder"
+      "status": "machine-generated",
+      "text": "扫描文件夹"
     },
     "translator.dialog.scanMigrationSourceFile.title": {
       "fallbackLocale": null,
@@ -580,11 +580,11 @@
       "text": "扫描迁移源文件"
     },
     "translator.dialog.scanMigrationSourceFolder.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan migration source folder"
+      "status": "machine-generated",
+      "text": "扫描迁移源文件夹"
     },
     "translator.dialog.selectTheMydefragSyntaxRepository.title": {
       "fallbackLocale": null,
@@ -601,13 +601,13 @@
       "text": "开始我的“磁盘碎片整理”语言维护工作"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The generated build/language/catalogs/{id} data will be kept by default."
+      "status": "machine-generated",
+      "text": "生成的构建 / 语言 / 目录 / {id} 数据将默认保留。"
     },
     "translator.dialog.unsavedLanguageChanges.title": {
       "fallbackLocale": null,
@@ -707,11 +707,11 @@
       "text": "未找到支持行号的 VS Codium 或 VS Code 安装；源文件已通过其默认应用程序打开。"
     },
     "translator.message.aScannedSourcePathIsNotANormalized.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A scanned source path is not a normalized repository relative file path."
+      "status": "machine-generated",
+      "text": "已扫描的源路径并非规范化的仓库相对文件路径。"
     },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
       "fallbackLocale": null,
@@ -742,18 +742,18 @@
       "text": "取消后，构建过程未报告已终止。"
     },
     "translator.message.candidateStatusRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status rejected"
+      "status": "machine-generated",
+      "text": "候选人资格被驳回"
     },
     "translator.message.candidateStatusUpdatedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status updated in memory"
+      "status": "machine-generated",
+      "text": "内存中的候选状态已更新"
     },
     "translator.message.catalogRecordAddedToInMemoryDraft.text": {
       "fallbackLocale": null,
@@ -763,18 +763,18 @@
       "text": "将书目记录添加到内存中的草稿中"
     },
     "translator.message.catalogRecordIsNoLongerAvailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog record is no longer available"
+      "status": "machine-generated",
+      "text": "该馆藏记录已不可用简体中文（大陆）"
     },
     "translator.message.catalogRecordUpdatedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog record updated in memory"
+      "status": "machine-generated",
+      "text": "内存中的目录记录已更新"
     },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
       "fallbackLocale": null,
@@ -842,13 +842,13 @@
       "text": "组件 ID 重复：{componentId}"
     },
     "translator.message.duplicateLocaleIdValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Duplicate locale id: {localeId}"
+      "status": "machine-generated",
+      "text": "区域设置 ID 重复：{localeId}"
     },
     "translator.message.duplicateValueValue.text": {
       "fallbackLocale": null,
@@ -868,11 +868,11 @@
       "text": "现有组件标识符无法重命名。"
     },
     "translator.message.existingLocaleIdentifiersCannotBeRenamed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing locale identifiers cannot be renamed."
+      "status": "machine-generated",
+      "text": "现有区域设置标识符无法重命名。"
     },
     "translator.message.exitAndDiscardAllInMemoryChanges.text": {
       "fallbackLocale": null,
@@ -889,13 +889,13 @@
       "text": "强制停止语言构建过程"
     },
     "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "relativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated locale catalog is not a directory: {relativePath}"
+      "status": "machine-generated",
+      "text": "生成的语言环境目录不是一个目录：{relativePath}"
     },
     "translator.message.invalidComponentRequest.text": {
       "fallbackLocale": null,
@@ -912,29 +912,29 @@
       "text": "文件选择无效。"
     },
     "translator.message.invalidLocaleIdentifierForCatalogRemovalValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale identifier for catalog removal: {localeId}"
+      "status": "machine-generated",
+      "text": "删除目录时使用的区域设置标识符无效：{localeId}"
     },
     "translator.message.invalidLocaleRequest.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale request."
+      "status": "machine-generated",
+      "text": "区域设置请求无效。"
     },
     "translator.message.invalidLocaleStatusValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeStatus"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale status: {localeStatus}"
+      "status": "machine-generated",
+      "text": "无效的区域设置状态：{localeStatus}"
     },
     "translator.message.invalidRecordRequest.text": {
       "fallbackLocale": null,
@@ -944,11 +944,11 @@
       "text": "记录请求无效。"
     },
     "translator.message.invalidScannedFileSelection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid scanned file selection."
+      "status": "machine-generated",
+      "text": "所选的扫描文件无效。"
     },
     "translator.message.languageBuildCancelled.text": {
       "fallbackLocale": null,
@@ -986,69 +986,69 @@
       "text": "尚未加载语言维护数据。"
     },
     "translator.message.languageReportArtifactSaved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact saved"
+      "status": "machine-generated",
+      "text": "语言报告文档已保存"
     },
     "translator.message.languageReportArtifactWasNotSaved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact was not saved"
+      "status": "machine-generated",
+      "text": "语言报告工件未保存"
     },
     "translator.message.languageReportTextExceedsThe5000000.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report text exceeds the 5 000 000 character safety limit."
+      "status": "machine-generated",
+      "text": "语言报告正文超过了 5 000 000 个字符的安全限制。"
     },
     "translator.message.languageReportTextMustBeAString.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report text must be a string."
+      "status": "machine-generated",
+      "text": "语言报告文本必须是一个字符串。"
     },
     "translator.message.localeAdded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale added"
+      "status": "machine-generated",
+      "text": "已添加语言环境"
     },
     "translator.message.localeDeletedFromRegistry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale deleted from registry"
+      "status": "machine-generated",
+      "text": "已从注册表中删除该区域设置"
     },
     "translator.message.localeDirectionMustBeLtrOrRtl.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale direction must be ltr or rtl."
+      "status": "machine-generated",
+      "text": "区域设置的方向必须为 ltr 或 rtl。"
     },
     "translator.message.localeUpdated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale updated"
+      "status": "machine-generated",
+      "text": "区域设置已更新"
     },
     "translator.message.localeValueNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale {id} no longer exists."
+      "status": "machine-generated",
+      "text": "区域设置 {id} 已不存在。"
     },
     "translator.message.migrationAssignmentRejected.text": {
       "fallbackLocale": null,
@@ -1123,11 +1123,11 @@
       "text": "已添加迁移文件"
     },
     "translator.message.migrationFilesAlreadyListed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration files already listed"
+      "status": "machine-generated",
+      "text": "已列出的迁移文件"
     },
     "translator.message.migrationFilesRejected.text": {
       "fallbackLocale": null,
@@ -1199,22 +1199,22 @@
       "text": "重新加载将清除内存中所有语言设置的更改。"
     },
     "translator.message.removeValueFromTheLocaleRegistry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Remove {id} from the locale registry?"
+      "status": "machine-generated",
+      "text": "是否应从区域设置注册表中删除{id}？"
     },
     "translator.message.requiredLocaleValueCannotBeDeleted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Required locale {id} cannot be deleted."
+      "status": "machine-generated",
+      "text": "无法删除必需的区域设置{id}。"
     },
     "translator.message.runningLanguageBuildCommand.text": {
       "fallbackLocale": null,
@@ -1224,11 +1224,11 @@
       "text": "运行语言构建命令"
     },
     "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save or discard the Language Report edits before saving canonical language data."
+      "status": "machine-generated",
+      "text": "在保存规范语言数据之前，请先保存或放弃对语言报告所做的编辑。"
     },
     "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
       "fallbackLocale": null,
@@ -1252,11 +1252,11 @@
       "text": "在添加文件之前，请先选择一个有效的组件。"
     },
     "translator.message.selectPotentialCandidateRejectedOrReview.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select Potential Candidate, Rejected, or Review."
+      "status": "machine-generated",
+      "text": "选择“潜在候选人”、“已拒绝”或“审核”。"
     },
     "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -1268,13 +1268,13 @@
       "text": "所选文件位于仓库根目录之外：{absolutePath}"
     },
     "translator.message.selectedFolderIsOutsideTheRepositoryRootValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "folderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected folder is outside the repository root: {folderPath}"
+      "status": "machine-generated",
+      "text": "所选文件夹位于仓库根目录之外：{folderPath}"
     },
     "translator.message.selectedPathIsNotAFileValue.text": {
       "fallbackLocale": null,
@@ -1286,13 +1286,13 @@
       "text": "所选路径不是文件：{absolutePath}"
     },
     "translator.message.selectedPathIsNotAFolderValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "folderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected path is not a folder: {folderPath}"
+      "status": "machine-generated",
+      "text": "所选路径不是文件夹：{folderPath}"
     },
     "translator.message.sourceFileOpened.text": {
       "fallbackLocale": null,
@@ -1302,13 +1302,13 @@
       "text": "已打开源文件"
     },
     "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "recordKey"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The catalog record {recordKey} changed or no longer exists."
+      "status": "machine-generated",
+      "text": "目录记录 {recordKey} 已更改或不再存在。"
     },
     "translator.message.theComponentChangedOrNoLongerExists.text": {
       "fallbackLocale": null,
@@ -1332,25 +1332,25 @@
       "text": "无法停止语言构建过程。"
     },
     "translator.message.theLanguageReportChangedOnDiskReloadIt.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The language report changed on disk. Reload it before saving your edits."
+      "status": "machine-generated",
+      "text": "磁盘上的语言报告已发生更改。请在保存编辑内容之前重新加载该报告。"
     },
     "translator.message.theLocaleChangedOrNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The locale changed or no longer exists."
+      "status": "machine-generated",
+      "text": "该区域已更改或已不存在。"
     },
     "translator.message.theMigrationCandidatesCouldNotBeReloaded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration candidates could not be reloaded."
+      "status": "machine-generated",
+      "text": "无法重新加载迁移候选项。"
     },
     "translator.message.theMigrationFileIsNoLongerListed.text": {
       "fallbackLocale": null,
@@ -1430,11 +1430,11 @@
       "text": "所选字符串已不再是当前正在扫描的迁移候选项。"
     },
     "translator.message.theSelectedTextIsNoLongerACurrent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The selected text is no longer a current non catalog candidate."
+      "status": "machine-generated",
+      "text": "所选文本已不再是当前的非目录候选作品。"
     },
     "translator.message.theSourceFileCouldNotBeOpened.text": {
       "fallbackLocale": null,
@@ -1458,18 +1458,18 @@
       "text": "无法添加扫描文件。"
     },
     "translator.message.unableToAddTheScannedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to add the scanned files."
+      "status": "machine-generated",
+      "text": "无法添加扫描的文件。"
     },
     "translator.message.unableToApplyLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to apply locale"
+      "status": "machine-generated",
+      "text": "无法应用区域设置"
     },
     "translator.message.unableToApplyTheComponent.text": {
       "fallbackLocale": null,
@@ -1486,11 +1486,11 @@
       "text": "无法分配该组件。"
     },
     "translator.message.unableToDeleteLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to delete locale"
+      "status": "machine-generated",
+      "text": "无法删除语言环境"
     },
     "translator.message.unableToLoadLanguageData.text": {
       "fallbackLocale": null,
@@ -1507,11 +1507,11 @@
       "text": "无法加载迁移候选项。"
     },
     "translator.message.unableToLoadTheLanguageReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to load the language report artifact."
+      "status": "machine-generated",
+      "text": "无法加载语言报告工件。"
     },
     "translator.message.unableToOpenMigrationSource.text": {
       "fallbackLocale": null,
@@ -1540,11 +1540,11 @@
       "text": "无法读取构建 / 语言 / 报告 / 迁移报告 .json：{errorMessage}"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to refresh candidate catalog status"
+      "status": "machine-generated",
+      "text": "无法刷新候选人目录状态"
     },
     "translator.message.unableToRemoveTheFile.text": {
       "fallbackLocale": null,
@@ -1554,39 +1554,39 @@
       "text": "无法删除该文件。"
     },
     "translator.message.unableToUpdateCandidateStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to update candidate status."
+      "status": "machine-generated",
+      "text": "无法更新候选人状态。"
     },
     "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use a locale identifier such as en, fr CA, or zh Hans."
+      "status": "machine-generated",
+      "text": "请使用诸如 en、fr CA 或 zh Hans 之类的区域设置标识符。"
     },
     "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save report artifact in the Language Report view before saving canonical language data."
+      "status": "machine-generated",
+      "text": "在保存规范语言数据之前，请在“语言报告”视图中使用“保存报告工件”功能。"
     },
     "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save to persist the candidate status in language/canonical/components.json."
+      "status": "machine-generated",
+      "text": "使用“保存”按钮将候选状态持久化到语言/、规范/和组件.json中。"
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save to persist the Component Catalog change."
+      "status": "machine-generated",
+      "text": "点击“保存”以将组件目录的更改永久保存。"
     },
     "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
       "fallbackLocale": null,
@@ -1610,22 +1610,22 @@
       "text": "验证结果"
     },
     "translator.message.valueIsNotAFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "lANGUAGE_REPORT_PATH"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{lANGUAGE_REPORT_PATH} is not a file."
+      "status": "machine-generated",
+      "text": "{lANGUAGE_REPORT_PATH} 不是一个文件。"
     },
     "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultRelativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{resultRelativePath} was written directly. A future report build may replace these edits."
+      "status": "machine-generated",
+      "text": "{resultRelativePath} 是直接撰写的。未来的报告版本可能会替换这些修改。"
     },
     "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
       "fallbackLocale": null,
@@ -1635,11 +1635,11 @@
       "text": "请等待构建完成后再退出。"
     },
     "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Wait for the language build to finish before saving the report artifact."
+      "status": "machine-generated",
+      "text": "请等待语言构建完成后，再保存报告工件。"
     },
     "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
       "fallbackLocale": null,
@@ -1756,18 +1756,18 @@
       "text": "编写权威语言文件"
     },
     "translator.ui.add1SelectedFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add 1 selected file"
+      "status": "machine-generated",
+      "text": "添加 1 个选定的文件"
     },
     "translator.ui.addCategory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add category"
+      "status": "machine-generated",
+      "text": "添加分类"
     },
     "translator.ui.addComponent.text": {
       "fallbackLocale": null,
@@ -1784,11 +1784,11 @@
       "text": "添加文件。"
     },
     "translator.ui.addLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add locale"
+      "status": "machine-generated",
+      "text": "添加区域设置"
     },
     "translator.ui.addRecord.text": {
       "fallbackLocale": null,
@@ -1798,18 +1798,18 @@
       "text": "添加记录"
     },
     "translator.ui.addRole.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add role"
+      "status": "machine-generated",
+      "text": "添加角色"
     },
     "translator.ui.addSelectedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add selected files"
+      "status": "machine-generated",
+      "text": "添加选定的文件"
     },
     "translator.ui.addToSourceFiles.text": {
       "fallbackLocale": null,
@@ -1819,13 +1819,13 @@
       "text": "添加到源文件中"
     },
     "translator.ui.addValueSelectedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "count"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add {count} selected files"
+      "status": "machine-generated",
+      "text": "将选定的文件添加到{count}中"
     },
     "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
       "fallbackLocale": null,
@@ -1837,14 +1837,14 @@
       "text": "已添加到{componentSelectValue}组件下的源文件中。仍需保存。"
     },
     "translator.ui.addedValueFileSUnderComponentValueSave.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultAddedFilesCount",
         "componentSelectValue"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Added {resultAddedFilesCount} file(s) under component {componentSelectValue}. Save is still required."
+      "status": "machine-generated",
+      "text": "在组件 {componentSelectValue} 下添加了 {resultAddedFilesCount} 文件。仍需保存。"
     },
     "translator.ui.allCandidates.text": {
       "fallbackLocale": null,
@@ -1863,11 +1863,11 @@
       "text": "所有候选人：{filePath}"
     },
     "translator.ui.allCanonicalLocaleTemplatesAreAlreadyRegistered.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All canonical locale templates are already registered"
+      "status": "machine-generated",
+      "text": "所有标准区域设置模板均已注册"
     },
     "translator.ui.allComponentDetails.text": {
       "fallbackLocale": null,
@@ -1891,11 +1891,11 @@
       "text": "所有组件 | 不包含任何组件的筛选条件"
     },
     "translator.ui.allStatuses.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All statuses"
+      "status": "machine-generated",
+      "text": "所有状态"
     },
     "translator.ui.allowDeeplCalls.text": {
       "fallbackLocale": null,
@@ -1928,11 +1928,11 @@
       "text": "正在分析源上下文。"
     },
     "translator.ui.applyChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply changes"
+      "status": "machine-generated",
+      "text": "应用更改"
     },
     "translator.ui.applyInMemory.text": {
       "fallbackLocale": null,
@@ -1963,11 +1963,11 @@
       "text": "将新文件分配给"
     },
     "translator.ui.assignSelectedFilesTo.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Assign selected files to"
+      "status": "machine-generated",
+      "text": "将选定的文件分配给"
     },
     "translator.ui.assignToComponent.text": {
       "fallbackLocale": null,
@@ -2009,20 +2009,20 @@
       "text": "徽章 {validationOk}"
     },
     "translator.ui.buildLanguageCatalogsValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "build/language/catalogs/{currentId}"
+      "status": "machine-generated",
+      "text": "构建 / 语言 / 目录 / {currentId}"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate decisions are saved with the migration inventory."
+      "status": "machine-generated",
+      "text": "候选方案的决策结果将与迁移清单一同保存。"
     },
     "translator.ui.candidateDetails.text": {
       "fallbackLocale": null,
@@ -2046,18 +2046,18 @@
       "text": "目录输出语言环境"
     },
     "translator.ui.categories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Categories"
+      "status": "machine-generated",
+      "text": "分类"
     },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Choices mirror language/canonical/language locales.json. Registered locales remain visible but cannot be selected."
+      "status": "machine-generated",
+      "text": "“选项”页面与“语言”页面 / 以及“规范”页面 / 中的“语言”和“区域设置”页面 .json 内容一致。已注册的区域设置仍可见，但无法被选中。"
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
       "fallbackLocale": null,
@@ -2067,11 +2067,11 @@
       "text": "从权威组件库 .json 中选择一个组件。"
     },
     "translator.ui.clear.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Clear"
+      "status": "machine-generated",
+      "text": "清除"
     },
     "translator.ui.clearEditor.text": {
       "fallbackLocale": null,
@@ -2095,11 +2095,11 @@
       "text": "组件"
     },
     "translator.ui.componentCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog"
+      "status": "machine-generated",
+      "text": "元器件目录"
     },
     "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
       "fallbackLocale": null,
@@ -2148,11 +2148,11 @@
       "text": "无法访问：{fileError}"
     },
     "translator.ui.deleteLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete locale"
+      "status": "machine-generated",
+      "text": "删除语言环境"
     },
     "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
       "fallbackLocale": null,
@@ -2178,11 +2178,11 @@
       "text": "检测到的占位符：{arrayFromNewSetNamesSort}"
     },
     "translator.ui.diagnosticMessages.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic Messages"
+      "status": "machine-generated",
+      "text": "诊断信息"
     },
     "translator.ui.discardAllInMemoryChanges.text": {
       "fallbackLocale": null,
@@ -2192,18 +2192,18 @@
       "text": "是否丢弃内存中的所有更改？"
     },
     "translator.ui.discardUnsavedLanguageReportEditsAndReloadThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard unsaved Language Report edits and reload the artifact?"
+      "status": "machine-generated",
+      "text": "是否要丢弃未保存的语言报告编辑内容并重新加载工件？"
     },
     "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit a matching record here without leaving All Candidates."
+      "status": "machine-generated",
+      "text": "无需离开“所有候选人”页面，即可在此处编辑匹配的记录。"
     },
     "translator.ui.editComponent.text": {
       "fallbackLocale": null,
@@ -2236,41 +2236,41 @@
       "text": "编辑 {componentId}"
     },
     "translator.ui.editValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit {currentId}"
+      "status": "machine-generated",
+      "text": "编辑 {currentId}"
     },
     "translator.ui.editingTheCurrentGeneratedReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Editing the current generated report."
+      "status": "machine-generated",
+      "text": "编辑当前生成的报告。"
     },
     "translator.ui.existingCategories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing Categories"
+      "status": "machine-generated",
+      "text": "现有分类"
     },
     "translator.ui.existingRoles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing Roles"
+      "status": "machine-generated",
+      "text": "现有职位"
     },
     "translator.ui.filterStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filter status"
+      "status": "machine-generated",
+      "text": "过滤器状态"
     },
     "translator.ui.filteredToComponentValue.text": {
       "fallbackLocale": null,
@@ -2282,43 +2282,43 @@
       "text": "按组件筛选：{selectedComponent}"
     },
     "translator.ui.generatedArtifactManualEditsCanBeOverwrittenThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated artifact: manual edits can be overwritten the next time the language report is built."
+      "status": "machine-generated",
+      "text": "生成的构建产物：手动编辑的内容可能会在下一次生成语言报告时被覆盖。"
     },
     "translator.ui.generatedCatalogValueWillBeDeletedWhenYou.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalog {currentId} will be deleted when you Save."
+      "status": "machine-generated",
+      "text": "保存后，生成的目录 {currentId} 将被删除。"
     },
     "translator.ui.generatedCatalogValueWillBePreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalog {currentId} will be preserved."
+      "status": "machine-generated",
+      "text": "生成的目录 {currentId} 将被保留。"
     },
     "translator.ui.generatedCatalogsDeleted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalogs deleted"
+      "status": "machine-generated",
+      "text": "已删除生成的目录"
     },
     "translator.ui.generatedCatalogsScheduledForDeletion.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalogs scheduled for deletion"
+      "status": "machine-generated",
+      "text": "计划删除的生成的目录"
     },
     "translator.ui.generatedFiles.text": {
       "fallbackLocale": null,
@@ -2356,14 +2356,14 @@
       "text": "收录于目录中"
     },
     "translator.ui.inspectedValueFileSScannedValueAsText.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderInspectedFileCount",
         "scannedFolderScannedFileCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Inspected {scannedFolderInspectedFileCount} file(s); scanned {scannedFolderScannedFileCount} as text."
+      "status": "machine-generated",
+      "text": "已检查{scannedFolderInspectedFileCount}文件；已将{scannedFolderScannedFileCount}作为文本进行扫描。"
     },
     "translator.ui.invalidValueErrorS.text": {
       "fallbackLocale": null,
@@ -2382,18 +2382,18 @@
       "text": ").join(', ')}"
     },
     "translator.ui.languageReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language Report"
+      "status": "machine-generated",
+      "text": "语言报告"
     },
     "translator.ui.leftToRightLtr.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Left to right (ltr)"
+      "status": "machine-generated",
+      "text": "从左到右（从左到右）"
     },
     "translator.ui.lineValue.text": {
       "fallbackLocale": null,
@@ -2405,11 +2405,11 @@
       "text": "第{candidateLine}行"
     },
     "translator.ui.loadingLanguageReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Loading language report artifact."
+      "status": "machine-generated",
+      "text": "正在加载语言报告工件。"
     },
     "translator.ui.loadingPotentialFoundCoverage.text": {
       "fallbackLocale": null,
@@ -2426,11 +2426,11 @@
       "text": "正在加载项目语言数据。"
     },
     "translator.ui.locales.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locales"
+      "status": "machine-generated",
+      "text": "区域设置"
     },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
       "fallbackLocale": null,
@@ -2440,11 +2440,11 @@
       "text": "维护语言 / 规范 / 组件 .json → 迁移清单 .scanFiles"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains language/locales/locales.json. Deleting a locale preserves authored source files and keeps generated catalog data by default."
+      "status": "machine-generated",
+      "text": "维护语言 /、区域设置 / 以及区域设置 .json。默认情况下，删除区域设置时会保留原始源文件，并保留生成的目录数据。"
     },
     "translator.ui.maintainsValue.text": {
       "fallbackLocale": null,
@@ -2493,11 +2493,11 @@
       "text": "迁移清单条目"
     },
     "translator.ui.nextLine.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Next (line)"
+      "status": "machine-generated",
+      "text": "下一行"
     },
     "translator.ui.no.text": {
       "fallbackLocale": null,
@@ -2528,11 +2528,11 @@
       "text": "未选择文件。"
     },
     "translator.ui.noFilesContainingCandidateStringsWereFoundIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files containing candidate strings were found in this folder."
+      "status": "machine-generated",
+      "text": "在此文件夹中未找到包含候选字符串的文件。"
     },
     "translator.ui.noFilesMatchTheCurrentFilter.text": {
       "fallbackLocale": null,
@@ -2542,11 +2542,11 @@
       "text": "没有文件符合当前筛选条件。"
     },
     "translator.ui.noFolderSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No folder selected."
+      "status": "machine-generated",
+      "text": "未选择任何文件夹。"
     },
     "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
       "fallbackLocale": null,
@@ -2563,18 +2563,18 @@
       "text": "未列出任何迁移源文件。"
     },
     "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No next candidate matches the current status filter."
+      "status": "machine-generated",
+      "text": "没有符合当前状态筛选条件的下一位候选人。"
     },
     "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No previous candidate matches the current status filter."
+      "status": "machine-generated",
+      "text": "没有之前的候选人符合当前的状态筛选条件。"
     },
     "translator.ui.noRecordsMatchTheCurrentFilters.text": {
       "fallbackLocale": null,
@@ -2619,11 +2619,11 @@
       "text": "未验证"
     },
     "translator.ui.notes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Notes"
+      "status": "machine-generated",
+      "text": "注释"
     },
     "translator.ui.openComponentCatalog.text": {
       "fallbackLocale": null,
@@ -2696,25 +2696,25 @@
       "text": "在启用 Deep L API 调用时准备保存"
     },
     "translator.ui.previousLine.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Previous (line)"
+      "status": "machine-generated",
+      "text": "上一行"
     },
     "translator.ui.recommendedCategories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recommended Categories"
+      "status": "machine-generated",
+      "text": "推荐分类"
     },
     "translator.ui.recommendedRoles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recommended Roles"
+      "status": "machine-generated",
+      "text": "推荐角色"
     },
     "translator.ui.recoveryFilesRetained.text": {
       "fallbackLocale": null,
@@ -2724,32 +2724,32 @@
       "text": "保留了恢复文件"
     },
     "translator.ui.recursivelyInspectARepositoryFolderThenAddSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recursively inspect a repository folder, then add selected candidate bearing files in one operation."
+      "status": "machine-generated",
+      "text": "递归检查仓库文件夹，然后一次性添加选定的候选轴承文件。"
     },
     "translator.ui.refreshingCatalogMatches.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Refreshing catalog matches."
+      "status": "machine-generated",
+      "text": "刷新目录匹配结果。"
     },
     "translator.ui.reject.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reject"
+      "status": "machine-generated",
+      "text": "拒绝"
     },
     "translator.ui.reloadReportFromDisk.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reload report from disk"
+      "status": "machine-generated",
+      "text": "从磁盘重新加载报告"
     },
     "translator.ui.remove.text": {
       "fallbackLocale": null,
@@ -2775,41 +2775,41 @@
       "text": "仓库维护工具"
     },
     "translator.ui.requiredLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Required locale"
+      "status": "machine-generated",
+      "text": "必需的区域设置"
     },
     "translator.ui.resizeCandidateListAndCandidateEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize candidate list and candidate editor"
+      "status": "machine-generated",
+      "text": "调整候选列表和候选编辑器的尺寸"
     },
     "translator.ui.resizeLocaleListAndLocaleEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize locale list and locale editor"
+      "status": "machine-generated",
+      "text": "调整语言环境列表和语言环境编辑器的尺寸"
     },
     "translator.ui.resizeValueListAndEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionTitle"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize {definitionTitle} list and editor"
+      "status": "machine-generated",
+      "text": "调整{definitionTitle}列表和编辑器的尺寸"
     },
     "translator.ui.resizeWorkspaceAndOperationResults.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize workspace and operation results"
+      "status": "machine-generated",
+      "text": "调整工作区大小和操作结果"
     },
     "translator.ui.restore.text": {
       "fallbackLocale": null,
@@ -2826,11 +2826,11 @@
       "text": "恢复上次加载的草稿并对其进行验证"
     },
     "translator.ui.retry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Retry"
+      "status": "machine-generated",
+      "text": "重试"
     },
     "translator.ui.revertingLanguageData.text": {
       "fallbackLocale": null,
@@ -2840,18 +2840,18 @@
       "text": "还原语言数据"
     },
     "translator.ui.rightToLeftRtl.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Right to left (rtl)"
+      "status": "machine-generated",
+      "text": "从右到左（rtl）"
     },
     "translator.ui.roles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Roles"
+      "status": "machine-generated",
+      "text": "角色"
     },
     "translator.ui.runtime.text": {
       "fallbackLocale": null,
@@ -2861,11 +2861,11 @@
       "text": "运行时"
     },
     "translator.ui.saveReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save report artifact"
+      "status": "machine-generated",
+      "text": "保存报告工件"
     },
     "translator.ui.scanFailedValue.text": {
       "fallbackLocale": null,
@@ -2884,11 +2884,11 @@
       "text": "扫描文件。"
     },
     "translator.ui.scanFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan folder."
+      "status": "machine-generated",
+      "text": "扫描文件夹。"
     },
     "translator.ui.scanSourceFile.text": {
       "fallbackLocale": null,
@@ -2907,20 +2907,20 @@
       "text": "源文件扫描件：{scannedFilePath}"
     },
     "translator.ui.scanSourceFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source folder"
+      "status": "machine-generated",
+      "text": "扫描源文件夹"
     },
     "translator.ui.scanSourceFolderValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source folder: {scannedFolderPath}"
+      "status": "machine-generated",
+      "text": "扫描源文件夹：{scannedFolderPath}"
     },
     "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
       "fallbackLocale": null,
@@ -2939,11 +2939,11 @@
       "text": "正在扫描所选文件。"
     },
     "translator.ui.scanningSelectedFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scanning selected folder."
+      "status": "machine-generated",
+      "text": "正在扫描所选文件夹。"
     },
     "translator.ui.scope.text": {
       "fallbackLocale": null,
@@ -2967,11 +2967,11 @@
       "text": "搜索和筛选"
     },
     "translator.ui.selectACategory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(select a category)"
+      "status": "machine-generated",
+      "text": "（选择一个类别）"
     },
     "translator.ui.selectAComponent.text": {
       "fallbackLocale": null,
@@ -2988,25 +2988,25 @@
       "text": "选择一个文件，以显示“提取字符串候选项”功能所接受的所有字符串。"
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a folder to find files containing candidate strings."
+      "status": "machine-generated",
+      "text": "选择一个文件夹，以查找包含候选字符串的文件。"
     },
     "translator.ui.selectALocaleOrAddANewOne.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a locale or add a new one."
+      "status": "machine-generated",
+      "text": "选择一个区域设置或添加一个新的区域设置。"
     },
     "translator.ui.selectALocaleTemplate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a locale template"
+      "status": "machine-generated",
+      "text": "选择一个区域设置模板"
     },
     "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
       "fallbackLocale": null,
@@ -3016,11 +3016,11 @@
       "text": "选择一名被举报的候选人，以查看其状态。"
     },
     "translator.ui.selectARole.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(select a role)"
+      "status": "machine-generated",
+      "text": "（选择角色）"
     },
     "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
       "fallbackLocale": null,
@@ -3030,11 +3030,11 @@
       "text": "在添加记录之前，请先选择一个特定的组件。"
     },
     "translator.ui.selectAllNew.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select all new"
+      "status": "machine-generated",
+      "text": "全选新内容"
     },
     "translator.ui.selectFile.text": {
       "fallbackLocale": null,
@@ -3044,11 +3044,11 @@
       "text": "选择文件。"
     },
     "translator.ui.selectFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select folder."
+      "status": "machine-generated",
+      "text": "选择文件夹。"
     },
     "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
       "fallbackLocale": null,
@@ -3067,20 +3067,20 @@
       "text": "已选中：{scannedFilePath}"
     },
     "translator.ui.selectedValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected: {scannedFolderPath}"
+      "status": "machine-generated",
+      "text": "已选中：{scannedFolderPath}"
     },
     "translator.ui.semanticKeywords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Semantic Keywords"
+      "status": "machine-generated",
+      "text": "语义关键词"
     },
     "translator.ui.setPreviewDefault.text": {
       "fallbackLocale": null,
@@ -3104,20 +3104,20 @@
       "text": "显示来自所有组件的记录"
     },
     "translator.ui.skippedValueFileOrFolderPathS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "skipped"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Skipped {skipped} file or folder path(s)."
+      "status": "machine-generated",
+      "text": "跳过了{skipped}文件或文件夹路径。"
     },
     "translator.ui.status.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Status"
+      "status": "machine-generated",
+      "text": "状态"
     },
     "translator.ui.statusInCatalog.text": {
       "fallbackLocale": null,
@@ -3127,41 +3127,41 @@
       "text": "状态：已收录"
     },
     "translator.ui.stoppedAtTheValueFileSafetyLimit.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderLimitsMaximumFiles"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Stopped at the {scannedFolderLimitsMaximumFiles} file safety limit."
+      "status": "machine-generated",
+      "text": "因达到{scannedFolderLimitsMaximumFiles}文件大小限制而停止。"
     },
     "translator.ui.textDirection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Text direction"
+      "status": "machine-generated",
+      "text": "文本方向"
     },
     "translator.ui.theInventoryIsUnchangedUntilSelectedFilesAre.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The inventory is unchanged until selected files are added."
+      "status": "machine-generated",
+      "text": "在添加选定的文件之前，库存保持不变。"
     },
     "translator.ui.theReportDoesNotExistYetSavingWill.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The report does not exist yet. Saving will create it."
+      "status": "machine-generated",
+      "text": "该报告尚不存在。保存后将生成该报告。"
     },
     "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "This locale is required by the language builder."
+      "status": "machine-generated",
+      "text": "语言构建器需要此区域设置。"
     },
     "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
       "fallbackLocale": null,
@@ -3235,55 +3235,55 @@
       "text": "验证通过，存在{validationWarningsCount}个警告。"
     },
     "translator.ui.valueCandidateBearingFileSValuePotentialCandidate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderCandidateFileCount",
         "scannedFolderCandidateCount",
         "scannedFolderCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFolderCandidateFileCount} candidate bearing file(s), {scannedFolderCandidateCount} potential candidate(s), {scannedFolderCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFolderCandidateFileCount} 候选轴承文件，{scannedFolderCandidateCount} 潜在候选产品，{scannedFolderCatalogedStringCount} 在产品目录中找到"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileCandidateCount",
         "scannedFileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFileCandidateCount} non catalog candidate(s), {scannedFileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFileCandidateCount} 非目录候选词，目录中已找到“{scannedFileCatalogedStringCount}”"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} non catalog candidate(s), {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} 非目录候选词，目录中已找到“{fileCatalogedStringCount}”"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text3": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "candidateRowsLengthCatalogedCount",
         "catalogedCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{candidateRowsLengthCatalogedCount} non catalog candidate(s), {catalogedCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{candidateRowsLengthCatalogedCount} 非目录候选词，目录中已找到{catalogedCount}"
     },
     "translator.ui.valueNonCatalogValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} non catalog {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} 在目录中发现了未收录的{fileCatalogedStringCount}"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text": {
       "fallbackLocale": null,
@@ -3316,15 +3316,15 @@
       "text": "{fileCandidateCount} 在目录中发现了一个潜在的{fileCatalogedStringCount}"
     },
     "translator.ui.valuePotentialValueInCatalogValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount",
         "inventoryText"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential {fileCatalogedStringCount} in catalog{inventoryText}"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} 目录 {inventoryText} 中可能包含 {fileCatalogedStringCount}"
     },
     "translator.ui.valueRecordS.text": {
       "fallbackLocale": null,
@@ -3345,11 +3345,11 @@
       "text": "{filesCount} 源文件"
     },
     "translator.ui.view.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View"
+      "status": "machine-generated",
+      "text": "查看"
     },
     "translator.ui.viewCandidates.text": {
       "fallbackLocale": null,

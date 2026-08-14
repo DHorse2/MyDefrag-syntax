@@ -1,5 +1,284 @@
 'use strict';
 // languageData.js
+//#region HELP_DOCUMENTS
+// Exact paths are relative to docs/MyDefrag Help/language.
+// Keep this table synchronized with syntaxes/mydfrg.tmLanguage.json.
+const HELP_DOCUMENTS = Object.freeze({
+    structure: Object.freeze({
+        volumeselect: 'Scripts/VolumeSelect.md',
+        volumeactions: 'Scripts/VolumeActions.md',
+        volumeend: 'Scripts/VolumeSelect.md',
+        fileselect: 'Scripts/FileSelect.md',
+        fileactions: 'Scripts/FileActions.md',
+        fileend: 'Scripts/FileSelect.md'
+    }),
+    scripts: Object.freeze({
+        include: 'Scripts/Macros.md'
+    }),
+    settings: Object.freeze({
+        appendlogfile: 'Settings/AppendLogfile.md',
+        batterypower: 'Settings/BatteryPower.md',
+        debug: 'Settings/Debug.md',
+        description: 'Settings/Description.md',
+        diskmapflip: 'Settings/DiskmapFlip.md',
+        excludefiles: 'Settings/ExcludeFiles.md',
+        excludevolumes: 'Settings/ExcludeVolumes.md',
+        exitiftimeout: 'Settings/ExitIfTimeout.md',
+        filemovechunksize: 'Settings/FileMoveChunkSize.md',
+        ignorewraparoundfragmentation: 'Settings/IgnoreWrapAroundFragmentation.md',
+        language: 'Settings/Language.md',
+        maxruntime: 'Settings/MaxRunTime.md',
+        message: 'Settings/Message.md',
+        otherinstances: 'Settings/OtherInstances.md',
+        pause: 'Settings/Pause.md',
+        processpriority: 'Settings/ProcessPriority.md',
+        rememberunmovables: 'Settings/RememberUnmovables.md',
+        runprogram: 'Settings/RunProgram.md',
+        runscript: 'Settings/RunScript.md',
+        setcolor: 'Settings/SetColor.md',
+        setfilecolor: 'Settings/SetFileColor.md',
+        setscreenpowersaver: 'Settings/SetScreenPowerSaver.md',
+        setscreensaver: 'Settings/SetScreenSaver.md',
+        setstatisticswindowtext: 'Settings/SetStatisticsWindowText.md',
+        setvariable: 'Settings/SetVariable.md',
+        slowdown: 'Settings/Slowdown.md',
+        statusbar: 'Settings/StatusBar.md',
+        title: 'Settings/Title.md',
+        whenfinished: 'Settings/WhenFinished.md',
+        windowsize: 'Settings/WindowSize.md',
+        writelogfile: 'Settings/WriteLogfile.md',
+        zoomlevel: 'Settings/ZoomLevel.md'
+    }),
+    volumeBoolean: Object.freeze({
+        all: 'VolumeBoolean/All.md',
+        and: 'VolumeBoolean/AND.md',
+        cdrom: 'VolumeBoolean/Cdrom.md',
+        checkvolume: 'VolumeBoolean/CheckVolume.md',
+        commandlinevolumes: 'VolumeBoolean/CommandlineVolumes.md',
+        filesystemtype: 'VolumeBoolean/FileSystemType.md',
+        fixed: 'VolumeBoolean/Fixed.md',
+        fragmentcount: 'VolumeBoolean/FragmentCount.md',
+        fragmentsize: 'VolumeBoolean/FragmentSize.md',
+        label: 'VolumeBoolean/Label.md',
+        mounted: 'VolumeBoolean/Mounted.md',
+        name: 'VolumeBoolean/Name.md',
+        not: 'VolumeBoolean/NOT.md',
+        numberbetween: 'VolumeBoolean/NumberBetween.md',
+        or: 'VolumeBoolean/OR.md',
+        ramdisk: 'VolumeBoolean/Ramdisk.md',
+        remote: 'VolumeBoolean/Remote.md',
+        removable: 'VolumeBoolean/Removable.md',
+        size: 'VolumeBoolean/Size.md',
+        writable: 'VolumeBoolean/Writable.md'
+    }),
+    volumeActions: Object.freeze({
+        deletejournal: 'VolumeActions/DeleteJournal.md',
+        dismountvolume: 'VolumeActions/DismountVolume.md',
+        makegap: 'VolumeActions/MakeGap.md',
+        reclaimntfsreservedareas: 'VolumeActions/ReclaimNtfsReservedAreas.md'
+    }),
+    fileBoolean: Object.freeze({
+        all: 'FileBoolean/All.md',
+        and: 'FileBoolean/AND.md',
+        archive: 'FileBoolean/Archive.md',
+        averagefragmentsize: 'FileBoolean/AverageFragmentSize.md',
+        compressed: 'FileBoolean/Compressed.md',
+        creationdate: 'FileBoolean/CreationDate.md',
+        directory: 'FileBoolean/Directory.md',
+        directoryname: 'FileBoolean/DirectoryName.md',
+        directorypath: 'FileBoolean/DirectoryPath.md',
+        encrypted: 'FileBoolean/Encrypted.md',
+        filename: 'FileBoolean/FileName.md',
+        filelocation: 'FileBoolean/FileLocation.md',
+        fragmentcount: 'FileBoolean/FragmentCount.md',
+        fragmented: 'FileBoolean/Fragmented.md',
+        fullpath: 'FileBoolean/FullPath.md',
+        hidden: 'FileBoolean/Hidden.md',
+        importlistfrombootoptimize: 'FileBoolean/ImportListFromBootOptimize.md',
+        importlistfromfile: 'FileBoolean/ImportListFromFile.md',
+        importlistfromprogramhints: 'FileBoolean/ImportListFromProgramHints.md',
+        largest: 'FileBoolean/Largest.md',
+        largestfragmentsize: 'FileBoolean/LargestFragmentSize.md',
+        lastaccess: 'FileBoolean/LastAccess.md',
+        lastaccessenabled: 'FileBoolean/LastAccessEnabled.md',
+        lastchange: 'FileBoolean/LastChange.md',
+        not: 'FileBoolean/NOT.md',
+        nottobeindexed: 'FileBoolean/NotToBeIndexed.md',
+        offline: 'FileBoolean/Offline.md',
+        or: 'FileBoolean/OR.md',
+        readonly: 'FileBoolean/Readonly.md',
+        selectntfssystemfiles: 'FileBoolean/SelectNtfsSystemFiles.md',
+        size: 'FileBoolean/Size.md',
+        smallest: 'FileBoolean/Smallest.md',
+        smallestfragmentsize: 'FileBoolean/SmallestFragmentSize.md',
+        sparse: 'FileBoolean/Sparse.md',
+        system: 'FileBoolean/System.md',
+        temporary: 'FileBoolean/Temporary.md',
+        unmovable: 'FileBoolean/Unmovable.md',
+        virtual: 'FileBoolean/Virtual.md'
+    }),
+    fileActions: Object.freeze({
+        addgap: 'FileActions/AddGap.md',
+        defragment: 'FileActions/Defragment.md',
+        fastfill: 'FileActions/FastFill.md',
+        forcedfill: 'FileActions/ForcedFill.md',
+        movedownfill: 'FileActions/MoveDownFill.md',
+        movetoendofdisk: 'FileActions/MoveToEndOfDisk.md',
+        moveuptozone: 'FileActions/MoveUpToZone.md',
+        placentfssystemfiles: 'FileActions/PlaceNtfsSystemFiles.md',
+        sortbycreationdate: 'FileActions/SortByCreationDate.md',
+        sortbyimportsequence: 'FileActions/SortByImportSequence.md',
+        sortbylastaccess: 'FileActions/SortByLastAccess.md',
+        sortbylastchange: 'FileActions/SortByLastChange.md',
+        sortbyname: 'FileActions/SortByName.md',
+        sortbynewestdate: 'FileActions/SortByNewestDate.md',
+        sortbysize: 'FileActions/SortBySize.md'
+    }),
+    defragment: Object.freeze({
+        chunksize: 'FileActions/Defragment/ChunkSize.md',
+        fast: 'FileActions/Defragment/Fast.md'
+    }),
+    fastfill: Object.freeze({
+        withshuffling: 'FileActions/FastFill/WithShuffling.md'
+    }),
+    addgap: Object.freeze({
+        donotvacate: 'FileActions/AddGap.md'
+    }),
+    windowsize: Object.freeze({
+        fixed: 'Settings/WindowSize.md',
+        invisible: 'Settings/WindowSize.md',
+        maximized: 'Settings/WindowSize.md',
+        minimized: 'Settings/WindowSize.md',
+        restore: 'Settings/WindowSize.md'
+    }),
+    statusbar: Object.freeze({
+        all: 'Settings/StatusBar.md',
+        mouseover: 'Settings/StatusBar.md',
+        path: 'Settings/StatusBar.md',
+        status: 'Settings/StatusBar.md'
+    }),
+    whenfinished: Object.freeze({
+        exit: 'Settings/WhenFinished.md',
+        forced: 'Settings/WhenFinished.md',
+        hibernate: 'Settings/WhenFinished.md',
+        reboot: 'Settings/WhenFinished.md',
+        shutdown: 'Settings/WhenFinished.md',
+        standby: 'Settings/WhenFinished.md',
+        wait: 'Settings/WhenFinished.md',
+        warnusers: 'Settings/WhenFinished.md'
+    }),
+    processpriority: Object.freeze({
+        abovenormal: 'Settings/ProcessPriority.md',
+        background: 'Settings/ProcessPriority.md',
+        belownormal: 'Settings/ProcessPriority.md',
+        high: 'Settings/ProcessPriority.md',
+        low: 'Settings/ProcessPriority.md',
+        normal: 'Settings/ProcessPriority.md'
+    }),
+    setscreensaver: Object.freeze({
+        off: 'Settings/SetScreenSaver.md',
+        reset: 'Settings/SetScreenSaver.md'
+    }),
+    batterypower: Object.freeze({
+        allow: 'Settings/BatteryPower.md',
+        ask: 'Settings/BatteryPower.md'
+    }),
+    otherinstances: Object.freeze({
+        allow: 'Settings/OtherInstances.md',
+        ask: 'Settings/OtherInstances.md',
+        kill: 'Settings/OtherInstances.md'
+    }),
+    time: Object.freeze({
+        ago: 'Scripts/DATETIME.md',
+        day: 'Scripts/DATETIME.md',
+        days: 'Scripts/DATETIME.md',
+        hour: 'Scripts/DATETIME.md',
+        hours: 'Scripts/DATETIME.md',
+        minute: 'Scripts/DATETIME.md',
+        minutes: 'Scripts/DATETIME.md',
+        month: 'Scripts/DATETIME.md',
+        months: 'Scripts/DATETIME.md',
+        now: 'Scripts/DATETIME.md',
+        second: 'Scripts/DATETIME.md',
+        seconds: 'Scripts/DATETIME.md',
+        week: 'Scripts/DATETIME.md',
+        weeks: 'Scripts/DATETIME.md',
+        year: 'Scripts/DATETIME.md',
+        years: 'Scripts/DATETIME.md'
+    }),
+    number: Object.freeze({
+        maximum: 'Scripts/NUMBER.md',
+        minimum: 'Scripts/NUMBER.md',
+        rounddown: 'Scripts/NUMBER.md',
+        roundup: 'Scripts/NUMBER.md'
+    })
+});
+
+const HELP_DETAILS = Object.freeze({
+    include: Object.freeze({
+        text: '!include',
+        title: '!include PATH!',
+        description: 'Includes the contents of another file as if it were part of the current script.',
+        syntax: '!include "PATH"!'
+    })
+});
+
+const HELP_CONTEXT_ALIASES = Object.freeze({
+    volume_condition: 'volumeBoolean',
+    volumeboolean: 'volumeBoolean',
+    volumeselect: 'volumeBoolean',
+    file_condition: 'fileBoolean',
+    file_attribute: 'fileBoolean',
+    fileboolean: 'fileBoolean',
+    fileselect: 'fileBoolean',
+    volume_action: 'volumeActions',
+    file_action: 'fileActions',
+    sort: 'fileActions',
+    window_state: 'windowsize',
+    finish_action: 'whenfinished',
+    priority: 'processpriority',
+    time_unit: 'time',
+    math: 'number',
+    size_unit: 'number'
+});
+
+/**
+ * Resolve every exact Help page for a keyword, optionally narrowed by context.
+ *
+ * @param {string} keyword
+ * @param {string} [context]
+ * @returns {Array<{text: string, context: string, path: string}>}
+ */
+function getKeywordHelpDocuments(keyword, context = '') {
+    const text = String(keyword || '').toLowerCase();
+    if (!text) return [];
+
+    const normalizedContext = HELP_CONTEXT_ALIASES[String(context || '').toLowerCase()] || context;
+    const contexts = normalizedContext && HELP_DOCUMENTS[normalizedContext]
+        ? [normalizedContext]
+        : Object.keys(HELP_DOCUMENTS);
+    const documents = [];
+    const seen = new Set();
+
+    for (const helpContext of contexts) {
+        const helpPath = HELP_DOCUMENTS[helpContext]?.[text];
+        if (!helpPath || seen.has(helpPath)) continue;
+        seen.add(helpPath);
+        documents.push({
+            text,
+            context: helpContext,
+            path: helpPath,
+            ...(HELP_DETAILS[text] || {})
+        });
+    }
+
+    if (documents.length === 0 && normalizedContext) {
+        return getKeywordHelpDocuments(text);
+    }
+
+    return documents;
+}
+//#endregion
 //#region KEYWORDS, KEYWORDS_MAP, KEYWORDS_BY_PARENT
 // All keywords from the grammar (case-insensitive)
 const KEYWORDS = [
@@ -12,6 +291,7 @@ const KEYWORDS = [
     { text: 'maxruntime', parent: 'any' },
     { text: 'runscript', parent: 'any' },
     { text: 'runprogram', parent: 'any' },
+    { text: 'include', parent: 'any' },
     // ─────────────────────────────────────────────────────────────────────────────────
     { text: 'script', parent: 'script' },
     // Statements:
@@ -367,6 +647,12 @@ const KEYWORDS = [
     { text: 'yi', parent: 'size_unit' },
     //#endregion
 ];
+for (const keyword of KEYWORDS) {
+    const helpDocuments = getKeywordHelpDocuments(keyword.text, keyword.parent);
+    if (helpDocuments.length > 0) {
+        keyword.help = helpDocuments.map(document => document.path);
+    }
+}
 // Create a searchable map of keywords (by text, existing)
 const KEYWORDS_MAP = new Map(KEYWORDS.map(k => [k.text, k]));
 
@@ -389,7 +675,7 @@ function kwGetGroup(group) {
 }
 function kwParentExists(parent) {
     // Check if a parent group exists at all
-    KEYWORDS_BY_PARENT.has(parent); // true/false
+    return KEYWORDS_BY_PARENT.has(parent); // true/false
 }
 function kwIterateParent(group) {
     // Iterate every parent group
@@ -664,6 +950,9 @@ const PREDEFINED_IDENT = [
     { text: 'MemoryExtends', units: 'Bytes', parent: 'memory_usage', category: 'Memory usage', description: 'Extends (fragments)' },
     { text: 'MemoryContext', units: 'Bytes', parent: 'memory_usage', category: 'Memory usage', description: 'Context' },
 ];
+for (const identifier of PREDEFINED_IDENT) {
+    identifier.help = ['Scripts/Variables.md'];
+}
 function isPredefinedIdentifier(variable) {
     // MyDefrag has a long list of pre-defined variables that you can use. 
     // They are dynamic variables, that is, they are automatically recalculated when they are used.
@@ -684,7 +973,8 @@ function isPredefinedIdentifier(variable) {
     // largest_items
     // bad_cluster_list
     // memory_usage
-    const found = PREDEFINED_IDENT.find(v => v.text === variable);
+    const normalized = String(variable ?? '').toLowerCase();
+    const found = PREDEFINED_IDENT.find(v => v.text.toLowerCase() === normalized);
     return found ?? null;
 }
 //#endregion
@@ -737,6 +1027,7 @@ const KEYWORDS_SETTINGS_SET = new Set(KEYWORDS_SETTINGS);
 // ─────────────────────────────────────────────────────────────────────────────────
 //#region Module Exports
 module.exports = {
+    HELP_DOCUMENTS,
     KEYWORDS,
     KEYWORDS_MAP,
     KEYWORDS_BY_PARENT,
@@ -750,5 +1041,6 @@ module.exports = {
 
     PREDEFINED_IDENT,
     isPredefinedIdentifier,
+    getKeywordHelpDocuments,
 };
 //#endregion

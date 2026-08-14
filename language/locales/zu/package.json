@@ -1,0 +1,138 @@
+{
+  "locale": "zu",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "Izilimi Zokuhlela",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "Ukugqamisa isakhiwo solimi lokubhala i-My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "Ukugqamisa isakhiwo solimi lokubhala i-My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "umakrodom",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "Uhlu lwemafayela lwedatha yomsebenzisi we-My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "Umhlanganisi Wami",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "Uhlu lwefayela lokurekhoda ze-My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "Vumela ukurekhoda amaphutha kwesandiso se-My Defragmenter.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "Izinga lokuningiliziwe lokuxazulula izingxenye zohlelo lwami. Ukuqopha amaphutha kudinga ukuthi i-mydfrg debug ivuliwe.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "Ubunzima bokuxilonga bokubhekisela okutholakala kuphela ngokuvula amafolda abazali.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "Ubunzima bokuxilonga bama-referensi aqukethe ama-macro wesikhathi sokuqhuba.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "Ubunzima bokuxilonga kwereferensi lapho amafayela awo okuhlosiwe etholakala.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "Ubunzima bokuxilonga kwezireferensi amafayela azo okuhlosiwe angatholakali.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "Ubunzima bokuxilonga kwemilayezo yabazali zezingcezu ezibikezwayo.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "Amaphethini e-Glob okungafanele ahlanganiswe ekuqinisekisweni kwe-My Defragmenter",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "Isikripthi sami sokwehlukanisa",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "Vula ifayela endaweni",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "I-Defragmenter yami: Ukuhlolwa okulandelayo",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "I-Defragmenter yami: Ukuhlolwa kwangaphambilini",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "I-Defragmenter yami: Ifayela elilandelayo",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "I-Defragmenter yami: Ukuhlolwa kukaMark kulungisiwe",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "I-Defragmenter yami: Unganaki Ukuhlola",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "I-Defragmenter yami: Dlula ekuhloleni",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "Umhlanganisi Wami: Thumela Ukuhlolwa ku-Agent",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "I-Defragmenter yami: Ukuhlolwa kokuqala",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "I-Defragmenter yami: Seta kabusha ukuhamba kokuxilonga",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "I-Defragmenter yami: Vuselela Ukuhlolwa",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "I-Defragmenter yami: Ukuhlunga kwezokuxilonga",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "I-Defragmenter yami: Sula isihlungi sokuxilonga",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "I-Defragmenter yami: Khombisa ukuhlolwa njengomuthi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "I-Defragmenter yami: Khombisa ukuhlolwa njengethebula",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "I-Defragmenter yami: Vala i-Diagnostics Explorer",
+      "status": "machine-generated"
+    }
+  }
+}

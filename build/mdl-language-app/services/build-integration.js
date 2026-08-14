@@ -15,6 +15,7 @@ const GENERATED_DIRECTORIES = [
     'build/language/variable-maps',
     'build/language/reports'
 ];
+const DURABLE_LOCALE_DIRECTORIES = ['language/locales'];
 
 function hash(buffer) {
     return crypto.createHash('sha256').update(buffer).digest('hex');
@@ -64,9 +65,9 @@ class BuildIntegration {
         return files.sort((left, right) => left.localeCompare(right));
     }
 
-    snapshot() {
+    snapshotDirectories(relativeDirectories) {
         const snapshot = new Map();
-        for (const relativeDirectory of GENERATED_DIRECTORIES) {
+        for (const relativeDirectory of relativeDirectories) {
             const absoluteDirectory = path.join(this.rootDir, relativeDirectory);
             for (const filePath of this.listFiles(absoluteDirectory)) {
                 const relativePath = path.relative(this.rootDir, filePath).replace(/\\/g, '/');
@@ -74,6 +75,14 @@ class BuildIntegration {
             }
         }
         return snapshot;
+    }
+
+    snapshot() {
+        return this.snapshotDirectories(GENERATED_DIRECTORIES);
+    }
+
+    snapshotDurableLocaleSources() {
+        return this.snapshotDirectories(DURABLE_LOCALE_DIRECTORIES);
     }
 
     diff(before, after) {
@@ -87,8 +96,8 @@ class BuildIntegration {
             .sort();
     }
 
-    restore(snapshot) {
-        const current = this.snapshot();
+    restoreDirectories(snapshot, relativeDirectories) {
+        const current = this.snapshotDirectories(relativeDirectories);
         for (const relativePath of current.keys()) {
             if (!snapshot.has(relativePath)) {
                 this.fs.unlinkSync(path.join(this.rootDir, relativePath));
@@ -104,6 +113,14 @@ class BuildIntegration {
             }
             this.fs.renameSync(temporary, target);
         }
+    }
+
+    restore(snapshot) {
+        this.restoreDirectories(snapshot, GENERATED_DIRECTORIES);
+    }
+
+    restoreDurableLocaleSources(snapshot) {
+        this.restoreDirectories(snapshot, DURABLE_LOCALE_DIRECTORIES);
     }
 
     run(actionArguments = ['build'], onProgress) {
@@ -255,19 +272,32 @@ class BuildIntegration {
     async rebuildWithRollback(actionArguments = ['build'], onProgress) {
         report(onProgress, { phase: 'snapshot', message: 'Capturing generated files for rollback', cancellable: false });
         const before = this.snapshot();
+        const durableLocaleBefore = this.snapshotDurableLocaleSources();
         const result = await this.run(actionArguments, onProgress);
         if (!result.ok) {
-            report(onProgress, { phase: 'rollback', message: 'Restoring generated files', cancellable: false });
+            report(onProgress, {
+                phase: 'rollback',
+                message: 'Restoring generated files and durable locale sources',
+                cancellable: false
+            });
             this.restore(before);
-            return { ...result, changedFiles: [], rolledBack: true };
+            this.restoreDurableLocaleSources(durableLocaleBefore);
+            return { ...result, changedFiles: [], durableLocaleFiles: [], rolledBack: true };
         }
         report(onProgress, { phase: 'compare', message: 'Checking generated file changes', cancellable: false });
         const after = this.snapshot();
-        return { ...result, changedFiles: this.diff(before, after), rolledBack: false };
+        const durableLocaleAfter = this.snapshotDurableLocaleSources();
+        return {
+            ...result,
+            changedFiles: this.diff(before, after),
+            durableLocaleFiles: this.diff(durableLocaleBefore, durableLocaleAfter),
+            rolledBack: false
+        };
     }
 }
 
 module.exports = {
     BuildIntegration,
+    DURABLE_LOCALE_DIRECTORIES,
     GENERATED_DIRECTORIES
 };

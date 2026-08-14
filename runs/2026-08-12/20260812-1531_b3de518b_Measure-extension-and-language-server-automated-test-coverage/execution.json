@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "executionId": "b3de518b",
+  "startedAt": "2026-08-12T22:31:46.601Z",
+  "finishedAt": "2026-08-12T22:33:27.215Z",
+  "status": "completed",
+  "executionRecordMode": "Standard",
+  "computerName": "Mdm-TJ9DTHV",
+  "initiatingAgent": "codex",
+  "agents": [
+    "codex"
+  ],
+  "projects": [
+    "MyDefrag-syntax"
+  ],
+  "tasks": [
+    "Measure extension and language-server automated test coverage"
+  ],
+  "promptPaths": [],
+  "outputs": [],
+  "artifacts": [],
+  "metrics": {},
+  "parentExecutionId": null,
+  "childExecutionIds": [],
+  "projectRoot": "D:\\Script\\MyDefrag-syntax",
+  "workingDirectory": "D:\\Script\\MyDefrag-syntax",
+  "journalPath": "journal.jsonl",
+  "summaryPath": "execution-record.md"
+}

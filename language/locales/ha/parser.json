@@ -1,0 +1,14 @@
+{
+  "locale": "ha",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "An yi tsammanin {expected} amma an sami {actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Token da ba a zata ba '{token}'",
+      "status": "machine-generated"
+    }
+  }
+}

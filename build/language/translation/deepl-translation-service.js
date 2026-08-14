@@ -6,6 +6,7 @@ const DEFAULT_PRO_ENDPOINT = 'https://api.deepl.com/v2/translate';
 const DEFAULT_FREE_ENDPOINT = 'https://api-free.deepl.com/v2/translate';
 const DEFAULT_TIMEOUT_MS = 15000;
 const PLACEHOLDER_PATTERN = /\{([A-Za-z_][A-Za-z0-9_]*)\}/g;
+const CUSTOM_INSTRUCTION_TARGETS = new Set(['de', 'en', 'es', 'fr', 'it', 'ja', 'ko', 'zh']);
 
 function extractPlaceholders(text) {
     return Array.from(String(text || '').matchAll(PLACEHOLDER_PATTERN), (match) => match[1])
@@ -111,6 +112,19 @@ function translationConfiguration(environment = process.env) {
     return { apiKey, credentialSource, endpoint, timeoutMs };
 }
 
+function errorCategoryForStatus(status) {
+    if (status === 429) { return 'rate-limited'; }
+    if (status === 456) { return 'quota-exhausted'; }
+    if (status === 401 || status === 403) { return 'authentication'; }
+    if (status >= 500) { return 'provider-error'; }
+    if (status >= 400) { return 'request-error'; }
+    return 'unknown';
+}
+
+function endpointUrl(endpoint, resourcePath) {
+    return new URL(resourcePath, new URL(endpoint).origin).toString();
+}
+
 class DeepLTranslationService {
     constructor(options = {}) {
         this.config = options.config || translationConfiguration(options.environment);
@@ -123,6 +137,116 @@ class DeepLTranslationService {
             configured: Boolean(this.config.apiKey),
             endpoint: this.config.endpoint,
             credentialSource: this.config.credentialSource || 'DeeplApi'
+        };
+    }
+
+    async requestJson(resourcePath, options = {}) {
+        if (!this.config.apiKey) {
+            throw new Error('DeepL API is not configured; set DeeplApi or DEEPL_API_KEY.');
+        }
+        if (typeof this.fetch !== 'function') {
+            throw new Error('The current Node.js runtime does not provide fetch.');
+        }
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), this.config.timeoutMs);
+        const url = endpointUrl(this.config.endpoint, resourcePath);
+        try {
+            const response = await this.fetch(url, {
+                ...options,
+                headers: {
+                    Authorization: `DeepL-Auth-Key ${this.config.apiKey}`,
+                    'User-Agent': 'MyDefrag-Locale-Maintenance/0.5.0',
+                    ...(options.headers || {})
+                },
+                signal: controller.signal
+            });
+            if (!response.ok) {
+                const error = new Error(`DeepL request failed with HTTP ${response.status}.`);
+                error.httpStatus = response.status;
+                error.category = errorCategoryForStatus(response.status);
+                const retryAfter = Number.parseFloat(response.headers?.get?.('retry-after'));
+                if (Number.isFinite(retryAfter) && retryAfter >= 0) {
+                    error.retryAfterMs = Math.ceil(retryAfter * 1000);
+                }
+                throw error;
+            }
+            return {
+                data: await response.json(),
+                httpStatus: response.status
+            };
+        } catch (error) {
+            if (error?.name === 'AbortError') {
+                const timeoutError = new Error(
+                    `DeepL request timed out after ${this.config.timeoutMs} ms.`
+                );
+                timeoutError.category = 'timeout';
+                throw timeoutError;
+            }
+            throw error;
+        } finally {
+            clearTimeout(timeout);
+        }
+    }
+
+    async supportedTargetLanguages() {
+        try {
+            const response = await this.requestJson(
+                '/v3/languages?resource=translate_text&include=beta'
+            );
+            if (!Array.isArray(response.data)) {
+                throw new Error('DeepL returned an unexpected supported-language response.');
+            }
+            return {
+                endpointVersion: 'v3',
+                httpStatus: response.httpStatus,
+                languages: response.data
+                    .filter((language) => language?.usable_as_target === true)
+                    .map((language) => ({
+                        code: String(language.lang || ''),
+                        name: String(language.name || ''),
+                        status: language.status || null,
+                        tagHandling: language.features?.tag_handling?.status || null
+                    }))
+            };
+        } catch (error) {
+            if (error.httpStatus && error.httpStatus !== 404) { throw error; }
+            const response = await this.requestJson('/v2/languages?type=target');
+            if (!Array.isArray(response.data)) {
+                throw new Error('DeepL returned an unexpected supported-language response.');
+            }
+            return {
+                endpointVersion: 'v2',
+                httpStatus: response.httpStatus,
+                languages: response.data.map((language) => ({
+                    code: String(language.language || ''),
+                    name: String(language.name || ''),
+                    status: 'stable',
+                    tagHandling: null
+                }))
+            };
+        }
+    }
+
+    async usage() {
+        const response = await this.requestJson('/v2/usage');
+        const data = response.data;
+        if (!data || typeof data !== 'object' || Array.isArray(data)) {
+            throw new Error('DeepL returned an unexpected usage response.');
+        }
+        return {
+            httpStatus: response.httpStatus,
+            characterCount: Number.isFinite(data.character_count)
+                ? data.character_count
+                : null,
+            characterLimit: Number.isFinite(data.character_limit)
+                ? data.character_limit
+                : null,
+            apiKeyCharacterCount: Number.isFinite(data.api_key_character_count)
+                ? data.api_key_character_count
+                : null,
+            apiKeyCharacterLimit: Number.isFinite(data.api_key_character_limit)
+                ? data.api_key_character_limit
+                : null
         };
     }
 
@@ -153,6 +277,15 @@ class DeepLTranslationService {
         }
 
         const protectedItems = items.map((item) => protectRuntimeSyntax(item.text));
+        const targetBaseLanguage = targetLanguage.split('-')[0].toLocaleLowerCase();
+        const customInstructions = CUSTOM_INSTRUCTION_TARGETS.has(targetBaseLanguage)
+            ? {
+                custom_instructions: [
+                    'Translate every word, including words enclosed in quotation marks.',
+                    'Translate every word found within parenthesis marks ().'
+                ]
+            }
+            : {};
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), this.config.timeoutMs);
         try {
@@ -167,10 +300,7 @@ class DeepLTranslationService {
                     text: protectedItems.map((item) => item.protectedText),
                     target_lang: targetLanguage,
                     source_lang: 'EN',
-                    custom_instructions: [
-                        'Translate every word, including words enclosed in quotation marks.',
-                        'Translate every word found within parenthesis marks ().'
-                    ],
+                    ...customInstructions,
                     preserve_formatting: true,
                     tag_handling: 'xml',
                     tag_handling_version: 'v2',
@@ -179,10 +309,28 @@ class DeepLTranslationService {
                 signal: controller.signal
             });
             if (!response.ok) {
+                let providerDetail = '';
+                if (typeof response.text === 'function') {
+                    providerDetail = String(await response.text()).replace(/\s+/gu, ' ').trim();
+                }
+                const detailSuffix = providerDetail
+                    ? ` ${providerDetail.slice(0, 300)}`
+                    : '';
                 return this.failureResults(
                     items,
-                    `DeepL request failed with HTTP ${response.status}.`,
-                    targetLanguage
+                    `DeepL request failed with HTTP ${response.status}.${detailSuffix}`,
+                    targetLanguage,
+                    {
+                        httpStatus: response.status,
+                        errorCategory: errorCategoryForStatus(response.status),
+                        retryable: response.status === 429 || response.status >= 500,
+                        retryAfterMs: (() => {
+                            const seconds = Number.parseFloat(response.headers?.get?.('retry-after'));
+                            return Number.isFinite(seconds) && seconds >= 0
+                                ? Math.ceil(seconds * 1000)
+                                : null;
+                        })()
+                    }
                 );
             }
             const data = await response.json();
@@ -202,7 +350,10 @@ class DeepLTranslationService {
             const message = error?.name === 'AbortError'
                 ? `DeepL request timed out after ${this.config.timeoutMs} ms.`
                 : `DeepL request failed: ${error.message}`;
-            return this.failureResults(items, message, targetLanguage);
+            return this.failureResults(items, message, targetLanguage, {
+                errorCategory: error?.name === 'AbortError' ? 'timeout' : 'network-error',
+                retryable: true
+            });
         } finally {
             clearTimeout(timeout);
         }
@@ -235,10 +386,15 @@ class DeepLTranslationService {
         };
     }
 
-    failureResults(items, error, targetLanguage) {
+    failureResults(items, error, targetLanguage, details = {}) {
         return {
             targetLanguage,
-            results: items.map(() => ({ ok: false, error, targetLanguage }))
+            results: items.map(() => ({
+                ok: false,
+                error,
+                targetLanguage,
+                ...details
+            }))
         };
     }
 }
@@ -357,6 +513,8 @@ module.exports = {
     DeepLTranslationService,
     createBuildTranslationSuggestions,
     extractPlaceholders,
+    errorCategoryForStatus,
+    endpointUrl,
     protectPlaceholders,
     protectRuntimeSyntax,
     restorePlaceholders,

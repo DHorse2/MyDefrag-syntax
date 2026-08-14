@@ -1,0 +1,22 @@
+{
+  "locale": "zu",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "I-Defragmenter yami: Akukho ukuhlolwa okwamanje.",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) I-Defragmenter yami {index} / {total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) Ukuxilonga kwami kwe-Defragmenter 0",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "Ukuxilongwa: {current} / {eligible} / {all} ({remaining} eseleyo, {remainingFiles} / {traversableFiles} / {totalFiles} amafayela, {fixed} ilungisiwe, {ignored} ayinakiwe, {skipped} idlulwe)",
+      "status": "machine-generated"
+    }
+  }
+}

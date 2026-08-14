@@ -374,6 +374,10 @@ document.getElementById('rebuild-button').addEventListener('click', async () => 
         'Preparing component rebuild',
         () => api.rebuild()
     );
+    if (result.ok && result.state) {
+        state = result.state;
+        render();
+    }
     showResult(result.ok ? 'Selected component rebuilt' : 'Component rebuild failed', result);
 });
 

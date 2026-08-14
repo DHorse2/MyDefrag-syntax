@@ -38,10 +38,12 @@ class StubBuildIntegration {
     constructor(result = { ok: true, status: 0, stdout: 'stub build passed\n', stderr: '' }) {
         this.result = result;
         this.restoreCount = 0;
+        this.durableRestoreCount = 0;
         this.runArguments = [];
     }
 
     snapshot() { return new Map(); }
+    snapshotDurableLocaleSources() { return new Map(); }
     run(_actionArguments, onProgress) {
         this.runArguments.push(_actionArguments);
         onProgress?.({ phase: 'build', message: 'Running stub build', cancellable: true });
@@ -50,6 +52,7 @@ class StubBuildIntegration {
     }
     diff() { return []; }
     restore() { this.restoreCount += 1; }
+    restoreDurableLocaleSources() { this.durableRestoreCount += 1; }
     rebuildWithRollback(_actionArguments, onProgress) {
         this.runArguments.push(_actionArguments);
         onProgress?.({ phase: 'build', message: 'Running stub build', cancellable: true });

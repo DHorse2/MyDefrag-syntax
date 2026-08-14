@@ -1,0 +1,22 @@
+{
+  "locale": "zh-Hans",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "BEGIN [depth {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "END [depth {depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "包含文件。（已处理 {count} 个文件）",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** 警告：缺少包含文件（\"{uri}\"） ***",
+      "status": "machine-generated"
+    }
+  }
+}

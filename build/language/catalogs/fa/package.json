@@ -2,234 +2,234 @@
   "component": "package",
   "entries": {
     "package.catagories.list": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Programming Languages"
+      "status": "machine-generated",
+      "text": "زبان‌های برنامه‌نویسی"
     },
     "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Clear Diagnostic Filter"
+      "status": "machine-generated",
+      "text": "Defragmenter من: پاک کردن فیلتر تشخیصی"
     },
     "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Close Diagnostics Explorer"
+      "status": "machine-generated",
+      "text": "Defragmenter من: بستن اکتشافگر تشخیصی"
     },
     "package.contributes.commands.mydfrg.diagnostics.filter.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Filter Diagnostics"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کنندهٔ من: تشخیص فیلتر"
     },
     "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Mark Diagnostic Fixed"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کننده من: تشخیص مارک ثابت شد"
     },
     "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Ignore Diagnostic"
+      "status": "machine-generated",
+      "text": "Defragmenter من: تشخیص را نادیده بگیر"
     },
     "package.contributes.commands.mydfrg.diagnostics.next.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Next Diagnostic"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کننده من: تشخیص بعدی"
     },
     "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Next File"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کنندهٔ من: فایل بعدی"
     },
     "package.contributes.commands.mydfrg.diagnostics.previous.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Previous Diagnostic"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کنندهٔ من: تشخیص قبلی"
     },
     "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Refresh Diagnostics"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کننده من: تازه‌سازی تشخیصی"
     },
     "package.contributes.commands.mydfrg.diagnostics.reset.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Reset Diagnostic Navigation"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کننده من: ریست ناوبری تشخیصی"
     },
     "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Send Diagnostic to Agent"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کنندهٔ من: ارسال تشخیصی به عامل"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Show Diagnostics as Table"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کنندهٔ من: نمایش تشخیص‌ها به صورت جدول"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Show Diagnostics as Tree"
+      "status": "machine-generated",
+      "text": "Defragmenter من: نمایش تشخیصی‌ها به صورت درخت"
     },
     "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: Skip Diagnostic"
+      "status": "machine-generated",
+      "text": "Defragmenter من: رد کردن تشخیصی"
     },
     "package.contributes.commands.mydfrg.diagnostics.top.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter: First Diagnostic"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کنندهٔ من: اولین تشخیص"
     },
     "package.contributes.commands.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open File at Position"
+      "status": "machine-generated",
+      "text": "گشودن فایل در موقعیت"
     },
     "package.contributes.configuration.properties.mydfrg.debugOn.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Enable My Defragmenter extension debug logging."
+      "status": "machine-generated",
+      "text": "ثبت‌لاگ اشکال‌زدایی افزونهٔ My Defragmenter را فعال کنید."
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Glob patterns to exclude from My Defragmenter validation"
+      "status": "machine-generated",
+      "text": "الگوهای گلوب برای مستثنی کردن از اعتبارسنجی My Defragmenter"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Directory for My Defragmenter log files."
+      "status": "machine-generated",
+      "text": "پوشهٔ لاگ‌های Defragmenter من."
     },
     "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic severity for references containing execution time macros."
+      "status": "machine-generated",
+      "text": "شدت تشخیصی برای ارجاع‌هایی که شامل ماکروهای زمان اجرا هستند."
     },
     "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic severity for references whose target files are found."
+      "status": "machine-generated",
+      "text": "شدت تشخیصی برای مراجع که فایل‌های مقصدشان یافت شده‌اند."
     },
     "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic severity for references whose target files are not found."
+      "status": "machine-generated",
+      "text": "شدت تشخیصی برای ارجاع‌هایی که فایل‌های مقصدشان یافت نمی‌شوند."
     },
     "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic severity for references found only by walking up parent folders."
+      "status": "machine-generated",
+      "text": "شدت تشخیصی برای مراجع یافت‌شده تنها با پیمایش به داخل پوشه‌های والد."
     },
     "package.contributes.configuration.properties.mydfrg.userDir.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Directory for My Defragmenter user data."
+      "status": "machine-generated",
+      "text": "فهرست برای داده‌های کاربر My Defragmenter."
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter extension verbosity level. Debug logging requires mydfrg debug On."
+      "status": "machine-generated",
+      "text": "سطح گویایی افزونه Defragmenter من. ثبت لاگ اشکال‌زدایی نیازمند روشن بودن اشکال‌زدایی mydfrg است."
     },
     "package.contributes.languages.aliases": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter Script"
+      "status": "machine-generated",
+      "text": "اسکریپت دفرگمنت‌کننده‌ی من"
     },
     "package.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Syntax highlighting for My Defragmenter scripting language"
+      "status": "machine-generated",
+      "text": "رنگ‌آمیزی نحوی برای زبان اسکریپت‌نویسی My Defragmenter"
     },
     "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic severity for inferred fragment parent messages."
+      "status": "machine-generated",
+      "text": "شدت تشخیصی برای پیام‌های والدین قطعات استنتاج‌شده."
     },
     "package.metadata.contributes.configuration.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "My Defragmenter"
+      "status": "machine-generated",
+      "text": "دفرگمنت‌کنندهٔ من"
     },
     "package.metadata.description": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Syntax highlighting for My Defragmenter scripting language"
+      "status": "machine-generated",
+      "text": "رنگ‌آمیزی نحوی برای زبان اسکریپت‌نویسی My Defragmenter"
     },
     "package.metadata.publisher": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
+      "status": "machine-generated",
       "text": "macrodm"
     },
     "package.path.repository.url": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
+      "status": "machine-generated",
       "text": "https://github.com/DHorse2/MyDefrag-syntax"
     }
   },

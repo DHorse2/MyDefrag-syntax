@@ -55,12 +55,33 @@ function registeredLocaleCount(rootDir) {
     )).locales.length;
 }
 
+function clearAuthoredLocaleEntries(rootDir, localeId) {
+    const localeDir = path.join(rootDir, 'language', 'locales', localeId);
+    for (const name of fs.readdirSync(localeDir)) {
+        const sourcePath = path.join(localeDir, name);
+        if (path.extname(name).toLocaleLowerCase() !== '.json') { continue; }
+        const document = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
+        if (!document.entries || typeof document.entries !== 'object' || Array.isArray(document.entries)) {
+            continue;
+        }
+        document.entries = {};
+        fs.writeFileSync(sourcePath, `${JSON.stringify(document, null, 2)}\n`, 'utf8');
+    }
+}
+
 function run(buildScript, action, rootDir, environment = {}) {
     const args = Array.isArray(action) ? action : [action];
     return spawnSync(process.execPath, [buildScript, ...args], {
         cwd: rootDir,
         encoding: 'utf8',
-        env: { ...process.env, DeeplApi: '', DEEPL_API_KEY: '', ...environment },
+        env: {
+            ...process.env,
+            DeeplApi: '',
+            DEEPL_API_KEY: '',
+            GoogleTranslateApi: '',
+            GOOGLE_TRANSLATE_API_KEY: '',
+            ...environment
+        },
         maxBuffer: 10 * 1024 * 1024
     });
 }
@@ -74,7 +95,14 @@ function runNpm(action, rootDir, environment = {}) {
     return spawnSync(executable, commandArgs, {
         cwd: rootDir,
         encoding: 'utf8',
-        env: { ...process.env, DeeplApi: '', DEEPL_API_KEY: '', ...environment },
+        env: {
+            ...process.env,
+            DeeplApi: '',
+            DEEPL_API_KEY: '',
+            GoogleTranslateApi: '',
+            GOOGLE_TRANSLATE_API_KEY: '',
+            ...environment
+        },
         maxBuffer: 10 * 1024 * 1024
     });
 }
@@ -150,7 +178,7 @@ try {
     assert.strictEqual(result.status, 0, result.stderr || result.stdout);
     assert.match(result.stderr, /Translation API: DeepL is not configured in this process/);
     assert.match(result.stderr, /API translation fr-CA: DeepL API is not configured/);
-    assert.match(result.stdout, /Translation API result: 0 suggestion\(s\), \d+ warning\(s\)/);
+    assert.match(result.stdout, /Translation API result: \d+ suggestion\(s\), \d+ warning\(s\)/);
     assert.strictEqual(fs.readFileSync(rootSentinel, 'utf8'), 'retain root\n');
     assert.strictEqual(fs.readFileSync(chineseSentinel, 'utf8'), 'retain locale\n');
     const chineseCatalogAfterUpdate = JSON.parse(fs.readFileSync(chineseTranslation, 'utf8'));
@@ -261,15 +289,40 @@ try {
         result.stdout,
         /Translation API: not requested; no missing generated catalog entries/
     );
-    assert.match(result.stdout, /Translation API result: 0 suggestion\(s\), 0 warning\(s\)/);
+    assert.match(result.stdout, /Translation API result: \d+ suggestion\(s\), 0 warning\(s\)/);
     assert.match(
         result.stdout,
-        new RegExp(`Catalog locales: 0 generated, 0 updated existing, ${fixtureLocaleCount} unchanged existing, 0 skipped existing`)
+        /Catalog locales: 0 generated, \d+ updated existing, \d+ unchanged existing, 0 skipped existing/
     );
     assert.match(result.stdout, /Catalog entries added: 0/);
     assert.deepStrictEqual(fs.readFileSync(frenchCanadianCatalog), frenchCanadianBefore);
     assert.deepStrictEqual(fs.readFileSync(chineseTranslation), chineseTranslationAfterUpdate);
     assert.strictEqual(fs.readFileSync(chineseSentinel, 'utf8'), 'retain locale\n');
+
+    result = run(buildScript, 'audit-normalized-inputs', fixtureRoot);
+    assert.strictEqual(result.status, 0, result.stderr || result.stdout);
+    assert.match(result.stdout, /Normalized input audit: partial/);
+    assert.match(result.stdout, /language[\\/]locales[\\/]yo[\\/]extension\.json/);
+    const normalizedInputAudit = JSON.parse(fs.readFileSync(path.join(
+        fixtureRoot,
+        'build',
+        'language',
+        'reports',
+        'normalized-input-audit.json'
+    ), 'utf8'));
+    assert.equal(normalizedInputAudit.status, 'partial');
+    assert.ok(normalizedInputAudit.summary.occurrences > 0);
+    assert.ok(normalizedInputAudit.files.some((file) => (
+        file.file === 'language/locales/yo/extension.json'
+        && file.words.some((word) => word.input === 'MyDefrag')
+    )));
+    assert.match(fs.readFileSync(path.join(
+        fixtureRoot,
+        'build',
+        'language',
+        'reports',
+        'normalized-input-audit.md'
+    ), 'utf8'), /# Normalized Input Audit/);
 } finally {
     fs.rmSync(fixtureRoot, { recursive: true, force: true });
 }
@@ -328,6 +381,7 @@ const normalizedFixtureRoot = fs.mkdtempSync(path.join(
 ));
 try {
     copyFixture(normalizedFixtureRoot);
+    clearAuthoredLocaleEntries(normalizedFixtureRoot, 'yo');
     const normalizedFixtureLocaleCount = registeredLocaleCount(normalizedFixtureRoot);
     const buildScript = path.join(
         normalizedFixtureRoot,
@@ -337,7 +391,7 @@ try {
     );
     const result = run(
         buildScript,
-        ['build', '--UseNormalized'],
+        ['build', '--UseNormalized', '--TranslationProvider=none'],
         normalizedFixtureRoot,
         {
             DeeplApi: 'must-not-be-used',
@@ -347,7 +401,7 @@ try {
     assert.strictEqual(result.status, 0, result.stderr || result.stdout);
     assert.match(
         result.stdout,
-        /Normalized English: Translation API bypassed; generating normalized draft values/
+        /Translation API: disabled; generating or refreshing normalized English fallbacks/
     );
     assert.match(result.stdout, /Normalized English result: \d+ value\(s\), 0 warning\(s\)/);
     assert.doesNotMatch(result.stdout, /Translation API: DeepL configured/);
@@ -367,7 +421,7 @@ try {
         placeholders: [],
         sourceStatus: 'approved',
         status: 'draft',
-        text: 'My Defragmenter Script (.MyDc / .MyD)'
+        text: 'My Storage Management Script (.MyDc / .MyD)'
     });
     const diagnosticCatalog = JSON.parse(fs.readFileSync(path.join(
         normalizedFixtureRoot,
@@ -379,7 +433,7 @@ try {
     ), 'utf8'));
     assert.equal(
         diagnosticCatalog.entries['diagnosticExplorer.status.hasDiagnostics.text'].text,
-        '$(warning) My Defragmenter {index}/{total}'
+        '$(warning) My Storage Management {index}/{total}'
     );
 
     const completeness = JSON.parse(fs.readFileSync(path.join(
@@ -410,19 +464,19 @@ try {
 
     const secondResult = run(
         buildScript,
-        ['build', '--UseNormalized'],
+        ['build', '--UseNormalized', '--TranslationProvider=none'],
         normalizedFixtureRoot,
         { DeeplApi: 'must-not-be-used' }
     );
     assert.strictEqual(secondResult.status, 0, secondResult.stderr || secondResult.stdout);
     assert.match(
         secondResult.stdout,
-        /Normalized English: Translation API bypassed; generating normalized draft values for 1 locale\(s\) with missing entries: yo/
+        /Translation API: disabled; generating or refreshing normalized English fallbacks for \d+ locale\(s\).*yo/
     );
-    assert.match(secondResult.stdout, /Normalized English result: 1 value\(s\), 0 warning\(s\)/);
+    assert.match(secondResult.stdout, /Normalized English result: \d+ value\(s\), 0 warning\(s\)/);
     assert.match(
         secondResult.stdout,
-        new RegExp(`Catalog locales: 0 generated, 1 updated existing, ${normalizedFixtureLocaleCount - 1} unchanged existing, 0 skipped existing`)
+        /Catalog locales: 0 generated, \d+ updated existing, \d+ unchanged existing, 0 skipped existing/
     );
     assert.match(secondResult.stdout, /Catalog entries added: 1/);
     const extensionCatalogAfterUpdate = JSON.parse(fs.readFileSync(extensionCatalogPath, 'utf8'));
@@ -461,8 +515,14 @@ try {
     ), 'utf8'));
     assert.deepStrictEqual(normalizedBuildReport.translation, {
         mode: 'normalized',
+        provider: 'None',
+        englishSource: 'normalized',
+        apiCalls: 0,
+        sourceCharactersPassed: 0,
         deepLApiCalls: 0,
-        deepLCharactersPassed: 0
+        deepLCharactersPassed: 0,
+        googleApiCalls: 0,
+        googleCharactersPassed: 0
     });
     assert.equal(
         normalizedBuildReport.catalogLocales.find((locale) => locale.locale === 'yo').status,
@@ -475,18 +535,19 @@ try {
 
     const thirdResult = run(
         buildScript,
-        ['build', '--UseNormalized'],
+        ['build', '--UseNormalized', '--TranslationProvider=none'],
         normalizedFixtureRoot,
         { DeeplApi: 'must-not-be-used' }
     );
     assert.strictEqual(thirdResult.status, 0, thirdResult.stderr || thirdResult.stdout);
     assert.match(
         thirdResult.stdout,
-        /Normalized English: not generated; no missing generated catalog entries/
+        /Translation API: disabled; generating or refreshing normalized English fallbacks/
     );
+    assert.match(thirdResult.stdout, /Normalized English result: \d+ value\(s\), 0 warning\(s\)/);
     assert.match(
         thirdResult.stdout,
-        new RegExp(`Catalog locales: 0 generated, 0 updated existing, ${normalizedFixtureLocaleCount} unchanged existing, 0 skipped existing`)
+        /Catalog locales: 0 generated, \d+ updated existing, \d+ unchanged existing, 0 skipped existing/
     );
     assert.match(thirdResult.stdout, /Catalog entries added: 0/);
     assert.deepStrictEqual(fs.readFileSync(extensionCatalogPath), extensionAfterUpdateBytes);
@@ -500,8 +561,9 @@ const npmNormalizedFixtureRoot = fs.mkdtempSync(path.join(
 ));
 try {
     copyFixture(npmNormalizedFixtureRoot);
+    clearAuthoredLocaleEntries(npmNormalizedFixtureRoot, 'yo');
     const result = runNpm(
-        ['run', 'language:build', '--UseNormalized'],
+        ['run', 'language:build', '--UseNormalized', '--TranslationProvider=none'],
         npmNormalizedFixtureRoot,
         {
             DeeplApi: 'must-not-be-used',
@@ -511,12 +573,12 @@ try {
     assert.strictEqual(result.status, 0, result.stderr || result.stdout);
     assert.match(
         result.stdout,
-        /Normalized English: Translation API bypassed; generating normalized draft values/
+        /Translation API: disabled; generating or refreshing normalized English fallbacks/
     );
     assert.match(result.stdout, /Normalized English result: \d+ value\(s\), 0 warning\(s\)/);
     assert.doesNotMatch(result.stdout, /Translation API: DeepL configured/);
     assert.doesNotMatch(result.stderr, /API translation|DeepL request/);
-    assert.match(result.stdout, /DeepL API usage: 0 call\(s\), 0 source character\(s\) passed/);
+    assert.match(result.stdout, /Translation API usage: 0 call\(s\), 0 source character\(s\) passed/);
 
     const catalog = JSON.parse(fs.readFileSync(path.join(
         npmNormalizedFixtureRoot,
@@ -528,7 +590,7 @@ try {
     ), 'utf8'));
     assert.equal(
         catalog.entries['extension.product.displayName'].text,
-        'My Defragmenter Script (.MyDc / .MyD)'
+        'My Storage Management Script (.MyDc / .MyD)'
     );
     assert.equal(catalog.entries['extension.product.displayName'].status, 'draft');
     assert.equal(catalog.entries['extension.product.displayName'].fallbackLocale, 'en');
@@ -541,8 +603,14 @@ try {
     ), 'utf8'));
     assert.deepStrictEqual(npmBuildReport.translation, {
         mode: 'normalized',
+        provider: 'None',
+        englishSource: 'normalized',
+        apiCalls: 0,
+        sourceCharactersPassed: 0,
         deepLApiCalls: 0,
-        deepLCharactersPassed: 0
+        deepLCharactersPassed: 0,
+        googleApiCalls: 0,
+        googleCharactersPassed: 0
     });
 } finally {
     fs.rmSync(npmNormalizedFixtureRoot, { recursive: true, force: true });

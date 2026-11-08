@@ -1,55 +1,7 @@
 {
-  "Defragment": {
-    "canonical": "Defragment",
-    "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
-  "FastFill": {
-    "canonical": "FastFill",
-    "id": "fileAction.fastFill"
-  },
-  "FileActions": {
-    "canonical": "FileActions",
-    "id": "structure.fileActions"
-  },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
-    "canonical": "FileSelect",
-    "id": "structure.fileSelect"
-  },
   "FragmentCount": {
     "canonical": "FragmentCount",
     "id": "volumeCondition.fragmentCount"
-  },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
-  },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
   },
   "SetColor": {
     "canonical": "SetColor",
@@ -59,24 +11,72 @@
     "canonical": "SetVariable",
     "id": "setting.setVariable"
   },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
+  "إجراءات ملف": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
   },
-  "SortByName": {
-    "canonical": "SortByName",
-    "id": "fileAction.sortByName"
-  },
-  "VolumeActions": {
+  "إجراءات وحدة التخزين": {
     "canonical": "VolumeActions",
     "id": "structure.volumeActions"
   },
-  "VolumeEnd": {
+  "إلغاء التجزئة": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
+  },
+  "إنهاء ملف": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "إنهاء وحدة التخزين": {
     "canonical": "VolumeEnd",
     "id": "structure.volumeEnd"
   },
-  "VolumeSelect": {
+  "استبعاد ملفات": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
+  },
+  "استبعاد وحدات التخزين": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "اسم الدليل": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "اسم الملف": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "الاسم": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "المختبر ش": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "تحديد ملف": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
+  },
+  "تحديد وحدة التخزين": {
     "canonical": "VolumeSelect",
     "id": "structure.volumeSelect"
+  },
+  "تعبئة سريعة": {
+    "canonical": "FastFill",
+    "id": "fileAction.fastFill"
+  },
+  "فرز حسب الاسم": {
+    "canonical": "SortByName",
+    "id": "fileAction.sortByName"
+  },
+  "مسار كامل": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "مقاس": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
   }
 }

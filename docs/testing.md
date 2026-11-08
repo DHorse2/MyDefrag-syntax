@@ -52,7 +52,8 @@ test name. Reports also include the source line and column supplied by Node.
 The Markdown table of contents and the detailed execution and inventory
 sections are grouped by tested domain. The domain links provide direct access
 to scripts and syntax, the language server, the extension, language tooling,
-the Language Maintenance app, the Locale Maintenance app, and coverage.
+the Locale Maintenance app, and coverage. The independent Language Maintenance
+application now owns its tests in `D:\MdmLocalize`.
 
 ## Coverage boundary
 

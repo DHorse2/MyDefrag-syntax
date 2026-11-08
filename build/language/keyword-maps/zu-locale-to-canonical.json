@@ -1,82 +1,82 @@
 {
-  "Defragment": {
-    "canonical": "Defragment",
-    "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
   "FastFill": {
     "canonical": "FastFill",
     "id": "fileAction.fastFill"
   },
-  "FileActions": {
-    "canonical": "FileActions",
-    "id": "structure.fileActions"
-  },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
-    "canonical": "FileSelect",
-    "id": "structure.fileSelect"
-  },
-  "FragmentCount": {
-    "canonical": "FragmentCount",
-    "id": "volumeCondition.fragmentCount"
-  },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
-  },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
-  },
-  "SetColor": {
-    "canonical": "SetColor",
-    "id": "setting.setColor"
-  },
-  "SetVariable": {
-    "canonical": "SetVariable",
-    "id": "setting.setVariable"
-  },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
-  },
-  "SortByName": {
+  "HlelaNgegama": {
     "canonical": "SortByName",
     "id": "fileAction.sortByName"
   },
-  "VolumeActions": {
-    "canonical": "VolumeActions",
-    "id": "structure.volumeActions"
+  "I-Defragment": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
   },
-  "VolumeEnd": {
+  "I-DirectoryName": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "I-FragmentCount": {
+    "canonical": "FragmentCount",
+    "id": "volumeCondition.fragmentCount"
+  },
+  "I-FullPath": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "I-SetColor": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
+  },
+  "I-SetVariable": {
+    "canonical": "SetVariable",
+    "id": "setting.setVariable"
+  },
+  "Igama": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "Igama lefayela": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "Ilebhu el": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "Isiphelo sefayela": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "Isiphelo sevolumu": {
     "canonical": "VolumeEnd",
     "id": "structure.volumeEnd"
   },
-  "VolumeSelect": {
+  "Izenzo zefayela": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
+  },
+  "Izenzo zevolumu": {
+    "canonical": "VolumeActions",
+    "id": "structure.volumeActions"
+  },
+  "Khetha ifayili": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
+  },
+  "Khetha ivolumu": {
     "canonical": "VolumeSelect",
     "id": "structure.volumeSelect"
+  },
+  "Khipha amafayili": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
+  },
+  "Khipha amavolumu": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "Usayizi": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
   }
 }

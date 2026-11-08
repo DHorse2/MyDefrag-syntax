@@ -1,0 +1,596 @@
+{
+    "name": "mydefrag-syntax",
+    "displayName": "MyDefrag Script (.MyDc / .MyD)",
+    "description": "Syntax highlighting for MyDefrag scripting language",
+    "version": "0.5.0",
+    "publisher": "macrodm",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DHorse2/MyDefrag-syntax"
+    },
+    "engines": {
+        "vscode": "^1.82.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "configuration": {
+            "title": "MyDefrag",
+            "properties": {
+                "mydfrg.userDir": {
+                    "type": "string",
+                    "default": ".user",
+                    "description": "Directory for MyDefrag user data."
+                },
+                "mydfrg.logDir": {
+                    "type": "string",
+                    "default": ".user/logs",
+                    "description": "Directory for MyDefrag log files."
+                },
+                "mydfrg.debugOn": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable MyDefrag extension debug logging."
+                },
+                "mydfrg.hoverEnabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show MyDefrag Help when hovering over supported directives and keywords."
+                },
+                "mydfrg.wordPredictionEnabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show inline MyDefrag keyword predictions while typing."
+                },
+                "mydfrg.verboseLevel": {
+                    "type": "number",
+                    "default": 5,
+                    "minimum": 0,
+                    "maximum": 10,
+                    "description": "MyDefrag extension verbosity level. Debug logging requires mydfrg.debugOn."
+                },
+                "mydfrg.referenceRelativePathLevel": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "default": "Error",
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        "None",
+                        "Error",
+                        "Warning",
+                        "Information",
+                        "Hint"
+                    ],
+                    "description": "Diagnostic severity for references found only by walking up parent folders."
+                },
+                "mydfrg.referenceContainsMacros": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "default": 3,
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        "None",
+                        "Error",
+                        "Warning",
+                        "Information",
+                        "Hint"
+                    ],
+                    "description": "Diagnostic severity for references containing execution-time macros."
+                },
+                "mydfrg.referenceFileFoundLevel": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "default": 3,
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        "None",
+                        "Error",
+                        "Warning",
+                        "Information",
+                        "Hint"
+                    ],
+                    "description": "Diagnostic severity for references whose target files are found."
+                },
+                "mydfrg.referenceFileNotFoundLevel": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "default": 1,
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        "None",
+                        "Error",
+                        "Warning",
+                        "Information",
+                        "Hint"
+                    ],
+                    "description": "Diagnostic severity for references whose target files are not found."
+                },
+                "mydfrg.fragmentParentLevel": {
+                    "type": [
+                        "number",
+                        "string"
+                    ],
+                    "default": 3,
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        "None",
+                        "Error",
+                        "Warning",
+                        "Information",
+                        "Hint"
+                    ],
+                    "description": "Diagnostic severity for inferred fragment parent messages."
+                },
+                "mydfrg.exclude": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [
+                        "**/Backup/**",
+                        "**/Bu/**",
+                        "**/MdmSysTools/**",
+                        "**/Archive/**",
+                        "**/*.tmp.MyDc",
+                        "**/Compile*",
+                        "**/*.log",
+                        "**/TaylorDoVs0_2/**",
+                        "**/TaylorDoVs0_3/**",
+                        "**/TaylorDoVs0_4/**",
+                        "**/Log/**",
+                        "**/Logs/**",
+                        "**/artifacts/**",
+                        "**/.user/**",
+                        "**/node_modules/**",
+                        "**/artifacts/**",
+                        "**/resources/",
+                        "**/dist/**",
+                        "**/.git/**",
+                        "**/.user/**",
+                        "**/.vs/**",
+                        "**/.vscode/**",
+                        "**/Download/**",
+                        "**/GithubIo/**"
+                    ],
+                    "description": "Glob patterns to exclude from MyDefrag validation"
+                }
+            }
+        },
+        "languages": [
+            {
+                "id": "mydfrg",
+                "aliases": [
+                    "MyDefrag Script",
+                    "mydfrg"
+                ],
+                "extensions": [
+                    ".MyDc",
+                    ".MyD",
+                    ".mydc",
+                    ".myd",
+                    ".MYDC",
+                    ".MYD"
+                ],
+                "configuration": "./src/language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mydfrg",
+                "scopeName": "source.mydfrg",
+                "path": "./syntaxes/mydfrg.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "mydfrg",
+                "path": "./snippets/mydfrg.code-snippets"
+            }
+        ],
+        "commands": [
+            {
+                "command": "mydfrg.openPreview",
+                "title": "Open Preview"
+            },
+            {
+                "command": "mydfrg.hover.disable",
+                "title": "MyDefrag: Turn Off Hover",
+                "icon": "$(eye)"
+            },
+            {
+                "command": "mydfrg.hover.enable",
+                "title": "MyDefrag: Turn On Hover",
+                "icon": "$(eye-closed)"
+            },
+            {
+                "command": "mydfrg.wordPrediction.disable",
+                "title": "MyDefrag: Turn Off Word Prediction",
+                "icon": "$(sparkle)"
+            },
+            {
+                "command": "mydfrg.wordPrediction.enable",
+                "title": "MyDefrag: Turn On Word Prediction",
+                "icon": "$(circle-slash)"
+            },
+            {
+                "command": "mdm.openFileAtPosition",
+                "title": "Open File at Position"
+            },
+            {
+                "command": "mydfrg.openSettings",
+                "title": "MyDefrag: Open Settings"
+            },
+            {
+                "command": "mydfrg.diagnostics.next",
+                "title": "MyDefrag: Next Diagnostic",
+                "icon": "$(arrow-down)"
+            },
+            {
+                "command": "mydfrg.diagnostics.previous",
+                "title": "MyDefrag: Previous Diagnostic",
+                "icon": "$(arrow-up)"
+            },
+            {
+                "command": "mydfrg.diagnostics.nextFile",
+                "title": "MyDefrag: Next File",
+                "icon": "$(arrow-right)"
+            },
+            {
+                "command": "mydfrg.diagnostics.openHelp",
+                "title": "MyDefrag: Open Help for Diagnostic",
+                "icon": "$(book)"
+            },
+            {
+                "command": "mydfrg.diagnostics.fixedItem",
+                "title": "MyDefrag: Mark Diagnostic Fixed",
+                "icon": "$(pass-filled)"
+            },
+            {
+                "command": "mydfrg.diagnostics.ignoreItem",
+                "title": "MyDefrag: Ignore Diagnostic",
+                "icon": "$(eye-closed)"
+            },
+            {
+                "command": "mydfrg.diagnostics.skipItem",
+                "title": "MyDefrag: Skip Diagnostic",
+                "icon": "$(debug-step-over)"
+            },
+            {
+                "command": "mydfrg.diagnostics.sendIt",
+                "title": "MyDefrag: Send Diagnostic to Agent",
+                "icon": "$(send)"
+            },
+            {
+                "command": "mydfrg.diagnostics.validSyntax",
+                "title": "MyDefrag: Mark as Valid Syntax",
+                "icon": "$(thumbsup-filled)"
+            },
+            {
+                "command": "mydfrg.diagnostics.prevFile",
+                "title": "MyDefrag: Previous File",
+                "icon": "$(arrow-left)"
+            },
+            {
+                "command": "mydfrg.diagnostics.top",
+                "title": "MyDefrag: First Diagnostic",
+                "icon": "$(arrow-circle-up)"
+            },
+            {
+                "command": "mydfrg.diagnostics.reset",
+                "title": "MyDefrag: Reset Diagnostic Navigation",
+                "icon": "$(discard)"
+            },
+            {
+                "command": "mydfrg.diagnostics.refresh",
+                "title": "MyDefrag: Refresh Diagnostics",
+                "icon": "$(refresh)"
+            },
+            {
+                "command": "mydfrg.diagnostics.filter",
+                "title": "MyDefrag: Filter Diagnostics",
+                "icon": "$(filter)"
+            },
+            {
+                "command": "mydfrg.diagnostics.clearFilter",
+                "title": "MyDefrag: Clear Diagnostic Filter",
+                "icon": "$(clear-all)"
+            },
+            {
+                "command": "mydfrg.diagnostics.showTree",
+                "title": "MyDefrag: Show Diagnostics as Tree",
+                "icon": "$(list-tree)"
+            },
+            {
+                "command": "mydfrg.diagnostics.showTable",
+                "title": "MyDefrag: Show Diagnostics as Table",
+                "icon": "$(list-flat)"
+            },
+            {
+                "command": "mydfrg.diagnostics.closeView",
+                "title": "MyDefrag: Close Diagnostics Explorer",
+                "icon": "$(close)"
+            },
+            {
+                "command": "mydfrg.configureFolders",
+                "title": "MyDefrag: Configure Folders"
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "command": "mydfrg.hover.disable",
+                    "when": "editorLangId == mydfrg && mydfrg.hoverEnabled",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "mydfrg.hover.enable",
+                    "when": "editorLangId == mydfrg && !mydfrg.hoverEnabled",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "mydfrg.wordPrediction.disable",
+                    "when": "editorLangId == mydfrg && mydfrg.wordPredictionEnabled",
+                    "group": "navigation@2"
+                },
+                {
+                    "command": "mydfrg.wordPrediction.enable",
+                    "when": "editorLangId == mydfrg && !mydfrg.wordPredictionEnabled",
+                    "group": "navigation@2"
+                },
+                {
+                    "command": "mydfrg.openPreview",
+                    "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
+                    "group": "navigation"
+                }
+            ],
+            "editor/title/context": [
+                {
+                    "command": "mydfrg.openPreview",
+                    "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
+                    "group": "navigation"
+                }
+            ],
+            "explorer/context": [
+                {
+                    "command": "mydfrg.openPreview",
+                    "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
+                    "group": "navigation"
+                }
+            ],
+            "view/title": [
+                {
+                    "command": "mydfrg.diagnostics.previous",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "mydfrg.diagnostics.next",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@2"
+                },
+                {
+                    "command": "mydfrg.diagnostics.prevFile",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@3"
+                },
+                {
+                    "command": "mydfrg.diagnostics.nextFile",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@4"
+                },
+                {
+                    "command": "mydfrg.diagnostics.top",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@5"
+                },
+                {
+                    "command": "mydfrg.diagnostics.openHelp",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@6"
+                },
+                {
+                    "command": "mydfrg.diagnostics.fixedItem",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@7"
+                },
+                {
+                    "command": "mydfrg.diagnostics.ignoreItem",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@8"
+                },
+                {
+                    "command": "mydfrg.diagnostics.skipItem",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@9"
+                },
+                {
+                    "command": "mydfrg.diagnostics.validSyntax",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@10"
+                },
+                {
+                    "command": "mydfrg.diagnostics.sendIt",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@11"
+                },
+                {
+                    "command": "mydfrg.diagnostics.showTable",
+                    "when": "view == mydfrgDiagnostics && mydfrgDiagnostics.viewMode == tree",
+                    "group": "navigation@12"
+                },
+                {
+                    "command": "mydfrg.diagnostics.showTree",
+                    "when": "view == mydfrgDiagnostics && mydfrgDiagnostics.viewMode == table",
+                    "group": "navigation@12"
+                },
+                {
+                    "command": "mydfrg.diagnostics.filter",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@13"
+                },
+                {
+                    "command": "mydfrg.diagnostics.clearFilter",
+                    "when": "view == mydfrgDiagnostics && mydfrgDiagnostics.filterActive",
+                    "group": "navigation@14"
+                },
+                {
+                    "command": "mydfrg.diagnostics.refresh",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@15"
+                },
+                {
+                    "command": "mydfrg.diagnostics.reset",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@16"
+                },
+                {
+                    "command": "mydfrg.diagnostics.closeView",
+                    "when": "view == mydfrgDiagnostics",
+                    "group": "navigation@17"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "mydfrg.configureFolders",
+                    "when": "true"
+                }
+            ]
+        },
+        "views": {
+            "explorer": [
+                {
+                    "id": "mydfrgDiagnostics",
+                    "name": "MyDefrag Diagnostics",
+                    "icon": "resources/icons/logo.svg"
+                }
+            ]
+        },
+        "links": [
+            {
+                "enablement": "true"
+            }
+        ]
+    },
+    "main": "./src/extension.js",
+    "activationEvents": [
+        "onView:mydfrgDiagnostics",
+        "onStartupFinished",
+        "onLanguage:mydfrg",
+        "onLanguage:bat",
+        "onCommand:mydfrg.openPreview",
+        "onCommand:mydfrg.hover.disable",
+        "onCommand:mydfrg.hover.enable",
+        "onCommand:mydfrg.wordPrediction.disable",
+        "onCommand:mydfrg.wordPrediction.enable",
+        "onCommand:mdm.openFileAtPosition",
+        "onCommand:mydfrg.openSettings",
+        "onCommand:mydfrg.configureFolders"
+    ],
+    "scripts": {
+        "test": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Fast",
+        "test:all": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite All",
+        "test:fast": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Fast",
+        "test:core": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Core",
+        "test:server": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Server",
+        "test:parser": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Parser",
+        "test:tokenizer": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Tokenizer",
+        "test:language-data": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageData",
+        "test:completion": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Completion",
+        "test:shared": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Shared",
+        "test:utilities": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Utilities",
+        "test:diagnostics": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Diagnostics",
+        "test:manifest": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Manifest",
+        "test:package": "npm run test:manifest",
+        "test:coverage": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Coverage",
+        "test:extension": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Extension",
+        "test:extension:unit": "npm run test:extension",
+        "test:apps": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Apps",
+        "test:scripts": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Syntax",
+        "deploy:local": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1",
+        "liveUpdate:local": "powershell -ExecutionPolicy Bypass -File ./scripts/update-live-MyDefrag.ps1",
+        "pack:vsix": "powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1",
+        "publish:vsx": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1",
+        "clean": "rimraf dist out .vscodeignore",
+        "inventory:comments": "node ./build/scripts/Inventory-CodeComments.cjs --write",
+        "inventory:documentation": "node ./build/scripts/Inventory-Documentation.cjs --write",
+        "inventory:logger": "node ./build/scripts/Inventory-LoggerStrings.cjs --write",
+        "inventory:master": "node ./build/scripts/Inventory-Master.cjs --write",
+        "build": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1 -SkipInstall",
+        "language:catalogs:apps": "node ./build/scripts/generate-electron-component-catalogs.js --write",
+        "language:candidate-drafts": "node ./build/scripts/generate-migration-candidate-drafts.js --write",
+        "language:validate": "node ./build/scripts/build-language.js validate",
+        "language:audit-normalized-inputs": "node ./build/scripts/build-language.js audit-normalized-inputs",
+        "language:build": "node ./build/scripts/build-language.js build",
+        "language:report": "node ./build/scripts/build-language.js report",
+        "language:translate-fallbacks": "node ./build/scripts/translate-language-fallbacks.js",
+        "language:app": "electron ./build/mdl-language-app/main/main.js --project-root .",
+        "language:app:debug": "electron --remote-debugging-port=9222 ./build/mdl-language-app/main/main.js --project-root .",
+        "language:diagnostics:install": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1",
+        "language:diagnostics:uninstall": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1 -Uninstall",
+        "language:app:pack": "electron-builder --config build/mdl-language-app/electron-builder.yml --win dir",
+        "language:app:package": "electron-builder --config build/mdl-language-app/electron-builder.yml --win nsis",
+        "test:language-app": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageApp",
+        "locale:app": "electron ./build/mdl-locale-app/main/main.js --project-root .",
+        "locale:app:debug": "electron --remote-debugging-port=9223 ./build/mdl-locale-app/main/main.js --project-root .",
+        "locale:app:pack": "electron-builder --config build/mdl-locale-app/electron-builder.yml --win dir",
+        "locale:app:package": "electron-builder --config build/mdl-locale-app/electron-builder.yml --win nsis",
+        "test:locale-app": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LocaleApp",
+        "test:language-report": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageReport",
+        "test:language": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageRuntime",
+        "test:language:all": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Language",
+        "test:language:validate": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageValidation",
+        "test:ci": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Fast",
+        "test:list": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -List",
+        "prepare": "npm run build",
+        "enableNetwwork:local": "powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1",
+        "listSymLinks:local": "powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1",
+        "addVsCodiumToExplorer:local": "powershell -ExecutionPolicy Bypass -File ./scripts/add-VsCodium-ToExplorer.ps1"
+    },
+    "dependencies": {
+        "ajv": "^8.20.0",
+        "jsonc-parser": "^3.3.1",
+        "vscode-languageclient": "^9.0.1",
+        "vscode-languageserver": "^9.0.1",
+        "vscode-languageserver-textdocument": "^1.0.12"
+    },
+    "devDependencies": {
+        "@vscode/vsce": "^3.9.2",
+        "electron": "^43.2.0",
+        "electron-builder": "^26.15.3",
+        "rimraf": "^3.0.2",
+        "vsce": "^2.0.0"
+    },
+    "overrides": {
+        "brace-expansion@>=2.0.0 <2.1.4": "2.1.4",
+        "fast-uri@>=3.0.0 <3.1.5": "3.1.5"
+    }
+}

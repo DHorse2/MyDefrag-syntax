@@ -7,7 +7,7 @@
 - [Technology and Security](#technology-and-security)
 - [Architecture](#architecture)
 - [Development Launch](#development-launch)
-- [DeepL API Configuration](#deepl-api-configuration)
+- [Translation API Configuration](#translation-api-configuration)
 - [Windows Packaging](#windows-packaging)
 - [Translator Workflow](#translator-workflow)
 - [Resizable Panels](#resizable-panels)
@@ -113,10 +113,10 @@ LocaleMaintenanceService
 The service layer is ordinary CommonJS and is tested without opening Electron.
 UI handlers do not directly access JSON or run the builder.
 
-The same `DeepLTranslationService` is used by the Electron main process and the
-language builder. It shields `{placeholder}` tokens with ignored XML tags,
-restores them after translation, and rejects any result whose placeholder set
-does not exactly match the canonical entry.
+The Electron main process and language builder share the same DeepL and Google
+Translate service interfaces. Both protect runtime syntax, restore it after
+translation, and reject any result whose placeholder set does not exactly match
+the canonical entry.
 
 ## Development Launch
 
@@ -136,31 +136,42 @@ MyDefrag-Locale-Maintenance.exe --project-root=D:\Script\MyDefrag-syntax
 
 If the supplied directory is invalid, the app opens a repository chooser.
 
-## DeepL API Configuration
+## Translation API Configuration
 
-Set the API key in the environment that launches the application or builder:
+Set either or both API keys in the environment that launches the application or
+builder:
 
 ```powershell
 $env:DeeplApi = '<your DeepL API key>'
+$env:GoogleTranslateApi = '<your Google Cloud Translation API key>'
 npm run locale:app
 ```
 
-Do not add the key to repository files. It remains in the Electron main process
-and is sent only in DeepL's `Authorization: DeepL-Auth-Key ...` header. The
-sandboxed renderer receives only a Boolean configured state and never receives
-the credential.
+Do not add either key to repository files. Keys remain in the Electron main
+process. DeepL receives its key only in the `DeepL-Auth-Key` authorization
+header. Google Cloud Translation Basic v2 receives its key only in the request
+query string. The sandboxed renderer receives provider names, configured
+states, and environment-variable names, but never receives credentials.
 
 Free API keys ending in `:fx` automatically use
 `https://api-free.deepl.com/v2/translate`; other keys use
-`https://api.deepl.com/v2/translate`. Advanced local configurations may set
-`DeeplApi` is the established project variable; `DEEPL_API_KEY` is accepted as
-an alternative for standard CI environments. `DEEPL_API_URL` may select a
-different DeepL-compatible API base URL and
-`DEEPL_TIMEOUT_MS` to a value from 1000 through 120000 milliseconds.
+`https://api.deepl.com/v2/translate`. `DeeplApi` is the established project
+variable; `DEEPL_API_KEY` is accepted as an alternative for standard CI
+environments. `DEEPL_API_URL` may select a different DeepL-compatible API base
+URL, and `DEEPL_TIMEOUT_MS` accepts 1000 through 120000 milliseconds.
 
 The integration uses DeepL's JSON `POST /v2/translate` contract and XML tag
 handling. Repository locale IDs are used as target language codes with explicit
 mappings for `fr-CA`, `zh-Hans`, and `pt`.
+
+Google Translate uses Cloud Translation Basic v2 at
+`https://translation.googleapis.com/language/translate/v2` with `source: en`
+and HTML input so protected runtime syntax can use no-translate spans. The
+standard alternative environment variable is `GOOGLE_TRANSLATE_API_KEY`.
+`GOOGLE_TRANSLATE_API_URL` selects a compatible API base URL, and
+`GOOGLE_TRANSLATE_TIMEOUT_MS` accepts 1000 through 120000 milliseconds.
+`zh-Hans` is mapped to the Basic v2 code `zh-CN`; other repository locale IDs
+are passed through.
 
 ## Windows Packaging
 
@@ -191,8 +202,8 @@ The editor layers locale data in this order:
 
 1. Authored component or aggregate locale values.
 2. Generated catalog entries whose `fallbackLocale` is `null`, including DeepL
-   entries with `machine-generated` status.
-3. Canonical English fallback.
+   or Google Translate entries with `machine-generated` status.
+3. The selected normalized or canonical English fallback.
 
 Generated translations are displayed without marking the authored draft dirty.
 Editing and applying one promotes it immediately into the authoritative
@@ -203,53 +214,66 @@ durable copy. Authored values always take precedence over generated output.
 Generated entries that explicitly use `fallbackLocale: "en"` remain displayed
 as English fallback and are not promoted as translations.
 
-1. Select a locale from the registry-backed Locale selector.
-2. Select a component from the canonical Component selector.
-3. Search by key, English source, translation, category, or review status.
-4. Review **Canonical English** and the lossless **Normalized English** directly
+1. Leave **Use normalized** checked (the default) to use normalized English for
+   generated fallbacks and automated translation input, or clear it to use
+   canonical English. Independently choose **Use DeepL API**, **Use Google
+   Translate API**, or leave both provider checkboxes clear. Selecting one API
+   clears the other.
+2. Select a locale from the registry-backed Locale selector.
+3. Select a component from the canonical Component selector.
+4. Search by key, English source, translation, category, or review status.
+5. Review **Canonical English** and the lossless **Normalized English** directly
    below it.
-5. Enter translated text, review status, and optional notes, or use **Use
+6. Enter translated text, review status, and optional notes, or use **Use
    English fallback** or **Use Normalized English** to populate **Current locale
    value**.
-6. Optionally choose **Generate API translation**. DeepL receives the current
-   locale field and replaces that field with its result. The separate latest
-   result display retains the returned text for comparison.
-7. Preserve every placeholder displayed in Required placeholders.
-8. Choose **Apply in memory** to accept the current field into the draft.
-9. Validate the complete selected component.
-10. Preview and confirm every authoritative file that Save will change.
-11. Save and review the targeted build result and changed generated files.
+7. Optionally choose **Generate API translation**. The selected provider receives
+   the selected normalized or canonical English source and replaces the current
+   locale field with its result. The separate latest result display retains the
+   returned text for comparison.
+8. Preserve every placeholder displayed in Required placeholders.
+9. Choose **Apply in memory** to accept the current field into the draft.
+10. Validate the complete selected component.
+11. Preview and confirm every authoritative file that Save will change.
+12. Save and review the targeted build result and changed generated files.
 
-Rows without an authored translation display **English fallback**. The English
-and normalized buttons populate only the editor field; **Apply in memory** is
-still required to change the draft. English definitions remain read-only
-because canonical English belongs in MyDefrag Language Maintenance.
+Rows without an authored translation display the actual selected English
+fallback and identify it as normalized or canonical. The English and normalized
+buttons populate only the editor field; **Apply in memory** is still required to
+change the draft. English definitions remain read-only because canonical English
+belongs in MyDefrag Language Maintenance.
 
 Changing the locale or component, reloading, or exiting prompts before dirty
 data is discarded. Revert restores the last loaded source without writing. The
 native main-process confirmation is the sole exit guard, so accepting **Exit
 without saving** is not vetoed again by the renderer.
 
-API requests submit only **Current locale value** and required formatting
-tokens. They never submit JSON keys, component IDs, locale IDs as content, enum
-values, paths, or other structural fields. An empty current value is rejected
-locally. The main process returns the exact source text it translated; the
-renderer verifies that it matches the submitted current value before replacing
-the field. A request failure, source mismatch, or unusable placeholder result
-leaves the current value unchanged.
+API requests submit only the selected canonical record's normalized or canonical
+English text and required formatting tokens. They never trust renderer-supplied
+source text or submit JSON keys, component IDs, locale IDs as content, enum
+values, paths, or other structural fields. The main process returns the exact
+source text it translated; the renderer verifies that it matches the selected
+source before replacing the field. A request failure, source mismatch, or
+unusable placeholder result leaves the current value unchanged.
 
 Every DeepL `/v2/translate` request includes custom instructions to translate
 words enclosed in quotation marks and parentheses. These direct DeepL to
-translate normalized product-name wording such as `My Defragmenter` instead of
-retaining it as a product name when DeepL supports custom instructions for the
-selected target language.
+translate normalized product-name wording such as `My Storage Management`
+instead of retaining it as a product name when DeepL supports custom
+instructions for the selected target language.
+
+Google Translate requests use the selected locale and the same English-source,
+runtime-syntax, and placeholder validation boundaries. With neither provider
+checkbox selected, **Generate API translation** is disabled and Save/Rebuild
+pass `--TranslationProvider=none`, so the build makes no translator API call;
+the **Use normalized** choice still controls generated fallbacks.
 
 ## Resizable Panels
 
 A draggable vertical separator controls the boundary between the component
 catalog and structured translation editor. Inside the editor, a horizontal
 separator controls the space assigned to **Current locale value** and the
-latest DeepL result. Pane minimums keep both sides usable.
+latest API result. Pane minimums keep both sides usable.
 
 Separators support pointer dragging, arrow keys, Shift+arrow for a larger step,
 Home and End for minimum-size navigation, and double-click to restore the
@@ -309,14 +333,14 @@ builder's exact-key `--AllowFallbackReplacement` command-line approval. The
 ordinary `language:build` command retains its additive locale-directory
 protection.
 
-When DeepL is configured, generated default component tables use it only for
-canonical entries that have no authored locale value. Existing aggregate or
-per-component values always win. A usable API result is written only to the
-generated table with `machine-generated` status and is also transactionally
-merged into permanent translator source. Missing configuration, HTTP failure,
-empty output, or a placeholder mismatch emits a warning, uses canonical English
-fallback, and does not fail the build. Independent canonical validation and
-write failures remain build failures.
+When the selected provider is configured, generated default component tables
+use it only for canonical entries that have no authored locale value. Existing
+aggregate or per-component values always win. A usable API result is written
+only to the generated table with `machine-generated` status and is also
+transactionally merged into permanent translator source. Missing configuration,
+HTTP failure, empty output, or a placeholder mismatch emits a warning, uses the
+selected normalized or canonical English fallback, and does not fail the build.
+Independent canonical validation and write failures remain build failures.
 
 If writing or building fails, authoritative sources and generated outputs are
 restored. The app reports failure rather than claiming a partial save. A backup
@@ -328,7 +352,6 @@ extension.
 ```powershell
 npm run test:locale-app
 npm run language:validate
-npm run test:language-app
 npm run test:language
 npm run test:language-report
 ```
@@ -365,7 +388,7 @@ environment problem, and retry.
 ### Save or Rebuild Takes Longer Than Expected
 
 Keep the progress window open and review its current phase and elapsed time.
-When DeepL is configured, the targeted build may wait for the translation API.
+When a translator API is selected, the targeted build may wait for that API.
 Use **Stop build** to cancel; wait for rollback to complete before retrying or
 closing the application. Cancellation first requests normal termination, then
 uses a bounded force-stop fallback if the child never reports that it closed;

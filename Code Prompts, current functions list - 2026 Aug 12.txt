@@ -1,0 +1,74 @@
+Code Prompts - 2026 Aug 12 - Aug ??
+===================================
+
+Component Catalog Add record does not clear.
+
+===================================
+
+Add the same filters and sort to Component Catalog that we see in All Candidates. Remove the redundant "All Candidates" that appears above these controls.
+
+Redo the layout of Add Record, put fields names to the left of fields, tighten all spaces, reduce the size of fields (or empty fields).
+
+Line number is not being updated in the component catalog although source is correct. Fix the code and data.
+
+
+===================================
+
+The powershell tree values returned are not useful. They will typically show a label but no value and have too much depth. At the same time, we are getting too little info on code objects, they have now depth or meaningful output. Attempt to improve both.
+
+
+===================================
+The tree function for .js files needs to show classes and functions at a minimum. It currently only display this:
+    - JavaScriptSyntax
+      - build/mdl-language-app/main/ipc-handlers.js
+        - properties
+          - testExecutable
+          - testExecutableRepositoryPath
+
+For example, 
+      - src/server/server.js
+        - properties
+          - testExecutable
+          - testExecutableRepositoryPath
+is a complex module/script and needs more detail revealed.
+
+===================================
+
+findstr /S /N /I /C:"debugger;" /C:"DebugBreak" /C:"__debugbreak" /C:"--inspect-brk" /C:"--inspect" *.js *.json *.ts *.mjs *.cjs > findstr.txt
+===================================
+LanguageMaintenanceService
+load
+previewMigrationSourceTransform
+buildMigrationSourceTransform
+getMigrationCandidates
+previewMigrationSourceTransform
+replaceMigrationSourceLine
+createMigrationTransformPreview
+activeRequest
+replaceLineButton.disabled
+replacementEnabled
+buildMigrationSourceTransform
+
+loadLanguageState
+validateLanguageState
+extractStringCandidates
+synchronizeCatalogSourceLines
+validateLanguageState
+extractStringCandidates
+findFileLineInStack
+
+createLanguageCatalog:
+formatText
+format(key, args = {}) {
+
+
+
+generate-electron-component-catalogs.js
+catalog-source-lines.js
+build-language.js
+language-maintenance-service.js
+migration-source-transform.js
+
+
+===================================
+

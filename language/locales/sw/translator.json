@@ -147,7 +147,7 @@
       "status": "machine-generated"
     },
     "translator.action.reloadData.label": {
-      "text": "Pakia tena data",
+      "text": "Pakia tena habari",
       "status": "machine-generated"
     },
     "translator.action.revert.label": {
@@ -175,7 +175,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
-      "text": "Faili zilizotengenezwa chini ya milinganyo ya lugha ya/ daima huhifadhiwa.",
+      "text": "Faili zilizoidhinishwa chini ya language/locales huhifadhiwa kila wakati.",
       "status": "machine-generated"
     },
     "translator.dialog.cancel.text": {
@@ -203,7 +203,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.deleteGeneratedCatalogDataValue.text": {
-      "text": "Futa data ya katalogi iliyotengenezwa: {catalogRemovals}",
+      "text": "Futa habari ya katalogi iliyotengenezwa: {catalogRemovals}",
       "status": "machine-generated"
     },
     "translator.dialog.deleteLocaleValue.title": {
@@ -255,7 +255,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.mydefragLanguageMaintenance.text": {
-      "text": "Matengenezo ya Lugha ya Defragmenter yangu",
+      "text": "Matengenezo ya Lugha ya Usimamizi Wangu wa Hifadhi yangu",
       "status": "machine-generated"
     },
     "translator.dialog.noAuthoritativeFilesWillChange.text": {
@@ -271,7 +271,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.revertFailed.title": {
-      "text": "Revert imeshindikana",
+      "text": "tengua imeshindikana",
       "status": "machine-generated"
     },
     "translator.dialog.saveAndBuildSucceeded.title": {
@@ -311,15 +311,15 @@
       "status": "machine-generated"
     },
     "translator.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "Chagua hazina ya sintaksi ya My Defragmenter",
+      "text": "Chagua hazina ya sintaksi ya Usimamizi Wangu wa Hifadhi",
       "status": "machine-generated"
     },
     "translator.dialog.startingMydefragLanguageMaintenance.title": {
-      "text": "Kuanzisha Matengenezo ya Lugha ya Defragmenter Yangu",
+      "text": "Kuanzisha Matengenezo ya Lugha ya Usimamizi Wangu wa Hifadhi Yangu",
       "status": "machine-generated"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
-      "text": "Data za /, /, / na {id} zilizotengenezwa na zilizokusanywa zitatunzwa kwa chaguo-msingi.",
+      "text": "habari iliyozalishwa ya build/language/catalogs/{id} itawekwa kwa chaguomsingi.",
       "status": "machine-generated"
     },
     "translator.dialog.unsavedLanguageChanges.title": {
@@ -379,7 +379,7 @@
       "status": "machine-generated"
     },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
-      "text": "Hifadhi halali ya sintaksi ya My Defragmenter haikuchaguliwa.",
+      "text": "Hifadhi halali ya sintaksi ya Usimamizi Wangu wa Hifadhi haikuchaguliwa.",
       "status": "machine-generated"
     },
     "translator.message.buildCancelledByUser.text": {
@@ -411,7 +411,7 @@
       "status": "machine-generated"
     },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
-      "text": "Chagua hifadhi inayomiliki lugha ya /, kanonali na lugha ya ujenzi ya /.",
+      "text": "Chagua hazina inayomiliki language/canonical na build/language.",
       "status": "machine-generated"
     },
     "translator.message.componentAddedInMemory.text": {
@@ -515,11 +515,11 @@
       "status": "machine-generated"
     },
     "translator.message.languageDataReloaded.text": {
-      "text": "Data za lugha zimepakuliwa upya",
+      "text": "habari za lugha zimepakuliwa upya",
       "status": "machine-generated"
     },
     "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
-      "text": "Data za utunzaji wa lugha hazijapakia.",
+      "text": "habari za utunzaji wa lugha hazijapakia.",
       "status": "machine-generated"
     },
     "translator.message.languageReportArtifactSaved.text": {
@@ -607,7 +607,7 @@
       "status": "machine-generated"
     },
     "translator.message.noApplicableSchemaIsAvailableForValue.text": {
-      "text": "Hakuna schema inayotumika inayopatikana kwa {viewName}.",
+      "text": "Hakuna ufafanuzi wa muundo inayotumika inayopatikana kwa {viewName}.",
       "status": "machine-generated"
     },
     "translator.message.noLanguageBuildIsRunning.text": {
@@ -619,7 +619,7 @@
       "status": "machine-generated"
     },
     "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
-      "text": "Sio hazina ya lugha ya My Defragmenter. Inakosekana: {missing}",
+      "text": "Sio hazina ya lugha ya Usimamizi Wangu wa Hifadhi. Inakosekana: {missing}",
       "status": "machine-generated"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
@@ -651,7 +651,7 @@
       "status": "machine-generated"
     },
     "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
-      "text": "Hifadhi au futa marekebisho ya Ripoti ya Lugha kabla ya kuhifadhi data za lugha rasmi.",
+      "text": "Hifadhi au futa marekebisho ya Ripoti ya Lugha kabla ya kuhifadhi habari za lugha rasmi.",
       "status": "machine-generated"
     },
     "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
@@ -743,7 +743,7 @@
       "status": "machine-generated"
     },
     "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
-      "text": "Daraja la preload lililozuiliwa halipatikani.",
+      "text": "Daraja la kipakiaji cha kuanzia lililozuiliwa halipatikani.",
       "status": "machine-generated"
     },
     "translator.message.theSelectedLineIsNotACurrentMigration.text": {
@@ -795,7 +795,7 @@
       "status": "machine-generated"
     },
     "translator.message.unableToLoadLanguageData.text": {
-      "text": "Haikuwezekana kupakia data za lugha.",
+      "text": "Haikuwezekana kupakia habari za lugha.",
       "status": "machine-generated"
     },
     "translator.message.unableToLoadMigrationCandidates.text": {
@@ -815,7 +815,7 @@
       "status": "machine-generated"
     },
     "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
-      "text": "Hakuweza kusoma ujenzi / lugha / ripoti za / ripoti ya uhamiaji ya .json: {errorMessage}",
+      "text": "Haiwezi kusoma build/language/reports/migration-report.json: {errorMessage}",
       "status": "machine-generated"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
@@ -835,7 +835,7 @@
       "status": "machine-generated"
     },
     "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
-      "text": "Tumia 'Hifadhi kumbukumbu ya ripoti' katika mtazamo wa Ripoti ya Lugha kabla ya kuhifadhi data ya lugha rasmi.",
+      "text": "Tumia 'Hifadhi kumbukumbu ya ripoti' katika mtazamo wa Ripoti ya Lugha kabla ya kuhifadhi habari ya lugha rasmi.",
       "status": "machine-generated"
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
@@ -867,7 +867,7 @@
       "status": "machine-generated"
     },
     "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
-      "text": "Subiri ujenzi wa lugha ukamilike kabla ya kuhifadhi artifact ya ripoti.",
+      "text": "Subiri ujenzi wa lugha ukamilike kabla ya kuhifadhi faili towe ya ripoti.",
       "status": "machine-generated"
     },
     "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
@@ -907,7 +907,7 @@
       "status": "machine-generated"
     },
     "translator.progress.savingLanguageData.status": {
-      "text": "Kuhifadhi data za lugha",
+      "text": "Kuhifadhi habari za lugha",
       "status": "machine-generated"
     },
     "translator.progress.startingSaveAndRebuild.status": {
@@ -923,7 +923,7 @@
       "status": "machine-generated"
     },
     "translator.progress.useStopBuildInTheProgressWindowThen.status": {
-      "text": "Tumia 'Stop build' kwenye dirisha la maendeleo, kisha subiri urejeshaji ukamilike kabla ya kufunga programu.",
+      "text": "Tumia 'kusimama mchakato wa uumbaji' kwenye dirisha la maendeleo, kisha subiri urejeshaji ukamilike kabla ya kufunga programu.",
       "status": "machine-generated"
     },
     "translator.progress.waitingForSaveConfirmation.status": {
@@ -1063,7 +1063,7 @@
       "status": "machine-generated"
     },
     "translator.ui.buildLanguageCatalogsValue.text": {
-      "text": "jenga / lugha / katalogi / {currentId}",
+      "text": "build/language/catalogs/{currentId}",
       "status": "machine-generated"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
@@ -1087,7 +1087,7 @@
       "status": "machine-generated"
     },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
-      "text": "Chaguzi zinaakisi lugha /, kanoniki /, na maeneo ya lugha ya .json. Maeneo yaliyosajiliwa yanaendelea kuonekana lakini hayawezi kuchaguliwa.",
+      "text": "Chaguo ni kioo cha language/canonical/language-locales.json. Maeneo ya lugha yaliyosajiliwa yanaendelea kuonekana lakini hayawezi kuchaguliwa.",
       "status": "machine-generated"
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
@@ -1275,7 +1275,7 @@
       "status": "machine-generated"
     },
     "translator.ui.loadingProjectLanguageData.text": {
-      "text": "Inapakia data za lugha za mradi.",
+      "text": "Inapakia habari za lugha za mradi.",
       "status": "machine-generated"
     },
     "translator.ui.locales.text": {
@@ -1283,11 +1283,11 @@
       "status": "machine-generated"
     },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
-      "text": "Inadumisha lugha / vipengele vya kanoniki / .json → uhamishaji Orodha .scanFiles",
+      "text": "Huhifadhi language/canonical/components.json → migrationInventory.scanFiles",
       "status": "machine-generated"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
-      "text": "Inadumisha lugha na maeneo ya// na.json. Kuondoa eneo kunahifadhi faili za chanzo zilizotengenezwa na kuhifadhi data za katalogi zilizotengenezwa kwa chaguo-msingi.",
+      "text": "Hutunza language/locales/locales.json. Kufuta eneo la lugha huhifadhi faili chanzo zilizoidhinishwa na kuweka maelezo ya katalogi yaliyotolewa kwa chaguomsingi.",
       "status": "machine-generated"
     },
     "translator.ui.migrationCoverageUnavailable.text": {
@@ -1483,7 +1483,7 @@
       "status": "machine-generated"
     },
     "translator.ui.revertingLanguageData.text": {
-      "text": "Kurejesha data za lugha",
+      "text": "Kurejesha habari za lugha",
       "status": "machine-generated"
     },
     "translator.ui.rightToLeftRtl.text": {
@@ -1563,7 +1563,7 @@
       "status": "machine-generated"
     },
     "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
-      "text": "Chagua faili ili kuonyesha kila mstari uliopokelewa na Extract String Candidates.",
+      "text": "Chagua faili ili kuonyesha kila mstari uliopokelewa na Dondoo ya Mfuatano wa Vigezo.",
       "status": "machine-generated"
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
@@ -1735,11 +1735,367 @@
       "status": "machine-generated"
     },
     "translator.ui.viewHeadingDataViewToolbar.text": {
-      "text": "Tazama data ya kichwa Tazama upau wa zana",
+      "text": "Tazama habari ya kichwa Tazama upau wa zana",
       "status": "machine-generated"
     },
     "translator.ui.yes.text": {
       "text": "Ndio",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.catalogRecordValue.label": {
+      "text": "Rekodi ya katalogi {recordKey}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "text": "Awamu za kuanza zilizokamilika",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "text": "Chuja wagombea kwa kategoria",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "text": "Chuja wagombea kwa kategoria",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "text": "Chuja wagombea kwa kategoria",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "text": "Chuja rekodi za kategoria kwa kategoria",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "text": "Chuja rekodi za kategoria kwa kategoria",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "text": "Chuja rekodi za kategoria kwa kategoria",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "text": "Chuja rekodi za kategoria kwa kategoria hali",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "text": "Agiza wagombea kwa mstari",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "text": "Agiza rekodi za katalogi kwa mstari chanzo",
+      "status": "machine-generated"
+    },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "text": "Mstari chanzo wa sasa, maandishi yanayopendekezwa, na ufunguo wa katalogi vinahitajika.",
+      "status": "machine-generated"
+    },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "text": "Tumia ufunguo huu wa katalogi kwenye rasimu ya kumbukumbu kabla ya kubadilisha chanzo.",
+      "status": "machine-generated"
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "text": "Ubadilishaji otomatiki unatumika tu kwa faili za CommonJS .js na .cjs. JSON na miundo mingine inahitaji mabadiliko maalum ya ujanibishaji.",
+      "status": "machine-generated"
+    },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "text": "Ubadilishaji halali wa chanzo cha uhamiaji unahitajika.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "text": "Mstari uliopangwa {candidateLine}. Sasisha mstari wake chanzo ili kukamilisha chaguo hili; urambazaji bado unapatikana.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "text": "Vyanzo vilivyoorodheshwa bado vinahitaji masasisho",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "text": "Chanzo kilichoorodheshwa bado kinahitaji sasisho",
+      "status": "machine-generated"
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "text": "Semi changamano za kiolezo zinahitaji vifungo vya kishikilia nafasi vinavyotokana na kichanganuzi kabla ya mabadiliko.",
+      "status": "machine-generated"
+    },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "text": "Funguo zilizopo za katalogi haziwezi kubadilishwa jina. Ongeza rekodi mpya badala yake.",
+      "status": "machine-generated"
+    },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "text": "Ubadilishaji wa kamba ya mistari mingi hauhimiliwi na ndoano ya awali ya ubadilishaji.",
+      "status": "machine-generated"
+    },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "text": "Onyesha upya hakikisho la ubadilishaji kabla ya kubadilisha mstari chanzo.",
+      "status": "machine-generated"
+    },
+    "translator.message.replacedLineValueInValue.text": {
+      "text": "Mstari uliobadilishwa {previewLine} katika {previewPath}.",
+      "status": "machine-generated"
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "text": "Mstari uliobadilishwa {previewLine} katika {previewPath}. Hifadhi rudufu haikuweza kuondolewa: {recoveryFiles}",
+      "status": "machine-generated"
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "text": "Kurejesha faili zilizozalishwa na vyanzo vya eneo vinavyodumu",
+      "status": "machine-generated"
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "text": "Chagua Mgombea Mtarajiwa, Uhakiki, Umekataliwa, Uhariri wa Msimbo, au Msimbo Umesasishwa.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceLineReplaced.text": {
+      "text": "Mstari wa chanzo umebadilishwa",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "text": "Mstari wa chanzo haukubadilishwa",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "text": "Ubadilishaji wa chanzo haujawezeshwa.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "text": "Ubadilishaji wa chanzo hauko tayari.",
+      "status": "machine-generated"
+    },
+    "translator.message.startingElectron.text": {
+      "text": "Kuanzisha Elektroni...",
+      "status": "machine-generated"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "text": "Kitambulisho cha katalogi si kitambulisho halali cha JavaScript.",
+      "status": "machine-generated"
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "text": "Kichanganuzi kilichosanidiwa hakiwezi kutoa maeneo ya chanzo yanayopendekezwa.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "text": "Kitufe cha katalogi kilichochaguliwa hakina maandishi haya yanayopendekezwa.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "text": "Mstari na maandishi yaliyochaguliwa si mgombea wa sasa wa uhamiaji ulioripotiwa.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "text": "Mstari na maandishi yaliyochaguliwa hayatambui mgombea mmoja wa sasa wa uhamiaji.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "text": "Mstari wa chanzo uliochaguliwa ulibadilika baada ya hakikisho la mabadiliko kuundwa.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "text": "Mstari wa chanzo uliochaguliwa haupo tena.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "text": "Mfuatano uliochaguliwa haupo tena kwenye mstari chanzo ulioripotiwa.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "text": "Mfuatano uliochaguliwa hutokea zaidi ya mara moja kwenye mstari chanzo; tukio halisi linahitajika.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "text": "Chanzo kilibadilika kabla hakijaweza kubadilishwa: {itemRelativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "text": "Faili chanzo kilibadilika baada ya hakikisho la mabadiliko kuundwa. Chagua tena mgombea ili kuisasisha.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "text": "Faili chanzo kilibadilika kabla ya kubadilishwa. Chagua tena mgombea ili kuisasisha.",
+      "status": "machine-generated"
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "text": "JavaScript iliyobadilishwa si halali kimsimbo: {syntaxError}",
+      "status": "machine-generated"
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "text": "Jina la kigezo cha mabadiliko si kitambulisho halali cha JavaScript.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "text": "Haiwezi kusasisha rasimu ya kumbukumbu.",
+      "status": "machine-generated"
+    },
+    "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
+      "text": "Tumia Hifadhi ili kudumisha hali ya pendekezo katika language/canonical/components.json.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "text": "{unresolvedCount} wagombea walioorodheshwa bado wana kamba yao asilia ya chanzo au haikuweza kuthibitishwa. Kufunga kunaendelea bila utekelezaji.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "text": "{detail}. Urambazaji utaendelea; masasisho ya chanzo yanapendekezwa lakini hayajatekelezwa.",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text": {
+      "text": "beji {stateDirty}",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text2": {
+      "text": "beji {validationOk}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateStatusValue.text": {
+      "text": "Hali ya mgombea: {cANDIDATE_STATUS_LABELSCodeUpdated}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "text": "Hali ya mgombea: {cANDIDATE_STATUS_LABELSCandidateStatus}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "text": "Ufunguo wa katalogi unahitajika",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "text": "Ufunguo wa katalogi: {initialCatalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "text": "Ufunguo wa katalogi: {catalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "text": "Kitufe cha Katalogi: {resultCatalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "text": "Rekodi ya Katalogi imeongezwa kwa mstari {candidateLine}. Sasisha mstari chanzo ili kukamilisha chaguo hili; urambazaji bado unapatikana.",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "text": "Hali ya Katalogi: {catalogStatuses}",
+      "status": "machine-generated"
+    },
+    "translator.ui.category.text": {
+      "text": "Jamii",
+      "status": "machine-generated"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "text": "Inaangalia ulinzi wa uingizwaji wa chanzo...",
+      "status": "machine-generated"
+    },
+    "translator.ui.durableLocaleFiles.text": {
+      "text": "Faili za eneo zinazodumu",
+      "status": "machine-generated"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "text": "Faili za eneo zinazodumu zimebadilishwa",
+      "status": "machine-generated"
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "text": "Ingiza kitufe cha katalogi ili kutoa hakikisho la mabadiliko.",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "text": "Funguo za katalogi zilizopo haziwezi kubadilishwa jina. Ongeza rekodi mpya ili kutumia ufunguo mwingine.",
+      "status": "machine-generated"
+    },
+    "translator.ui.highestLineFirst.text": {
+      "text": "Mstari wa juu zaidi kwanza",
+      "status": "machine-generated"
+    },
+    "translator.ui.inCatalog.text": {
+      "text": "Katika Katalogi",
+      "status": "machine-generated"
+    },
+    "translator.ui.lineOrder.text": {
+      "text": "Mpangilio wa mstari",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingTransformPreview.text": {
+      "text": "Inapakia hakikisho la mabadiliko...",
+      "status": "machine-generated"
+    },
+    "translator.ui.lowestLineFirst.text": {
+      "text": "Mstari wa chini kabisa kwanza",
+      "status": "machine-generated"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "text": "Hakuna mgombea anayefuata anayelingana na vichujio vya sasa.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "text": "Hakuna mgombea aliyetangulia anayelingana na vichujio vya sasa.",
+      "status": "machine-generated"
+    },
+    "translator.ui.original.text": {
+      "text": "Asili",
+      "status": "machine-generated"
+    },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "text": "Kurejesha hakikisho la mabadiliko...",
+      "status": "machine-generated"
+    },
+    "translator.ui.replaceLineInSource.text": {
+      "text": "Badilisha mstari katika chanzo",
+      "status": "machine-generated"
+    },
+    "translator.ui.resolvingCatalogKey.text": {
+      "text": "Kutatua ufunguo wa katalogi...",
+      "status": "machine-generated"
+    },
+    "translator.ui.role.text": {
+      "text": "Jukumu",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "text": "Ubadilishaji wa chanzo haupatikani.",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "text": "Ubadilishaji wa chanzo unahitaji ufunguo wa katalogi.",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "text": "Hakiki ya Ubadilishaji Chanzo",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "text": "Sasisho la chanzo bado linasubiri. {detail}. Urambazaji unaendelea.",
+      "status": "machine-generated"
+    },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "text": "Mstari chanzo haukubadilishwa.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "text": "Tukio hili la ufunguo wa sasa tayari linatumia katalogi.format na halihitaji mabadiliko ya chanzo.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "text": "Mgombea huyu wa awali amehifadhiwa kwa ajili ya uchambuzi; mstari chanzo cha sasa tayari unatumia katalogi.format.",
+      "status": "machine-generated"
+    },
+    "translator.ui.transformed.text": {
+      "text": "Imebadilishwa",
+      "status": "machine-generated"
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "text": "Hakikisho la uhariri halipatikani: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueRemaining.text": {
+      "text": "{summaryRemainingCount} imesalia",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "text": "Sekunde {statusElapsedMsToFixed} zilipita",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueValueCompleted.text": {
+      "text": "{summaryCompletedCount}/{summaryTotalCount} zilikamilika",
       "status": "machine-generated"
     }
   }

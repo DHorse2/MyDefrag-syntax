@@ -1,57 +1,49 @@
 {
-  "Defragment": {
-    "canonical": "Defragment",
-    "id": "fileAction.defragment"
+  "Chagua Faili": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
   },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
+  "Chagua Kiasi": {
+    "canonical": "VolumeSelect",
+    "id": "structure.volumeSelect"
   },
   "FastFill": {
     "canonical": "FastFill",
     "id": "fileAction.fastFill"
   },
-  "FileActions": {
-    "canonical": "FileActions",
-    "id": "structure.fileActions"
-  },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
-    "canonical": "FileSelect",
-    "id": "structure.fileSelect"
-  },
-  "FragmentCount": {
+  "Hesabu ya Vipande": {
     "canonical": "FragmentCount",
     "id": "volumeCondition.fragmentCount"
   },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
-  },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
+  "Jina": {
     "canonical": "Name",
     "id": "volumeCondition.name"
   },
-  "SetColor": {
+  "Jina la Faili": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "Jina la Saraka": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "Kiisho cha Faili": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "Kiisho cha Kiasi": {
+    "canonical": "VolumeEnd",
+    "id": "structure.volumeEnd"
+  },
+  "Lebo": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "Njia Kamili": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "SetRangi": {
     "canonical": "SetColor",
     "id": "setting.setColor"
   },
@@ -59,24 +51,32 @@
     "canonical": "SetVariable",
     "id": "setting.setVariable"
   },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
-  },
   "SortByName": {
     "canonical": "SortByName",
     "id": "fileAction.sortByName"
   },
-  "VolumeActions": {
+  "Tenga Faili": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
+  },
+  "Tenga Kiasi": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "Ukubwa": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
+  },
+  "Utenganishaji": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
+  },
+  "Vitendo vya Faili": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
+  },
+  "Vitendo vya Kiasi": {
     "canonical": "VolumeActions",
     "id": "structure.volumeActions"
-  },
-  "VolumeEnd": {
-    "canonical": "VolumeEnd",
-    "id": "structure.volumeEnd"
-  },
-  "VolumeSelect": {
-    "canonical": "VolumeSelect",
-    "id": "structure.volumeSelect"
   }
 }

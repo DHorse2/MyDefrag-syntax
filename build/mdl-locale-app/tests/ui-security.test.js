@@ -37,6 +37,11 @@ test('renderer is isolated, sandboxed, and restricted by CSP', () => {
     assert.match(html, /\.\.\/\.\.\/shared\/renderer-table-columns\.css/);
     assert.match(html, /\.\.\/\.\.\/shared\/renderer-table-columns\.js/);
     assert.match(html, /id="request-api-button"/);
+    assert.match(html, /id="use-normalized"[^>]*checked/);
+    assert.match(html, /id="use-deepl-api"/);
+    assert.match(html, /id="use-google-translate-api"/);
+    assert.ok(html.indexOf('id="use-deepl-api"') < html.indexOf('id="use-google-translate-api"'));
+    assert.match(html, /Leave both unchecked to build without a translator API/);
     assert.match(html, /id="normalized-text"/);
     assert.match(html, /id="use-normalized-button"/);
     assert.doesNotMatch(html, /id="replace-api-button"/);
@@ -53,9 +58,15 @@ test('renderer is isolated, sandboxed, and restricted by CSP', () => {
     assert.match(renderer, /runProgressOperation\('save'/);
     assert.match(renderer, /runProgressOperation\(\s*'rebuild'/);
     assert.match(renderer, /api\.cancelBuild\(\)/);
-    assert.match(renderer, /const currentValue = document\.getElementById\('translation-text'\)\.value/);
-    assert.match(renderer, /text: currentValue/);
-    assert.match(renderer, /!translationSourceMatches\(currentValue, result\.sourceText\)/);
+    assert.match(renderer, /const selectedSource = sourceValue\(row, useNormalizedEnglish\)/);
+    assert.match(renderer, /useNormalized: useNormalizedEnglish/);
+    assert.match(renderer, /translationProvider/);
+    assert.match(renderer, /setTranslationProvider\(deepLApiCheckbox\.checked \? 'deepl' : 'none'\)/);
+    assert.match(renderer, /setTranslationProvider\(googleTranslateApiCheckbox\.checked \? 'google' : 'none'\)/);
+    assert.match(renderer, /api\.save\(buildRequest\(\)\)/);
+    assert.match(renderer, /api\.rebuild\(buildRequest\(\)\)/);
+    assert.match(renderer, /!translationSourceMatches\(selectedSource, result\.sourceText\)/);
+    assert.match(renderer, /useNormalizedCheckbox\.addEventListener\('change'/);
     assert.match(renderer, /translation-text'\)\.value = result\.translationText/);
     assert.match(renderer, /key: 'locale-catalog-editor'/);
     assert.match(renderer, /key: 'locale-current-api'/);
@@ -80,6 +91,9 @@ test('preload exposes fixed invokes and one narrow progress subscription', () =>
     for (const channel of Object.values(CHANNELS)) { assert.ok(source.includes(`'${channel}'`)); }
     for (const event of Object.values(EVENTS)) { assert.ok(source.includes(`'${event}'`)); }
     assert.doesNotMatch(source, /DEEPL_API_KEY/);
+    assert.doesNotMatch(source, /GOOGLE_TRANSLATE_API_KEY/);
+    assert.match(source, /save: \(request\) => ipcRenderer\.invoke\(CHANNELS\.save, request\)/);
+    assert.match(source, /rebuild: \(request\) => ipcRenderer\.invoke\(CHANNELS\.rebuild, request\)/);
 });
 
 test('UI helpers search structured rows and protect dirty selection changes', () => {
@@ -87,12 +101,12 @@ test('UI helpers search structured rows and protect dirty selection changes', ()
     assert.equal(matchesSearch({ key: 'parser.test' }, 'server'), false);
     assert.equal(mayChangeSelection(false, () => false), true);
     assert.equal(mayChangeSelection(true, () => false), false);
-    const row = { sourceText: 'MyDefrag', normalizedText: 'My Defragmenter' };
+    const row = { sourceText: 'MyDefrag', normalizedText: 'My Storage Management' };
     assert.equal(sourceValue(row), 'MyDefrag');
-    assert.equal(sourceValue(row, true), 'My Defragmenter');
+    assert.equal(sourceValue(row, true), 'My Storage Management');
     assert.equal(sourceValue(null, true), '');
-    assert.equal(translationSourceMatches('My Defragmenter', 'My Defragmenter'), true);
-    assert.equal(translationSourceMatches('My Defragmenter', 'Prior value'), false);
+    assert.equal(translationSourceMatches('My Storage Management', 'My Storage Management'), true);
+    assert.equal(translationSourceMatches('My Storage Management', 'Prior value'), false);
     assert.equal(translationSourceMatches('  Open Preview  ', 'Open Preview'), true);
 });
 
@@ -106,6 +120,8 @@ test('save and rebuild IPC stream progress and expose cancellation', async () =>
     const progressEvents = [];
     let closed = 0;
     let apiTranslationRequest = null;
+    let saveRequest = null;
+    let rebuildRequest = null;
     const service = {
         load: () => ({}),
         select: () => ({}),
@@ -119,11 +135,13 @@ test('save and rebuild IPC stream progress and expose cancellation', async () =>
         revert: () => ({}),
         validate: () => ({ ok: true }),
         previewSave: () => ({ validation: { ok: true }, authoritativeFiles: [] }),
-        save: async (progress) => {
+        save: async (request, progress) => {
+            saveRequest = request;
             progress({ phase: 'build', message: 'Saving', cancellable: true });
             return { ok: true };
         },
-        rebuild: async (progress) => {
+        rebuild: async (request, progress) => {
+            rebuildRequest = request;
             progress({ phase: 'snapshot', message: 'Rebuilding', cancellable: false });
             return { ok: true };
         },
@@ -147,14 +165,18 @@ test('save and rebuild IPC stream progress and expose cancellation', async () =>
 
     assert.deepEqual(await handlers.get(CHANNELS.requestApiTranslation)(event, {
         key: 'extension.command.openPreview.title',
-        text: 'Open Preview'
+        translationProvider: 'google',
+        useNormalized: true
     }), { ok: true });
     assert.deepEqual(apiTranslationRequest, {
         key: 'extension.command.openPreview.title',
-        text: 'Open Preview'
+        translationProvider: 'google',
+        useNormalized: true
     });
-    assert.deepEqual(await handlers.get(CHANNELS.save)(event), { ok: true });
-    assert.deepEqual(await handlers.get(CHANNELS.rebuild)(event), { ok: true });
+    assert.deepEqual(await handlers.get(CHANNELS.save)(event, { translationProvider: 'google' }), { ok: true });
+    assert.deepEqual(await handlers.get(CHANNELS.rebuild)(event, { translationProvider: 'none' }), { ok: true });
+    assert.deepEqual(saveRequest, { translationProvider: 'google' });
+    assert.deepEqual(rebuildRequest, { translationProvider: 'none' });
     assert.deepEqual(await handlers.get(CHANNELS.cancelBuild)(event), { ok: true, cancelled: true });
     assert.deepEqual(await handlers.get(CHANNELS.exit)(event), { ok: true });
     assert.equal(closed, 1);

@@ -91,11 +91,11 @@
       "status": "machine-generated"
     },
     "locales.dialog.localeComponentBuildIsRunning.title": {
-      "text": "Ana gudanar da ginin sashin Locale",
+      "text": "Ana gudanar da ginin sashin yankin harshe",
       "status": "machine-generated"
     },
     "locales.dialog.mydefragLocaleMaintenance.text": {
-      "text": "Kula da Defragmenter na Yankin",
+      "text": "Kula da Gudanar da Ajiyata na Yankin",
       "status": "machine-generated"
     },
     "locales.dialog.noFilesWillChange.text": {
@@ -123,7 +123,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "Zaɓi ma'ajiyar nahawun My Defragmenter",
+      "text": "Zaɓi ma'ajiyar nahawun Gudanar da Ajiyata",
       "status": "machine-generated"
     },
     "locales.dialog.unsavedLocaleChanges.title": {
@@ -167,11 +167,11 @@
       "status": "machine-generated"
     },
     "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
-      "text": "Ba a zaɓi ingantaccen ma'ajiyar yankin My Defragmenter ba.",
+      "text": "Ba a zaɓi ingantaccen ma'ajiyar yankin Gudanar da Ajiyata ba.",
       "status": "machine-generated"
     },
     "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
-      "text": "Canonical English ba manufa ce ta fassara API ba.",
+      "text": "mai iko Turanci ba manufa ce ta fassara API ba.",
       "status": "machine-generated"
     },
     "locales.message.catalogKeyBelongsToComponentValue.text": {
@@ -179,7 +179,7 @@
       "status": "machine-generated"
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "text": "Zaɓi ma'ajiyar da ke da wuraren yare na /, sannan gina yaren /.",
+      "text": "Zaɓi ma'ajiyar da ta mallaki language/locales da build/language.",
       "status": "machine-generated"
     },
     "locales.message.componentRebuildFailed.text": {
@@ -195,7 +195,7 @@
       "status": "machine-generated"
     },
     "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
-      "text": "Rubutun Turanci shi ne na asali kuma dole ne a kula da shi a cikin My Defragmenter Language Maintenance.",
+      "text": "Rubutun Turanci shi ne na asali kuma dole ne a kula da shi a cikin Gudanar da Ajiyata Kula da Harshe.",
       "status": "machine-generated"
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
@@ -227,7 +227,7 @@
       "status": "machine-generated"
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "text": "Ba ma'ajiyar yankin My Defragmenter ba. Ana rasa: {missing}",
+      "text": "Ba ma'ajiyar yankin Gudanar da Ajiyata ba. Ana rasa: {missing}",
       "status": "machine-generated"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {
@@ -339,7 +339,7 @@
       "status": "machine-generated"
     },
     "locales.progress.useStopBuildInTheProgressWindowThen.status": {
-      "text": "Yi amfani da Stop Build a cikin taga ci gaba, sannan ka jira dawowa baya ta kammala kafin ka rufe manhajar.",
+      "text": "Yi amfani da Dakatar da Gina a cikin taga ci gaba, sannan ka jira dawowa baya ta kammala kafin ka rufe manhajar.",
       "status": "machine-generated"
     },
     "locales.progress.waitingForSaveConfirmation.status": {
@@ -512,6 +512,14 @@
     },
     "locales.ui.valueValidationErrorS.text": {
       "text": "{stateValidationErrorsCount} Kuskuren tabbaci",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "lambar {stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "lambar {stateValidationOk}",
       "status": "machine-generated"
     }
   }

@@ -91,7 +91,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.localeComponentBuildIsRunning.title": {
-      "text": "ساخت کامپوننت Locale در حال اجرا است.",
+      "text": "ساخت کامپوننت منطقه زبانی در حال اجرا است.",
       "status": "machine-generated"
     },
     "locales.dialog.mydefragLocaleMaintenance.text": {
@@ -123,7 +123,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "مخزن نحوی My Defragmenter را انتخاب کنید",
+      "text": "مخزن نحوی مدیریت حافظه من را انتخاب کنید",
       "status": "machine-generated"
     },
     "locales.dialog.unsavedLocaleChanges.title": {
@@ -147,7 +147,7 @@
       "status": "machine-generated"
     },
     "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
-      "text": "ایجاد یک ترجمه از مقدار locale فعلی",
+      "text": "ایجاد یک ترجمه از مقدار منطقه زبانی فعلی",
       "status": "machine-generated"
     },
     "locales.input.keySourceTranslationStatus.placeholder": {
@@ -167,7 +167,7 @@
       "status": "machine-generated"
     },
     "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
-      "text": "یک مخزن محلی معتبر My Defragmenter انتخاب نشد.",
+      "text": "یک مخزن محلی معتبر مدیریت حافظه من انتخاب نشد.",
       "status": "machine-generated"
     },
     "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
@@ -179,7 +179,7 @@
       "status": "machine-generated"
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "text": "مخزنی را که مالک لوکال‌های زبان / است انتخاب کنید و زبان / را بسازید.",
+      "text": "مخزن مالک language/locales و build/language را انتخاب کنید.",
       "status": "machine-generated"
     },
     "locales.message.componentRebuildFailed.text": {
@@ -195,11 +195,11 @@
       "status": "machine-generated"
     },
     "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
-      "text": "متن انگلیسی کانونیکال است و باید در نگهداری زبان My Defragmenter حفظ شود.",
+      "text": "متن انگلیسی کانونیکال است و باید در نگهداری زبان مدیریت حافظه من حفظ شود.",
       "status": "machine-generated"
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
-      "text": "قبل از تولید ترجمهٔ API، مقدار فعلی locale را وارد یا پر کنید.",
+      "text": "قبل از تولید ترجمهٔ API، مقدار فعلی منطقه زبانی را وارد یا پر کنید.",
       "status": "machine-generated"
     },
     "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
@@ -211,7 +211,7 @@
       "status": "machine-generated"
     },
     "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
-      "text": "نامطابقت شناسهٔ کاتالوگ locale تولیدشده در {relativePath}:",
+      "text": "نامطابقت شناسهٔ کاتالوگ منطقه زبانی تولیدشده در {relativePath}:",
       "status": "machine-generated"
     },
     "locales.message.generatedLocaleCatalogIsInvalid.text": {
@@ -227,7 +227,7 @@
       "status": "machine-generated"
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "text": "این یک مخزن محلی My Defragmenter نیست.   مفقود: {missing}",
+      "text": "این یک مخزن محلی مدیریت حافظه من نیست.   مفقود: {missing}",
       "status": "machine-generated"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {
@@ -259,7 +259,7 @@
       "status": "machine-generated"
     },
     "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
-      "text": "فرآیند اصلی مقدار locale جاری متفاوتی را ترجمه کرد. نگهداری locale را مجدداً راه‌اندازی کرده و دوباره امتحان کنید.",
+      "text": "فرآیند اصلی مقدار منطقه زبانی جاری متفاوتی را ترجمه کرد. نگهداری منطقه زبانی را مجدداً راه‌اندازی کرده و دوباره امتحان کنید.",
       "status": "machine-generated"
     },
     "locales.message.translationRejected.text": {
@@ -347,7 +347,7 @@
       "status": "machine-generated"
     },
     "locales.progress.writingAuthoritativeLocaleFiles.status": {
-      "text": "نوشتن فایل‌های locale معتبر",
+      "text": "نوشتن فایل‌های منطقه زبانی معتبر",
       "status": "machine-generated"
     },
     "locales.ui.badgeValue.text": {
@@ -395,7 +395,7 @@
       "status": "machine-generated"
     },
     "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
-      "text": "یک ترجمه بر اساس مقدار locale فعلی تولید کنید. نتیجه تنها آن فیلد را جایگزین می‌کند.",
+      "text": "یک ترجمه بر اساس مقدار منطقه زبانی فعلی تولید کنید. نتیجه تنها آن فیلد را جایگزین می‌کند.",
       "status": "machine-generated"
     },
     "locales.ui.generatedValue.text": {
@@ -439,7 +439,7 @@
       "status": "machine-generated"
     },
     "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
-      "text": "تغییر اندازه مقدار locale فعلی و پیشنهاد API",
+      "text": "تغییر اندازه مقدار منطقه زبانی فعلی و پیشنهاد API",
       "status": "machine-generated"
     },
     "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {

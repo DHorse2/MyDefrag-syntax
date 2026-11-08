@@ -1,0 +1,14 @@
+{
+  "locale": "yo",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "A retí {expected} ṣùgbọ́n a rí {actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "Àmì àìròtẹ́lẹ̀ '{token}'",
+      "status": "machine-generated"
+    }
+  }
+}

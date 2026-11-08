@@ -131,7 +131,7 @@ preview.annotation.includeEnd.text
 
 ## Preview Mode Model
 
-The current annotated expanded preview remains the default mode.
+The annotated expanded preview with line numbers remains the default mode.
 
 The declarative mode inventory is in:
 
@@ -139,7 +139,10 @@ The declarative mode inventory is in:
 language/canonical/preview-modes.json
 ```
 
-Planned modes include annotated expanded preview, code-only expanded preview, canonical preview, localized preview, bilingual preview, semantic review preview, and translation difference preview. This phase records the mode model; it does not replace preview generation.
+The inventory defines the five implemented preview variations: raw executable
+output and four annotated combinations with optional line numbers and file
+headers. The raw view keeps an executable extension for language-server
+diagnostics; annotated views use `.mydd` or `.mydcd`.
 
 ## Project-Scoped Variable Translation
 

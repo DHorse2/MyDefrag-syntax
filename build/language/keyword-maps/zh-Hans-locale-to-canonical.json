@@ -1,75 +1,75 @@
 {
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
-  "FastFill": {
-    "canonical": "FastFill",
-    "id": "fileAction.fastFill"
-  },
-  "FileActions": {
-    "canonical": "FileActions",
-    "id": "structure.fileActions"
-  },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FragmentCount": {
-    "canonical": "FragmentCount",
-    "id": "volumeCondition.fragmentCount"
-  },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
-  },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
-  },
-  "SetColor": {
-    "canonical": "SetColor",
-    "id": "setting.setColor"
-  },
-  "SetVariable": {
-    "canonical": "SetVariable",
-    "id": "setting.setVariable"
-  },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
-  },
-  "SortByName": {
-    "canonical": "SortByName",
-    "id": "fileAction.sortByName"
-  },
-  "VolumeActions": {
+  "卷操作": {
     "canonical": "VolumeActions",
     "id": "structure.volumeActions"
   },
-  "VolumeEnd": {
+  "卷结束": {
     "canonical": "VolumeEnd",
     "id": "structure.volumeEnd"
+  },
+  "名称": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "大小": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
+  },
+  "完整路径": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "快速填充": {
+    "canonical": "FastFill",
+    "id": "fileAction.fastFill"
+  },
+  "按名称排序": {
+    "canonical": "SortByName",
+    "id": "fileAction.sortByName"
+  },
+  "排除卷": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "排除文件": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
   },
   "整理碎片": {
     "canonical": "Defragment",
     "id": "fileAction.defragment"
+  },
+  "文件名": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "文件操作": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
+  },
+  "文件结束": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "标签": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "目录名": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "碎片计数": {
+    "canonical": "FragmentCount",
+    "id": "volumeCondition.fragmentCount"
+  },
+  "设置变量": {
+    "canonical": "SetVariable",
+    "id": "setting.setVariable"
+  },
+  "设置颜色": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
   },
   "选择卷": {
     "canonical": "VolumeSelect",

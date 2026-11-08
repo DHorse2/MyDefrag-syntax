@@ -1,0 +1,22 @@
+{
+  "locale": "am",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "የእኔ ማከማቻ አስተዳደር: ምንም አይነት ወቅታዊ ምርመራ የለም።",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) የእኔ ማከማቻ አስተዳደር {index}/{total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) የእኔ ማከማቻ አስተዳደር 0 ምርመራዎች",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "ዲያግኖስቲክስ፡ {current}/{eligible}/{all} ({remaining} የቀሩ፣ {remainingFiles}/{traversableFiles}/{totalFiles} ፋይሎች፣ የተስተካከሉ {fixed}፣ ችላ ተብሏል {ignored}፣ የተዘለለ {skipped})",
+      "status": "machine-generated"
+    }
+  }
+}

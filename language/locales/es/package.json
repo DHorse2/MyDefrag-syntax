@@ -7,11 +7,11 @@
       "status": "machine-generated"
     },
     "package.description": {
-      "text": "Resaltado de sintaxis para el lenguaje de scripting «My Defragmenter»",
+      "text": "Resaltado de sintaxis para el lenguaje de scripting «Gestión de almacenamiento»",
       "status": "machine-generated"
     },
     "package.metadata.description": {
-      "text": "Resaltado de sintaxis para el lenguaje de scripting «My Defragmenter»",
+      "text": "Resaltado de sintaxis para el lenguaje de scripting «Gestión de almacenamiento»",
       "status": "machine-generated"
     },
     "package.metadata.publisher": {
@@ -19,7 +19,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.userDir.description": {
-      "text": "Directorio de datos de usuario de My Defragmenter.",
+      "text": "Directorio de datos de usuario de Gestión de almacenamiento.",
       "status": "machine-generated"
     },
     "package.path.repository.url": {
@@ -31,15 +31,15 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
-      "text": "Directorio para los archivos de registro de My Defragmenter.",
+      "text": "Directorio para los archivos de registro de Gestión de almacenamiento.",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.debugOn.description": {
-      "text": "Activar el registro de depuración de la extensión «My Defragmenter».",
+      "text": "Activar el registro de depuración de la extensión «Gestión de almacenamiento».",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
-      "text": "Nivel de detalle de la extensión «My Defragmenter». Para activar el registro de depuración, es necesario que la opción «mydfrg debug On» esté activada.",
+      "text": "Nivel de detalle de la extensión «Gestión de almacenamiento». Para activar el registro de depuración, es necesario que la opción «mydfrg.debugOn» esté activada.",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
@@ -87,7 +87,7 @@
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
-      "text": "Mi desfragmentador: «Mark Diagnostic» solucionado",
+      "text": "Mi gestión de almacenamiento: etiquetar diagnóstico como solucionado",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
@@ -99,7 +99,7 @@
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
-      "text": "My Defragmenter: Enviar diagnóstico al agente",
+      "text": "Gestión de almacenamiento: Enviar diagnóstico al agente",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.top.title": {
@@ -131,7 +131,7 @@
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
-      "text": "Mi Desfragmentador: Cerrar Diagnóstico Explorer",
+      "text": "Mi Desfragmentador: Cerrar Diagnóstico navegador",
       "status": "machine-generated"
     }
   }

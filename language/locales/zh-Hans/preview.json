@@ -3,11 +3,11 @@
   "component": "preview",
   "entries": {
     "preview.annotation.includeBegin.text": {
-      "text": "BEGIN [depth {depth}] {path}",
+      "text": "开始 [嵌套级别 {depth}] {path}",
       "status": "machine-generated"
     },
     "preview.annotation.includeEnd.text": {
-      "text": "END [depth {depth}] {path}",
+      "text": "完成 [嵌套级别 {depth}] {path}",
       "status": "machine-generated"
     },
     "preview.report.includeFiles.heading": {

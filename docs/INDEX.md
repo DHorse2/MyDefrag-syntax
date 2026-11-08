@@ -41,6 +41,7 @@ MyDefrag program.
 
 ## Project
 
+- [Implementation plan](implementation-plan.md)
 - [Contributing](contributing.md)
 - [Documentation status](documentation-todo.md)
 - [Project assessment](MyDefrag%20Project%20Assessment.md)

@@ -34,10 +34,13 @@ the MyDefrag program.
 
 ## Preview
 
-- A read-only preview recursively expands `!include` directives.
-- Source and merged line columns help trace expanded content.
+- Five editable preview variations recursively expand `!include` directives.
+- Optional source and merged line columns help trace expanded content.
 - Include boundaries, missing files, circular includes, and include maps are
   represented as annotations.
+- Raw previews remain executable and receive language-server diagnostics;
+  annotated previews can be extended with developer tags, comments, and
+  metadata.
 
 ## Diagnostic Navigation
 

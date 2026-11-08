@@ -15,7 +15,7 @@
       "status": "machine-generated"
     },
     "extension.message.noActiveDocument.warning": {
-      "text": "Não há nenhum documento do My Defragmenter ativo.",
+      "text": "Não há nenhum documento do Gerenciamento de Armazenamento ativo.",
       "status": "machine-generated"
     },
     "extension.product.displayName": {
@@ -36,6 +36,18 @@
     },
     "extension.window.channelName": {
       "text": "A minha sintaxe do desfragmentador",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "Próximo candidato: ${dir} e ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "searchWorkspace: Não foi possível ler ${uri.toString()}: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "extension.js:habilitar:opções:prepare-se Erro retornado da inicialização: ${errResult.message}",
       "status": "machine-generated"
     }
   }

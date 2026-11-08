@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyDefrag Syntax — Complete Command Cheat Sheet</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f4f6f8;
+      --paper: #fff;
+      --ink: #18212b;
+      --muted: #596675;
+      --line: #cbd3dc;
+      --head: #e8eef5;
+      --accent: #175f9d;
+      --code: #eef3f8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151a20;
+        --paper: #1d242c;
+        --ink: #e7edf4;
+        --muted: #adb8c4;
+        --line: #465260;
+        --head: #28333e;
+        --accent: #78bfff;
+        --code: #252f39;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 11px/1.18 "Segoe UI", Arial, sans-serif;
+    }
+    main { max-width: 1500px; margin: 0 auto; padding: 8px; }
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 6px 14px;
+      align-items: end;
+      margin-bottom: 6px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    h1 { margin: 0; font-size: 19px; line-height: 1; letter-spacing: -.02em; }
+    h2 {
+      margin: 9px 0 3px;
+      padding: 3px 5px;
+      border-left: 4px solid var(--accent);
+      background: var(--head);
+      font-size: 13px;
+      line-height: 1.05;
+    }
+    h3 { margin: 5px 0 2px; font-size: 11px; }
+    p { margin: 2px 0; }
+    .subtitle, .source-note { color: var(--muted); }
+    .stats { text-align: right; white-space: nowrap; color: var(--muted); }
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: center;
+      margin-bottom: 6px;
+      padding: 5px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    input, button, .jump {
+      min-height: 25px;
+      padding: 3px 7px;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      background: var(--paper);
+      color: var(--ink);
+      font: inherit;
+    }
+    input { flex: 1 1 250px; }
+    button { cursor: pointer; }
+    .jump { color: var(--accent); text-decoration: none; line-height: 17px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; align-items: start; }
+    .panel { min-width: 0; padding: 0 5px 5px; border: 1px solid var(--line); background: var(--paper); }
+    .wide { grid-column: 1 / -1; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th, td { padding: 2px 4px; border: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { background: var(--head); font-weight: 650; }
+    tbody tr:nth-child(even) { background: color-mix(in srgb, var(--head) 32%, transparent); }
+    .command-col { width: 18%; }
+    .syntax-col { width: 37%; }
+    .id-col { width: 38%; }
+    .tool-col { width: 26%; }
+    code, kbd {
+      font: 10px/1.12 Consolas, "Cascadia Mono", monospace;
+      overflow-wrap: anywhere;
+    }
+    code { padding: 0 2px; background: var(--code); }
+    a { color: var(--accent); }
+    .ref-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+    .ref { padding: 4px; border: 1px solid var(--line); background: var(--paper); }
+    .ref strong { display: block; margin-bottom: 2px; }
+    .muted { color: var(--muted); }
+    .hidden { display: none !important; }
+    .empty { padding: 7px; border: 1px dashed var(--line); color: var(--muted); }
+    footer { margin-top: 7px; padding: 5px; border-top: 1px solid var(--line); color: var(--muted); }
+    @media (max-width: 850px) {
+      .grid, .ref-grid { grid-template-columns: 1fr; }
+      .wide { grid-column: auto; }
+      header { grid-template-columns: 1fr; }
+      .stats { text-align: left; }
+    }
+    @media print {
+      @page { size: landscape; margin: 7mm; }
+      :root { color-scheme: light; --bg: #fff; --paper: #fff; --ink: #000; --muted: #333; --line: #999; --head: #e8e8e8; --accent: #000; --code: #f2f2f2; }
+      body { font-size: 7.2pt; line-height: 1.08; background: #fff; }
+      main { max-width: none; padding: 0; }
+      .toolbar { display: none; }
+      header { padding: 3px 5px; margin-bottom: 3px; }
+      h1 { font-size: 14pt; }
+      h2 { margin-top: 4px; padding: 2px 4px; font-size: 9pt; }
+      h3 { margin-top: 3px; font-size: 7.5pt; }
+      .grid { gap: 3px; }
+      .panel { padding: 0 3px 3px; }
+      th, td { padding: 1px 2px; }
+      code, kbd { font-size: 6.6pt; }
+      tr, .ref { break-inside: avoid; }
+      a { color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>MyDefrag Syntax — Complete Command Cheat Sheet</h1>
+      <p class="subtitle">MyDefrag 4.x script language, extension commands, and declared project tooling. Case-insensitive script keywords.</p>
+    </div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <nav class="toolbar" aria-label="Cheat sheet controls">
+    <input id="search" type="search" placeholder="Filter commands, syntax, descriptions, IDs, or npm scripts…" aria-label="Filter cheat sheet">
+    <a class="jump" href="#script-language">Script language</a>
+    <a class="jump" href="#editor-commands">Editor</a>
+    <a class="jump" href="#npm-commands">npm</a>
+    <button type="button" id="clear">Clear</button>
+    <button type="button" onclick="window.print()">Print</button>
+  </nav>
+
+  <section id="script-language">
+    <h2>MyDefrag script language</h2>
+    <p class="source-note">Rows follow <code>src/server/languageData.js</code>, the formal grammar, and the exact Help pages under <code>docs/MyDefrag Help/language</code>. Click a command name for its full local Help page.</p>
+    <div class="grid" id="language-sections"></div>
+  </section>
+
+  <section id="quick-reference">
+    <h2>Operands, values, and expression reference</h2>
+    <div class="ref-grid">
+      <div class="ref searchable"><strong>Boolean logic</strong><code>not (expr)</code> · <code>expr and expr</code> / <code>&amp;</code> / <code>&amp;&amp;</code> · <code>expr or expr</code> / <code>|</code> / <code>||</code> · <code>All</code></div>
+      <div class="ref searchable"><strong>Comments</strong><code>/* block */</code> · <code>// line</code> · <code>REM line</code> · <code># line</code> · <code>-- line</code></div>
+      <div class="ref searchable"><strong>Arithmetic</strong><code>+ - * / %</code> · parentheses · unary minus · 64-bit numeric expressions</div>
+      <div class="ref searchable"><strong>Date/time</strong><code>now</code> · <code>N YEAR[S]|MONTH[S]|WEEK[S]|DAY[S]|HOUR[S]|MINUTE[S]|SECOND[S] [AGO]</code> · literal date/time. See <a href="docs/MyDefrag%20Help/language/Scripts/DATETIME.md">DATETIME</a>.</div>
+      <div class="ref searchable"><strong>Decimal / byte suffixes</strong><code>K M G T P E Z Y</code> (×1000) · <code>KB MB GB TB PB EB ZB YB</code> and <code>Ki Mi Gi Ti Pi Ei Zi Yi</code> (×1024)</div>
+      <div class="ref searchable"><strong>FileLocation values</strong><code>BeginOfFile</code> · <code>EndOfFile</code> · <code>EntireFile</code> · <code>AnyPart</code> · <code>AnyCompleteFragment</code></div>
+      <div class="ref searchable"><strong>File systems</strong><code>NTFS</code> · <code>FAT</code> · <code>FAT12</code> · <code>FAT16</code> · <code>FAT32</code></div>
+      <div class="ref searchable"><strong>File-state colors</strong><code>Fragmented</code> · <code>Movable</code> · <code>Selected</code> · <code>Processed</code> · <code>All</code></div>
+      <div class="ref searchable"><strong>Disk-map colors</strong><code>Empty</code> · <code>Allocated</code> · <code>BusyRead</code> · <code>BusyWrite</code> · <code>Text</code>; RGB numbers select the color.</div>
+      <div class="ref searchable"><strong>Macros and variables</strong><code>!NAME!</code> expands an external macro. <code>SetVariable(NAME, VALUE)</code> stores a number or string. See <a href="docs/MyDefrag%20Help/language/Scripts/Variables.md">Variables</a> and <a href="docs/MyDefrag%20Help/language/Scripts/Macros.md">Macros</a>.</div>
+      <div class="ref searchable"><strong>Strings</strong>Double-quoted text; Help describes quote escaping and macro substitution. See <a href="docs/MyDefrag%20Help/language/Scripts/STRING.md">STRING</a>.</div>
+      <div class="ref searchable"><strong>Sort options</strong><code>Ascending</code> · <code>Descending</code> · optional <code>SkipBlock(MIN, MAX)</code>.</div>
+    </div>
+  </section>
+
+  <section id="editor-commands">
+    <h2>VSCodium / VS Code extension commands</h2>
+    <div class="panel wide">
+      <table>
+        <thead><tr><th class="id-col">Command ID</th><th>Command-palette title / purpose</th><th>Exposure</th></tr></thead>
+        <tbody id="editor-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="npm-commands">
+    <h2>Declared npm project commands</h2>
+    <p class="source-note">Run from the repository root as <code>npm run &lt;name&gt;</code>. Publishing commands are listed for completeness; use them only with explicit release authorization.</p>
+    <div class="panel wide">
+      <table>
+        <thead><tr><th class="tool-col">Invocation</th><th>Expands to</th><th>Group</th></tr></thead>
+        <tbody id="npm-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div id="no-results" class="empty hidden">No cheat-sheet entries match the current filter.</div>
+
+  <footer>
+    Snapshot generated from this checkout on 2026-09-11. Primary sources: <code>src/server/languageData.js</code>, <code>docs/MyDefrag Help/language/Scripts/FormalScriptGrammar.md</code>, <code>package.json</code>, and command registrations under <code>src/</code>. Full explanations, constraints, and examples remain in the linked Help pages.
+  </footer>
+</main>
+
+<script>
+  'use strict';
+
+  const language = {
+    'Block structure & inclusion': [
+      ['!include', '!include "PATH"!', 'Include another file as if its contents appeared here.', 'Scripts/Macros.md'],
+      ['VolumeSelect', 'VolumeSelect … VolumeActions … VolumeEnd', 'Begin a volume-selection block.', 'Scripts/VolumeSelect.md'],
+      ['VolumeActions', 'VolumeActions', 'Separate volume predicates from volume actions.', 'Scripts/VolumeActions.md'],
+      ['VolumeEnd', 'VolumeEnd', 'End a VolumeSelect block.', 'Scripts/VolumeSelect.md'],
+      ['FileSelect', 'FileSelect … FileActions … FileEnd', 'Begin a file-selection block inside VolumeActions.', 'Scripts/FileSelect.md'],
+      ['FileActions', 'FileActions', 'Separate file predicates from file actions.', 'Scripts/FileActions.md'],
+      ['FileEnd', 'FileEnd', 'End a FileSelect block.', 'Scripts/FileSelect.md']
+    ],
+    'Settings & flow control': [
+      ['AppendLogfile', 'AppendLogfile(FILE, TEXT)', 'Append text to a log file.', 'Settings/AppendLogfile.md'],
+      ['BatteryPower', 'BatteryPower(ask|allow|exit)', 'Choose behavior while on battery power.', 'Settings/BatteryPower.md'],
+      ['Debug', 'Debug(NUMBER)', 'Set the bit-combined debug level.', 'Settings/Debug.md'],
+      ['Description', 'Description(STRING)', 'Set the script-chooser description.', 'Settings/Description.md'],
+      ['DiskmapFlip', 'DiskmapFlip(yes|no)', 'Flip disk-map orientation.', 'Settings/DiskmapFlip.md'],
+      ['ExcludeFiles', 'ExcludeFiles(FILEBOOLEAN)', 'Globally exclude matching files.', 'Settings/ExcludeFiles.md'],
+      ['ExcludeVolumes', 'ExcludeVolumes(VOLUMEBOOLEAN)', 'Globally exclude matching volumes.', 'Settings/ExcludeVolumes.md'],
+      ['ExitIfTimeout', 'ExitIfTimeout(SECONDS)', 'Exit when an internal lock times out.', 'Settings/ExitIfTimeout.md'],
+      ['FileMoveChunkSize', 'FileMoveChunkSize(BYTES)', 'Set the API file-move chunk size.', 'Settings/FileMoveChunkSize.md'],
+      ['IgnoreWrapAroundFragmentation', 'IgnoreWrapAroundFragmentation(yes|no)', 'Control treatment of wrap-around fragments.', 'Settings/IgnoreWrapAroundFragmentation.md'],
+      ['Language', 'Language(STRING)', 'Select the UI/message language.', 'Settings/Language.md'],
+      ['MaxRunTime', 'MaxRunTime(DATETIME)', 'Limit processing time in the current block.', 'Settings/MaxRunTime.md'],
+      ['Message', 'Message(ENGLISH, TRANSLATION)', 'Override a built-in message for the selected language.', 'Settings/Message.md'],
+      ['OtherInstances', 'OtherInstances(ask|allow|exit|kill)', 'Choose behavior when MyDefrag is already running.', 'Settings/OtherInstances.md'],
+      ['Pause', 'Pause(DATETIME)', 'Pause for the specified duration.', 'Settings/Pause.md'],
+      ['ProcessPriority', 'ProcessPriority(Normal|BelowNormal|Low|AboveNormal|High|Background)', 'Set CPU and I/O priority.', 'Settings/ProcessPriority.md'],
+      ['RememberUnmovables', 'RememberUnmovables(yes|no)', 'Remember files the API could not move.', 'Settings/RememberUnmovables.md'],
+      ['RunProgram', 'RunProgram(PROGRAM [, ARGUMENTS…])', 'Run an external program.', 'Settings/RunProgram.md'],
+      ['RunScript', 'RunScript(PATH)', 'Run another complete MyDefrag script.', 'Settings/RunScript.md'],
+      ['SetColor', 'SetColor(COLORNAME, R, G, B)', 'Change a disk-map display color.', 'Settings/SetColor.md'],
+      ['SetFileColor', 'SetFileColor(FILESTATE, R, G, B) / SetFileColor(FILEBOOLEAN, FILESTATE, R, G, B)', 'Color file states globally or matching files inside VolumeSelect.', 'Settings/SetFileColor.md'],
+      ['SetScreenPowerSaver', 'SetScreenPowerSaver(off|reset)', 'Disable or restore screen power saving.', 'Settings/SetScreenPowerSaver.md'],
+      ['SetScreenSaver', 'SetScreenSaver(off|reset)', 'Disable or restore the screen saver.', 'Settings/SetScreenSaver.md'],
+      ['SetStatisticsWindowText', 'SetStatisticsWindowText(STRING)', 'Change statistics-window text.', 'Settings/SetStatisticsWindowText.md'],
+      ['SetVariable', 'SetVariable(NAME, NUMBER|STRING)', 'Store a numeric or string variable.', 'Settings/SetVariable.md'],
+      ['Slowdown', 'Slowdown(PERCENT)', 'Throttle MyDefrag to 1–100 percent of normal maximum speed.', 'Settings/Slowdown.md'],
+      ['StatusBar', 'StatusBar([All|Status|Path|MouseOver]…)', 'Choose disk-map information areas.', 'Settings/StatusBar.md'],
+      ['Title', 'Title(STRING)', 'Set the script-chooser title.', 'Settings/Title.md'],
+      ['WhenFinished', 'WhenFinished(Wait|Exit|Shutdown…|Hibernate…|Standby…)', 'Choose the post-script action; power actions accept documented modifiers.', 'Settings/WhenFinished.md'],
+      ['WindowSize', 'WindowSize(fixed|minimized|maximized|invisible|restore)', 'Change the MyDefrag window state.', 'Settings/WindowSize.md'],
+      ['WriteLogfile', 'WriteLogfile(FILE, TEXT)', 'Replace a log file with text.', 'Settings/WriteLogfile.md'],
+      ['ZoomLevel', 'ZoomLevel(NUMBER)', 'Set the disk-map zoom level.', 'Settings/ZoomLevel.md']
+    ],
+    'Volume predicates': [
+      ['All', 'All', 'Select every unprocessed volume.', 'VolumeBoolean/All.md'],
+      ['AND', 'A and B / A & B / A && B', 'Require both volume predicates.', 'VolumeBoolean/AND.md'],
+      ['Cdrom', 'Cdrom(yes|no)', 'Match CD-ROM media.', 'VolumeBoolean/Cdrom.md'],
+      ['CheckVolume', 'CheckVolume', 'Select when Windows chkdsk returns no error.', 'VolumeBoolean/CheckVolume.md'],
+      ['CommandlineVolumes', 'CommandlineVolumes()', 'Match volumes passed on the MyDefrag command line.', 'VolumeBoolean/CommandlineVolumes.md'],
+      ['FileSystemType', 'FileSystemType(NTFS|FAT|FAT12|FAT16|FAT32)', 'Match a filesystem type.', 'VolumeBoolean/FileSystemType.md'],
+      ['Fixed', 'Fixed(yes|no)', 'Match fixed media.', 'VolumeBoolean/Fixed.md'],
+      ['FragmentCount', 'FragmentCount(MIN, MAX)', 'Match total excessive-fragment count; MAX 0 means infinity.', 'VolumeBoolean/FragmentCount.md'],
+      ['FragmentSize', 'FragmentSize(MIN, MAX)', 'Match average fragment size; MAX 0 means infinity.', 'VolumeBoolean/FragmentSize.md'],
+      ['Label', 'Label(STRING)', 'Wildcard-match a volume label.', 'VolumeBoolean/Label.md'],
+      ['Mounted', 'Mounted(yes|no)', 'Match mounted state.', 'VolumeBoolean/Mounted.md'],
+      ['Name', 'Name(STRING)', 'Wildcard-match a mountpoint, volume name, or device name.', 'VolumeBoolean/Name.md'],
+      ['NOT', 'not (VOLUMEBOOLEAN)', 'Invert a volume predicate.', 'VolumeBoolean/NOT.md'],
+      ['NumberBetween', 'NumberBetween(VALUE, MIN, MAX)', 'Test a number against a half-open range.', 'VolumeBoolean/NumberBetween.md'],
+      ['OR', 'A or B / A | B / A || B', 'Accept either volume predicate.', 'VolumeBoolean/OR.md'],
+      ['Ramdisk', 'Ramdisk(yes|no)', 'Match RAM disks.', 'VolumeBoolean/Ramdisk.md'],
+      ['Remote', 'Remote(yes|no)', 'Match remote/network volumes.', 'VolumeBoolean/Remote.md'],
+      ['Removable', 'Removable(yes|no)', 'Match removable media.', 'VolumeBoolean/Removable.md'],
+      ['Size', 'Size(MIN, MAX)', 'Match volume size in bytes; MAX 0 means infinity.', 'VolumeBoolean/Size.md'],
+      ['Writable', 'Writable(yes|no)', 'Match writable state.', 'VolumeBoolean/Writable.md']
+    ],
+    'Volume actions': [
+      ['DeleteJournal', 'DeleteJournal()', 'Delete the NTFS change journal.', 'VolumeActions/DeleteJournal.md'],
+      ['DismountVolume', 'DismountVolume()', 'Dismount the current volume.', 'VolumeActions/DismountVolume.md'],
+      ['MakeGap', 'MakeGap(NUMBER [, DoNotVacate])', 'Position the beginning of the next zone.', 'VolumeActions/MakeGap.md'],
+      ['ReclaimNtfsReservedAreas', 'ReclaimNtfsReservedAreas(SETTINGS)', 'Reclaim NTFS-reserved regions where possible.', 'VolumeActions/ReclaimNtfsReservedAreas.md']
+    ],
+    'File predicates': [
+      ['All', 'All', 'Select every unprocessed item.', 'FileBoolean/All.md'],
+      ['AND', 'A and B / A & B / A && B', 'Require both file predicates.', 'FileBoolean/AND.md'],
+      ['Archive', 'Archive(yes|no)', 'Match the archive attribute.', 'FileBoolean/Archive.md'],
+      ['AverageFragmentSize', 'AverageFragmentSize(MIN, MAX)', 'Match average fragment size.', 'FileBoolean/AverageFragmentSize.md'],
+      ['Compressed', 'Compressed(yes|no)', 'Match the compressed attribute.', 'FileBoolean/Compressed.md'],
+      ['CreationDate', 'CreationDate(MIN, MAX)', 'Match creation date/time.', 'FileBoolean/CreationDate.md'],
+      ['Directory', 'Directory(yes|no)', 'Match directories versus files.', 'FileBoolean/Directory.md'],
+      ['DirectoryName', 'DirectoryName(STRING)', 'Wildcard-match the immediate directory name.', 'FileBoolean/DirectoryName.md'],
+      ['DirectoryPath', 'DirectoryPath(STRING)', 'Wildcard-match the directory path.', 'FileBoolean/DirectoryPath.md'],
+      ['Encrypted', 'Encrypted(yes|no)', 'Match the encrypted attribute.', 'FileBoolean/Encrypted.md'],
+      ['FileName', 'FileName(STRING)', 'Wildcard-match file names.', 'FileBoolean/FileName.md'],
+      ['FileLocation', 'FileLocation(ARGUMENT, MIN, MAX)', 'Match all or part of a file by disk location.', 'FileBoolean/FileLocation.md'],
+      ['FragmentCount', 'FragmentCount(MIN, MAX)', 'Match excessive-fragment count.', 'FileBoolean/FragmentCount.md'],
+      ['Fragmented', 'Fragmented(yes|no)', 'Match fragmentation state.', 'FileBoolean/Fragmented.md'],
+      ['FullPath', 'FullPath(PATH, FILENAME)', 'Wildcard-match directory path and file name.', 'FileBoolean/FullPath.md'],
+      ['Hidden', 'Hidden(yes|no)', 'Match the hidden attribute.', 'FileBoolean/Hidden.md'],
+      ['ImportListFromBootOptimize', 'ImportListFromBootOptimize()', 'Select Windows boot-optimization items.', 'FileBoolean/ImportListFromBootOptimize.md'],
+      ['ImportListFromFile', 'ImportListFromFile(PATH)', 'Select items listed in a file.', 'FileBoolean/ImportListFromFile.md'],
+      ['ImportListFromProgramHints', 'ImportListFromProgramHints(PATH)', 'Select items imported from a program-hints file.', 'FileBoolean/ImportListFromProgramHints.md'],
+      ['Largest', 'Largest(COUNT)', 'Select the largest number of items.', 'FileBoolean/Largest.md'],
+      ['LargestFragmentSize', 'LargestFragmentSize(MIN, MAX)', 'Match largest-fragment size.', 'FileBoolean/LargestFragmentSize.md'],
+      ['LastAccess', 'LastAccess(MIN, MAX)', 'Match last-access date/time.', 'FileBoolean/LastAccess.md'],
+      ['LastAccessEnabled', 'LastAccessEnabled(yes|no)', 'Match the Windows last-access-update configuration.', 'FileBoolean/LastAccessEnabled.md'],
+      ['LastChange', 'LastChange(MIN, MAX)', 'Match last-change date/time.', 'FileBoolean/LastChange.md'],
+      ['NOT', 'not (FILEBOOLEAN)', 'Invert a file predicate.', 'FileBoolean/NOT.md'],
+      ['NotToBeIndexed', 'NotToBeIndexed(yes|no)', 'Match the not-content-indexed attribute.', 'FileBoolean/NotToBeIndexed.md'],
+      ['Offline', 'Offline(yes|no)', 'Match the offline attribute.', 'FileBoolean/Offline.md'],
+      ['OR', 'A or B / A | B / A || B', 'Accept either file predicate.', 'FileBoolean/OR.md'],
+      ['Readonly', 'Readonly(yes|no)', 'Match the read-only attribute.', 'FileBoolean/Readonly.md'],
+      ['SelectNtfsSystemFiles', 'SelectNtfsSystemFiles(yes|no)', 'Select or exclude NTFS system files.', 'FileBoolean/SelectNtfsSystemFiles.md'],
+      ['Size', 'Size(MIN, MAX)', 'Match item size in bytes.', 'FileBoolean/Size.md'],
+      ['Smallest', 'Smallest(COUNT)', 'Select the smallest number of items.', 'FileBoolean/Smallest.md'],
+      ['SmallestFragmentSize', 'SmallestFragmentSize(MIN, MAX)', 'Match smallest-fragment size.', 'FileBoolean/SmallestFragmentSize.md'],
+      ['Sparse', 'Sparse(yes|no)', 'Match the sparse attribute.', 'FileBoolean/Sparse.md'],
+      ['System', 'System(yes|no)', 'Match the system attribute.', 'FileBoolean/System.md'],
+      ['Temporary', 'Temporary(yes|no)', 'Match the temporary attribute.', 'FileBoolean/Temporary.md'],
+      ['Unmovable', 'Unmovable(yes|no)', 'Match items MyDefrag could not move.', 'FileBoolean/Unmovable.md'],
+      ['Virtual', 'Virtual(yes|no)', 'Match the virtual attribute.', 'FileBoolean/Virtual.md']
+    ],
+    'File actions': [
+      ['AddGap', 'AddGap(NUMBER [, DoNotVacate])', 'Add or position free space after the zone.', 'FileActions/AddGap.md'],
+      ['Defragment', 'Defragment([Fast] [ChunkSize(NUMBER)])', 'Defragment selected items.', 'FileActions/Defragment.md'],
+      ['FastFill', 'FastFill([WithShuffling])', 'Quickly consolidate gaps with data from above.', 'FileActions/FastFill.md'],
+      ['ForcedFill', 'ForcedFill()', 'Force data into early gaps, allowing fragmentation.', 'FileActions/ForcedFill.md'],
+      ['MoveDownFill', 'MoveDownFill()', 'Shift items downward while preserving order.', 'FileActions/MoveDownFill.md'],
+      ['MoveToEndOfDisk', 'MoveToEndOfDisk()', 'Move selected files toward the disk end.', 'FileActions/MoveToEndOfDisk.md'],
+      ['MoveUpToZone', 'MoveUpToZone()', 'Move selected files above the zone start.', 'FileActions/MoveUpToZone.md'],
+      ['PlaceNtfsSystemFiles', 'PlaceNtfsSystemFiles(OPTIONS, NUMBER)', 'Place selected NTFS system files with path sorting.', 'FileActions/PlaceNtfsSystemFiles.md'],
+      ['SortByCreationDate', 'SortByCreationDate(OPTIONS)', 'Place items sorted by creation time.', 'FileActions/SortByCreationDate.md'],
+      ['SortByImportSequence', 'SortByImportSequence(OPTIONS)', 'Place items in imported-list order.', 'FileActions/SortByImportSequence.md'],
+      ['SortByLastAccess', 'SortByLastAccess(OPTIONS)', 'Place items sorted by last-access time.', 'FileActions/SortByLastAccess.md'],
+      ['SortByLastChange', 'SortByLastChange(OPTIONS)', 'Place items sorted by last-change time.', 'FileActions/SortByLastChange.md'],
+      ['SortByName', 'SortByName(OPTIONS)', 'Place items sorted by full path.', 'FileActions/SortByName.md'],
+      ['SortByNewestDate', 'SortByNewestDate(OPTIONS)', 'Place items by their newest recorded date.', 'FileActions/SortByNewestDate.md'],
+      ['SortBySize', 'SortBySize(OPTIONS)', 'Place items sorted by size.', 'FileActions/SortBySize.md']
+    ],
+    'Action modifiers': [
+      ['ChunkSize', 'Defragment(ChunkSize(NUMBER))', 'Ignore fragments at or above the size threshold; implies Fast.', 'FileActions/Defragment/ChunkSize.md'],
+      ['Fast', 'Defragment(Fast)', 'Use only a gap large enough for the whole file.', 'FileActions/Defragment/Fast.md'],
+      ['WithShuffling', 'FastFill(WithShuffling)', 'Allow extra shuffling while filling gaps.', 'FileActions/FastFill/WithShuffling.md'],
+      ['DoNotVacate', 'AddGap(NUMBER, DoNotVacate) / MakeGap(NUMBER, DoNotVacate)', 'Do not first clear the requested gap area.', 'FileActions/AddGap.md'],
+      ['Ascending', 'SortBy…(Ascending [SkipBlock(MIN, MAX)])', 'Sort low-to-high, old-to-new, or A-to-Z.', 'Misc/SortByName-Ascending.md'],
+      ['Descending', 'SortBy…(Descending [SkipBlock(MIN, MAX)])', 'Sort high-to-low, new-to-old, or Z-to-A.', 'Misc/SortByName-Descending.md'],
+      ['SkipBlock', 'SortBy…(ORDER SkipBlock(MIN, MAX))', 'Leave a disk range unused while placing items.', 'Misc/SortByName-SkipBlock.md']
+    ],
+    'Numeric functions': [
+      ['Minimum', 'Minimum(NUMBER [, NUMBER]…)', 'Return the lowest supplied number.', 'Scripts/NUMBER.md'],
+      ['Maximum', 'Maximum(NUMBER [, NUMBER]…)', 'Return the highest supplied number.', 'Scripts/NUMBER.md'],
+      ['RoundDown', 'RoundDown(NUMBER, MULTIPLE)', 'Round downward to a multiple.', 'Scripts/NUMBER.md'],
+      ['RoundUp', 'RoundUp(NUMBER, MULTIPLE)', 'Round upward to a multiple.', 'Scripts/NUMBER.md']
+    ]
+  };
+
+  const editorCommands = [
+    ['mydfrg.openPreview', 'Open Preview', 'Contributed'],
+    ['mydfrg.hover.disable', 'MyDefrag: Turn Off Hover', 'Contributed'],
+    ['mydfrg.hover.enable', 'MyDefrag: Turn On Hover', 'Contributed'],
+    ['mydfrg.wordPrediction.disable', 'MyDefrag: Turn Off Word Prediction', 'Contributed'],
+    ['mydfrg.wordPrediction.enable', 'MyDefrag: Turn On Word Prediction', 'Contributed'],
+    ['mdm.openFileAtPosition', 'Open File at Position', 'Contributed / link handler'],
+    ['mydfrg.openSettings', 'MyDefrag: Open Settings', 'Contributed'],
+    ['mydfrg.diagnostics.next', 'MyDefrag: Next Diagnostic', 'Contributed'],
+    ['mydfrg.diagnostics.previous', 'MyDefrag: Previous Diagnostic', 'Contributed'],
+    ['mydfrg.diagnostics.nextFile', 'MyDefrag: Next File', 'Contributed'],
+    ['mydfrg.diagnostics.prevFile', 'MyDefrag: Previous File', 'Contributed'],
+    ['mydfrg.diagnostics.top', 'MyDefrag: First Diagnostic', 'Contributed'],
+    ['mydfrg.diagnostics.openHelp', 'MyDefrag: Open Help for Diagnostic', 'Contributed'],
+    ['mydfrg.diagnostics.fixedItem', 'MyDefrag: Mark Diagnostic Fixed', 'Contributed'],
+    ['mydfrg.diagnostics.ignoreItem', 'MyDefrag: Ignore Diagnostic', 'Contributed'],
+    ['mydfrg.diagnostics.skipItem', 'MyDefrag: Skip Diagnostic', 'Contributed'],
+    ['mydfrg.diagnostics.sendIt', 'MyDefrag: Send Diagnostic to Agent', 'Contributed'],
+    ['mydfrg.diagnostics.validSyntax', 'MyDefrag: Mark as Valid Syntax', 'Contributed'],
+    ['mydfrg.diagnostics.reset', 'MyDefrag: Reset Diagnostic Navigation', 'Contributed'],
+    ['mydfrg.diagnostics.refresh', 'MyDefrag: Refresh Diagnostics', 'Contributed'],
+    ['mydfrg.diagnostics.filter', 'MyDefrag: Filter Diagnostics', 'Contributed'],
+    ['mydfrg.diagnostics.clearFilter', 'MyDefrag: Clear Diagnostic Filter', 'Contributed'],
+    ['mydfrg.diagnostics.showTree', 'MyDefrag: Show Diagnostics as Tree', 'Contributed'],
+    ['mydfrg.diagnostics.showTable', 'MyDefrag: Show Diagnostics as Table', 'Contributed'],
+    ['mydfrg.diagnostics.closeView', 'MyDefrag: Close Diagnostics Explorer', 'Contributed'],
+    ['mydfrg.configureFolders', 'MyDefrag: Configure Folders', 'Contributed'],
+    ['mydfrg.openHelp', 'Open a relative MyDefrag Help document', 'Internal API'],
+    ['mydfrg.diagnostics.current', 'Refresh and open the current diagnostic', 'Internal API'],
+    ['mydfrg.diagnostics.openCurrent', 'Open the current diagnostic location', 'Internal API'],
+    ['mydfrg.diagnostics.select', 'Select and open a supplied diagnostic', 'Internal API']
+  ];
+
+  const npmScripts = [
+    ['test', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Fast'],
+    ['test:all', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite All'],
+    ['test:fast', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Fast'],
+    ['test:core', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Core'],
+    ['test:server', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Server'],
+    ['test:parser', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Parser'],
+    ['test:tokenizer', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Tokenizer'],
+    ['test:language-data', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageData'],
+    ['test:completion', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Completion'],
+    ['test:shared', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Shared'],
+    ['test:utilities', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Utilities'],
+    ['test:diagnostics', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Diagnostics'],
+    ['test:manifest', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Manifest'],
+    ['test:package', 'npm run test:manifest'],
+    ['test:coverage', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Coverage'],
+    ['test:extension', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Extension'],
+    ['test:extension:unit', 'npm run test:extension'],
+    ['test:apps', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Apps'],
+    ['test:scripts', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Syntax'],
+    ['test:language-app', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageApp'],
+    ['test:locale-app', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LocaleApp'],
+    ['test:language-report', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageReport'],
+    ['test:language', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageRuntime'],
+    ['test:language:all', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Language'],
+    ['test:language:validate', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageValidation'],
+    ['test:ci', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Fast'],
+    ['test:list', 'powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -List'],
+    ['deploy:local', 'powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1'],
+    ['liveUpdate:local', 'powershell -ExecutionPolicy Bypass -File ./scripts/update-live-MyDefrag.ps1'],
+    ['pack:vsix', 'powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1'],
+    ['publish:vsx', 'powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1'],
+    ['clean', 'rimraf dist out .vscodeignore'],
+    ['inventory:comments', 'node ./build/scripts/Inventory-CodeComments.cjs --write'],
+    ['inventory:documentation', 'node ./build/scripts/Inventory-Documentation.cjs --write'],
+    ['inventory:logger', 'node ./build/scripts/Inventory-LoggerStrings.cjs --write'],
+    ['inventory:master', 'node ./build/scripts/Inventory-Master.cjs --write'],
+    ['build', 'powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1 -SkipInstall'],
+    ['language:catalogs:apps', 'node ./build/scripts/generate-electron-component-catalogs.js --write'],
+    ['language:candidate-drafts', 'node ./build/scripts/generate-migration-candidate-drafts.js --write'],
+    ['language:validate', 'node ./build/scripts/build-language.js validate'],
+    ['language:audit-normalized-inputs', 'node ./build/scripts/build-language.js audit-normalized-inputs'],
+    ['language:build', 'node ./build/scripts/build-language.js build'],
+    ['language:report', 'node ./build/scripts/build-language.js report'],
+    ['language:translate-fallbacks', 'node ./build/scripts/translate-language-fallbacks.js'],
+    ['language:app', 'electron ./build/mdl-language-app/main/main.js --project-root .'],
+    ['language:app:debug', 'electron --remote-debugging-port=9222 ./build/mdl-language-app/main/main.js --project-root .'],
+    ['language:diagnostics:install', 'powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1'],
+    ['language:diagnostics:uninstall', 'powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1 -Uninstall'],
+    ['language:app:pack', 'electron-builder --config build/mdl-language-app/electron-builder.yml --win dir'],
+    ['language:app:package', 'electron-builder --config build/mdl-language-app/electron-builder.yml --win nsis'],
+    ['locale:app', 'electron ./build/mdl-locale-app/main/main.js --project-root .'],
+    ['locale:app:debug', 'electron --remote-debugging-port=9223 ./build/mdl-locale-app/main/main.js --project-root .'],
+    ['locale:app:pack', 'electron-builder --config build/mdl-locale-app/electron-builder.yml --win dir'],
+    ['locale:app:package', 'electron-builder --config build/mdl-locale-app/electron-builder.yml --win nsis'],
+    ['prepare', 'npm run build'],
+    ['enableNetwork:local', 'powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1'],
+    ['listSymLinks:local', 'powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1'],
+    ['addVsCodiumToExplorer:local', 'powershell -ExecutionPolicy Bypass -File ./scripts/add-VsCodium-ToExplorer.ps1']
+  ];
+
+  const esc = (value) => String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+
+  const helpHref = (relativePath) => `docs/MyDefrag%20Help/language/${relativePath.split('/').map(encodeURIComponent).join('/')}`;
+
+  function renderLanguage() {
+    const host = document.getElementById('language-sections');
+    Object.entries(language).forEach(([category, rows], index) => {
+      const panel = document.createElement('article');
+      panel.className = `panel ${index === 1 || index === 4 ? 'wide' : ''}`;
+      panel.innerHTML = `<h3>${esc(category)} <span class="muted">(${rows.length})</span></h3>
+        <table><thead><tr><th class="command-col">Command</th><th class="syntax-col">Compact syntax</th><th>Purpose</th></tr></thead>
+        <tbody>${rows.map(([name, syntax, purpose, doc]) => `<tr class="searchable"><td><a href="${helpHref(doc)}"><code>${esc(name)}</code></a></td><td><code>${esc(syntax)}</code></td><td>${esc(purpose)}</td></tr>`).join('')}</tbody></table>`;
+      host.appendChild(panel);
+    });
+  }
+
+  function npmGroup(name) {
+    if (name.startsWith('test')) return 'Tests';
+    if (name.startsWith('language:')) return 'Language';
+    if (name.startsWith('locale:')) return 'Locale';
+    if (name.startsWith('inventory:')) return 'Inventory';
+    if (['build', 'clean', 'prepare', 'deploy:local', 'liveUpdate:local', 'pack:vsix', 'publish:vsx'].includes(name)) return 'Build / release';
+    return 'Utilities';
+  }
+
+  function renderTables() {
+    document.getElementById('editor-body').innerHTML = editorCommands.map(([id, title, exposure]) =>
+      `<tr class="searchable"><td><code>${esc(id)}</code></td><td>${esc(title)}</td><td>${esc(exposure)}</td></tr>`).join('');
+    document.getElementById('npm-body').innerHTML = npmScripts.map(([name, command]) =>
+      `<tr class="searchable"><td><code>npm run ${esc(name)}</code></td><td><code>${esc(command)}</code></td><td>${esc(npmGroup(name))}</td></tr>`).join('');
+  }
+
+  function updateStats() {
+    const languageCount = Object.values(language).reduce((sum, rows) => sum + rows.length, 0);
+    const contributed = editorCommands.filter(([, , exposure]) => exposure.startsWith('Contributed')).length;
+    document.getElementById('stats').textContent = `${languageCount} language entries · ${contributed} contributed + ${editorCommands.length - contributed} internal editor commands · ${npmScripts.length} npm scripts`;
+  }
+
+  function filterEntries(query) {
+    const needle = query.trim().toLocaleLowerCase();
+    let visible = 0;
+    document.querySelectorAll('.searchable').forEach((entry) => {
+      const match = !needle || entry.textContent.toLocaleLowerCase().includes(needle);
+      entry.classList.toggle('hidden', !match);
+      if (match) visible += 1;
+    });
+    document.querySelectorAll('.panel').forEach((panel) => {
+      const hasVisible = panel.querySelector('.searchable:not(.hidden)');
+      panel.classList.toggle('hidden', !hasVisible);
+    });
+    document.getElementById('no-results').classList.toggle('hidden', visible !== 0);
+  }
+
+  renderLanguage();
+  renderTables();
+  updateStats();
+
+  const search = document.getElementById('search');
+  search.addEventListener('input', () => filterEntries(search.value));
+  document.getElementById('clear').addEventListener('click', () => {
+    search.value = '';
+    filterEntries('');
+    search.focus();
+  });
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
   "component": "locales",
   "entries": {
     "locales.accessibility.buildCommandOutput.label": {
-      "text": "Ausgabe des Build-Befehls",
+      "text": "Ausgabe des Entstehungsprozess-Befehls",
       "status": "machine-generated"
     },
     "locales.accessibility.component.label": {
@@ -55,7 +55,7 @@
       "status": "machine-generated"
     },
     "locales.action.stopBuild.label": {
-      "text": "Build abbrechen",
+      "text": "Entstehungsprozess abbrechen",
       "status": "machine-generated"
     },
     "locales.action.useEnglishFallback.label": {
@@ -75,7 +75,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.confirmLocaleSourceChanges.title": {
-      "text": "Änderungen an der Locale-Quelle bestätigen",
+      "text": "Änderungen an der Sprachregion-Quelle bestätigen",
       "status": "machine-generated"
     },
     "locales.dialog.discardAndReload.text": {
@@ -91,7 +91,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.localeComponentBuildIsRunning.title": {
-      "text": "Die Erstellung der Locale-Komponente läuft",
+      "text": "Die Erstellung der Sprachregion-Komponente läuft",
       "status": "machine-generated"
     },
     "locales.dialog.mydefragLocaleMaintenance.text": {
@@ -103,7 +103,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.returnToBuild.text": {
-      "text": "Zurück zum Build",
+      "text": "Zurück zum Entstehungsprozess",
       "status": "machine-generated"
     },
     "locales.dialog.saveAndComponentBuildSucceeded.title": {
@@ -123,7 +123,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "Wählen Sie das Syntax-Repository „Meine Defragmentierung“ aus",
+      "text": "Wählen Sie das Grammatikregeln-Repository „Meine Defragmentierung“ aus",
       "status": "machine-generated"
     },
     "locales.dialog.unsavedLocaleChanges.title": {
@@ -179,7 +179,7 @@
       "status": "machine-generated"
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "text": "Wählen Sie das Repository aus, das die Sprachdateien „/“ und die Build-Dateien „/“ enthält.",
+      "text": "Wählen Sie das Repository aus, das language/locales und build/language besitzt.",
       "status": "machine-generated"
     },
     "locales.message.componentRebuildFailed.text": {
@@ -211,7 +211,7 @@
       "status": "machine-generated"
     },
     "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
-      "text": "In „{relativePath}“ ist eine Diskrepanz bei der Kennung des generierten Locale-Katalogs aufgetreten:",
+      "text": "In „{relativePath}“ ist eine Diskrepanz bei der Kennung des generierten Sprachregion-Katalogs aufgetreten:",
       "status": "machine-generated"
     },
     "locales.message.generatedLocaleCatalogIsInvalid.text": {
@@ -227,7 +227,7 @@
       "status": "machine-generated"
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "text": "Es handelt sich nicht um ein „My Defragmenter“-Lokalisierungs-Repository. Fehlt: {missing}",
+      "text": "Es handelt sich nicht um ein „Meine Speicherverwaltung“-Lokalisierungs-Repository. Fehlt: {missing}",
       "status": "machine-generated"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {
@@ -255,7 +255,7 @@
       "status": "machine-generated"
     },
     "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
-      "text": "Das Schema der Lokalisierungskomponente ist nicht verfügbar.",
+      "text": "Das Datenstruktur der Lokalisierungskomponente ist nicht verfügbar.",
       "status": "machine-generated"
     },
     "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
@@ -295,7 +295,7 @@
       "status": "machine-generated"
     },
     "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
-      "text": "Warten Sie, bis der Build abgeschlossen ist, bevor Sie das Programm beenden.",
+      "text": "Warten Sie, bis der Entstehungsprozess abgeschlossen ist, bevor Sie das Programm beenden.",
       "status": "machine-generated"
     },
     "locales.message.writeValueAuthoritativeFileS.text": {
@@ -303,7 +303,7 @@
       "status": "machine-generated"
     },
     "locales.progress.capturingGeneratedFilesForRollback.status": {
-      "text": "Erfasste Dateien für ein Rollback",
+      "text": "Erfassen generierter Dateien zur Wiederherstellung",
       "status": "machine-generated"
     },
     "locales.progress.checkingGeneratedFileChanges.status": {
@@ -311,7 +311,7 @@
       "status": "machine-generated"
     },
     "locales.progress.committingLocaleSourceChanges.status": {
-      "text": "Änderungen am Locale-Quellcode festschreiben",
+      "text": "Änderungen am Sprachregion-Quellcode festschreiben",
       "status": "machine-generated"
     },
     "locales.progress.preparingSave.status": {
@@ -339,7 +339,7 @@
       "status": "machine-generated"
     },
     "locales.progress.useStopBuildInTheProgressWindowThen.status": {
-      "text": "Klicken Sie im Fortschrittsfenster auf „Aufbau stoppen“ und warten Sie, bis der Rollback abgeschlossen ist, bevor Sie die Anwendung schließen.",
+      "text": "Klicken Sie im Fortschrittsfenster auf „Aufbau stoppen“ und warten Sie, bis die Wiederherstellung abgeschlossen ist, bevor Sie die Anwendung schließen.",
       "status": "machine-generated"
     },
     "locales.progress.waitingForSaveConfirmation.status": {
@@ -347,7 +347,7 @@
       "status": "machine-generated"
     },
     "locales.progress.writingAuthoritativeLocaleFiles.status": {
-      "text": "Erstellen von autoritativen Locale-Dateien",
+      "text": "Erstellen von autoritativen Sprachregion-Dateien",
       "status": "machine-generated"
     },
     "locales.ui.badgeValue.text": {
@@ -371,7 +371,7 @@
       "status": "machine-generated"
     },
     "locales.ui.currentLocaleValue.text": {
-      "text": "Aktueller Locale-Wert",
+      "text": "Aktueller Sprachregion-Wert",
       "status": "machine-generated"
     },
     "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
@@ -379,7 +379,7 @@
       "status": "machine-generated"
     },
     "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
-      "text": "„Deep L“ hat den aktuellen Locale-Wert ersetzt. Wenden Sie die Änderung im Speicher an, um ihn beizubehalten.",
+      "text": "„Deep L“ hat den aktuellen Sprachregion-Wert ersetzt. Wenden Sie die Änderung im Speicher an, um ihn beizubehalten.",
       "status": "machine-generated"
     },
     "locales.ui.discardInMemoryTranslationChanges.text": {
@@ -427,7 +427,7 @@
       "status": "machine-generated"
     },
     "locales.ui.rebuildingLocaleComponent.text": {
-      "text": "Neuerstellung der Locale-Komponente",
+      "text": "Neuerstellung der Sprachregion-Komponente",
       "status": "machine-generated"
     },
     "locales.ui.requestingADeeplTranslation.text": {
@@ -499,7 +499,7 @@
       "status": "machine-generated"
     },
     "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
-      "text": "{rowApiTranslationProvider} Ergebnis steht bereit. Im Speicher anwenden, um den aktuellen Locale-Wert beizubehalten.",
+      "text": "{rowApiTranslationProvider} Ergebnis steht bereit. Im Speicher anwenden, um den aktuellen Sprachregion-Wert beizubehalten.",
       "status": "machine-generated"
     },
     "locales.ui.valueTotal.text": {
@@ -515,7 +515,7 @@
       "status": "machine-generated"
     },
     "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
-      "text": "Anpassung des aktuellen Locale-Werts und API-Vorschlag",
+      "text": "Anpassung des aktuellen Sprachregion-Werts und API-Vorschlag",
       "status": "machine-generated"
     },
     "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {

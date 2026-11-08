@@ -39,6 +39,18 @@
     "extension.window.channelName": {
       "text": "我的磁盘碎片整理工具语法",
       "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "下一个候选：${dir} 和 ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "searchWorkspace：无法读取 ${uri.toString()}：${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "extension.js:启用:选项:准备 初始化返回错误：${errResult.message}",
+      "status": "machine-generated"
     }
   }
 }

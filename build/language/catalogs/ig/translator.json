@@ -29,6 +29,15 @@
       "status": "machine-generated",
       "text": "Ọnọdụ onye na-asọmpi"
     },
+    "translator.accessibility.catalogRecordValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "recordKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ndekọ katalọgụ {recordKey}"
+    },
     "translator.accessibility.closeOperationResult.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -44,6 +53,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Meechi {windowLabel}"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Usoro mmalite emechara"
     },
     "translator.accessibility.componentAssignedToValue.label": {
       "fallbackLocale": null,
@@ -105,6 +121,27 @@
       "status": "machine-generated",
       "text": "Dezie ndekọ katalọgụ {entryKey}"
     },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nyocha ndị ga-azọ ọkwa site na otu"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nyocha ndị ga-azọ ọkwa site na otu"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nyocha ndị ga-azọ ọkwa site na otu"
+    },
     "translator.accessibility.filterCandidatesByStatus.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -112,12 +149,47 @@
       "status": "machine-generated",
       "text": "Tinye nzacha na ndị na-atụ anya site na ọnọdụ ha"
     },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nyocha ndekọ katalọgụ site na otu"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nyocha ndekọ katalọgụ site na otu"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nyocha ndekọ katalọgụ site na otu"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nyocha ndekọ katalọgụ site na otu ọnọdụ"
+    },
     "translator.accessibility.filterMigrationSourceFiles.label": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Nzacha faịlụ isi mmalite mbufe"
+    },
+    "translator.accessibility.languageBuildOptions.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Language creation process options"
     },
     "translator.accessibility.languageReportArtifactText.label": {
       "fallbackLocale": null,
@@ -184,6 +256,20 @@
       "status": "machine-generated",
       "text": "Ọrụ na-aga n'ihu"
     },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nye ndị ga-azọ ọkwa site n'ahịrị"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nye iwu maka ndekọ katalọgụ site na akara isi mmalite"
+    },
     "translator.accessibility.removeValue.label": {
       "fallbackLocale": null,
       "placeholders": [
@@ -230,6 +316,13 @@
       "status": "machine-generated",
       "text": "Igodo a tụrụ aro"
     },
+    "translator.accessibility.useNormalizedEnglishForFallbacksAndAutomatedTranslation.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for fallbacks and automated translation"
+    },
     "translator.accessibility.viewMigrationCandidatesForValue.label": {
       "fallbackLocale": null,
       "placeholders": [
@@ -247,18 +340,18 @@
       "text": "Njikwa windo"
     },
     "translator.action.componentCatalog.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog"
+      "status": "machine-generated",
+      "text": "Katalọgụ Akụkụ"
     },
     "translator.action.diagnosticMessages.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic Messages"
+      "status": "machine-generated",
+      "text": "Ozi Nchọpụta"
     },
     "translator.action.exit.label": {
       "fallbackLocale": null,
@@ -266,6 +359,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Pụọ"
+    },
+    "translator.action.normalizedWords.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Normalized Words"
     },
     "translator.action.previewModes.label": {
       "fallbackLocale": null,
@@ -286,7 +386,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Bubata data ọzọ"
+      "text": "Bubata ozi ọzọ"
     },
     "translator.action.revert.label": {
       "fallbackLocale": null,
@@ -303,11 +403,11 @@
       "text": "Chekwaa"
     },
     "translator.action.semanticKeywords.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Semantic Keywords"
+      "status": "machine-generated",
+      "text": "Okwu Ndị Dị Mkpa"
     },
     "translator.action.stopBuild.label": {
       "fallbackLocale": null,
@@ -342,7 +442,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "A na-echekwa faịlụ ndị e dere n'okpuru mpaghara asụsụ/ mgbe niile."
+      "text": "A na-echekwa faịlụ edepụtara n'okpuru language/locales mgbe niile."
     },
     "translator.dialog.cancel.text": {
       "fallbackLocale": null,
@@ -393,7 +493,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Hichapụ data katalọgụ e mepụtara: {catalogRemovals}"
+      "text": "Hichapụ ozi katalọgụ e mepụtara: {catalogRemovals}"
     },
     "translator.dialog.deleteLocaleValue.title": {
       "fallbackLocale": null,
@@ -486,7 +586,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Nlekọta Asụsụ Defragmenter m"
+      "text": "Nlekọta Asụsụ Njikwa Nchekwa M m"
     },
     "translator.dialog.noAuthoritativeFilesWillChange.text": {
       "fallbackLocale": null,
@@ -496,11 +596,11 @@
       "text": "Enweghị faịlụ ọ bụla a pụrụ ịtụkwasị obi ga-agbanwe."
     },
     "translator.dialog.noFilesWillChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files will change."
+      "status": "machine-generated",
+      "text": "Enweghị faịlụ ga-agbanwe."
     },
     "translator.dialog.nothingToSave.title": {
       "fallbackLocale": null,
@@ -591,14 +691,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Họrọ nchekwa usoro okwu My Defragmenter"
+      "text": "Họrọ nchekwa usoro okwu Njikwa Nchekwa M"
     },
     "translator.dialog.startingMydefragLanguageMaintenance.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ịmalite m mmezi asụsụ Defragmenter m"
+      "text": "Ịmalite m mmezi asụsụ Njikwa Nchekwa M m"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
       "fallbackLocale": null,
@@ -607,7 +707,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "A ga-edobe data nke a mepụtara site na nhazi /, asụsụ / na katalọgụ / na {id} dịka ntọala."
+      "text": "A ga-edowe ozi build/language/catalogs/{id} na ndabara."
     },
     "translator.dialog.unsavedLanguageChanges.title": {
       "fallbackLocale": null,
@@ -692,6 +792,13 @@
       "status": "machine-generated",
       "text": "Chọọ {definitionTitle}"
     },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Achọrọ akara isi mmalite dị ugbu a, ederede onye ga-achọ, na igodo katalọgụ."
+    },
     "translator.message.aLanguageBuildIsAlreadyRunning.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -713,12 +820,19 @@
       "status": "machine-generated",
       "text": "Ụzọ isi mmalite e nyochara abụghị ụzọ faịlụ nke ebe nchekwa a haziri ahazi."
     },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A chọrọ mgbanwe isi mmalite mbugharị dị irè."
+    },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "A họpụtụghị ebe nchekwa usoro ziri ezi nke My Defragmenter."
+      "text": "A họpụtụghị ebe nchekwa usoro ziri ezi nke Njikwa Nchekwa M."
     },
     "translator.message.applicationFailedToStart.text": {
       "fallbackLocale": null,
@@ -726,6 +840,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ngwa ahụ dara mba ịmalite"
+    },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tinye igodo katalọgụ a na draịvụ nchekwa dị n'ime tupu ị dochie isi mmalite."
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A na-akwado nnọchi akpaghị aka naanị maka faịlụ CommonJS .js na .cjs. JSON na usoro ndị ọzọ chọrọ mgbanwe mpaghara kpọmkwem maka usoro."
     },
     "translator.message.buildCancelledByUser.text": {
       "fallbackLocale": null,
@@ -776,12 +904,42 @@
       "status": "machine-generated",
       "text": "E megharịrị ndekọ katalọgụ n'ime ncheta"
     },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ahịrị e kenyere aha {candidateLine}. Melite ahịrị isi mmalite ya iji mezue onye a na-achọ; ịnyagharịa ka dị."
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Isi mmalite katalọgụ ka chọrọ mmelite"
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Isi mmalite ka chọrọ mmelite"
+    },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Họrọ ebe nchekwa nke nwere asụsụ /kanonical na asụsụ /build."
+      "text": "Họrọ ebe nchekwa nke nwere language/canonical na build/language."
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Okwu ụkpụrụ nlereanya dị mgbagwoju anya chọrọ njikọ ndị sitere na ihe nlele ụtọ asụsụ tupu mgbanwe."
     },
     "translator.message.componentAddedInMemory.text": {
       "fallbackLocale": null,
@@ -818,12 +976,30 @@
       "status": "machine-generated",
       "text": "A kwadoro oku API Deep L maka imegharị a."
     },
+    "translator.message.deeplApiCallsUseValueEnglishForThis.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Deep L Application Programming Interface requests use {selectedBuildEnglishSource} English language for this rebuild"
+    },
     "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Deep L akwụsịrị; na-eji Bekee a haziri ahazi"
+    },
+    "translator.message.deeplIsDisabledUsingValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Deep L is disabled; using {selectedBuildEnglishSource} English language fallbacks"
     },
     "translator.message.draftUpdated.text": {
       "fallbackLocale": null,
@@ -859,6 +1035,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Nke e depụtara ugboro abụọ na {definitionIdentityKey}: {identity}"
+    },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Enweghị ike ịgbanwe aha igodo katalọgụ dị adị. Tinye ndekọ ọhụrụ kama."
     },
     "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
       "fallbackLocale": null,
@@ -976,14 +1159,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "E bulitere data asụsụ ọzọ"
+      "text": "E bulitere ozi asụsụ ọzọ"
     },
     "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "A naghị etinye data maka nchekwa asụsụ."
+      "text": "A naghị etinye ozi maka nchekwa asụsụ."
     },
     "translator.message.languageReportArtifactSaved.text": {
       "fallbackLocale": null,
@@ -1136,6 +1319,13 @@
       "status": "machine-generated",
       "text": "A jụrụ faịlụ mbufe"
     },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A naghị akwado mgbanwe eriri otutu ahịrị site na nko mgbanwe mbụ."
+    },
     "translator.message.noApplicableSchemaIsAvailableForValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1143,7 +1333,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Enweghị schema ọ bụla kwekọrọ maka {viewName}."
+      "text": "Enweghị nkọwa nkọwa ọ bụla kwekọrọ maka {viewName}."
     },
     "translator.message.noLanguageBuildIsRunning.text": {
       "fallbackLocale": null,
@@ -1166,7 +1356,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ọ bụghị ebe nchekwa asụsụ My Defragmenter. Na-efu: {missing}"
+      "text": "Ọ bụghị ebe nchekwa asụsụ Njikwa Nchekwa M. Na-efu: {missing}"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
       "fallbackLocale": null,
@@ -1174,6 +1364,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ọ nọghị na akụkọ mbufe; achọrọ iwughachi."
+    },
+    "translator.message.onlyAnExistingNormalizedWordSubstitutionCanBe.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Only an existing normalized word substitution can be removed."
     },
     "translator.message.pathEscapesTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -1191,6 +1388,13 @@
       "status": "machine-generated",
       "text": "E jụrụ ndekọ"
     },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Melite nlele mgbanwe tupu dochie ahịrị isi mmalite."
+    },
     "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1207,6 +1411,27 @@
       "status": "machine-generated",
       "text": "Wepu {id} na ndekọ mpaghara?"
     },
+    "translator.message.replacedLineValueInValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Akara gbanwere {previewLine} na {previewPath}."
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath",
+        "recoveryFiles"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Akara gbanwere {previewLine} na {previewPath}. Enweghị ike iwepụ nkwado ndabere: {recoveryFiles}"
+    },
     "translator.message.requiredLocaleValueCannotBeDeleted.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1215,6 +1440,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Enweghị ike ihichapụ ebe a chọrọ {id}."
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ịweghachi faịlụ ndị emepụtara na isi mmalite mpaghara na-adịgide adịgide"
     },
     "translator.message.runningLanguageBuildCommand.text": {
       "fallbackLocale": null,
@@ -1228,7 +1460,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Chekwaa ma ọ bụ hichapụ ndozi Akụkọ Asụsụ tupu ịchekwaa data asụsụ kwekọrọ."
+      "text": "Chekwaa ma ọ bụ hichapụ ndozi Akụkọ Asụsụ tupu ịchekwaa ozi asụsụ kwekọrọ."
     },
     "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
       "fallbackLocale": null,
@@ -1257,6 +1489,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Họrọ Onye Nwere Ike Ịbụ, Jụrụ, ma ọ bụ Nyochaa."
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Họrọ onye nwere ike ịchọta, nyochaa, jụrụ, dezie koodu, ma ọ bụ melite koodu."
     },
     "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -1301,6 +1540,62 @@
       "status": "machine-generated",
       "text": "E meghere faịlụ isi"
     },
+    "translator.message.sourceLineReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Edochiri ahịrị isi mmalite"
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Edochighị ahịrị isi mmalite"
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Emeghị ka nnọchi isi mmalite rụọ ọrụ."
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Edochighị nnọchi isi mmalite arụ ọrụ."
+    },
+    "translator.message.startingElectron.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mmalite Electron..."
+    },
+    "translator.message.substitutionRemovalRejected.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Substitution removal rejected"
+    },
+    "translator.message.substitutionRemovedFromInMemoryDraft.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Substitution removed from in memory draft"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ihe njirimara katalọgụ abụghị ihe njirimara JavaScript dị irè."
+    },
     "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1323,6 +1618,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Onye wulite asụsụ haziri ahazi anaghị ekpughe ndị a họpụtara maka eriri."
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ihe nyocha ahaziri ahazi enweghị ike inye ebe isi mmalite ndị chọrọ."
     },
     "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
       "fallbackLocale": null,
@@ -1399,14 +1701,35 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ọdụ ụzọ preload e kpọchiri adịghị."
+      "text": "Ọdụ ụzọ akwa mmiri mmalite e kpọchiri adịghị."
     },
     "translator.message.theScannedSourcePathIsNotANormalized.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The scanned source path is not a normalized repository-relative file path."
+      "status": "machine-generated",
+      "text": "Ụzọ isi mmalite e nyochara abụghị ụzọ faịlụ e mere ka ọ dị mma maka ebe nchekwa."
+    },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Igodo katalọgụ ahọpụtara enweghị ederede onye chọrọ maka ya."
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ahịrị na ederede ahọpụtara abụghị ihe a na-akọ ugbu a gbasara onye chọrọ maka mbugharị."
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ahịrị na ederede ahọpụtara anaghị amata otu onye chọrọ maka mbugharị ugbu a."
     },
     "translator.message.theSelectedLineIsNotACurrentMigration.text": {
       "fallbackLocale": null,
@@ -1422,12 +1745,40 @@
       "status": "machine-generated",
       "text": "Ahịrị ahọpụtara abụghị eriri mbufe a kọrọ ugbu a."
     },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ahịrị isi mmalite ahọpụtara gbanwere mgbe e mepụtara nlele mgbanwe ahụ."
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ahịrị isi mmalite ahọpụtara adịghịzi."
+    },
     "translator.message.theSelectedStringIsNoLongerACurrent.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ahịrị ahọpụtara adịghịzi onye a na-enyocha ugbu a maka mbufe."
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Eriri ahọpụtara adịghịzi na ahịrị isi mmalite akọwara."
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Eriri ahọpụtara na-eme ihe karịrị otu ugboro na ahịrị isi mmalite; a chọrọ ihe omume kpọmkwem."
     },
     "translator.message.theSelectedTextIsNoLongerACurrent.text": {
       "fallbackLocale": null,
@@ -1436,12 +1787,51 @@
       "status": "machine-generated",
       "text": "Ahọpụtara ederede ahụ adịghịzi onye na-atụ anya ịbụ akwụkwọ na-enweghị katalọgụ ugbu a."
     },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "itemRelativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Isi mmalite agbanweela tupu e nwee ike dochie ya: {itemRelativePath}"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Faịlụ isi mmalite agbanweela mgbe e mepụtara nlele mgbanwe ahụ. Họrọ onye ga-eme ka ọ dị ọhụrụ."
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Faịlụ isi mmalite agbanweela tupu e dochie ya. Họrọ onye ga-eme ka ọ dị ọhụrụ."
+    },
     "translator.message.theSourceFileCouldNotBeOpened.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "A pụghị imeghe faịlụ isi."
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Aha mgbanwe mgbanwe abụghị njirimara JavaScript dị irè."
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "syntaxError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "JavaScript agbanweela adabaghị na syntactic: {syntaxError}"
     },
     "translator.message.unableToAddFiles.text": {
       "fallbackLocale": null,
@@ -1497,7 +1887,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Enweghị ike ibudata data asụsụ."
+      "text": "Enweghị ike ibudata ozi asụsụ."
     },
     "translator.message.unableToLoadMigrationCandidates.text": {
       "fallbackLocale": null,
@@ -1537,7 +1927,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Enweghị ike ịgụ build / asụsụ / akụkọ / akụkọ mbufe .json: {errorMessage}"
+      "text": "Enweghị ike ịgụ build/language/reports/migration-report.json: {errorMessage}"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
       "fallbackLocale": null,
@@ -1560,6 +1950,13 @@
       "status": "machine-generated",
       "text": "Enweghị ike imelite ọnọdụ onye na-asọmpi."
     },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Enweghị ike imelite edemede dị n'ime ebe nchekwa."
+    },
     "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1572,14 +1969,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Jiri nhọrọ 'Chekwaa ihe ngosi akụkọ' na ngosipụta Akụkọ Asụsụ tupu ịchekwaa data asụsụ isi."
+      "text": "Jiri nhọrọ 'Chekwaa ihe ngosi akụkọ' na ngosipụta Akụkọ Asụsụ tupu ịchekwaa ozi asụsụ isi."
     },
     "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Jiri Chekwaa chekwaa ọnọdụ onye na-asọmpi na nkọwa asụsụ/, akụkụ canonical / na .json."
+      "text": "Jiri Chekwa ka ọ nọgide na ọkwa amụma na language/canonical/components.json."
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
       "fallbackLocale": null,
@@ -1602,12 +1999,39 @@
       "status": "machine-generated",
       "text": "Nnwale mgbanwe asụsụ; Deep L gbanyụrụ"
     },
+    "translator.message.validatingLanguageChangesDeeplIsDisabledAndFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validating language changes; Deep L is disabled and fallbacks use {selectedBuildEnglishSource} English language"
+    },
+    "translator.message.validatingLanguageChangesDeeplUsesValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validating language changes; Deep L uses {selectedBuildEnglishSource} English language"
+    },
     "translator.message.validationResult.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Nsonaazụ nkwenye"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "unresolvedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{unresolvedCount} ndị a na-akpọ aha ha ka nwere eriri isi mmalite ha ma ọ bụ enweghị ike ịchọpụta. Mmechi na-aga n'ihu na-enweghị mmanye."
     },
     "translator.message.valueIsNotAFile.text": {
       "fallbackLocale": null,
@@ -1617,6 +2041,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "{lANGUAGE_REPORT_PATH} abụghị faịlụ."
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{detail}. Ịnyagharị ga-aga n'ihu; a na-atụ aro mmelite isi mmalite mana a naghị etinye ya n'ọrụ."
     },
     "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
       "fallbackLocale": null,
@@ -1711,7 +2144,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ịchekwa data asụsụ"
+      "text": "Ịchekwa ozi asụsụ"
     },
     "translator.progress.startingSaveAndRebuild.status": {
       "fallbackLocale": null,
@@ -1739,7 +2172,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Jiri \"Stop build\" na windo nke mmepe, mesịa chere ka rollback gwụchaa tupu ị mechie ngwa ahụ."
+      "text": "Jiri \"kwụsị usoro okike\" na windo nke mmepe, mesịa chere maka mweghachi ka mezue tupu ị mechie ngwa ahụ."
     },
     "translator.progress.waitingForSaveConfirmation.status": {
       "fallbackLocale": null,
@@ -1904,6 +2337,13 @@
       "status": "machine-generated",
       "text": "Kwe ka a kpọọ Deep L"
     },
+    "translator.ui.allowSaveAndRebuildToCallDeeplFor.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Allow save changes and Rebuild to call Deep L for missing translations."
+    },
     "translator.ui.alreadyInSourceFiles.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2015,7 +2455,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "wuo / asụsụ / katalọgụ / {currentId}"
+      "text": "build/language/catalogs/{currentId}"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
       "fallbackLocale": null,
@@ -2031,6 +2471,58 @@
       "status": "machine-generated",
       "text": "Nkọwa gbasara onye na-asọmpi"
     },
+    "translator.ui.candidateStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCodeUpdated"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ọnọdụ onye a na-akpọ: {cANDIDATE_STATUS_LABELSCodeUpdated}"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCandidateStatus"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ọnọdụ onye a na-akpọ: {cANDIDATE_STATUS_LABELSCandidateStatus}"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Achọrọ igodo katalọji"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "initialCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Igodo katalọji: {initialCatalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Igodo katalọji: {catalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Igodo katalọji: {resultCatalogKey}"
+    },
     "translator.ui.catalogMatches.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2045,6 +2537,24 @@
       "status": "machine-generated",
       "text": "Ebe mmepụta katalọgụ"
     },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Agbakwunyere ndekọ katalọji maka ahịrị {candidateLine}. Melite ahịrị isi mmalite iji mezue onye a; ịnyagharịa ka dị."
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogStatuses"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ọnọdụ katalọgụ: {catalogStatuses}"
+    },
     "translator.ui.categories.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2052,12 +2562,26 @@
       "status": "machine-generated",
       "text": "Ụdị"
     },
+    "translator.ui.category.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ụdị"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ịlele nchekwa nnọchi isi mmalite..."
+    },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Nhọrọ na-egosipụta asụsụ/, canonical / na mpaghara asụsụ .json. Mpaghara asụsụ edebanyere aha ka na-apụta ìhè, mana enweghị ike ịhọrọ ha."
+      "text": "Ngosipụta nhọrọ language/canonical/language-locales.json. Mpaghara asụsụ edebanyere aha ka na-ahụ anya mana enweghị ike ịhọrọ ya."
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
       "fallbackLocale": null,
@@ -2154,6 +2678,22 @@
       "status": "machine-generated",
       "text": "Hichapụ mpaghara"
     },
+    "translator.ui.deleteSubstitution.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete substitution"
+    },
+    "translator.ui.deleteTheNormalizedWordSubstitutionForValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "recordInput"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete the normalized word substitution for \"{recordInput}\"?"
+    },
     "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2198,12 +2738,26 @@
       "status": "machine-generated",
       "text": "Hapụ ndozi akụkọ asụsụ echekwabeghị ma bulite ihe owuwu ahụ ọzọ?"
     },
+    "translator.ui.durableLocaleFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Faịlụ mpaghara na-adịgide adịgide"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Agbanweela faịlụ mpaghara na-adịgide adịgide"
+    },
     "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Dezie ndekọ kwekọrọ ebe a na-enweghị ịpụ na All Candidates."
+      "text": "Dezie ndekọ kwekọrọ ebe a na-enweghị ịpụ na Ndị niile ga-azọ ọkwa."
     },
     "translator.ui.editComponent.text": {
       "fallbackLocale": null,
@@ -2213,11 +2767,11 @@
       "text": "Dezie akụkụ"
     },
     "translator.ui.editMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit migration inventory"
+      "status": "machine-generated",
+      "text": "Dezie ndepụta mbugharị"
     },
     "translator.ui.editRecord.text": {
       "fallbackLocale": null,
@@ -2250,6 +2804,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ịdezi akụkọ e mepụtara ugbu a."
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tinye igodo katalọgụ iji mepụta nlele mgbanwe."
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Agaghị enwe ike ịgbanwe aha igodo katalọgụ dị adị. Tinye ndekọ ọhụrụ iji jiri igodo ọzọ."
     },
     "translator.ui.existingCategories.text": {
       "fallbackLocale": null,
@@ -2339,7 +2907,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Zoro panel aka ekpe"
+      "text": "Zoro ngalaba ihuenyo aka ekpe"
+    },
+    "translator.ui.highestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ahịrị kachasị elu mbụ"
     },
     "translator.ui.identifier.text": {
       "fallbackLocale": null,
@@ -2349,11 +2924,11 @@
       "text": "Njirimara"
     },
     "translator.ui.inCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "In Catalog"
+      "status": "machine-generated",
+      "text": "Na Katalọgụ"
     },
     "translator.ui.inspectedValueFileSScannedValueAsText.text": {
       "fallbackLocale": null,
@@ -2395,6 +2970,13 @@
       "status": "machine-generated",
       "text": "Site n'aka ekpe ruo n'aka nri (ltr)"
     },
+    "translator.ui.lineOrder.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Usoro ahịrị"
+    },
     "translator.ui.lineValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -2423,7 +3005,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Na-ebunye data asụsụ oru ngo."
+      "text": "Na-ebunye ozi asụsụ oru ngo."
+    },
+    "translator.ui.loadingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Na-ebugo nlele mgbanwe..."
     },
     "translator.ui.locales.text": {
       "fallbackLocale": null,
@@ -2432,28 +3021,35 @@
       "status": "machine-generated",
       "text": "Ebe obibi"
     },
+    "translator.ui.lowestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ahịrị kacha ala mbụ"
+    },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Na-edobe asụsụ /, akụkụ canonical / .json → mbufe Inventory .scanFiles"
+      "text": "Na-ejigide language/canonical/components.json → migrationInventory.scanFiles"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Na-edobe asụsụ/, mpaghara / na mpaghara .json. Ịhichapụ mpaghara na-echekwa faịlụ isi e dere ma na-edobe data katalọgụ e mepụtara dịka ntọala."
+      "text": "Na-edobe language/locales/locales.json. Ihichapụ mpaghara asụsụ na-echekwa faịlụ isi mmalite ma na-edobe ozi katalọgụ ewepụtara na ndabara."
     },
     "translator.ui.maintainsValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionFile"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains {definitionFile}"
+      "status": "machine-generated",
+      "text": "Na-ejigide {definitionFile}"
     },
     "translator.ui.migrationCoverageUnavailable.text": {
       "fallbackLocale": null,
@@ -2562,12 +3158,26 @@
       "status": "machine-generated",
       "text": "Enweghị faịlụ isi mbupụ e depụtara."
     },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ọ dịghị onye na-esote dakọtara na nzacha dị ugbu a."
+    },
     "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Enweghị onye na-esote ọ bụla dakọtara na nzacha ọnọdụ ugbu a."
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ọ dịghị onye na-aga aga dakọtara na nzacha dị ugbu a."
     },
     "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
       "fallbackLocale": null,
@@ -2626,32 +3236,32 @@
       "text": "Nkọwa"
     },
     "translator.ui.openComponentCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open component catalog"
+      "status": "machine-generated",
+      "text": "Mepee katalọgụ ihe"
     },
     "translator.ui.openDiagnosticMessages.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open diagnostic messages"
+      "status": "machine-generated",
+      "text": "Mepee ozi nchọpụta"
     },
     "translator.ui.openPreviewModes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open preview modes"
+      "status": "machine-generated",
+      "text": "Mepee ụdị nlele mmalite"
     },
     "translator.ui.openSemanticKeywords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open semantic keywords"
+      "status": "machine-generated",
+      "text": "Mepee mkpụrụokwu okwu ndị ọzọ"
     },
     "translator.ui.openSource.text": {
       "fallbackLocale": null,
@@ -2660,12 +3270,19 @@
       "status": "machine-generated",
       "text": "Mgbọrọgwụ mepere emepe"
     },
-    "translator.ui.potentialCandidate.text": {
-      "fallbackLocale": "en",
+    "translator.ui.original.text": {
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Potential Candidate"
+      "status": "machine-generated",
+      "text": "Nke izizi"
+    },
+    "translator.ui.potentialCandidate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Onye Nwere Ike Ịbụ"
     },
     "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
       "fallbackLocale": null,
@@ -2688,12 +3305,48 @@
       "status": "machine-generated",
       "text": "Na-akwadebe imeghari na arịrịọ API Deep L gbanyere"
     },
+    "translator.ui.preparingRebuildWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing rebuild with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingRebuildWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing rebuild with {useNormalizedEnglish} English language fallbacks"
+    },
     "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Na-akwadebe ịchekwa mgbe arịrịọ API Deep L gbanyere"
+    },
+    "translator.ui.preparingSaveWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingSaveWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with {useNormalizedEnglish} English language fallbacks"
     },
     "translator.ui.previousLine.text": {
       "fallbackLocale": null,
@@ -2737,6 +3390,13 @@
       "status": "machine-generated",
       "text": "Njikọ katalọgụ na-atọ ụtọ."
     },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Na-emegharị ihe nlele mgbanwe..."
+    },
     "translator.ui.reject.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2766,6 +3426,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Wepu {filePath} na ndepụta mbufe?"
+    },
+    "translator.ui.replaceLineInSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Dochie ahịrị dị na isi mmalite"
     },
     "translator.ui.repositoryMaintenanceTool.text": {
       "fallbackLocale": null,
@@ -2811,6 +3478,13 @@
       "status": "machine-generated",
       "text": "Gbanwee nha oghere ọrụ na nsonaazụ ọrụ"
     },
+    "translator.ui.resolvingCatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Na-edozi igodo katalọgụ..."
+    },
     "translator.ui.restore.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2837,7 +3511,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ịlaghachi data asụsụ"
+      "text": "Ịlaghachi ozi asụsụ"
     },
     "translator.ui.rightToLeftRtl.text": {
       "fallbackLocale": null,
@@ -2845,6 +3519,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Site nri ruo ekpe (rtl)"
+    },
+    "translator.ui.role.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ọrụ"
     },
     "translator.ui.roles.text": {
       "fallbackLocale": null,
@@ -2985,7 +3666,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Họrọ faịlụ iji gosipụta eriri niile a nabatara site na extract String Candidates."
+      "text": "Họrọ faịlụ iji gosipụta eriri niile a nabatara site na Ndị ga-azọ ọkwa site na eriri e dere ede."
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
       "fallbackLocale": null,
@@ -3094,7 +3775,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Gosi panel aka ekpe"
+      "text": "Gosi ngalaba ihuenyo aka ekpe"
     },
     "translator.ui.showingRecordsFromAllComponents.text": {
       "fallbackLocale": null,
@@ -3111,6 +3792,36 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Echefughị ụzọ faịlụ ma ọ bụ nchekwa {skipped}."
+    },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Enweghị nnọchi isi mmalite."
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ndochi isi mmalite chọrọ igodo katalọgụ."
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ndochi isi mmalite"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mmelite isi mmalite ka dị. {detail}. Na-aga n'ihu na-aga n'ihu."
     },
     "translator.ui.status.text": {
       "fallbackLocale": null,
@@ -3156,12 +3867,49 @@
       "status": "machine-generated",
       "text": "Akụkọ ahụ adịghị adị ugbu a. Ịchekwa ga-emepụta ya."
     },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Edochighị ahịrị isi mmalite."
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ihe dị mkpa a na-eme ugbu a ejirila katalọgụ.format ma ọ chọghị mgbanwe isi mmalite."
+    },
     "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ebe a dị mkpa maka onye na-ewu asụsụ."
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A na-ejigide onye a ga-enyocha ihe; ahịrị isi mmalite dị ugbu a ejirila katalọgụ.format."
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Nlele mgbanwe adịghị: {resultError}"
+    },
+    "translator.ui.transformed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Agbanweela"
     },
     "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
       "fallbackLocale": null,
@@ -3190,6 +3938,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Mgbanwe ndị echeghịkwa ka echekwara ka nọgide na ncheta. Ị ga-aga na ngosipụta ọzọ?"
+    },
+    "translator.ui.useNormalized.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized"
+    },
+    "translator.ui.useNormalizedEnglishForGeneratedFallbacksAndAutomated.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for generated fallbacks and automated translation input."
     },
     "translator.ui.useSuggestedKey.text": {
       "fallbackLocale": null,
@@ -3286,34 +4048,34 @@
       "text": "{fileCandidateCount} {fileCatalogedStringCount} a na-adịghị na katalọgụ achọtara na katalọgụ"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileCandidateCount",
         "scannedFileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFileCandidateCount} potential candidate(s), {scannedFileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFileCandidateCount} onye nwere ike ịbụ(s), {scannedFileCatalogedStringCount} dị na katalọgụ"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential candidate(s), {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} onye nwere ike ịbụ(s), {fileCatalogedStringCount} dị na katalọgụ"
     },
     "translator.ui.valuePotentialValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential · {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} ike, {fileCatalogedStringCount} dị na katalọgụ"
     },
     "translator.ui.valuePotentialValueInCatalogValue.text": {
       "fallbackLocale": null,
@@ -3335,6 +4097,24 @@
       "status": "machine-generated",
       "text": "{recordsCount} ndekọ"
     },
+    "translator.ui.valueRemaining.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryRemainingCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryRemainingCount} fọdụrụ"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "statusElapsedMsToFixed"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{statusElapsedMsToFixed} sekọnd gafere"
+    },
     "translator.ui.valueSourceFileS.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -3344,6 +4124,16 @@
       "status": "machine-generated",
       "text": "{filesCount} Faịlụ isi iyi"
     },
+    "translator.ui.valueValueCompleted.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryCompletedCount",
+        "summaryTotalCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryCompletedCount}/{summaryTotalCount} emechara"
+    },
     "translator.ui.view.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -3352,18 +4142,18 @@
       "text": "Lee"
     },
     "translator.ui.viewCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View candidates"
+      "status": "machine-generated",
+      "text": "Lee ndị nwere ike ịbụ"
     },
     "translator.ui.viewHeadingDataViewToolbar.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Lee data isi peeji Lee ogwe ngwaọrụ"
+      "text": "Lee ozi isi peeji Lee ogwe ngwaọrụ"
     },
     "translator.ui.yes.text": {
       "fallbackLocale": null,

@@ -11,7 +11,7 @@
       "status": "approved"
     },
     "package.metadata.description": {
-      "text": "My Defragmenter 脚本语言的语法高亮",
+      "text": "我的存储管理 脚本语言的语法高亮",
       "status": "machine-generated"
     },
     "package.metadata.publisher": {
@@ -39,7 +39,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
-      "text": "我的“磁盘碎片整理程序”扩展的详细程度级别。调试日志记录需要开启 mydfrg debug。",
+      "text": "我的“磁盘碎片整理程序”扩展的详细程度级别。调试日志记录需要开启 mydfrg.debugOn。",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
@@ -63,7 +63,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
-      "text": "应从“我的碎片整理工具”验证中排除的Glob模式",
+      "text": "要从“我的碎片整理程序”验证中排除的文件匹配模式",
       "status": "machine-generated"
     },
     "package.contributes.languages.aliases": {

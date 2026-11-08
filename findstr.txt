@@ -1,0 +1,169 @@
+build\language\reports\migration-report.json:4984:          "fullLine": "    let debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] };",
+build\language\reports\migration-report.json:4990:          "fullLine": "    let debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] };",
+build\language\reports\migration-report.json:4993:          "text": "--inspect=6009"
+build\language\reports\migration-report.json:4996:          "fullLine": "                execArgv: ['--nolazy', '--inspect=6009']",
+build\language\reports\migration-report.json:5002:          "fullLine": "                execArgv: ['--nolazy', '--inspect=6009']",
+build\language\reports\migration-report.json:5005:          "text": "--inspect=6009"
+build\language\reports\migration-report.json:5008:          "fullLine": "                // execArgv: ['--inspect-brk=6009']",
+build\language\reports\migration-report.json:5011:          "text": "--inspect-brk=6009"
+build\language\reports\migration-report.json:5014:          "fullLine": "                // execArgv: ['--inspect=6009']",
+build\language\reports\migration-report.json:5017:          "text": "--inspect=6009"
+build\language\reports\migration-report.json:5020:          "fullLine": "                // , \"--inspect-brk=9229\",",
+build\language\reports\migration-report.json:5023:          "text": "--inspect-brk=9229"
+language\canonical\components.json:3637:        "text": "--inspect=6009",
+language\canonical\components.json:3646:        "text": "--inspect-brk=6009",
+language\canonical\components.json:3655:        "text": "--inspect-brk=9229",
+node_modules\@azure\core-rest-pipeline\dist\browser\policies\logPolicy.d.ts:28:    logger?: Debugger;
+node_modules\@azure\core-rest-pipeline\dist\commonjs\policies\logPolicy.d.ts:28:    logger?: Debugger;
+node_modules\@azure\core-rest-pipeline\dist\esm\policies\logPolicy.d.ts:28:    logger?: Debugger;
+node_modules\@azure\core-rest-pipeline\dist\react-native\policies\logPolicy.d.ts:28:    logger?: Debugger;
+node_modules\@azure\logger\dist\browser\index.d.ts:55:    extend: (namespace: string) => Debugger;
+node_modules\@azure\logger\dist\browser\index.d.ts:69:export type AzureClientLogger = Debugger;
+node_modules\@azure\logger\dist\browser\index.d.ts:78:    error: Debugger;
+node_modules\@azure\logger\dist\browser\index.d.ts:84:    warning: Debugger;
+node_modules\@azure\logger\dist\browser\index.d.ts:88:    info: Debugger;
+node_modules\@azure\logger\dist\browser\index.d.ts:94:    verbose: Debugger;
+node_modules\@azure\logger\dist\commonjs\index.d.ts:55:    extend: (namespace: string) => Debugger;
+node_modules\@azure\logger\dist\commonjs\index.d.ts:69:export type AzureClientLogger = Debugger;
+node_modules\@azure\logger\dist\commonjs\index.d.ts:78:    error: Debugger;
+node_modules\@azure\logger\dist\commonjs\index.d.ts:84:    warning: Debugger;
+node_modules\@azure\logger\dist\commonjs\index.d.ts:88:    info: Debugger;
+node_modules\@azure\logger\dist\commonjs\index.d.ts:94:    verbose: Debugger;
+node_modules\@azure\logger\dist\esm\index.d.ts:55:    extend: (namespace: string) => Debugger;
+node_modules\@azure\logger\dist\esm\index.d.ts:69:export type AzureClientLogger = Debugger;
+node_modules\@azure\logger\dist\esm\index.d.ts:78:    error: Debugger;
+node_modules\@azure\logger\dist\esm\index.d.ts:84:    warning: Debugger;
+node_modules\@azure\logger\dist\esm\index.d.ts:88:    info: Debugger;
+node_modules\@azure\logger\dist\esm\index.d.ts:94:    verbose: Debugger;
+node_modules\@azure\logger\dist\react-native\index.d.ts:55:    extend: (namespace: string) => Debugger;
+node_modules\@azure\logger\dist\react-native\index.d.ts:69:export type AzureClientLogger = Debugger;
+node_modules\@azure\logger\dist\react-native\index.d.ts:78:    error: Debugger;
+node_modules\@azure\logger\dist\react-native\index.d.ts:84:    warning: Debugger;
+node_modules\@azure\logger\dist\react-native\index.d.ts:88:    info: Debugger;
+node_modules\@azure\logger\dist\react-native\index.d.ts:94:    verbose: Debugger;
+node_modules\@electron\asar\node_modules\commander\index.js:1721:  //  --inspect[=[host:]port]
+node_modules\@electron\asar\node_modules\commander\index.js:1722:  //  --inspect-brk[=[host:]port]
+node_modules\@electron\asar\node_modules\commander\index.js:1723:  //  --inspect-port=[host:]port
+node_modules\@electron\asar\node_modules\commander\index.js:1726:    if (arg.indexOf('--inspect') === 0) {
+node_modules\@electron\asar\node_modules\commander\index.js:1731:      if ((match = arg.match(/^(--inspect(-brk)?)$/)) !== null) {
+node_modules\@electron\asar\node_modules\commander\index.js:1732:        // e.g. --inspect
+node_modules\@electron\asar\node_modules\commander\index.js:1734:      } else if ((match = arg.match(/^(--inspect(-brk|-port)?)=([^:]+)$/)) !== null) {
+node_modules\@electron\asar\node_modules\commander\index.js:1737:          // e.g. --inspect=1234
+node_modules\@electron\asar\node_modules\commander\index.js:1740:          // e.g. --inspect=localhost
+node_modules\@electron\asar\node_modules\commander\index.js:1743:      } else if ((match = arg.match(/^(--inspect(-brk|-port)?)=([^:]+):(\d+)$/)) !== null) {
+node_modules\@electron\asar\node_modules\commander\index.js:1744:        // e.g. --inspect=localhost:1234
+node_modules\@electron\osx-sign\dist\cjs\util.d.ts:5:export declare const debugLog: debug.Debugger;
+node_modules\@electron\osx-sign\dist\cjs\util.d.ts:6:export declare const debugWarn: debug.Debugger;
+node_modules\@electron\osx-sign\dist\esm\util.d.ts:5:export declare const debugLog: debug.Debugger;
+node_modules\@electron\osx-sign\dist\esm\util.d.ts:6:export declare const debugWarn: debug.Debugger;
+node_modules\@electron\universal\dist\cjs\debug.d.ts:2:export declare const d: debug.Debugger;
+node_modules\@electron\universal\dist\esm\debug.d.ts:2:export declare const d: debug.Debugger;
+node_modules\@electron\windows-sign\dist\cjs\utils\log.d.ts:2:export declare const log: import("debug").Debugger;
+node_modules\@electron\windows-sign\dist\esm\utils\log.d.ts:2:export declare const log: import("debug").Debugger;
+node_modules\@types\debug\index.d.ts:8:        (namespace: string): Debugger;
+node_modules\@types\debug\index.d.ts:37:    type IDebugger = Debugger;
+node_modules\@types\debug\index.d.ts:48:        extend: (namespace: string, delimiter?: string) => Debugger;
+node_modules\@types\node\inspector.d.ts:36:     * Activate inspector on host and port. Equivalent to `node --inspect=[[host:]port]`, but can be done programmatically after node has
+node_modules\@types\node\inspector.d.ts:58:     * $ node --inspect -p 'inspector.url()'
+node_modules\@types\node\inspector.d.ts:63:     * $ node --inspect=localhost:3000 -p 'inspector.url()'
+node_modules\@types\node\process.d.ts:1844:                 * * Flags may omit leading single (`-`) or double (`--`) dashes; e.g., `inspect-brk` for `--inspect-brk`, or `r` for `-r`.
+node_modules\@types\node\process.d.ts:1864:                 *   // --inspect-brk
+node_modules\@typespec\ts-http-runtime\dist\browser\logger\debug.d.ts:9:    (namespace: string): Debugger;
+node_modules\@typespec\ts-http-runtime\dist\browser\logger\debug.d.ts:59:    extend: (namespace: string) => Debugger;
+node_modules\@typespec\ts-http-runtime\dist\browser\logger\debug.js:170:    return newDebugger;
+node_modules\@typespec\ts-http-runtime\dist\browser\logger\debug.js:183:    return newDebugger;
+node_modules\@typespec\ts-http-runtime\dist\browser\logger\logger.d.ts:15:export type TypeSpecRuntimeClientLogger = Debugger;
+node_modules\@typespec\ts-http-runtime\dist\browser\logger\logger.d.ts:24:    error: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\browser\logger\logger.d.ts:30:    warning: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\browser\logger\logger.d.ts:34:    info: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\browser\logger\logger.d.ts:40:    verbose: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\browser\policies\logPolicy.d.ts:28:    logger?: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\commonjs\logger\debug.d.ts:9:    (namespace: string): Debugger;
+node_modules\@typespec\ts-http-runtime\dist\commonjs\logger\debug.d.ts:59:    extend: (namespace: string) => Debugger;
+node_modules\@typespec\ts-http-runtime\dist\commonjs\logger\debug.js:168:  return newDebugger;
+node_modules\@typespec\ts-http-runtime\dist\commonjs\logger\debug.js:181:  return newDebugger;
+node_modules\@typespec\ts-http-runtime\dist\commonjs\logger\logger.d.ts:15:export type TypeSpecRuntimeClientLogger = Debugger;
+node_modules\@typespec\ts-http-runtime\dist\commonjs\logger\logger.d.ts:24:    error: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\commonjs\logger\logger.d.ts:30:    warning: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\commonjs\logger\logger.d.ts:34:    info: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\commonjs\logger\logger.d.ts:40:    verbose: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\commonjs\policies\logPolicy.d.ts:28:    logger?: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\esm\logger\debug.d.ts:9:    (namespace: string): Debugger;
+node_modules\@typespec\ts-http-runtime\dist\esm\logger\debug.d.ts:59:    extend: (namespace: string) => Debugger;
+node_modules\@typespec\ts-http-runtime\dist\esm\logger\debug.js:170:    return newDebugger;
+node_modules\@typespec\ts-http-runtime\dist\esm\logger\debug.js:183:    return newDebugger;
+node_modules\@typespec\ts-http-runtime\dist\esm\logger\logger.d.ts:15:export type TypeSpecRuntimeClientLogger = Debugger;
+node_modules\@typespec\ts-http-runtime\dist\esm\logger\logger.d.ts:24:    error: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\esm\logger\logger.d.ts:30:    warning: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\esm\logger\logger.d.ts:34:    info: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\esm\logger\logger.d.ts:40:    verbose: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\esm\policies\logPolicy.d.ts:28:    logger?: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\react-native\logger\debug.d.ts:9:    (namespace: string): Debugger;
+node_modules\@typespec\ts-http-runtime\dist\react-native\logger\debug.d.ts:59:    extend: (namespace: string) => Debugger;
+node_modules\@typespec\ts-http-runtime\dist\react-native\logger\debug.js:170:    return newDebugger;
+node_modules\@typespec\ts-http-runtime\dist\react-native\logger\debug.js:183:    return newDebugger;
+node_modules\@typespec\ts-http-runtime\dist\react-native\logger\logger.d.ts:15:export type TypeSpecRuntimeClientLogger = Debugger;
+node_modules\@typespec\ts-http-runtime\dist\react-native\logger\logger.d.ts:24:    error: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\react-native\logger\logger.d.ts:30:    warning: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\react-native\logger\logger.d.ts:34:    info: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\react-native\logger\logger.d.ts:40:    verbose: Debugger;
+node_modules\@typespec\ts-http-runtime\dist\react-native\policies\logPolicy.d.ts:28:    logger?: Debugger;
+node_modules\ajv\package.json:19:    "test-debug": "npm run test-spec -- --inspect-brk",
+node_modules\app-builder-lib\out\configuration.d.ts:489:     * The nodeCliInspect fuse toggles whether the `--inspect`, `--inspect-brk`, etc. flags are respected or not.  When disabled it also ensures that `SIGUSR1` signal does not initialize the main process inspector.  Most apps can safely disable this fuse.
+node_modules\app-builder-lib\scheme.json:1543:          "description": "The nodeCliInspect fuse toggles whether the `--inspect`, `--inspect-brk`, etc. flags are respected or not.  When disabled it also ensures that `SIGUSR1` signal does not initialize the main process inspector.  Most apps can safely disable this fuse.",
+node_modules\builder-util\out\log.d.ts:3:export declare const debug: _debug.Debugger;
+node_modules\builder-util\out\util.d.ts:20:export declare const debug7z: _debug.Debugger;
+node_modules\commander\lib\command.js:2468:  //  --inspect[=[host:]port]
+node_modules\commander\lib\command.js:2469:  //  --inspect-brk[=[host:]port]
+node_modules\commander\lib\command.js:2470:  //  --inspect-port=[host:]port
+node_modules\commander\lib\command.js:2472:    if (!arg.startsWith('--inspect')) {
+node_modules\commander\lib\command.js:2479:    if ((match = arg.match(/^(--inspect(-brk)?)$/)) !== null) {
+node_modules\commander\lib\command.js:2480:      // e.g. --inspect
+node_modules\commander\lib\command.js:2483:      (match = arg.match(/^(--inspect(-brk|-port)?)=([^:]+)$/)) !== null
+node_modules\commander\lib\command.js:2487:        // e.g. --inspect=1234
+node_modules\commander\lib\command.js:2490:        // e.g. --inspect=localhost
+node_modules\commander\lib\command.js:2494:      (match = arg.match(/^(--inspect(-brk|-port)?)=([^:]+):(\d+)$/)) !== null
+node_modules\commander\lib\command.js:2496:      // e.g. --inspect=localhost:1234
+node_modules\electron\electron.d.ts:18528:    readonly debugger: Debugger;
+node_modules\electron\electron.d.ts:25293:    type Debugger = Electron.Debugger;
+node_modules\electron\electron.d.ts:26379:    type Debugger = Electron.Debugger;
+node_modules\postject\node_modules\commander\lib\command.js:2128:  //  --inspect[=[host:]port]
+node_modules\postject\node_modules\commander\lib\command.js:2129:  //  --inspect-brk[=[host:]port]
+node_modules\postject\node_modules\commander\lib\command.js:2130:  //  --inspect-port=[host:]port
+node_modules\postject\node_modules\commander\lib\command.js:2132:    if (!arg.startsWith('--inspect')) {
+node_modules\postject\node_modules\commander\lib\command.js:2139:    if ((match = arg.match(/^(--inspect(-brk)?)$/)) !== null) {
+node_modules\postject\node_modules\commander\lib\command.js:2140:      // e.g. --inspect
+node_modules\postject\node_modules\commander\lib\command.js:2142:    } else if ((match = arg.match(/^(--inspect(-brk|-port)?)=([^:]+)$/)) !== null) {
+node_modules\postject\node_modules\commander\lib\command.js:2145:        // e.g. --inspect=1234
+node_modules\postject\node_modules\commander\lib\command.js:2148:        // e.g. --inspect=localhost
+node_modules\postject\node_modules\commander\lib\command.js:2151:    } else if ((match = arg.match(/^(--inspect(-brk|-port)?)=([^:]+):(\d+)$/)) !== null) {
+node_modules\postject\node_modules\commander\lib\command.js:2152:      // e.g. --inspect=localhost:1234
+node_modules\vsce\node_modules\commander\index.js:1846:  //  --inspect[=[host:]port]
+node_modules\vsce\node_modules\commander\index.js:1847:  //  --inspect-brk[=[host:]port]
+node_modules\vsce\node_modules\commander\index.js:1848:  //  --inspect-port=[host:]port
+node_modules\vsce\node_modules\commander\index.js:1850:    if (!arg.startsWith('--inspect')) {
+node_modules\vsce\node_modules\commander\index.js:1857:    if ((match = arg.match(/^(--inspect(-brk)?)$/)) !== null) {
+node_modules\vsce\node_modules\commander\index.js:1858:      // e.g. --inspect
+node_modules\vsce\node_modules\commander\index.js:1860:    } else if ((match = arg.match(/^(--inspect(-brk|-port)?)=([^:]+)$/)) !== null) {
+node_modules\vsce\node_modules\commander\index.js:1863:        // e.g. --inspect=1234
+node_modules\vsce\node_modules\commander\index.js:1866:        // e.g. --inspect=localhost
+node_modules\vsce\node_modules\commander\index.js:1869:    } else if ((match = arg.match(/^(--inspect(-brk|-port)?)=([^:]+):(\d+)$/)) !== null) {
+node_modules\vsce\node_modules\commander\index.js:1870:      // e.g. --inspect=localhost:1234
+node_modules\vscode-languageclient\lib\node\main.js:204:        const debugStartWith = ['--debug=', '--debug-brk=', '--inspect=', '--inspect-brk='];
+node_modules\vscode-languageclient\lib\node\main.js:205:        const debugEquals = ['--debug', '--debug-brk', '--inspect', '--inspect-brk'];
+runs\2026-08-13\20260813-2207_59f6a7ee_Persist-draft-catalog-data-for-language-database-candidates\components-before-json-inference-refinement.json:3466:        "text": "--inspect=6009",
+runs\2026-08-13\20260813-2207_59f6a7ee_Persist-draft-catalog-data-for-language-database-candidates\components-before-json-inference-refinement.json:3475:        "text": "--inspect-brk=6009",
+runs\2026-08-13\20260813-2207_59f6a7ee_Persist-draft-catalog-data-for-language-database-candidates\components-before-json-inference-refinement.json:3484:        "text": "--inspect-brk=9229",
+runs\2026-08-13\20260813-2207_59f6a7ee_Persist-draft-catalog-data-for-language-database-candidates\components-before-live-refresh.json:2548:        "text": "--inspect=6009",
+runs\2026-08-13\20260813-2207_59f6a7ee_Persist-draft-catalog-data-for-language-database-candidates\components-before-live-refresh.json:2566:        "text": "--inspect=6009",
+runs\2026-08-13\20260813-2207_59f6a7ee_Persist-draft-catalog-data-for-language-database-candidates\components-before-live-refresh.json:2575:        "text": "--inspect-brk=6009",
+runs\2026-08-13\20260813-2207_59f6a7ee_Persist-draft-catalog-data-for-language-database-candidates\components-before-live-refresh.json:2584:        "text": "--inspect=6009",
+runs\2026-08-13\20260813-2207_59f6a7ee_Persist-draft-catalog-data-for-language-database-candidates\components-before-live-refresh.json:2593:        "text": "--inspect-brk=9229",
+src\extension.js:1171:    // --inspect=6009: runs the server in Node's Inspector mode so VS Code can attach to the server for debugging
+src\extension.js:1172:    let debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] };
+src\extension.js:1182:                execArgv: ['--nolazy', '--inspect=6009']
+src\extension.js:1183:                // execArgv: ['--inspect-brk=6009']
+src\extension.js:1184:                // execArgv: ['--inspect=6009']
+src\extension.js:1185:                // , "--inspect-brk=9229",
+src\server\server.js:6:// debugger;
+src\server\server.js:171:    // debugger;

@@ -20,7 +20,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Mon Défragmenteur : Fermer l'Explorateur de diagnostics"
+      "text": "Mon Défragmenteur : Fermer l'Explorateur de rapports de problèmes"
     },
     "package.contributes.commands.mydfrg.diagnostics.filter.title": {
       "fallbackLocale": null,
@@ -69,7 +69,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Mon défragmenteur : Actualiser les diagnostics"
+      "text": "Mon défragmenteur : Actualiser les rapports de problèmes"
     },
     "package.contributes.commands.mydfrg.diagnostics.reset.title": {
       "fallbackLocale": null,
@@ -83,21 +83,21 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Mon Défragmenteur : Envoyer un rapport de diagnostic à l’agent"
+      "text": "Mon Défragmenteur : envoyer un rapport de diagnostic à l'assistant automatisé"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Mon défragmenteur : Afficher les diagnostics sous forme de tableau"
+      "text": "Mon défragmenteur : Afficher les rapports de problèmes sous forme de tableau"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Mon défragmenteur : Afficher les diagnostics sous forme d'arborescence"
+      "text": "Mon défragmenteur : Afficher les rapports de problèmes sous forme d'arborescence"
     },
     "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
       "fallbackLocale": null,
@@ -132,7 +132,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Modèles « Glob » à exclure de la validation de « My Defragmenter »"
+      "text": "Modèles de correspondance de fichiers à exclure de la validation de « Gestion de mon stockage »"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
       "fallbackLocale": null,
@@ -174,14 +174,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Répertoire contenant les données utilisateur de My Defragmenter."
+      "text": "Répertoire contenant les données utilisateur de Gestion de mon stockage."
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Niveau de détail de l'extension « Mon Défragmenteur ». La journalisation de débogage nécessite que l'option « mydfrg debug » soit activée."
+      "text": "Niveau de détail de l'extension « Mon Défragmenteur ». La journalisation de débogage nécessite que l'option « mydfrg.debugOn » soit activée."
     },
     "package.contributes.languages.aliases": {
       "fallbackLocale": null,
@@ -195,7 +195,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Mise en évidence de la syntaxe pour le langage de script « My Defragmenter »"
+      "text": "Mise en évidence de la syntaxe pour le langage de script « Gestion de mon stockage »"
     },
     "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
       "fallbackLocale": null,
@@ -216,7 +216,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Mise en évidence de la syntaxe pour le langage de script « My Defragmenter »"
+      "text": "Mise en évidence de la syntaxe pour le langage de script « Gestion de mon stockage »"
     },
     "package.metadata.publisher": {
       "fallbackLocale": null,

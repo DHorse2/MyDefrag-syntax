@@ -6,7 +6,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Vumela ii-Deep L calls ngexesha lokuGcina nokuYakha ngokutsha"
+      "text": "Vumela ii-Deep L izicelo ngexesha lokuGcina nokuYakha ngokutsha"
     },
     "translator.accessibility.applicationNavigation.label": {
       "fallbackLocale": null,
@@ -29,6 +29,15 @@
       "status": "machine-generated",
       "text": "Isimo somgqatswa"
     },
+    "translator.accessibility.catalogRecordValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "recordKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Irekhodi yekhathalogu {recordKey}"
+    },
     "translator.accessibility.closeOperationResult.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -44,6 +53,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Vala i{windowLabel}"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Izigaba zokuqalisa ezigqityiweyo"
     },
     "translator.accessibility.componentAssignedToValue.label": {
       "fallbackLocale": null,
@@ -105,6 +121,27 @@
       "status": "machine-generated",
       "text": "Hlela irekhodi lekhatalogu {entryKey}"
     },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Hluza abaviwa ngokweendidi"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Hluza abaviwa ngokweenxalenye"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Hluza abaviwa ngokweendima"
+    },
     "translator.accessibility.filterCandidatesByStatus.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -112,12 +149,47 @@
       "status": "machine-generated",
       "text": "Hluzisa abagqatswa ngokwemo"
     },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iirekhodi zekhathalogu yokucoca ngokweendidi"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iirekhodi zekhathalogu yokucoca ngokweenxalenye"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iirekhodi zekhathalogu yokucoca ngokweendidi"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iirekhodi zekhathalogu yokucoca ngokweendidi"
+    },
     "translator.accessibility.filterMigrationSourceFiles.label": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Hlunga iifayile zomthombo wokufuduka"
+    },
+    "translator.accessibility.languageBuildOptions.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Language creation process options"
     },
     "translator.accessibility.languageReportArtifactText.label": {
       "fallbackLocale": null,
@@ -184,6 +256,20 @@
       "status": "machine-generated",
       "text": "Ukusebenza kuyaqhubeka"
     },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Oda abaviwa ngomgca"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Oda iirekhodi zekhathalogu ngokomgca womthombo"
+    },
     "translator.accessibility.removeValue.label": {
       "fallbackLocale": null,
       "placeholders": [
@@ -230,6 +316,13 @@
       "status": "machine-generated",
       "text": "Isitshixo esicetyiswayo"
     },
+    "translator.accessibility.useNormalizedEnglishForFallbacksAndAutomatedTranslation.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for fallbacks and automated translation"
+    },
     "translator.accessibility.viewMigrationCandidatesForValue.label": {
       "fallbackLocale": null,
       "placeholders": [
@@ -247,18 +340,18 @@
       "text": "Izilawuli zefestile"
     },
     "translator.action.componentCatalog.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog"
+      "status": "machine-generated",
+      "text": "Ikhathalogu yeCandelo"
     },
     "translator.action.diagnosticMessages.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic Messages"
+      "status": "machine-generated",
+      "text": "Imiyalezo yokuxilonga"
     },
     "translator.action.exit.label": {
       "fallbackLocale": null,
@@ -266,6 +359,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Phuma"
+    },
+    "translator.action.normalizedWords.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Normalized Words"
     },
     "translator.action.previewModes.label": {
       "fallbackLocale": null,
@@ -303,11 +403,11 @@
       "text": "Gcina"
     },
     "translator.action.semanticKeywords.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Semantic Keywords"
+      "status": "machine-generated",
+      "text": "Amagama angundoqo entsingiselo"
     },
     "translator.action.stopBuild.label": {
       "fallbackLocale": null,
@@ -342,7 +442,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Iifayile ezibhalwe phantsi kweendawo zolwimi ze/ zihlala zigcinwa."
+      "text": "Iifayile ezigunyazisiweyo phantsi kwe- language/locales zihlala zigciniwe."
     },
     "translator.dialog.cancel.text": {
       "fallbackLocale": null,
@@ -402,7 +502,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Susa i-locale {id}?"
+      "text": "Susa i-ummandla wolwimi {id}?"
     },
     "translator.dialog.discardAndReload.text": {
       "fallbackLocale": null,
@@ -486,7 +586,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ulungiso lwam lweLwimi lweDefragmenter"
+      "text": "Ulungiso lwam lweLwimi lweUlawulo lwam lokugcina izinto"
     },
     "translator.dialog.noAuthoritativeFilesWillChange.text": {
       "fallbackLocale": null,
@@ -496,11 +596,11 @@
       "text": "Akukho zifayile zisesikweni ezizakutshintsha."
     },
     "translator.dialog.noFilesWillChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files will change."
+      "status": "machine-generated",
+      "text": "Akukho fayile ziya kutshintsha."
     },
     "translator.dialog.nothingToSave.title": {
       "fallbackLocale": null,
@@ -549,7 +649,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ukugcinwa kwe-Save kuye kwasilela kwaye imeko ibuyiselwe emva."
+      "text": "Gcina Utshintsho aluphumelelanga kwaye lwabuyiselwa umva."
     },
     "translator.dialog.saveTheReportArtifactSeparately.title": {
       "fallbackLocale": null,
@@ -591,7 +691,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Khetha isigcini-magama se-My Defragmenter syntax"
+      "text": "Khetha isigcini-magama se-Ulawulo lwam lokugcina izinto imithetho yegrama"
     },
     "translator.dialog.startingMydefragLanguageMaintenance.title": {
       "fallbackLocale": null,
@@ -601,13 +701,13 @@
       "text": "Ukuqala Ulungiso Lwam LwesiLwimi"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The generated build/language/catalogs/{id} data will be kept by default."
+      "status": "machine-generated",
+      "text": "Idatha eyenziweyo build/language/catalogs/{id} iya kugcinwa ngokwendalo."
     },
     "translator.dialog.unsavedLanguageChanges.title": {
       "fallbackLocale": null,
@@ -692,6 +792,13 @@
       "status": "machine-generated",
       "text": "Khangela i{definitionTitle}"
     },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kufuneka umgca womthombo wangoku, umbhalo omele usetyenziswe, kunye nesitshixo sekhathalogu."
+    },
     "translator.message.aLanguageBuildIsAlreadyRunning.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -713,12 +820,19 @@
       "status": "machine-generated",
       "text": "Indlela yomthombo eskeniweyo ayiyondlela yefayile eqhelekisiweyo yendawo yogcino."
     },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kufuneka utshintsho olusebenzayo lomthombo wokufuduka."
+    },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Akukhethwanga i-repository yesintaksi ye-My Defragmenter esebenzayo."
+      "text": "Akukhethwanga i-repository yesintaksi ye-Ulawulo lwam lokugcina izinto esebenzayo."
     },
     "translator.message.applicationFailedToStart.text": {
       "fallbackLocale": null,
@@ -726,6 +840,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Isicelo asikwazanga ukuqala"
+    },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sebenzisa esi sitshixo sekhathalogu kwidrafti yememori ngaphambi kokuba ufake enye endaweni yomthombo."
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukutshintshwa ngokuzenzekelayo kuxhaswa kuphela kwiifayile zeCommonJS .js kunye ne-.cjs. I-JSON kunye nezinye iifomathi zifuna utshintsho lwendawo ethile oluhambelana nefomathi."
     },
     "translator.message.buildCancelledByUser.text": {
       "fallbackLocale": null,
@@ -776,12 +904,42 @@
       "status": "machine-generated",
       "text": "Inkcukacha yecala loguqulwe kwinkumbulo."
     },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca ohlulwe nge-{candidateLine}. Hlaziya umgca wawo womthombo ukuze ugqibezele lo mviwa; ukuhambahamba kusafumaneka."
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umthombo ohlulwe nge-catalog usafuna uhlaziyo"
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Imithombo ehlulwe nge-catalog isafuna uhlaziyo"
+    },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Khetha i-repository enolwimi lwe-/ canonical kunye nolwimi lwe-/ olwakhiweyo."
+      "text": "Khetha indawo yokugcina engabanini be language/canonical kunye ne build/language."
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iintetho zetemplate ezintsonkothileyo zifuna izibophelelo zesibambi-ndawo esivela kwi-isihlalutyi sesivakalisi ngaphambi kotshintsho."
     },
     "translator.message.componentAddedInMemory.text": {
       "fallbackLocale": null,
@@ -816,7 +974,16 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ii-calls ze-Deep L API zivulweyo kolu kwakhiwa ngokutsha."
+      "text": "Ii-izicelo ze-Deep L API zivulweyo kolu kwakhiwa ngokutsha."
+    },
+    "translator.message.deeplApiCallsUseValueEnglishForThis.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Deep L Application Programming Interface requests use {selectedBuildEnglishSource} English language for this rebuild"
     },
     "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
       "fallbackLocale": null,
@@ -824,6 +991,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "I-Deep L ayisebenzi; kusetyenziswa isiNgesi esiqhelekileyo."
+    },
+    "translator.message.deeplIsDisabledUsingValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Deep L is disabled; using {selectedBuildEnglishSource} English language fallbacks"
     },
     "translator.message.draftUpdated.text": {
       "fallbackLocale": null,
@@ -860,6 +1036,13 @@
       "status": "machine-generated",
       "text": "Ikhophi ye{definitionIdentityKey}: {identity}"
     },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iiqhosha zekhathalogu ezikhoyo azinakuthiywa igama elitsha. Yongeza irekhodi elitsha endaweni yoko."
+    },
     "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -895,7 +1078,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ikhathelogu ye-locale eyenziweyo ayisosishicilelo: {relativePath}"
+      "text": "Ikhathelogu ye-ummandla wolwimi eyenziweyo ayisosishicilelo: {relativePath}"
     },
     "translator.message.invalidComponentRequest.text": {
       "fallbackLocale": null,
@@ -1136,6 +1319,13 @@
       "status": "machine-generated",
       "text": "Iifayile zokufuduka azamkelwanga"
     },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukutshintshwa kwentambo yemigca emininzi akuxhaswa yi-transform indawo yokudibanisa yokuqala."
+    },
     "translator.message.noApplicableSchemaIsAvailableForValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1143,7 +1333,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Akukho schema isebenzayo efumanekayo kwi{viewName}."
+      "text": "Akukho ubume bedatha isebenzayo efumanekayo kwi{viewName}."
     },
     "translator.message.noLanguageBuildIsRunning.text": {
       "fallbackLocale": null,
@@ -1166,7 +1356,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Asiyoyiphakathi yolwimi yeMy Defragmenter. Okuphelileyo: {missing}"
+      "text": "Asiyoyiphakathi yolwimi yeUlawulo lwam lokugcina izinto. Okuphelileyo: {missing}"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
       "fallbackLocale": null,
@@ -1174,6 +1364,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ayifumaneki kwingxelo yokufuduka; kufuneka yakhiwe ngokutsha."
+    },
+    "translator.message.onlyAnExistingNormalizedWordSubstitutionCanBe.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Only an existing normalized word substitution can be removed."
     },
     "translator.message.pathEscapesTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -1191,6 +1388,13 @@
       "status": "machine-generated",
       "text": "Irekhodi alamkelwanga"
     },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Hlaziya i-transform umbono wokuqala ngaphambi kokutshintsha umgca womthombo."
+    },
     "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1207,6 +1411,27 @@
       "status": "machine-generated",
       "text": "Susa i{id} kwi-registry yendawo?"
     },
+    "translator.message.replacedLineValueInValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukutshintshwa komgca {previewLine} kwi {previewPath}."
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath",
+        "recoveryFiles"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukutshintshwa komgca {previewLine} kwi {previewPath}. Ikopi yogcino ayikwazanga ukususwa: {recoveryFiles}"
+    },
     "translator.message.requiredLocaleValueCannotBeDeleted.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1215,6 +1440,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Indawo efunekayo {id} ayinakucinywa."
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukubuyisela iifayile ezivelisiweyo kunye nemithombo yendawo ehlala ixesha elide"
     },
     "translator.message.runningLanguageBuildCommand.text": {
       "fallbackLocale": null,
@@ -1257,6 +1489,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Khetha umgqatswa onokwenzeka, owalelweyo, okanye uphononongo."
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Khetha uMviwa onokubakho, Uhlolo, Ukwaliwe, Ukuhlelwa kwekhowudi, okanye Ikhowudi ihlaziyiwe."
     },
     "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -1301,6 +1540,62 @@
       "status": "machine-generated",
       "text": "Ifayile yomthombo ivuliwe"
     },
+    "translator.message.sourceLineReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca womthombo utshintshiwe"
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca womthombo awutshintshwanga"
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukutshintshwa komthombo akusebenzi."
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukutshintshwa komthombo akulunganga."
+    },
+    "translator.message.startingElectron.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukuqalisa i-Electron..."
+    },
+    "translator.message.substitutionRemovalRejected.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Substitution removal rejected"
+    },
+    "translator.message.substitutionRemovedFromInMemoryDraft.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Substitution removed from in memory draft"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Isihlonzi sekhathalogu asisosihlonzi seJavaScript esisebenzayo."
+    },
     "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1323,6 +1618,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Isakhi solwimi esicwangcisiweyo asibonisi abagqatswa bomgca."
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Isikena esicwangcisiweyo asinakubonelela ngeendawo zomthombo womviwa."
     },
     "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
       "fallbackLocale": null,
@@ -1402,11 +1704,32 @@
       "text": "Ibhulorho yokulayisha yangaphambili elinganiselweyo ayifumaneki."
     },
     "translator.message.theScannedSourcePathIsNotANormalized.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The scanned source path is not a normalized repository-relative file path."
+      "status": "machine-generated",
+      "text": "Indlela yomthombo oskeniweyo ayisiyondlela yefayile eqhelekileyo enxulumene nendawo yokugcina izinto."
+    },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Isitshixo sekhathalogu esikhethiweyo asinalo olu mbhalo womviwa."
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca kunye nombhalo okhethiweyo awungomviwa wokufuduka oxeliweyo ngoku."
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca kunye nombhalo okhethiweyo awubonisi umviwa omnye wokufuduka ngoku."
     },
     "translator.message.theSelectedLineIsNotACurrentMigration.text": {
       "fallbackLocale": null,
@@ -1422,12 +1745,40 @@
       "status": "machine-generated",
       "text": "Umgca okhethiweyo asiyontambo yokufuduka ekwangoku exeliweyo."
     },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca womthombo okhethiweyo utshintshile emva kokuba imbonakalo yokuguqula yenziwe."
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca wemvelaphi okhethiweyo awusekho."
+    },
     "translator.message.theSelectedStringIsNoLongerACurrent.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Umtya okhethiweyo awusaseso isigqatswa sokufuduka esikhangqwayo ngoku."
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca wemvelaphi okhethiweyo awusekho kumgca wemvelaphi ochaziweyo."
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umtya okhethiweyo uvela izihlandlo ezingaphezu kwesinye kumgca womthombo; kufuneka ukwenzeka ngokuchanekileyo."
     },
     "translator.message.theSelectedTextIsNoLongerACurrent.text": {
       "fallbackLocale": null,
@@ -1436,12 +1787,51 @@
       "status": "machine-generated",
       "text": "Umbhalo okhethiweyo awusengomgqatswa wangoku ongakhange ufakwe kuluhlu."
     },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "itemRelativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umthombo utshintshile ngaphambi kokuba utshintshwe: {itemRelativePath}"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ifayile yomthombo itshintshile emva kokuba i-transform umbono wokuqala yenziwe. Khetha kwakhona umviwa ukuze awuhlaziye."
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ifayile yomthombo itshintshile ngaphambi kokutshintshwa. Khetha kwakhona umviwa ukuze awuhlaziye."
+    },
     "translator.message.theSourceFileCouldNotBeOpened.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ifayile yomthombo ayikwazanga kuvulwa."
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Igama le-transform ixabiso elitshintshayo alisiso isichazi seJavaScript esisebenzayo."
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "syntaxError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "I-JavaScript eguquliweyo ayisebenzi ngokwesivakalisi: {syntaxError}"
     },
     "translator.message.unableToAddFiles.text": {
       "fallbackLocale": null,
@@ -1469,7 +1859,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Akunakufakwa i-locale"
+      "text": "Akunakufakwa i-ummandla wolwimi"
     },
     "translator.message.unableToApplyTheComponent.text": {
       "fallbackLocale": null,
@@ -1490,7 +1880,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Akunakucinywa i-locale"
+      "text": "Akunakucinywa i-ummandla wolwimi"
     },
     "translator.message.unableToLoadLanguageData.text": {
       "fallbackLocale": null,
@@ -1537,7 +1927,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Akukwazi ukufunda ulwakhiwo lwe-/, ulwimi lwe-/, iingxelo ze-/, ingxelo yokufuduka ye-.json: {errorMessage}"
+      "text": "Ayifundeki build/language/reports/migration-report.json: {errorMessage}"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
       "fallbackLocale": null,
@@ -1560,6 +1950,13 @@
       "status": "machine-generated",
       "text": "Akunakwenzeka ukuhlaziya isimo somgqatswa."
     },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ayikwazi ukuhlaziya uyilo olukwimemori."
+    },
     "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1572,21 +1969,21 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Sebenzisa i-'Save report artifact' kwimbonakalo ye-Language Report phambi kokugcina idatha yolwimi oluphambili."
+      "text": "Sebenzisa i-'Gcina ifayile yemveliso yengxelo' kwimbonakalo ye-Ingxelo yolwimi phambi kokugcina idatha yolwimi oluphambili."
     },
     "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Sebenzisa i-Save ukugcina isimo somgqatswa kwizixhobo ze-/, i-/ canonical, ne-.json."
+      "text": "Sebenzisa uGcina ukuze uqhubekise ubume besiphakamiso kwi- language/canonical/components.json."
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Sebenzisa i-Save ukugcina utshintsho kwi-Component Catalog."
+      "text": "Sebenzisa uGcina iiNguqu ukuze uqhubeke notshintsho lwecandelo lekhathalogu."
     },
     "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
       "fallbackLocale": null,
@@ -1602,12 +1999,39 @@
       "status": "machine-generated",
       "text": "Ukuqinisekisa utshintsho lwolwimi; I-Deep L ayisebenzi"
     },
+    "translator.message.validatingLanguageChangesDeeplIsDisabledAndFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validating language changes; Deep L is disabled and fallbacks use {selectedBuildEnglishSource} English language"
+    },
+    "translator.message.validatingLanguageChangesDeeplUsesValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validating language changes; Deep L uses {selectedBuildEnglishSource} English language"
+    },
     "translator.message.validationResult.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Isiphumo sovavanyo"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "unresolvedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{unresolvedCount} abavavanyiweyo abakwikhathalogu basenalo umtya wabo wokuqala okanye abanakuqinisekiswa. Ukuvala kuyaqhubeka ngaphandle kokunyanzeliswa."
     },
     "translator.message.valueIsNotAFile.text": {
       "fallbackLocale": null,
@@ -1617,6 +2041,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "{lANGUAGE_REPORT_PATH} ayisosifayile."
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{detail}. Ukuhambahamba kuya kuqhubeka; uhlaziyo lomthombo luyacetyiswa kodwa alunyanzeliswa."
     },
     "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
       "fallbackLocale": null,
@@ -1639,7 +2072,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Linda de kuphele ukwakhiwa kolwimi phambi kokugcina i-artifact yengxelo."
+      "text": "Linda de kuphele ukwakhiwa kolwimi phambi kokugcina i-ifayile yemveliso yengxelo."
     },
     "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
       "fallbackLocale": null,
@@ -1739,7 +2172,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Sebenzisa i-'Stop build' kwi-window yenkqubela, uze ulinde ukuba i-rollback igqitywe phambi kokuba uvale i-application."
+      "text": "Sebenzisa i-'nqumama inkqubo yokudala' kwi-ifestile yesikrini yenkqubela, uze ulinde ukuba i-ukubuyisela igqitywe phambi kokuba uvale i-application."
     },
     "translator.progress.waitingForSaveConfirmation.status": {
       "fallbackLocale": null,
@@ -1867,7 +2300,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Zonke iitemplates ze-locale ezisemthethweni sele zibhalisiwe."
+      "text": "Zonke iitemplates ze-ummandla wolwimi ezisemthethweni sele zibhalisiwe."
     },
     "translator.ui.allComponentDetails.text": {
       "fallbackLocale": null,
@@ -1903,6 +2336,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Vumela iifowuni zeDeep L"
+    },
+    "translator.ui.allowSaveAndRebuildToCallDeeplFor.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Allow save changes and Rebuild to call Deep L for missing translations."
     },
     "translator.ui.alreadyInSourceFiles.text": {
       "fallbackLocale": null,
@@ -2015,7 +2455,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Yakha / ulwimi / iikhathelogu / {currentId}"
+      "text": "build/language/catalogs/{currentId}"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
       "fallbackLocale": null,
@@ -2031,6 +2471,58 @@
       "status": "machine-generated",
       "text": "Iinkcukacha zomgqatswa"
     },
+    "translator.ui.candidateStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCodeUpdated"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Imeko yomvavanywa: {cANDIDATE_STATUS_LABELSCodeUpdated}"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCandidateStatus"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Imeko yomgqatswa: {cANDIDATE_STATUS_LABELSCandidateStatus}"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Isitshixo sekhathalogu siyafuneka"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "initialCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Isitshixo sekhathalogu: {initialCatalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Isitshixo sekhathalogu: {catalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Isitshixo sekhathalogu: {resultCatalogKey}"
+    },
     "translator.ui.catalogMatches.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2045,6 +2537,24 @@
       "status": "machine-generated",
       "text": "Iindawo zokukhupha ikhathalogu"
     },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Irekhodi yekhathalogu yongezwe kumgca {candidateLine}. Hlaziya umgca womthombo ukuze ugqibezele lo mgqatswa; ukuhambahamba kusafumaneka."
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogStatuses"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Imeko yeKhathalogu: {catalogStatuses}"
+    },
     "translator.ui.categories.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2052,12 +2562,26 @@
       "status": "machine-generated",
       "text": "Iindidi"
     },
+    "translator.ui.category.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Udidi"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukujonga ukhuseleko lokutshintsha umthombo..."
+    },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ukhetho lubonakalisa ulwimi lwe/, i-/ esemthethweni, kunye neendawo zolwimi ze.json. Iindawo zolwimi ezibhalisiweyo zihlala zibonakala kodwa azinakukhethwa."
+      "text": "Isipili sokhetho language/canonical/language-locales.json. Imimandla yolwimi ebhalisiweyo ihlala ibonakala kodwa ayinakukhethwa."
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
       "fallbackLocale": null,
@@ -2152,14 +2676,30 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Cima i-locale"
+      "text": "Cima i-ummandla wolwimi"
+    },
+    "translator.ui.deleteSubstitution.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete substitution"
+    },
+    "translator.ui.deleteTheNormalizedWordSubstitutionForValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "recordInput"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete the normalized word substitution for \"{recordInput}\"?"
     },
     "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ivela kumyalezo okhethiweyo wekhathalogu ye-canonical."
+      "text": "Ivela kumyalezo okhethiweyo wekhathalogu ye-igunya."
     },
     "translator.ui.description.text": {
       "fallbackLocale": null,
@@ -2196,14 +2736,28 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Uyawalahla na uhlengahlengiso olungagcinwanga lweNgxelo yeLwimi uze uphinde ulayishe i-artifact?"
+      "text": "Uyawalahla na uhlengahlengiso olungagcinwanga lweNgxelo yeLwimi uze uphinde ulayishe i-ifayile yemveliso?"
+    },
+    "translator.ui.durableLocaleFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iifayile zeendawo ezihlala ixesha elide"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iifayile zeendawo ezihlala ixesha elide zitshintshiwe"
     },
     "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Hlela irekhodi elihambelanayo apha ungaphumi kwi-All Candidates."
+      "text": "Hlela irekhodi elihambelanayo apha ungaphumi kwi-Bonke abaVavanywa."
     },
     "translator.ui.editComponent.text": {
       "fallbackLocale": null,
@@ -2213,11 +2767,11 @@
       "text": "Hlela icandelo"
     },
     "translator.ui.editMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit migration inventory"
+      "status": "machine-generated",
+      "text": "Hlela uluhlu lwezinto ezifudukayo"
     },
     "translator.ui.editRecord.text": {
       "fallbackLocale": null,
@@ -2250,6 +2804,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ukuhlela ingxelo ekhoyo eyenziweyo."
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Faka iqhosha lekhathalogu ukuze wenze imbonakalo yokuguqula."
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iiqhosha zekhathalogu ezikhoyo azinakuthiywa igama elitsha. Yongeza irekhodi entsha ukuze usebenzise elinye iqhosha."
     },
     "translator.ui.existingCategories.text": {
       "fallbackLocale": null,
@@ -2341,6 +2909,13 @@
       "status": "machine-generated",
       "text": "Fihla iphaneli yasekhohlo"
     },
+    "translator.ui.highestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca ophezulu kuqala"
+    },
     "translator.ui.identifier.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2349,11 +2924,11 @@
       "text": "Isazisi"
     },
     "translator.ui.inCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "In Catalog"
+      "status": "machine-generated",
+      "text": "Kwikhathalogu"
     },
     "translator.ui.inspectedValueFileSScannedValueAsText.text": {
       "fallbackLocale": null,
@@ -2395,6 +2970,13 @@
       "status": "machine-generated",
       "text": "Ukusuka ekhohlo ukuya ekunene (ltr)"
     },
+    "translator.ui.lineOrder.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ulandelelwano lomgca"
+    },
     "translator.ui.lineValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -2425,6 +3007,13 @@
       "status": "machine-generated",
       "text": "Kulayishwa idatha yolwimi lweprojekthi."
     },
+    "translator.ui.loadingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ilayisha imbonakalo yokuguqula..."
+    },
     "translator.ui.locales.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2432,28 +3021,35 @@
       "status": "machine-generated",
       "text": "Iindawo"
     },
+    "translator.ui.lowestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca ophantsi kuqala"
+    },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Igcina ulwimi lwe/, iicomponents ezisemthethweni ze/, i.json → ukufuduka, i-Inventory ye-.scanFiles"
+      "text": "Igcina language/canonical/components.json → migrationInventory.scanFiles"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Igcina iilokale zolwimi ze/, iilokale ze/, kunye ne.json. Ukususa i-locale kukhusela iifayile zemvelaphi ezenziwe ngumbhali kwaye kugcina idatha yekhathalogu eyenziweyo ngokungagqibekanga."
+      "text": "Igcina language/locales/locales.json. Ukucima ummandla wolwimi kugcina iifayile zomthombo ogunyazisiweyo kwaye igcina ulwazi lwekhathalogu oluveliswe ngokungagqibekanga."
     },
     "translator.ui.maintainsValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionFile"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains {definitionFile}"
+      "status": "machine-generated",
+      "text": "Igcina {definitionFile}"
     },
     "translator.ui.migrationCoverageUnavailable.text": {
       "fallbackLocale": null,
@@ -2532,7 +3128,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Akukho zifayile ezine-strings ezingamagama angaba-khetho ezifunyenweyo kweli folda."
+      "text": "Akukho zifayile ezine-amaxabiso okubhaliweyo ezingamagama angaba-khetho ezifunyenweyo kweli folda."
     },
     "translator.ui.noFilesMatchTheCurrentFilter.text": {
       "fallbackLocale": null,
@@ -2562,12 +3158,26 @@
       "status": "machine-generated",
       "text": "Akukho zifayile zomthombo wokufudusa zidwelisiweyo."
     },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Akukho mviwa ulandelayo ohambelana nezihluzi zangoku."
+    },
     "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Akukho mgqatswa olandelayo uhambelana nesihluzo sesimo sangoku."
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Akukho mntu ungaphambili ohambelana nezihluzo zangoku."
     },
     "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
       "fallbackLocale": null,
@@ -2626,32 +3236,32 @@
       "text": "Amanqaku"
     },
     "translator.ui.openComponentCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open component catalog"
+      "status": "machine-generated",
+      "text": "Vula ikhathalogu yecandelo"
     },
     "translator.ui.openDiagnosticMessages.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open diagnostic messages"
+      "status": "machine-generated",
+      "text": "Vula imiyalezo yokuxilonga"
     },
     "translator.ui.openPreviewModes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open preview modes"
+      "status": "machine-generated",
+      "text": "Vula iindlela zokujonga kwangaphambili"
     },
     "translator.ui.openSemanticKeywords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open semantic keywords"
+      "status": "machine-generated",
+      "text": "Vula amagama angundoqo entsingiselo"
     },
     "translator.ui.openSource.text": {
       "fallbackLocale": null,
@@ -2660,12 +3270,19 @@
       "status": "machine-generated",
       "text": "Umthombo ovulekileyo"
     },
-    "translator.ui.potentialCandidate.text": {
-      "fallbackLocale": "en",
+    "translator.ui.original.text": {
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Potential Candidate"
+      "status": "machine-generated",
+      "text": "Okoqobo"
+    },
+    "translator.ui.potentialCandidate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umviwa Onokwenzeka"
     },
     "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
       "fallbackLocale": null,
@@ -2688,12 +3305,48 @@
       "status": "machine-generated",
       "text": "Kulungiselelwa ukwakha ngokutsha, izibizo ze-API ze-Deep L zivuliwe"
     },
+    "translator.ui.preparingRebuildWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing rebuild with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingRebuildWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing rebuild with {useNormalizedEnglish} English language fallbacks"
+    },
     "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ukulungiselela ugcino nge-Deep L API calls zivuliwe"
+      "text": "Ukulungiselela ugcino nge-Deep L API izicelo zivuliwe"
+    },
+    "translator.ui.preparingSaveWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingSaveWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with {useNormalizedEnglish} English language fallbacks"
     },
     "translator.ui.previousLine.text": {
       "fallbackLocale": null,
@@ -2737,6 +3390,13 @@
       "status": "machine-generated",
       "text": "Ukuhambelana okutsha kweekhatalogu."
     },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukuhlaziya umbono wokuguqula..."
+    },
     "translator.ui.reject.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2767,6 +3427,13 @@
       "status": "machine-generated",
       "text": "Susa i{filePath} kuluhlu lokufudusa?"
     },
+    "translator.ui.replaceLineInSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tshintsha umgca kumthombo"
+    },
     "translator.ui.repositoryMaintenanceTool.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2793,7 +3460,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Lungisa usayizi woluhlu lwe-locale kunye nomhleli we-locale"
+      "text": "Lungisa usayizi woluhlu lwe-ummandla wolwimi kunye nomhleli we-ummandla wolwimi"
     },
     "translator.ui.resizeValueListAndEditor.text": {
       "fallbackLocale": null,
@@ -2810,6 +3477,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Lungisa ubungakanani bendawo yokusebenzela neziphumo zokusebenza"
+    },
+    "translator.ui.resolvingCatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukusombulula isitshixo sekhathalogu..."
     },
     "translator.ui.restore.text": {
       "fallbackLocale": null,
@@ -2845,6 +3519,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ekusekunene ukuya ekhohlo (rtl)"
+    },
+    "translator.ui.role.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Indima"
     },
     "translator.ui.roles.text": {
       "fallbackLocale": null,
@@ -2929,7 +3610,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Kukhangelwe i-{scannedFileExtractedCount}, i-candidate string(s) ngaphandle kokutshintsha i-inventory."
+      "text": "Kukhangelwe i-{scannedFileExtractedCount}, i-isindululo ixabiso lombhalo(s) ngaphandle kokutshintsha i-inventory."
     },
     "translator.ui.scanningSelectedFile.text": {
       "fallbackLocale": null,
@@ -2985,7 +3666,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Khetha ifayile yokubonisa yonke i-string eyamkelweyo yi-extract String Candidates."
+      "text": "Khetha ifayile yokubonisa yonke i-ixabiso lombhalo eyamkelweyo yi-Izindululo zombhalo ezicatshulweyo."
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
       "fallbackLocale": null,
@@ -3112,6 +3793,36 @@
       "status": "machine-generated",
       "text": "Kutsibwe i-{skipped}efayile okanye indlela yefolda."
     },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukutshintshwa komthombo akufumaneki."
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukutshintshwa komthombo kufuna isitshixo sekhathalogu."
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umbono woGuqulo loMthombo"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Uhlaziyo lomthombo lusalindile. {detail}. Ukuhambahamba kuyaqhubeka."
+    },
     "translator.ui.status.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -3156,12 +3867,49 @@
       "status": "machine-generated",
       "text": "Ingxelo ayikabikho okwangoku. Ukugcina kuya kuyidala."
     },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umgca wemvelaphi awuzange utshintshwe."
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Esi sitshixo sangoku sele sisebenzisa ikhathalogu.format kwaye asidingi tshintsho lomthombo."
+    },
     "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Le ndawo iyafuneka ngumakhi wolwimi."
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Esi sigqibo sangaphambili sigcinwe ukuze sihlalutywe; umgca womthombo wangoku sele sisebenzisa ikhathalogu.format."
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ukujonga kwangaphambili kokuguqula akufumaneki: {resultError}"
+    },
+    "translator.ui.transformed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Guquliwe"
     },
     "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
       "fallbackLocale": null,
@@ -3175,7 +3923,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ii-builds ezingajongwanga zisebenzisa isiNgesi esiqhelekileyo kwaye azibizi i-Deep L."
+      "text": "Iinkqubo zokudala ezingaqwalaselwanga zisebenzisa ulwimi lwesiNgesi oluqhelekileyo kwaye ungabizi i-DeepL"
     },
     "translator.ui.unsavedChanges.text": {
       "fallbackLocale": null,
@@ -3190,6 +3938,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Utshintsho olungagcinwanga luse-memori. Uqhubekele kwenye imbonakalo?"
+    },
+    "translator.ui.useNormalized.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized"
+    },
+    "translator.ui.useNormalizedEnglishForGeneratedFallbacksAndAutomated.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for generated fallbacks and automated translation input."
     },
     "translator.ui.useSuggestedKey.text": {
       "fallbackLocale": null,
@@ -3286,34 +4048,34 @@
       "text": "{fileCandidateCount} {fileCatalogedStringCount} ayikho kwikhathelogu ifunyenwe kwikhathelogu"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileCandidateCount",
         "scannedFileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFileCandidateCount} potential candidate(s), {scannedFileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "Umviwa (abaviwa) onokwenzeka {scannedFileCandidateCount}, {scannedFileCatalogedStringCount} ufunyenwe kwikhathalogu"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential candidate(s), {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "Umviwa (abaviwa) onokwenzeka {fileCandidateCount}, {fileCatalogedStringCount} ufunyenwe kwikhathalogu"
     },
     "translator.ui.valuePotentialValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential · {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "Umviwa (abaviwa) onokwenzeka {fileCandidateCount}, {fileCatalogedStringCount} ufunyenwe kwikhathalogu"
     },
     "translator.ui.valuePotentialValueInCatalogValue.text": {
       "fallbackLocale": null,
@@ -3335,6 +4097,24 @@
       "status": "machine-generated",
       "text": "{recordsCount} iirekhodi"
     },
+    "translator.ui.valueRemaining.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryRemainingCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryRemainingCount} eseleyo"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "statusElapsedMsToFixed"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{statusElapsedMsToFixed} imizuzwana idlulile"
+    },
     "translator.ui.valueSourceFileS.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -3344,6 +4124,16 @@
       "status": "machine-generated",
       "text": "{filesCount} Ifayile(s) yomthombo"
     },
+    "translator.ui.valueValueCompleted.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryCompletedCount",
+        "summaryTotalCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryCompletedCount}/{summaryTotalCount} igqityiwe"
+    },
     "translator.ui.view.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -3352,11 +4142,11 @@
       "text": "Jonga"
     },
     "translator.ui.viewCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View candidates"
+      "status": "machine-generated",
+      "text": "Jonga abaviwa"
     },
     "translator.ui.viewHeadingDataViewToolbar.text": {
       "fallbackLocale": null,

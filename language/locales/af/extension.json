@@ -3,39 +3,51 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "text": "My Defragmenter: Konfigureer vouers",
+      "text": "My Stoorbestuur: Konfigureer vouers",
       "status": "machine-generated"
     },
     "extension.command.openPreview.title": {
-      "text": "Open voorskou",
+      "text": "Maak voorskou oop",
       "status": "machine-generated"
     },
     "extension.command.openSettings.title": {
-      "text": "My Defragmenter: Open Instellings",
+      "text": "My Stoorbestuur: Maak Instellings oop",
       "status": "machine-generated"
     },
     "extension.message.noActiveDocument.warning": {
-      "text": "Nee, my Defragmenter-dokument is nie aktief nie.",
+      "text": "Nee, My Stoorbestuur-dokument is nie aktief nie.",
       "status": "machine-generated"
     },
     "extension.product.displayName": {
-      "text": "My Defragmenter-skrif (.MyDc / .MyD)",
+      "text": "My Stoorbestuur-skrif (.MyDc / .MyD)",
       "status": "machine-generated"
     },
     "extension.status.parser.fragment.text": {
-      "text": "My Defragmenter Fragment (.mydc)",
+      "text": "My Stoorbestuur Fragment (.mydc)",
       "status": "machine-generated"
     },
     "extension.status.parser.script.text": {
-      "text": "My Defragmenter-skrif (.myd)",
+      "text": "My Stoorbestuur-skrif (.myd)",
       "status": "machine-generated"
     },
     "extension.status.parser.unknown.text": {
-      "text": "My Defragmenter onbekende dokumenttipe",
+      "text": "My Stoorbestuur onbekende dokumenttipe",
       "status": "machine-generated"
     },
     "extension.window.channelName": {
-      "text": "My Defragmenter-sintaaks",
+      "text": "My Stoorbestuur-sintaaks",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "Volgende kandidaat: ${dir}, en ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "soekWerkruimte: Kan nie ${uri.toString()} lees nie: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "uitbreiding.js:aktiveer:instellings:inisialiseer Fout teruggekeer vanaf inisialisering: ${errResult.message}",
       "status": "machine-generated"
     }
   }

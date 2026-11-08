@@ -132,14 +132,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Шаблоны Glob, которые следует исключить из проверки «Мой дефрагментатор»"
+      "text": "Шаблоны сопоставления файлов, которые следует исключить из проверки «Мой дефрагментатор»"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Каталог для файлов журнала программы «My Defragmenter»."
+      "text": "Каталог для файлов журнала программы «Управление хранилищем»."
     },
     "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
       "fallbackLocale": null,
@@ -174,14 +174,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Каталог с пользовательскими данными программы «My Defragmenter»."
+      "text": "Каталог с пользовательскими данными программы «Управление хранилищем»."
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Уровень подробности расширения «My Defragmenter». Для ведения отладочного журнала необходимо включить параметр «mydfrg debug On»."
+      "text": "Уровень подробности расширения «Управление хранилищем». Для ведения отладочного журнала необходимо включить параметр «mydfrg.debugOn»."
     },
     "package.contributes.languages.aliases": {
       "fallbackLocale": null,
@@ -195,7 +195,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Подсветка синтаксиса для языка сценариев «My Defragmenter»"
+      "text": "Подсветка синтаксиса для языка сценариев «Управление хранилищем»"
     },
     "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
       "fallbackLocale": null,
@@ -216,7 +216,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Подсветка синтаксиса для языка сценариев «My Defragmenter»"
+      "text": "Подсветка синтаксиса для языка сценариев «Управление хранилищем»"
     },
     "package.metadata.publisher": {
       "fallbackLocale": null,

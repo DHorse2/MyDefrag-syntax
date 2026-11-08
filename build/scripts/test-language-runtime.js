@@ -3,6 +3,7 @@
 
 const assert = require('assert');
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const {
     createLanguageCatalog,
@@ -31,7 +32,7 @@ assert.strictEqual(
         depth: 2,
         path: 'file:///D:/Example/MyScript.MyD'
     }).text,
-    'BEGIN [depth:2] file:///D:/Example/MyScript.MyD'
+    'BEGIN [depth 2] file:///D:/Example/MyScript.MyD'
 );
 
 const missing = catalog.format('preview.annotation.includeBegin.text', {
@@ -71,17 +72,41 @@ assert.strictEqual(frenchCanadianEntry.text, frenchCanadianGenerated.text);
 assert.strictEqual(frenchCanadianEntry.locale, 'fr-CA');
 assert.strictEqual(frenchCanadianEntry.fallbackLocale, null);
 
-for (const locale of ['fa', 'ru']) {
-    const fallbackCatalog = createLanguageCatalog({
-        rootDir: ROOT,
-        locale,
-        components: ['extension']
-    });
-    const fallbackEntry = fallbackCatalog.format('extension.command.openPreview.title');
+const fallbackFixtureRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'mydefrag-language-runtime-'));
+try {
+    const fixtureCatalogRoot = path.join(fallbackFixtureRoot, 'build', 'language', 'catalogs');
+    fs.mkdirSync(path.join(fixtureCatalogRoot, 'en'), { recursive: true });
+    fs.mkdirSync(path.join(fixtureCatalogRoot, 'fa'), { recursive: true });
+    fs.writeFileSync(path.join(fixtureCatalogRoot, 'en', 'fixture.json'), JSON.stringify({
+        entries: {
+            'fixture.productName.text': {
+                text: 'MyDefrag',
+                placeholders: []
+            }
+        }
+    }));
+    fs.writeFileSync(path.join(fixtureCatalogRoot, 'fa', 'fixture.json'), JSON.stringify({
+        entries: {
+            'fixture.productName.text': {
+                text: 'My Storage Management',
+                placeholders: [],
+                fallbackLocale: 'en'
+            }
+        }
+    }));
 
-    assert.strictEqual(fallbackEntry.text, 'Open Preview');
-    assert.strictEqual(fallbackEntry.locale, locale);
+    const fallbackCatalog = createLanguageCatalog({
+        rootDir: fallbackFixtureRoot,
+        locale: 'fa',
+        components: ['fixture']
+    });
+    const fallbackEntry = fallbackCatalog.format('fixture.productName.text');
+
+    assert.strictEqual(fallbackEntry.text, 'My Storage Management');
+    assert.strictEqual(fallbackEntry.locale, 'fa');
     assert.strictEqual(fallbackEntry.fallbackLocale, 'en');
+} finally {
+    fs.rmSync(fallbackFixtureRoot, { recursive: true, force: true });
 }
 
 console.log('Language runtime tests passed');

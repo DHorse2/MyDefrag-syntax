@@ -22,6 +22,246 @@
       "status": "approved",
       "text": "MyDefrag: Open Settings"
     },
+    "extension.log.activate.console.log.extensionConfigConfig.info": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "config"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "EXTENSION: configuration: ${config}"
+    },
+    "extension.log.activate.console.log.inidataInidata.info": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "iniData"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "initialization information: ${iniData}"
+    },
+    "extension.log.activate.console.log.initDone.info": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "initialization done"
+    },
+    "extension.log.activate.console.log.initDoneCreatingAndRegisteringClient.info": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Init done, Creating and Registering Client"
+    },
+    "extension.log.activate.errResult.message.extensionJsActivateUnexpectedErrorIn.structural": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "extension.js:activate Unexpected error in Logging Channel and Status Bar initialization: ${errResult.message}"
+    },
+    "extension.log.activate.generatePreview.logger.dbg.previewProcessorDiagnosticsStderr.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "stderr"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preview processor diagnostics: ${stderr}"
+    },
+    "extension.log.activate.generatePreview.logger.info.finishedPreviewSummary.info": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Finished preview summary!"
+    },
+    "extension.log.activate.generatePreview.nextMessage.errorPreviewGenerationFailed.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "failureDetail"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "ERROR: Preview generation failed: ${failureDetail}"
+    },
+    "extension.log.activate.generatePreview.result.status.previewProcessorExitedWithStatusResult.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preview processor exited with status ${result.status}."
+    },
+    "extension.log.activate.logger.dbg.inlineCompletionProviderRegistered.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Inline completion provider registered"
+    },
+    "extension.log.activate.logger.info": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "MYDC Extension Initialized"
+    },
+    "extension.log.activate.provideDocumentLinks.displayLine.console.error.invalidFormatLineLineTextText.error": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "line",
+        "text"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Invalid format: line: ${line}, text: ${text}"
+    },
+    "extension.log.activate.provideDocumentLinks.displayLine.console.log.textLine.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "${text[line]}"
+    },
+    "extension.log.activate.provideDocumentLinks.displayMatch.range.start.line.invalidFormatRangeRangeStartLine.error": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "text"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Invalid format: range[${range.start.line}::${range.start.character}], text: ${text}"
+    },
+    "extension.log.activate.provideDocumentLinks.docLine.document.lineCount.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "i"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Internal trace: requested line ${i}, valid range is 0-${document.lineCount - 1}."
+    },
+    "extension.log.activate.provideDocumentLinks.docLine.formatTraceContext.error": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "message"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "${message} ${formatTraceContext(mergedContext)}"
+    },
+    "extension.log.activate.provideDocumentLinks.document.Filename.info": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Processing File: ${document.fileName}"
+    },
+    "extension.log.activate.provideDocumentLinks.info": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "provideDocumentLinks called for"
+    },
+    "extension.log.activate.provideDocumentLinks.logger.info.mydcExtensionLinksProviderForFilepath.info": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "MYDC EXTENSION LINKS Provider for ${filePath}, language: mydfrg"
+    },
+    "extension.log.activate.provideTextDocumentContent.logger.info.previewSourceSourcepath.info": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "sourcePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preview source: ${sourcePath}"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "dir",
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Next candidate: ${dir}, and ${filePath}"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "searchWorkspace: Unable to read ${uri.toString()}: ${errResult.message}"
+    },
+    "extension.message.activate.generatePreview.GenerationProducedNoContent.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "ERROR: Preview generation produced no content."
+    },
+    "extension.message.activate.generatePreview.nextmessage.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "nextMessage"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "${nextMessage}"
+    },
+    "extension.message.activate.logger.dbg.providersRegistered.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Providers registered"
+    },
+    "extension.message.activate.logger.dbg.startingServerChannelname.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "channelName"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Starting server ${channelName}"
+    },
+    "extension.message.activate.logger.dbg.subscribingToProviders.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Subscribing to providers"
+    },
+    "extension.message.activate.mydefragLanguageClient.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "MyDefrag Language Client"
+    },
+    "extension.message.activate.provideDocumentLinks.includeFileMatchIndexMatchIndex.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "lineText"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "INCLUDE file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${lineText}"
+    },
+    "extension.message.channelName.mydefragSyntax.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "MyDefrag Syntax"
+    },
     "extension.message.noActiveDocument.warning": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -29,12 +269,49 @@
       "status": "reviewed",
       "text": "No MyDefrag document is active."
     },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "extension.js:activate:settings:initialize Error returned from initialization: ${errResult.message}"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateUnexpectedErrorInitializing.structural": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "extension.js:activate Unexpected error initializing extension: ${errResult.message}"
+    },
+    "extension.path.activate.generatePreview.errResult.message.extensionJsActivateGeneratepreviewUnexpectedError.structural": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "extension.js:activate:generatePreview: Unexpected error Generating Preview of document: ${errResult.message}"
+    },
     "extension.product.displayName": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
       "status": "approved",
       "text": "MyDefrag Script (.MyDc / .MyD)"
+    },
+    "extension.setting.activate.logger.dbg.settingsSourceVscodiumDebugIsdebugon.value": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "isDebugOn"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Settings source=VSCodium, Debug=${isDebugOn}"
+    },
+    "extension.status.activate.logger.dbg.channelStatusBarDone.status": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Channel, Status Bar done"
     },
     "extension.status.parser.fragment.text": {
       "fallbackLocale": null,

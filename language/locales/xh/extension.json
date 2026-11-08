@@ -3,7 +3,7 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "text": "I-Defragmenter Yam: Lumisa iiFolda",
+      "text": "I-Ulawulo lwam lokugcina izinto Yam: Lumisa iiFolda",
       "status": "machine-generated"
     },
     "extension.command.openPreview.title": {
@@ -11,11 +11,11 @@
       "status": "machine-generated"
     },
     "extension.command.openSettings.title": {
-      "text": "I-Defragmenter yam: Vula iisetingi",
+      "text": "I-Ulawulo lwam lokugcina izinto yam: Vula iisetingi",
       "status": "machine-generated"
     },
     "extension.message.noActiveDocument.warning": {
-      "text": "Akukho siqwenga sam se-My Defragmenter esisebenzayo.",
+      "text": "Akukho siqwenga sam se-Ulawulo lwam lokugcina izinto esisebenzayo.",
       "status": "machine-generated"
     },
     "extension.product.displayName": {
@@ -23,19 +23,31 @@
       "status": "machine-generated"
     },
     "extension.status.parser.fragment.text": {
-      "text": "Isiqwenga sam seDefragmenter (.mydc)",
+      "text": "Isiqwenga sam seUlawulo lwam lokugcina izinto (.mydc)",
       "status": "machine-generated"
     },
     "extension.status.parser.script.text": {
-      "text": "Isikripthi sam seDefragmenter (.myd)",
+      "text": "Isikripthi sam seUlawulo lwam lokugcina izinto (.myd)",
       "status": "machine-generated"
     },
     "extension.status.parser.unknown.text": {
-      "text": "I-Defragmenter yam uhlobo lwamaxwebhu olungaziwayo",
+      "text": "I-Ulawulo lwam lokugcina izinto yam uhlobo lwamaxwebhu olungaziwayo",
       "status": "machine-generated"
     },
     "extension.window.channelName": {
-      "text": "Isinqusho sam seDefragmenter",
+      "text": "Isinqusho sam seUlawulo lwam lokugcina izinto",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "Umviwa olandelayo: ${dir}, kunye ne${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "Ukukhangela Indawo yokusebenzela: Ayikwazi ukufunda i-${uri.toString()}: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "ulwandiso.js:yenza:ukhetho:zilungiselele Impazamo ebuyisiweyo ekuqalisweni: ${errResult.message}",
       "status": "machine-generated"
     }
   }

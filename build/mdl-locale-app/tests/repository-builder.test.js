@@ -8,6 +8,28 @@ const test = require('node:test');
 const { LocaleCatalogRepository } = require('../repositories/locale-catalog-repository');
 const { createFixture, readJson } = require('./helpers');
 
+test('build command parser accepts translator and English-source choices independently', (t) => {
+    const rootDir = createFixture(t);
+    const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    assert.equal(builder.parseCommandLine(['build']).translationProvider, 'deepl');
+    assert.equal(builder.parseCommandLine(['build']).useNormalized, true);
+    assert.equal(
+        builder.parseCommandLine(['build', '--TranslationProvider=google']).translationProvider,
+        'google'
+    );
+    assert.equal(
+        builder.parseCommandLine(['build-component', 'fr', 'parser', '--TranslationProvider', 'none'])
+            .translationProvider,
+        'none'
+    );
+    assert.equal(builder.parseCommandLine(['build', '--UseCanonical']).useNormalized, false);
+    assert.equal(builder.parseCommandLine(['build', '--UseNormalized']).useNormalized, true);
+    assert.throws(
+        () => builder.parseCommandLine(['build', '--TranslationProvider=unknown']),
+        /Expected deepl, google, or none/u
+    );
+});
+
 test('atomic rollback removes a newly created component file', (t) => {
     const rootDir = fs.mkdtempSync(path.join(os.tmpdir(), 'mydefrag-locale-transaction-'));
     t.after(() => fs.rmSync(rootDir, { recursive: true, force: true }));
@@ -20,6 +42,34 @@ test('atomic rollback removes a newly created component file', (t) => {
     assert.equal(fs.existsSync(path.join(rootDir, relativePath)), true);
     transaction.rollback();
     assert.equal(fs.existsSync(path.join(rootDir, relativePath)), false);
+});
+
+test('fallback refresh changes generated English fallback text without replacing translations', (t) => {
+    const rootDir = createFixture(t);
+    const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    const existing = {
+        locale: 'fr',
+        component: 'extension',
+        entries: {
+            fallback: { text: 'MyDefrag', status: 'draft', fallbackLocale: 'en', placeholders: [] },
+            translated: { text: 'Traduit', status: 'reviewed', fallbackLocale: null, placeholders: [] }
+        }
+    };
+    const generated = {
+        locale: 'fr',
+        component: 'extension',
+        entries: {
+            fallback: { text: 'My Storage Management', status: 'draft', fallbackLocale: 'en', placeholders: [] },
+            translated: { text: 'Canonical replacement', status: 'draft', fallbackLocale: 'en', placeholders: [] }
+        }
+    };
+
+    const merged = builder.mergeMissingLocaleComponentEntries(existing, generated);
+
+    assert.deepEqual(merged.refreshedFallbackKeys, ['fallback']);
+    assert.equal(merged.catalog.entries.fallback.text, 'My Storage Management');
+    assert.equal(merged.catalog.entries.translated.text, 'Traduit');
+    assert.equal(merged.catalog.entries.translated.fallbackLocale, null);
 });
 
 test('component source participates in validation and targeted generation', (t) => {
@@ -49,12 +99,14 @@ test('component source participates in validation and targeted generation', (t) 
 test('targeted generation preserves and durably records an unrelated generated translation', (t) => {
     const rootDir = createFixture(t);
     const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
-    const state = builder.loadLanguageState(rootDir);
+    let state = builder.loadLanguageState(rootDir);
+    const canonical = state.catalog.entries.find((entry) => entry.component === 'extension');
+    const authoredPath = path.join(rootDir, 'language/locales/am/extension.json');
+    const authored = readJson(rootDir, 'language/locales/am/extension.json');
+    delete authored.entries[canonical.key];
+    fs.writeFileSync(authoredPath, `${JSON.stringify(authored, null, 2)}\n`, 'utf8');
+    state = builder.loadLanguageState(rootDir);
     const validation = builder.validateLanguageState(state, rootDir);
-    const canonical = state.catalog.entries.find((entry) => (
-        entry.component === 'extension'
-        && !(state.localeCatalogs.am?.entries || []).some((item) => item.key === entry.key)
-    ));
     const generatedPath = path.join(
         rootDir,
         'build/language/catalogs/am/extension.json'
@@ -114,12 +166,14 @@ test('targeted generation preserves and durably records an unrelated generated t
 test('targeted generation replaces a translation with fallback only for an exact approved key', (t) => {
     const rootDir = createFixture(t);
     const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
-    const state = builder.loadLanguageState(rootDir);
+    let state = builder.loadLanguageState(rootDir);
+    const canonical = state.catalog.entries.find((entry) => entry.component === 'extension');
+    const authoredPath = path.join(rootDir, 'language/locales/yo/extension.json');
+    const authored = readJson(rootDir, 'language/locales/yo/extension.json');
+    delete authored.entries[canonical.key];
+    fs.writeFileSync(authoredPath, `${JSON.stringify(authored, null, 2)}\n`, 'utf8');
+    state = builder.loadLanguageState(rootDir);
     const validation = builder.validateLanguageState(state, rootDir);
-    const canonical = state.catalog.entries.find((entry) => (
-        entry.component === 'extension'
-        && !(state.localeCatalogs.yo?.entries || []).some((item) => item.key === entry.key)
-    ));
     const generatedPath = path.join(
         rootDir,
         'build/language/catalogs/yo/extension.json'
@@ -151,10 +205,8 @@ test('targeted generation replaces a translation with fallback only for an exact
     const generated = readJson(rootDir, 'build/language/catalogs/yo/extension.json');
     assert.equal(generated.entries[canonical.key].text, canonical.text);
     assert.equal(generated.entries[canonical.key].fallbackLocale, 'en');
-    assert.equal(
-        fs.existsSync(path.join(rootDir, 'language/locales/yo/extension.json')),
-        false
-    );
+    const authoritative = readJson(rootDir, 'language/locales/yo/extension.json');
+    assert.equal(Object.prototype.hasOwnProperty.call(authoritative.entries, canonical.key), false);
 });
 
 test('component source rejects keys owned by another component', (t) => {
@@ -230,14 +282,20 @@ test('default component generation fills only missing values with API translatio
     });
     assert.deepEqual(buildReport.translation, {
         mode: 'deepl',
+        provider: 'DeepL',
+        englishSource: 'normalized',
+        apiCalls: 1,
+        sourceCharactersPassed: translation.usage.charactersPassed,
         deepLApiCalls: 1,
-        deepLCharactersPassed: translation.usage.charactersPassed
+        deepLCharactersPassed: translation.usage.charactersPassed,
+        googleApiCalls: 0,
+        googleCharactersPassed: 0
     });
     assert.ok(requests[0].items.length > 0);
     assert.ok(requests[0].items.some((item) => (
-        item.text === '$(check) server JavaScript connection.onInitialize: SERVER loading configuration My Defragmenter (.MyDc / .MyD) https://example.com/a-b.js ${uri.toString()}'
+        item.text === '$(check) server JavaScript connection.onInitialize: SERVER loading configuration My Storage Management (.MyDc / .MyD) https://example.com/a-b.js ${uri.toString()}'
     )));
-    assert.ok(requests[0].items.some((item) => item.text.includes('My Defragmenter')));
+    assert.ok(requests[0].items.some((item) => item.text.includes('My Storage Management')));
     assert.ok(requests[0].items.every((item) => !item.text.includes('MyDefrag')));
     assert.equal(
         generated.entries['extension.command.openPreview.title'].text,
@@ -255,9 +313,133 @@ test('default component generation fills only missing values with API translatio
     ].text, generatedEntry.text);
 });
 
+test('Google retries multiple normalized choices and records the accepted combination', async () => {
+    const builder = require('../../scripts/build-language.js');
+    const requests = [];
+    const state = {
+        catalog: {
+            entries: [{
+                key: 'test.reviewCandidates.title',
+                component: 'test',
+                text: 'Candidate Locales',
+                placeholders: []
+            }]
+        },
+        locales: { locales: [{ id: 'en' }, { id: 'fr' }] },
+        localeCatalogs: { fr: { entries: [] } },
+        normalizedWords: [
+            { input: 'candidate', output: 'proposal', alternatives: ['review item'] },
+            { input: 'locales', output: 'language regions', alternatives: ['language settings'] }
+        ]
+    };
+    const translator = {
+        info: () => ({ provider: 'Google Translate', configured: true }),
+        translateTexts: async (request) => {
+            requests.push(request);
+            return {
+                apiCalls: 1,
+                results: request.items.map((item) => ({
+                    ok: true,
+                    provider: 'Google Translate',
+                    text: item.text === 'review item language settings'
+                        ? 'élément à examiner paramètres de langue'
+                        : item.text
+                }))
+            };
+        }
+    };
+
+    const translation = await builder.createBuildTranslationSuggestions(state, {
+        translator,
+        localeIds: ['fr'],
+        componentId: 'test'
+    });
+
+    assert.equal(requests.length, 2);
+    assert.equal(requests[0].items[0].text, 'proposal language regions');
+    assert.equal(requests[1].items[0].text, 'review item language settings');
+    assert.equal(
+        translation.suggestions.fr['test.reviewCandidates.title'].text,
+        'élément à examiner paramètres de langue'
+    );
+    assert.deepEqual(
+        translation.assignments.fr['test.reviewCandidates.title'],
+        [
+            { input: 'candidate', output: 'review item', choiceIndex: 1 },
+            { input: 'locales', output: 'language settings', choiceIndex: 1 }
+        ]
+    );
+    assert.deepEqual(translation.usage, {
+        apiCalls: 2,
+        charactersPassed: Array.from('proposal language regions').length
+            + Array.from('review item language settings').length
+    });
+    assert.deepEqual(translation.warnings, []);
+});
+
+test('Google can advance one retained word after another word exhausts its alternatives', async () => {
+    const builder = require('../../scripts/build-language.js');
+    const requests = [];
+    const state = {
+        catalog: {
+            entries: [{
+                key: 'test.reviewCandidates.title',
+                component: 'test',
+                text: 'Candidate Locales',
+                placeholders: []
+            }]
+        },
+        locales: { locales: [{ id: 'en' }, { id: 'fr' }] },
+        localeCatalogs: { fr: { entries: [] } },
+        normalizedWords: [
+            { input: 'candidate', output: 'proposal', alternatives: ['review item'] },
+            {
+                input: 'locales',
+                output: 'language regions',
+                alternatives: ['language settings', 'regional settings']
+            }
+        ]
+    };
+    const translator = {
+        info: () => ({ provider: 'Google Translate', configured: true }),
+        translateTexts: async (request) => {
+            requests.push(request.items[0].text);
+            return {
+                results: [{
+                    ok: true,
+                    provider: 'Google Translate',
+                    text: request.items[0].text === 'review item regional settings'
+                        ? 'élément à examiner paramètres régionaux'
+                        : request.items[0].text
+                }]
+            };
+        }
+    };
+
+    const translation = await builder.createBuildTranslationSuggestions(state, {
+        translator,
+        localeIds: ['fr'],
+        componentId: 'test'
+    });
+
+    assert.deepEqual(requests, [
+        'proposal language regions',
+        'review item language settings',
+        'review item regional settings'
+    ]);
+    assert.deepEqual(translation.assignments.fr['test.reviewCandidates.title'], [
+        { input: 'candidate', output: 'review item', choiceIndex: 1 },
+        { input: 'locales', output: 'regional settings', choiceIndex: 2 }
+    ]);
+});
+
 test('API translation failure warns, falls back, and does not fail generation', async (t) => {
     const rootDir = createFixture(t);
     const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    const authoredPath = path.join(rootDir, 'language/locales/am/parser.json');
+    const authored = readJson(rootDir, 'language/locales/am/parser.json');
+    delete authored.entries['parser.diagnostic.unexpectedToken.message'];
+    fs.writeFileSync(authoredPath, `${JSON.stringify(authored, null, 2)}\n`, 'utf8');
     const state = builder.loadLanguageState(rootDir);
     const translator = {
         info: () => ({ provider: 'DeepL', configured: true }),
@@ -290,7 +472,7 @@ test('API translation failure warns, falls back, and does not fail generation', 
     assert.ok(translation.usage.charactersPassed > 0);
 });
 
-test('normalized command build bypasses DeepL and reports zero API usage', async (t) => {
+test('normalized fallback build bypasses DeepL only when the translator is disabled', async (t) => {
     const rootDir = createFixture(t);
     const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
     let apiCalls = 0;
@@ -304,7 +486,7 @@ test('normalized command build bypasses DeepL and reports zero API usage', async
     };
 
     await builder.main(rootDir, {
-        argv: ['build', '--UseNormalized'],
+        argv: ['build', '--TranslationProvider=none', '--UseNormalized'],
         translator,
         progress: (message) => progress.push(message)
     });
@@ -313,15 +495,110 @@ test('normalized command build bypasses DeepL and reports zero API usage', async
     assert.equal(apiCalls, 0);
     assert.deepEqual(buildReport.translation, {
         mode: 'normalized',
+        provider: 'None',
+        englishSource: 'normalized',
+        apiCalls: 0,
+        sourceCharactersPassed: 0,
         deepLApiCalls: 0,
-        deepLCharactersPassed: 0
+        deepLCharactersPassed: 0,
+        googleApiCalls: 0,
+        googleCharactersPassed: 0
     });
     assert.ok(progress.some((message) => message.includes('generating catalogs, maps, and reports')));
+});
+
+test('canonical fallback build bypasses every translator service when the translator is disabled', async (t) => {
+    const rootDir = createFixture(t);
+    const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    let apiCalls = 0;
+    const translator = {
+        info: () => ({ provider: 'DeepL', configured: true }),
+        translateTexts: async () => {
+            apiCalls += 1;
+            throw new Error('No translator may be called in none mode.');
+        }
+    };
+
+    await builder.main(rootDir, {
+        argv: ['build', '--TranslationProvider=none', '--UseCanonical'],
+        translator
+    });
+
+    const buildReport = readJson(rootDir, 'build/language/reports/language-build-report.json');
+    assert.equal(apiCalls, 0);
+    assert.equal(buildReport.translation.mode, 'none');
+    assert.equal(buildReport.translation.provider, 'None');
+    assert.equal(buildReport.translation.englishSource, 'canonical');
+    assert.equal(buildReport.translation.apiCalls, 0);
+    assert.equal(buildReport.translation.deepLApiCalls, 0);
+    assert.equal(buildReport.translation.googleApiCalls, 0);
+});
+
+test('Google build mode selects only the Google translator service', async (t) => {
+    const rootDir = createFixture(t);
+    const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    const normalizedWordsPath = path.join(rootDir, 'language/canonical/normalized-words.json');
+    const normalizedWords = readJson(rootDir, 'language/canonical/normalized-words.json');
+    normalizedWords.push({
+        input: 'token',
+        output: 'text unit',
+        alternatives: ['text element']
+    });
+    fs.writeFileSync(normalizedWordsPath, `${JSON.stringify(normalizedWords, null, 2)}\n`, 'utf8');
+    const authoredPath = path.join(rootDir, 'language/locales/am/parser.json');
+    const authored = readJson(rootDir, 'language/locales/am/parser.json');
+    delete authored.entries['parser.diagnostic.unexpectedToken.message'];
+    fs.writeFileSync(authoredPath, `${JSON.stringify(authored, null, 2)}\n`, 'utf8');
+    let deepLCalls = 0;
+    let googleCalls = 0;
+    const translators = {
+        deepl: {
+            info: () => ({ provider: 'DeepL', configured: true }),
+            translateTexts: async () => { deepLCalls += 1; return { results: [] }; }
+        },
+        google: {
+            info: () => ({ provider: 'Google Translate', configured: true }),
+            translateTexts: async (request) => {
+                googleCalls += 1;
+                return {
+                    apiCalls: 1,
+                    results: request.items.map((item) => ({
+                        ok: true,
+                        provider: 'Google Translate',
+                        text: `Google ${item.text}`
+                    }))
+                };
+            }
+        }
+    };
+
+    await builder.main(rootDir, {
+        argv: ['build', '--TranslationProvider=google'],
+        translators
+    });
+
+    const buildReport = readJson(rootDir, 'build/language/reports/language-build-report.json');
+    assert.equal(deepLCalls, 0);
+    assert.ok(googleCalls > 0);
+    assert.equal(buildReport.translation.mode, 'google');
+    assert.equal(buildReport.translation.provider, 'Google Translate');
+    assert.equal(buildReport.translation.englishSource, 'normalized');
+    assert.equal(buildReport.translation.googleApiCalls, googleCalls);
+    assert.equal(buildReport.translation.deepLApiCalls, 0);
+    assert.ok(Object.values(
+        buildReport.translation.normalizedSubstitutionAssignments || {}
+    ).some((localeAssignments) => Object.values(localeAssignments).some((selections) => (
+        Array.isArray(selections) && selections.length > 0
+    ))));
 });
 
 test('placeholder-invalid API output warns and is excluded from generated suggestions', async (t) => {
     const rootDir = createFixture(t);
     const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    const authoredPath = path.join(rootDir, 'language/locales/am/parser.json');
+    const authored = readJson(rootDir, 'language/locales/am/parser.json');
+    delete authored.entries['parser.diagnostic.unexpectedToken.message'];
+    fs.writeFileSync(authoredPath, `${JSON.stringify(authored, null, 2)}\n`, 'utf8');
     const state = builder.loadLanguageState(rootDir);
     const translator = {
         info: () => ({ provider: 'DeepL', configured: true }),

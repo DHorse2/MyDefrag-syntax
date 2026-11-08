@@ -9,6 +9,21 @@ const PROJECT_ROOT = path.resolve(__dirname, '..', '..', '..');
 function createFixture(test) {
     const rootDir = fs.mkdtempSync(path.join(os.tmpdir(), 'mydefrag-locale-app-'));
     fs.cpSync(path.join(PROJECT_ROOT, 'language'), path.join(rootDir, 'language'), { recursive: true });
+    fs.writeFileSync(
+        path.join(rootDir, 'language', 'canonical', 'normalized-words.json'),
+        `${JSON.stringify([
+            { input: 'MyDefrag', output: 'My Storage Management' },
+            { input: 'js', output: 'JavaScript' },
+            { input: 'char', output: 'character' },
+            { input: 'pos', output: 'position' },
+            { input: 'desc', output: 'description' },
+            { input: 'prev', output: 'previous' },
+            { input: 'Eof', output: 'end of file' },
+            { input: 'dbg', output: 'debug' },
+            { input: 'kw', output: 'keyword' }
+        ], null, 2)}\n`,
+        'utf8'
+    );
     const scriptsDir = path.join(rootDir, 'build', 'scripts');
     fs.mkdirSync(scriptsDir, { recursive: true });
     fs.copyFileSync(

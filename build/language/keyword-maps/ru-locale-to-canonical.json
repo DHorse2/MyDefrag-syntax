@@ -1,82 +1,82 @@
 {
-  "Defragment": {
-    "canonical": "Defragment",
-    "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
-  "FastFill": {
+  "Быстрое заполнение": {
     "canonical": "FastFill",
     "id": "fileAction.fastFill"
   },
-  "FileActions": {
-    "canonical": "FileActions",
-    "id": "structure.fileActions"
+  "Выбор громкости": {
+    "canonical": "VolumeSelect",
+    "id": "structure.volumeSelect"
   },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
+  "Выбор файла": {
     "canonical": "FileSelect",
     "id": "structure.fileSelect"
   },
-  "FragmentCount": {
-    "canonical": "FragmentCount",
-    "id": "volumeCondition.fragmentCount"
-  },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
-  },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
-  },
-  "SetColor": {
-    "canonical": "SetColor",
-    "id": "setting.setColor"
-  },
-  "SetVariable": {
-    "canonical": "SetVariable",
-    "id": "setting.setVariable"
-  },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
-  },
-  "SortByName": {
-    "canonical": "SortByName",
-    "id": "fileAction.sortByName"
-  },
-  "VolumeActions": {
+  "Действия с громкостью": {
     "canonical": "VolumeActions",
     "id": "structure.volumeActions"
   },
-  "VolumeEnd": {
+  "Действия с файлом": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
+  },
+  "Дефрагментация": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
+  },
+  "Имя": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "Имя каталога": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "Имя файла": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "Исключить тома": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "Исключить файлы": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
+  },
+  "Конец громкости": {
     "canonical": "VolumeEnd",
     "id": "structure.volumeEnd"
   },
-  "VolumeSelect": {
-    "canonical": "VolumeSelect",
-    "id": "structure.volumeSelect"
+  "Конец файла": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "Лаборатория эль": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "Полный Путь": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "Размер": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
+  },
+  "Сортировать по имени": {
+    "canonical": "SortByName",
+    "id": "fileAction.sortByName"
+  },
+  "Установить переменную": {
+    "canonical": "SetVariable",
+    "id": "setting.setVariable"
+  },
+  "Установить цвет": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
+  },
+  "ФрагментКаунт": {
+    "canonical": "FragmentCount",
+    "id": "volumeCondition.fragmentCount"
   }
 }

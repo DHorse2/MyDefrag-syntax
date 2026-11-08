@@ -15,11 +15,11 @@
       "status": "machine-generated"
     },
     "extension.message.noActiveDocument.warning": {
-      "text": "خیر، سند My Defragmenter فعال نیست.",
+      "text": "خیر، سند مدیریت حافظه من فعال نیست.",
       "status": "machine-generated"
     },
     "extension.product.displayName": {
-      "text": "اسکریپت Defragmenter من (.MyDc / .MyD)",
+      "text": "اسکریپت مدیریت حافظه من (.MyDc / .MyD)",
       "status": "machine-generated"
     },
     "extension.status.parser.fragment.text": {
@@ -27,15 +27,27 @@
       "status": "machine-generated"
     },
     "extension.status.parser.script.text": {
-      "text": "اسکریپت Defragmenter من (.myd)",
+      "text": "اسکریپت مدیریت حافظه من (.myd)",
       "status": "machine-generated"
     },
     "extension.status.parser.unknown.text": {
-      "text": "Defragmenter من، نوع سند ناشناخته",
+      "text": "مدیریت حافظه من، نوع سند ناشناخته",
       "status": "machine-generated"
     },
     "extension.window.channelName": {
       "text": "سینتکس دی‌فرگمنت‌کنندهٔ من",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "نامزد بعدی: ${dir} و ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "searchفضای کاری: قادر به خواندن ${uri.toString()} نیست: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "extension.js:فعال کردن:گزینه ها:آماده کنید خطا از مقداردهی اولیه برگشت داده شد: ${errResult.message}",
       "status": "machine-generated"
     }
   }

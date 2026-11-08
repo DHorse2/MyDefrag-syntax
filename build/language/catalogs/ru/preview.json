@@ -9,7 +9,7 @@
       ],
       "sourceStatus": "reviewed",
       "status": "machine-generated",
-      "text": "BEGIN [depth {depth}] {path}"
+      "text": "начать [уровень вложенности {depth}] {path}"
     },
     "preview.annotation.includeEnd.text": {
       "fallbackLocale": null,
@@ -19,7 +19,7 @@
       ],
       "sourceStatus": "reviewed",
       "status": "machine-generated",
-      "text": "КОНЕЦ [depth {depth}] {path}"
+      "text": "КОНЕЦ [уровень вложенности {depth}] {path}"
     },
     "preview.report.includeFiles.heading": {
       "fallbackLocale": null,

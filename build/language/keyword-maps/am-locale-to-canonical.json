@@ -1,82 +1,82 @@
 {
-  "Defragment": {
-    "canonical": "Defragment",
-    "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
-  "FastFill": {
-    "canonical": "FastFill",
-    "id": "fileAction.fastFill"
-  },
-  "FileActions": {
-    "canonical": "FileActions",
-    "id": "structure.fileActions"
-  },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
-    "canonical": "FileSelect",
-    "id": "structure.fileSelect"
-  },
   "FragmentCount": {
     "canonical": "FragmentCount",
     "id": "volumeCondition.fragmentCount"
   },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
-  },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
-  },
-  "SetColor": {
-    "canonical": "SetColor",
-    "id": "setting.setColor"
-  },
-  "SetVariable": {
+  "Setvariable": {
     "canonical": "SetVariable",
     "id": "setting.setVariable"
   },
-  "Size": {
+  "መለያ": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "መጠን": {
     "canonical": "Size",
     "id": "volumeCondition.size"
   },
-  "SortByName": {
+  "ሙሉ መንገድ": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "ማበላሸት": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
+  },
+  "ስም": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "ቀለም አዘጋጅ": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
+  },
+  "በስም ደርድር": {
     "canonical": "SortByName",
     "id": "fileAction.sortByName"
   },
-  "VolumeActions": {
-    "canonical": "VolumeActions",
-    "id": "structure.volumeActions"
+  "የማውጫ ስም": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
   },
-  "VolumeEnd": {
+  "የድምጽ መጨረሻ": {
     "canonical": "VolumeEnd",
     "id": "structure.volumeEnd"
   },
-  "VolumeSelect": {
+  "የድምጽ ምርጫ": {
     "canonical": "VolumeSelect",
     "id": "structure.volumeSelect"
+  },
+  "የድምጽ እርምጃዎች": {
+    "canonical": "VolumeActions",
+    "id": "structure.volumeActions"
+  },
+  "የድምጽ ዝርዝሮችን አያካትቱ": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "የፋይል መጨረሻ": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "የፋይል ምርጫ": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
+  },
+  "የፋይል ስም": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "የፋይል እርምጃዎች": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
+  },
+  "ፈጣን ሙላ": {
+    "canonical": "FastFill",
+    "id": "fileAction.fastFill"
+  },
+  "ፋይሎችን አያካትቱ": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
   }
 }

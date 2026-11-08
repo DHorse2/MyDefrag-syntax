@@ -38,8 +38,8 @@ contextBridge.exposeInMainWorld('localeMaintenance', Object.freeze({
     validate: () => ipcRenderer.invoke(CHANNELS.validate),
     previewSave: () => ipcRenderer.invoke(CHANNELS.previewSave),
     confirmSave: (files) => ipcRenderer.invoke(CHANNELS.confirmSave, files),
-    save: () => ipcRenderer.invoke(CHANNELS.save),
-    rebuild: () => ipcRenderer.invoke(CHANNELS.rebuild),
+    save: (request) => ipcRenderer.invoke(CHANNELS.save, request),
+    rebuild: (request) => ipcRenderer.invoke(CHANNELS.rebuild, request),
     cancelBuild: () => ipcRenderer.invoke(CHANNELS.cancelBuild),
     onProgress: (listener) => {
         const handler = (_event, progress) => listener(progress);

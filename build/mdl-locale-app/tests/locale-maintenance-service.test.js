@@ -5,15 +5,46 @@ const { spawn } = require('node:child_process');
 const fs = require('fs');
 const path = require('path');
 const test = require('node:test');
-const { BuildIntegration } = require('../../mdl-language-app/services/build-integration');
-const { LocaleMaintenanceService } = require('../services/locale-maintenance-service');
+const { BuildIntegration } = require('../../shared/build-integration');
+const {
+    LocaleMaintenanceService,
+    buildOptions
+} = require('../services/locale-maintenance-service');
 const { StubBuildIntegration, createFixture, readJson } = require('./helpers');
 
 class StubTranslator {
-    constructor(result) { this.result = result; this.requests = []; }
-    info() { return { provider: 'DeepL', configured: true, endpoint: 'https://deepl.test', credentialSource: 'DEEPL_API_KEY' }; }
+    constructor(result, provider = 'DeepL') { this.result = result; this.provider = provider; this.requests = []; }
+    info() {
+        return {
+            provider: this.provider,
+            configured: true,
+            endpoint: 'https://translator.test',
+            credentialSource: `${this.provider.toUpperCase().replaceAll(' ', '_')}_API_KEY`
+        };
+    }
     async translateText(request) { this.requests.push(request); return this.result; }
 }
+
+test('build options select translator and English source independently', () => {
+    assert.deepEqual(buildOptions({}, 'fr', 'parser'), {
+        arguments: ['build-component', 'fr', 'parser', '--TranslationProvider=none', '--UseNormalized'],
+        mode: 'normalized',
+        translationProvider: 'none',
+        englishSource: 'normalized'
+    });
+    assert.deepEqual(buildOptions({ translationProvider: 'deepl' }, 'fr', 'parser'), {
+        arguments: ['build-component', 'fr', 'parser', '--TranslationProvider=deepl', '--UseNormalized'],
+        mode: 'deepl',
+        translationProvider: 'deepl',
+        englishSource: 'normalized'
+    });
+    assert.deepEqual(buildOptions({ translationProvider: 'google', useNormalized: false }, 'fr', 'parser'), {
+        arguments: ['build-component', 'fr', 'parser', '--TranslationProvider=google', '--UseCanonical'],
+        mode: 'google',
+        translationProvider: 'google',
+        englishSource: 'canonical'
+    });
+});
 
 test('loads locale and component selectors from authoritative registries', (t) => {
     const rootDir = createFixture(t);
@@ -44,14 +75,45 @@ test('loads the selected component and saves a schema-valid translation', async 
     assert.equal(applied.state.dirty, true);
     const saved = await service.save();
     assert.equal(saved.ok, true);
-    assert.deepEqual(integration.runArguments, [['build-component', 'zh-Hans', 'parser']]);
+    assert.deepEqual(integration.runArguments, [[
+        'build-component', 'zh-Hans', 'parser', '--TranslationProvider=none', '--UseNormalized'
+    ]]);
     assert.equal(readJson(rootDir, 'language/locales/zh-Hans/parser.json').entries[
         'parser.diagnostic.unexpectedToken.message'
     ].text, "意外的标记“{token}”");
 });
 
+test('save and rebuild pass the selected translator API to the targeted builder', async (t) => {
+    const rootDir = createFixture(t);
+    const integration = new StubBuildIntegration();
+    const service = new LocaleMaintenanceService(rootDir, { buildIntegration: integration });
+    service.load();
+    service.select({ localeId: 'zh-Hans', componentId: 'parser' });
+    service.applyTranslation({
+        key: 'parser.diagnostic.unexpectedToken.message',
+        text: '提供商 {token}',
+        status: 'draft'
+    });
+
+    const saved = await service.save({ translationProvider: 'google' });
+    const rebuilt = await service.rebuild({ translationProvider: 'deepl' });
+
+    assert.equal(saved.buildMode, 'google');
+    assert.equal(rebuilt.buildMode, 'deepl');
+    assert.deepEqual(integration.runArguments, [[
+        'build-component', 'zh-Hans', 'parser', '--TranslationProvider=google', '--UseNormalized'
+    ], [
+        'build-component', 'zh-Hans', 'parser', '--TranslationProvider=deepl', '--UseNormalized'
+    ]]);
+});
+
 test('loads generated API translations without hiding them or dirtying authored data', async (t) => {
     const rootDir = createFixture(t);
+    const authoredPath = path.join(rootDir, 'language/locales/am/extension.json');
+    const authored = readJson(rootDir, 'language/locales/am/extension.json');
+    delete authored.entries['extension.command.openSettings.title'];
+    delete authored.entries['extension.product.displayName'];
+    fs.writeFileSync(authoredPath, `${JSON.stringify(authored, null, 2)}\n`, 'utf8');
     const generatedDir = path.join(rootDir, 'build', 'language', 'catalogs', 'am');
     fs.mkdirSync(generatedDir, { recursive: true });
     fs.writeFileSync(path.join(generatedDir, 'extension.json'), `${JSON.stringify({
@@ -95,7 +157,12 @@ test('loads generated API translations without hiding them or dirtying authored 
     assert.equal(fallback.translationText, '');
     assert.equal(fallback.translated, false);
     assert.equal(fallback.translationOrigin, 'fallback');
-    assert.equal(selected.state.completeness.translated, 1);
+    assert.ok(selected.state.completeness.translated >= 1);
+    assert.ok(selected.state.completeness.fallback >= 1);
+    assert.equal(
+        selected.state.completeness.translated + selected.state.completeness.fallback,
+        selected.state.completeness.total
+    );
     assert.deepEqual(service.previewSave().authoritativeFiles, []);
     assert.equal(service.removeTranslation(generated.key).ok, false);
 
@@ -262,7 +329,9 @@ test('save awaits an asynchronous component build before committing', async (t) 
     const result = await save;
     assert.equal(result.ok, true);
     assert.equal(completed, true);
-    assert.deepEqual(integration.runArguments, [['build-component', 'zh-Hans', 'parser']]);
+    assert.deepEqual(integration.runArguments, [[
+        'build-component', 'zh-Hans', 'parser', '--TranslationProvider=none', '--UseNormalized'
+    ]]);
 });
 
 test('save completes through the real component subprocess and streams progress', async (t) => {
@@ -299,9 +368,11 @@ test('saving one authored value preserves and persists an unrelated generated tr
     const canonicalEntries = initialState.catalog.entries.filter((entry) => entry.component === 'extension');
     const generatedOnly = canonicalEntries.find((entry) => (
         entry.key !== 'extension.command.openPreview.title'
-        &&
-        !(initialState.localeCatalogs.am?.entries || []).some((item) => item.key === entry.key)
     ));
+    const authoredPath = path.join(rootDir, 'language/locales/am/extension.json');
+    const authored = readJson(rootDir, 'language/locales/am/extension.json');
+    delete authored.entries[generatedOnly.key];
+    fs.writeFileSync(authoredPath, `${JSON.stringify(authored, null, 2)}\n`, 'utf8');
     const generatedDir = path.join(rootDir, 'build/language/catalogs/am');
     fs.mkdirSync(generatedDir, { recursive: true });
     fs.writeFileSync(path.join(generatedDir, 'extension.json'), `${JSON.stringify({
@@ -409,7 +480,7 @@ test('English canonical text is read-only in the locale application', (t) => {
     assert.equal(service.snapshot().readOnly, true);
 });
 
-test('API translation uses Current locale value without dirtying the draft', async (t) => {
+test('API translation uses normalized English by default without dirtying the draft', async (t) => {
     const rootDir = createFixture(t);
     const translator = new StubTranslator({
         ok: true,
@@ -417,21 +488,24 @@ test('API translation uses Current locale value without dirtying the draft', asy
         text: 'Ouvrir l’aperçu',
         targetLanguage: 'FR-CA'
     });
-    const service = new LocaleMaintenanceService(rootDir, { translator });
+    const service = new LocaleMaintenanceService(rootDir, { translator, environment: {} });
     service.load();
     service.select({ localeId: 'fr-CA', componentId: 'extension' });
-    const before = service.snapshot().rows.find((row) => row.key === 'extension.command.openPreview.title');
+    const before = service.snapshot().rows.find((row) => row.key === 'extension.product.displayName');
 
-    assert.equal(before.normalizedText, 'Open Preview');
+    assert.match(before.normalizedText, /^My Storage Management /);
+    assert.notEqual(before.normalizedText, before.sourceText);
     const suggested = await service.requestApiTranslation({
         key: before.key,
-        text: before.normalizedText
+        translationProvider: 'deepl'
     });
     const suggestedRow = suggested.state.rows.find((row) => row.key === before.key);
     assert.equal(suggested.ok, true);
     assert.equal(suggested.sourceText, before.normalizedText);
+    assert.equal(suggested.englishSource, 'normalized');
     assert.equal(suggested.translationText, 'Ouvrir l’aperçu');
-    assert.deepEqual(suggested.state.apiTranslation, { configured: true });
+    assert.equal(suggested.state.apiTranslation.providers.deepl.configured, true);
+    assert.equal(suggested.state.apiTranslation.providers.google.configured, false);
     assert.equal(suggested.state.dirty, false);
     assert.equal(suggestedRow.translationText, before.translationText);
     assert.equal(suggestedRow.apiTranslationText, 'Ouvrir l’aperçu');
@@ -448,17 +522,49 @@ test('API translation uses Current locale value without dirtying the draft', asy
     assert.equal(replacedRow.translationStatus, 'machine-generated');
 });
 
+test('API translation uses only the explicitly selected provider', async (t) => {
+    const rootDir = createFixture(t);
+    const deepL = new StubTranslator({ ok: true, provider: 'DeepL', text: 'DeepL text' });
+    const google = new StubTranslator({
+        ok: true,
+        provider: 'Google Translate',
+        text: 'Texte Google',
+        targetLanguage: 'fr-CA'
+    }, 'Google Translate');
+    const service = new LocaleMaintenanceService(rootDir, {
+        translators: { deepl: deepL, google }
+    });
+    service.load();
+    service.select({ localeId: 'fr-CA', componentId: 'extension' });
+    const row = service.snapshot().rows.find((item) => item.key === 'extension.command.openPreview.title');
+
+    const result = await service.requestApiTranslation({
+        key: row.key,
+        translationProvider: 'google'
+    });
+
+    assert.equal(result.ok, true);
+    assert.equal(result.provider, 'Google Translate');
+    assert.equal(result.translationText, 'Texte Google');
+    assert.equal(deepL.requests.length, 0);
+    assert.equal(google.requests.length, 1);
+    assert.equal((await service.requestApiTranslation({
+        key: row.key,
+        translationProvider: 'none'
+    })).ok, false);
+});
+
 test('API failure leaves the locale draft unchanged', async (t) => {
     const rootDir = createFixture(t);
     const translator = new StubTranslator({ ok: false, error: 'fixture API failure' });
-    const service = new LocaleMaintenanceService(rootDir, { translator });
+    const service = new LocaleMaintenanceService(rootDir, { translator, environment: {} });
     service.load();
     service.select({ localeId: 'fr-CA', componentId: 'parser' });
     const before = service.snapshot();
     const row = before.rows.find((item) => item.key === 'parser.diagnostic.unexpectedToken.message');
     const result = await service.requestApiTranslation({
         key: row.key,
-        text: row.sourceText
+        translationProvider: 'deepl'
     });
     assert.equal(result.ok, false);
     assert.equal(result.error, 'fixture API failure');
@@ -474,32 +580,37 @@ test('replacement revalidates placeholders before changing the draft', async (t)
         text: 'Jeton inattendu sans espace réservé',
         targetLanguage: 'FR-CA'
     });
-    const service = new LocaleMaintenanceService(rootDir, { translator });
+    const service = new LocaleMaintenanceService(rootDir, { translator, environment: {} });
     service.load();
     service.select({ localeId: 'fr-CA', componentId: 'parser' });
     const key = 'parser.diagnostic.unexpectedToken.message';
-    const sourceText = service.snapshot().rows.find((row) => row.key === key).sourceText;
-    assert.equal((await service.requestApiTranslation({ key, text: sourceText })).ok, true);
+    assert.equal((await service.requestApiTranslation({
+        key,
+        translationProvider: 'deepl'
+    })).ok, true);
     const result = service.replaceWithApiTranslation({ key });
     assert.equal(result.ok, false);
     assert.ok(result.errors.some((error) => error.source === 'placeholder'));
     assert.equal(service.snapshot().dirty, false);
 });
 
-test('API translation rejects an empty Current locale value without making a request', async (t) => {
+test('API translation can explicitly use canonical English instead of normalized English', async (t) => {
     const rootDir = createFixture(t);
     const translator = new StubTranslator({ ok: true, text: 'unused' });
-    const service = new LocaleMaintenanceService(rootDir, { translator });
+    const service = new LocaleMaintenanceService(rootDir, { translator, environment: {} });
     service.load();
     service.select({ localeId: 'fr-CA', componentId: 'extension' });
 
+    const row = service.snapshot().rows.find((item) => item.key === 'extension.product.displayName');
     const result = await service.requestApiTranslation({
-        key: 'extension.command.openPreview.title',
-        text: '   '
+        key: row.key,
+        translationProvider: 'deepl',
+        useNormalized: false
     });
 
-    assert.equal(result.ok, false);
-    assert.match(result.error, /Current locale value/);
-    assert.equal(translator.requests.length, 0);
+    assert.equal(result.ok, true);
+    assert.equal(result.sourceText, row.sourceText);
+    assert.equal(result.englishSource, 'canonical');
+    assert.equal(translator.requests[0].text, row.sourceText);
     assert.equal(result.state.dirty, false);
 });

@@ -3,15 +3,15 @@
   "component": "diagnosticExplorer",
   "entries": {
     "diagnosticExplorer.message.noCurrentDiagnostic.info": {
-      "text": "Defragmenter yangu: Hakuna uchunguzi wa sasa.",
+      "text": "Usimamizi Wangu wa Hifadhi yangu: Hakuna uchunguzi wa sasa.",
       "status": "machine-generated"
     },
     "diagnosticExplorer.status.hasDiagnostics.text": {
-      "text": "$(warning) Defragmenter Yangu {index} / {total}",
+      "text": "$(warning) Usimamizi Wangu wa Hifadhi Yangu {index} / {total}",
       "status": "machine-generated"
     },
     "diagnosticExplorer.status.noDiagnostics.text": {
-      "text": "$(check) Uchunguzi wa Defragmenter 0",
+      "text": "$(check) Uchunguzi wa Usimamizi Wangu wa Hifadhi 0",
       "status": "machine-generated"
     },
     "diagnosticExplorer.tree.header.label": {

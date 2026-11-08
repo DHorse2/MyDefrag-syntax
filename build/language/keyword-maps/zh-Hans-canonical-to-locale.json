@@ -6,46 +6,46 @@
     "text": "整理碎片"
   },
   "DirectoryName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.directoryName",
-    "status": "draft",
-    "text": "DirectoryName"
+    "status": "machine-generated",
+    "text": "目录名"
   },
   "ExcludeFiles": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "script.excludeFiles",
-    "status": "draft",
-    "text": "ExcludeFiles"
+    "status": "machine-generated",
+    "text": "排除文件"
   },
   "ExcludeVolumes": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "script.excludeVolumes",
-    "status": "draft",
-    "text": "ExcludeVolumes"
+    "status": "machine-generated",
+    "text": "排除卷"
   },
   "FastFill": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.fastFill",
-    "status": "draft",
-    "text": "FastFill"
+    "status": "machine-generated",
+    "text": "快速填充"
   },
   "FileActions": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileActions",
-    "status": "draft",
-    "text": "FileActions"
+    "status": "machine-generated",
+    "text": "文件操作"
   },
   "FileEnd": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileEnd",
-    "status": "draft",
-    "text": "FileEnd"
+    "status": "machine-generated",
+    "text": "文件结束"
   },
   "FileName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.fileName",
-    "status": "draft",
-    "text": "FileName"
+    "status": "machine-generated",
+    "text": "文件名"
   },
   "FileSelect": {
     "fallbackLocale": null,
@@ -54,64 +54,64 @@
     "text": "选择文件"
   },
   "FragmentCount": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.fragmentCount",
-    "status": "draft",
-    "text": "FragmentCount"
+    "status": "machine-generated",
+    "text": "碎片计数"
   },
   "FullPath": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.fullPath",
-    "status": "draft",
-    "text": "FullPath"
+    "status": "machine-generated",
+    "text": "完整路径"
   },
   "Label": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.label",
-    "status": "draft",
-    "text": "Label"
+    "status": "machine-generated",
+    "text": "标签"
   },
   "Name": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.name",
-    "status": "draft",
-    "text": "Name"
+    "status": "machine-generated",
+    "text": "名称"
   },
   "SetColor": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "setting.setColor",
-    "status": "draft",
-    "text": "SetColor"
+    "status": "machine-generated",
+    "text": "设置颜色"
   },
   "SetVariable": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "setting.setVariable",
-    "status": "draft",
-    "text": "SetVariable"
+    "status": "machine-generated",
+    "text": "设置变量"
   },
   "Size": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.size",
-    "status": "draft",
-    "text": "Size"
+    "status": "machine-generated",
+    "text": "大小"
   },
   "SortByName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.sortByName",
-    "status": "draft",
-    "text": "SortByName"
+    "status": "machine-generated",
+    "text": "按名称排序"
   },
   "VolumeActions": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeActions",
-    "status": "draft",
-    "text": "VolumeActions"
+    "status": "machine-generated",
+    "text": "卷操作"
   },
   "VolumeEnd": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeEnd",
-    "status": "draft",
-    "text": "VolumeEnd"
+    "status": "machine-generated",
+    "text": "卷结束"
   },
   "VolumeSelect": {
     "fallbackLocale": null,

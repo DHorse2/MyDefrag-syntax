@@ -1,0 +1,22 @@
+{
+  "locale": "yo",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "BẸ̀RẸ̀ [ìjìnlẹ̀:{depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "Ìparí [ìjìnlẹ̀:{depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "Fi àwọn fáìlì kún un. (Àwọn fáìlì {count} tí a ti ṣe iṣẹ́ wọn",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** ÌKÌLỌ̀: Àwọn nǹkan tí kò sí nínú rẹ̀ (“{uri}”) ***",
+      "status": "machine-generated"
+    }
+  }
+}

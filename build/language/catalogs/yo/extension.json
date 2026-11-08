@@ -2,67 +2,344 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "MyDefrag: Configure Folders"
+      "status": "machine-generated",
+      "text": "Ìṣàkóso Ìpamọ́ Mi: Ṣètò àwọn Fódà"
     },
     "extension.command.openPreview.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "Open Preview"
+      "status": "machine-generated",
+      "text": "Ṣíṣàfihàn"
     },
     "extension.command.openSettings.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "approved",
-      "status": "draft",
-      "text": "MyDefrag: Open Settings"
+      "status": "machine-generated",
+      "text": "Ìṣàkóso Ìpamọ́ Mi: Ṣí àwọn Ètò"
     },
-    "extension.message.noActiveDocument.warning": {
+    "extension.log.activate.console.log.extensionConfigConfig.info": {
       "fallbackLocale": "en",
-      "placeholders": [],
-      "sourceStatus": "reviewed",
+      "placeholders": [
+        "config"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "No MyDefrag document is active."
+      "text": "EXTENSION: configuration: ${config}"
     },
-    "extension.product.displayName": {
+    "extension.log.activate.console.log.inidataInidata.info": {
       "fallbackLocale": "en",
-      "placeholders": [],
-      "sourceStatus": "approved",
+      "placeholders": [
+        "iniData"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "MyDefrag Script (.MyDc / .MyD)"
+      "text": "initialization information: ${iniData}"
     },
-    "extension.status.parser.fragment.text": {
-      "fallbackLocale": "en",
-      "placeholders": [],
-      "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "MyDefrag Fragment (.mydc)"
-    },
-    "extension.status.parser.script.text": {
-      "fallbackLocale": "en",
-      "placeholders": [],
-      "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "MyDefrag Script (.myd)"
-    },
-    "extension.status.parser.unknown.text": {
-      "fallbackLocale": "en",
-      "placeholders": [],
-      "sourceStatus": "reviewed",
-      "status": "draft",
-      "text": "MyDefrag Unknown document type"
-    },
-    "extension.window.channelName": {
+    "extension.log.activate.console.log.initDone.info": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "My Defragmenter Syntax"
+      "text": "initialization done"
+    },
+    "extension.log.activate.console.log.initDoneCreatingAndRegisteringClient.info": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "initialization done, Creating and Registering Client"
+    },
+    "extension.log.activate.errResult.message.extensionJsActivateUnexpectedErrorIn.structural": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "extension.js enable Unexpected error in activity recording Channel and Status Bar initialization: ${errResult.message}"
+    },
+    "extension.log.activate.generatePreview.logger.dbg.previewProcessorDiagnosticsStderr.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "stderr"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "preliminary view processor problem reports: ${stderr}"
+    },
+    "extension.log.activate.generatePreview.logger.info.finishedPreviewSummary.info": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Finished preliminary view summary!"
+    },
+    "extension.log.activate.generatePreview.nextMessage.errorPreviewGenerationFailed.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "failureDetail"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "ERROR: preliminary view generation failed: ${failureDetail}"
+    },
+    "extension.log.activate.generatePreview.result.status.previewProcessorExitedWithStatusResult.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "preliminary view processor exited with status ${result.status}."
+    },
+    "extension.log.activate.logger.dbg.inlineCompletionProviderRegistered.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Inline completion provider registered"
+    },
+    "extension.log.activate.logger.info": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Storage Management Extension Initialized"
+    },
+    "extension.log.activate.provideDocumentLinks.displayLine.console.error.invalidFormatLineLineTextText.error": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "line",
+        "text"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Invalid format: line: ${line}, text: ${text}"
+    },
+    "extension.log.activate.provideDocumentLinks.displayLine.console.log.textLine.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "${text[line]}"
+    },
+    "extension.log.activate.provideDocumentLinks.displayMatch.range.start.line.invalidFormatRangeRangeStartLine.error": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "text"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Invalid format: range[${range.start.line}::${range.start.character}], text: ${text}"
+    },
+    "extension.log.activate.provideDocumentLinks.docLine.document.lineCount.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "i"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Internal trace: requested line ${i}, valid range is 0 ${document.lineCount - 1}."
+    },
+    "extension.log.activate.provideDocumentLinks.docLine.formatTraceContext.error": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "message"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "${message} ${formatTraceContext(mergedContext)}"
+    },
+    "extension.log.activate.provideDocumentLinks.document.Filename.info": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Processing File: ${document.fileName}"
+    },
+    "extension.log.activate.provideDocumentLinks.info": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "provide Document Links called for"
+    },
+    "extension.log.activate.provideDocumentLinks.logger.info.mydcExtensionLinksProviderForFilepath.info": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Storage Management EXTENSION LINKS Provider for ${filePath}, language: mydfrg"
+    },
+    "extension.log.activate.provideTextDocumentContent.logger.info.previewSourceSourcepath.info": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "sourcePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "preliminary view source: ${sourcePath}"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "dir",
+        "filePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Olùdíje tó tẹ̀lé: ${dir}, àti ${filePath}"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "searchÀàyè Iṣẹ́: Kò le ka ${uri.toString()}: ${errResult.message}"
+    },
+    "extension.message.activate.generatePreview.GenerationProducedNoContent.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "ERROR: preliminary view generation produced no content."
+    },
+    "extension.message.activate.generatePreview.nextmessage.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "nextMessage"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "${nextMessage}"
+    },
+    "extension.message.activate.logger.dbg.providersRegistered.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Providers registered"
+    },
+    "extension.message.activate.logger.dbg.startingServerChannelname.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "channelName"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Starting server ${channelName}"
+    },
+    "extension.message.activate.logger.dbg.subscribingToProviders.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Subscribing to providers"
+    },
+    "extension.message.activate.mydefragLanguageClient.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Storage Management Language Client"
+    },
+    "extension.message.activate.provideDocumentLinks.includeFileMatchIndexMatchIndex.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "lineText"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "included file file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${lineText}"
+    },
+    "extension.message.channelName.mydefragSyntax.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Storage Management grammar rules"
+    },
+    "extension.message.noActiveDocument.warning": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Kò sí ìwé Ìṣàkóso Ìpamọ́ Mi tó ń ṣiṣẹ́."
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ìfàsẹ́yìn.js:muṣiṣẹ:awọn eto:mura Àṣìṣe tí a dá padà láti ìbẹ̀rẹ̀: ${errResult.message}"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateUnexpectedErrorInitializing.structural": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "extension.js enable Unexpected error initializing extension: ${errResult.message}"
+    },
+    "extension.path.activate.generatePreview.errResult.message.extensionJsActivateGeneratepreviewUnexpectedError.structural": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "extension.js enable generate preliminary view: Unexpected error Generating preliminary view of document: ${errResult.message}"
+    },
+    "extension.product.displayName": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "approved",
+      "status": "machine-generated",
+      "text": "Ìwé Ìṣàkóso Ìpamọ́ Mi (.MyDc / .MyD)"
+    },
+    "extension.setting.activate.logger.dbg.settingsSourceVscodiumDebugIsdebugon.value": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "isDebugOn"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "options source=VS Codium, error checking=${isDebugOn}"
+    },
+    "extension.status.activate.logger.dbg.channelStatusBarDone.status": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Channel, Status Bar done"
+    },
+    "extension.status.parser.fragment.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Ìwé Ìṣàkóso Ìpamọ́ Mi (.mydc)"
+    },
+    "extension.status.parser.script.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Ìwé Ìṣàkóso Ìpamọ́ Mi (.myd)"
+    },
+    "extension.status.parser.unknown.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "reviewed",
+      "status": "machine-generated",
+      "text": "Iru iwe Ìṣàkóso Ìpamọ́ Mi ti a ko mọ"
+    },
+    "extension.window.channelName": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àkójọpọ̀ Ìṣàkóso Ìpamọ́ Mi mi"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

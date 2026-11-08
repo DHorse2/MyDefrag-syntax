@@ -20,7 +20,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Mein Defragmentierer: Diagnostik-Explorer schließen"
+      "text": "Mein Defragmentierer: Diagnostik-Browser schließen"
     },
     "package.contributes.commands.mydfrg.diagnostics.filter.title": {
       "fallbackLocale": null,
@@ -125,21 +125,21 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Debug-Protokollierung für die Erweiterung „My Defragmenter“ aktivieren."
+      "text": "Fehlerprüfung-Protokollierung für die Erweiterung „Meine Speicherverwaltung“ aktivieren."
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Glob-Muster, die bei der Überprüfung durch „Meine Defragmentierung“ ausgeschlossen werden sollen"
+      "text": "Dateiabgleichsmuster, die bei der Überprüfung durch „Meine Defragmentierung“ ausgeschlossen werden sollen"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Verzeichnis für die Protokolldateien von „My Defragmenter“."
+      "text": "Verzeichnis für die Protokolldateien von „Meine Speicherverwaltung“."
     },
     "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
       "fallbackLocale": null,
@@ -174,14 +174,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Verzeichnis für die Benutzerdaten von „My Defragmenter“."
+      "text": "Verzeichnis für die Benutzerdaten von „Meine Speicherverwaltung“."
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Die Ausführlichkeitsstufe meiner Defragmenter-Erweiterung. Für die Debug-Protokollierung muss „mydfrg debug On“ aktiviert sein."
+      "text": "Die Ausführlichkeitsstufe der Erweiterung „Meine Speicherverwaltung“. Für die Fehlerprüfungs-Protokollierung muss „mydfrg.debugOn“ aktiviert sein."
     },
     "package.contributes.languages.aliases": {
       "fallbackLocale": null,
@@ -195,7 +195,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Syntaxhervorhebung für die Skriptsprache „My Defragmenter“"
+      "text": "Syntaxhervorhebung für die Skriptsprache „Meine Speicherverwaltung“"
     },
     "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
       "fallbackLocale": null,
@@ -216,7 +216,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Syntaxhervorhebung für die Skriptsprache „My Defragmenter“"
+      "text": "Syntaxhervorhebung für die Skriptsprache „Meine Speicherverwaltung“"
     },
     "package.metadata.publisher": {
       "fallbackLocale": null,

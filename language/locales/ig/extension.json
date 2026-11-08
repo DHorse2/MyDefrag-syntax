@@ -3,7 +3,7 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "text": "Defragmenter m: Hazie akpa faịlụ",
+      "text": "Njikwa Nchekwa M m: Hazie akpa faịlụ",
       "status": "machine-generated"
     },
     "extension.command.openPreview.title": {
@@ -11,31 +11,43 @@
       "status": "machine-generated"
     },
     "extension.command.openSettings.title": {
-      "text": "Defragmenter m: Meghee Ntọala",
+      "text": "Njikwa Nchekwa M m: Meghee Ntọala",
       "status": "machine-generated"
     },
     "extension.message.noActiveDocument.warning": {
-      "text": "Mba, akwụkwọ Defragmenter m adịghị arụ ọrụ.",
+      "text": "Mba, akwụkwọ Njikwa Nchekwa M m adịghị arụ ọrụ.",
       "status": "machine-generated"
     },
     "extension.product.displayName": {
-      "text": "Akwụkwọ Ntuziaka Defragmenter M (.MyDc/.MyD)",
+      "text": "Akwụkwọ Ntuziaka Njikwa Nchekwa M M (.MyDc/.MyD)",
       "status": "machine-generated"
     },
     "extension.status.parser.fragment.text": {
-      "text": "Ntupu Defragmenter m (.mydc)",
+      "text": "Ntupu Njikwa Nchekwa M m (.mydc)",
       "status": "machine-generated"
     },
     "extension.status.parser.script.text": {
-      "text": "Akwụkwọ Ntuziaka Defragmenter M (.myd)",
+      "text": "Akwụkwọ Ntuziaka Njikwa Nchekwa M M (.myd)",
       "status": "machine-generated"
     },
     "extension.status.parser.unknown.text": {
-      "text": "Defragmenter m amaghị ụdị akwụkwọ",
+      "text": "Njikwa Nchekwa M m amaghị ụdị akwụkwọ",
       "status": "machine-generated"
     },
     "extension.window.channelName": {
-      "text": "Usoro mkpụrụokwu Defragmenter m",
+      "text": "Usoro mkpụrụokwu Njikwa Nchekwa M m",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "Onye na-eso: ${dir}, na ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "chọọ Ebe Ọrụ: Enweghị ike ịgụ ${uri.toString()}: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "mgbatị.js:mee ka ọrụ rụọ ọrụ:malite mmejọ eweghachiri site na mmalite: ${errResult.message}",
       "status": "machine-generated"
     }
   }

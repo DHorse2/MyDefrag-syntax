@@ -95,7 +95,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.mydefragLocaleMaintenance.text": {
-      "text": "Matengenezo ya Eneo la Defragmenter yangu",
+      "text": "Matengenezo ya Eneo la Usimamizi Wangu wa Hifadhi yangu",
       "status": "machine-generated"
     },
     "locales.dialog.noFilesWillChange.text": {
@@ -123,7 +123,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "Chagua hazina ya sintaksi ya My Defragmenter",
+      "text": "Chagua hazina ya sintaksi ya Usimamizi Wangu wa Hifadhi",
       "status": "machine-generated"
     },
     "locales.dialog.unsavedLocaleChanges.title": {
@@ -167,7 +167,7 @@
       "status": "machine-generated"
     },
     "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
-      "text": "Hifadhi halali ya eneo la My Defragmenter haikuchaguliwa.",
+      "text": "Hifadhi halali ya eneo la Usimamizi Wangu wa Hifadhi haikuchaguliwa.",
       "status": "machine-generated"
     },
     "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
@@ -179,7 +179,7 @@
       "status": "machine-generated"
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "text": "Chagua hazina inayomiliki maeneo ya lugha ya / na jenga lugha ya /.",
+      "text": "Chagua hazina inayomiliki language/locales na build/language.",
       "status": "machine-generated"
     },
     "locales.message.componentRebuildFailed.text": {
@@ -195,7 +195,7 @@
       "status": "machine-generated"
     },
     "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
-      "text": "Maandishi ya Kiingereza ni rasmi na lazima yadumishwe katika Matengenezo ya Lugha ya My Defragmenter.",
+      "text": "Maandishi ya Kiingereza ni rasmi na lazima yadumishwe katika Matengenezo ya Lugha ya Usimamizi Wangu wa Hifadhi.",
       "status": "machine-generated"
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
@@ -219,15 +219,15 @@
       "status": "machine-generated"
     },
     "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
-      "text": "Tafsiri zilizotengenezwa lazima zitumike kabla hazijaondolewa kutoka kwenye data iliyotungwa.",
+      "text": "Tafsiri zilizotengenezwa lazima zitumike kabla hazijaondolewa kutoka kwenye habari iliyotungwa.",
       "status": "machine-generated"
     },
     "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
-      "text": "Data za matengenezo ya eneo hazijapakuliwa.",
+      "text": "habari za matengenezo ya eneo hazijapakuliwa.",
       "status": "machine-generated"
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "text": "Sio hifadhidata ya eneo la My Defragmenter. Inakosekana: {missing}",
+      "text": "Sio hifadhidata ya eneo la Usimamizi Wangu wa Hifadhi. Inakosekana: {missing}",
       "status": "machine-generated"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {
@@ -339,7 +339,7 @@
       "status": "machine-generated"
     },
     "locales.progress.useStopBuildInTheProgressWindowThen.status": {
-      "text": "Tumia 'Stop build' kwenye dirisha la maendeleo, kisha subiri urejeshaji ukamilike kabla ya kufunga programu.",
+      "text": "Tumia 'kusimama mchakato wa uumbaji' kwenye dirisha la maendeleo, kisha subiri urejeshaji ukamilike kabla ya kufunga programu.",
       "status": "machine-generated"
     },
     "locales.progress.waitingForSaveConfirmation.status": {
@@ -512,6 +512,14 @@
     },
     "locales.ui.valueValidationErrorS.text": {
       "text": "{stateValidationErrorsCount} Hitilafu za uthibitishaji",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "beji {stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "beji {stateValidationOk}",
       "status": "machine-generated"
     }
   }

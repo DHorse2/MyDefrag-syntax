@@ -24,6 +24,8 @@ test('manifest registers MyDefrag language identifiers and extensions', () => {
     assert.ok(language);
     assert.ok(language.extensions.some(extension => extension.toLowerCase() === '.myd'));
     assert.ok(language.extensions.some(extension => extension.toLowerCase() === '.mydc'));
+    assert.equal(language.extensions.some(extension => extension.toLowerCase() === '.mydd'), false);
+    assert.equal(language.extensions.some(extension => extension.toLowerCase() === '.mydcd'), false);
     assert.equal(
         fs.existsSync(path.resolve(projectRoot, language.configuration)),
         true
@@ -53,24 +55,56 @@ test('contributed command identifiers are unique and activated commands exist', 
 
 test('menu command references resolve to contributed commands', () => {
     const commandIds = new Set(contributedCommands().map(command => command.command));
+    const submenuIds = new Set((manifest.contributes.submenus || []).map(submenu => submenu.id));
 
     for (const menuItems of Object.values(manifest.contributes.menus || {})) {
         for (const item of menuItems) {
-            assert.equal(commandIds.has(item.command), true, item.command);
+            if (item.command) {
+                assert.equal(commandIds.has(item.command), true, item.command);
+            } else {
+                assert.equal(submenuIds.has(item.submenu), true, item.submenu);
+            }
         }
     }
 });
 
-test('Open Preview is available from editor and Explorer context menus', () => {
+test('Preview occupies one context-menu line and exposes five submenu variants', () => {
+    const previewCommands = [
+        'mydfrg.openPreview.raw',
+        'mydfrg.openPreview.annotations',
+        'mydfrg.openPreview.annotationsFileHeaders',
+        'mydfrg.openPreview.annotationsLineNumbers',
+        'mydfrg.openPreview.annotationsLineNumbersFileHeaders'
+    ];
+    const submenu = manifest.contributes.submenus.find(item => item.id === 'mydfrg.preview');
+    assert.deepEqual(submenu, { id: 'mydfrg.preview', label: 'Preview' });
+
     for (const menuId of ['editor/title/context', 'explorer/context']) {
-        const previewItem = manifest.contributes.menus[menuId].find(
-            item => item.command === 'mydfrg.openPreview'
+        const previewItems = manifest.contributes.menus[menuId].filter(
+            item => item.submenu === 'mydfrg.preview'
         );
 
-        assert.ok(previewItem, menuId);
-        assert.match(previewItem.when, /resourceExtname == \.MyDc/);
-        assert.match(previewItem.when, /resourceExtname == \.MyD/);
+        assert.equal(previewItems.length, 1, menuId);
+        assert.match(previewItems[0].when, /resourceExtname == \.MyDc/);
+        assert.match(previewItems[0].when, /resourceExtname == \.MyD/);
     }
+
+    assert.deepEqual(
+        manifest.contributes.menus['mydfrg.preview'].map(item => item.command),
+        previewCommands
+    );
+    assert.deepEqual(
+        previewCommands.map(commandId =>
+            contributedCommands().find(command => command.command === commandId).shortTitle
+        ),
+        [
+            'Raw (Executable)',
+            'Annotations',
+            'Annotations + File Headers',
+            'Annotations + Line Numbers',
+            'Annotations + Line Numbers + File Headers'
+        ]
+    );
 });
 
 test('diagnostic severity settings accept the documented numeric and named forms', () => {

@@ -1,0 +1,526 @@
+{
+  "locale": "yo",
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "text": "Kọ́ àkójọ àṣẹ",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.component.label": {
+      "text": "Ẹ̀ka",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.locale.label": {
+      "text": "Àgbègbè",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "text": "Àwọn ìgbésẹ̀ ìtọ́jú",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "text": "Iṣẹ́ ń lọ lọ́wọ́",
+      "status": "machine-generated"
+    },
+    "locales.action.applyInMemory.label": {
+      "text": "Wíwà nínú ìrántí",
+      "status": "machine-generated"
+    },
+    "locales.action.close.label": {
+      "text": "Ti pa",
+      "status": "machine-generated"
+    },
+    "locales.action.exit.label": {
+      "text": "Jáde",
+      "status": "machine-generated"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "text": "Ṣẹ̀dá ìtumọ̀ API",
+      "status": "machine-generated"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "text": "Túnṣe àkójọ tí a yàn",
+      "status": "machine-generated"
+    },
+    "locales.action.reload.label": {
+      "text": "Àtúngbéjáde",
+      "status": "machine-generated"
+    },
+    "locales.action.revert.label": {
+      "text": "Àtúngbéjáde",
+      "status": "machine-generated"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "text": "Àfipamọ́ kí o sì tún un kọ́",
+      "status": "machine-generated"
+    },
+    "locales.action.stopBuild.label": {
+      "text": "Dáwọ́ ìkọ́lé dúró",
+      "status": "machine-generated"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "text": "Lò ìfàsẹ̀yìn Gẹ̀ẹ́sì",
+      "status": "machine-generated"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "text": "Lò Gẹ̀ẹ́sì tí a ṣe déédéé",
+      "status": "machine-generated"
+    },
+    "locales.action.validate.label": {
+      "text": "Fídí múlẹ̀",
+      "status": "machine-generated"
+    },
+    "locales.dialog.cancel.text": {
+      "text": "Fagilé",
+      "status": "machine-generated"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "text": "Jẹ́rìí àwọn àyípadà orísun agbègbè",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "text": "Jáwọ́ sílẹ̀ kí o sì tún un gbé sórí ayélujára",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "text": "Kó àwọn ìtumọ̀ tí a kò fipamọ́ dànù?",
+      "status": "machine-generated"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "text": "Jáde láìfipamọ́",
+      "status": "machine-generated"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "text": "Ìkọ́pọ̀ ẹ̀yà ara agbègbè ń ṣiṣẹ́",
+      "status": "machine-generated"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "text": "Ìtọ́jú àgbègbè Ìṣàkóso Ìpamọ́ Mi",
+      "status": "machine-generated"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "text": "Kò sí àwọn fáìlì tí yóò yípadà.",
+      "status": "machine-generated"
+    },
+    "locales.dialog.returnToBuild.text": {
+      "text": "Pada sí ìkọ́pọ̀",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "text": "Fipamọ́ àti ìkọ́pọ̀ ẹ̀yà ara ṣe àṣeyọrí",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "text": "Fipamọ́ àti àtúntò ẹ̀yà ara",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "text": "Fipamọ́ dí nípasẹ̀ ìfìdí múlẹ̀",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "Fipamọ́ kùnà ó sì yí padà",
+      "status": "machine-generated"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "Yan ibi ipamọ Ìṣàkóso Ìpamọ́ Mi-Gírámọ ofin",
+      "status": "machine-generated"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "text": "Awọn iyipada agbegbe ti ko fipamọ",
+      "status": "machine-generated"
+    },
+    "locales.heading.catalog.text": {
+      "text": "Katalog",
+      "status": "machine-generated"
+    },
+    "locales.heading.localeOperation.text": {
+      "text": "Iṣiṣẹ agbegbe",
+      "status": "machine-generated"
+    },
+    "locales.heading.operationResult.text": {
+      "text": "Abajade iṣẹ",
+      "status": "machine-generated"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "text": "Yan agbegbe ati apakan kan",
+      "status": "machine-generated"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "text": "Ṣẹda itumọ lati iye agbegbe lọwọlọwọ",
+      "status": "machine-generated"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "text": "Key, orisun, itumọ, ipo",
+      "status": "machine-generated"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "text": "A ko yan ibi ipamọ agbegbe Ìṣàkóso Ìpamọ́ Mi ti o wulo.",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "text": "Kò gba ìtumọ̀ API",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "text": "Ìtumọ̀ API kò sí",
+      "status": "machine-generated"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "text": "Ohun èlò kò lè bẹ̀rẹ̀",
+      "status": "machine-generated"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "text": "Gẹ̀ẹ́sì alaṣẹ kìí ṣe àfojúsùn ìtumọ̀ API.",
+      "status": "machine-generated"
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "text": "Kọ́kọ́rọ́ katalọgi jẹ́ ti ẹ̀yà ara {canonicalComponent}.",
+      "status": "machine-generated"
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "text": "Yan ibi ipamọ ti o ni language/locales ati build/language.",
+      "status": "machine-generated"
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "text": "Àtúntò ẹ̀yà kùnà",
+      "status": "machine-generated"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "text": "Já àwọn àyípadà pamọ́ kí o tó yí agbègbè tàbí ẹ̀yà padà.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "text": "Ìwé àkójọpọ̀ èdè Gẹ̀ẹ́sì ni a kà níbí nìkan.",
+      "status": "machine-generated"
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "text": "Ìwé àkójọpọ̀ èdè Gẹ̀ẹ́sì jẹ́ àkójọpọ̀ èdè tí a gbọ́dọ̀ tọ́jú nínú Ìṣàkóso Ìpamọ́ Mi Ìtọ́jú Èdè.",
+      "status": "machine-generated"
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "text": "Tẹ tàbí kí o kún iye agbègbè lọ́wọ́lọ́wọ́ kí o tó ṣe ìtúmọ̀ API.",
+      "status": "machine-generated"
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "text": "Jáde kí o sì yọ àwọn ìtumọ̀ ẹ̀yà tí a yàn kúrò?",
+      "status": "machine-generated"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "text": "Ṣẹ̀dá ìtumọ̀ API kí o tó rọ́pò iye náà.",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "text": "Àìbáramu ìdánimọ̀ àdúgbò tí a ṣẹ̀dá nínú {relativePath}:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "text": "Àkójọpọ̀ àdúgbò tí a ṣẹ̀dá kò wúlò:",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "text": "Àwọn ìtumọ̀ tí a ṣẹ̀dá gbọ́dọ̀ wà ní lílò kí a tó lè yọ wọ́n kúrò nínú dátà tí a ṣẹ̀dá.",
+      "status": "machine-generated"
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "A kò tíì gbé àwọn dátà ìtọ́jú agbègbè rù.",
+      "status": "machine-generated"
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "text": "Kìí ṣe ibi ìpamọ́ àgbègbè Ìṣàkóso Ìpamọ́ Mi. Àìsí: {missing}",
+      "status": "machine-generated"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "Ọ̀nà náà sá àsálà gbòǹgbò ibi ìpamọ́: {relativePath}",
+      "status": "machine-generated"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "text": "Àwọn tí ó ní ibi ìpamọ́ gbọ́dọ̀ jẹ́ gangan: {expected}.",
+      "status": "machine-generated"
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "text": "Ṣíṣe àtúnṣe yóò yọ àwọn àyípadà sí apá agbègbè tí a yàn kúrò.",
+      "status": "machine-generated"
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "text": "Fipamọ́ tàbí dá àwọn àyípadà padà kí a tó tún un kọ́.",
+      "status": "machine-generated"
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "text": "A tún àwọn ẹ̀yà tí a yàn kọ́",
+      "status": "machine-generated"
+    },
+    "locales.message.selectionFailed.text": {
+      "text": "Àṣàyàn kùnà",
+      "status": "machine-generated"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "text": "Àwòrán ẹ̀yà tí a yàn kò sí.",
+      "status": "machine-generated"
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "text": "Ìlànà pàtàkì túmọ̀ sí iye àgbègbè tí ó yàtọ̀. Tun bẹ̀rẹ̀ Ìtọ́jú àgbègbè kí o sì tún gbìyànjú.",
+      "status": "machine-generated"
+    },
+    "locales.message.translationRejected.text": {
+      "text": "A kò gba ìtumọ̀ rẹ.",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "text": "Kọ́kọ́rọ́ àkójọpọ̀ tí a kò mọ̀: {key}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "text": "Kọ́kọ́rọ́ tí a kò mọ̀: {componentId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "text": "Kọ́kọ́rọ́ tí a kò mọ̀: {documentComponent}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "text": "Kọ́kọ́rọ́ tí a kò mọ̀ fún ẹ̀ka tí a yàn: {payloadKey}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "text": "Àgbègbè tí a kò mọ̀: {localeId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "text": "Àgbègbè tí a kò mọ̀: {documentLocale}",
+      "status": "machine-generated"
+    },
+    "locales.message.validationResult.text": {
+      "text": "Àbájáde ìfìdí múlẹ̀",
+      "status": "machine-generated"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "Dúró títí ìkọ́lé náà yóò fi parí kí o tó jáde.",
+      "status": "machine-generated"
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "text": "Kọ àwọn fáìlì àṣẹ {normalizedCount}?",
+      "status": "machine-generated"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "Gbígbà àwọn fáìlì tí a ṣẹ̀dá fún ìyípadà",
+      "status": "machine-generated"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "text": "Ṣíṣàyẹ̀wò àwọn àyípadà fáìlì tí a ṣẹ̀dá",
+      "status": "machine-generated"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "text": "Ṣíṣe àtúnṣe orísun àdúgbò",
+      "status": "machine-generated"
+    },
+    "locales.progress.preparingSave.status": {
+      "text": "Ṣíṣe àtúnṣe ìpamọ́",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "Ṣíṣe àtúnṣe àwọn fáìlì tí a ṣẹ̀dá àti tí a ṣẹ̀dá",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "text": "Ṣíṣe àtúnṣe àwọn fáìlì lẹ́yìn àṣìṣe kan",
+      "status": "machine-generated"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "text": "Ṣíṣe àfikún àwọn fáìlì agbègbè",
+      "status": "machine-generated"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "text": "Bẹ̀rẹ̀ sí ní fipamọ́ àti àtúntò àwọn fáìlì",
+      "status": "machine-generated"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "text": "Dídá ìkọ́pọ̀ àwọn fáìlì dúró",
+      "status": "machine-generated"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "Lo ìdádúró ìkọ́pọ̀ nínú fèrèsé ìlọsíwájú, lẹ́yìn náà dúró kí ìyípadà náà parí kí o tó ti ìṣàfilọ́lẹ̀ náà.",
+      "status": "machine-generated"
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "text": "N nduro fun ijẹrisi fifipamọ",
+      "status": "machine-generated"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "text": "Ṣíṣe kíkọ àwọn fáìlì agbègbè tí ó ní àṣẹ",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "baaji {stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "baaji {stateValidationOk}",
+      "status": "machine-generated"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "text": "Gẹ̀ẹ́sì alaṣẹ",
+      "status": "machine-generated"
+    },
+    "locales.ui.catalogKey.text": {
+      "text": "Kọ́kọ́rọ́ katalọgi",
+      "status": "machine-generated"
+    },
+    "locales.ui.componentStrings.text": {
+      "text": "Àwọn okùn èròjà",
+      "status": "machine-generated"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "text": "Iye agbègbè lọ́wọ́lọ́wọ́",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "text": "A kò ṣètò Deepl. Ṣètò DeeplApi kí o tó bẹ̀rẹ̀ ìfilọ́lẹ̀ ohun èlò náà.",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "text": "DeepL rọ́pò iye àgbègbè lọ́wọ́lọ́wọ́. Fi sínú ìrántí láti pa á mọ́.",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "text": "Já àwọn àyípadà ìtumọ̀ inú ìrántí nù?",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "text": "Já àwọn ìtumọ̀ tí a kò fipamọ́ nù kí o sì yí àṣàyàn náà padà?",
+      "status": "machine-generated"
+    },
+    "locales.ui.englishFallback.text": {
+      "text": "Ìfàsẹ́yìn Gẹ̀ẹ́sì",
+      "status": "machine-generated"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "text": "Ṣẹ̀dá ìtumọ̀ láti inú iye agbègbè lọ́wọ́lọ́wọ́. Àbájáde náà rọ́pò pápá yẹn nìkan.",
+      "status": "machine-generated"
+    },
+    "locales.ui.generatedValue.text": {
+      "text": "Àgbéjáde: {stateGeneratedFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.key.text": {
+      "text": "Kókó",
+      "status": "machine-generated"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "text": "Àbájáde DeepL tuntun",
+      "status": "machine-generated"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "text": "Kò sí àwọn àyípadà tí a kò fipamọ́",
+      "status": "machine-generated"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "text": "Gẹ̀ẹ́sì tí a ṣe déédé",
+      "status": "machine-generated"
+    },
+    "locales.ui.notValidated.text": {
+      "text": "Kò jẹ́rìísí",
+      "status": "machine-generated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "text": "Ń ṣe àtúnṣe ẹ̀yà ara",
+      "status": "machine-generated"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "text": "Àtúnṣe ẹ̀yà ara àdúgbò",
+      "status": "machine-generated"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "text": "Ń béèrè fún ìtumọ̀ DeepL…",
+      "status": "machine-generated"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "text": "Àwọn olùgbé tí a nílò",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
+      "text": "Yí iye àgbègbè lọ́wọ́lọ́wọ́ àti àbá API padà",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
+      "text": "Ṣe àtúnṣe ìwọ̀n àkójọpọ̀ àdúgbò àti olóòtú ìtumọ̀",
+      "status": "machine-generated"
+    },
+    "locales.ui.reviewStatus.text": {
+      "text": "Ipò àtúnyẹ̀wò",
+      "status": "machine-generated"
+    },
+    "locales.ui.search.text": {
+      "text": "Ṣàwárí",
+      "status": "machine-generated"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "text": "Yan ìkọsílẹ̀ àkójọpọ̀",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceText.text": {
+      "text": "Ọ̀rọ̀ orísun",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceValue.text": {
+      "text": "Orísun: {stateAuthoritativeFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.status.text": {
+      "text": "Ipò",
+      "status": "machine-generated"
+    },
+    "locales.ui.structuredEditor.text": {
+      "text": "Olóòtú ètò",
+      "status": "machine-generated"
+    },
+    "locales.ui.translation.text": {
+      "text": "Ìtumọ̀",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationScope.text": {
+      "text": "Àkójọ ìtumọ̀",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "text": "Ìtumọ̀ kò sí.",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "text": "Ohun èlò ìṣiṣẹ́ olùtumọ̀",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorNotes.text": {
+      "text": "Àkíyèsí olùtumọ̀",
+      "status": "machine-generated"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "text": "Àwọn àyípadà tí a kò fipamọ́",
+      "status": "machine-generated"
+    },
+    "locales.ui.valid.text": {
+      "text": "Wúlò",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "text": "{stateCompletenessFallback} Èdè Gẹ̀ẹ́sì yiyan",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "text": "{rowApiTranslationProvider} ti ṣetán. Fi sínú ìrántí láti pa iye agbègbè lọ́wọ́lọ́wọ́ mọ́.",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTotal.text": {
+      "text": "{stateCompletenessTotal} lápapọ̀",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTranslated.text": {
+      "text": "{stateCompletenessTranslated} tí a túmọ̀",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "text": "Àṣìṣe ìfìdíkalẹ̀ {stateValidationErrorsCount}",
+      "status": "machine-generated"
+    }
+  }
+}

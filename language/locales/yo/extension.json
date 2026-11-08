@@ -1,0 +1,54 @@
+{
+  "locale": "yo",
+  "component": "extension",
+  "entries": {
+    "extension.command.configureFolders.title": {
+      "text": "Ìṣàkóso Ìpamọ́ Mi: Ṣètò àwọn Fódà",
+      "status": "machine-generated"
+    },
+    "extension.command.openPreview.title": {
+      "text": "Ṣíṣàfihàn",
+      "status": "machine-generated"
+    },
+    "extension.command.openSettings.title": {
+      "text": "Ìṣàkóso Ìpamọ́ Mi: Ṣí àwọn Ètò",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "Olùdíje tó tẹ̀lé: ${dir}, àti ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "searchÀàyè Iṣẹ́: Kò le ka ${uri.toString()}: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.message.noActiveDocument.warning": {
+      "text": "Kò sí ìwé Ìṣàkóso Ìpamọ́ Mi tó ń ṣiṣẹ́.",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "ìfàsẹ́yìn.js:muṣiṣẹ:awọn eto:mura Àṣìṣe tí a dá padà láti ìbẹ̀rẹ̀: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.product.displayName": {
+      "text": "Ìwé Ìṣàkóso Ìpamọ́ Mi (.MyDc / .MyD)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.fragment.text": {
+      "text": "Ìwé Ìṣàkóso Ìpamọ́ Mi (.mydc)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.script.text": {
+      "text": "Ìwé Ìṣàkóso Ìpamọ́ Mi (.myd)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.unknown.text": {
+      "text": "Iru iwe Ìṣàkóso Ìpamọ́ Mi ti a ko mọ",
+      "status": "machine-generated"
+    },
+    "extension.window.channelName": {
+      "text": "Àkójọpọ̀ Ìṣàkóso Ìpamọ́ Mi mi",
+      "status": "machine-generated"
+    }
+  }
+}

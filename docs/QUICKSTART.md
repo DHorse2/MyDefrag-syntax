@@ -51,11 +51,13 @@ to run immediate validation.
 ## Open The Expanded Preview
 
 With a MyDefrag document active, run **MyDefrag: Open Preview** from the
-Command Palette. The read-only preview recursively expands `!include` files
-and displays source and merged line numbers.
+Command Palette. The editable, unsaved preview recursively expands `!include`
+files and displays source and merged line numbers. Use the right-click
+**Preview** submenu to choose the raw or another annotated variation.
 
 Missing or circular includes appear as annotations in the preview instead of
-being executed.
+being executed. Preview edits do not change the source files; use **Save As**
+to keep added tags, comments, or metadata.
 
 ## Review Diagnostics
 

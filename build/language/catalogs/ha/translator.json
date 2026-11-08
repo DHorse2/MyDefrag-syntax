@@ -29,6 +29,15 @@
       "status": "machine-generated",
       "text": "Matsayin ɗan takara"
     },
+    "translator.accessibility.catalogRecordValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "recordKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Rikodin kasida {recordKey}"
+    },
     "translator.accessibility.closeOperationResult.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -44,6 +53,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Rufe {windowLabel}"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "An kammala matakan farawa"
     },
     "translator.accessibility.componentAssignedToValue.label": {
       "fallbackLocale": null,
@@ -105,6 +121,27 @@
       "status": "machine-generated",
       "text": "Gyara rikodin katalog {entryKey}"
     },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tace 'yan takara ta rukuni"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tace 'yan takara ta rukuni"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tace 'yan takara ta matsayi"
+    },
     "translator.accessibility.filterCandidatesByStatus.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -112,12 +149,47 @@
       "status": "machine-generated",
       "text": "Tace 'yan takara bisa ga matsayi"
     },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tace bayanan kundin adireshi ta rukuni"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tace bayanan kundin adireshi ta rukuni"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tace bayanan kundin adireshi ta matsayi"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tace bayanan kundin adireshi ta matsayi"
+    },
     "translator.accessibility.filterMigrationSourceFiles.label": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Tace fayilolin tushen hijira"
+    },
+    "translator.accessibility.languageBuildOptions.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Language creation process options"
     },
     "translator.accessibility.languageReportArtifactText.label": {
       "fallbackLocale": null,
@@ -131,7 +203,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Template na yanki"
+      "text": "samfurin tsari na yanki"
     },
     "translator.accessibility.maximizeValue.label": {
       "fallbackLocale": null,
@@ -140,7 +212,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Maximize {windowLabel}"
+      "text": "Ƙara girman {windowLabel}"
     },
     "translator.accessibility.migrationCandidatesForValue.label": {
       "fallbackLocale": null,
@@ -183,6 +255,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ana gudanar da aiki"
+    },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Yi odar 'yan takara ta layi"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Yi odar bayanan kundin adireshi ta layin tushe"
     },
     "translator.accessibility.removeValue.label": {
       "fallbackLocale": null,
@@ -230,6 +316,13 @@
       "status": "machine-generated",
       "text": "Mabudin da aka ba da shawara"
     },
+    "translator.accessibility.useNormalizedEnglishForFallbacksAndAutomatedTranslation.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for fallbacks and automated translation"
+    },
     "translator.accessibility.viewMigrationCandidatesForValue.label": {
       "fallbackLocale": null,
       "placeholders": [
@@ -247,18 +340,18 @@
       "text": "Maɓallan taga"
     },
     "translator.action.componentCatalog.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog"
+      "status": "machine-generated",
+      "text": "Kundin Tsarin Bayanai"
     },
     "translator.action.diagnosticMessages.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic Messages"
+      "status": "machine-generated",
+      "text": "Saƙonnin Ganewa"
     },
     "translator.action.exit.label": {
       "fallbackLocale": null,
@@ -266,6 +359,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Fita"
+    },
+    "translator.action.normalizedWords.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Normalized Words"
     },
     "translator.action.previewModes.label": {
       "fallbackLocale": null,
@@ -303,11 +403,11 @@
       "text": "Ajiye"
     },
     "translator.action.semanticKeywords.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Semantic Keywords"
+      "status": "machine-generated",
+      "text": "Kalmomin Ma'ana"
     },
     "translator.action.stopBuild.label": {
       "fallbackLocale": null,
@@ -342,7 +442,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ana adana fayilolin da aka ƙirƙira ƙarƙashin yankunan harshe na / koyaushe."
+      "text": "Fayilolin da aka rubuta a ƙarƙashin language/locales ana kiyaye su koyaushe."
     },
     "translator.dialog.cancel.text": {
       "fallbackLocale": null,
@@ -486,7 +586,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Kula da harshen Defragmenter na"
+      "text": "Kula da harshen Gudanar da Ajiyata na"
     },
     "translator.dialog.noAuthoritativeFilesWillChange.text": {
       "fallbackLocale": null,
@@ -496,11 +596,11 @@
       "text": "Ba za a canza kowane fayil mai iko ba."
     },
     "translator.dialog.noFilesWillChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files will change."
+      "status": "machine-generated",
+      "text": "Babu fayiloli da za su canza."
     },
     "translator.dialog.nothingToSave.title": {
       "fallbackLocale": null,
@@ -521,7 +621,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Revert ya gaza"
+      "text": "gyarawa ya gaza"
     },
     "translator.dialog.saveAndBuildSucceeded.title": {
       "fallbackLocale": null,
@@ -591,14 +691,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Zaɓi ma'ajiyar nahawun My Defragmenter"
+      "text": "Zaɓi ma'ajiyar nahawun Gudanar da Ajiyata"
     },
     "translator.dialog.startingMydefragLanguageMaintenance.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Fara Gyaran Harshe na Defragmenter Dina"
+      "text": "Fara Gyaran Harshe na Gudanar da Ajiyata Dina"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
       "fallbackLocale": null,
@@ -607,7 +707,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Za a adana bayanai na ginin da aka samar na harshen / da kundin / da / da {id} ta tsohuwa."
+      "text": "Za a adana bayanan da aka samar ta build/language/catalogs/{id} ta tsohuwa."
     },
     "translator.dialog.unsavedLanguageChanges.title": {
       "fallbackLocale": null,
@@ -692,6 +792,13 @@
       "status": "machine-generated",
       "text": "Nemi {definitionTitle}"
     },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ana buƙatar layin tushe na yanzu, rubutun ɗan takara, da maɓallin kundin adireshi."
+    },
     "translator.message.aLanguageBuildIsAlreadyRunning.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -713,12 +820,19 @@
       "status": "machine-generated",
       "text": "Hanyar tushen da aka duba ba ta hanyar fayil na ciki mai daidaitacce ba ce."
     },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ana buƙatar canjin tushen ƙaura mai inganci."
+    },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ba a zaɓi ingantaccen ma'ajiyar nahawun My Defragmenter ba."
+      "text": "Ba a zaɓi ingantaccen ma'ajiyar nahawun Gudanar da Ajiyata ba."
     },
     "translator.message.applicationFailedToStart.text": {
       "fallbackLocale": null,
@@ -726,6 +840,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Aikace-aikacen ya kasa farawa"
+    },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Aiwatar da wannan maɓallin kundin adireshi zuwa daftarin ƙwaƙwalwar ajiya kafin maye gurbin tushen."
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ana tallafawa maye gurbin atomatik ne kawai don fayilolin CommonJS .js da .cjs. JSON da sauran tsare-tsare suna buƙatar canjin wuri na musamman."
     },
     "translator.message.buildCancelledByUser.text": {
       "fallbackLocale": null,
@@ -776,12 +904,42 @@
       "status": "machine-generated",
       "text": "An sabunta rikodin katalog a cikin ƙwaƙwalwa"
     },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Layi mai tsari {candidateLine}. Sabunta layin tushen sa don kammala wannan ɗan takarar; kewayawa yana nan."
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tushen da aka tsara har yanzu yana buƙatar sabuntawa"
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tushen da aka tsara har yanzu suna buƙatar sabuntawa"
+    },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Zaɓi ma'ajiyar da ke da alhakin harshen /, harshen kanonali da ginin harshen /."
+      "text": "Zaɓi ma'ajiyar da ta mallaki language/canonical da build/language."
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Furfuren samfuri masu rikitarwa suna buƙatar haɗin mai riƙe wuri daga masu bincike kafin a canza su."
     },
     "translator.message.componentAddedInMemory.text": {
       "fallbackLocale": null,
@@ -818,12 +976,30 @@
       "status": "machine-generated",
       "text": "An kunna kiran Deep L API don wannan sake ginawa."
     },
+    "translator.message.deeplApiCallsUseValueEnglishForThis.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Deep L Application Programming Interface requests use {selectedBuildEnglishSource} English language for this rebuild"
+    },
     "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "An kashe Deep L; ana amfani da Turanci da aka daidaita."
+    },
+    "translator.message.deeplIsDisabledUsingValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Deep L is disabled; using {selectedBuildEnglishSource} English language fallbacks"
     },
     "translator.message.draftUpdated.text": {
       "fallbackLocale": null,
@@ -859,6 +1035,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Kwafi na {definitionIdentityKey}: {identity}"
+    },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ba za a iya sake suna maɓallan kundin da ke akwai ba. Ƙara sabon rikodi maimakon haka."
     },
     "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
       "fallbackLocale": null,
@@ -1136,6 +1319,13 @@
       "status": "machine-generated",
       "text": "An ƙi fayilolin hijira"
     },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ba a tallafawa maye gurbin igiyoyi da yawa ta hanyar ƙugiyar juyawa ta farko ba."
+    },
     "translator.message.noApplicableSchemaIsAvailableForValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1166,7 +1356,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ba ma'ajiyar harshe na My Defragmenter ba. Abin da ke ɓacewa: {missing}"
+      "text": "Ba ma'ajiyar harshe na Gudanar da Ajiyata ba. Abin da ke ɓacewa: {missing}"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
       "fallbackLocale": null,
@@ -1174,6 +1364,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ba a samu a cikin rahoton hijira; ana buƙatar sake ginawa."
+    },
+    "translator.message.onlyAnExistingNormalizedWordSubstitutionCanBe.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Only an existing normalized word substitution can be removed."
     },
     "translator.message.pathEscapesTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -1191,6 +1388,13 @@
       "status": "machine-generated",
       "text": "An ƙi rikodi"
     },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sabunta samfoti na juyawa kafin maye gurbin layin tushe."
+    },
     "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1207,6 +1411,27 @@
       "status": "machine-generated",
       "text": "Cire {id} daga rijistar muhalli?"
     },
+    "translator.message.replacedLineValueInValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Layi da aka maye gurbin {previewLine} a cikin {previewPath}."
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath",
+        "recoveryFiles"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Layi da aka maye gurbin {previewLine} a cikin {previewPath}. Ba za a iya cire madadin ba: {recoveryFiles}"
+    },
     "translator.message.requiredLocaleValueCannotBeDeleted.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1215,6 +1440,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ba za a iya goge wurin da ake buƙata {id} ba."
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mayar da fayilolin da aka samar da kuma tushen yankin da ke da ɗorewa"
     },
     "translator.message.runningLanguageBuildCommand.text": {
       "fallbackLocale": null,
@@ -1257,6 +1489,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Zaɓi Ɗan Takara Mai Yiwuwa, Aƙi, ko Bincika."
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Zaɓi Mai Yiwuwar Cancanta, Bita, An Ƙi, Gyara Lamba, ko Sabunta Lamba."
     },
     "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -1301,6 +1540,62 @@
       "status": "machine-generated",
       "text": "An buɗe fayil ɗin tushe"
     },
+    "translator.message.sourceLineReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "An Sauya Layin Tushe"
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ba a maye gurbin layin tushe ba"
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ba a kunna maye gurbin tushe ba."
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ba a shirya maye gurbin tushe ba."
+    },
+    "translator.message.startingElectron.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fara Electron..."
+    },
+    "translator.message.substitutionRemovalRejected.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Substitution removal rejected"
+    },
+    "translator.message.substitutionRemovedFromInMemoryDraft.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Substitution removed from in memory draft"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mai gano kasida ba ingantaccen mai gano JavaScript bane."
+    },
     "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1323,6 +1618,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Mai ginin harshe da aka saita baya bayyana zaɓaɓɓun ƙirar sarka."
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Na'urar daukar hoton da aka tsara ba za ta iya samar da wuraren tushen ɗan takara ba."
     },
     "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
       "fallbackLocale": null,
@@ -1399,14 +1701,35 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ba a samu gada mai iyakance na preload ba."
+      "text": "Ba a samu gada mai iyakance na farawa gada ba."
     },
     "translator.message.theScannedSourcePathIsNotANormalized.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The scanned source path is not a normalized repository-relative file path."
+      "status": "machine-generated",
+      "text": "Hanyar tushen da aka bincika ba hanyar fayil ce ta asali da ta dace da wurin ajiya ba."
+    },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Maɓallin kasida da aka zaɓa bai ƙunshi wannan rubutun ɗan takara ba."
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Layi da rubutu da aka zaɓa ba 'yan takarar ƙaura da aka ruwaito a yanzu ba ne."
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Layi da rubutu da aka zaɓa ba sa gano ɗan takarar ƙaura ɗaya na yanzu."
     },
     "translator.message.theSelectedLineIsNotACurrentMigration.text": {
       "fallbackLocale": null,
@@ -1422,12 +1745,40 @@
       "status": "machine-generated",
       "text": "Layin da aka zaɓa ba shi ne kirtani na hijira da ake ba da rahoto a halin yanzu ba."
     },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Layin tushen da aka zaɓa ya canza bayan an ƙirƙiri samfoti na canji."
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Layin tushen da aka zaɓa ba ya wanzu."
+    },
     "translator.message.theSelectedStringIsNoLongerACurrent.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Zaɓaɓɓen jerin ba shi ne ɗan takarar hijira da ake duba a halin yanzu ba."
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Zaren da aka zaɓa ba ya nan a layin tushen da aka ruwaito."
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Zaren da aka zaɓa yana faruwa fiye da sau ɗaya a layin tushen; ana buƙatar ainihin faruwa."
     },
     "translator.message.theSelectedTextIsNoLongerACurrent.text": {
       "fallbackLocale": null,
@@ -1436,12 +1787,51 @@
       "status": "machine-generated",
       "text": "An zaɓen rubutun ba shi ne ɗan takarar da ba a jera a yanzu ba."
     },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "itemRelativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "An canza tushen kafin a iya maye gurbinsa: {itemRelativePath}"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "An canza fayil ɗin tushen bayan an ƙirƙiri samfoti na canjin. Sake zaɓar ɗan takarar don sabunta shi."
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "An canza fayil ɗin tushen kafin maye gurbin. Sake zaɓar ɗan takarar don sabunta shi."
+    },
     "translator.message.theSourceFileCouldNotBeOpened.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ba a iya buɗe fayil ɗin tushe."
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sunan canjin canjin ba ingantaccen mai gano JavaScript bane."
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "syntaxError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "JavaScript ɗin da aka canza ba shi da inganci a cikin rubutun: {syntaxError}"
     },
     "translator.message.unableToAddFiles.text": {
       "fallbackLocale": null,
@@ -1537,7 +1927,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ba za a iya karanta ginin ba / harshe / rahotanni / rahoton hijira .json: {errorMessage}"
+      "text": "Ba a iya karanta build/language/reports/migration-report.json: {errorMessage}"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
       "fallbackLocale": null,
@@ -1560,6 +1950,13 @@
       "status": "machine-generated",
       "text": "Ba za a iya sabunta matsayin ɗan takara ba."
     },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ba za a iya sabunta daftarin ƙwaƙwalwar ajiya ba."
+    },
     "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1579,7 +1976,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Yi amfani da Ajiye don adana matsayin ɗan takara a cikin abubuwan haɗin kanun magana na / da na / na .json."
+      "text": "Yi amfani da Ajiye don ci gaba da matsayin shawara a cikin language/canonical/components.json."
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
       "fallbackLocale": null,
@@ -1602,12 +1999,39 @@
       "status": "machine-generated",
       "text": "Tabbatar da canje-canjen harshe; Deep L an kashe shi"
     },
+    "translator.message.validatingLanguageChangesDeeplIsDisabledAndFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validating language changes; Deep L is disabled and fallbacks use {selectedBuildEnglishSource} English language"
+    },
+    "translator.message.validatingLanguageChangesDeeplUsesValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validating language changes; Deep L uses {selectedBuildEnglishSource} English language"
+    },
     "translator.message.validationResult.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Sakamakon tabbatarwa"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "unresolvedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{unresolvedCount} waɗanda aka jera sunayensu har yanzu suna ɗauke da asalin tushensu ko kuma ba za a iya tabbatar da su ba. Rufewa yana ci gaba ba tare da an tilasta shi ba."
     },
     "translator.message.valueIsNotAFile.text": {
       "fallbackLocale": null,
@@ -1617,6 +2041,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "{lANGUAGE_REPORT_PATH} Ba fayil ba ne."
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{detail}. Za a ci gaba da kewayawa; ana ba da shawarar sabunta tushen amma ba a tilasta shi ba."
     },
     "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
       "fallbackLocale": null,
@@ -1739,7 +2172,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Yi amfani da Stop Build a cikin taga ci gaba, sannan ka jira dawowa baya ta kammala kafin ka rufe manhajar."
+      "text": "Yi amfani da Dakatar da Gina a cikin taga ci gaba, sannan ka jira dawowa baya ta kammala kafin ka rufe manhajar."
     },
     "translator.progress.waitingForSaveConfirmation.status": {
       "fallbackLocale": null,
@@ -1904,6 +2337,13 @@
       "status": "machine-generated",
       "text": "Ba da izinin kiran Deep L"
     },
+    "translator.ui.allowSaveAndRebuildToCallDeeplFor.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Allow save changes and Rebuild to call Deep L for missing translations."
+    },
     "translator.ui.alreadyInSourceFiles.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1991,22 +2431,22 @@
       "text": "Sassan da ake da su"
     },
     "translator.ui.badgeValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateDirty"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "badge {stateDirty}"
+      "status": "machine-generated",
+      "text": "lambar {stateDirty}"
     },
     "translator.ui.badgeValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationOk"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "badge {validationOk}"
+      "status": "machine-generated",
+      "text": "lambar {validationOk}"
     },
     "translator.ui.buildLanguageCatalogsValue.text": {
       "fallbackLocale": null,
@@ -2015,7 +2455,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "gina / harshe / kundin / {currentId}"
+      "text": "build/language/catalogs/{currentId}"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
       "fallbackLocale": null,
@@ -2031,6 +2471,58 @@
       "status": "machine-generated",
       "text": "Cikakkun bayanai game da ɗan takara"
     },
+    "translator.ui.candidateStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCodeUpdated"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Matsayin ɗan takara: {cANDIDATE_STATUS_LABELSCodeUpdated}"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCandidateStatus"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Matsayin ɗan takara: {cANDIDATE_STATUS_LABELSCandidateStatus}"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Maɓallin katalog ana buƙatar"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "initialCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Maɓallin katalog: {initialCatalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Maɓallin katalog: {catalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Maɓallin katalog: {resultCatalogKey}"
+    },
     "translator.ui.catalogMatches.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2045,6 +2537,24 @@
       "status": "machine-generated",
       "text": "Wuraren fitar da katalogi"
     },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "An ƙara rikodin katalogi don layin {candidateLine}. Sabunta layin tushe don kammala wannan ɗan takarar; kewayawa yana nan."
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogStatuses"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Matsayin katalogi: {catalogStatuses}"
+    },
     "translator.ui.categories.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2052,12 +2562,26 @@
       "status": "machine-generated",
       "text": "Rukunoni"
     },
+    "translator.ui.category.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Rukuni"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ana duba kariyar maye gurbin tushe..."
+    },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Zaɓuɓɓuka suna nuna harshe/, canonical / da yankunan harshe na .json. Yankunan harshe da aka yi rijista suna nan a gani amma ba za a iya zaɓar su ba."
+      "text": "madubin zabi language/canonical/language-locales.json. Yankunan yare masu rijista suna nan a bayyane amma ba za a iya zaɓar su ba."
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
       "fallbackLocale": null,
@@ -2154,6 +2678,22 @@
       "status": "machine-generated",
       "text": "Goge yankin"
     },
+    "translator.ui.deleteSubstitution.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete substitution"
+    },
+    "translator.ui.deleteTheNormalizedWordSubstitutionForValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "recordInput"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete the normalized word substitution for \"{recordInput}\"?"
+    },
     "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2198,6 +2738,20 @@
       "status": "machine-generated",
       "text": "A yi watsi da gyare-gyaren Rahoton Harshe da ba a adana ba kuma a sake loda abin?"
     },
+    "translator.ui.durableLocaleFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fayil ɗin yanki masu ɗorewa"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "An canza fayilolin yanki masu ɗorewa"
+    },
     "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2213,11 +2767,11 @@
       "text": "Gyara sashi"
     },
     "translator.ui.editMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit migration inventory"
+      "status": "machine-generated",
+      "text": "Gyara kayan ƙaura"
     },
     "translator.ui.editRecord.text": {
       "fallbackLocale": null,
@@ -2250,6 +2804,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Gyara rahoton da aka samar yanzu."
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Shigar da maɓallin kundin adireshi don samar da samfoti na canji."
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ba za a iya sake suna maɓallan kundin adireshi da ke akwai ba. Ƙara sabon rikodin don amfani da wani maɓalli."
     },
     "translator.ui.existingCategories.text": {
       "fallbackLocale": null,
@@ -2341,6 +2909,13 @@
       "status": "machine-generated",
       "text": "Ɓoye bangaren hagu"
     },
+    "translator.ui.highestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Layi mafi tsayi da farko"
+    },
     "translator.ui.identifier.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2349,11 +2924,11 @@
       "text": "Mai bayyana"
     },
     "translator.ui.inCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "In Catalog"
+      "status": "machine-generated",
+      "text": "A cikin kundin adireshi"
     },
     "translator.ui.inspectedValueFileSScannedValueAsText.text": {
       "fallbackLocale": null,
@@ -2395,6 +2970,13 @@
       "status": "machine-generated",
       "text": "Daga hagu zuwa dama (ltr)"
     },
+    "translator.ui.lineOrder.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Umarnin layi"
+    },
     "translator.ui.lineValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -2425,6 +3007,13 @@
       "status": "machine-generated",
       "text": "Ana loda bayanan harshen aikin."
     },
+    "translator.ui.loadingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Loda samfoti na canji..."
+    },
     "translator.ui.locales.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2432,28 +3021,35 @@
       "status": "machine-generated",
       "text": "Matsuguna"
     },
+    "translator.ui.lowestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Layi mafi ƙanƙanta da farko"
+    },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Yana kula da harshe /, siffofin canonical na /, .json → migration, da Inventory .scanFiles"
+      "text": "Yana kiyaye language/canonical/components.json → migrationInventory.scanFiles"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Yana kula da yankuna na harshe na /, / da .json. Goge wani yanki yana adana fayilolin tushe da aka rubuta kuma ta tsohuwa yana ci gaba da riƙe bayanan katalog da aka samar."
+      "text": "Yana kiyaye language/locales/locales.json. Share yankin yare yana adana fayilolin tushe da aka rubuta kuma yana adana bayanan kasida ta tsohuwa."
     },
     "translator.ui.maintainsValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionFile"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains {definitionFile}"
+      "status": "machine-generated",
+      "text": "Yana kula da {definitionFile}"
     },
     "translator.ui.migrationCoverageUnavailable.text": {
       "fallbackLocale": null,
@@ -2511,7 +3107,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ba a sami kowanne jerin kalmomin 'candidate' a cikin wannan fayil ba."
+      "text": "Ba a sami kowanne jerin kalmomin 'shawara' a cikin wannan fayil ba."
     },
     "translator.ui.noComponentMatchesTheSearch.text": {
       "fallbackLocale": null,
@@ -2562,12 +3158,26 @@
       "status": "machine-generated",
       "text": "Ba a jera fayilolin tushen hijira ba."
     },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Babu ɗan takara na gaba da ya dace da matattara na yanzu."
+    },
     "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Babu wani ɗan takara na gaba da ya dace da tacewar matsayin yanzu."
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Babu wani ɗan takara da ya taɓa dacewa da matattara na yanzu."
     },
     "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
       "fallbackLocale": null,
@@ -2626,32 +3236,32 @@
       "text": "Bayanan rubutu"
     },
     "translator.ui.openComponentCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open component catalog"
+      "status": "machine-generated",
+      "text": "Buɗe kasida ta ɓangaren"
     },
     "translator.ui.openDiagnosticMessages.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open diagnostic messages"
+      "status": "machine-generated",
+      "text": "Buɗe saƙonnin ganewar asali"
     },
     "translator.ui.openPreviewModes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open preview modes"
+      "status": "machine-generated",
+      "text": "Buɗe yanayin samfoti"
     },
     "translator.ui.openSemanticKeywords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open semantic keywords"
+      "status": "machine-generated",
+      "text": "Buɗe kalmomin ma'ana"
     },
     "translator.ui.openSource.text": {
       "fallbackLocale": null,
@@ -2660,12 +3270,19 @@
       "status": "machine-generated",
       "text": "Bude tushe"
     },
-    "translator.ui.potentialCandidate.text": {
-      "fallbackLocale": "en",
+    "translator.ui.original.text": {
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Potential Candidate"
+      "status": "machine-generated",
+      "text": "Asalin"
+    },
+    "translator.ui.potentialCandidate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mai Yiwuwa Ɗan Takarar"
     },
     "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
       "fallbackLocale": null,
@@ -2688,12 +3305,48 @@
       "status": "machine-generated",
       "text": "Ana shirya sake ginawa tare da kunna kiran API na Deep L"
     },
+    "translator.ui.preparingRebuildWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing rebuild with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingRebuildWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing rebuild with {useNormalizedEnglish} English language fallbacks"
+    },
     "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ana shirya ajiya yayin da aka kunna kiran API na Deep L"
+    },
+    "translator.ui.preparingSaveWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingSaveWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with {useNormalizedEnglish} English language fallbacks"
     },
     "translator.ui.previousLine.text": {
       "fallbackLocale": null,
@@ -2737,6 +3390,13 @@
       "status": "machine-generated",
       "text": "Haɗaɗɗun katalog masu sabuntawa."
     },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sake ƙirƙirar samfoti na canji..."
+    },
     "translator.ui.reject.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2766,6 +3426,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "A cire {filePath} daga jerin kayan hijira?"
+    },
+    "translator.ui.replaceLineInSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sake ƙirƙirar layi a cikin tushe"
     },
     "translator.ui.repositoryMaintenanceTool.text": {
       "fallbackLocale": null,
@@ -2811,6 +3478,13 @@
       "status": "machine-generated",
       "text": "Sanya girman wurin aiki da sakamakon aiki"
     },
+    "translator.ui.resolvingCatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mayar da maɓalli na kasida..."
+    },
     "translator.ui.restore.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2845,6 +3519,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Daga dama zuwa hagu (rtl)"
+    },
+    "translator.ui.role.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Matsayin"
     },
     "translator.ui.roles.text": {
       "fallbackLocale": null,
@@ -2985,7 +3666,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Zaɓi fayil ɗaya don nuna kowace sarkar da extract String Candidates ta karɓa."
+      "text": "Zaɓi fayil ɗaya don nuna kowace sarkar da 'Yan takarar Cire Zaren ta karɓa."
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
       "fallbackLocale": null,
@@ -3112,6 +3793,36 @@
       "status": "machine-generated",
       "text": "An tsallake hanyar(n) fayil ko babban fayil na {skipped}."
     },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ba a samun maye gurbin tushe."
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sake ƙirƙirar tushe yana buƙatar maɓallin kasida."
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sake ƙirƙirar tushe"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sabunta tushe yana nan a jiran aiki. {detail}. An ci gaba da kewayawa."
+    },
     "translator.ui.status.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -3156,12 +3867,49 @@
       "status": "machine-generated",
       "text": "Rahoton bai wanzu ba tukuna. Ajiye zai ƙirƙire shi."
     },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ba a maye gurbin layin tushe ba."
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Wannan maɓalli na yanzu yana amfani da katalog.format kuma ba ya buƙatar canjin tushe."
+    },
     "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Wannan wuri ana buƙatarsa ta mai gina harshe."
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "An riƙe wannan ɗan takarar da ya gabata don bincike; layin tushe na yanzu yana amfani da katalog.format."
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ba a samun samfoti na Canji: {resultError}"
+    },
+    "translator.ui.transformed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "An canza"
     },
     "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
       "fallbackLocale": null,
@@ -3190,6 +3938,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Sabbin canje-canje ba a adana ba suna nan a cikin ƙwaƙwalwa. Ci gaba zuwa wani kallo?"
+    },
+    "translator.ui.useNormalized.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized"
+    },
+    "translator.ui.useNormalizedEnglishForGeneratedFallbacksAndAutomated.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for generated fallbacks and automated translation input."
     },
     "translator.ui.useSuggestedKey.text": {
       "fallbackLocale": null,
@@ -3286,34 +4048,34 @@
       "text": "{fileCandidateCount} {fileCatalogedStringCount} wanda ba a jerin ba an same shi a cikin jerin"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileCandidateCount",
         "scannedFileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFileCandidateCount} potential candidate(s), {scannedFileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFileCandidateCount} ɗan takara(s), {scannedFileCatalogedStringCount} an samo a cikin kasida"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential candidate(s), {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} ɗan takara(s), {fileCatalogedStringCount} an samo a cikin kasida"
     },
     "translator.ui.valuePotentialValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential · {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} mai yiyuwa, {fileCatalogedStringCount} an samo a cikin kasida"
     },
     "translator.ui.valuePotentialValueInCatalogValue.text": {
       "fallbackLocale": null,
@@ -3335,6 +4097,24 @@
       "status": "machine-generated",
       "text": "{recordsCount} rikodi(di)"
     },
+    "translator.ui.valueRemaining.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryRemainingCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryRemainingCount} ya rage"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "statusElapsedMsToFixed"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{statusElapsedMsToFixed} daƙiƙa sun shuɗe"
+    },
     "translator.ui.valueSourceFileS.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -3344,6 +4124,16 @@
       "status": "machine-generated",
       "text": "{filesCount} Fayilolin tushe"
     },
+    "translator.ui.valueValueCompleted.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryCompletedCount",
+        "summaryTotalCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryCompletedCount}/{summaryTotalCount} an kammala"
+    },
     "translator.ui.view.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -3352,11 +4142,11 @@
       "text": "Dubawa"
     },
     "translator.ui.viewCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View candidates"
+      "status": "machine-generated",
+      "text": "Duba 'yan takara"
     },
     "translator.ui.viewHeadingDataViewToolbar.text": {
       "fallbackLocale": null,

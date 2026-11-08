@@ -20,7 +20,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ausgabe des Build-Befehls"
+      "text": "Ausgabe des Entstehungsprozess-Befehls"
     },
     "translator.accessibility.candidateStatus.label": {
       "fallbackLocale": null,
@@ -28,6 +28,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Kandidatenstatus"
+    },
+    "translator.accessibility.catalogRecordValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "recordKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogdatensatz {recordKey}"
     },
     "translator.accessibility.closeOperationResult.label": {
       "fallbackLocale": null,
@@ -44,6 +53,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Schließen {windowLabel}"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Abgeschlossene Startphasen"
     },
     "translator.accessibility.componentAssignedToValue.label": {
       "fallbackLocale": null,
@@ -105,6 +121,27 @@
       "status": "machine-generated",
       "text": "Katalogdatensatz bearbeiten {entryKey}"
     },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kandidaten nach Kategorie filtern"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kandidaten nach Komponente filtern"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kandidaten nach Rolle filtern"
+    },
     "translator.accessibility.filterCandidatesByStatus.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -112,12 +149,47 @@
       "status": "machine-generated",
       "text": "Kandidaten nach Status filtern"
     },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogdatensätze nach Kategorie filtern"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogdatensätze nach Komponente filtern"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogdatensätze nach Rolle filtern"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogdatensätze filtern nach Status"
+    },
     "translator.accessibility.filterMigrationSourceFiles.label": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Quelldateien für die Migration filtern"
+    },
+    "translator.accessibility.languageBuildOptions.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Language creation process options"
     },
     "translator.accessibility.languageReportArtifactText.label": {
       "fallbackLocale": null,
@@ -184,6 +256,20 @@
       "status": "machine-generated",
       "text": "Vorgang läuft"
     },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kandidaten nach Zeile sortieren"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogeinträge nach Quellzeile sortieren"
+    },
     "translator.accessibility.removeValue.label": {
       "fallbackLocale": null,
       "placeholders": [
@@ -230,6 +316,13 @@
       "status": "machine-generated",
       "text": "Vorgeschlagene Schlüssel"
     },
+    "translator.accessibility.useNormalizedEnglishForFallbacksAndAutomatedTranslation.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for fallbacks and automated translation"
+    },
     "translator.accessibility.viewMigrationCandidatesForValue.label": {
       "fallbackLocale": null,
       "placeholders": [
@@ -266,6 +359,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Beenden"
+    },
+    "translator.action.normalizedWords.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Normalized Words"
     },
     "translator.action.previewModes.label": {
       "fallbackLocale": null,
@@ -314,7 +414,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Build abbrechen"
+      "text": "Entstehungsprozess abbrechen"
     },
     "translator.action.validate.label": {
       "fallbackLocale": null,
@@ -342,7 +442,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Dateien, die unter den Sprach/-Locales erstellt wurden, bleiben stets erhalten."
+      "text": "Erstellte Dateien unter language/locales bleiben immer erhalten."
     },
     "translator.dialog.cancel.text": {
       "fallbackLocale": null,
@@ -514,7 +614,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Zurück zum Build"
+      "text": "Zurück zum Entstehungsprozess"
     },
     "translator.dialog.revertFailed.title": {
       "fallbackLocale": null,
@@ -591,7 +691,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Wählen Sie das Syntax-Repository „Meine Defragmentierung“ aus"
+      "text": "Wählen Sie das Grammatikregeln-Repository „Meine Defragmentierung“ aus"
     },
     "translator.dialog.startingMydefragLanguageMaintenance.title": {
       "fallbackLocale": null,
@@ -607,7 +707,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Die generierten Daten zu Build /, Sprache /, Katalogen / und {id} werden standardmäßig beibehalten."
+      "text": "Die generierten build/language/catalogs/{id}-Daten werden standardmäßig beibehalten."
     },
     "translator.dialog.unsavedLanguageChanges.title": {
       "fallbackLocale": null,
@@ -692,12 +792,19 @@
       "status": "machine-generated",
       "text": "{definitionTitle} durchsuchen"
     },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Eine aktuelle Quellzeile, ein Kandidatentext und ein Katalogschlüssel sind erforderlich."
+    },
     "translator.message.aLanguageBuildIsAlreadyRunning.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ein Sprach-Build wird bereits ausgeführt."
+      "text": "Ein Sprach-Entstehungsprozess wird bereits ausgeführt."
     },
     "translator.message.aLineAwareVscodiumOrVsCodeInstallation.text": {
       "fallbackLocale": null,
@@ -713,12 +820,19 @@
       "status": "machine-generated",
       "text": "Ein gescannter Quellpfad ist kein normalisierter relativer Dateipfad im Repository."
     },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Eine gültige Migrationsquellentransformation ist erforderlich."
+    },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Es wurde kein gültiges Syntax-Repository für „Meine Defragmentierung“ ausgewählt."
+      "text": "Es wurde kein gültiges Grammatikregeln-Repository für „Meine Defragmentierung“ ausgewählt."
     },
     "translator.message.applicationFailedToStart.text": {
       "fallbackLocale": null,
@@ -727,19 +841,33 @@
       "status": "machine-generated",
       "text": "Die Anwendung konnte nicht gestartet werden"
     },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Diesen Katalogschlüssel vor dem Ersetzen der Quelle auf den Entwurf im Arbeitsspeicher anwenden."
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Automatisches Ersetzen wird nur für CommonJS-Dateien der Formate .js und .cjs unterstützt. JSON und andere Formate erfordern eine formatspezifische Lokalisierungstransformation."
+    },
     "translator.message.buildCancelledByUser.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Der Build wurde vom Benutzer abgebrochen."
+      "text": "Der Entstehungsprozess wurde vom Benutzer abgebrochen."
     },
     "translator.message.buildProcessDidNotReportTerminationAfterCancellation.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Der Build-Prozess hat nach dem Abbruch keine Beendigung gemeldet."
+      "text": "Der Entstehungsprozess-Prozess hat nach dem Abbruch keine Beendigung gemeldet."
     },
     "translator.message.candidateStatusRejected.text": {
       "fallbackLocale": null,
@@ -776,12 +904,42 @@
       "status": "machine-generated",
       "text": "Katalogdatensatz im Speicher aktualisiert"
     },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogisierte Zeile {candidateLine}. Aktualisieren Sie die Quellzeile, um diesen Kandidaten zu vervollständigen; die Navigation bleibt verfügbar."
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogisierte Quelle muss noch aktualisiert werden."
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogisierte Quellen müssen noch aktualisiert werden."
+    },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Wählen Sie das Repository aus, das die Sprache „/“ (kanonisch) und die Sprache „/“ (Build) enthält."
+      "text": "Wählen Sie das Repository aus, das language/canonical und build/language besitzt."
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Komplexe Mustermodell-Ausdrücke erfordern vom Syntaxanalysator abgeleitete Platzhalterbindungen vor der Transformation."
     },
     "translator.message.componentAddedInMemory.text": {
       "fallbackLocale": null,
@@ -818,12 +976,30 @@
       "status": "machine-generated",
       "text": "Für diesen Neuaufbau sind Deep-L-API-Aufrufe aktiviert."
     },
+    "translator.message.deeplApiCallsUseValueEnglishForThis.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Deep L Application Programming Interface requests use {selectedBuildEnglishSource} English language for this rebuild"
+    },
     "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Deep L ist deaktiviert; es wird normiertes Englisch verwendet"
+    },
+    "translator.message.deeplIsDisabledUsingValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Deep L is disabled; using {selectedBuildEnglishSource} English language fallbacks"
     },
     "translator.message.draftUpdated.text": {
       "fallbackLocale": null,
@@ -848,7 +1024,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Doppelte Locale-ID: {localeId}"
+      "text": "Doppelte Sprachregion-ID: {localeId}"
     },
     "translator.message.duplicateValueValue.text": {
       "fallbackLocale": null,
@@ -859,6 +1035,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "{definitionIdentityKey}-Duplikat: {identity}"
+    },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Vorhandene Katalogschlüssel können nicht umbenannt werden. Fügen Sie stattdessen einen neuen Datensatz hinzu."
     },
     "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
       "fallbackLocale": null,
@@ -886,7 +1069,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Den Sprach-Build-Prozess zwangsweise beenden"
+      "text": "Den Sprach-Entstehungsprozess-Prozess zwangsweise beenden"
     },
     "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
       "fallbackLocale": null,
@@ -895,7 +1078,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Der generierte Locale-Katalog ist kein Verzeichnis: {relativePath}"
+      "text": "Der generierte Sprachregion-Katalog ist kein Verzeichnis: {relativePath}"
     },
     "translator.message.invalidComponentRequest.text": {
       "fallbackLocale": null,
@@ -925,7 +1108,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ungültige Locale-Anfrage."
+      "text": "Ungültige Sprachregion-Anfrage."
     },
     "translator.message.invalidLocaleStatusValue.text": {
       "fallbackLocale": null,
@@ -934,7 +1117,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ungültiger Locale-Status: {localeStatus}"
+      "text": "Ungültiger Sprachregion-Status: {localeStatus}"
     },
     "translator.message.invalidRecordRequest.text": {
       "fallbackLocale": null,
@@ -1048,7 +1231,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Die Locale „{id}“ existiert nicht mehr."
+      "text": "Die Sprachregion „{id}“ existiert nicht mehr."
     },
     "translator.message.migrationAssignmentRejected.text": {
       "fallbackLocale": null,
@@ -1136,6 +1319,13 @@
       "status": "machine-generated",
       "text": "Migrationsdateien abgelehnt"
     },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Mehrzeilige Zeichenkettenersetzung wird vom initialen Transformations-Integrationspunkt nicht unterstützt."
+    },
     "translator.message.noApplicableSchemaIsAvailableForValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1143,14 +1333,14 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Für „{viewName}“ ist kein entsprechendes Schema verfügbar."
+      "text": "Für „{viewName}“ ist kein entsprechendes Datenstruktur verfügbar."
     },
     "translator.message.noLanguageBuildIsRunning.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Es läuft derzeit kein Sprach-Build."
+      "text": "Es läuft derzeit kein Sprach-Entstehungsprozess."
     },
     "translator.message.noNewFilesAdded.text": {
       "fallbackLocale": null,
@@ -1166,7 +1356,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Dies ist kein Sprach-Repository für „My Defragmenter“. Fehlt: {missing}"
+      "text": "Dies ist kein Sprach-Repository für „Meine Speicherverwaltung“. Fehlt: {missing}"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
       "fallbackLocale": null,
@@ -1174,6 +1364,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Im Migrationsbericht nicht enthalten; Neuerstellung erforderlich."
+    },
+    "translator.message.onlyAnExistingNormalizedWordSubstitutionCanBe.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Only an existing normalized word substitution can be removed."
     },
     "translator.message.pathEscapesTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -1191,6 +1388,13 @@
       "status": "machine-generated",
       "text": "Datensatz abgelehnt"
     },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Aktualisieren Sie die Transformationsvorschau, bevor Sie die Quellzeile ersetzen."
+    },
     "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1205,7 +1409,28 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "„{id}“ aus der Locale-Registrierung entfernen?"
+      "text": "„{id}“ aus der Sprachregion-Registrierung entfernen?"
+    },
+    "translator.message.replacedLineValueInValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Zeile {previewLine} in {previewPath} ersetzt."
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath",
+        "recoveryFiles"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Zeile {previewLine} in {previewPath} ersetzt. Eine Sicherung konnte nicht entfernt werden: {recoveryFiles}"
     },
     "translator.message.requiredLocaleValueCannotBeDeleted.text": {
       "fallbackLocale": null,
@@ -1215,6 +1440,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Die erforderliche Sprachumgebungs{id}n kann nicht gelöscht werden."
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Generierte Dateien und dauerhafte Gebietsschemaquellen werden wiederhergestellt."
     },
     "translator.message.runningLanguageBuildCommand.text": {
       "fallbackLocale": null,
@@ -1257,6 +1489,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Wählen Sie „Potentieller Kandidat“, „Abgelehnt“ oder „Überprüfen“ aus."
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Wählen Sie: Kandidat, Überprüfung, Abgelehnt, Code bearbeiten oder Code aktualisieren."
     },
     "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -1301,6 +1540,62 @@
       "status": "machine-generated",
       "text": "Quelldatei geöffnet"
     },
+    "translator.message.sourceLineReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Quellzeile ersetzt."
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Quellzeile wurde nicht ersetzt."
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Quellersetzung ist nicht aktiviert."
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Quellersetzung ist noch nicht bereit."
+    },
+    "translator.message.startingElectron.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Electron wird gestartet…"
+    },
+    "translator.message.substitutionRemovalRejected.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Substitution removal rejected"
+    },
+    "translator.message.substitutionRemovedFromInMemoryDraft.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Substitution removed from in memory draft"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die Katalog-ID ist keine gültige JavaScript-ID."
+    },
     "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -1322,7 +1617,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Der konfigurierte Sprachgenerator stellt keine String-Kandidaten zur Extraktion bereit."
+      "text": "Der konfigurierte Sprachgenerator stellt keine Textwert-Kandidaten zur Extraktion bereit."
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Der konfigurierte Scanner kann keine Kandidaten-Quellspeicherorte bereitstellen."
     },
     "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
       "fallbackLocale": null,
@@ -1408,6 +1710,27 @@
       "status": "machine-generated",
       "text": "Der gescannte Quellpfad ist kein normalisierter relativer Dateipfad im Repository."
     },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Der ausgewählte Katalogschlüssel enthält diesen Kandidatentext nicht."
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die ausgewählte Zeile und der Text sind kein aktuell gemeldeter Migrationskandidat."
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die ausgewählte Zeile und der Text identifizieren keinen aktuellen Migrationskandidaten."
+    },
     "translator.message.theSelectedLineIsNotACurrentMigration.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1422,12 +1745,40 @@
       "status": "machine-generated",
       "text": "Die ausgewählte Zeile ist keine aktuell gemeldete Migrationszeichenfolge."
     },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die ausgewählte Quellzeile hat sich nach der Erstellung der Transformationsvorschau geändert."
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die ausgewählte Quellzeile existiert nicht mehr."
+    },
     "translator.message.theSelectedStringIsNoLongerACurrent.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Die ausgewählte Zeichenfolge ist kein aktuell geprüfter Migrationskandidat mehr."
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die ausgewählte Zeichenfolge ist in der gemeldeten Quellzeile nicht mehr vorhanden."
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die ausgewählte Zeichenfolge kommt mehrfach in der Quellzeile vor; ein exaktes Vorkommen ist erforderlich."
     },
     "translator.message.theSelectedTextIsNoLongerACurrent.text": {
       "fallbackLocale": null,
@@ -1436,12 +1787,51 @@
       "status": "machine-generated",
       "text": "Der markierte Text ist kein aktueller Nicht-Katalog-Kandidat mehr."
     },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "itemRelativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die Quelle wurde geändert, bevor sie ersetzt werden konnte: {itemRelativePath}"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die Quelldatei wurde geändert, nachdem die Transformationsvorschau erstellt wurde. Wählen Sie den Kandidaten erneut aus, um ihn zu aktualisieren."
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die Quelldatei wurde vor dem Ersetzen geändert. Wählen Sie den Kandidaten erneut aus, um ihn zu aktualisieren."
+    },
     "translator.message.theSourceFileCouldNotBeOpened.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Die Quelldatei konnte nicht geöffnet werden."
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Der Name der Transformationsvariablen ist kein gültiger JavaScript-Bezeichner."
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "syntaxError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Der transformierte JavaScript-Code ist syntaktisch ungültig: {syntaxError}"
     },
     "translator.message.unableToAddFiles.text": {
       "fallbackLocale": null,
@@ -1537,7 +1927,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Build-/ kann nicht gelesen werden: /, Berichte: /, Migrationsbericht: .json: {errorMessage}"
+      "text": "build/language/reports/migration-report.json kann nicht gelesen werden: {errorMessage}"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
       "fallbackLocale": null,
@@ -1560,6 +1950,13 @@
       "status": "machine-generated",
       "text": "Der Status des Bewerbers konnte nicht aktualisiert werden."
     },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Der Entwurf im Arbeitsspeicher konnte nicht aktualisiert werden."
+    },
     "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -1579,7 +1976,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Klicken Sie auf „Speichern“, um den Status des Kandidaten in den Komponenten „Sprach/“ (kanonisch /) und „.json“ zu speichern."
+      "text": "Verwenden Sie „Speichern“, um den Angebotsstatus in language/canonical/components.json beizubehalten."
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
       "fallbackLocale": null,
@@ -1602,12 +1999,39 @@
       "status": "machine-generated",
       "text": "Sprachänderungen validieren; Deep L ist deaktiviert"
     },
+    "translator.message.validatingLanguageChangesDeeplIsDisabledAndFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validating language changes; Deep L is disabled and fallbacks use {selectedBuildEnglishSource} English language"
+    },
+    "translator.message.validatingLanguageChangesDeeplUsesValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validating language changes; Deep L uses {selectedBuildEnglishSource} English language"
+    },
     "translator.message.validationResult.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Validierungsergebnis"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "unresolvedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{unresolvedCount}: Die katalogisierten Kandidaten enthalten noch ihre ursprüngliche Quellzeichenfolge oder konnten nicht verifiziert werden. Die Schließung wird ohne weitere Maßnahmen fortgesetzt."
     },
     "translator.message.valueIsNotAFile.text": {
       "fallbackLocale": null,
@@ -1617,6 +2041,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "{lANGUAGE_REPORT_PATH} ist keine Datei."
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{detail}: Die Navigation wird fortgesetzt; Aktualisierungen der Quellzeichenfolge werden empfohlen, sind aber nicht erforderlich."
     },
     "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
       "fallbackLocale": null,
@@ -1632,21 +2065,21 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Warten Sie, bis der Build abgeschlossen ist, bevor Sie das Programm beenden."
+      "text": "Warten Sie, bis der Entstehungsprozess abgeschlossen ist, bevor Sie das Programm beenden."
     },
     "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Warten Sie, bis der Sprach-Build abgeschlossen ist, bevor Sie das Berichtsartefakt speichern."
+      "text": "Warten Sie, bis der Sprach-Entstehungsprozess abgeschlossen ist, bevor Sie das Berichtsartefakt speichern."
     },
     "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Warten, bis der Sprach-Build-Vorgang abgeschlossen ist"
+      "text": "Warten, bis der Sprach-Entstehungsprozess-Vorgang abgeschlossen ist"
     },
     "translator.message.writeValueAuthoritativeFileS.text": {
       "fallbackLocale": null,
@@ -1662,7 +2095,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Erfasste Dateien für ein Rollback"
+      "text": "Erfassen generierter Dateien zur Wiederherstellung"
     },
     "translator.progress.checkingGeneratedFileChanges.status": {
       "fallbackLocale": null,
@@ -1725,21 +2158,21 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Sprach-Build anhalten"
+      "text": "Sprach-Entstehungsprozess anhalten"
     },
     "translator.progress.unableToStartLanguageBuild.status": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Der Sprach-Build kann nicht gestartet werden"
+      "text": "Der Sprach-Entstehungsprozess kann nicht gestartet werden"
     },
     "translator.progress.useStopBuildInTheProgressWindowThen.status": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Klicken Sie im Fortschrittsfenster auf „Aufbau stoppen“ und warten Sie, bis der Rollback abgeschlossen ist, bevor Sie die Anwendung schließen."
+      "text": "Klicken Sie im Fortschrittsfenster auf „Aufbau stoppen“ und warten Sie, bis die Wiederherstellung abgeschlossen ist, bevor Sie die Anwendung schließen."
     },
     "translator.progress.waitingForSaveConfirmation.status": {
       "fallbackLocale": null,
@@ -1867,7 +2300,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Alle kanonischen Locale-Vorlagen sind bereits registriert"
+      "text": "Alle kanonischen Sprachregion-Vorlagen sind bereits registriert"
     },
     "translator.ui.allComponentDetails.text": {
       "fallbackLocale": null,
@@ -1903,6 +2336,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "„Deep L“-Aufrufe zulassen"
+    },
+    "translator.ui.allowSaveAndRebuildToCallDeeplFor.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Allow save changes and Rebuild to call Deep L for missing translations."
     },
     "translator.ui.alreadyInSourceFiles.text": {
       "fallbackLocale": null,
@@ -2015,7 +2455,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Erstellen Sie / Sprache / Kataloge / {currentId}"
+      "text": "build/language/catalogs/{currentId}"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
       "fallbackLocale": null,
@@ -2031,6 +2471,58 @@
       "status": "machine-generated",
       "text": "Angaben zum Bewerber"
     },
+    "translator.ui.candidateStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCodeUpdated"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kandidatenstatus: {cANDIDATE_STATUS_LABELSCodeUpdated}"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCandidateStatus"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kandidatenstatus: {cANDIDATE_STATUS_LABELSCandidateStatus}"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogschlüssel erforderlich"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "initialCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogschlüssel: {initialCatalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogschlüssel: {catalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogschlüssel: {resultCatalogKey}"
+    },
     "translator.ui.catalogMatches.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2045,6 +2537,24 @@
       "status": "machine-generated",
       "text": "Ausgabesprachen des Katalogs"
     },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogeintrag für Zeile {candidateLine} hinzugefügt. Aktualisieren Sie die Quellzeile, um diesen Kandidaten zu vervollständigen; die Navigation bleibt verfügbar."
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogStatuses"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogstatus: {catalogStatuses}"
+    },
     "translator.ui.categories.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2052,12 +2562,26 @@
       "status": "machine-generated",
       "text": "Kategorien"
     },
+    "translator.ui.category.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kategorie"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Überprüfung der Schutzmechanismen für den Quellcodeaustausch..."
+    },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Die Auswahlmöglichkeiten entsprechen den Sprach/, den kanonischen / und den Sprachlokalisierungen .json. Registrierte Lokalisierungen bleiben sichtbar, können jedoch nicht ausgewählt werden."
+      "text": "Auswahlmöglichkeiten spiegeln language/canonical/language-locales.json. Registrierte Sprachregionen bleiben sichtbar, können aber nicht ausgewählt werden."
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
       "fallbackLocale": null,
@@ -2154,6 +2678,22 @@
       "status": "machine-generated",
       "text": "Lokalisierung löschen"
     },
+    "translator.ui.deleteSubstitution.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete substitution"
+    },
+    "translator.ui.deleteTheNormalizedWordSubstitutionForValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "recordInput"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete the normalized word substitution for \"{recordInput}\"?"
+    },
     "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2197,6 +2737,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Nicht gespeicherte Änderungen am Sprachbericht verwerfen und das Artefakt neu laden?"
+    },
+    "translator.ui.durableLocaleFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Dauerhafte Gebietsschemadateien"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Dauerhafte Gebietsschemadateien geändert"
     },
     "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
       "fallbackLocale": null,
@@ -2250,6 +2804,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Den aktuell erstellten Bericht bearbeiten."
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Geben Sie einen Katalogschlüssel ein, um die Transformationsvorschau zu generieren."
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Vorhandene Katalogschlüssel können nicht umbenannt werden. Fügen Sie einen neuen Datensatz hinzu, um einen anderen Schlüssel zu verwenden."
     },
     "translator.ui.existingCategories.text": {
       "fallbackLocale": null,
@@ -2341,6 +2909,13 @@
       "status": "machine-generated",
       "text": "Linkes Fenster ausblenden"
     },
+    "translator.ui.highestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Höchste Zeile zuerst"
+    },
     "translator.ui.identifier.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2395,6 +2970,13 @@
       "status": "machine-generated",
       "text": "Von links nach rechts (ltr)"
     },
+    "translator.ui.lineOrder.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Zeilenreihenfolge"
+    },
     "translator.ui.lineValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -2425,6 +3007,13 @@
       "status": "machine-generated",
       "text": "Projektsprachdaten werden geladen."
     },
+    "translator.ui.loadingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Transformationsvorschau wird geladen…"
+    },
     "translator.ui.locales.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2432,19 +3021,26 @@
       "status": "machine-generated",
       "text": "Ländereinstellungen"
     },
+    "translator.ui.lowestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Niedrigste Zeile zuerst"
+    },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Pflegt die Sprach/, die kanonische /, die Komponenten .json → Migrationsverzeichnis .scanFiles"
+      "text": "Behält language/canonical/components.json → migrationInventory.scanFiles"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Verwaltet Sprach/-Lokalisierungen /-Lokalisierungen .json. Beim Löschen einer Lokalisierung bleiben die erstellten Quelldateien erhalten, und die generierten Katalogdaten werden standardmäßig beibehalten."
+      "text": "Behält language/locales/locales.json bei. Durch das Löschen einer Sprachregion bleiben die erstellten Quelldateien und die generierten Kataloginformationen standardmäßig erhalten."
     },
     "translator.ui.maintainsValue.text": {
       "fallbackLocale": null,
@@ -2562,12 +3158,26 @@
       "status": "machine-generated",
       "text": "Es sind keine Migrationsquelldateien aufgeführt."
     },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kein nächster Kandidat entspricht den aktuellen Filtern."
+    },
     "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Es gibt keinen Kandidaten, der den aktuellen Statusfilter erfüllt."
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kein vorheriger Kandidat entspricht den aktuellen Filtern."
     },
     "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
       "fallbackLocale": null,
@@ -2660,6 +3270,13 @@
       "status": "machine-generated",
       "text": "Quelltext"
     },
+    "translator.ui.original.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Original"
+    },
     "translator.ui.potentialCandidate.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2688,12 +3305,48 @@
       "status": "machine-generated",
       "text": "Vorbereitung des Neuaufbaus mit aktivierten Deep-L-API-Aufrufen"
     },
+    "translator.ui.preparingRebuildWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing rebuild with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingRebuildWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing rebuild with {useNormalizedEnglish} English language fallbacks"
+    },
     "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Speichern mit aktivierten Deep-L-API-Aufrufen vorbereiten"
+    },
+    "translator.ui.preparingSaveWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingSaveWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with {useNormalizedEnglish} English language fallbacks"
     },
     "translator.ui.previousLine.text": {
       "fallbackLocale": null,
@@ -2737,6 +3390,13 @@
       "status": "machine-generated",
       "text": "Katalogtreffer werden aktualisiert."
     },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Transformationsvorschau wird neu generiert..."
+    },
     "translator.ui.reject.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2766,6 +3426,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "{filePath}us aus dem Migrationsbestand entfernen?"
+    },
+    "translator.ui.replaceLineInSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Zeile in Quelle ersetzen"
     },
     "translator.ui.repositoryMaintenanceTool.text": {
       "fallbackLocale": null,
@@ -2811,6 +3478,13 @@
       "status": "machine-generated",
       "text": "Größe des Arbeitsbereichs und der Arbeitsergebnisse anpassen"
     },
+    "translator.ui.resolvingCatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Katalogschlüssel wird aufgelöst..."
+    },
     "translator.ui.restore.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -2845,6 +3519,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Von rechts nach links (rtl)"
+    },
+    "translator.ui.role.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Rolle"
     },
     "translator.ui.roles.text": {
       "fallbackLocale": null,
@@ -2985,7 +3666,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Wählen Sie eine Datei aus, um alle Zeichenfolgen anzuzeigen, die von „String Candidates“ akzeptiert wurden."
+      "text": "Wählen Sie eine Datei aus, um alle von „Textwertvorschläge extrahieren“ akzeptierten Textwerte anzuzeigen."
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
       "fallbackLocale": null,
@@ -3112,6 +3793,36 @@
       "status": "machine-generated",
       "text": "{skipped}-Datei oder -Ordnerpfad(e) wurden übersprungen."
     },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Quellenersetzung nicht verfügbar."
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Quellenersetzung erfordert einen Katalogschlüssel."
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Vorschau der Quelltransformation"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Quellenaktualisierung ausstehend. {detail}. Navigation fortgesetzt."
+    },
     "translator.ui.status.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -3156,12 +3867,49 @@
       "status": "machine-generated",
       "text": "Der Bericht existiert noch nicht. Durch das Speichern wird er erstellt."
     },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Die Quellzeile wurde nicht ersetzt."
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Dieser Schlüssel verwendet bereits catalog.format und benötigt keine Quelltransformation."
+    },
     "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Diese Locale wird vom Sprachgenerator benötigt."
+      "text": "Diese Sprachregion wird vom Sprachgenerator benötigt."
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Dieser vorherige Kandidat wird zur Analyse beibehalten; die aktuelle Quellzeile verwendet bereits catalog.format."
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Transformationsvorschau nicht verfügbar: {resultError}"
+    },
+    "translator.ui.transformed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Transformiert"
     },
     "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
       "fallbackLocale": null,
@@ -3175,7 +3923,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Unüberprüfte Builds verwenden normiertes Englisch und rufen Deep L nicht auf."
+      "text": "Ungeprüfte Erstellungsprozesse verwenden normalisierte englische Sprache und rufen DeepL nicht auf"
     },
     "translator.ui.unsavedChanges.text": {
       "fallbackLocale": null,
@@ -3190,6 +3938,20 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Nicht gespeicherte Änderungen bleiben im Arbeitsspeicher erhalten. Möchten Sie zu einer anderen Ansicht wechseln?"
+    },
+    "translator.ui.useNormalized.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized"
+    },
+    "translator.ui.useNormalizedEnglishForGeneratedFallbacksAndAutomated.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for generated fallbacks and automated translation input."
     },
     "translator.ui.useSuggestedKey.text": {
       "fallbackLocale": null,
@@ -3335,6 +4097,24 @@
       "status": "machine-generated",
       "text": "{recordsCount} Eintrag(e)"
     },
+    "translator.ui.valueRemaining.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryRemainingCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryRemainingCount} verbleibend"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "statusElapsedMsToFixed"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{statusElapsedMsToFixed} verstrichene Sekunden"
+    },
     "translator.ui.valueSourceFileS.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -3343,6 +4123,16 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "{filesCount} Quelldatei(en)"
+    },
+    "translator.ui.valueValueCompleted.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryCompletedCount",
+        "summaryTotalCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryCompletedCount}/{summaryTotalCount} abgeschlossen"
     },
     "translator.ui.view.text": {
       "fallbackLocale": null,

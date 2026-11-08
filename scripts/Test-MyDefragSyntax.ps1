@@ -19,7 +19,6 @@ param(
         'LanguageValidation',
         'LanguageRuntime',
         'LanguageReport',
-        'LanguageApp',
         'LocaleApp',
         'Apps',
         'Coverage'
@@ -483,7 +482,7 @@ function Test-JavaScriptSyntax {
     $roots = @(
         (Join-Path $script:projectRoot 'src'),
         (Join-Path $script:projectRoot 'build\scripts'),
-        (Join-Path $script:projectRoot 'build\mdl-language-app'),
+        (Join-Path $script:projectRoot 'build\shared'),
         (Join-Path $script:projectRoot 'build\mdl-locale-app')
     )
     $files = @(
@@ -603,11 +602,6 @@ $extensionTests = @(
     $diagnosticTests
     $manifestTests
 ) | Sort-Object FullName -Unique
-$languageAppTests = @(
-    Get-ChildItem -LiteralPath (Join-Path $projectRoot 'build\mdl-language-app\tests') `
-        -File -Filter '*.test.js' |
-        Sort-Object FullName
-)
 $localeAppTests = @(
     Get-ChildItem -LiteralPath (Join-Path $projectRoot 'build\mdl-locale-app\tests') `
         -File -Filter '*.test.js' |
@@ -633,10 +627,6 @@ $reportDomains = [ordered]@{
     LanguageTooling = @{
         Label = 'Language tooling'
         Slug = 'language-tooling'
-    }
-    LanguageApp = @{
-        Label = 'Language Maintenance app'
-        Slug = 'language-maintenance-app'
     }
     LocaleApp = @{
         Label = 'Locale Maintenance app'
@@ -763,12 +753,6 @@ $checks = [ordered]@{
             Invoke-NodeScript -Check 'LanguageReport' -Path $script:languageReportTestPath
         }
     }
-    LanguageApp = @{
-        Group = 'LanguageApp'
-        ReportDomain = 'LanguageApp'
-        Description = 'Run each Language Maintenance app test file.'
-        Action = { Invoke-NodeTestFiles -Check 'LanguageApp' -Files $script:languageAppTests }
-    }
     LocaleApp = @{
         Group = 'LocaleApp'
         ReportDomain = 'LocaleApp'
@@ -841,7 +825,6 @@ $selectedGroups = @(
                 'LanguageValidation'
                 'LanguageRuntime'
                 'LanguageReport'
-                'LanguageApp'
                 'LocaleApp'
                 'Coverage'
             }
@@ -857,7 +840,6 @@ $selectedGroups = @(
                 'LanguageValidation'
                 'LanguageRuntime'
                 'LanguageReport'
-                'LanguageApp'
                 'LocaleApp'
             }
             'Server' {
@@ -876,7 +858,6 @@ $selectedGroups = @(
                 'Manifest'
             }
             'Apps' {
-                'LanguageApp'
                 'LocaleApp'
             }
             'Language' {

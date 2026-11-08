@@ -43,36 +43,42 @@ defaults to `build`.
 
 - `validate` (`npm run language:validate`) loads and validates all inputs,
   reports whether each registered locale output directory is existing, missing,
-  or invalid, writes nothing, and exits nonzero on errors.
+  or invalid, writes nothing, and exits nonzero on errors. It also prints the
+  normalized-input audit status and every affected locale source file. Audit
+  findings are warnings because protected syntax and reviewed exceptions may
+  require human classification.
+- `audit-normalized-inputs` (`npm run language:audit-normalized-inputs`) runs the
+  same validation and writes the current file list to
+  `build/language/reports/normalized-input-audit.md`, with entry-level evidence
+  in `normalized-input-audit.json`. A `partial` result means that one or more
+  canonical normalization inputs remain in non-English locale text.
 - `build` (`npm run language:build`) validates, creates missing locale and
   component outputs, and additively updates existing component files. Existing
-  entry keys are never replaced or removed. Before generated output is changed,
+  translations and historical entries are never replaced or removed. Generated
+  English fallback entries are refreshed from the selected English source.
+  Before generated output is changed,
   every current non-fallback generated translation is transactionally merged
   into its permanent `language/locales/<locale>/<component>.json` source. When
-  DeepL is configured, only missing generated entry keys receive API
-  translations, and accepted translations are persisted through the same
-  source path.
-  The terminal also states whether DeepL is configured in the current process,
-  which locales are eligible, how many suggestions were accepted, and how many
-  warnings occurred. If every canonical key already exists in its generated
-  component file, it explicitly reports that the API was not requested.
-- `build --UseNormalized` (or
-  `npm run language:build -- --UseNormalized`) follows the same additive rules
-  but bypasses DeepL. Missing generated entries use lossless normalized English
-  in `text`, retain `draft` status, and record `fallbackLocale: "en"`. Existing
-  entry keys remain unchanged. This supports complete exports and incremental
-  analyst workflows in which only newly introduced canonical keys are added.
-  The standalone `--` is the preferred npm argument-forwarding form. For npm 11
-  compatibility, the builder also recognizes the npm configuration environment
-  value produced by `npm run language:build --UseNormalized`, although npm
-  warns that this non-forwarding form will stop working in a future major
-  version.
+  the selected translator is configured, only missing generated entry keys
+  receive API translations, and accepted translations are persisted through
+  the same source path. DeepL remains the command-line default. The terminal
+  states which provider is selected and configured, which locales are eligible,
+  how many suggestions were accepted, and how many warnings occurred. If every
+  canonical key already exists in its generated component file, it explicitly
+  reports that the API was not requested. Normalized English is the default
+  source for both translator API requests and English fallback entries.
+- `--UseNormalized` selects lossless normalized English; `--UseCanonical`
+  selects canonical English. These source-selection flags are independent of
+  `--TranslationProvider`. In both modes, generated fallback entries retain
+  `draft` status and record `fallbackLocale: "en"`. The standalone `--` is the
+  preferred npm argument-forwarding form, for example
+  `npm run language:build -- --UseCanonical`.
 - `report` (`npm run language:report`) runs the same validation and full output
   generation as `build`, then prints a structured plain-text report and writes
   the same content to `build/language/reports/language-report.txt`. The report
   includes translation completeness, validation warnings, keyword collisions,
-  and the full migration-candidate inventory. It also accepts
-  `--UseNormalized` and uses the same normalized generation mode as `build`.
+  and the full migration-candidate inventory. It accepts the same English-source
+  and translation-provider options as `build`.
   Language Maintenance can edit this human-readable artifact directly, but the
   next `report`, `build`, or applicable rebuild operation may replace those
   manual changes.
@@ -81,8 +87,15 @@ defaults to `build`.
   then refreshes aggregate maps and reports. Existing translations are persisted
   and preserved, authored values are overlaid, and newly introduced canonical
   keys are added. MyDefrag Locale Maintenance invokes this action after an
-  accepted component-source save. Missing entry values may use DeepL while
-  authored and unrelated generated values remain unchanged.
+  accepted component-source save. Missing entry values may use the selected
+  translator API while authored and unrelated generated values remain
+  unchanged.
+- `--TranslationProvider=deepl|google|none` selects DeepL, Google Cloud
+  Translation Basic v2, or no translator API for `build`, `report`, and
+  `build-component`. The two-argument form, such as
+  `--TranslationProvider google`, is also accepted. `none` makes no translator
+  request and uses the selected normalized or canonical English fallback.
+  MyDefrag Locale Maintenance always passes one of these three values explicitly.
 - `--AllowFallbackReplacement=<exact-catalog-key>` can be added to
   `build-component` as the explicit opt-in for replacing one named translation
   with English fallback. The option is rejected by other actions and when the
@@ -110,8 +123,8 @@ table row per API request, ends with a summary of entries that remain rejected,
 records start and end quota usage, and never records the credential. A
 repository-wide runner lock rejects a second concurrent process; an abandoned
 lock is recovered only after its recorded process is no longer running.
-Supported options
-are `--PreflightOnly`, repeated `--Locale=<id>`, `--MaxCalls=<count>`,
+Supported options are `--UseNormalized` (the default), `--UseCanonical`,
+`--PreflightOnly`, repeated `--Locale=<id>`, `--MaxCalls=<count>`,
 `--RetryLimit=<count>`, `--RetryBaseMs=<milliseconds>`, and
 `--SystemicFailureLimit=<count>`, `--CallsPerMinute=<count>`, and
 `--Report=<path>`. Translation calls default to 30 per minute and honor a
@@ -122,15 +135,24 @@ run after repeated non-retryable HTTP request errors.
 
 `npm run language:catalogs:apps` runs
 `build/scripts/generate-electron-component-catalogs.js`. It scans production
-JavaScript and HTML under these roots:
+JavaScript and HTML under this project-owned root:
 
-- `build/mdl-language-app` -> `translator`
 - `build/mdl-locale-app` -> `locales`
+
+The `translator` application moved to the independent `D:\MdmLocalize`
+project. Existing translator catalog and locale entries remain preserved here
+so the active translation work is not discarded by this extractor.
 
 Tests, styles, and packaging metadata are excluded. The command updates only
 the authored entries in `language/canonical/component-catalog.json`, the two
 component descriptions, and their production source-file assignments in
 `language/canonical/components.json`.
+
+If a previously extracted app string is no longer present in source, its
+catalog entry is retained when a durable authored locale component still uses
+that key. This keeps additive locale sources valid until that translated key is
+retired through an explicit catalog-and-locale migration. Source-removed keys
+with no authored locale use are dropped from the canonical catalog.
 
 This command does not generate any locale catalog. Locale outputs remain the
 responsibility of `language:build`, `language:report`, or `build-component`.
@@ -351,11 +373,14 @@ from an active directory also produces a warning.
 
 ## API-Assisted Missing Values
 
-The builder and MyDefrag Locale Maintenance share
-`build/language/translation/deepl-translation-service.js`. Configure it with the
-environment-only `DeeplApi` (or `DEEPL_API_KEY`); optional `DEEPL_API_URL` and
-`DEEPL_TIMEOUT_MS` values are documented in `locale-maintenance-app.md`. The key
-is never read from or written to repository JSON.
+The builder and MyDefrag Locale Maintenance share the provider interfaces in
+`build/language/translation/deepl-translation-service.js` and
+`build/language/translation/google-translation-service.js`. Configure DeepL
+with the environment-only `DeeplApi` (or `DEEPL_API_KEY`). Configure Google
+Cloud Translation Basic v2 with `GoogleTranslateApi` (or
+`GOOGLE_TRANSLATE_API_KEY`). Optional provider endpoint and timeout variables
+are documented in `locale-maintenance-app.md`. Keys are never read from or
+written to repository JSON.
 
 Environment variables are inherited when the terminal process starts. After
 adding a machine-level `DeeplApi`, open a new terminal before building, or import
@@ -369,17 +394,19 @@ npm run language:build
 Translation applies only to canonical `text` values whose selected locale has
 no aggregate or permanent component override. Keys, identifiers, components,
 statuses, enum values, paths, placeholders, and syntax tokens are not submitted
-as translatable content. Immediately before each API request, the builder uses
-the shared text normalizer to expand identifier separators and apply the ordered,
-case-insensitive `input`/`output` rules in
-`language/canonical/normalized-words.json`. The normalized request text is not
-written back to the canonical catalog. JavaScript template interpolation
+as translatable content. By default, immediately before each API request, the
+builder uses the shared text normalizer to expand identifier separators and
+apply the ordered, case-insensitive `input`/`output` rules in
+`language/canonical/normalized-words.json`. `--UseCanonical` sends the original
+canonical text instead. Neither source selection rewrites the canonical catalog.
+JavaScript template interpolation
 expressions such as `${uri.toString()}` are preserved exactly by the default
 `preserveTemplateExpressions` option. Build calls also enable
 `preserveRuntimeSyntax`, which keeps codicons, placeholders, file extensions,
 URLs, `/`, `\`, and meaningful multi-character separators exact. These tokens
-are shielded with ignored XML tags for DeepL and must each be restored exactly;
-a missing or duplicated marker makes the API result unusable.
+are shielded with ignored XML tags for DeepL or no-translate HTML spans for
+Google Translate and must each be restored exactly; a missing or duplicated
+marker makes the API result unusable.
 
 For every entry considered by broad `build` and `report` actions, the precedence
 and durability order is:
@@ -393,18 +420,20 @@ and durability order is:
    the selected component during a targeted build.
 4. Usable API translations receive `machine-generated` status and are persisted
    into permanent per-locale component sources.
-5. Canonical English text uses `fallbackLocale: "en"` and remains generated-only.
+5. The selected normalized or canonical English source uses
+   `fallbackLocale: "en"` and remains generated-only.
 
-`--UseNormalized` replaces the API step for `build` and `report`; it never
-constructs or calls the DeepL service. Existing authored locale values still
-have first precedence. For missing values, the lossless normalized canonical
-English is written as a `draft` with `fallbackLocale: "en"`, so reports and the
-maintenance UI do not misrepresent it as a completed translation. Existing
-generated entry keys remain untouched; only absent keys are added. The flag is
-rejected for `validate` and `build-component`.
+English source and translation provider are separate choices. `--UseNormalized`
+is the default and supplies normalized text to translator APIs and generated
+fallback entries. `--UseCanonical` supplies canonical text to both. Use
+`--TranslationProvider=none` with either choice to avoid every translator API.
+Existing authored and generated translations still have first precedence;
+generated English fallback entries may be refreshed when the selected source
+changes.
 
 Missing configuration, unsupported languages, HTTP errors, empty results, and
-placeholder mismatches produce warnings and select canonical fallback. These
+placeholder mismatches produce warnings and select the chosen English fallback.
+These
 translation-only failures never fail the build. Invalid canonical input,
 output-path conflicts, and write failures retain their existing failure
 behavior. Accepted API translations and existing non-fallback generated
@@ -428,6 +457,9 @@ The main relationships enforced by the script are:
 - Review statuses must belong to `VALID_STATUSES`.
 - Normalized-word rules must be an array of non-empty `input` and `output`
   strings with case-insensitively unique inputs and no unsupported fields.
+- Non-English authored locale entry and keyword text is checked for normalized
+  input words. URLs, placeholders, codicons, file extensions, template
+  expressions, and other protected runtime syntax are excluded from matching.
 - Every `EXPECTED_LOCALES` ID must exist in the locale registry.
 - Each locale's rendered keyword spellings must be collision-free after trimming
   and locale-aware lowercasing.
@@ -449,6 +481,8 @@ build/language/
   reports/keyword-collisions.json
   reports/language-build-report.json
   reports/migration-report.json
+  reports/normalized-input-audit.json
+  reports/normalized-input-audit.md
   reports/translation-completeness.json
 ```
 
@@ -461,13 +495,15 @@ below `build/language/catalogs/`:
 - A missing locale directory is created and receives a complete component
   catalog set.
 - A missing component file inside an existing locale is created.
-- An existing component file is parsed and receives only canonical entry keys
-  absent from its `entries` object. Existing entry objects and unrelated
-  top-level fields are preserved.
+- An existing component file is parsed and receives missing canonical entry keys.
+  Existing translations, historical entries, and unrelated top-level fields are
+  preserved; existing English fallback entries are refreshed from the selected
+  English source.
 - Invalid JSON, mismatched locale/component metadata, a non-object `entries`
   value, or a non-file component path fails the action before catalog writes.
-- Missing values use API translation when configured and usable, normalized
-  English under `--UseNormalized`, or canonical English fallback.
+- Missing values use API translation when configured and usable. API failures
+  and provider-free builds use normalized English by default or canonical
+  English under `--UseCanonical`.
 - A locale path that exists but is not a directory is a validation error.
 
 The shared `catalogs/` directory and its locale directories are never deleted.
@@ -510,13 +546,31 @@ When adding or changing language data:
 3. Update the explicit JavaScript validator if the rule must be enforced during
    the build.
 4. Run `npm run language:validate` before generation.
-5. For translator component changes, use MyDefrag Locale Maintenance or run
+5. Run `npm run language:audit-normalized-inputs` when a durable per-file list
+   of normalized inputs remaining in translated text is required.
+6. For translator component changes, use MyDefrag Locale Maintenance or run
    `build-component <locale> <component>` to refresh only that component.
-6. Use `npm run language:build` to generate complete catalogs only for missing
+7. Use `npm run language:build` to generate complete catalogs only for missing
    locale directories.
-7. Run `npm run test:language` when catalog fallback, keyword maps, or runtime
+8. Run `npm run test:language` when catalog fallback, keyword maps, or runtime
    loading behavior could be affected.
 
 Keep semantic identities stable. Localized display text and keyword spellings may
 change, but catalog keys, diagnostic codes, keyword IDs, and variable symbol IDs
 are the cross-file references that make regeneration deterministic.
+
+## Language Project Manifest and Source Roots
+
+`language/language-project.json` is the integration contract for MdmLocalize.
+It explicitly declares this project's ID, authored/generated roots, protocol-2
+adapter, and logical source roots. Migration inventory entries may include a
+`rootId`; an omitted value means `project` for backward compatibility.
+
+External machine paths are not stored in this repository. MdmLocalize passes
+the user's explicit mappings to the validator/build process in
+`MDM_LOCALIZE_SOURCE_ROOTS`. The build resolves every migration source as
+`(rootId, relative path)`, rejects absolute and escaping paths, and verifies the
+final real path before reading it. Candidate Status V2 records are unique by
+occurrence ID. The legacy report parser intentionally ignores a status when
+multiple V2 decisions share the same root/path/text identity, preventing one
+decision from being fanned out to duplicate occurrences.

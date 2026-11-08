@@ -8,11 +8,8 @@
 .codex/**
 .ollama/**
 .user/**
-docs/**
-!docs/MyDefrag Help/
-!docs/MyDefrag Help/language/
-!docs/MyDefrag Help/language/**
-scripts/**
+build/scripts/Inventory-*.cjs
+runs/**
 
 ###############################################################################
 # Build artifacts

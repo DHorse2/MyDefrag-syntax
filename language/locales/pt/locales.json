@@ -3,7 +3,7 @@
   "component": "locales",
   "entries": {
     "locales.accessibility.buildCommandOutput.label": {
-      "text": "Saída do comando «build»",
+      "text": "Saída do comando «processo de criação»",
       "status": "machine-generated"
     },
     "locales.accessibility.component.label": {
@@ -167,7 +167,7 @@
       "status": "machine-generated"
     },
     "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
-      "text": "Não foi selecionado um repositório de localização válido do My Defragmenter.",
+      "text": "Não foi selecionado um repositório de localização válido do Gerenciamento de Armazenamento.",
       "status": "machine-generated"
     },
     "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
@@ -179,7 +179,7 @@
       "status": "machine-generated"
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "text": "Escolha o repositório que contém as localizações de idioma / e crie / idioma.",
+      "text": "Escolha o repositório que possui language/locales e build/language.",
       "status": "machine-generated"
     },
     "locales.message.componentRebuildFailed.text": {
@@ -195,7 +195,7 @@
       "status": "machine-generated"
     },
     "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
-      "text": "O texto em inglês é a versão canónica e deve ser mantido na secção «Manutenção da Língua» do My Defragmenter.",
+      "text": "O texto em inglês é a versão canónica e deve ser mantido na secção «Manutenção da Língua» do Gerenciamento de Armazenamento.",
       "status": "machine-generated"
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
@@ -227,7 +227,7 @@
       "status": "machine-generated"
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "text": "Não é um repositório de localizações do My Defragmenter. Falta: {missing}",
+      "text": "Não é um repositório de localizações do Gerenciamento de Armazenamento. Falta: {missing}",
       "status": "machine-generated"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {

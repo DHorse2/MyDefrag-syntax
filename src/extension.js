@@ -39,11 +39,27 @@ const {
 } = require('./shared/documentLinks');
 const { createHelpCommandTrust } = require('./shared/helpDocumentation');
 const { createFeatureToggleController } = require('./shared/featureToggles');
+const { createLanguageCatalog } = require('./shared/languageCatalog');
 const languageData = require('./server/languageData');
 const { CompletionPointProvider } = require('./completion/completionPointProvider');
 const { registerDiagnosticNavigation } = require('./diagnostics/registerDiagnosticNavigation');
+const {
+    PREVIEW_SCHEME,
+    DEFAULT_PREVIEW_MODE,
+    PREVIEW_MODES,
+    buildPreviewDocumentPath,
+    buildPreviewQuery,
+    createLanguageClientDocumentSelector,
+    getPreviewMode,
+    parsePreviewQuery
+} = require('./preprocess/preview-options');
 
-const channelName = 'MyDefrag Syntax';
+const catalog = createLanguageCatalog({
+    locale: vscode.env.language,
+    components: ['extension']
+});
+const tMessage2 = catalog.format("extension.message.channelName.mydefragSyntax.text").text;
+const channelName = tMessage2;
 var isServer = false;
 var ParserStateBar;
 let client;
@@ -233,7 +249,6 @@ async function findFileWalkingUp(startDir, filePath, token) {
         if (token?.isCancellationRequested) {
             return { foundPath: null, directLinkValid: false, stepsUpward };
         }
-
         logger.info(null, `Next candidate: ${dir}, and ${filePath}`); // Debug only
         const candidate = path.resolve(dir, filePath).replace(/\//g, '\\');
         if (await pathExists(candidate)) {
@@ -395,7 +410,7 @@ async function activate(context) {
     let definitionProvider;
     let referenceProvider;
     let linkProvider;
-    let providerRegistration;
+    let previewDocumentSequence = 0;
     let openCmd;
     let batLinkProvider;
     let inlineCompletionProvider;
@@ -453,7 +468,8 @@ async function activate(context) {
             console?.error(message);
             throw new Error(message);
         }
-        console?.log("init done")
+        const tMessage = catalog.format("extension.log.activate.console.log.initDone.info").text;
+        console?.log(tMessage)
         console?.log(`EXTENSION: config: ${config}`)
         console?.log(`iniData: ${iniData}`)
         try { // Logging Channel and Status Bar
@@ -472,7 +488,8 @@ async function activate(context) {
             });
             if (iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severity.Warning, loggedMessages, iniErrors) }
             console?.log(iniData);
-            logger.info(null, "MYDC EXTENSION INITIALIZED");
+            const tMessage = catalog.format("extension.log.activate.logger.info").text;
+            logger.info(null, tMessage);
             // ─────────────────────────────────────────────────────────────────────────────────
             ParserStateBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
             ParserStateBar.text = `MyDefrag Unknown document type`;
@@ -481,12 +498,12 @@ async function activate(context) {
             logger.dbg(3, `  Settings source=VSCodium, Debug=${isDebugOn}`)
 
         } catch (errResult) {
-            const message = `extension.js:activate Unexpected error in Logging Channel and Status Bar initialization: ${errResult.message}`;
+             const message = `extension.js:activate Unexpected error in Logging Channel and Status Bar initialization: ${errResult.message}`;
             console?.error(message);
             logger?.err?.(errResult, message);   // output channel
             throw new Error(message);
         }
-        logger.dbg(3, `  Channel, Status Bar done`)
+         logger.dbg(3, `  Channel, Status Bar done`)
     } catch (errResult) {
         const message = `extension.js:activate Unexpected error initializing extension: ${errResult.message}`;
         logger?.err?.(errResult, message);   // output channel
@@ -879,7 +896,8 @@ async function activate(context) {
                         const absoluteUri = vscode.Uri.file(absolutePath);
                         const dir = path.dirname(absolutePath);
                         const base = path.basename(absolutePath);
-                        logger.dbg(3, `File name is: (`, filePath, `)`);
+                        const tMessage17 = catalog.format("extension.log.activate.provideDocumentLinks.logger.dbg.fileNameIs.structural").text;
+                        logger.dbg(3, tMessage17, filePath, `)`);
                         logger.info(null, `BATCH file match: index: ${match.index}, range[${range.start.line}::${range.start.character}], ${match[0]}, ${match[1]}, ${match}`);
                         const lineNum = start.line + 1;
                         const colNum = start.character + 1;
@@ -891,12 +909,15 @@ async function activate(context) {
                             return [];
                         }
 
-                        let batMessage = "No message available";
+                        const tMessage16 = catalog.format("extension.log.activate.provideDocumentLinks.batMessage.noMessageAvailable.message").text;
+                        let batMessage = tMessage16;
                         let severity = 4;
                         if (foundPath) {
-                            logger.dbg(5, ` referenceRelativePathLevel: ${referenceRelativePathLevel}`)
+                            const tMessage15 = catalog.format("extension.log.activate.provideDocumentLinks.logger.dbg.referencerelativepathlevelReferencerelativepathlevel.text", { referenceRelativePathLevel }).text;
+                            logger.dbg(5, tMessage15)
                             if (!directLinkValid) {
-                                batMessage = `BAT Link: Found in PARENT ${stepsUpward} steps up, possibly invalid.`
+                                const tMessage14 = catalog.format("extension.warning.activate.provideDocumentLinks.batLinkFoundInParentStepsupward.error", { stepsUpward }).text;
+                                batMessage = tMessage14
                                 severity = referenceRelativePathLevel;
                             } else {
                                 batMessage = `${document.uri.fsPath}:${lineNum}:${colNum}: Link target found: ${foundPath}`;
@@ -904,10 +925,12 @@ async function activate(context) {
                             }
                         } else {
                             if (hasMacro) {
-                                batMessage = `BAT Link: Contains execution time macros: ${filePath}`;
+                                const tMessage13 = catalog.format("extension.warning.activate.provideDocumentLinks.batLinkContainsExecutionTimeMacros.structural", { filePath }).text;
+                                batMessage = tMessage13;
                                 severity = referenceContainsMacrosLevel;
                             } else {
-                                batMessage = `BAT Link: File not found: ${filePath}`;
+                                const tMessage12 = catalog.format("extension.warning.activate.provideDocumentLinks.batLinkFileNotFoundFilepath.structural", { filePath }).text;
+                                batMessage = tMessage12;
                                 severity = referenceFileNotFoundLevel;
                             }
                         }
@@ -1034,7 +1057,8 @@ async function activate(context) {
     );
     // ─────────────────────────────────────────────────────────────────────────────────
     //#region Open Preview Provider  ───────────────────────────────────────────────────────
-    function generatePreview(sourcePath) {
+    function generatePreview(sourcePath, modeId = DEFAULT_PREVIEW_MODE) {
+        getPreviewMode(modeId);
         const preprocessScript = path.join(
             __dirname,
             'preprocess',
@@ -1046,6 +1070,8 @@ async function activate(context) {
                 [
                     preprocessScript,
                     sourcePath,
+                    '--mode',
+                    modeId,
                 ],
                 {
                     cwd: path.dirname(sourcePath),
@@ -1067,17 +1093,22 @@ async function activate(context) {
                 return `${nextMessage}`;
             }
             if (result.status !== 0) {
-                const failureDetail = stderr.trim() || `Preview processor exited with status ${result.status}.`;
-                const nextMessage = `ERROR: Preview generation failed:\n\n${failureDetail}`;
+                // const tMessage11 = catalog.format("extension.log.activate.generatePreview.result.status.previewProcessorExitedWithStatusResult.status", result.status).text;
+                const failureDetail = stderr.trim() || catalog.format("extension.log.activate.generatePreview.result.status.previewProcessorExitedWithStatusResult.status", result.status).text;
+                const tMessage10 = catalog.format("extension.log.activate.generatePreview.nextMessage.errorPreviewGenerationFailed.text", { failureDetail }).text;
+                const nextMessage = tMessage10;
                 logger.err(null, nextMessage);
                 return nextMessage;
             }
             if (stderr.length) {
-                logger.dbg(8, `Preview processor diagnostics:\n${stderr}`);
+                const tMessage9 = catalog.format("extension.log.activate.generatePreview.logger.dbg.previewProcessorDiagnosticsStderr.text", { stderr }).text;
+                logger.dbg(8, tMessage9);
             }
-            logger.info(null, `Finished preview summary!`)
+            const tMessage8 = catalog.format("extension.log.activate.generatePreview.logger.info.finishedPreviewSummary.info").text;
+            logger.info(null, tMessage8)
             if (!stdout.length) {
-                const nextMessage = 'ERROR: Preview generation produced no content.';
+                const tMessage7 = catalog.format("extension.message.activate.generatePreview.GenerationProducedNoContent.text").text;
+                const nextMessage = tMessage7;
                 logger.err(null, nextMessage);
                 return nextMessage;
             }
@@ -1091,51 +1122,66 @@ async function activate(context) {
         }
     }
     // ─────────────────────────────────────────────────────────────────────────────────
-    // ───────────────── MyPreviewProvider ─────────────────────────────────────────────
     // ── Open Preview Function ───────────────────────────────────────────────────────
+    async function openPreview(uri, modeId = DEFAULT_PREVIEW_MODE) {
+        const mode = getPreviewMode(modeId);
+        const editor = vscode.window.activeTextEditor;
+        let sourceUri = uri || (editor && editor.document.uri);
+        if (!sourceUri) {
+            const tMessage = catalog.format("extension.message.noActiveDocument.warning").text;
+            vscode.window.showWarningMessage(tMessage);
+            return;
+        }
+        if (
+            sourceUri.scheme === PREVIEW_SCHEME
+            && new URLSearchParams(sourceUri.query).has('source')
+        ) {
+            sourceUri = vscode.Uri.parse(parsePreviewQuery(sourceUri.query).source);
+        }
+        const previewPath = buildPreviewDocumentPath(sourceUri.path, mode.id);
+        const previewUri = sourceUri.with({
+            scheme: PREVIEW_SCHEME,
+            path: previewPath,
+            query: buildPreviewQuery(
+                sourceUri.toString(),
+                mode.id,
+                `${Date.now()}-${previewDocumentSequence += 1}`
+            ),
+            fragment: ''
+        });
+        const previewContent = generatePreview(sourceUri.fsPath, mode.id);
+        let doc = await vscode.workspace.openTextDocument(previewUri);
+        doc = await vscode.languages.setTextDocumentLanguage(
+            doc,
+            mode.executable ? 'mydfrg' : 'plaintext'
+        );
+        const edit = new vscode.WorkspaceEdit();
+        edit.insert(doc.uri, new vscode.Position(0, 0), previewContent);
+        const applied = await vscode.workspace.applyEdit(edit);
+        if (!applied) {
+            throw new Error(`Unable to populate editable preview: ${doc.uri.toString()}`);
+        }
+        await vscode.window.showTextDocument(
+            doc,
+            vscode.ViewColumn.Active
+        );
+    }
     const openPreviewCommand = vscode.commands.registerCommand(
         'mydfrg.openPreview',
-        async (uri) => {
-            const editor = vscode.window.activeTextEditor;
-            const sourceUri = uri || (editor && editor.document.uri);
-            if (!sourceUri) {
-                const tMessage = catalog.format("extension.message.noActiveDocument.warning").text;
-                vscode.window.showWarningMessage(tMessage);
-                return;
-            }
-            const mergedPath = sourceUri.path.replace(/(\.\w+)$/, '.merged$1');
-            const previewUri = sourceUri.with({
-                scheme: 'mydfrg-preview',
-                path: mergedPath
-            });
-            const doc = await vscode.workspace.openTextDocument(previewUri);
-            await vscode.window.showTextDocument(
-                doc,
-                vscode.ViewColumn.Active
-            );
-        }
+        uri => openPreview(uri, DEFAULT_PREVIEW_MODE)
     );
-    class MyPreviewProvider {
-        provideTextDocumentContent(uri) {
-            const mergedPath = uri.fsPath;
-            const sourcePath = mergedPath.replace(/\.merged(\.\w+)$/, '$1');
-            logger.info(null, `Preview source: ${sourcePath}\n`);
-            return generatePreview(sourcePath);
-            // return generatePreview(uri.fsPath);
-        }
-    }
-    const previewProvider = new MyPreviewProvider();
+    const previewModeCommands = PREVIEW_MODES.map(mode =>
+        vscode.commands.registerCommand(
+            mode.command,
+            uri => openPreview(uri, mode.id)
+        )
+    );
     // ─────────────────────────────────────────────────────────────────────────────────
     // Register Diagnostic Explorer
     const diagnosticNavigation = registerDiagnosticNavigation(context);
-    // ─────────────────────────────────────────────────────────────────────────────────
-    // Text Document Content Provider
-    providerRegistration = vscode.workspace.registerTextDocumentContentProvider(
-        'mydfrg-preview',
-        previewProvider
-    );
 
-    console?.log("Init done, Creating and Registering Client")
+    const tMessage5 = catalog.format("extension.log.activate.console.log.initDoneCreatingAndRegisteringClient.info").text;
+    console?.log(tMessage5)
     //#endregion
     // ─────────────────────────────────────────────────────────────────────────────────
     // Listen for document changes and fire the emitter
@@ -1187,7 +1233,7 @@ async function activate(context) {
         }
     };
     const clientOptions = {
-        documentSelector: [{ scheme: 'file', language: 'mydfrg' }],
+        documentSelector: createLanguageClientDocumentSelector(),
         markdown: {
             isTrusted: createHelpCommandTrust()
         },
@@ -1210,7 +1256,7 @@ async function activate(context) {
 
     client = new LanguageClient(
         'mydfrg',
-        'MyDefrag Language Client',
+        catalog.format("extension.message.activate.mydefragLanguageClient.text").text,
         serverOptions,
         clientOptions
     );
@@ -1247,8 +1293,8 @@ async function activate(context) {
     });
     // ─────────────────────────────────────────────────────────────────────────────────
     // Push Subscriptions
-    logger.dbg(5, 'Subscribing to providers');
-    context.subscriptions.push(providerRegistration);
+    const tMessage4 = catalog.format("extension.message.activate.logger.dbg.subscribingToProviders.text").text;
+    logger.dbg(5, tMessage4);
     context.subscriptions.push(definitionProvider);
     context.subscriptions.push(referenceProvider);
     context.subscriptions.push(inlineCompletionRegistration);
@@ -1256,16 +1302,19 @@ async function activate(context) {
     context.subscriptions.push(linkProvider);
     context.subscriptions.push(batLinkProvider);
     context.subscriptions.push(openPreviewCommand);
+    context.subscriptions.push(...previewModeCommands);
     context.subscriptions.push(openCmd);
     context.subscriptions.push(configureFolders);
     context.subscriptions.push(openSettings);
     context.subscriptions.push(docChangeListener, docCloseListener, linkChangeEmitter);
     context.subscriptions.push(settingsChangeListener);
     context.subscriptions.push(client);
-    logger.dbg(5, 'Providers registered');
+    const tMessage3 = catalog.format("extension.message.activate.logger.dbg.providersRegistered.text").text;
+    logger.dbg(5, tMessage3);
 
     // ─────────────────────────────────────────────────────────────────────────────────
-    logger.dbg(3, `Starting server ${channelName}`)
+    const tMessage2 = catalog.format("extension.message.activate.logger.dbg.startingServerChannelname.text", { channelName }).text;
+    logger.dbg(3, tMessage2)
     // await client.start(logger, iniData, config);
     client.start();
 
@@ -1282,14 +1331,15 @@ async function activate(context) {
             return; // ignore updates for documents that aren't currently active
         }
         const labels = {
-            0: 'MyDefrag Script (.myd)',
-            1: 'MyDefrag Fragment (.mydc)',
-            2: 'MyDefrag Unknown document type',
-            myd: 'MyDefrag Script (.myd)',
-            mydc: 'MyDefrag Fragment (.mydc)',
-            unknown: 'MyDefrag Unknown document type'
+            0: catalog.format("extension.status.parser.script.text").text,
+            1: catalog.format("extension.status.parser.fragment.text").text,
+            2: catalog.format("extension.status.parser.unknown.text").text,
+            myd: catalog.format("extension.status.parser.script.text").text,
+            mydc: catalog.format("extension.status.parser.fragment.text").text,
+            unknown: catalog.format("extension.status.parser.unknown.text").text
         };
-        ParserStateBar.text = labels[params.state] ?? 'MyDefrag Unknown document type';
+        const tMessage = catalog.format("extension.status.parser.unknown.text").text;
+        ParserStateBar.text = labels[params.state] ?? tMessage;
         ParserStateBar.show();
     });
 }

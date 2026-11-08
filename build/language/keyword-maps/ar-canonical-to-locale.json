@@ -1,122 +1,122 @@
 {
   "Defragment": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.defragment",
-    "status": "draft",
-    "text": "Defragment"
+    "status": "machine-generated",
+    "text": "إلغاء التجزئة"
   },
   "DirectoryName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.directoryName",
-    "status": "draft",
-    "text": "DirectoryName"
+    "status": "machine-generated",
+    "text": "اسم الدليل"
   },
   "ExcludeFiles": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "script.excludeFiles",
-    "status": "draft",
-    "text": "ExcludeFiles"
+    "status": "machine-generated",
+    "text": "استبعاد ملفات"
   },
   "ExcludeVolumes": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "script.excludeVolumes",
-    "status": "draft",
-    "text": "ExcludeVolumes"
+    "status": "machine-generated",
+    "text": "استبعاد وحدات التخزين"
   },
   "FastFill": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.fastFill",
-    "status": "draft",
-    "text": "FastFill"
+    "status": "machine-generated",
+    "text": "تعبئة سريعة"
   },
   "FileActions": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileActions",
-    "status": "draft",
-    "text": "FileActions"
+    "status": "machine-generated",
+    "text": "إجراءات ملف"
   },
   "FileEnd": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileEnd",
-    "status": "draft",
-    "text": "FileEnd"
+    "status": "machine-generated",
+    "text": "إنهاء ملف"
   },
   "FileName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.fileName",
-    "status": "draft",
-    "text": "FileName"
+    "status": "machine-generated",
+    "text": "اسم الملف"
   },
   "FileSelect": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileSelect",
-    "status": "draft",
-    "text": "FileSelect"
+    "status": "machine-generated",
+    "text": "تحديد ملف"
   },
   "FragmentCount": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.fragmentCount",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "FragmentCount"
   },
   "FullPath": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.fullPath",
-    "status": "draft",
-    "text": "FullPath"
+    "status": "machine-generated",
+    "text": "مسار كامل"
   },
   "Label": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.label",
-    "status": "draft",
-    "text": "Label"
+    "status": "machine-generated",
+    "text": "المختبر ش"
   },
   "Name": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.name",
-    "status": "draft",
-    "text": "Name"
+    "status": "machine-generated",
+    "text": "الاسم"
   },
   "SetColor": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "setting.setColor",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "SetColor"
   },
   "SetVariable": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "setting.setVariable",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "SetVariable"
   },
   "Size": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.size",
-    "status": "draft",
-    "text": "Size"
+    "status": "machine-generated",
+    "text": "مقاس"
   },
   "SortByName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.sortByName",
-    "status": "draft",
-    "text": "SortByName"
+    "status": "machine-generated",
+    "text": "فرز حسب الاسم"
   },
   "VolumeActions": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeActions",
-    "status": "draft",
-    "text": "VolumeActions"
+    "status": "machine-generated",
+    "text": "إجراءات وحدة التخزين"
   },
   "VolumeEnd": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeEnd",
-    "status": "draft",
-    "text": "VolumeEnd"
+    "status": "machine-generated",
+    "text": "إنهاء وحدة التخزين"
   },
   "VolumeSelect": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeSelect",
-    "status": "draft",
-    "text": "VolumeSelect"
+    "status": "machine-generated",
+    "text": "تحديد وحدة التخزين"
   }
 }

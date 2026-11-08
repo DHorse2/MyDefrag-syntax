@@ -1,0 +1,138 @@
+{
+  "locale": "yo",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "Àwọn Èdè Ṣíṣe Àgbékalẹ̀",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "Ẹ̀rọ Ìdènà Mi: Pa Àlẹ̀mọ́ Àyẹ̀wò Mọ́",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "Ẹ̀rọ Ìdènà Mi: Pa Àlẹ̀mọ́ Àyẹ̀wò Mọ́",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "Ẹ̀rọ Ìdènà Mi: Àyẹ̀wò Àlẹ̀mọ́",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "Ẹ̀rọ Ìdènà Mi: Ṣe Àmì Àyẹ̀wò Mọ́",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "Ẹ̀rọ ìdènà mi: Fojú fo Àyẹ̀wò",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "Ẹ̀rọ ìdènà mi: Àyẹ̀wò tó tẹ̀lé",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "Ẹ̀rọ ìdènà mi: Fáìlì tó tẹ̀lé",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "Ẹ̀rọ ìdènà mi: Àyẹ̀wò tó ṣáájú",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "Ẹ̀rọ ìdènà mi: Àtúnṣe Àyẹ̀wò",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "Ẹ̀rọ ìdènà mi: Tún Lílọ Àyẹ̀wò Àyẹ̀wò ṣe",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "Isakoso Ibi ipamọ Mi: Fi ijabọ Aisan ranṣẹ si Oluranlọwọ Aifọwọyi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "Ẹ̀rọ ìdènà mi: Fi Àyẹ̀wò hàn gẹ́gẹ́ bí Tábìlì",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "Ẹ̀rọ ìdènà mi: Fi Àyẹ̀wò hàn gẹ́gẹ́ bí Igi",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "Ẹ̀rọ ìdènà mi: Fò Àyẹ̀wò",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "Ẹ̀rọ ìdènà mi: Àyẹ̀wò àkọ́kọ́",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "Ṣí fáìlì ní ipò",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "Mu kíkọ àkọsílẹ̀ ìfàsẹ́yìn ìfàsẹ́yìn Ìṣàkóso Ìpamọ́ Mi mi ṣiṣẹ́.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "Awọn ilana ibamu faili láti yọ kúrò nínú ìfọwọ́sowọ́pọ̀ Ìṣàkóso Ìpamọ́ Mi Mi",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "Àkójọ fún àwọn fáìlì àkọsílẹ̀ Ìṣàkóso Ìpamọ́ Mi.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "Ibinu ayẹwo fun awọn itọkasi ti o ni awọn macro akoko ipaniyan.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "Ibinu ayẹwo fun awọn itọkasi ti a rii awọn faili afojusun.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "Ibinu ayẹwo fun awọn itọkasi ti a ko rii awọn faili afojusun.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "Ibinu ayẹwo fun awọn itọkasi ti a rii nikan nipasẹ lilọ kiri awọn folda obi.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "Itọsọna fun alaye olumulo Ìṣàkóso Ìpamọ́ Mi.",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "Ipele ìfàsẹ́yìn Ìṣàkóso Ìpọmọ́ Mi mi. Gbígbé ìṣàtúnṣe nbeere eto mydfrg.debugOn lati mu ṣiṣẹ́.",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "Ìwé Ìṣàtúnṣe Ìṣàkóso Ìpamọ́ Mi Mi",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "Ìṣàfihàn sítasí ...",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "Ìṣòro ìwádìí fún àwọn ìránṣẹ́ òbí tí a ti sọ nípa wọn.",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "Ìṣàkóso Ìpamọ́ Mi",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "Àmì sístẹ́mù fún èdè ìkọ̀wé Ìṣàkóso Ìpamọ́ Mi",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    }
+  }
+}

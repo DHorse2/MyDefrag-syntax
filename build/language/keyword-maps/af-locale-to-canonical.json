@@ -1,81 +1,81 @@
 {
-  "Defragment": {
+  "Defragmenteer": {
     "canonical": "Defragment",
     "id": "fileAction.defragment"
   },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
-  "FastFill": {
-    "canonical": "FastFill",
-    "id": "fileAction.fastFill"
-  },
-  "FileActions": {
-    "canonical": "FileActions",
-    "id": "structure.fileActions"
-  },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
-    "canonical": "FileSelect",
-    "id": "structure.fileSelect"
-  },
-  "FragmentCount": {
+  "Fragmenttelling": {
     "canonical": "FragmentCount",
     "id": "volumeCondition.fragmentCount"
   },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
+  "Gidsnaam": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
   },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
-  },
-  "SetColor": {
-    "canonical": "SetColor",
-    "id": "setting.setColor"
-  },
-  "SetVariable": {
-    "canonical": "SetVariable",
-    "id": "setting.setVariable"
-  },
-  "Size": {
+  "Grootte": {
     "canonical": "Size",
     "id": "volumeCondition.size"
   },
-  "SortByName": {
+  "Lab el": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "LêerAksies": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
+  },
+  "LêerEinde": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "LêerSeleksie": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
+  },
+  "Lêernaam": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "Naam": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "Sluit Lêers Uit": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
+  },
+  "SluitVolumes Uit": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "SorteerVolgensNaam": {
     "canonical": "SortByName",
     "id": "fileAction.sortByName"
   },
-  "VolumeActions": {
+  "StelKleur": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
+  },
+  "StelVeranderlike": {
+    "canonical": "SetVariable",
+    "id": "setting.setVariable"
+  },
+  "VinnigeVul": {
+    "canonical": "FastFill",
+    "id": "fileAction.fastFill"
+  },
+  "Volledige Pad": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "VolumeAksies": {
     "canonical": "VolumeActions",
     "id": "structure.volumeActions"
   },
-  "VolumeEnd": {
+  "VolumeEinde": {
     "canonical": "VolumeEnd",
     "id": "structure.volumeEnd"
   },
-  "VolumeSelect": {
+  "VolumeSeleksie": {
     "canonical": "VolumeSelect",
     "id": "structure.volumeSelect"
   }

@@ -175,7 +175,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
-      "text": "فایل‌های ایجادشده تحت زبان و لوکال‌های / همیشه حفظ می‌شوند.",
+      "text": "فایل‌های تألیفی تحت language/locales همیشه حفظ می‌شوند.",
       "status": "machine-generated"
     },
     "translator.dialog.cancel.text": {
@@ -227,7 +227,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
-      "text": "کاتالوگ‌های locale تولیدشده حفظ خواهند شد.",
+      "text": "کاتالوگ‌های منطقه زبانی تولیدشده حفظ خواهند شد.",
       "status": "machine-generated"
     },
     "translator.dialog.keepCatalogRecommended.text": {
@@ -311,7 +311,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "مخزن نحوی My Defragmenter را انتخاب کنید",
+      "text": "مخزن نحوی مدیریت حافظه من را انتخاب کنید",
       "status": "machine-generated"
     },
     "translator.dialog.startingMydefragLanguageMaintenance.title": {
@@ -319,7 +319,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
-      "text": "داده‌های تولیدشدهٔ build / language / catalogs / {id} به‌طور پیش‌فرض نگهداری خواهند شد.",
+      "text": "داده های تولید شده build/language/catalogs/{id} به طور پیش فرض نگهداری می شوند.",
       "status": "machine-generated"
     },
     "translator.dialog.unsavedLanguageChanges.title": {
@@ -379,7 +379,7 @@
       "status": "machine-generated"
     },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
-      "text": "یک مخزن دستوری معتبر My Defragmenter انتخاب نشد.",
+      "text": "یک مخزن دستوری معتبر مدیریت حافظه من انتخاب نشد.",
       "status": "machine-generated"
     },
     "translator.message.buildCancelledByUser.text": {
@@ -411,7 +411,7 @@
       "status": "machine-generated"
     },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
-      "text": "مخزنی را انتخاب کنید که مالک زبان / canonical و زبان ساخت / باشد.",
+      "text": "مخزن مالک language/canonical و build/language را انتخاب کنید.",
       "status": "machine-generated"
     },
     "translator.message.componentAddedInMemory.text": {
@@ -447,7 +447,7 @@
       "status": "machine-generated"
     },
     "translator.message.duplicateLocaleIdValue.text": {
-      "text": "شناسهٔ منطقهٔ duplicate: {localeId}",
+      "text": "شناسه منطقه تکراری زبان: {localeId}",
       "status": "machine-generated"
     },
     "translator.message.duplicateValueValue.text": {
@@ -471,7 +471,7 @@
       "status": "machine-generated"
     },
     "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
-      "text": "کاتالوگ locale تولیدشده یک دایرکتوری نیست: {relativePath}",
+      "text": "کاتالوگ منطقه زبانی تولیدشده یک دایرکتوری نیست: {relativePath}",
       "status": "machine-generated"
     },
     "translator.message.invalidComponentRequest.text": {
@@ -547,7 +547,7 @@
       "status": "machine-generated"
     },
     "translator.message.localeDirectionMustBeLtrOrRtl.text": {
-      "text": "جهت locale باید ltr یا rtl باشد.",
+      "text": "جهت منطقه زبانی باید ltr یا rtl باشد.",
       "status": "machine-generated"
     },
     "translator.message.localeUpdated.text": {
@@ -619,7 +619,7 @@
       "status": "machine-generated"
     },
     "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
-      "text": "این یک مخزن زبان My Defragmenter نیست.   مفقود: {missing}",
+      "text": "این یک مخزن زبان مدیریت حافظه من نیست.   مفقود: {missing}",
       "status": "machine-generated"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
@@ -815,7 +815,7 @@
       "status": "machine-generated"
     },
     "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
-      "text": "نمی‌تواند build / را بخواند، زبان / گزارش‌های / گزارش مهاجرت .json: {errorMessage}",
+      "text": "قادر به خواندن build/language/reports/migration-report.json نیستید: {errorMessage}",
       "status": "machine-generated"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
@@ -839,7 +839,7 @@
       "status": "machine-generated"
     },
     "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
-      "text": "از گزینهٔ «ذخیره» برای ماندگار کردن وضعیت نامزد در زبان‌های /، اجزای کانونیکال / و .json استفاده کنید.",
+      "text": "از ذخیره تغییرات برای حفظ وضعیت پیشنهاد در language/canonical/components.json استفاده کنید.",
       "status": "machine-generated"
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
@@ -1075,7 +1075,7 @@
       "status": "machine-generated"
     },
     "translator.ui.buildLanguageCatalogsValue.text": {
-      "text": "ساخت / زبان / کاتالوگ‌ها / {currentId}",
+      "text": "build/language/catalogs/{currentId}",
       "status": "machine-generated"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
@@ -1099,7 +1099,7 @@
       "status": "machine-generated"
     },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
-      "text": "گزینه‌ها زبان‌های / و کانونیکال / را منعکس می‌کنند. زبان‌های محلی .json. زبان‌های محلی ثبت‌شده همچنان قابل مشاهده‌اند اما قابل انتخاب نیستند.",
+      "text": "انتخاب ها منعکس کننده language/canonical/language-locales.json هستند. مناطق زبان ثبت شده قابل مشاهده هستند اما قابل انتخاب نیستند.",
       "status": "machine-generated"
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
@@ -1295,11 +1295,11 @@
       "status": "machine-generated"
     },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
-      "text": "نگه‌داری زبان / اجزای کانونیکال / .json → مهاجرت موجودی .scanFiles",
+      "text": "language/canonical/components.json → migrationInventory.scanFiles",
       "status": "machine-generated"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
-      "text": "محافظت می‌کند از زبان‌ها و لوکال‌های /، / و .json. حذف یک لوکال به‌طور پیش‌فرض فایل‌های منبع نویسنده‌شده را حفظ می‌کند و داده‌های کاتالوگ تولیدشده را نگه می‌دارد.",
+      "text": "language/locales/locales.json را حفظ می‌کند. حذف یک منطقه زبان، فایل های منبع تالیف شده را حفظ می کند و اطلاعات کاتالوگ تولید شده را به طور پیش فرض حفظ می کند.",
       "status": "machine-generated"
     },
     "translator.ui.migrationCoverageUnavailable.text": {
@@ -1575,7 +1575,7 @@
       "status": "machine-generated"
     },
     "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
-      "text": "یک فایل را برای نمایش هر رشته‌ای که توسط Extract String Candidates پذیرفته شده است، انتخاب کنید.",
+      "text": "یک فایل را برای نمایش هر رشته‌ای که توسط استخراج کاندیداهای رشته‌ای پذیرفته شده است، انتخاب کنید.",
       "status": "machine-generated"
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
@@ -1752,6 +1752,350 @@
     },
     "translator.ui.yes.text": {
       "text": "بله",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.catalogRecordValue.label": {
+      "text": "رکورد کاتالوگ {recordKey}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "text": "مراحل راه‌اندازی تکمیل‌شده",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "text": "فیلتر کردن کاندیداها بر اساس دسته‌بندی",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "text": "فیلتر کردن کاندیداها بر اساس کامپوننت",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "text": "فیلتر کردن کاندیداها بر اساس نقش",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "text": "فیلتر کردن رکوردهای کاتالوگ بر اساس دسته‌بندی",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "text": "فیلتر کردن رکوردهای کاتالوگ بر اساس کامپوننت",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "text": "فیلتر کردن رکوردهای کاتالوگ بر اساس نقش",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "text": "فیلتر کردن رکوردهای کاتالوگ بر اساس وضعیت",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "text": "کاندیداها را بر اساس خط مرتب کنید",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "text": "مرتب‌سازی رکوردهای کاتالوگ بر اساس خط منبع",
+      "status": "machine-generated"
+    },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "text": "یک خط منبع فعلی، متن کاندید و کلید کاتالوگ مورد نیاز است.",
+      "status": "machine-generated"
+    },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "text": "این کلید کاتالوگ را قبل از جایگزینی منبع، به پیش‌نویس درون حافظه اعمال کنید.",
+      "status": "machine-generated"
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "text": "جایگزینی خودکار فقط برای فایل‌های CommonJS .js و .cjs پشتیبانی می‌شود. JSON و سایر فرمت‌ها نیاز به تبدیل محلی‌سازی مختص به فرمت دارند.",
+      "status": "machine-generated"
+    },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "text": "یک تبدیل منبع مهاجرت معتبر مورد نیاز است.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "text": "خط کاتالوگ‌شده {candidateLine}. خط منبع آن را به‌روزرسانی کنید تا این کاندید تکمیل شود؛ پیمایش همچنان در دسترس است.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "text": "منابع فهرست‌شده هنوز نیاز به به‌روزرسانی دارند.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "text": "منبع فهرست‌شده هنوز نیاز به به‌روزرسانی دارد.",
+      "status": "machine-generated"
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "text": "عبارات پیچیده قالب قبل از تبدیل، به پیوندهای جای‌نگهدار مشتق‌شده از تجزیه‌کننده نیاز دارند.",
+      "status": "machine-generated"
+    },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "text": "کلیدهای فهرست موجود را نمی‌توان تغییر نام داد. به جای آن، یک رکورد جدید اضافه کنید.",
+      "status": "machine-generated"
+    },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "text": "جایگزینی رشته چندخطی توسط قلاب تبدیل اولیه پشتیبانی نمی‌شود.",
+      "status": "machine-generated"
+    },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "text": "قبل از جایگزینی خط منبع، پیش‌نمایش تبدیل را به‌روزرسانی کنید.",
+      "status": "machine-generated"
+    },
+    "translator.message.replacedLineValueInValue.text": {
+      "text": "خط {previewLine} در {previewPath} جایگزین شد.",
+      "status": "machine-generated"
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "text": "خط {previewLine} در {previewPath} جایگزین شد. نسخه پشتیبان قابل حذف نیست: {recoveryFiles}",
+      "status": "machine-generated"
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "text": "بازیابی فایل‌های تولید شده و منابع محلی پایدار",
+      "status": "machine-generated"
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "text": "گزینه‌های کاندید بالقوه، بررسی، رد شده، ویرایش کد یا به‌روزرسانی کد را انتخاب کنید.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceLineReplaced.text": {
+      "text": "خط منبع جایگزین شد",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "text": "خط منبع جایگزین نشد",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "text": "جایگزینی منبع فعال نیست.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "text": "جایگزینی منبع آماده نیست.",
+      "status": "machine-generated"
+    },
+    "translator.message.startingElectron.text": {
+      "text": "شروع Electron...",
+      "status": "machine-generated"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "text": "شناسه کاتالوگ، یک شناسه جاوا اسکریپت معتبر نیست.",
+      "status": "machine-generated"
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "text": "اسکنر پیکربندی شده نمی‌تواند مکان‌های منبع کاندید را ارائه دهد.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "text": "کلید کاتالوگ انتخاب شده شامل این متن کاندید نیست.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "text": "خط و متن انتخاب شده، یک کاندید مهاجرت گزارش شده فعلی نیستند.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "text": "خط و متن انتخاب شده، یک کاندید مهاجرت فعلی را شناسایی نمی‌کنند.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "text": "خط منبع انتخاب شده پس از ایجاد پیش‌نمایش تبدیل تغییر کرد.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "text": "خط منبع انتخاب شده دیگر وجود ندارد.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "text": "رشته انتخاب شده دیگر در خط منبع گزارش شده وجود ندارد.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "text": "رشته انتخاب شده بیش از یک بار در خط منبع رخ داده است؛ وقوع دقیق آن مورد نیاز است.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "text": "منبع قبل از اینکه بتواند جایگزین شود تغییر کرد: {itemRelativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "text": "فایل منبع پس از ایجاد پیش‌نمایش تبدیل تغییر کرد. برای به‌روزرسانی آن، گزینه مورد نظر را دوباره انتخاب کنید.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "text": "فایل منبع قبل از جایگزینی تغییر کرد. برای به‌روزرسانی آن، گزینه مورد نظر را دوباره انتخاب کنید.",
+      "status": "machine-generated"
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "text": "جاوااسکریپت تبدیل‌شده از نظر نحوی معتبر نیست: {syntaxError}",
+      "status": "machine-generated"
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "text": "نام متغیر تبدیل، یک شناسه جاوااسکریپت معتبر نیست.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "text": "پیش‌نویس درون حافظه قابل به‌روزرسانی نیست.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "text": "{unresolvedCount} نامزد(های) فهرست‌بندی‌شده هنوز حاوی رشته منبع اصلی خود هستند یا نمی‌توان آنها را تأیید کرد. بسته شدن بدون اجرای قانون ادامه می‌یابد.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "text": "{detail}. پیمایش ادامه خواهد یافت؛ به‌روزرسانی‌های منبع توصیه می‌شوند اما اجرا نمی‌شوند.",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateStatusValue.text": {
+      "text": "وضعیت نامزد: {cANDIDATE_STATUS_LABELSCodeUpdated}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "text": "وضعیت نامزد: {cANDIDATE_STATUS_LABELSCandidateStatus}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "text": "کلید کاتالوگ مورد نیاز است",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "text": "کلید کاتالوگ: {initialCatalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "text": "کلید کاتالوگ: {catalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "text": "کلید کاتالوگ: {resultCatalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "text": "رکورد کاتالوگ برای خط {candidateLine} اضافه شد. برای تکمیل این کاندید، خط منبع را به‌روزرسانی کنید؛ پیمایش همچنان در دسترس است.",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "text": "وضعیت کاتالوگ: {catalogStatuses}",
+      "status": "machine-generated"
+    },
+    "translator.ui.category.text": {
+      "text": "دسته بندی",
+      "status": "machine-generated"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "text": "در حال بررسی حفاظت‌های جایگزینی منبع...",
+      "status": "machine-generated"
+    },
+    "translator.ui.durableLocaleFiles.text": {
+      "text": "فایل‌های محلی بادوام",
+      "status": "machine-generated"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "text": "فایل‌های محلی بادوام تغییر کردند",
+      "status": "machine-generated"
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "text": "برای ایجاد پیش‌نمایش تبدیل، یک کلید کاتالوگ وارد کنید.",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "text": "کلیدهای کاتالوگ موجود قابل تغییر نام نیستند. برای استفاده از کلید دیگر، یک رکورد جدید اضافه کنید.",
+      "status": "machine-generated"
+    },
+    "translator.ui.highestLineFirst.text": {
+      "text": "بالاترین سطر اول",
+      "status": "machine-generated"
+    },
+    "translator.ui.inCatalog.text": {
+      "text": "در کاتالوگ",
+      "status": "machine-generated"
+    },
+    "translator.ui.lineOrder.text": {
+      "text": "ترتیب سطر",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingTransformPreview.text": {
+      "text": "در حال بارگیری پیش‌نمایش تبدیل...",
+      "status": "machine-generated"
+    },
+    "translator.ui.lowestLineFirst.text": {
+      "text": "پایین‌ترین سطر اول",
+      "status": "machine-generated"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "text": "هیچ کاندید بعدی با فیلترهای فعلی مطابقت ندارد.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "text": "هیچ کاندید قبلی با فیلترهای فعلی مطابقت ندارد.",
+      "status": "machine-generated"
+    },
+    "translator.ui.original.text": {
+      "text": "اصلی",
+      "status": "machine-generated"
+    },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "text": "در حال بازسازی پیش‌نمایش تبدیل...",
+      "status": "machine-generated"
+    },
+    "translator.ui.replaceLineInSource.text": {
+      "text": "جایگزینی خط در منبع",
+      "status": "machine-generated"
+    },
+    "translator.ui.resolvingCatalogKey.text": {
+      "text": "در حال حل کلید کاتالوگ...",
+      "status": "machine-generated"
+    },
+    "translator.ui.role.text": {
+      "text": "نقش",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "text": "جایگزینی منبع در دسترس نیست.",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "text": "جایگزینی منبع نیاز به کلید کاتالوگ دارد.",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "text": "پیش‌نمایش تبدیل منبع",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "text": "به‌روزرسانی منبع در حال بررسی است. {detail}. پیمایش ادامه دارد.",
+      "status": "machine-generated"
+    },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "text": "خط منبع جایگزین نشده است.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "text": "این رخداد کلید فعلی از قبل از catalog.format استفاده می‌کند و نیازی به تبدیل منبع ندارد.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "text": "این کاندید قبلی برای تحلیل حفظ می‌شود؛ خط منبع فعلی از قبل از catalog.format استفاده می‌کند.",
+      "status": "machine-generated"
+    },
+    "translator.ui.transformed.text": {
+      "text": "تبدیل شده",
+      "status": "machine-generated"
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "text": "پیش نمایش تبدیل در دسترس نیست: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueRemaining.text": {
+      "text": "{summaryRemainingCount} باقی مانده است",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "text": "{statusElapsedMsToFixed} ثانیه سپری شده است",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueValueCompleted.text": {
+      "text": "{summaryCompletedCount}/{summaryTotalCount} تکمیل شد",
       "status": "machine-generated"
     }
   }

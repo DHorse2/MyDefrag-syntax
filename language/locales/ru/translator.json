@@ -315,7 +315,7 @@
       "status": "machine-generated"
     },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
-      "text": "Выберите репозиторий, в котором находится каноническая версия языка / и сборка / language.",
+      "text": "Выберите репозиторий, которому принадлежат language/canonical и build/language.",
       "status": "machine-generated"
     },
     "translator.message.componentAddedInMemory.text": {
@@ -455,7 +455,7 @@
       "status": "machine-generated"
     },
     "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
-      "text": "Это не репозиторий языков для My Defragmenter. Отсутствует: {missing}",
+      "text": "Это не репозиторий языков для Управление хранилищем. Отсутствует: {missing}",
       "status": "machine-generated"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
@@ -591,7 +591,7 @@
       "status": "machine-generated"
     },
     "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
-      "text": "Не удалось прочитать сборку / язык / отчеты / отчет о миграции .json: {errorMessage}",
+      "text": "Невозможно прочитать build/language/reports/migration-report.json: {errorMessage}.",
       "status": "machine-generated"
     },
     "translator.message.unableToRemoveTheFile.text": {
@@ -891,7 +891,7 @@
       "status": "machine-generated"
     },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
-      "text": "Обслуживает языковые ресурсы /, канонические ресурсы /, компоненты .json → перечень миграций .scanFiles",
+      "text": "Поддерживает language/canonical/components.json → migrationInventory.scanFiles",
       "status": "machine-generated"
     },
     "translator.ui.migrationCoverageUnavailable.text": {
@@ -1179,7 +1179,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
-      "text": "Файлы, созданные в локалях языка /, всегда сохраняются.",
+      "text": "Авторские файлы в папке language/locales всегда сохраняются.",
       "status": "machine-generated"
     },
     "translator.dialog.componentCatalogEditRecord.title": {
@@ -1223,7 +1223,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
-      "text": "Сгенерированные данные: build / language / catalogs / {id} будут сохранены по умолчанию.",
+      "text": "Сгенерированные данные build/language/catalogs/{id} будут сохранены по умолчанию.",
       "status": "machine-generated"
     },
     "translator.message.aScannedSourcePathIsNotANormalized.text": {
@@ -1391,7 +1391,7 @@
       "status": "machine-generated"
     },
     "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
-      "text": "Нажмите «Сохранить», чтобы зафиксировать статус кандидата в языковых компонентах /, канонических компонентах / и компонентах .json.",
+      "text": "Используйте «Сохранить», чтобы сохранить статус предложения в language/canonical/components.json.",
       "status": "machine-generated"
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
@@ -1455,7 +1455,7 @@
       "status": "machine-generated"
     },
     "translator.ui.buildLanguageCatalogsValue.text": {
-      "text": "build / language / catalogs / {currentId}",
+      "text": "build/language/catalogs/{currentId}",
       "status": "machine-generated"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
@@ -1467,7 +1467,7 @@
       "status": "machine-generated"
     },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
-      "text": "Параметры выбора отображаются в языке /, канонические значения — /, языковые локали — .json. Зарегистрированные локали остаются видимыми, но их нельзя выбрать.",
+      "text": "Зеркало выбора language/canonical/language-locales.json. Зарегистрированные языковые регионы остаются видимыми, но их нельзя выбрать.",
       "status": "machine-generated"
     },
     "translator.ui.clear.text": {
@@ -1555,7 +1555,7 @@
       "status": "machine-generated"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
-      "text": "Поддерживает языковые локали /, локали / и локали .json. При удалении локали исходные файлы, созданные автором, сохраняются, а сгенерированные данные каталога по умолчанию остаются.",
+      "text": "Поддерживает language/locales/locales.json. При удалении языкового региона сохраняются авторские исходные файлы и по умолчанию сохраняется сгенерированная информация каталога.",
       "status": "machine-generated"
     },
     "translator.ui.nextLine.text": {
@@ -1752,6 +1752,350 @@
     },
     "translator.ui.view.text": {
       "text": "Просмотр",
+      "status": "machine-generated"
+    },
+    "translator.ui.inCatalog.text": {
+      "text": "В каталоге",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.catalogRecordValue.label": {
+      "text": "Запись в каталоге {recordKey}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "text": "Завершенные этапы запуска",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "text": "Фильтр кандидатов по категории",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "text": "Фильтр кандидатов по компоненту",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "text": "Фильтр кандидатов по роли",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "text": "Фильтр записей каталога по категории",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "text": "Фильтр записей каталога по компоненту",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "text": "Фильтр записей каталога по роли",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "text": "Фильтр записей каталога по статус",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "text": "Сортировка кандидатов по строкам",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "text": "Упорядочивание записей каталога по исходной строке",
+      "status": "machine-generated"
+    },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "text": "Требуются текущая исходная строка, текст-кандидат и ключ каталога.",
+      "status": "machine-generated"
+    },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "text": "Примените этот ключ каталога к черновику в памяти перед заменой исходного кода.",
+      "status": "machine-generated"
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "text": "Автоматическая замена поддерживается только для файлов CommonJS .js и .cjs. Для JSON и других форматов требуется преобразование локализации, специфичное для формата.",
+      "status": "machine-generated"
+    },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "text": "Требуется допустимое преобразование исходного кода миграции.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "text": "Каталогизированная строка {candidateLine}. Обновите ее исходную строку, чтобы завершить этот кандидат; навигация остается доступной.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "text": "Каталогизированные исходные файлы все еще нуждаются в обновлении.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "text": "Каталогизированный исходный файл все еще нуждается в обновлении.",
+      "status": "machine-generated"
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "text": "Сложные выражения шаблонов требуют привязки заполнителей, полученных от парсера, перед преобразованием.",
+      "status": "machine-generated"
+    },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "text": "Существующие ключи каталога нельзя переименовать. Вместо этого добавьте новую запись.",
+      "status": "machine-generated"
+    },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "text": "Замена многострочных строк не поддерживается начальным обработчиком преобразования.",
+      "status": "machine-generated"
+    },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "text": "Обновите предварительный просмотр преобразования перед заменой исходной строки.",
+      "status": "machine-generated"
+    },
+    "translator.message.replacedLineValueInValue.text": {
+      "text": "Заменена строка {previewLine} в {previewPath}.",
+      "status": "machine-generated"
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "text": "Заменена строка {previewLine} в {previewPath}. Не удалось удалить резервную копию: {recoveryFiles}",
+      "status": "machine-generated"
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "text": "Восстановление сгенерированных файлов и источников устойчивой локализации",
+      "status": "machine-generated"
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "text": "Выберите «Потенциальный кандидат», «Проверка», «Отклонено», «Редактирование кода» или «Обновлен код».",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceLineReplaced.text": {
+      "text": "Заменена строка исходного кода",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "text": "Строка исходного кода не была заменена",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "text": "Замена исходного кода не включена.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "text": "Замена исходного кода не готова.",
+      "status": "machine-generated"
+    },
+    "translator.message.startingElectron.text": {
+      "text": "Запуск Electron...",
+      "status": "machine-generated"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "text": "Идентификатор каталога не является допустимым идентификатором JavaScript.",
+      "status": "machine-generated"
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "text": "Настроенный сканер не может предоставить возможные местоположения исходных файлов.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "text": "Выбранный ключ каталога не содержит этот текст-кандидат.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "text": "Выбранная строка и текст не являются текущим кандидатом на миграцию.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "text": "Выбранная строка и текст не идентифицируют ни одного текущего кандидата на миграцию.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "text": "Выбранная строка исходного файла изменилась после создания предварительного просмотра преобразования.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "text": "Выбранная строка исходного файла больше не существует.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "text": "Выбранная строка больше не присутствует в указанной строке исходного кода.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "text": "Выбранная строка встречается в строке исходного кода более одного раза; требуется точное указание на ее наличие.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "text": "Исходный файл изменился до того, как его удалось заменить: {itemRelativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "text": "Исходный файл изменился после создания предварительного просмотра преобразования. Выберите кандидата повторно, чтобы обновить его.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "text": "Исходный файл изменился до замены. Выберите кандидата повторно, чтобы обновить его.",
+      "status": "machine-generated"
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "text": "Преобразованный JavaScript не является синтаксически корректным: {syntaxError}",
+      "status": "machine-generated"
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "text": "Имя переменной преобразования не является допустимым идентификатором JavaScript.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "text": "Не удалось обновить черновик в памяти.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "text": "{unresolvedCount} В каталогизированных кандидатах по-прежнему присутствует исходная строка или их не удалось проверить. Закрытие продолжается без принудительного исполнения.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "text": "{detail}. Навигация продолжится; обновления исходного кода рекомендуются, но не являются обязательными.",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateStatusValue.text": {
+      "text": "Статус кандидата: {cANDIDATE_STATUS_LABELSCodeUpdated}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "text": "Статус кандидата: {cANDIDATE_STATUS_LABELSCandidateStatus}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "text": "Требуется каталожный ключ",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "text": "Каталожный ключ: {initialCatalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "text": "Каталожный ключ: {catalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "text": "Каталожный ключ: {resultCatalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "text": "Добавлена ​​запись в каталог для строки {candidateLine}. Обновите исходную строку, чтобы завершить этот вариант; навигация остается доступной.",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "text": "Статус каталога: {catalogStatuses}",
+      "status": "machine-generated"
+    },
+    "translator.ui.category.text": {
+      "text": "Категория",
+      "status": "machine-generated"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "text": "Проверка мер защиты от замены исходного кода...",
+      "status": "machine-generated"
+    },
+    "translator.ui.durableLocaleFiles.text": {
+      "text": "Файлы устойчивой локализации",
+      "status": "machine-generated"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "text": "Изменены файлы устойчивой локализации",
+      "status": "machine-generated"
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "text": "Введите ключ каталога для создания предварительного просмотра преобразования.",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "text": "Существующие ключи каталога нельзя переименовать. Добавьте новую запись, чтобы использовать другой ключ.",
+      "status": "machine-generated"
+    },
+    "translator.ui.highestLineFirst.text": {
+      "text": "Сначала самая высокая строка",
+      "status": "machine-generated"
+    },
+    "translator.ui.lineOrder.text": {
+      "text": "Порядок строк",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingTransformPreview.text": {
+      "text": "Загрузка предварительного просмотра преобразования...",
+      "status": "machine-generated"
+    },
+    "translator.ui.lowestLineFirst.text": {
+      "text": "Сначала самая низкая строка",
+      "status": "machine-generated"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "text": "Нет следующего кандидата, соответствующего текущим фильтрам.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "text": "Нет предыдущего кандидата, соответствующего текущим фильтрам.",
+      "status": "machine-generated"
+    },
+    "translator.ui.original.text": {
+      "text": "Оригинал",
+      "status": "machine-generated"
+    },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "text": "Предварительный просмотр перегенерации преобразования...",
+      "status": "machine-generated"
+    },
+    "translator.ui.replaceLineInSource.text": {
+      "text": "Замена строки в исходном коде",
+      "status": "machine-generated"
+    },
+    "translator.ui.resolvingCatalogKey.text": {
+      "text": "Разрешение ключа каталога...",
+      "status": "machine-generated"
+    },
+    "translator.ui.role.text": {
+      "text": "Роль",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "text": "Замена исходного кода недоступна.",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "text": "Для замены исходного кода требуется ключ каталога.",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "text": "Предварительный просмотр преобразования исходного кода",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "text": "Обновление исходного кода остается в ожидании. {detail}. Навигация продолжена.",
+      "status": "machine-generated"
+    },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "text": "Строка исходного кода не была заменена.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "text": "Этот текущий ключевой экземпляр уже использует catalog.format и не требует преобразования исходного кода.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "text": "Этот предыдущий кандидат сохранен для анализа; текущая строка исходного кода уже использует catalog.format.",
+      "status": "machine-generated"
+    },
+    "translator.ui.transformed.text": {
+      "text": "Трансформировано",
+      "status": "machine-generated"
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "text": "Предварительный просмотр трансформации недоступен: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueRemaining.text": {
+      "text": "Осталось {summaryRemainingCount}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "text": "Прошло секунд {statusElapsedMsToFixed}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueValueCompleted.text": {
+      "text": "{summaryCompletedCount}/{summaryTotalCount} завершено",
       "status": "machine-generated"
     }
   }

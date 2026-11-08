@@ -14,12 +14,24 @@
       "text": "أداة إلغاء التجزئة الخاصة بي: فتح الإعدادات",
       "status": "machine-generated"
     },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "المرشح التالي: ${dir}، و${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "مساحة العمل «البحث»: تعذر قراءة ${uri.toString()}: ${errResult.message}",
+      "status": "machine-generated"
+    },
     "extension.message.noActiveDocument.warning": {
       "text": "لا يوجد مستند «أداة إلغاء التجزئة» نشط حالياً.",
       "status": "machine-generated"
     },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "extension.js:تمكين:الخيارات:استعد خطأ في التهيئة: ${errResult.message}",
+      "status": "machine-generated"
+    },
     "extension.product.displayName": {
-      "text": "برنامج «Defragmenter Script» الخاص بي (.MyDc / .MyD)",
+      "text": "نصّي البرمجي لإدارة التخزين (.MyDc / .MyD)",
       "status": "machine-generated"
     },
     "extension.status.parser.fragment.text": {
@@ -27,7 +39,7 @@
       "status": "machine-generated"
     },
     "extension.status.parser.script.text": {
-      "text": "برنامج «Defragmenter» الخاص بي (.myd)",
+      "text": "برنامج إدارة التخزين (.myd)",
       "status": "machine-generated"
     },
     "extension.status.parser.unknown.text": {

@@ -1,0 +1,138 @@
+{
+  "locale": "am",
+  "component": "package",
+  "entries": {
+    "package.catagories.list": {
+      "text": "የፕሮግራሚንግ ቋንቋዎች",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የዲያግኖስቲክ ማጣሪያን አጽዳ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የዲያግኖስቲክስ ኤክስፕሎረርን ዝጋ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.filter.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የማጣሪያ ምርመራዎች",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የዲያግኖስቲክስ ጥገናን ምልክት ያድርጉበት",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የዲያግኖስቲክስ ምርመራን ችላ ይበሉ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.next.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የሚቀጥለው ምርመራ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የሚቀጥለው ፋይል",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.previous.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የቀደመው ምርመራ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የዳሰሳ ጥናቶችን አድስ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.reset.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የዲያግኖስቲክ አሰሳን ዳግም አስጀምር",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የዲያግኖስቲክስ ምርመራን ወደ ወኪል ላክ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የዲያግኖስቲክስን እንደ ሰንጠረዥ አሳይ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የዲያግኖስቲክስን እንደ ዛፍ አሳይ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የዲያግኖስቲክስን ዝለል",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.mydfrg.diagnostics.top.title": {
+      "text": "የእኔ ዲፍራግሜንተር፡ የመጀመሪያ ምርመራ",
+      "status": "machine-generated"
+    },
+    "package.contributes.commands.title": {
+      "text": "ፋይሉን በቦታው ይክፈቱ",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.debugOn.description": {
+      "text": "የእኔን ዲፍራግሜንተር የኤክስቴንሽን ማረሚያ ምዝግብ ማስታወሻ አንቃ።",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.exclude.description": {
+      "text": "ከእኔ ዲፍራግሜንተር ማረጋገጫ ውስጥ ለማግለል የግሎብ ቅጦች",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.logDir.description": {
+      "text": "ለማይዲፍራግ የምዝግብ ማስታወሻ ፋይሎች ማውጫ።",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
+      "text": "የአፈፃፀም ጊዜ ማክሮዎችን የያዙ ማጣቀሻዎች የምርመራ ክብደት።",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileFoundLevel.description": {
+      "text": "የታለሙ ፋይሎች የሚገኙባቸው ማጣቀሻዎች የምርመራ ክብደት።",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceFileNotFoundLevel.description": {
+      "text": "የታለሙ ፋይሎች ያልተገኙባቸው ማጣቀሻዎች የምርመራ ክብደት።",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
+      "text": "የወላጅ አቃፊዎችን በማለፍ ብቻ የሚገኙ ማጣቀሻዎች የምርመራ ክብደት።",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.userDir.description": {
+      "text": "የማይዲፍራግ የተጠቃሚ ውሂብ ማውጫ።",
+      "status": "machine-generated"
+    },
+    "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
+      "text": "የእኔ ዲፍራግሜንተር ቅጥያ ዝርዝር ደረጃ።\nየስህተት መዝገብ mydfrg.debugOn ያስፈልገዋል።",
+      "status": "machine-generated"
+    },
+    "package.contributes.languages.aliases": {
+      "text": "የእኔ ዲፍራግሜንተር ስክሪፕት",
+      "status": "machine-generated"
+    },
+    "package.description": {
+      "text": "ለእኔ ዲፍራግሜንተር ስክሪፕት ቋንቋ የአገባብ ማድመቅ",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
+      "text": "ለተገመቱ የክፍልፋይ የወላጅ መልዕክቶች የምርመራ ክብደት።",
+      "status": "machine-generated"
+    },
+    "package.metadata.contributes.configuration.title": {
+      "text": "የማይዲፍራግ",
+      "status": "machine-generated"
+    },
+    "package.metadata.description": {
+      "text": "ለማይዲፍራግ ስክሪፕት ቋንቋ የአገባብ ማድመቅ",
+      "status": "machine-generated"
+    },
+    "package.metadata.publisher": {
+      "text": "macrodm",
+      "status": "machine-generated"
+    },
+    "package.path.repository.url": {
+      "text": "https://github.com/DHorse2/MyDefrag-syntax",
+      "status": "machine-generated"
+    }
+  }
+}

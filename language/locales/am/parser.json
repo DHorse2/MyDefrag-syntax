@@ -1,0 +1,14 @@
+{
+  "locale": "am",
+  "component": "parser",
+  "entries": {
+    "parser.diagnostic.expectedToken.message": {
+      "text": "የተጠበቀው {expected} ግን ተገኝቷል {actual}",
+      "status": "machine-generated"
+    },
+    "parser.diagnostic.unexpectedToken.message": {
+      "text": "ያልተጠበቀ ምልክት '{token}'",
+      "status": "machine-generated"
+    }
+  }
+}

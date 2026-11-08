@@ -3,7 +3,7 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "text": "Defragmenter dina: Saiti Folders",
+      "text": "Gudanar da Ajiyata dina: Saiti kundin adireshi",
       "status": "machine-generated"
     },
     "extension.command.openPreview.title": {
@@ -11,31 +11,43 @@
       "status": "machine-generated"
     },
     "extension.command.openSettings.title": {
-      "text": "Defragmenter dina: Buɗe Saituna",
+      "text": "Gudanar da Ajiyata dina: Buɗe Saituna",
       "status": "machine-generated"
     },
     "extension.message.noActiveDocument.warning": {
-      "text": "A'a, babu takardar My Defragmenter da ke aiki.",
+      "text": "A'a, babu takardar Gudanar da Ajiyata da ke aiki.",
       "status": "machine-generated"
     },
     "extension.product.displayName": {
-      "text": "Rubutun Defragmenter na (.MyDc / .MyD)",
+      "text": "Rubutun Gudanar da Ajiyata na (.MyDc / .MyD)",
       "status": "machine-generated"
     },
     "extension.status.parser.fragment.text": {
-      "text": "Bangaren Defragmenter ɗina (.mydc)",
+      "text": "Bangaren Gudanar da Ajiyata ɗina (.mydc)",
       "status": "machine-generated"
     },
     "extension.status.parser.script.text": {
-      "text": "Rubutun Defragmenter na (.myd)",
+      "text": "Rubutun Gudanar da Ajiyata na (.myd)",
       "status": "machine-generated"
     },
     "extension.status.parser.unknown.text": {
-      "text": "Defragmenter ɗina: nau'in takardar da ba a sani ba",
+      "text": "Gudanar da Ajiyata ɗina: nau'in takardar da ba a sani ba",
       "status": "machine-generated"
     },
     "extension.window.channelName": {
-      "text": "Tsarin Defragmenter nawa",
+      "text": "Tsarin Gudanar da Ajiyata nawa",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "Ɗan takara na gaba: ${dir}, da ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "searchWurin Aiki: Ba za a iya karanta ${uri.toString()}: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "tsawo.js:kunna:saituna:kunnawa An dawo da kuskure daga farawa: ${errResult.message}",
       "status": "machine-generated"
     }
   }

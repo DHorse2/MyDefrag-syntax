@@ -20,7 +20,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Fechar o Explorador de Diagnósticos"
+      "text": "Gerenciamento de Armazenamento: Fechar o Explorador de Diagnósticos"
     },
     "package.contributes.commands.mydfrg.diagnostics.filter.title": {
       "fallbackLocale": null,
@@ -34,7 +34,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "O meu Desfragmentador: Diagnóstico «Mark» corrigido"
+      "text": "Meu gerenciamento de armazenamento: rotular diagnóstico como corrigido"
     },
     "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
       "fallbackLocale": null,
@@ -83,14 +83,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Enviar diagnóstico ao agente"
+      "text": "Gerenciamento de Armazenamento: Enviar diagnóstico ao agente"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Mostrar diagnósticos em forma de tabela"
+      "text": "Gerenciamento de Armazenamento: Mostrar diagnósticos em forma de tabela"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
       "fallbackLocale": null,
@@ -125,21 +125,21 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Ativar o registo de depuração da extensão «My Defragmenter»."
+      "text": "Ativar o registo de depuração da extensão «Gerenciamento de Armazenamento»."
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Padrões globais a excluir da validação do «My Defragmenter»"
+      "text": "Padrões globais a excluir da validação do «Gerenciamento de Armazenamento»"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Diretório para os ficheiros de registo do My Defragmenter."
+      "text": "Diretório para os ficheiros de registo do Gerenciamento de Armazenamento."
     },
     "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
       "fallbackLocale": null,
@@ -174,14 +174,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Diretório dos dados do utilizador do My Defragmenter."
+      "text": "Diretório dos dados do utilizador do Gerenciamento de Armazenamento."
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Nível de detalhe da minha extensão «Defragmenter». O registo de depuração requer que a opção «mydfrg debug On» esteja ativada."
+      "text": "Nível de detalhe da minha extensão «Gerenciamento de Armazenamento». O registo de depuração requer que a opção «mydfrg.debugOn» esteja ativada."
     },
     "package.contributes.languages.aliases": {
       "fallbackLocale": null,
@@ -195,7 +195,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Realce de sintaxe para a linguagem de script My Defragmenter"
+      "text": "Realce de sintaxe para a linguagem de script Gerenciamento de Armazenamento"
     },
     "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
       "fallbackLocale": null,
@@ -216,7 +216,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Realce de sintaxe para a linguagem de script My Defragmenter"
+      "text": "Realce de sintaxe para a linguagem de script Gerenciamento de Armazenamento"
     },
     "package.metadata.publisher": {
       "fallbackLocale": null,

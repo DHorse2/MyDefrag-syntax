@@ -9,7 +9,7 @@
       ],
       "sourceStatus": "reviewed",
       "status": "machine-generated",
-      "text": "BEGIN [depth {depth}] {path}"
+      "text": "开始 [嵌套级别 {depth}] {path}"
     },
     "preview.annotation.includeEnd.text": {
       "fallbackLocale": null,
@@ -19,7 +19,7 @@
       ],
       "sourceStatus": "reviewed",
       "status": "machine-generated",
-      "text": "END [depth {depth}] {path}"
+      "text": "完成 [嵌套级别 {depth}] {path}"
     },
     "preview.report.includeFiles.heading": {
       "fallbackLocale": null,

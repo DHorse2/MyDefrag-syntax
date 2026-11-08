@@ -1,6 +1,13 @@
 {
   "component": "server",
   "entries": {
+    "server.diagnostic.channelName.connection.message": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "My Storage Management Issues"
+    },
     "server.diagnostic.unsupportedExtension.message": {
       "fallbackLocale": null,
       "placeholders": [
@@ -8,7 +15,174 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Nie-ondersteunde My Defragmenter-lêersuffiks: {extension}"
+      "text": "Nie-ondersteunde My Stoorbestuur-lêersuffiks: {extension}"
+    },
+    "server.diagnostic.validateDocument.err.name.errNameErrMessage.message": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "${err.name}: ${err.message}"
+    },
+    "server.diagnostic.validateDocument.err.name.internalParserFailureErrNameErr.message": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Internal syntax analyzer failure: ${err.name}: ${err.message}"
+    },
+    "server.diagnostic.validateDocument.err.stack": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "(no stack available)"
+    },
+    "server.diagnostic.validateDocument.err.stack.data": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "${err.stack}"
+    },
+    "server.diagnostic.validateDocument.err.stack.errStackNoStackAvailable.message": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "${err.stack || \"(no stack available)\"}"
+    },
+    "server.diagnostic.validateDocument.logger.dbg.ParsingCompleted.message": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "validate Document: Parsing completed"
+    },
+    "server.log.console.error.serverConnectionCreated.error": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "SERVER: connection created"
+    },
+    "server.log.console.error.serverEnteredServerJs.error": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "SERVER: entered server.js"
+    },
+    "server.log.console.error.serverModulesLoaded.error": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "SERVER: modules loaded"
+    },
+    "server.log.console.log.serverJsConnectionOninitializeServerLoading.info": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "server.js connection.onInitialize: SERVER loading configuration"
+    },
+    "server.log.console.log.serverJsOndidchangewatchedfilesMydefragServerDocument.info": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "server.js on Did Change Watched Files: My Storage Management server document watched On Did Change"
+    },
+    "server.log.logger.dbg.serverJsOncompletionMydefragServerConnection.structural": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "server.js on Completion: My Storage Management server connection on Completion"
+    },
+    "server.log.logger.dbg.serverJsOnhoverMydefragServerConnection.structural": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "server.js on Hover: My Storage Management server connection on Hover"
+    },
+    "server.log.logger.dbg.serverJsOninitializedMydefragServerLanguage.structural": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "server.js on Initialized: My Storage Management server Language Client entered initialized"
+    },
+    "server.log.scanAllFiles.errResult.message.scanallfilesUnableToReadFolderFolderpath.warning": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "folderPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "scan All Files: Unable to read folder ${folderPath}: ${errResult.message}"
+    },
+    "server.log.scanAllFiles.logger.dbg.scanallfilesSkippingExcludedFolderRelpath.structural": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "relPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "scan All Files: Skipping excluded folder ${relPath}"
+    },
+    "server.log.validateDocument.console.error.loggerErrFailed.error": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "logger.err failed:"
+    },
+    "server.log.validateDocument.console.error.warningatstartFailed.error": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "warning At Start failed:"
+    },
+    "server.log.validateDocument.logger.dbg.PublishDiagnostics.message": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "validate Document: Publish problem reports"
+    },
+    "server.path.logger.dbg.serverJsOninitializedMydefragServerLanguage.structural.server.js.onInitialized.MyDefrag": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "server.js on Initialized: My Storage Management server Language Client initialized. Log test."
+    },
+    "server.path.logger.dbg.serverJsOninitializedWorkspaceScanDeferred.structural": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "server.js on Initialized: Workspace scan deferred to file/configuration refresh"
+    },
+    "server.path.scanAllFiles.logger.dbg.scanallfilesSkippingExcludedFolderRelfolderpath.structural": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "relFolderPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "scan All Files: Skipping excluded folder ${relFolderPath}"
+    },
+    "server.path.validateDocument.serverJsValidatedocumentUnexpectedParserFailure.structural": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "server.js validate Document: Unexpected syntax analyzer failure"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

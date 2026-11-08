@@ -1,0 +1,526 @@
+{
+  "locale": "am",
+  "component": "locales",
+  "entries": {
+    "locales.accessibility.buildCommandOutput.label": {
+      "text": "የግንባታ ትዕዛዝ ውጤት",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.component.label": {
+      "text": "አካል",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.locale.label": {
+      "text": "አካባቢያዊ",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.maintenanceActions.label": {
+      "text": "የጥገና እርምጃዎች",
+      "status": "machine-generated"
+    },
+    "locales.accessibility.operationInProgress.label": {
+      "text": "ክ ...",
+      "status": "machine-generated"
+    },
+    "locales.action.applyInMemory.label": {
+      "text": "በማህደረ ትውስታ ውስጥ ይተግብሩ",
+      "status": "machine-generated"
+    },
+    "locales.action.close.label": {
+      "text": "ዝጋ",
+      "status": "machine-generated"
+    },
+    "locales.action.exit.label": {
+      "text": "ውጣ",
+      "status": "machine-generated"
+    },
+    "locales.action.generateApiTranslation.label": {
+      "text": "የኤፒአይ ትርጉም ፍጠር",
+      "status": "machine-generated"
+    },
+    "locales.action.rebuildSelectedComponent.label": {
+      "text": "የተመረጠውን ክፍል እንደገና ገንባ",
+      "status": "machine-generated"
+    },
+    "locales.action.reload.label": {
+      "text": "ዳግም ጫን",
+      "status": "machine-generated"
+    },
+    "locales.action.revert.label": {
+      "text": "ዳግም መልሰህ መልስ",
+      "status": "machine-generated"
+    },
+    "locales.action.saveAndRebuild.label": {
+      "text": "አስቀምጥ እና እንደገና ገንባ",
+      "status": "machine-generated"
+    },
+    "locales.action.stopBuild.label": {
+      "text": "ግንባታ አቁም",
+      "status": "machine-generated"
+    },
+    "locales.action.useEnglishFallback.label": {
+      "text": "የእንግሊዝኛ አማራጭ ምርጫ ይጠቀሙ",
+      "status": "machine-generated"
+    },
+    "locales.action.useNormalizedEnglish.label": {
+      "text": "መደበኛ እንግሊዝኛን ይጠቀሙ",
+      "status": "machine-generated"
+    },
+    "locales.action.validate.label": {
+      "text": "ማረጋገጫ",
+      "status": "machine-generated"
+    },
+    "locales.dialog.cancel.text": {
+      "text": "ሰርዝ",
+      "status": "machine-generated"
+    },
+    "locales.dialog.confirmLocaleSourceChanges.title": {
+      "text": "የአካባቢ ምንጭ ለውጦችን ያረጋግጡ",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardAndReload.text": {
+      "text": "አስወግድ እና እንደገና ጫን",
+      "status": "machine-generated"
+    },
+    "locales.dialog.discardUnsavedTranslations.title": {
+      "text": "ያልተቀመጡ ትርጉሞችን ይጣሉ?",
+      "status": "machine-generated"
+    },
+    "locales.dialog.exitWithoutSaving.text": {
+      "text": "ያላስቀምጡ ይውጡ",
+      "status": "machine-generated"
+    },
+    "locales.dialog.localeComponentBuildIsRunning.title": {
+      "text": "የአካባቢ አካል ግንባታ እየሰራ ነው",
+      "status": "machine-generated"
+    },
+    "locales.dialog.mydefragLocaleMaintenance.text": {
+      "text": "የእኔ ማከማቻ አስተዳደር የቋንቋ ክልል እንክብካቤ",
+      "status": "machine-generated"
+    },
+    "locales.dialog.noFilesWillChange.text": {
+      "text": "ምንም ፋይሎች አይቀየሩም።",
+      "status": "machine-generated"
+    },
+    "locales.dialog.returnToBuild.text": {
+      "text": "ወደ ግንባታ ተመለስ",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndComponentBuildSucceeded.title": {
+      "text": "አስቀምጥ እና የክፍል ግንባታ ተሳክቷል",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveAndRebuildComponent.text": {
+      "text": "አካውንትን አስቀምጥ እና እንደገና ገንባ",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveBlockedByValidation.title": {
+      "text": "አስቀምጥ በማረጋገጫ ታግዷል",
+      "status": "machine-generated"
+    },
+    "locales.dialog.saveFailedAndWasRolledBack.title": {
+      "text": "አስቀምጥ አልተሳካም እና ተመልሷል",
+      "status": "machine-generated"
+    },
+    "locales.dialog.selectTheMydefragSyntaxRepository.title": {
+      "text": "የእኔ ማከማቻ አስተዳደር-የሰዋሰው ደንቦች ማከማቻን ይምረጡ",
+      "status": "machine-generated"
+    },
+    "locales.dialog.unsavedLocaleChanges.title": {
+      "text": "ያልተቀመጡ የአካባቢ ለውጦች",
+      "status": "machine-generated"
+    },
+    "locales.heading.catalog.text": {
+      "text": "ካታሎግ",
+      "status": "machine-generated"
+    },
+    "locales.heading.localeOperation.text": {
+      "text": "የአካባቢ ክወና",
+      "status": "machine-generated"
+    },
+    "locales.heading.operationResult.text": {
+      "text": "የስራ ውጤት",
+      "status": "machine-generated"
+    },
+    "locales.heading.selectALocaleAndComponent.text": {
+      "text": "አካባቢ እና አካል ይምረጡ",
+      "status": "machine-generated"
+    },
+    "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
+      "text": "ከአሁኑ የአካባቢ እሴት ትርጉም ይፍጠሩ",
+      "status": "machine-generated"
+    },
+    "locales.input.keySourceTranslationStatus.placeholder": {
+      "text": "ቁልፍ፣ ምንጭ፣ ትርጉም፣ ሁኔታ",
+      "status": "machine-generated"
+    },
+    "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
+      "text": "ትክክለኛ የእኔ ማከማቻ አስተዳደር የአካባቢ ማከማቻ አልተመረጠም።",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationRejected.text": {
+      "text": "የኤፒአይ ትርጉም ውድቅ ተደርጓል",
+      "status": "machine-generated"
+    },
+    "locales.message.apiTranslationUnavailable.text": {
+      "text": "የኤፒአይ ትርጉም አይገኝም",
+      "status": "machine-generated"
+    },
+    "locales.message.applicationFailedToStart.text": {
+      "text": "አፕሊኬሽኑ መጀመር አልቻለም",
+      "status": "machine-generated"
+    },
+    "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
+      "text": "ቀኖናዊ እንግሊዝኛ የኤፒአይ ትርጉም ኢላማ አይደለም።",
+      "status": "machine-generated"
+    },
+    "locales.message.catalogKeyBelongsToComponentValue.text": {
+      "text": "የካታሎግ ቁልፍ የ{canonicalComponent} አካል ነው።",
+      "status": "machine-generated"
+    },
+    "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
+      "text": "የlanguage/locales እና build/languageን ማከማቻ ይምረጡ።",
+      "status": "machine-generated"
+    },
+    "locales.message.componentRebuildFailed.text": {
+      "text": "የክፍሉን መልሶ መገንባት አልተሳካም",
+      "status": "machine-generated"
+    },
+    "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
+      "text": "አካባቢን ወይም አካልን ከመቀየርዎ በፊት ለውጦችን ያስወግዱ ወይም ያስቀምጡ።",
+      "status": "machine-generated"
+    },
+    "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
+      "text": "የእንግሊዝኛ ቀኖናዊ ጽሑፍ እዚህ ብቻ ተነባቢ ነው።",
+      "status": "machine-generated"
+    },
+    "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
+      "text": "የእንግሊዝኛ ጽሑፍ ቀኖናዊ ሲሆን በየእኔ ማከማቻ አስተዳደር የቋንቋ ጥገና ውስጥ መቀመጥ አለበት።",
+      "status": "machine-generated"
+    },
+    "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
+      "text": "የኤፒአይ ትርጉም ከማመንጨትዎ በፊት የአሁኑን የአካባቢ እሴት ያስገቡ ወይም ይሙሉ።",
+      "status": "machine-generated"
+    },
+    "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
+      "text": "የተመረጡትን የክፍሎች ትርጉሞች ወጥተው ይጣሉ?",
+      "status": "machine-generated"
+    },
+    "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
+      "text": "እሴቱን ከመተካትዎ በፊት የኤፒአይ ትርጉም ይፍጠሩ።",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
+      "text": "በ{relativePath} ውስጥ የተፈጠረ የአካባቢያዊ ካታሎግ የማንነት አለመዛመድ፡",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedLocaleCatalogIsInvalid.text": {
+      "text": "የተፈጠረው የአካባቢያዊ ካታሎግ ልክ ያልሆነ ነው፡",
+      "status": "machine-generated"
+    },
+    "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
+      "text": "የመነጩ ትርጉሞች ከተጻፈው ውሂብ ከመወገዳቸው በፊት መተግበር አለባቸው።",
+      "status": "machine-generated"
+    },
+    "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
+      "text": "የአካባቢ ጥገና መረጃ አልተጫነም።",
+      "status": "machine-generated"
+    },
+    "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
+      "text": "የእኔ ማከማቻ አስተዳደር የአካባቢ ማከማቻ አይደለም።\nየጎደለው፦ {missing}",
+      "status": "machine-generated"
+    },
+    "locales.message.pathEscapesTheRepositoryRootValue.text": {
+      "text": "መንገዱ ከማከማቻ ስርወ-ውስጥ ይወጣል፦ {relativePath}",
+      "status": "machine-generated"
+    },
+    "locales.message.placeholdersMustBeExactlyValue.text": {
+      "text": "የቦታ ባለቤቶች በትክክል፦ {expected} መሆን አለባቸው።",
+      "status": "machine-generated"
+    },
+    "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
+      "text": "ዳግም መጫን በተመረጠው የአካባቢ ክፍል ላይ የተደረጉ ለውጦችን ያስወግዳል።",
+      "status": "machine-generated"
+    },
+    "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "text": "ከመገንባትዎ በፊት ለውጦችን ያስቀምጡ ወይም ይመልሱ።",
+      "status": "machine-generated"
+    },
+    "locales.message.selectedComponentRebuilt.text": {
+      "text": "የተመረጠው ክፍል እንደገና ተገንብቷል",
+      "status": "machine-generated"
+    },
+    "locales.message.selectionFailed.text": {
+      "text": "ምርጫው አልተሳካም",
+      "status": "machine-generated"
+    },
+    "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
+      "text": "የአካባቢው ክፍል ንድፍ አይገኝም።",
+      "status": "machine-generated"
+    },
+    "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "text": "ዋናው ሂደት የተለየ የአሁኑ አካባቢ እሴት ተርጉሟል።\nየአካባቢ ጥገናን እንደገና ያስጀምሩ እና እንደገና ይሞክሩ።",
+      "status": "machine-generated"
+    },
+    "locales.message.translationRejected.text": {
+      "text": "ትርጉም ውድቅ ተደርጓል",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownCatalogKeyValue.text": {
+      "text": "ያልታወቀ የካታሎግ ቁልፍ፡ {key}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text": {
+      "text": "ያልታወቀ ክፍል፡ {componentId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownComponentValue.text2": {
+      "text": "ያልታወቀ ክፍል፡ {documentComponent}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownKeyForSelectedComponentValue.text": {
+      "text": "ለተመረጠው ክፍል ያልታወቀ ቁልፍ፡ {payloadKey}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text": {
+      "text": "ያልታወቀ አካባቢ፡ {localeId}",
+      "status": "machine-generated"
+    },
+    "locales.message.unknownLocaleValue.text2": {
+      "text": "ያልታወቀ አካባቢ፡ {documentLocale}",
+      "status": "machine-generated"
+    },
+    "locales.message.validationResult.text": {
+      "text": "የማረጋገጫ ውጤት",
+      "status": "machine-generated"
+    },
+    "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
+      "text": "ከመውጣትዎ በፊት ግንባታው እስኪጠናቀቅ ይጠብቁ።",
+      "status": "machine-generated"
+    },
+    "locales.message.writeValueAuthoritativeFileS.text": {
+      "text": "የ{normalizedCount} ባለስልጣን ፋይል(ዎች) ይጻፉ?",
+      "status": "machine-generated"
+    },
+    "locales.progress.capturingGeneratedFilesForRollback.status": {
+      "text": "ለመመለስ የተፈጠሩ ፋይሎችን በመያዝ ላይ",
+      "status": "machine-generated"
+    },
+    "locales.progress.checkingGeneratedFileChanges.status": {
+      "text": "የተፈጠሩ የፋይል ለውጦችን በመፈተሽ ላይ",
+      "status": "machine-generated"
+    },
+    "locales.progress.committingLocaleSourceChanges.status": {
+      "text": "የአካባቢ ምንጭ ለውጦችን በማድረግ ላይ",
+      "status": "machine-generated"
+    },
+    "locales.progress.preparingSave.status": {
+      "text": "ማስቀመጥን በማዘጋጀት ላይ",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
+      "text": "ተዓማኒነት ያላቸው እና የተፈጠሩ ፋይሎችን ወደነበሩበት መመለስ",
+      "status": "machine-generated"
+    },
+    "locales.progress.restoringFilesAfterAnError.status": {
+      "text": "ከስህተት በኋላ ፋይሎችን ወደነበሩበት መመለስ",
+      "status": "machine-generated"
+    },
+    "locales.progress.savingLocaleComponent.status": {
+      "text": "የአካባቢ ክፍልን በማስቀመጥ ላይ",
+      "status": "machine-generated"
+    },
+    "locales.progress.startingSaveAndComponentRebuild.status": {
+      "text": "ማስቀመጥ እና የክፍሉን መልሶ መገንባት መጀመር",
+      "status": "machine-generated"
+    },
+    "locales.progress.stoppingComponentBuild.status": {
+      "text": "የክፍሉን ግንባታ ማቆም",
+      "status": "machine-generated"
+    },
+    "locales.progress.useStopBuildInTheProgressWindowThen.status": {
+      "text": "በሂደት መስኮቱ ውስጥ የማቆም ግንባታን ይጠቀሙ፣ ከዚያ መተግበሪያውን ከመዝጋትዎ በፊት መልሶ መመለሱ እስኪጠናቀቅ ይጠብቁ።",
+      "status": "machine-generated"
+    },
+    "locales.progress.waitingForSaveConfirmation.status": {
+      "text": "ማረጋገጫ ለማስቀመጥ በመጠባበቅ ላይ",
+      "status": "machine-generated"
+    },
+    "locales.progress.writingAuthoritativeLocaleFiles.status": {
+      "text": "ተዓማኒነት ያላቸውን የአካባቢ ፋይሎች በመጻፍ ላይ",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "ባጅ {stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "ባጅ {stateValidationOk}",
+      "status": "machine-generated"
+    },
+    "locales.ui.canonicalEnglish.text": {
+      "text": "ካኖኒካል እንግሊዝኛ",
+      "status": "machine-generated"
+    },
+    "locales.ui.catalogKey.text": {
+      "text": "የካታሎግ ቁልፍ",
+      "status": "machine-generated"
+    },
+    "locales.ui.componentStrings.text": {
+      "text": "የክፍሎች ሕብረቁምፊዎች",
+      "status": "machine-generated"
+    },
+    "locales.ui.currentLocaleValue.text": {
+      "text": "የአሁኑ የአካባቢ እሴት",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
+      "text": "DeepL አልተዋቀረም።\nአፕሊኬሽኑን ከማስጀመርዎ በፊት DeeplApi ን ያዘጋጁ።",
+      "status": "machine-generated"
+    },
+    "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
+      "text": "DeepL የአሁኑን የአካባቢ እሴት ተክቷል።\nለማቆየት በማህደረ ትውስታ ውስጥ ይተግብሩ።",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardInMemoryTranslationChanges.text": {
+      "text": "በማህደረ ትውስታ ውስጥ የትርጉም ለውጦችን ያስወግዱ?",
+      "status": "machine-generated"
+    },
+    "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
+      "text": "ያልተቀመጡ ትርጉሞችን ያስወግዱ እና ምርጫውን ይቀይሩ?",
+      "status": "machine-generated"
+    },
+    "locales.ui.englishFallback.text": {
+      "text": "የእንግሊዝኛ አማራጭ ምርጫ",
+      "status": "machine-generated"
+    },
+    "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
+      "text": "ከአሁኑ የአካባቢ እሴት ትርጉም ይፍጠሩ።\nውጤቱ ያንን መስክ ብቻ ይተካል።",
+      "status": "machine-generated"
+    },
+    "locales.ui.generatedValue.text": {
+      "text": "የተፈጠረ፡ {stateGeneratedFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.key.text": {
+      "text": "ቁልፍ",
+      "status": "machine-generated"
+    },
+    "locales.ui.latestDeeplResult.text": {
+      "text": "የቅርብ ጊዜ የDeepL ውጤት",
+      "status": "machine-generated"
+    },
+    "locales.ui.noUnsavedChanges.text": {
+      "text": "ያልተቀመጡ ለውጦች የሉም",
+      "status": "machine-generated"
+    },
+    "locales.ui.normalizedEnglish.text": {
+      "text": "መደበኛ እንግሊዝኛ",
+      "status": "machine-generated"
+    },
+    "locales.ui.notValidated.text": {
+      "text": "አልተረጋገጠም",
+      "status": "machine-generated"
+    },
+    "locales.ui.preparingComponentRebuild.text": {
+      "text": "የክፍሉን መልሶ ግንባታ በማዘጋጀት ላይ",
+      "status": "machine-generated"
+    },
+    "locales.ui.rebuildingLocaleComponent.text": {
+      "text": "የአካባቢውን ክፍል እንደገና በመገንባት ላይ",
+      "status": "machine-generated"
+    },
+    "locales.ui.requestingADeeplTranslation.text": {
+      "text": "የዲፕል ትርጉም በመጠየቅ ላይ…",
+      "status": "machine-generated"
+    },
+    "locales.ui.requiredPlaceholders.text": {
+      "text": "አስፈላጊ የቦታ ያዥዎች",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
+      "text": "የአሁኑን የአካባቢ እሴት እና የኤፒአይ ጥቆማ መጠን ይቀይሩ",
+      "status": "machine-generated"
+    },
+    "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
+      "text": "የአካባቢ ካታሎግ እና የትርጉም አርታኢ መጠን ቀይር",
+      "status": "machine-generated"
+    },
+    "locales.ui.reviewStatus.text": {
+      "text": "የግምገማ ሁኔታ",
+      "status": "machine-generated"
+    },
+    "locales.ui.search.text": {
+      "text": "ፍለጋ",
+      "status": "machine-generated"
+    },
+    "locales.ui.selectACatalogEntry.text": {
+      "text": "የካታሎግ ግቤት ይምረጡ",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceText.text": {
+      "text": "የምንጭ ጽሑፍ",
+      "status": "machine-generated"
+    },
+    "locales.ui.sourceValue.text": {
+      "text": "ምንጭ፡ {stateAuthoritativeFile}",
+      "status": "machine-generated"
+    },
+    "locales.ui.status.text": {
+      "text": "ሁኔታ",
+      "status": "machine-generated"
+    },
+    "locales.ui.structuredEditor.text": {
+      "text": "የተዋቀረ አርታኢ",
+      "status": "machine-generated"
+    },
+    "locales.ui.translation.text": {
+      "text": "ትርጉም",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationScope.text": {
+      "text": "የትርጉም ወሰን",
+      "status": "machine-generated"
+    },
+    "locales.ui.translationUnavailable.text": {
+      "text": "ትርጉም አይገኝም።",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorDesktopTool.text": {
+      "text": "የትርጉም ዴስክቶፕ መሳሪያ",
+      "status": "machine-generated"
+    },
+    "locales.ui.translatorNotes.text": {
+      "text": "የትርጉም ማስታወሻዎች",
+      "status": "machine-generated"
+    },
+    "locales.ui.unsavedChanges.text": {
+      "text": "ያልተቀመጡ ለውጦች",
+      "status": "machine-generated"
+    },
+    "locales.ui.valid.text": {
+      "text": "ትርጉም ትክክል ነው",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueEnglishFallback.text": {
+      "text": "{stateCompletenessFallback} የእንግሊዝኛ አማራጭ ምርጫ",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
+      "text": "{rowApiTranslationProvider} ውጤት ዝግጁ ነው።\nየአሁኑን የአካባቢ እሴት ለማቆየት በማህደረ ትውስታ ውስጥ ይተግብሩ።",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTotal.text": {
+      "text": "{stateCompletenessTotal} ድምር",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueTranslated.text": {
+      "text": "{stateCompletenessTranslated} ተተርጉሟል",
+      "status": "machine-generated"
+    },
+    "locales.ui.valueValidationErrorS.text": {
+      "text": "{stateValidationErrorsCount} የማረጋገጫ ስህተት(ዎች)",
+      "status": "machine-generated"
+    }
+  }
+}

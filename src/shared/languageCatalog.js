@@ -108,16 +108,26 @@ function loadComponent(entries, loadedComponents, rootDir, locale, component, fa
 function formatText(text, args = {}, declaredPlaceholders = []) {
     const used = new Set();
     const missing = [];
-    const output = String(text || '').replace(/\{([A-Za-z_][A-Za-z0-9_]*)\}/g, (match, name) => {
-        used.add(name);
-        if (!Object.prototype.hasOwnProperty.call(args, name)) {
-            missing.push(name);
-            return match;
+
+    const output = String(text || '').replace(
+        /\{([A-Za-z_][A-Za-z0-9_]*)\}/g,
+        (match, name) => {
+            used.add(name);
+
+            if (!Object.prototype.hasOwnProperty.call(args, name)) {
+                missing.push(name);
+                return match;
+            }
+
+            return String(args[name]);
         }
-        return String(args[name]);
-    });
+    );
+
     const expected = new Set(declaredPlaceholders);
-    const extraArgs = Object.keys(args).filter((name) => !expected.has(name) && !used.has(name)).sort();
+
+    const extraArgs = Object.keys(args)
+        .filter((name) => !expected.has(name) && !used.has(name))
+        .sort();
 
     return {
         text: output,
@@ -125,7 +135,6 @@ function formatText(text, args = {}, declaredPlaceholders = []) {
         extraArgs
     };
 }
-
 module.exports = {
     DEFAULT_LOCALE,
     createLanguageCatalog,

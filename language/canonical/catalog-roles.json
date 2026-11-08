@@ -147,6 +147,14 @@
     {
       "id": "externalLink",
       "description": "Any link that points to sites or data external to the project."
+    },
+    {
+      "id": "progress",
+      "description": "Progress display."
+    },
+    {
+      "id": "debug",
+      "description": "Debugging information and statements."
     }
   ]
 }

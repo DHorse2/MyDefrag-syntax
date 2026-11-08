@@ -3,11 +3,11 @@
   "component": "preview",
   "entries": {
     "preview.annotation.includeBegin.text": {
-      "text": "BEGIN [depth {depth}] {path}",
+      "text": "начать [уровень вложенности {depth}] {path}",
       "status": "machine-generated"
     },
     "preview.annotation.includeEnd.text": {
-      "text": "КОНЕЦ [depth {depth}] {path}",
+      "text": "КОНЕЦ [уровень вложенности {depth}] {path}",
       "status": "machine-generated"
     },
     "preview.report.includeFiles.heading": {

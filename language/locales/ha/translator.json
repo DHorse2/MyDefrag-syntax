@@ -75,11 +75,11 @@
       "status": "machine-generated"
     },
     "translator.accessibility.localeTemplate.label": {
-      "text": "Template na yanki",
+      "text": "samfurin tsari na yanki",
       "status": "machine-generated"
     },
     "translator.accessibility.maximizeValue.label": {
-      "text": "Maximize {windowLabel}",
+      "text": "Ƙara girman {windowLabel}",
       "status": "machine-generated"
     },
     "translator.accessibility.migrationCandidatesForValue.label": {
@@ -175,7 +175,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
-      "text": "Ana adana fayilolin da aka ƙirƙira ƙarƙashin yankunan harshe na / koyaushe.",
+      "text": "Fayilolin da aka rubuta a ƙarƙashin language/locales ana kiyaye su koyaushe.",
       "status": "machine-generated"
     },
     "translator.dialog.cancel.text": {
@@ -255,7 +255,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.mydefragLanguageMaintenance.text": {
-      "text": "Kula da harshen Defragmenter na",
+      "text": "Kula da harshen Gudanar da Ajiyata na",
       "status": "machine-generated"
     },
     "translator.dialog.noAuthoritativeFilesWillChange.text": {
@@ -271,7 +271,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.revertFailed.title": {
-      "text": "Revert ya gaza",
+      "text": "gyarawa ya gaza",
       "status": "machine-generated"
     },
     "translator.dialog.saveAndBuildSucceeded.title": {
@@ -311,15 +311,15 @@
       "status": "machine-generated"
     },
     "translator.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "Zaɓi ma'ajiyar nahawun My Defragmenter",
+      "text": "Zaɓi ma'ajiyar nahawun Gudanar da Ajiyata",
       "status": "machine-generated"
     },
     "translator.dialog.startingMydefragLanguageMaintenance.title": {
-      "text": "Fara Gyaran Harshe na Defragmenter Dina",
+      "text": "Fara Gyaran Harshe na Gudanar da Ajiyata Dina",
       "status": "machine-generated"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
-      "text": "Za a adana bayanai na ginin da aka samar na harshen / da kundin / da / da {id} ta tsohuwa.",
+      "text": "Za a adana bayanan da aka samar ta build/language/catalogs/{id} ta tsohuwa.",
       "status": "machine-generated"
     },
     "translator.dialog.unsavedLanguageChanges.title": {
@@ -379,7 +379,7 @@
       "status": "machine-generated"
     },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
-      "text": "Ba a zaɓi ingantaccen ma'ajiyar nahawun My Defragmenter ba.",
+      "text": "Ba a zaɓi ingantaccen ma'ajiyar nahawun Gudanar da Ajiyata ba.",
       "status": "machine-generated"
     },
     "translator.message.buildCancelledByUser.text": {
@@ -411,7 +411,7 @@
       "status": "machine-generated"
     },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
-      "text": "Zaɓi ma'ajiyar da ke da alhakin harshen /, harshen kanonali da ginin harshen /.",
+      "text": "Zaɓi ma'ajiyar da ta mallaki language/canonical da build/language.",
       "status": "machine-generated"
     },
     "translator.message.componentAddedInMemory.text": {
@@ -619,7 +619,7 @@
       "status": "machine-generated"
     },
     "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
-      "text": "Ba ma'ajiyar harshe na My Defragmenter ba. Abin da ke ɓacewa: {missing}",
+      "text": "Ba ma'ajiyar harshe na Gudanar da Ajiyata ba. Abin da ke ɓacewa: {missing}",
       "status": "machine-generated"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
@@ -743,7 +743,7 @@
       "status": "machine-generated"
     },
     "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
-      "text": "Ba a samu gada mai iyakance na preload ba.",
+      "text": "Ba a samu gada mai iyakance na farawa gada ba.",
       "status": "machine-generated"
     },
     "translator.message.theSelectedLineIsNotACurrentMigration.text": {
@@ -815,7 +815,7 @@
       "status": "machine-generated"
     },
     "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
-      "text": "Ba za a iya karanta ginin ba / harshe / rahotanni / rahoton hijira .json: {errorMessage}",
+      "text": "Ba a iya karanta build/language/reports/migration-report.json: {errorMessage}",
       "status": "machine-generated"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
@@ -839,7 +839,7 @@
       "status": "machine-generated"
     },
     "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
-      "text": "Yi amfani da Ajiye don adana matsayin ɗan takara a cikin abubuwan haɗin kanun magana na / da na / na .json.",
+      "text": "Yi amfani da Ajiye don ci gaba da matsayin shawara a cikin language/canonical/components.json.",
       "status": "machine-generated"
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
@@ -927,7 +927,7 @@
       "status": "machine-generated"
     },
     "translator.progress.useStopBuildInTheProgressWindowThen.status": {
-      "text": "Yi amfani da Stop Build a cikin taga ci gaba, sannan ka jira dawowa baya ta kammala kafin ka rufe manhajar.",
+      "text": "Yi amfani da Dakatar da Gina a cikin taga ci gaba, sannan ka jira dawowa baya ta kammala kafin ka rufe manhajar.",
       "status": "machine-generated"
     },
     "translator.progress.waitingForSaveConfirmation.status": {
@@ -1067,7 +1067,7 @@
       "status": "machine-generated"
     },
     "translator.ui.buildLanguageCatalogsValue.text": {
-      "text": "gina / harshe / kundin / {currentId}",
+      "text": "build/language/catalogs/{currentId}",
       "status": "machine-generated"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
@@ -1091,7 +1091,7 @@
       "status": "machine-generated"
     },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
-      "text": "Zaɓuɓɓuka suna nuna harshe/, canonical / da yankunan harshe na .json. Yankunan harshe da aka yi rijista suna nan a gani amma ba za a iya zaɓar su ba.",
+      "text": "madubin zabi language/canonical/language-locales.json. Yankunan yare masu rijista suna nan a bayyane amma ba za a iya zaɓar su ba.",
       "status": "machine-generated"
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
@@ -1287,11 +1287,11 @@
       "status": "machine-generated"
     },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
-      "text": "Yana kula da harshe /, siffofin canonical na /, .json → migration, da Inventory .scanFiles",
+      "text": "Yana kiyaye language/canonical/components.json → migrationInventory.scanFiles",
       "status": "machine-generated"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
-      "text": "Yana kula da yankuna na harshe na /, / da .json. Goge wani yanki yana adana fayilolin tushe da aka rubuta kuma ta tsohuwa yana ci gaba da riƙe bayanan katalog da aka samar.",
+      "text": "Yana kiyaye language/locales/locales.json. Share yankin yare yana adana fayilolin tushe da aka rubuta kuma yana adana bayanan kasida ta tsohuwa.",
       "status": "machine-generated"
     },
     "translator.ui.migrationCoverageUnavailable.text": {
@@ -1323,7 +1323,7 @@
       "status": "machine-generated"
     },
     "translator.ui.noCandidateStringsWereFoundInThisFile.text": {
-      "text": "Ba a sami kowanne jerin kalmomin 'candidate' a cikin wannan fayil ba.",
+      "text": "Ba a sami kowanne jerin kalmomin 'shawara' a cikin wannan fayil ba.",
       "status": "machine-generated"
     },
     "translator.ui.noComponentMatchesTheSearch.text": {
@@ -1567,7 +1567,7 @@
       "status": "machine-generated"
     },
     "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
-      "text": "Zaɓi fayil ɗaya don nuna kowace sarkar da extract String Candidates ta karɓa.",
+      "text": "Zaɓi fayil ɗaya don nuna kowace sarkar da 'Yan takarar Cire Zaren ta karɓa.",
       "status": "machine-generated"
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
@@ -1744,6 +1744,358 @@
     },
     "translator.ui.yes.text": {
       "text": "Eh",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.catalogRecordValue.label": {
+      "text": "Rikodin kasida {recordKey}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "text": "An kammala matakan farawa",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "text": "Tace 'yan takara ta rukuni",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "text": "Tace 'yan takara ta rukuni",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "text": "Tace 'yan takara ta matsayi",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "text": "Tace bayanan kundin adireshi ta rukuni",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "text": "Tace bayanan kundin adireshi ta rukuni",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "text": "Tace bayanan kundin adireshi ta matsayi",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "text": "Tace bayanan kundin adireshi ta matsayi",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "text": "Yi odar 'yan takara ta layi",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "text": "Yi odar bayanan kundin adireshi ta layin tushe",
+      "status": "machine-generated"
+    },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "text": "Ana buƙatar layin tushe na yanzu, rubutun ɗan takara, da maɓallin kundin adireshi.",
+      "status": "machine-generated"
+    },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "text": "Aiwatar da wannan maɓallin kundin adireshi zuwa daftarin ƙwaƙwalwar ajiya kafin maye gurbin tushen.",
+      "status": "machine-generated"
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "text": "Ana tallafawa maye gurbin atomatik ne kawai don fayilolin CommonJS .js da .cjs. JSON da sauran tsare-tsare suna buƙatar canjin wuri na musamman.",
+      "status": "machine-generated"
+    },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "text": "Ana buƙatar canjin tushen ƙaura mai inganci.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "text": "Layi mai tsari {candidateLine}. Sabunta layin tushen sa don kammala wannan ɗan takarar; kewayawa yana nan.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "text": "Tushen da aka tsara har yanzu suna buƙatar sabuntawa",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "text": "Tushen da aka tsara har yanzu yana buƙatar sabuntawa",
+      "status": "machine-generated"
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "text": "Furfuren samfuri masu rikitarwa suna buƙatar haɗin mai riƙe wuri daga masu bincike kafin a canza su.",
+      "status": "machine-generated"
+    },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "text": "Ba za a iya sake suna maɓallan kundin da ke akwai ba. Ƙara sabon rikodi maimakon haka.",
+      "status": "machine-generated"
+    },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "text": "Ba a tallafawa maye gurbin igiyoyi da yawa ta hanyar ƙugiyar juyawa ta farko ba.",
+      "status": "machine-generated"
+    },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "text": "Sabunta samfoti na juyawa kafin maye gurbin layin tushe.",
+      "status": "machine-generated"
+    },
+    "translator.message.replacedLineValueInValue.text": {
+      "text": "Layi da aka maye gurbin {previewLine} a cikin {previewPath}.",
+      "status": "machine-generated"
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "text": "Layi da aka maye gurbin {previewLine} a cikin {previewPath}. Ba za a iya cire madadin ba: {recoveryFiles}",
+      "status": "machine-generated"
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "text": "Mayar da fayilolin da aka samar da kuma tushen yankin da ke da ɗorewa",
+      "status": "machine-generated"
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "text": "Zaɓi Mai Yiwuwar Cancanta, Bita, An Ƙi, Gyara Lamba, ko Sabunta Lamba.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceLineReplaced.text": {
+      "text": "An Sauya Layin Tushe",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "text": "Ba a maye gurbin layin tushe ba",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "text": "Ba a kunna maye gurbin tushe ba.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "text": "Ba a shirya maye gurbin tushe ba.",
+      "status": "machine-generated"
+    },
+    "translator.message.startingElectron.text": {
+      "text": "Fara Electron...",
+      "status": "machine-generated"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "text": "Mai gano kasida ba ingantaccen mai gano JavaScript bane.",
+      "status": "machine-generated"
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "text": "Na'urar daukar hoton da aka tsara ba za ta iya samar da wuraren tushen ɗan takara ba.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "text": "Maɓallin kasida da aka zaɓa bai ƙunshi wannan rubutun ɗan takara ba.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "text": "Layi da rubutu da aka zaɓa ba 'yan takarar ƙaura da aka ruwaito a yanzu ba ne.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "text": "Layi da rubutu da aka zaɓa ba sa gano ɗan takarar ƙaura ɗaya na yanzu.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "text": "Layin tushen da aka zaɓa ya canza bayan an ƙirƙiri samfoti na canji.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "text": "Layin tushen da aka zaɓa ba ya wanzu.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "text": "Zaren da aka zaɓa ba ya nan a layin tushen da aka ruwaito.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "text": "Zaren da aka zaɓa yana faruwa fiye da sau ɗaya a layin tushen; ana buƙatar ainihin faruwa.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "text": "An canza tushen kafin a iya maye gurbinsa: {itemRelativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "text": "An canza fayil ɗin tushen bayan an ƙirƙiri samfoti na canjin. Sake zaɓar ɗan takarar don sabunta shi.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "text": "An canza fayil ɗin tushen kafin maye gurbin. Sake zaɓar ɗan takarar don sabunta shi.",
+      "status": "machine-generated"
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "text": "JavaScript ɗin da aka canza ba shi da inganci a cikin rubutun: {syntaxError}",
+      "status": "machine-generated"
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "text": "Sunan canjin canjin ba ingantaccen mai gano JavaScript bane.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "text": "Ba za a iya sabunta daftarin ƙwaƙwalwar ajiya ba.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "text": "{unresolvedCount} waɗanda aka jera sunayensu har yanzu suna ɗauke da asalin tushensu ko kuma ba za a iya tabbatar da su ba. Rufewa yana ci gaba ba tare da an tilasta shi ba.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "text": "{detail}. Za a ci gaba da kewayawa; ana ba da shawarar sabunta tushen amma ba a tilasta shi ba.",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text": {
+      "text": "lambar {stateDirty}",
+      "status": "machine-generated"
+    },
+    "translator.ui.badgeValue.text2": {
+      "text": "lambar {validationOk}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateStatusValue.text": {
+      "text": "Matsayin ɗan takara: {cANDIDATE_STATUS_LABELSCodeUpdated}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "text": "Matsayin ɗan takara: {cANDIDATE_STATUS_LABELSCandidateStatus}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "text": "Maɓallin katalog ana buƙatar",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "text": "Maɓallin katalog: {initialCatalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "text": "Maɓallin katalog: {catalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "text": "Maɓallin katalog: {resultCatalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "text": "An ƙara rikodin katalogi don layin {candidateLine}. Sabunta layin tushe don kammala wannan ɗan takarar; kewayawa yana nan.",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "text": "Matsayin katalogi: {catalogStatuses}",
+      "status": "machine-generated"
+    },
+    "translator.ui.category.text": {
+      "text": "Rukuni",
+      "status": "machine-generated"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "text": "Ana duba kariyar maye gurbin tushe...",
+      "status": "machine-generated"
+    },
+    "translator.ui.durableLocaleFiles.text": {
+      "text": "Fayil ɗin yanki masu ɗorewa",
+      "status": "machine-generated"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "text": "An canza fayilolin yanki masu ɗorewa",
+      "status": "machine-generated"
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "text": "Shigar da maɓallin kundin adireshi don samar da samfoti na canji.",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "text": "Ba za a iya sake suna maɓallan kundin adireshi da ke akwai ba. Ƙara sabon rikodin don amfani da wani maɓalli.",
+      "status": "machine-generated"
+    },
+    "translator.ui.highestLineFirst.text": {
+      "text": "Layi mafi tsayi da farko",
+      "status": "machine-generated"
+    },
+    "translator.ui.inCatalog.text": {
+      "text": "A cikin kundin adireshi",
+      "status": "machine-generated"
+    },
+    "translator.ui.lineOrder.text": {
+      "text": "Umarnin layi",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingTransformPreview.text": {
+      "text": "Loda samfoti na canji...",
+      "status": "machine-generated"
+    },
+    "translator.ui.lowestLineFirst.text": {
+      "text": "Layi mafi ƙanƙanta da farko",
+      "status": "machine-generated"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "text": "Babu ɗan takara na gaba da ya dace da matattara na yanzu.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "text": "Babu wani ɗan takara da ya taɓa dacewa da matattara na yanzu.",
+      "status": "machine-generated"
+    },
+    "translator.ui.original.text": {
+      "text": "Asalin",
+      "status": "machine-generated"
+    },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "text": "Sake ƙirƙirar samfoti na canji...",
+      "status": "machine-generated"
+    },
+    "translator.ui.replaceLineInSource.text": {
+      "text": "Sake ƙirƙirar layi a cikin tushe",
+      "status": "machine-generated"
+    },
+    "translator.ui.resolvingCatalogKey.text": {
+      "text": "Mayar da maɓalli na kasida...",
+      "status": "machine-generated"
+    },
+    "translator.ui.role.text": {
+      "text": "Matsayin",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "text": "Ba a samun maye gurbin tushe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "text": "Sake ƙirƙirar tushe yana buƙatar maɓallin kasida.",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "text": "Sake ƙirƙirar tushe",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "text": "Sabunta tushe yana nan a jiran aiki. {detail}. An ci gaba da kewayawa.",
+      "status": "machine-generated"
+    },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "text": "Ba a maye gurbin layin tushe ba.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "text": "Wannan maɓalli na yanzu yana amfani da katalog.format kuma ba ya buƙatar canjin tushe.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "text": "An riƙe wannan ɗan takarar da ya gabata don bincike; layin tushe na yanzu yana amfani da katalog.format.",
+      "status": "machine-generated"
+    },
+    "translator.ui.transformed.text": {
+      "text": "An canza",
+      "status": "machine-generated"
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "text": "Ba a samun samfoti na Canji: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueRemaining.text": {
+      "text": "{summaryRemainingCount} ya rage",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "text": "{statusElapsedMsToFixed} daƙiƙa sun shuɗe",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueValueCompleted.text": {
+      "text": "{summaryCompletedCount}/{summaryTotalCount} an kammala",
       "status": "machine-generated"
     }
   }

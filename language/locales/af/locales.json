@@ -55,7 +55,7 @@
       "status": "machine-generated"
     },
     "locales.action.stopBuild.label": {
-      "text": "Stop bou",
+      "text": "kanselleer bou",
       "status": "machine-generated"
     },
     "locales.action.useEnglishFallback.label": {
@@ -95,7 +95,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.mydefragLocaleMaintenance.text": {
-      "text": "My Defragmenter Plaaslike Onderhoud",
+      "text": "My Stoorbestuur Plaaslike Onderhoud",
       "status": "machine-generated"
     },
     "locales.dialog.noFilesWillChange.text": {
@@ -123,7 +123,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "Kies die My Defragmenter-sintaaksbewaarplek",
+      "text": "Kies die My Stoorbestuur-sintaaksbewaarplek",
       "status": "machine-generated"
     },
     "locales.dialog.unsavedLocaleChanges.title": {
@@ -163,11 +163,11 @@
       "status": "machine-generated"
     },
     "locales.message.applicationFailedToStart.text": {
-      "text": "Toepassing kon nie begin nie",
+      "text": "Toepassing kon nie openingspunt nie",
       "status": "machine-generated"
     },
     "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
-      "text": "'n geldige My Defragmenter-lokaalbewaarplek is nie gekies nie.",
+      "text": "'n geldige My Stoorbestuur-lokaalbewaarplek is nie gekies nie.",
       "status": "machine-generated"
     },
     "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
@@ -179,7 +179,7 @@
       "status": "machine-generated"
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "text": "Kies die bewaarplek wat die taal/-lokalise en bou die /-taal.",
+      "text": "Kies die bewaarplek wat language/locales en build/language besit.",
       "status": "machine-generated"
     },
     "locales.message.componentRebuildFailed.text": {
@@ -195,7 +195,7 @@
       "status": "machine-generated"
     },
     "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
-      "text": "Die Engelse teks is kanonies en moet in My Defragmenter Taalonderhoud onderhou word.",
+      "text": "Die Engelse teks is kanonies en moet in My Stoorbestuur Taalonderhoud onderhou word.",
       "status": "machine-generated"
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
@@ -219,7 +219,7 @@
       "status": "machine-generated"
     },
     "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
-      "text": "gegenereerde vertalings moet toegepas word voordat hulle uit geskryfde data verwyder kan word.",
+      "text": "gegenereerde vertalings moet toegepas word voordat hulle uit geskryfde inligting verwyder kan word.",
       "status": "machine-generated"
     },
     "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
@@ -227,7 +227,7 @@
       "status": "machine-generated"
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "text": "Nie 'n My Defragmenter-lokaalbewaarplek nie. Ontbreek: {missing}",
+      "text": "Nie 'n My Stoorbestuur-lokaalbewaarplek nie. Ontbreek: {missing}",
       "status": "machine-generated"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {
@@ -331,15 +331,15 @@
       "status": "machine-generated"
     },
     "locales.progress.startingSaveAndComponentRebuild.status": {
-      "text": "Begin veilige en komponentheropbou",
+      "text": "openingspunt veilige en komponentheropbou",
       "status": "machine-generated"
     },
     "locales.progress.stoppingComponentBuild.status": {
-      "text": "Stop komponentbou",
+      "text": "kanselleer komponentbou",
       "status": "machine-generated"
     },
     "locales.progress.useStopBuildInTheProgressWindowThen.status": {
-      "text": "Gebruik Stop Build in die vorderingvenster, en wag dan totdat die terugrol voltooi is voordat jy die toepassing sluit.",
+      "text": "Gebruik kanselleer Bou in die vorderingvenster, en wag dan totdat die terugrol voltooi is voordat jy die toepassing sluit.",
       "status": "machine-generated"
     },
     "locales.progress.waitingForSaveConfirmation.status": {
@@ -375,7 +375,7 @@
       "status": "machine-generated"
     },
     "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
-      "text": "Deep L is nie gekonfigureer nie. Stel Deepl Api in voordat jy die toepassing begin.",
+      "text": "Deep L is nie gekonfigureer nie. Stel Deepl Api in voordat jy die toepassing openingspunt.",
       "status": "machine-generated"
     },
     "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
@@ -439,7 +439,7 @@
       "status": "machine-generated"
     },
     "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
-      "text": "Herformaat die huidige locale-waarde en API-voorstel",
+      "text": "Herformaat die huidige taalstreek-waarde en API-voorstel",
       "status": "machine-generated"
     },
     "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {

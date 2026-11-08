@@ -2,3375 +2,4165 @@
   "component": "translator",
   "entries": {
     "translator.accessibility.allowDeeplCallsDuringSaveAndRebuild.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Allow DeepL calls during Save and Rebuild"
+      "status": "machine-generated",
+      "text": "Gba awọn ipe DeepL laaye lakoko Fipamọ ati Atunkọ"
     },
     "translator.accessibility.applicationNavigation.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Application navigation"
+      "status": "machine-generated",
+      "text": "Lilọ kiri ohun elo"
     },
     "translator.accessibility.buildCommandOutput.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Build command output"
+      "status": "machine-generated",
+      "text": "Iṣẹjade aṣẹ kọ"
     },
     "translator.accessibility.candidateStatus.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status"
+      "status": "machine-generated",
+      "text": "Ipo oludije"
+    },
+    "translator.accessibility.catalogRecordValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "recordKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Gbigbasilẹ katalogi {recordKey}"
     },
     "translator.accessibility.closeOperationResult.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Close operation result"
+      "status": "machine-generated",
+      "text": "Ti abajade iṣẹ ṣiṣe"
     },
     "translator.accessibility.closeValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "windowLabel"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Close {windowLabel}"
+      "status": "machine-generated",
+      "text": "Ti {windowLabel}"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Awọn ipele ibẹrẹ ti pari"
     },
     "translator.accessibility.componentAssignedToValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component assigned to {filePath}"
+      "status": "machine-generated",
+      "text": "Apakan ti a yàn si {filePath}"
     },
     "translator.accessibility.componentDescription.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component description"
+      "status": "machine-generated",
+      "text": "Àpèjúwe ohun èlò"
     },
     "translator.accessibility.componentForAddedMigrationFiles.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component for added migration files"
+      "status": "machine-generated",
+      "text": "Apapọ̀ fún àwọn fáìlì ìṣíkiri tí a fi kún"
     },
     "translator.accessibility.componentForScannedMigrationFile.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component for scanned migration file"
+      "status": "machine-generated",
+      "text": "Apapọ̀ fún fáìlì ìṣíkiri tí a ṣàyẹ̀wò"
     },
     "translator.accessibility.componentForScannedMigrationFiles.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component for scanned migration files"
+      "status": "machine-generated",
+      "text": "Apapọ̀ fún àwọn fáìlì ìṣíkiri tí a ṣàyẹ̀wò"
     },
     "translator.accessibility.componentIdentifier.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component identifier"
+      "status": "machine-generated",
+      "text": "Àmì ìdámọ̀ ẹ̀yà"
     },
     "translator.accessibility.defaultPreviewMode.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Default preview mode"
+      "status": "machine-generated",
+      "text": "Ipò àyẹ̀wò àìyípadà"
     },
     "translator.accessibility.editCatalogRecordValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "entryKey"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit catalog record {entryKey}"
+      "status": "machine-generated",
+      "text": "Ṣàtúnṣe àkọsílẹ̀ àkójọpọ̀ {entryKey}"
+    },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣàmì àwọn olùdíje nípasẹ̀ ẹ̀ka"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣàmì àwọn olùdíje nípasẹ̀ ẹ̀ka"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣàmì àwọn olùdíje nípasẹ̀ ipa"
     },
     "translator.accessibility.filterCandidatesByStatus.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filter candidates by status"
+      "status": "machine-generated",
+      "text": "Ṣàlẹ̀ àwọn olùdíje nípa ipò wọn"
+    },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣẹ́ àkójọ àkọsílẹ̀ àkójọ nípasẹ̀ ẹ̀ka"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣẹ́ àkójọ àkọsílẹ̀ àkójọ nípasẹ̀ ẹ̀ka"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣẹ́ àkójọ àkọsílẹ̀ àkójọ nípasẹ̀ ipa"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣẹ́ àkójọ àkọsílẹ̀ àkójọ nípasẹ̀ ipò"
     },
     "translator.accessibility.filterMigrationSourceFiles.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣẹ́ àkójọ àwọn fáìlì orísun ìṣíkiri"
+    },
+    "translator.accessibility.languageBuildOptions.label": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Filter migration source files"
+      "text": "Language creation process options"
     },
     "translator.accessibility.languageReportArtifactText.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact text"
+      "status": "machine-generated",
+      "text": "Ìròyìn èdè nípa ọ̀rọ̀ àtọwọ́dá"
     },
     "translator.accessibility.localeTemplate.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale template"
+      "status": "machine-generated",
+      "text": "Àwòrán agbègbè"
     },
     "translator.accessibility.maximizeValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "windowLabel"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maximize {windowLabel}"
+      "status": "machine-generated",
+      "text": "Ṣẹ́ àkójọpọ̀ {windowLabel}"
     },
     "translator.accessibility.migrationCandidatesForValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration candidates for {filePath}"
+      "status": "machine-generated",
+      "text": "Àwọn olùdíje ìṣíkiri fún {filePath}"
     },
     "translator.accessibility.minimizeValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "windowLabel"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Minimize {windowLabel}"
+      "status": "machine-generated",
+      "text": "Dín {windowLabel} kù"
     },
     "translator.accessibility.normalizedText.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Normalized text"
+      "status": "machine-generated",
+      "text": "Ìkọ̀wé tí a ṣe déédé"
     },
     "translator.accessibility.openValueAtLineValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath",
         "candidateLine"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open {filePath} at line {candidateLine}"
+      "status": "machine-generated",
+      "text": "Ṣí {filePath} ní ìlà {candidateLine}"
     },
     "translator.accessibility.operationInProgress.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Operation in progress"
+      "status": "machine-generated",
+      "text": "Ìṣiṣẹ́ ń lọ lọ́wọ́"
+    },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣe àṣẹ fún àwọn olùdíje nípasẹ̀ ìlà"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣe àṣẹ fún àwọn àkọsílẹ̀ àkójọ ìwé nípasẹ̀ ìlà orísun"
     },
     "translator.accessibility.removeValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Remove {filePath}"
+      "status": "machine-generated",
+      "text": "Yọ {filePath} kúrò"
     },
     "translator.accessibility.runtimeComponent.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Runtime component"
+      "status": "machine-generated",
+      "text": "Apá àkókò ìṣiṣẹ́"
     },
     "translator.accessibility.selectValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select {filePath}"
+      "status": "machine-generated",
+      "text": "Yan {filePath}"
     },
     "translator.accessibility.selectedComponent.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected component"
+      "status": "machine-generated",
+      "text": "Apá tí a yàn"
     },
     "translator.accessibility.showComponentsHome.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Show Components home"
+      "status": "machine-generated",
+      "text": "Fi àwọn ohun èlò hàn ní ilé"
     },
     "translator.accessibility.suggestedKey.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ tí a dámọ̀ràn"
+    },
+    "translator.accessibility.useNormalizedEnglishForFallbacksAndAutomatedTranslation.label": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Suggested key"
+      "text": "Use normalized English language for fallbacks and automated translation"
     },
     "translator.accessibility.viewMigrationCandidatesForValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View migration candidates for {filePath}"
+      "status": "machine-generated",
+      "text": "Wo àwọn olùdíje ìṣíkiri fún {filePath}"
     },
     "translator.accessibility.windowControls.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Window controls"
+      "status": "machine-generated",
+      "text": "Àwọn ìṣàkóso fèrèsé"
     },
     "translator.action.componentCatalog.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog"
+      "status": "machine-generated",
+      "text": "Àkójọpọ̀ Ẹ̀yà"
     },
     "translator.action.diagnosticMessages.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic Messages"
+      "status": "machine-generated",
+      "text": "Àwọn Ìránṣẹ́ Àyẹ̀wò"
     },
     "translator.action.exit.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Jáde"
+    },
+    "translator.action.normalizedWords.label": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Exit"
+      "text": "Normalized Words"
     },
     "translator.action.previewModes.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Preview Modes"
+      "status": "machine-generated",
+      "text": "Àwọn Ìgbésẹ̀ Àkọ́kọ́"
     },
     "translator.action.rebuild.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Rebuild"
+      "status": "machine-generated",
+      "text": "Àtúnkọ́"
     },
     "translator.action.reloadData.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reload data"
+      "status": "machine-generated",
+      "text": "Àtúnkójọ dátà"
     },
     "translator.action.revert.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Revert"
+      "status": "machine-generated",
+      "text": "Pàdánù"
     },
     "translator.action.save.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save"
+      "status": "machine-generated",
+      "text": "Fipamọ́"
     },
     "translator.action.semanticKeywords.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Semantic Keywords"
+      "status": "machine-generated",
+      "text": "Àwọn Ọ̀rọ̀ Àlàyé"
     },
     "translator.action.stopBuild.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Stop build"
+      "status": "machine-generated",
+      "text": "Dá ìkọ́lé dúró"
     },
     "translator.action.validate.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validate"
+      "status": "machine-generated",
+      "text": "Ìfìdí múlẹ̀"
     },
     "translator.dialog.addFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add files"
+      "status": "machine-generated",
+      "text": "Fi àwọn fáìlì kún"
     },
     "translator.dialog.addMigrationSourceFiles.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add migration source files"
+      "status": "machine-generated",
+      "text": "Fi àwọn fáìlì orísun ìṣípò kún"
     },
     "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Authored files under language/locales are always preserved."
+      "status": "machine-generated",
+      "text": "Awọn faili ti a fun ni aṣẹ labẹ language/locales wa ni ipamọ nigbagbogbo."
     },
     "translator.dialog.cancel.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Cancel"
+      "status": "machine-generated",
+      "text": "Fagilee"
     },
     "translator.dialog.close.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Close"
+      "status": "machine-generated",
+      "text": "Tii"
     },
     "translator.dialog.componentCatalogAddRecord.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog Add Record"
+      "status": "machine-generated",
+      "text": "Àkójọpọ̀ Àwọn Ohun Èlò Fikún Àkọsílẹ̀"
     },
     "translator.dialog.componentCatalogEditRecord.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog Edit Record"
+      "status": "machine-generated",
+      "text": "Àkójọpọ̀ Àwọn Ohun Èlò Ṣe Àtúnṣe Àkọsílẹ̀"
     },
     "translator.dialog.confirmAuthoritativeChanges.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Confirm authoritative changes"
+      "status": "machine-generated",
+      "text": "Jẹ́rìí sí àwọn àyípadà tó ṣeéṣe"
     },
     "translator.dialog.deleteCatalogOnSave.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete catalog on Save"
+      "status": "machine-generated",
+      "text": "Pa ìwé àkọsílẹ̀ rẹ́ lórí Fipamọ́"
     },
     "translator.dialog.deleteGeneratedCatalogDataValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "catalogRemovals"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete generated catalog data: {catalogRemovals}"
+      "status": "machine-generated",
+      "text": "Pa àwọn dátà àkójọpọ̀ tí a ti ṣe jáde: {catalogRemovals}"
     },
     "translator.dialog.deleteLocaleValue.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete locale {id}?"
+      "status": "machine-generated",
+      "text": "Pa àwọn àkójọpọ̀ tí a ti ṣe jáde mọ́ {id}?"
     },
     "translator.dialog.discardAndReload.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard and reload"
+      "status": "machine-generated",
+      "text": "Pa àwọn àkójọpọ̀ tí a ti ṣe jáde mọ́ kúrò"
     },
     "translator.dialog.discardUnsavedChanges.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard unsaved changes?"
+      "status": "machine-generated",
+      "text": "Pa àwọn àyípadà tí a kò ti ṣe àkójọpọ̀ mọ́ kúrò?"
     },
     "translator.dialog.draftReverted.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Draft reverted"
+      "status": "machine-generated",
+      "text": "A ti dá àwọn àkójọpọ̀ tí a ti ṣe àkójọpọ̀ padà"
     },
     "translator.dialog.exitWithoutSaving.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Exit without saving"
+      "status": "machine-generated",
+      "text": "Jáde láìfipamọ́"
     },
     "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated locale catalogs will be preserved."
+      "status": "machine-generated",
+      "text": "A ó pa àwọn àkójọpọ̀ tí a ti ṣe àkójọpọ̀ mọ́."
     },
     "translator.dialog.keepCatalogRecommended.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Keep catalog (recommended)"
+      "status": "machine-generated",
+      "text": "Pa àkójọ ìwé mọ́ (a gbani nímọ̀ràn)"
     },
     "translator.dialog.languageBuildIsRunning.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language build is running"
+      "status": "machine-generated",
+      "text": "Ìkọ́ èdè ń ṣiṣẹ́"
     },
     "translator.dialog.languageRebuildFailed.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language rebuild failed"
+      "status": "machine-generated",
+      "text": "Àtúntò èdè kùnà"
     },
     "translator.dialog.languageRebuildSucceeded.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language rebuild succeeded"
+      "status": "machine-generated",
+      "text": "Àtúntò èdè ti yọrí sí rere"
     },
     "translator.dialog.maximize.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maximize"
+      "status": "machine-generated",
+      "text": "Mú kí ó pọ̀ sí i"
     },
     "translator.dialog.minimize.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Minimize"
+      "status": "machine-generated",
+      "text": "Mú kí ó kéré sí i"
     },
     "translator.dialog.mydefragLanguageMaintenance.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "MyDefrag Language Maintenance"
+      "status": "machine-generated",
+      "text": "Ìtọ́jú èdè Ìṣàkóso Ìpamọ́ Mi"
     },
     "translator.dialog.noAuthoritativeFilesWillChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No authoritative files will change."
+      "status": "machine-generated",
+      "text": "Kò sí àwọn fáìlì àṣẹ tí yóò yípadà."
     },
     "translator.dialog.noFilesWillChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files will change."
+      "status": "machine-generated",
+      "text": "Kò sí fáìlì tí yóò yípadà."
     },
     "translator.dialog.nothingToSave.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Nothing to save"
+      "status": "machine-generated",
+      "text": "Kò sí ohun tí a lè fipamọ́"
     },
     "translator.dialog.returnToBuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Return to build"
+      "status": "machine-generated",
+      "text": "Pada sí ìkọ́lé"
     },
     "translator.dialog.revertFailed.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Revert failed"
+      "status": "machine-generated",
+      "text": "Pada sí i kùnà"
     },
     "translator.dialog.saveAndBuildSucceeded.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save and build succeeded"
+      "status": "machine-generated",
+      "text": "Fipamọ́ kí o sì kọ́ ọ yọrí sí rere"
     },
     "translator.dialog.saveAndRebuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save and rebuild"
+      "status": "machine-generated",
+      "text": "Fipamọ́ kí o sì tún kọ́ ọ"
     },
     "translator.dialog.saveBlocked.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save blocked"
+      "status": "machine-generated",
+      "text": "Fipamọ́ dídínà"
     },
     "translator.dialog.saveFailedAndWasRolledBack.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save failed and was rolled back"
+      "status": "machine-generated",
+      "text": "Fipamọ́ kùnà, wọ́n sì yí i padà"
     },
     "translator.dialog.saveTheReportArtifactSeparately.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save the report artifact separately"
+      "status": "machine-generated",
+      "text": "Fipamọ́ àkójọ ìròyìn náà lọ́tọ̀ọ̀tọ̀"
     },
     "translator.dialog.scanFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan file"
+      "status": "machine-generated",
+      "text": "Fáìlì ìwòsàn"
     },
     "translator.dialog.scanFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan folder"
+      "status": "machine-generated",
+      "text": "Fáìlì ìwòsàn"
     },
     "translator.dialog.scanMigrationSourceFile.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan migration source file"
+      "status": "machine-generated",
+      "text": "Ṣàyẹ̀wò fáìlì orísun ìṣíkiri"
     },
     "translator.dialog.scanMigrationSourceFolder.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan migration source folder"
+      "status": "machine-generated",
+      "text": "Ṣàyẹ̀wò fáìlì orísun ìṣíkiri"
     },
     "translator.dialog.selectTheMydefragSyntaxRepository.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select the MyDefrag-syntax repository"
+      "status": "machine-generated",
+      "text": "Yan ibi ìpamọ́ Ìṣàkóso Ìpamọ́ Mi-Gírámọ ofin"
     },
     "translator.dialog.startingMydefragLanguageMaintenance.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Starting MyDefrag Language Maintenance"
+      "status": "machine-generated",
+      "text": "Ìbẹ̀rẹ̀ Ìtọ́jú Èdè Ìṣàkóso Ìpamọ́ Mi"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The generated build/language/catalogs/{id} data will be kept by default."
+      "status": "machine-generated",
+      "text": "Awọn alaye build/language/catalogs/{id} ti a ṣejade yoo wa ni ipamọ nipasẹ aiyipada."
     },
     "translator.dialog.unsavedLanguageChanges.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unsaved language changes"
+      "status": "machine-generated",
+      "text": "Àwọn àyípadà èdè tí a kò fipamọ́"
     },
     "translator.dialog.valueFailed.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "title"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{title} failed"
+      "status": "machine-generated",
+      "text": "{title} kùnà"
     },
     "translator.directive.language.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "locale"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
+      "status": "machine-generated",
       "text": "; @mydfrg-language {locale}"
     },
     "translator.heading.languageMaintenance.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language Maintenance"
+      "status": "machine-generated",
+      "text": "Ìtọ́jú èdè"
     },
     "translator.heading.languageOperation.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language operation"
+      "status": "machine-generated",
+      "text": "Ìṣiṣẹ́ èdè"
     },
     "translator.heading.operationResult.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Operation result"
+      "status": "machine-generated",
+      "text": "Àbájáde iṣẹ́"
     },
     "translator.input.filterSourceFilePaths.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filter source file paths"
+      "status": "machine-generated",
+      "text": "Àlẹ̀mọ́ àwọn ipa ọ̀nà fáìlì orísun"
     },
     "translator.input.searchAllFields.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search all fields"
+      "status": "machine-generated",
+      "text": "Wá gbogbo àwọn pápá"
     },
     "translator.input.searchComponentIdOrDescription.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search component ID or description"
+      "status": "machine-generated",
+      "text": "Wá ìdánimọ̀ tàbí àpèjúwe ẹ̀yà ara"
     },
     "translator.input.searchComponents.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search components"
+      "status": "machine-generated",
+      "text": "Wá àwọn ẹ̀yà ara"
     },
     "translator.input.searchValue.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionTitle"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search {definitionTitle}"
+      "status": "machine-generated",
+      "text": "Ṣawari {definitionTitle}"
+    },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà orísun lọ́wọ́lọ́wọ́, ọ̀rọ̀ olùdíje, àti kọ́kọ́rọ́ katalogi ni a nílò."
     },
     "translator.message.aLanguageBuildIsAlreadyRunning.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A language build is already running."
+      "status": "machine-generated",
+      "text": "Ìkọ́lé èdè kan ń ṣiṣẹ́ tẹ́lẹ̀."
     },
     "translator.message.aLineAwareVscodiumOrVsCodeInstallation.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A line-aware VSCodium or VS Code installation was not found; the source file was opened with its default application."
+      "status": "machine-generated",
+      "text": "A kò rí ìfisílẹ̀ VSCodium tàbí VS Kóòdù tí ó mọ ìlà; a ṣí fáìlì orísun náà pẹ̀lú ohun èlò àìyípadà rẹ̀."
     },
     "translator.message.aScannedSourcePathIsNotANormalized.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A scanned source path is not a normalized repository relative file path."
+      "status": "machine-generated",
+      "text": "Ọ̀nà orísun tí a ti ṣàyẹ̀wò kìí ṣe ipa ọ̀nà fáìlì tí a ṣe déédéé fún ibi ìpamọ́."
+    },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A nílò ìyípadà orísun ìṣíkiri tí ó tọ́."
     },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A valid MyDefrag-syntax repository was not selected."
+      "status": "machine-generated",
+      "text": "A kò yan ibi ìpamọ́ Ìṣàkóso Ìpamọ́ Mi-Gírámọ ofin tí ó tọ́."
     },
     "translator.message.applicationFailedToStart.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Application failed to start"
+      "status": "machine-generated",
+      "text": "Ohun elo naa kuna lati bẹrẹ"
+    },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Lo bọtini katalogi yii si akọsilẹ iranti inu ṣaaju ki o to rọpo orisun."
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A ṣe atilẹyin fun rirọpo adaṣiṣẹ fun awọn faili CommonJS .js ati .cjs nikan. JSON ati awọn ọna kika miiran nilo iyipada agbegbe ti o ni pato si ọna kika."
     },
     "translator.message.buildCancelledByUser.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Build cancelled by user."
+      "status": "machine-generated",
+      "text": "Olùlò ti fagilé ìkọ́lé náà."
     },
     "translator.message.buildProcessDidNotReportTerminationAfterCancellation.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Build process did not report termination after cancellation."
+      "status": "machine-generated",
+      "text": "Ìlànà ìkọ́lé kò ròyìn ìfẹ̀yìntì lẹ́yìn ìfagilé."
     },
     "translator.message.candidateStatusRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status rejected"
+      "status": "machine-generated",
+      "text": "Ìpò olùdíje kò gbà"
     },
     "translator.message.candidateStatusUpdatedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status updated in memory"
+      "status": "machine-generated",
+      "text": "Ìpò olùdíje tí a ti ṣe àtúnṣe nínú ìrántí"
     },
     "translator.message.catalogRecordAddedToInMemoryDraft.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog record added to in-memory draft"
+      "status": "machine-generated",
+      "text": "Ìgbàsílẹ̀ katalogi tí a fi kún àkọsílẹ̀ ìrántí"
     },
     "translator.message.catalogRecordIsNoLongerAvailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog record is no longer available"
+      "status": "machine-generated",
+      "text": "Ìgbàsílẹ̀ katalogi kò sí mọ́"
     },
     "translator.message.catalogRecordUpdatedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog record updated in memory"
+      "status": "machine-generated",
+      "text": "Ìgbàsílẹ̀ katalogi tí a ti ṣe àtúnṣe nínú ìrántí"
+    },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà tí a ti ṣe àtúnṣe {candidateLine}. Ṣe àtúnṣe ìlà orísun rẹ̀ láti parí olùdíje yìí; ìlọ kiri ṣì wà."
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Orísun tí a ti ṣe àkójọpọ̀ rẹ̀ ṣì nílò àtúnṣe"
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àwọn orísun tí a ti ṣe àkójọpọ̀ rẹ̀ ṣì nílò àtúnṣe"
     },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Choose the repository that owns language/canonical and build/language."
+      "status": "machine-generated",
+      "text": "Yan ibi ipamọ ti o ni language/canonical ati build/language."
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Awọn ifihan awoṣe ti o nipọn nilo awọn asopọ ibi-ipamọ ti a ti mu nipasẹ atunnkanka sintasi ṣaaju iyipada."
     },
     "translator.message.componentAddedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component added in memory"
+      "status": "machine-generated",
+      "text": "A fi eroja kun si iranti"
     },
     "translator.message.componentAssignmentIsStaleRebuildRequired.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component assignment is stale; rebuild required."
+      "status": "machine-generated",
+      "text": "Iyasọtọ paati ti pẹ; atunkọ nilo."
     },
     "translator.message.componentChangeRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component change rejected"
+      "status": "machine-generated",
+      "text": "A kò gba àyípadà èròjà"
     },
     "translator.message.componentUpdatedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component updated in memory"
+      "status": "machine-generated",
+      "text": "A ti ṣe àtúnṣe èròjà nínú ìrántí"
     },
     "translator.message.deeplApiCallsAreEnabledForThisRebuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A ti mú kí àwọn ìpè API DeepL ṣiṣẹ́ fún àtúnṣe yìí"
+    },
+    "translator.message.deeplApiCallsUseValueEnglishForThis.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "DeepL API calls are enabled for this rebuild"
+      "text": "Deep L Application Programming Interface requests use {selectedBuildEnglishSource} English language for this rebuild"
     },
     "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A ti mú kí DeepL ṣiṣẹ́; a ń lo èdè Gẹ̀ẹ́sì tí a ti ṣe déédéé"
+    },
+    "translator.message.deeplIsDisabledUsingValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "DeepL is disabled; using normalized English"
+      "text": "Deep L is disabled; using {selectedBuildEnglishSource} English language fallbacks"
     },
     "translator.message.draftUpdated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Draft updated"
+      "status": "machine-generated",
+      "text": "A ti mú àtúnṣe èròjà"
     },
     "translator.message.duplicateComponentIdValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "componentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Duplicate component id: {componentId}"
+      "status": "machine-generated",
+      "text": "Àmì ìdámọ̀ràn onípele méjì: {componentId}"
     },
     "translator.message.duplicateLocaleIdValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Duplicate locale id: {localeId}"
+      "status": "machine-generated",
+      "text": "Àmì ìdámọ̀ agbègbè onípele méjì: {localeId}"
     },
     "translator.message.duplicateValueValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionIdentityKey",
         "identity"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Duplicate {definitionIdentityKey}: {identity}"
+      "status": "machine-generated",
+      "text": "Àmì ìdámọ̀ {definitionIdentityKey}: {identity}"
+    },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A kò le yí orúkọ àwọn kọ́kọ́rọ́ katalogi tó wà tẹ́lẹ̀ padà. Fi àkọsílẹ̀ tuntun kún un dípò rẹ̀."
     },
     "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing component identifiers cannot be renamed."
+      "status": "machine-generated",
+      "text": "A kò le yí orúkọ àwọn ìdámọ̀ ẹ̀yà tó wà tẹ́lẹ̀ padà."
     },
     "translator.message.existingLocaleIdentifiersCannotBeRenamed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing locale identifiers cannot be renamed."
+      "status": "machine-generated",
+      "text": "A kò le yí orúkọ àwọn ìdámọ̀ àgbègbè tó wà tẹ́lẹ̀ padà."
     },
     "translator.message.exitAndDiscardAllInMemoryChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Exit and discard all in-memory changes?"
+      "status": "machine-generated",
+      "text": "Jáde kí o sì yọ gbogbo àwọn àyípadà inú ìrántí kúrò?"
     },
     "translator.message.forcingTheLanguageBuildProcessToStop.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Forcing the language build process to stop"
+      "status": "machine-generated",
+      "text": "Fífipá mú kí ìlànà kíkọ́ èdè dúró"
     },
     "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "relativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated locale catalog is not a directory: {relativePath}"
+      "status": "machine-generated",
+      "text": "Àkójọpọ̀ àdúgbò tí a ṣẹ̀dá kì í ṣe àkójọpọ̀: {relativePath}"
     },
     "translator.message.invalidComponentRequest.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid component request."
+      "status": "machine-generated",
+      "text": "Ìbéèrè fún ẹ̀yà ara tí kò tọ́."
     },
     "translator.message.invalidFileSelection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid file selection."
+      "status": "machine-generated",
+      "text": "Yíyan fáìlì tí kò tọ́."
     },
     "translator.message.invalidLocaleIdentifierForCatalogRemovalValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale identifier for catalog removal: {localeId}"
+      "status": "machine-generated",
+      "text": "Àmì ìdámọ̀ agbègbè tí kò tọ́ fún yíyọ àkójọpọ̀ kúrò: {localeId}"
     },
     "translator.message.invalidLocaleRequest.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale request."
+      "status": "machine-generated",
+      "text": "Ìbéèrè agbègbè tí kò tọ́."
     },
     "translator.message.invalidLocaleStatusValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeStatus"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale status: {localeStatus}"
+      "status": "machine-generated",
+      "text": "Ipò agbègbè tí kò tọ́: {localeStatus}"
     },
     "translator.message.invalidRecordRequest.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid record request."
+      "status": "machine-generated",
+      "text": "Ìbéèrè àkọsílẹ̀ tí kò tọ́."
     },
     "translator.message.invalidScannedFileSelection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid scanned file selection."
+      "status": "machine-generated",
+      "text": "Yíyan fáìlì tí a ti ṣàyẹ̀wò tí kò tọ́."
     },
     "translator.message.languageBuildCancelled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language build cancelled"
+      "status": "machine-generated",
+      "text": "Ìkọ́ èdè ti fagilé"
     },
     "translator.message.languageBuildCommandCompleted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language build command completed"
+      "status": "machine-generated",
+      "text": "Ìkọ́ èdè ti parí"
     },
     "translator.message.languageBuildCommandFailed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language build command failed"
+      "status": "machine-generated",
+      "text": "Ìkọ́ èdè ti kùnà"
     },
     "translator.message.languageDataReloaded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language data reloaded"
+      "status": "machine-generated",
+      "text": "Ìkọ́ èdè ti tún bẹ̀rẹ̀"
     },
     "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language maintenance data has not been loaded."
+      "status": "machine-generated",
+      "text": "Ìkọ́ èdè kò tíì dé."
     },
     "translator.message.languageReportArtifactSaved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact saved"
+      "status": "machine-generated",
+      "text": "Ìròyìn èdè tí a ti pamọ́"
     },
     "translator.message.languageReportArtifactWasNotSaved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact was not saved"
+      "status": "machine-generated",
+      "text": "Ìròyìn èdè kò tí pamọ́"
     },
     "translator.message.languageReportTextExceedsThe5000000.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report text exceeds the 5 000 000 character safety limit."
+      "status": "machine-generated",
+      "text": "Ìròyìn èdè kọjá ààlà ààbò ohun kikọ 5,000,000."
     },
     "translator.message.languageReportTextMustBeAString.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report text must be a string."
+      "status": "machine-generated",
+      "text": "Ìròyìn èdè gbọ́dọ̀ jẹ́ okùn."
     },
     "translator.message.localeAdded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale added"
+      "status": "machine-generated",
+      "text": "Àfikún agbègbè"
     },
     "translator.message.localeDeletedFromRegistry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale deleted from registry"
+      "status": "machine-generated",
+      "text": "A ti gé agbègbè kúrò nínú ìforúkọsílẹ̀"
     },
     "translator.message.localeDirectionMustBeLtrOrRtl.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale direction must be ltr or rtl."
+      "status": "machine-generated",
+      "text": "Ìtọ́sọ́nà agbègbè gbọ́dọ̀ jẹ́ ltr tàbí rtl."
     },
     "translator.message.localeUpdated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale updated"
+      "status": "machine-generated",
+      "text": "Àtúnṣe sí agbègbè"
     },
     "translator.message.localeValueNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale {id} no longer exists."
+      "status": "machine-generated",
+      "text": "Àdúgbò {id} kò sí mọ́."
     },
     "translator.message.migrationAssignmentRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration assignment rejected"
+      "status": "machine-generated",
+      "text": "Ìṣípò kúrò"
     },
     "translator.message.migrationCandidatesAreUnavailableBecauseTheReportStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "reportFileStatus"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration candidates are unavailable because the report status is {reportFileStatus}."
+      "status": "machine-generated",
+      "text": "Àwọn olùdíje fún ìrìnàjò kò sí nílé nítorí pé ipò ìròyìn náà ni {reportFileStatus}."
     },
     "translator.message.migrationCandidatesUnavailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration candidates unavailable"
+      "status": "machine-generated",
+      "text": "Àwọn olùdíje ìṣíkiri kò sí"
     },
     "translator.message.migrationComponentAssignmentUpdated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration component assignment updated"
+      "status": "machine-generated",
+      "text": "Ìpínfúnni ìpín ìṣíkiri ti ṣe àtúnṣe"
     },
     "translator.message.migrationFileAdded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration file added"
+      "status": "machine-generated",
+      "text": "Fáìlì ìṣíkiri ti fi kún"
     },
     "translator.message.migrationFileAlreadyListed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration file already listed"
+      "status": "machine-generated",
+      "text": "Fáìlì ìṣíkiri ti ṣe àkójọpọ̀"
     },
     "translator.message.migrationFileRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration file rejected"
+      "status": "machine-generated",
+      "text": "Kò gba fáìlì ìṣíkiri"
     },
     "translator.message.migrationFileRemovalFailed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration file removal failed"
+      "status": "machine-generated",
+      "text": "Yíyọ fáìlì ìṣíkiri kùnà"
     },
     "translator.message.migrationFileRemoved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration file removed"
+      "status": "machine-generated",
+      "text": "Yíyọ fáìlì ìṣíkiri kúrò"
     },
     "translator.message.migrationFilesAdded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration files added"
+      "status": "machine-generated",
+      "text": "Àwọn fáìlì ìṣíkiri tí a fi kún"
     },
     "translator.message.migrationFilesAlreadyListed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration files already listed"
+      "status": "machine-generated",
+      "text": "Àwọn fáìlì ìṣíkiri tí a ti ṣe àkójọpọ̀ tẹ́lẹ̀"
     },
     "translator.message.migrationFilesRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration files rejected"
+      "status": "machine-generated",
+      "text": "Kò sí àwọn fáìlì ìṣípò"
+    },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kò sí ìyípadà okùn oní-púpọ̀ tí a lè fi ìyípadà àkọ́kọ́ ṣe àtìlẹ́yìn fún."
     },
     "translator.message.noApplicableSchemaIsAvailableForValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "viewName"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No applicable schema is available for {viewName}."
+      "status": "machine-generated",
+      "text": "Kò sí ètò tó wúlò fún {viewName}."
     },
     "translator.message.noLanguageBuildIsRunning.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No language build is running."
+      "status": "machine-generated",
+      "text": "Kò sí ìkọ́lé èdè tó ń ṣiṣẹ́."
     },
     "translator.message.noNewFilesAdded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No new files added"
+      "status": "machine-generated",
+      "text": "Kò sí àwọn fáìlì tuntun tí a fi kún"
     },
     "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "missing"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Not a MyDefrag language repository. Missing: {missing}"
+      "status": "machine-generated",
+      "text": "Kò sí ibi ìpamọ́ èdè Ìṣàkóso Ìpamọ́ Mi. Kò sí: {missing}"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kò sí nínú ìròyìn ìṣípò; àtúntò nílò."
+    },
+    "translator.message.onlyAnExistingNormalizedWordSubstitutionCanBe.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Not present in the migration report; rebuild required."
+      "text": "Only an existing normalized word substitution can be removed."
     },
     "translator.message.pathEscapesTheRepositoryRootValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "relativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Path escapes the repository root: {relativePath}"
+      "status": "machine-generated",
+      "text": "Ọ̀nà náà sá àsálà fún gbòǹgbò ibi ìpamọ́: {relativePath}"
     },
     "translator.message.recordRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Record rejected"
+      "status": "machine-generated",
+      "text": "Kò gba àkọsílẹ̀"
+    },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣe àtúnṣe àtúnyẹ̀wò ìyípadà kí o tó rọ́pò ìlà orísun."
     },
     "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reloading will discard all in-memory language changes."
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe yóò mú gbogbo àyípadà èdè inú ìrántí kúrò."
     },
     "translator.message.removeValueFromTheLocaleRegistry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Remove {id} from the locale registry?"
+      "status": "machine-generated",
+      "text": "Yọ {id} kúrò nínú ìforúkọsílẹ̀ agbègbè?"
+    },
+    "translator.message.replacedLineValueInValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà tí a yípadà {previewLine} nínú {previewPath}."
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath",
+        "recoveryFiles"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà tí a yípadà {previewLine} nínú {previewPath}. A ko le yọ afẹyinti kuro: {recoveryFiles}"
     },
     "translator.message.requiredLocaleValueCannotBeDeleted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Required locale {id} cannot be deleted."
+      "status": "machine-generated",
+      "text": "A ko le paarẹ agbegbe ti a beere {id}."
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe àwọn fáìlì tí a ti ṣe àti àwọn orísun agbègbè tí ó pẹ́"
     },
     "translator.message.runningLanguageBuildCommand.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Running language build command"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àṣẹ ìkọ́lé èdè"
     },
     "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save or discard the Language Report edits before saving canonical language data."
+      "status": "machine-generated",
+      "text": "Ṣípamọ́ tàbí kí o yọ àwọn àtúnṣe ìròyìn èdè kúrò kí o tó fi dátà èdè onímìísí pamọ́."
     },
     "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save or revert in-memory changes before rebuilding."
+      "status": "machine-generated",
+      "text": "Ṣàpamọ́ tàbí kí o dá àwọn àyípadà inú ìrántí padà kí o tó tún un kọ́."
     },
     "translator.message.selectAValidComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a valid component."
+      "status": "machine-generated",
+      "text": "Yan apá kan tí ó wúlò."
     },
     "translator.message.selectAValidComponentBeforeAddingFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a valid component before adding files."
+      "status": "machine-generated",
+      "text": "Yan apa kan ti o wulo ṣaaju fifi awọn faili kun."
     },
     "translator.message.selectPotentialCandidateRejectedOrReview.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select Potential Candidate, Rejected, or Review."
+      "status": "machine-generated",
+      "text": "Yan oludije ti o ṣeeṣe, ti a kọ silẹ, tabi ti a ṣe atunyẹwo."
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Yan oludije ti o ṣeeṣe, ṣe atunyẹwo, ti a kọ silẹ, ti a ṣe atunṣe koodu, tabi ti a ṣe imudojuiwọn koodu."
     },
     "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "absolutePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected file is outside the repository root: {absolutePath}"
+      "status": "machine-generated",
+      "text": "Fáìlì tí a yàn wà níta gbòǹgbò ibi ìpamọ́: {absolutePath}"
     },
     "translator.message.selectedFolderIsOutsideTheRepositoryRootValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "folderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected folder is outside the repository root: {folderPath}"
+      "status": "machine-generated",
+      "text": "Fáìlì tí a yàn wà níta gbòǹgbò ibi ìpamọ́: {folderPath}"
     },
     "translator.message.selectedPathIsNotAFileValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "absolutePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected path is not a file: {absolutePath}"
+      "status": "machine-generated",
+      "text": "Ọ̀nà tí a yàn kì í ṣe fáìlì: {absolutePath}"
     },
     "translator.message.selectedPathIsNotAFolderValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "folderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected path is not a folder: {folderPath}"
+      "status": "machine-generated",
+      "text": "Ọ̀nà tí a yàn kì í ṣe fáìlì: {folderPath}"
     },
     "translator.message.sourceFileOpened.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fáìlì orísun ṣí"
+    },
+    "translator.message.sourceLineReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà orísun yípadà"
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A kò rọ́pò ìlà orísun"
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A kò ṣiṣẹ́ ìyípadà orísun."
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìyípadà orísun kò tíì ṣetán."
+    },
+    "translator.message.startingElectron.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìbẹ̀rẹ̀ Electron..."
+    },
+    "translator.message.substitutionRemovalRejected.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Source file opened"
+      "text": "Substitution removal rejected"
+    },
+    "translator.message.substitutionRemovedFromInMemoryDraft.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Substitution removed from in memory draft"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àmì ìdánimọ̀ katalogi kìí ṣe ìdánimọ̀ JavaScript tó wúlò."
     },
     "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "recordKey"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The catalog record {recordKey} changed or no longer exists."
+      "status": "machine-generated",
+      "text": "Ìwé àkọsílẹ̀ katalogi {recordKey} yípadà tàbí kò sí mọ́."
     },
     "translator.message.theComponentChangedOrNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The component changed or no longer exists."
+      "status": "machine-generated",
+      "text": "Apá náà yípadà tàbí kò sí mọ́."
     },
     "translator.message.theConfiguredLanguageBuilderDoesNotExposeExtractstringcandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The configured language builder does not expose extractStringCandidates."
+      "status": "machine-generated",
+      "text": "Akọ́lé èdè tí a ṣètò kò fi extractStringCandidates hàn."
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Sákẹ́ẹ̀tì tí a ṣètò kò lè pèsè àwọn ibi orísun olùdíje."
     },
     "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The language build process could not be stopped."
+      "status": "machine-generated",
+      "text": "A kò le dá ilana kikọ ede duro."
     },
     "translator.message.theLanguageReportChangedOnDiskReloadIt.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The language report changed on disk. Reload it before saving your edits."
+      "status": "machine-generated",
+      "text": "Iroyin ede naa yipada lori disiki. Tun gbe e soke ki o to fi awọn atunṣe rẹ pamọ."
     },
     "translator.message.theLocaleChangedOrNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The locale changed or no longer exists."
+      "status": "machine-generated",
+      "text": "Agbègbè náà yípadà tàbí kò sí mọ́."
     },
     "translator.message.theMigrationCandidatesCouldNotBeReloaded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration candidates could not be reloaded."
+      "status": "machine-generated",
+      "text": "A kò le tún àwọn olùdíje ìṣíkiri kún un."
     },
     "translator.message.theMigrationFileIsNoLongerListed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration file is no longer listed."
+      "status": "machine-generated",
+      "text": "Fáìlì ìṣíkiri kò sí nínú àkójọpọ̀."
     },
     "translator.message.theMigrationReportComponentAssignmentIsStaleRebuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration report component assignment is stale. Rebuild the language outputs."
+      "status": "machine-generated",
+      "text": "Ìpínfúnni ìròyìn ìṣíkiri ti pẹ́. Tún àwọn àbájáde èdè náà ṣe."
     },
     "translator.message.theMigrationReportDoesNotContainThisFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration report does not contain this file. Rebuild the language outputs."
+      "status": "machine-generated",
+      "text": "Ìròyìn ìṣíkiri kò ní fáìlì yìí nínú. Tún àwọn àbájáde èdè náà ṣe."
     },
     "translator.message.theMigrationReportDoesNotIncludeCatalogFound.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration report does not include catalog-found strings. Rebuild the language outputs."
+      "status": "machine-generated",
+      "text": "Ìròyìn ìṣíkiri kò ní àwọn okùn tí a rí nínú àkójọpọ̀. Tún àwọn àbájáde èdè náà ṣe."
     },
     "translator.message.theMigrationReportIsMissingFullCandidateSource.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration report is missing full candidate source lines. Rebuild the language outputs."
+      "status": "machine-generated",
+      "text": "Ìròyìn ìṣíkiri kò ní àwọn ìlà orísun olùdíje pípé. Tún àwọn àbájáde èdè náà ṣe."
     },
     "translator.message.theRecordChangedOrNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The record changed or no longer exists."
+      "status": "machine-generated",
+      "text": "Àkọsílẹ̀ náà yípadà tàbí kò sí mọ́."
     },
     "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The restricted preload bridge is unavailable."
+      "status": "machine-generated",
+      "text": "Afara ìfikún tí a ti dínkù kò sí."
     },
     "translator.message.theScannedSourcePathIsNotANormalized.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The scanned source path is not a normalized repository-relative file path."
+      "status": "machine-generated",
+      "text": "Ọ̀nà orísun tí a ti ṣàyẹ̀wò kìí ṣe ọ̀nà fáìlì tí a ṣe àkójọpọ̀ rẹ̀ déédéé."
+    },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ àkójọpọ̀ tí a yàn kò ní ọ̀rọ̀ olùdíje yìí nínú."
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà àti ọ̀rọ̀ tí a yàn kìí ṣe olùdíje ìṣíkiri tí a ròyìn lọ́wọ́lọ́wọ́."
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà àti ọ̀rọ̀ tí a yàn kò dá olùdíje ìṣíkiri kan mọ̀ lọ́wọ́lọ́wọ́."
     },
     "translator.message.theSelectedLineIsNotACurrentMigration.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The selected line is not a current migration candidate."
+      "status": "machine-generated",
+      "text": "Ìlà tí a yàn kìí ṣe olùdíje ìṣíkiri lọ́wọ́lọ́wọ́."
     },
     "translator.message.theSelectedLineIsNotACurrentReported.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The selected line is not a current reported migration string."
+      "status": "machine-generated",
+      "text": "Ìlà tí a yàn kìí ṣe okùn ìṣíkiri lọ́wọ́lọ́wọ́ tí a ròyìn lọ́wọ́lọ́wọ́."
+    },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà orísun tí a yàn yí padà lẹ́yìn tí a ṣẹ̀dá àwòkọ́ṣe ìyípadà náà."
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà orísun tí a yàn kò sí mọ́."
     },
     "translator.message.theSelectedStringIsNoLongerACurrent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The selected string is no longer a current scanned migration candidate."
+      "status": "machine-generated",
+      "text": "Okùn tí a yàn kìí ṣe olùdíje ìṣíkiri lọ́wọ́lọ́wọ́ tí a ti wòwò lọ́wọ́lọ́wọ́ mọ́."
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Okùn tí a yàn kò sí mọ́ lórí ìlà orísun tí a ròyìn."
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Okùn tí a yàn máa ń ṣẹlẹ̀ ju ẹ̀ẹ̀kan lọ lórí ìlà orísun; a nílò ìṣẹ̀lẹ̀ pàtó kan."
     },
     "translator.message.theSelectedTextIsNoLongerACurrent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The selected text is no longer a current non catalog candidate."
+      "status": "machine-generated",
+      "text": "Ọ̀rọ̀ tí a yàn kò sí mọ́ láti jẹ́ olùdíje tí a ròyìn lọ́wọ́lọ́wọ́."
+    },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "itemRelativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Orísun náà yí padà kí a tó lè rọ́pò rẹ̀: {itemRelativePath}"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fáìlì orísun náà yí padà lẹ́yìn tí a ti ṣẹ̀dá àwòkọ́ṣe ìyípadà náà. Tún yan ẹni tí ó fẹ́ rọ́pò rẹ̀."
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fáìlì orísun náà yí padà kí a tó rọ́pò rẹ̀. Tún yan ẹni tí ó fẹ́ rọ́pò rẹ̀ láti tún un rọ́pò."
     },
     "translator.message.theSourceFileCouldNotBeOpened.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The source file could not be opened."
+      "status": "machine-generated",
+      "text": "A kò le ṣí fáìlì orísun náà."
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Orúkọ oníyípadà ìyípadà náà kì í ṣe ìdámọ̀ JavaScript tó wúlò."
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "syntaxError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "JavaScript tí a yípadà kò wúlò ní ọ̀nà ìkọ̀wé: {syntaxError}"
     },
     "translator.message.unableToAddFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to add files."
+      "status": "machine-generated",
+      "text": "Kò wúlò láti fi àwọn fáìlì kún un."
     },
     "translator.message.unableToAddTheScannedFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to add the scanned file."
+      "status": "machine-generated",
+      "text": "Kò wúlò láti fi àwọn fáìlì tí a yẹ̀wò kún un."
     },
     "translator.message.unableToAddTheScannedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to add the scanned files."
+      "status": "machine-generated",
+      "text": "Kò wúlò láti fi àwọn fáìlì tí a yẹ̀wò kún un."
     },
     "translator.message.unableToApplyLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to apply locale"
+      "status": "machine-generated",
+      "text": "Kò wúlò láti lo àdúgbò"
     },
     "translator.message.unableToApplyTheComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to apply the component."
+      "status": "machine-generated",
+      "text": "A kò le lo ohun èlò náà."
     },
     "translator.message.unableToAssignTheComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to assign the component."
+      "status": "machine-generated",
+      "text": "A kò le yan ohun èlò náà."
     },
     "translator.message.unableToDeleteLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to delete locale"
+      "status": "machine-generated",
+      "text": "A kò le pa àdúgbò náà rẹ́"
     },
     "translator.message.unableToLoadLanguageData.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to load language data."
+      "status": "machine-generated",
+      "text": "A kò le gbé alaye èdè náà sórí ìkànnì."
     },
     "translator.message.unableToLoadMigrationCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to load migration candidates."
+      "status": "machine-generated",
+      "text": "A kò le gbé àwọn olùdíje ìṣíkiri sínú ìkànnì."
     },
     "translator.message.unableToLoadTheLanguageReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to load the language report artifact."
+      "status": "machine-generated",
+      "text": "A kò le gbé ohun èlò ìròyìn èdè náà sórí ìkànnì."
     },
     "translator.message.unableToOpenMigrationSource.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to open migration source"
+      "status": "machine-generated",
+      "text": "A kò le ṣí orísun ìṣíkiri"
     },
     "translator.message.unableToOpenValueValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "targetRelativePath",
         "error"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to open {targetRelativePath}: {error}"
+      "status": "machine-generated",
+      "text": "A kò le ṣí {targetRelativePath}: {error}"
     },
     "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "errorMessage"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to read build/language/reports/migration-report.json: {errorMessage}"
+      "status": "machine-generated",
+      "text": "Ko le ka build/language/reports/migration-report.json: {errorMessage}"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to refresh candidate catalog status"
+      "status": "machine-generated",
+      "text": "A kò le ṣe àtúnṣe ipò àkójọ àwọn olùdíje"
     },
     "translator.message.unableToRemoveTheFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to remove the file."
+      "status": "machine-generated",
+      "text": "A kò le yọ fáìlì náà kúrò."
     },
     "translator.message.unableToUpdateCandidateStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to update candidate status."
+      "status": "machine-generated",
+      "text": "A kò le ṣe àtúnṣe ipò olùdíje."
+    },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A kò le ṣe àtúnṣe àkọsílẹ̀ inú-ìrántí."
     },
     "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use a locale identifier such as en, fr CA, or zh Hans."
+      "status": "machine-generated",
+      "text": "Lo ìdámọ̀ agbègbè bíi en, fr-CA, tàbí zh-Hans."
     },
     "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save report artifact in the Language Report view before saving canonical language data."
+      "status": "machine-generated",
+      "text": "Lo Fipamọ́ ohun èlò ìròyìn nínú ìwòye Ìròyìn Èdè kí o tó fipamọ́ dátà èdè onímọ̀."
     },
     "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save to persist the candidate status in language/canonical/components.json."
+      "status": "machine-generated",
+      "text": "Lo Fipamọ lati tẹsiwaju ipo igbero ni language/canonical/components.json."
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save to persist the Component Catalog change."
+      "status": "machine-generated",
+      "text": "Lo Fipamọ lati tẹsiwaju iyipada Katalogi Apakan."
     },
     "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validating language changes; DeepL API calls are enabled"
+      "status": "machine-generated",
+      "text": "Ṣiṣedede awọn iyipada ede; Awọn ipe API DeepL ṣiṣẹ"
     },
     "translator.message.validatingLanguageChangesDeeplIsDisabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣiṣedede awọn iyipada ede; DeepL ti wa ni pipa"
+    },
+    "translator.message.validatingLanguageChangesDeeplIsDisabledAndFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "Validating language changes; DeepL is disabled"
+      "text": "Validating language changes; Deep L is disabled and fallbacks use {selectedBuildEnglishSource} English language"
+    },
+    "translator.message.validatingLanguageChangesDeeplUsesValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validating language changes; Deep L uses {selectedBuildEnglishSource} English language"
     },
     "translator.message.validationResult.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validation result"
+      "status": "machine-generated",
+      "text": "Abajade ijẹrisi"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "unresolvedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{unresolvedCount} àwọn olùdíje tí a kọ sínú ìwé àkọsílẹ̀ ṣì ní okùn orísun wọn tàbí a kò le fìdí rẹ̀ múlẹ̀. Pípa á tẹ̀síwájú láìsí ìfìdí múlẹ̀."
     },
     "translator.message.valueIsNotAFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "lANGUAGE_REPORT_PATH"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{lANGUAGE_REPORT_PATH} is not a file."
+      "status": "machine-generated",
+      "text": "{lANGUAGE_REPORT_PATH} kì í ṣe fáìlì."
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{detail}. Ìlọ kiri yóò tẹ̀síwájú; a gbani nímọ̀ràn láti mú àwọn àtúnṣe orísun wá ṣùgbọ́n a kò fipá mú wọn."
     },
     "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultRelativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{resultRelativePath} was written directly. A future report build may replace these edits."
+      "status": "machine-generated",
+      "text": "A kọ {resultRelativePath} tààrà. Ìkọ́lé ìròyìn ọjọ́ iwájú lè rọ́pò àwọn àtúnṣe wọ̀nyí."
     },
     "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Wait for the build to finish before exiting."
+      "status": "machine-generated",
+      "text": "Dúró títí ìkọ́lé náà yóò fi parí kí o tó jáde."
     },
     "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Wait for the language build to finish before saving the report artifact."
+      "status": "machine-generated",
+      "text": "Dúró títí ìkọ́ èdè náà yóò fi parí kí o tó fi àkójọ ìròyìn náà pamọ́."
     },
     "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Waiting for the language build process to stop"
+      "status": "machine-generated",
+      "text": "Ṣé o ń dúró de ìgbà tí ìkọ́ èdè náà yóò dáwọ́ dúró"
     },
     "translator.message.writeValueAuthoritativeFileS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "normalizedCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Write {normalizedCount} authoritative file(s)?"
+      "status": "machine-generated",
+      "text": "Kọ {normalizedCount} fáìlì tó ní àṣẹ?"
     },
     "translator.progress.capturingGeneratedFilesForRollback.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Capturing generated files for rollback"
+      "status": "machine-generated",
+      "text": "Wíwá àwọn fáìlì tó ní agbára láti yí padà"
     },
     "translator.progress.checkingGeneratedFileChanges.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Checking generated file changes"
+      "status": "machine-generated",
+      "text": "Ṣàyẹ̀wò àwọn àyípadà fáìlì tó ní agbára láti ṣe"
     },
     "translator.progress.committingLanguageChanges.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Committing language changes"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyípadà èdè"
     },
     "translator.progress.rebuildingLanguageOutputs.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Rebuilding language outputs"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe àwọn àbájáde èdè"
     },
     "translator.progress.restoringAuthoritativeAndGeneratedFiles.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restoring authoritative and generated files"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe àwọn fáìlì tó ní àṣẹ àti èyí tó ní ìṣẹ̀dá"
     },
     "translator.progress.restoringFilesAfterAnError.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restoring files after an error"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe àwọn fáìlì lẹ́yìn àṣìṣe kan"
     },
     "translator.progress.restoringGeneratedFiles.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restoring generated files"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe àwọn fáìlì tó ní ìṣẹ̀dá"
     },
     "translator.progress.savingLanguageData.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Saving language data"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe dátà èdè"
     },
     "translator.progress.startingSaveAndRebuild.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Starting save and rebuild"
+      "status": "machine-generated",
+      "text": "Bẹ̀rẹ̀ sí ní fipamọ́ àti túnkọ́"
     },
     "translator.progress.stoppingLanguageBuild.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Stopping language build"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe èdè"
     },
     "translator.progress.unableToStartLanguageBuild.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to start language build"
+      "status": "machine-generated",
+      "text": "Kò le bẹ̀rẹ̀ sí ní kọ́ èdè"
     },
     "translator.progress.useStopBuildInTheProgressWindowThen.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Stop build in the progress window, then wait for rollback to complete before closing the application."
+      "status": "machine-generated",
+      "text": "Lo Dúró kọ́ nínú ìlọsíwájú agbegbe iboju, lẹhinna duro fun ipadabọ lati pari ṣaaju pipade ohun elo naa."
     },
     "translator.progress.waitingForSaveConfirmation.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Waiting for save confirmation"
+      "status": "machine-generated",
+      "text": "N nduro fun ijẹrisi fifipamọ"
     },
     "translator.progress.writingAuthoritativeLanguageFiles.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Writing authoritative language files"
+      "status": "machine-generated",
+      "text": "Kikọ awọn faili ede ti o ni aṣẹ"
     },
     "translator.ui.add1SelectedFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add 1 selected file"
+      "status": "machine-generated",
+      "text": "Fi faili ti a yan 1 kun"
     },
     "translator.ui.addCategory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add category"
+      "status": "machine-generated",
+      "text": "Fi ẹka kun"
     },
     "translator.ui.addComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add component"
+      "status": "machine-generated",
+      "text": "Fi ẹya kun"
     },
     "translator.ui.addFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add files…"
+      "status": "machine-generated",
+      "text": "Fi awọn faili kun…"
     },
     "translator.ui.addLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add locale"
+      "status": "machine-generated",
+      "text": "Fi agbegbe kun"
     },
     "translator.ui.addRecord.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add record"
+      "status": "machine-generated",
+      "text": "Fi igbasilẹ kun"
     },
     "translator.ui.addRole.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add role"
+      "status": "machine-generated",
+      "text": "Fi ipa kun"
     },
     "translator.ui.addSelectedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add selected files"
+      "status": "machine-generated",
+      "text": "Fi awọn faili ti a yan kun"
     },
     "translator.ui.addToSourceFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add to source files"
+      "status": "machine-generated",
+      "text": "Fi kún àwọn fáìlì orísun"
     },
     "translator.ui.addValueSelectedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "count"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add {count} selected files"
+      "status": "machine-generated",
+      "text": "Fi àwọn fáìlì tí a yàn kún {count}"
     },
     "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "componentSelectValue"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Added to source files under component {componentSelectValue}. Save is still required."
+      "status": "machine-generated",
+      "text": "A fi kún àwọn fáìlì orísun lábẹ́ ìpín {componentSelectValue}. A ṣì nílò ìfipamọ́."
     },
     "translator.ui.addedValueFileSUnderComponentValueSave.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultAddedFilesCount",
         "componentSelectValue"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Added {resultAddedFilesCount} file(s) under component {componentSelectValue}. Save is still required."
+      "status": "machine-generated",
+      "text": "A fi {resultAddedFilesCount} kún àwọn fáìlì lábẹ́ ìpín {componentSelectValue}. A ṣì nílò ìfipamọ́."
     },
     "translator.ui.allCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All Candidates"
+      "status": "machine-generated",
+      "text": "Gbogbo àwọn olùdíje"
     },
     "translator.ui.allCandidatesValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All candidates: {filePath}"
+      "status": "machine-generated",
+      "text": "Gbogbo àwọn olùdíje: {filePath}"
     },
     "translator.ui.allCanonicalLocaleTemplatesAreAlreadyRegistered.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All canonical locale templates are already registered"
+      "status": "machine-generated",
+      "text": "Gbogbo àwọn àwòṣe àdúgbò oníṣe ti forúkọ sílẹ̀ tẹ́lẹ̀"
     },
     "translator.ui.allComponentDetails.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All component details"
+      "status": "machine-generated",
+      "text": "Gbogbo àwọn àlaye ẹ̀yà ara"
     },
     "translator.ui.allComponents.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All components"
+      "status": "machine-generated",
+      "text": "Gbogbo ẹ̀yà ara"
     },
     "translator.ui.allComponentsNoComponentFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All components — no component filter"
+      "status": "machine-generated",
+      "text": "Gbogbo ẹ̀yà ara — kò sí àlẹ̀mọ́ ẹ̀yà ara"
     },
     "translator.ui.allStatuses.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All statuses"
+      "status": "machine-generated",
+      "text": "Gbogbo àwọn ipò"
     },
     "translator.ui.allowDeeplCalls.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Gba àwọn ìpè DeepL láàyè"
+    },
+    "translator.ui.allowSaveAndRebuildToCallDeeplFor.title": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Allow DeepL calls"
+      "text": "Allow save changes and Rebuild to call Deep L for missing translations."
     },
     "translator.ui.alreadyInSourceFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Already in source files"
+      "status": "machine-generated",
+      "text": "Ó ti wà nínú àwọn fáìlì orísun"
     },
     "translator.ui.alreadyListedUnderComponentValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileInventoryComponent"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Already listed under component {scannedFileInventoryComponent}."
+      "status": "machine-generated",
+      "text": "Ó ti wà lábẹ́ ìpín {scannedFileInventoryComponent} tẹ́lẹ̀."
     },
     "translator.ui.analyzingSourceContext.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Analyzing source context..."
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò ipò orísun..."
     },
     "translator.ui.applyChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply changes"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyípadà"
     },
     "translator.ui.applyInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply in memory"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò nínú ìrántí"
     },
     "translator.ui.applyNormalizedText.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply normalized text"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò nínú àkọsílẹ̀"
     },
     "translator.ui.applyToInMemoryDraft.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply to in-memory draft"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò nínú àkọsílẹ̀ ìrántí"
     },
     "translator.ui.assignNewFilesTo.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Assign new files to"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò tuntun sí"
     },
     "translator.ui.assignSelectedFilesTo.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Assign selected files to"
+      "status": "machine-generated",
+      "text": "Fi àwọn fáìlì tí a yàn sí"
     },
     "translator.ui.assignToComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Assign to component"
+      "status": "machine-generated",
+      "text": "Fi àwọn fáìlì tí a yàn sí"
     },
     "translator.ui.authoritativeFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Authoritative files"
+      "status": "machine-generated",
+      "text": "Fáìlì àṣẹ"
     },
     "translator.ui.availableComponents.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Available components"
+      "status": "machine-generated",
+      "text": "Àwọn fáìlì tí ó wà"
     },
     "translator.ui.badgeValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateDirty"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "badge {stateDirty}"
+      "status": "machine-generated",
+      "text": "bájì {stateDirty}"
     },
     "translator.ui.badgeValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationOk"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "badge {validationOk}"
+      "status": "machine-generated",
+      "text": "bájì {validationOk}"
     },
     "translator.ui.buildLanguageCatalogsValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
+      "status": "machine-generated",
       "text": "build/language/catalogs/{currentId}"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate decisions are saved with the migration inventory."
+      "status": "machine-generated",
+      "text": "A fi àwọn ìpinnu olùdíje pamọ́ pẹ̀lú àkójọ ìṣíkiri."
     },
     "translator.ui.candidateDetails.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate Details"
+      "status": "machine-generated",
+      "text": "Àwọn Àlàyé Olùdíje"
+    },
+    "translator.ui.candidateStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCodeUpdated"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ipò olùdíje: {cANDIDATE_STATUS_LABELSCodeUpdated}"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCandidateStatus"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ipo oludije: {cANDIDATE_STATUS_LABELSCandidateStatus}"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ katalọgi nílò"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "initialCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ katalọgi: {initialCatalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ katalọgi: {catalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ katalọgi: {resultCatalogKey}"
     },
     "translator.ui.catalogMatches.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog Matches"
+      "status": "machine-generated",
+      "text": "Àwọn ìbáramu katalọgi"
     },
     "translator.ui.catalogOutputLocales.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog output locales"
+      "status": "machine-generated",
+      "text": "Ìjáde katalọgi àwọn agbègbè"
+    },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àkọsílẹ̀ katalogi tí a fi kún ìlà {candidateLine}. Ṣe àtúnṣe ìlà orísun láti parí olùdíje yìí; ìlọ kiri ṣì wà."
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogStatuses"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ipò katalogi: {catalogStatuses}"
     },
     "translator.ui.categories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Categories"
+      "status": "machine-generated",
+      "text": "Àwọn ẹ̀ka"
+    },
+    "translator.ui.category.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ẹ̀ka"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣíṣàyẹ̀wò àwọn ààbò ìyípadà orísun..."
     },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Choices mirror language/canonical/language locales.json. Registered locales remain visible but cannot be selected."
+      "status": "machine-generated",
+      "text": "Digi yiyan language/canonical/language-locales.json. Awọn agbegbe ede ti o forukọsilẹ wa han ṣugbọn ko ṣe yan."
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Choose a component from the authoritative components.json inventory."
+      "status": "machine-generated",
+      "text": "Yan ẹ̀yà kan láti inú àwọn ẹ̀yà tí a fọwọ́ sí .json."
     },
     "translator.ui.clear.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Clear"
+      "status": "machine-generated",
+      "text": "Parẹ́"
     },
     "translator.ui.clearEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Clear editor"
+      "status": "machine-generated",
+      "text": "Parẹ́ olóòtú"
     },
     "translator.ui.closeCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Close candidates"
+      "status": "machine-generated",
+      "text": "Pa àwọn olùdíje mọ́"
     },
     "translator.ui.component.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component"
+      "status": "machine-generated",
+      "text": "Ẹ̀ka"
     },
     "translator.ui.componentCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog"
+      "status": "machine-generated",
+      "text": "Ẹ̀ka àkójọpọ̀"
     },
     "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog and Diagnostic Messages will display records from every component."
+      "status": "machine-generated",
+      "text": "Ẹ̀ka àkójọpọ̀pọ̀ àti àwọn ìránṣẹ́ ìwádìí yóò ṣe àfihàn àwọn àkọsílẹ̀ láti inú gbogbo ẹ̀ka."
     },
     "translator.ui.componentDetails.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component details"
+      "status": "machine-generated",
+      "text": "Àwọn àlàyé nípa ẹ̀yà ara"
     },
     "translator.ui.componentSelection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component selection"
+      "status": "machine-generated",
+      "text": "Yíyàn ẹ̀yà ara"
     },
     "translator.ui.components.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Components"
+      "status": "machine-generated",
+      "text": "Àwọn ẹ̀yà ara"
     },
     "translator.ui.coverageUnavailableValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultError"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Coverage unavailable: {resultError}"
+      "status": "machine-generated",
+      "text": "Ààbò kò sí: {resultError}"
     },
     "translator.ui.coverageUnavailableValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileError"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Coverage unavailable: {fileError}"
+      "status": "machine-generated",
+      "text": "Ààbò kò sí: {fileError}"
     },
     "translator.ui.deleteLocale.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Pa agbègbè rẹ rẹ́"
+    },
+    "translator.ui.deleteSubstitution.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Delete locale"
+      "text": "Delete substitution"
+    },
+    "translator.ui.deleteTheNormalizedWordSubstitutionForValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "recordInput"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete the normalized word substitution for \"{recordInput}\"?"
     },
     "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Derived from the selected canonical catalog message."
+      "status": "machine-generated",
+      "text": "A ti yọ láti inú ìránṣẹ́ ìwé àkójọpọ̀ oníṣe tí a yàn."
     },
     "translator.ui.description.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Description"
+      "status": "machine-generated",
+      "text": "Àpèjúwe"
     },
     "translator.ui.detectedPlaceholdersValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "arrayFromNewSetNamesSort"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Detected placeholders: {arrayFromNewSetNamesSort}"
+      "status": "machine-generated",
+      "text": "Àwọn tí a rí nínú ààyè: {arrayFromNewSetNamesSort}"
     },
     "translator.ui.diagnosticMessages.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic Messages"
+      "status": "machine-generated",
+      "text": "Àwọn ìránṣẹ́ ìwádìí"
     },
     "translator.ui.discardAllInMemoryChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard all in-memory changes?"
+      "status": "machine-generated",
+      "text": "Ṣe gbogbo àyípadà inú ìrántí nù?"
     },
     "translator.ui.discardUnsavedLanguageReportEditsAndReloadThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard unsaved Language Report edits and reload the artifact?"
+      "status": "machine-generated",
+      "text": "Ṣe àtúnṣe èdè tí a kò fipamọ́? Ṣe ìròyìn àtúnṣe kí o sì tún gbé ohun ìṣẹ̀ǹbáyé náà jáde?"
+    },
+    "translator.ui.durableLocaleFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àwọn fáìlì agbègbè tí ó lè pẹ́"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àwọn fáìlì àgbègbè tí ó lè pẹ́ yípadà"
     },
     "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit a matching record here without leaving All Candidates."
+      "status": "machine-generated",
+      "text": "Ṣe àtúnṣe àkọsílẹ̀ tí ó báramu níbí láìfi gbogbo àwọn olùdíje sílẹ̀."
     },
     "translator.ui.editComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit component"
+      "status": "machine-generated",
+      "text": "Ṣàtúnṣe ẹ̀yà ara"
     },
     "translator.ui.editMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit migration inventory"
+      "status": "machine-generated",
+      "text": "Ṣàtúnṣe àkójọpọ̀ ìṣípò"
     },
     "translator.ui.editRecord.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit record"
+      "status": "machine-generated",
+      "text": "Ṣàtúnṣe àkọsílẹ̀"
     },
     "translator.ui.editValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "componentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit {componentId}"
+      "status": "machine-generated",
+      "text": "Ṣàtúnṣe {componentId}"
     },
     "translator.ui.editValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit {currentId}"
+      "status": "machine-generated",
+      "text": "Ṣàtúnṣe {currentId}"
     },
     "translator.ui.editingTheCurrentGeneratedReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Editing the current generated report."
+      "status": "machine-generated",
+      "text": "Ṣàtúnṣe ìròyìn tí a ṣẹ̀dá lọ́wọ́lọ́wọ́."
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Tẹ bọtini katalogi kan sii lati ṣe agbekalẹ awotẹlẹ iyipada naa."
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A ko le yi awọn bọtini katalogi ti o wa tẹlẹ pada. Fi igbasilẹ tuntun kun lati lo bọtini miiran."
     },
     "translator.ui.existingCategories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing Categories"
+      "status": "machine-generated",
+      "text": "Awọn ẹka ti o wa tẹlẹ"
     },
     "translator.ui.existingRoles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing Roles"
+      "status": "machine-generated",
+      "text": "Awọn ipa ti o wa tẹlẹ"
     },
     "translator.ui.filterStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filter status"
+      "status": "machine-generated",
+      "text": "Ipo àlẹmọ"
     },
     "translator.ui.filteredToComponentValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "selectedComponent"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filtered to component: {selectedComponent}"
+      "status": "machine-generated",
+      "text": "Àlẹ̀mọ́ sí ẹ̀yà ara: {selectedComponent}"
     },
     "translator.ui.generatedArtifactManualEditsCanBeOverwrittenThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated artifact: manual edits can be overwritten the next time the language report is built."
+      "status": "machine-generated",
+      "text": "Àlẹ̀mọ́ tí a ṣẹ̀dá: a lè tún àwọn àtúnṣe ọwọ́ kọ nígbà tí a bá tún kọ ìròyìn èdè náà."
     },
     "translator.ui.generatedCatalogValueWillBeDeletedWhenYou.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalog {currentId} will be deleted when you Save."
+      "status": "machine-generated",
+      "text": "Àlẹ̀mọ́ tí a ṣẹ̀dá {currentId} yóò parẹ́ nígbà tí o bá fipamọ́."
     },
     "translator.ui.generatedCatalogValueWillBePreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalog {currentId} will be preserved."
+      "status": "machine-generated",
+      "text": "Àlẹ̀mọ́ tí a ṣẹ̀dá {currentId} yóò parẹ́."
     },
     "translator.ui.generatedCatalogsDeleted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalogs deleted"
+      "status": "machine-generated",
+      "text": "Àlẹ̀mọ́ tí a ṣẹ̀dá ti parẹ́"
     },
     "translator.ui.generatedCatalogsScheduledForDeletion.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalogs scheduled for deletion"
+      "status": "machine-generated",
+      "text": "Àwọn ìwé àkọsílẹ̀ tí a ti ṣe ètò fún píparẹ́"
     },
     "translator.ui.generatedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated files"
+      "status": "machine-generated",
+      "text": "Àwọn ìwé àkọsílẹ̀ tí a ti ṣe ìlànà"
     },
     "translator.ui.generatedFilesChanged.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated files changed"
+      "status": "machine-generated",
+      "text": "Àwọn ìwé àkọsílẹ̀ tí a ti ṣe àtúnṣe"
     },
     "translator.ui.hideLeftPanel.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Hide left panel"
+      "status": "machine-generated",
+      "text": "Fi pánẹ́lì apá òsì pamọ́"
+    },
+    "translator.ui.highestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà gíga jùlọ ní àkọ́kọ́"
     },
     "translator.ui.identifier.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Identifier"
+      "status": "machine-generated",
+      "text": "Ẹni tí a ti ṣe ìdámọ̀"
     },
     "translator.ui.inCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "In Catalog"
+      "status": "machine-generated",
+      "text": "Nínú ìwé àkọsílẹ̀"
     },
     "translator.ui.inspectedValueFileSScannedValueAsText.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderInspectedFileCount",
         "scannedFolderScannedFileCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Inspected {scannedFolderInspectedFileCount} file(s); scanned {scannedFolderScannedFileCount} as text."
+      "status": "machine-generated",
+      "text": "Àwọn ìwé àkọsílẹ̀ tí a ti ṣe àyẹ̀wò {scannedFolderInspectedFileCount}; a ti ṣe àyẹ̀wò {scannedFolderScannedFileCount} gẹ́gẹ́ bí ọ̀rọ̀."
     },
     "translator.ui.invalidValueErrorS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationErrorsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid ({validationErrorsCount} error(s))"
+      "status": "machine-generated",
+      "text": "Kò tọ́ (Àṣìṣe(àwọn) {validationErrorsCount})"
     },
     "translator.ui.join.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
+      "status": "machine-generated",
       "text": ").join(', ')}"
     },
     "translator.ui.languageReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language Report"
+      "status": "machine-generated",
+      "text": "Ìròyìn èdè"
     },
     "translator.ui.leftToRightLtr.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Left to right (ltr)"
+      "status": "machine-generated",
+      "text": "Lẹ́yìn òsì sí ọ̀tún (ltr)"
+    },
+    "translator.ui.lineOrder.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà tí a yàn"
     },
     "translator.ui.lineValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "candidateLine"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Line {candidateLine}"
+      "status": "machine-generated",
+      "text": "Lẹ́yìn tí a yàn {candidateLine}"
     },
     "translator.ui.loadingLanguageReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Loading language report artifact."
+      "status": "machine-generated",
+      "text": "Ìròyìn èdè tí a gbé sórí ayélujára…"
     },
     "translator.ui.loadingPotentialFoundCoverage.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Loading potential / found coverage…"
+      "status": "machine-generated",
+      "text": "Ìgbà tí a gbé sórí ayélujára / rí àbò…"
     },
     "translator.ui.loadingProjectLanguageData.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Loading project language data..."
+      "status": "machine-generated",
+      "text": "Ìgbà tí a gbé sórí ayélujára..."
+    },
+    "translator.ui.loadingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìgbà tí a gbé sórí ayélujára àwòkọ́wò..."
     },
     "translator.ui.locales.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locales"
+      "status": "machine-generated",
+      "text": "Àwọn agbègbè"
+    },
+    "translator.ui.lowestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlà tó kéré jùlọ ní àkọ́kọ́"
     },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains language/canonical/components.json → migrationInventory.scanFiles"
+      "status": "machine-generated",
+      "text": "Ntọju language/canonical/components.json → migrationInventory.scanFiles"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains language/locales/locales.json. Deleting a locale preserves authored source files and keeps generated catalog data by default."
+      "status": "machine-generated",
+      "text": "Ntọju language/locales/locales.json. Piparẹ agbegbe ede kan tọju awọn faili orisun ti a kọ silẹ ati tọju alaye katalogi ti ipilẹṣẹ nipasẹ aiyipada."
     },
     "translator.ui.maintainsValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionFile"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains {definitionFile}"
+      "status": "machine-generated",
+      "text": "Ntọ́jú {definitionFile}"
     },
     "translator.ui.migrationCoverageUnavailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "migration-coverage unavailable"
+      "status": "machine-generated",
+      "text": "Àkójọ ìṣíkiri kò sí"
     },
     "translator.ui.migrationCoverageValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "migration-coverage {fileCatalogedStringCount}"
+      "status": "machine-generated",
+      "text": "Àkójọ ìṣíkiri {fileCatalogedStringCount}"
     },
     "translator.ui.migrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration inventory"
+      "status": "machine-generated",
+      "text": "Àkójọ ìṣíkiri"
     },
     "translator.ui.migrationInventory.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration Inventory"
+      "status": "machine-generated",
+      "text": "Àkójọ ìṣíkiri"
     },
     "translator.ui.migrationInventoryEntries.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration inventory entries"
+      "status": "machine-generated",
+      "text": "Àwọn ìkọsílẹ̀ àkójọ ìṣíkiri"
     },
     "translator.ui.nextLine.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Next (line)"
+      "status": "machine-generated",
+      "text": "Tí ó tẹ̀lé (ìlà)"
     },
     "translator.ui.no.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No"
+      "status": "machine-generated",
+      "text": "Rárá"
     },
     "translator.ui.noCandidateStringsWereFoundInThisFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No candidate strings were found in this file."
+      "status": "machine-generated",
+      "text": "A kò rí àwọn okùn olùdíje nínú fáìlì yìí."
     },
     "translator.ui.noComponentMatchesTheSearch.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No component matches the search."
+      "status": "machine-generated",
+      "text": "Kò sí ohun èlò tó bá àwárí náà mu."
     },
     "translator.ui.noFileSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No file selected."
+      "status": "machine-generated",
+      "text": "Kò sí fáìlì tó bá àwárí náà mu."
     },
     "translator.ui.noFilesContainingCandidateStringsWereFoundIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files containing candidate strings were found in this folder."
+      "status": "machine-generated",
+      "text": "Kò sí fáìlì tó ní àwọn okùn ìdìbò nínú fáìlì yìí."
     },
     "translator.ui.noFilesMatchTheCurrentFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files match the current filter."
+      "status": "machine-generated",
+      "text": "Kò sí fáìlì tó bá àlẹ̀mọ́ ìsinsìnyí mu."
     },
     "translator.ui.noFolderSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No folder selected."
+      "status": "machine-generated",
+      "text": "Kò sí fáìlì tó bá àlẹ̀mọ́ ìsinsìnyí mu."
     },
     "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No migration candidates were reported for this file."
+      "status": "machine-generated",
+      "text": "Kò sí àwọn olùdíje ìṣíkiri tí a ròyìn fún fáìlì yìí."
     },
     "translator.ui.noMigrationSourceFilesAreListed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No migration source files are listed."
+      "status": "machine-generated",
+      "text": "Kò sí àwọn fáìlì orísun ìṣíkiri tí a kọ sílẹ̀."
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kò sí olùdíje tí ó tẹ̀lé tí ó bá àwọn àlẹ̀mọ́ ìsinsìnyí mu."
     },
     "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No next candidate matches the current status filter."
+      "status": "machine-generated",
+      "text": "Kò sí olùdíje tí ó tẹ̀lé tí ó bá àlẹ̀mọ́ ìsinsìnyí mu."
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kò sí olùdíje tí ó tẹ̀lé tí ó bá àwọn àlẹ̀mọ́ ìsinsìnyí mu."
     },
     "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No previous candidate matches the current status filter."
+      "status": "machine-generated",
+      "text": "Kò sí olùdíje tẹ́lẹ̀ tó bá àlẹ̀mọ́ ipò lọ́wọ́lọ́wọ́ mu."
     },
     "translator.ui.noRecordsMatchTheCurrentFilters.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No records match the current filters."
+      "status": "machine-generated",
+      "text": "Kò sí àkọsílẹ̀ tó bá àlẹ̀mọ́ ìsinsìnyí mu."
     },
     "translator.ui.noScanResultsAreAvailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No scan results are available."
+      "status": "machine-generated",
+      "text": "Kò sí àbájáde ìwádìí tó bá àlẹ̀mọ́ ìsinsìnyí mu."
     },
     "translator.ui.noStableSourceConstructWasFound.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No stable source construct was found."
+      "status": "machine-generated",
+      "text": "A kò rí ìkọ́lé orísun tó dúró ṣinṣin."
     },
     "translator.ui.noUnsavedChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No unsaved changes"
+      "status": "machine-generated",
+      "text": "Kò sí àyípadà tí a kò fipamọ́"
     },
     "translator.ui.notSet.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(not set)"
+      "status": "machine-generated",
+      "text": "(kò sí ìtò)"
     },
     "translator.ui.notValidated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Not validated"
+      "status": "machine-generated",
+      "text": "Kò jẹ́rìísí"
     },
     "translator.ui.notes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Notes"
+      "status": "machine-generated",
+      "text": "Àkíyèsí"
     },
     "translator.ui.openComponentCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open component catalog"
+      "status": "machine-generated",
+      "text": "Ṣí àkójọpọ̀ ẹ̀yà"
     },
     "translator.ui.openDiagnosticMessages.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open diagnostic messages"
+      "status": "machine-generated",
+      "text": "Ṣí àwọn ìránṣẹ́ àyẹ̀wò"
     },
     "translator.ui.openPreviewModes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open preview modes"
+      "status": "machine-generated",
+      "text": "Ṣí àwọn ipò àkọ́sílẹ̀"
     },
     "translator.ui.openSemanticKeywords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open semantic keywords"
+      "status": "machine-generated",
+      "text": "Ṣí àwọn ọ̀rọ̀ àtúnyẹ̀wò"
     },
     "translator.ui.openSource.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open source"
+      "status": "machine-generated",
+      "text": "Orísun ṣíṣí"
+    },
+    "translator.ui.original.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àtilẹ̀wá"
     },
     "translator.ui.potentialCandidate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Potential Candidate"
+      "status": "machine-generated",
+      "text": "Olùdíje Tí Ó Lè Ṣètò"
     },
     "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Preparing normalized rebuild with DeepL disabled"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe tó péye pẹ̀lú DeepL tí a ti pa"
     },
     "translator.ui.preparingNormalizedSaveWithDeeplDisabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Preparing normalized save with DeepL disabled"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe tó péye pẹ̀lú DeepL tí a ti pa"
     },
     "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe tó péye pẹ̀lú àwọn ìpè DeepL API tí a ti pa"
+    },
+    "translator.ui.preparingRebuildWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "Preparing rebuild with DeepL API calls enabled"
+      "text": "Preparing rebuild with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingRebuildWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing rebuild with {useNormalizedEnglish} English language fallbacks"
     },
     "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ń ṣe ìmúrasílẹ̀ ìfipamọ́ pẹ̀lú àwọn ìpè DeepL API tí a ṣiṣẹ́"
+    },
+    "translator.ui.preparingSaveWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "Preparing save with DeepL API calls enabled"
+      "text": "Preparing save changes with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingSaveWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with {useNormalizedEnglish} English language fallbacks"
     },
     "translator.ui.previousLine.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Previous (line)"
+      "status": "machine-generated",
+      "text": "Tẹ́lẹ̀ (ìlà)"
     },
     "translator.ui.recommendedCategories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recommended Categories"
+      "status": "machine-generated",
+      "text": "Àwọn Ẹ̀ka Tí A Ṣe Àmọ̀ràn"
     },
     "translator.ui.recommendedRoles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recommended Roles"
+      "status": "machine-generated",
+      "text": "Àwọn Iṣẹ́ Tí A Ṣe Àmọ̀ràn"
     },
     "translator.ui.recoveryFilesRetained.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recovery files retained"
+      "status": "machine-generated",
+      "text": "Àwọn fáìlì ìgbàpadà tí a pamọ́"
     },
     "translator.ui.recursivelyInspectARepositoryFolderThenAddSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recursively inspect a repository folder, then add selected candidate bearing files in one operation."
+      "status": "machine-generated",
+      "text": "Ṣe àyẹ̀wò fódà ìpamọ́ kan lẹ́ẹ̀kan síi, lẹ́yìn náà fi àwọn fáìlì tí ó ní àwọn olùdíje kún un nínú iṣẹ́ kan."
     },
     "translator.ui.refreshingCatalogMatches.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Refreshing catalog matches."
+      "status": "machine-generated",
+      "text": "Àwọn ìbáramu àkójọpọ̀ tí ń múni yípadà..."
+    },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àtúnṣe àtúnṣe àtúnṣe àtúnṣe..."
     },
     "translator.ui.reject.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reject"
+      "status": "machine-generated",
+      "text": "Kọ̀"
     },
     "translator.ui.reloadReportFromDisk.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reload report from disk"
+      "status": "machine-generated",
+      "text": "Tún gbé ìròyìn láti inú díìsìkì"
     },
     "translator.ui.remove.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Remove"
+      "status": "machine-generated",
+      "text": "Yọ kuro"
     },
     "translator.ui.removeValueFromTheMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Remove {filePath} from the migration inventory?"
+      "status": "machine-generated",
+      "text": "Yọ {filePath} kúrò nínú àkójọ ìṣíkiri?"
+    },
+    "translator.ui.replaceLineInSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Rọpo ìlà nínú orísun"
     },
     "translator.ui.repositoryMaintenanceTool.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Repository maintenance tool"
+      "status": "machine-generated",
+      "text": "Ohun èlò ìtọ́jú ibi ìpamọ́"
     },
     "translator.ui.requiredLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Required locale"
+      "status": "machine-generated",
+      "text": "Àgbègbè tí a nílò"
     },
     "translator.ui.resizeCandidateListAndCandidateEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize candidate list and candidate editor"
+      "status": "machine-generated",
+      "text": "Ṣe àtúnṣe àkójọ àwọn olùdíje àti olóòtú olùdíje"
     },
     "translator.ui.resizeLocaleListAndLocaleEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize locale list and locale editor"
+      "status": "machine-generated",
+      "text": "Ṣe àtúnṣe àkójọ àgbègbè àti olóòtú àgbègbè"
     },
     "translator.ui.resizeValueListAndEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionTitle"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize {definitionTitle} list and editor"
+      "status": "machine-generated",
+      "text": "Ṣe àtúnṣe àkójọ àti olóòtú {definitionTitle}"
     },
     "translator.ui.resizeWorkspaceAndOperationResults.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize workspace and operation results"
+      "status": "machine-generated",
+      "text": "Ṣe àtúnṣe àkójọ ibi iṣẹ́ àti àwọn àbájáde iṣẹ́"
+    },
+    "translator.ui.resolvingCatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe kọ́kọ́rọ́ katalogi..."
     },
     "translator.ui.restore.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restore"
+      "status": "machine-generated",
+      "text": "Múpadà"
     },
     "translator.ui.restoringTheLastLoadedDraftAndValidatingIt.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restoring the last loaded draft and validating it"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe àkójọ tí a ti kó jọ kẹ́yìn àti fífàṣẹ sí i ó"
     },
     "translator.ui.retry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Retry"
+      "status": "machine-generated",
+      "text": "Tún gbìyànjú"
     },
     "translator.ui.revertingLanguageData.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reverting language data"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe dátà èdè"
     },
     "translator.ui.rightToLeftRtl.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Right to left (rtl)"
+      "status": "machine-generated",
+      "text": "Síṣe àtúnṣe sí apá ọ̀tún (rtl)"
+    },
+    "translator.ui.role.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ipa"
     },
     "translator.ui.roles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Roles"
+      "status": "machine-generated",
+      "text": "Àwọn ipa"
     },
     "translator.ui.runtime.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Runtime"
+      "status": "machine-generated",
+      "text": "Àkókò ìṣiṣẹ́"
     },
     "translator.ui.saveReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save report artifact"
+      "status": "machine-generated",
+      "text": "Fipamọ́ ohun èlò ìròyìn"
     },
     "translator.ui.scanFailedValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultError"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan failed: {resultError}"
+      "status": "machine-generated",
+      "text": "Ìṣàyẹ̀wò kùnà: {resultError}"
     },
     "translator.ui.scanFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan file…"
+      "status": "machine-generated",
+      "text": "Fáìlì àtúnṣe…"
     },
     "translator.ui.scanFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan folder."
+      "status": "machine-generated",
+      "text": "Ìṣàyẹ̀wò fódà…"
     },
     "translator.ui.scanSourceFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source file"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò fáìlì orísun"
     },
     "translator.ui.scanSourceFileValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFilePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source file: {scannedFilePath}"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò fáìlì orísun: {scannedFilePath}"
     },
     "translator.ui.scanSourceFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source folder"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò fáìlì orísun"
     },
     "translator.ui.scanSourceFolderValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source folder: {scannedFolderPath}"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò fáìlì orísun: {scannedFolderPath}"
     },
     "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileExtractedCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scanned {scannedFileExtractedCount} candidate string(s) without changing the inventory."
+      "status": "machine-generated",
+      "text": "A ṣe àyẹ̀wò àwọn okùn {scannedFileExtractedCount} láì yí àkójọpọ̀ náà padà."
     },
     "translator.ui.scanningSelectedFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scanning selected file…"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò fáìlì tí a yàn…"
     },
     "translator.ui.scanningSelectedFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scanning selected folder."
+      "status": "machine-generated",
+      "text": "Ṣíṣe àyẹ̀wò fáìlì tí a yàn…"
     },
     "translator.ui.scope.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scope"
+      "status": "machine-generated",
+      "text": "Àkójọpọ̀"
     },
     "translator.ui.search.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search"
+      "status": "machine-generated",
+      "text": "Wá"
     },
     "translator.ui.searchAndFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search and filter"
+      "status": "machine-generated",
+      "text": "Wá kí o sì ṣàlẹ̀"
     },
     "translator.ui.selectACategory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(select a category)"
+      "status": "machine-generated",
+      "text": "(yan ẹ̀ka kan)"
     },
     "translator.ui.selectAComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(select a component)"
+      "status": "machine-generated",
+      "text": "(Yan apa kan)"
     },
     "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a file to display every string accepted by extractStringCandidates."
+      "status": "machine-generated",
+      "text": "Yan faili kan lati ṣe afihan gbogbo okun ti extractStringCandidates gba."
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a folder to find files containing candidate strings."
+      "status": "machine-generated",
+      "text": "Yan folda kan lati wa awọn faili ti o ni awọn okun oludije."
     },
     "translator.ui.selectALocaleOrAddANewOne.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a locale or add a new one."
+      "status": "machine-generated",
+      "text": "Yan agbegbe kan tabi ṣafikun tuntun kan."
     },
     "translator.ui.selectALocaleTemplate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a locale template"
+      "status": "machine-generated",
+      "text": "Yan awoṣe agbegbe kan"
     },
     "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a reported candidate to review its status."
+      "status": "machine-generated",
+      "text": "Yan oludije ti a royin lati ṣe atunyẹwo ipo rẹ."
     },
     "translator.ui.selectARole.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(select a role)"
+      "status": "machine-generated",
+      "text": "(Yan ipa kan)"
     },
     "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a specific component before adding a record."
+      "status": "machine-generated",
+      "text": "Yan apa kan pato ṣaaju fifi igbasilẹ kun."
     },
     "translator.ui.selectAllNew.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select all new"
+      "status": "machine-generated",
+      "text": "Yan gbogbo tuntun"
     },
     "translator.ui.selectFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select file…"
+      "status": "machine-generated",
+      "text": "Yan faili…"
     },
     "translator.ui.selectFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select folder."
+      "status": "machine-generated",
+      "text": "Yan folda…"
     },
     "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select one repository file to inspect without adding it to the source inventory."
+      "status": "machine-generated",
+      "text": "Yan faili ibi ipamọ kan lati ṣayẹwo laisi fifi kun si akojo orisun."
     },
     "translator.ui.selectedValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFilePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected: {scannedFilePath}"
+      "status": "machine-generated",
+      "text": "Ti a yan: {scannedFilePath}"
     },
     "translator.ui.selectedValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected: {scannedFolderPath}"
+      "status": "machine-generated",
+      "text": "Ti a yan: {scannedFolderPath}"
     },
     "translator.ui.semanticKeywords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Semantic Keywords"
+      "status": "machine-generated",
+      "text": "Awọn ọrọ pataki"
     },
     "translator.ui.setPreviewDefault.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Set preview default"
+      "status": "machine-generated",
+      "text": "Ṣe àtúnṣe àtúnyẹ̀wò àìyípadà"
     },
     "translator.ui.showLeftPanel.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Show left panel"
+      "status": "machine-generated",
+      "text": "Fi pánẹ́lì òsì hàn"
     },
     "translator.ui.showingRecordsFromAllComponents.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Showing records from all components"
+      "status": "machine-generated",
+      "text": "Ń fi àwọn àkọsílẹ̀ láti gbogbo àwọn ẹ̀yà ara hàn"
     },
     "translator.ui.skippedValueFileOrFolderPathS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "skipped"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Skipped {skipped} file or folder path(s)."
+      "status": "machine-generated",
+      "text": "A ti fo {skipped} ojú ọ̀nà(àwọn fáìlì tàbí fódà)."
+    },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kò sí ìyípadà orísun."
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Rírọ́pò orísun nílò kọ́kọ́rọ́ katalogi."
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àwòrán Ìyípadà Orísun"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìmúdàgbàsókè orísun ṣì wà ní ìdúró. {detail}. Ìlọ kiri tẹ̀síwájú."
     },
     "translator.ui.status.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Status"
+      "status": "machine-generated",
+      "text": "Ipò"
     },
     "translator.ui.statusInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Status: In Catalog"
+      "status": "machine-generated",
+      "text": "Ipo: Ninu Katalogi"
     },
     "translator.ui.stoppedAtTheValueFileSafetyLimit.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderLimitsMaximumFiles"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Stopped at the {scannedFolderLimitsMaximumFiles} file safety limit."
+      "status": "machine-generated",
+      "text": "A dúró ní ààlà ààbò fáìlì {scannedFolderLimitsMaximumFiles}."
     },
     "translator.ui.textDirection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Text direction"
+      "status": "machine-generated",
+      "text": "Ìtọ́sọ́nà ọ̀rọ̀"
     },
     "translator.ui.theInventoryIsUnchangedUntilSelectedFilesAre.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The inventory is unchanged until selected files are added."
+      "status": "machine-generated",
+      "text": "Àkójọ ọjà náà kò yí padà títí a ó fi fi àwọn fáìlì tí a yàn kún un."
     },
     "translator.ui.theReportDoesNotExistYetSavingWill.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The report does not exist yet. Saving will create it."
+      "status": "machine-generated",
+      "text": "Ìròyìn náà kò tíì sí. Fífipamọ́ ni yóò ṣẹ̀dá rẹ̀."
+    },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "A kò rọ́pò ìlà orísun náà."
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìṣẹ̀lẹ̀ pàtàkì yìí ti ń lo catalog.format kò sì nílò ìyípadà orísun náà."
     },
     "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "This locale is required by the language builder."
+      "status": "machine-generated",
+      "text": "Agbára ìwádìí èdè yìí ni a nílò."
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Agbára ìwádìí yìí wà fún ìwádìí; ìlà orísun ìsinsìnyí ti lo katalogi.format."
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àwòrán ìyípadà kò sí: {resultError}"
+    },
+    "translator.ui.transformed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ayípadà"
     },
     "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Translation-oriented preview using canonical word substitutions."
+      "status": "machine-generated",
+      "text": "Àwòrán ìwádìí ìtumọ̀ nípa lílo àwọn ìyípadà ọ̀rọ̀ onímìísí."
     },
     "translator.ui.uncheckedBuildsUseNormalizedEnglishAndDoNot.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unchecked builds use normalized English and do not call DeepL."
+      "status": "machine-generated",
+      "text": "Àwọn ìkọ́lé tí a kò ṣàyẹ̀wò ń lo èdè Gẹ̀ẹ́sì tí a ṣe déédéé, wọn kò sì pe DeepL."
     },
     "translator.ui.unsavedChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unsaved changes"
+      "status": "machine-generated",
+      "text": "Àwọn àyípadà tí kò sí ní ìpamọ́"
     },
     "translator.ui.unsavedChangesRemainInMemoryContinueToAnother.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àwọn àyípadà tí kò sí ní ìpamọ́ wà ní ìrántí. Tẹ̀síwájú sí ìwòran mìíràn?"
+    },
+    "translator.ui.useNormalized.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Unsaved changes remain in memory. Continue to another view?"
+      "text": "Use normalized"
+    },
+    "translator.ui.useNormalizedEnglishForGeneratedFallbacksAndAutomated.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for generated fallbacks and automated translation input."
     },
     "translator.ui.useSuggestedKey.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use suggested key"
+      "status": "machine-generated",
+      "text": "Lo kọ́kọ́rọ́ tí a dábàá"
     },
     "translator.ui.validValueWarningS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationWarningsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Valid ({validationWarningsCount} warning(s))"
+      "status": "machine-generated",
+      "text": "Wúlò ({validationWarningsCount} ìkìlọ̀(àwọn))"
     },
     "translator.ui.validationFailedWithValueErrorS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationErrorsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validation failed with {validationErrorsCount} error(s)."
+      "status": "machine-generated",
+      "text": "Ìfìdí múlẹ̀ kùnà pẹ̀lú àṣìṣe(àwọn) {validationErrorsCount}."
     },
     "translator.ui.validationListValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "kind"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "validation-list {kind}"
+      "status": "machine-generated",
+      "text": "Àkójọ ìfàṣẹsí {kind}"
     },
     "translator.ui.validationPassedWithValueWarningS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationWarningsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validation passed with {validationWarningsCount} warning(s)."
+      "status": "machine-generated",
+      "text": "Ìfàṣẹsí ti kọjá pẹ̀lú ìkìlọ̀ {validationWarningsCount}(àwọn ìkìlọ̀)."
     },
     "translator.ui.valueCandidateBearingFileSValuePotentialCandidate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderCandidateFileCount",
         "scannedFolderCandidateCount",
         "scannedFolderCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFolderCandidateFileCount} candidate bearing file(s), {scannedFolderCandidateCount} potential candidate(s), {scannedFolderCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "Fáìlì(àwọn) olùdíje tí ó ní {scannedFolderCandidateFileCount}, {scannedFolderCandidateCount}, {scannedFolderCatalogedStringCount} wà nínú àkójọ ìwé"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileCandidateCount",
         "scannedFileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFileCandidateCount} non catalog candidate(s), {scannedFileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFileCandidateCount} tí kìí ṣe àkójọ ìwé, {scannedFileCatalogedStringCount} wà nínú àkójọ ìwé"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} non catalog candidate(s), {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "Awọn oludije ti kii ṣe katalogi {fileCandidateCount}, {fileCatalogedStringCount} ti a rii ninu katalogi"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text3": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "candidateRowsLengthCatalogedCount",
         "catalogedCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{candidateRowsLengthCatalogedCount} non catalog candidate(s), {catalogedCount} found in catalog"
+      "status": "machine-generated",
+      "text": "Àwọn olùdíje tí kìí ṣe ti àkójọpọ̀ {candidateRowsLengthCatalogedCount}, {catalogedCount} ni a rí nínú àkójọpọ̀"
     },
     "translator.ui.valueNonCatalogValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} non catalog {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "Kìí ṣe àkójọpọ̀ {fileCandidateCount} · {fileCatalogedStringCount} tí a rí nínú àkójọpọ̀"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileCandidateCount",
         "scannedFileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFileCandidateCount} potential candidate(s), {scannedFileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFileCandidateCount} olùdíje tí ó ṣeéṣe, {scannedFileCatalogedStringCount} tí a rí nínú àkójọpọ̀"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential candidate(s), {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} olùdíje tí ó ṣeéṣe, {fileCatalogedStringCount} tí a rí nínú àkójọpọ̀"
     },
     "translator.ui.valuePotentialValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential · {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} agbára, {fileCatalogedStringCount} tí a rí nínú àkójọpọ̀"
     },
     "translator.ui.valuePotentialValueInCatalogValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount",
         "inventoryText"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential {fileCatalogedStringCount} in catalog{inventoryText}"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} agbara · {fileCatalogedStringCount} ninu katalogi{inventoryText}"
     },
     "translator.ui.valueRecordS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "recordsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{recordsCount} record(s)"
+      "status": "machine-generated",
+      "text": "{recordsCount} igbasilẹ"
+    },
+    "translator.ui.valueRemaining.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryRemainingCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryRemainingCount} ti o ku"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "statusElapsedMsToFixed"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{statusElapsedMsToFixed} awọn aaya ti kọja"
     },
     "translator.ui.valueSourceFileS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filesCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{filesCount} source file(s)"
+      "status": "machine-generated",
+      "text": "{filesCount} faili orisun"
+    },
+    "translator.ui.valueValueCompleted.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryCompletedCount",
+        "summaryTotalCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryCompletedCount}/{summaryTotalCount} ti pari"
     },
     "translator.ui.view.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View"
+      "status": "machine-generated",
+      "text": "Wo"
     },
     "translator.ui.viewCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View candidates"
+      "status": "machine-generated",
+      "text": "Wo àwọn olùdíje"
     },
     "translator.ui.viewHeadingDataViewToolbar.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "view-heading data-view-toolbar"
+      "status": "machine-generated",
+      "text": "wo-akọle alaye-view-toolbar"
     },
     "translator.ui.yes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Yes"
+      "status": "machine-generated",
+      "text": "Bẹ́ẹ̀ni"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

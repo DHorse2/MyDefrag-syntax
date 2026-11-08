@@ -2,17 +2,13 @@
 
 const fs = require('fs');
 const path = require('path');
+const { synchronizeCatalogSourceLines } = require('./catalog-source-lines');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const CATALOG_PATH = path.join(ROOT, 'language', 'canonical', 'component-catalog.json');
 const COMPONENTS_PATH = path.join(ROOT, 'language', 'canonical', 'components.json');
 
 const COMPONENTS = [
-    {
-        id: 'translator',
-        root: 'build/mdl-language-app',
-        description: 'Language-maintenance Electron app for canonical catalogs, migration inventory, validation, and builds.'
-    },
     {
         id: 'locales',
         root: 'build/mdl-locale-app',
@@ -302,6 +298,37 @@ function catalogEntries(component) {
     }).sort((left, right) => left.key.localeCompare(right.key));
 }
 
+function authoredLocaleCatalogKeys(rootDir = ROOT) {
+    const keys = new Set();
+    const localesRoot = path.join(rootDir, 'language', 'locales');
+    if (!fs.existsSync(localesRoot)) { return keys; }
+    for (const localeEntry of fs.readdirSync(localesRoot, { withFileTypes: true })) {
+        if (!localeEntry.isDirectory()) { continue; }
+        const localePath = path.join(localesRoot, localeEntry.name);
+        for (const fileEntry of fs.readdirSync(localePath, { withFileTypes: true })) {
+            if (!fileEntry.isFile() || !fileEntry.name.endsWith('.json')) { continue; }
+            const document = JSON.parse(fs.readFileSync(path.join(localePath, fileEntry.name), 'utf8'));
+            if (Array.isArray(document.entries)) {
+                for (const entry of document.entries) {
+                    if (entry?.key) { keys.add(entry.key); }
+                }
+            } else if (document.entries && typeof document.entries === 'object') {
+                for (const key of Object.keys(document.entries)) { keys.add(key); }
+            }
+        }
+    }
+    return keys;
+}
+
+function retainCatalogEntries(entries, generatedEntries, localeKeys, roots) {
+    const generatedKeys = new Set(generatedEntries.map((entry) => entry.key));
+    return (entries || []).filter((entry) => {
+        const generatedSource = roots.some((root) => String(entry.source || '').startsWith(root));
+        if (!generatedSource) { return true; }
+        return !generatedKeys.has(entry.key) && localeKeys.has(entry.key);
+    });
+}
+
 function updateInventory(document) {
     const selectedIds = new Set(COMPONENTS.map((component) => component.id));
     const retained = (document.migrationInventory?.scanFiles || [])
@@ -329,16 +356,21 @@ function main() {
     const components = JSON.parse(fs.readFileSync(COMPONENTS_PATH, 'utf8'));
     const generated = COMPONENTS.flatMap(catalogEntries);
     const roots = COMPONENTS.map((component) => `${component.root}/`);
-    const retained = (catalog.entries || []).filter((entry) => (
-        !roots.some((root) => String(entry.source || '').startsWith(root))
-    ));
+    const localeKeys = authoredLocaleCatalogKeys();
+    const retained = retainCatalogEntries(catalog.entries, generated, localeKeys, roots);
+    const retainedHistoricalCount = retained.filter((entry) => (
+        roots.some((root) => String(entry.source || '').startsWith(root))
+    )).length;
     catalog.entries = [...retained, ...generated];
+    const sourceLineUpdates = synchronizeCatalogSourceLines(catalog, ROOT);
     updateInventory(components);
 
     for (const component of COMPONENTS) {
         const count = generated.filter((entry) => entry.component === component.id).length;
         console.log(`${component.id}: ${count} canonical app string(s)`);
     }
+    console.log(`Source-removed entries retained for authored locales: ${retainedHistoricalCount}`);
+    console.log(`Source line corrections: ${sourceLineUpdates.length}`);
     console.log(`Production inventory: ${components.migrationInventory.scanFiles.length} total file(s)`);
     if (!write) {
         console.log('Dry run only; pass --write to update canonical language files.');
@@ -354,5 +386,7 @@ if (require.main === module) {
 }
 
 module.exports = {
+    authoredLocaleCatalogKeys,
+    retainCatalogEntries,
     updateInventory
 };

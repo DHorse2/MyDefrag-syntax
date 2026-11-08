@@ -23,7 +23,7 @@
       "placeholders": [],
       "sourceStatus": "reviewed",
       "status": "machine-generated",
-      "text": "$(check) Diagnostics de My Defragmenter 0"
+      "text": "$(check) rapports de problèmes de Gestion de mon stockage 0"
     },
     "diagnosticExplorer.tree.header.label": {
       "fallbackLocale": null,
@@ -41,7 +41,7 @@
       ],
       "sourceStatus": "reviewed",
       "status": "machine-generated",
-      "text": "Diagnostics : {current} / {eligible} / {all} ({remaining} restants, {remainingFiles} / {traversableFiles} / {totalFiles} fichiers, corrigés {fixed}, ignorés {ignored}, omis {skipped})"
+      "text": "rapports de problèmes : {current} / {eligible} / {all} ({remaining} restants, {remainingFiles} / {traversableFiles} / {totalFiles} fichiers, corrigés {fixed}, ignorés {ignored}, omis {skipped})"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

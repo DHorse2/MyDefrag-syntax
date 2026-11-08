@@ -1,122 +1,122 @@
 {
   "Defragment": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.defragment",
-    "status": "draft",
-    "text": "Defragment"
+    "status": "machine-generated",
+    "text": "Desfragmentar"
   },
   "DirectoryName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.directoryName",
-    "status": "draft",
-    "text": "DirectoryName"
+    "status": "machine-generated",
+    "text": "Nome do Diretório"
   },
   "ExcludeFiles": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "script.excludeFiles",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "ExcludeFiles"
   },
   "ExcludeVolumes": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "script.excludeVolumes",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "ExcludeVolumes"
   },
   "FastFill": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.fastFill",
-    "status": "draft",
-    "text": "FastFill"
+    "status": "machine-generated",
+    "text": "Preenchimento Rápido"
   },
   "FileActions": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileActions",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "FileActions"
   },
   "FileEnd": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileEnd",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "FileEnd"
   },
   "FileName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.fileName",
-    "status": "draft",
-    "text": "FileName"
+    "status": "machine-generated",
+    "text": "Nome do Arquivo"
   },
   "FileSelect": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileSelect",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "FileSelect"
   },
   "FragmentCount": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.fragmentCount",
-    "status": "draft",
-    "text": "FragmentCount"
+    "status": "machine-generated",
+    "text": "Contagem de Fragmentos"
   },
   "FullPath": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.fullPath",
-    "status": "draft",
-    "text": "FullPath"
+    "status": "machine-generated",
+    "text": "Caminho Completo"
   },
   "Label": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.label",
-    "status": "draft",
-    "text": "Label"
+    "status": "machine-generated",
+    "text": "Lab el"
   },
   "Name": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.name",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "Name"
   },
   "SetColor": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "setting.setColor",
-    "status": "draft",
-    "text": "SetColor"
+    "status": "machine-generated",
+    "text": "Definir Cor"
   },
   "SetVariable": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "setting.setVariable",
-    "status": "draft",
-    "text": "SetVariable"
+    "status": "machine-generated",
+    "text": "Definir Variável"
   },
   "Size": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.size",
-    "status": "draft",
-    "text": "Size"
+    "status": "machine-generated",
+    "text": "Tamanho"
   },
   "SortByName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.sortByName",
-    "status": "draft",
-    "text": "SortByName"
+    "status": "machine-generated",
+    "text": "Classificar por Nome"
   },
   "VolumeActions": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeActions",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "VolumeActions"
   },
   "VolumeEnd": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeEnd",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "VolumeEnd"
   },
   "VolumeSelect": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeSelect",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "VolumeSelect"
   }
 }

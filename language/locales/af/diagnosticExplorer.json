@@ -3,15 +3,15 @@
   "component": "diagnosticExplorer",
   "entries": {
     "diagnosticExplorer.message.noCurrentDiagnostic.info": {
-      "text": "My Defragmenter: Geen huidige diagnose.",
+      "text": "My Stoorbestuur: Geen huidige diagnose.",
       "status": "machine-generated"
     },
     "diagnosticExplorer.status.hasDiagnostics.text": {
-      "text": "$(warning) My Defragmenter {index} / {total}",
+      "text": "$(warning) My Stoorbestuur {index} / {total}",
       "status": "machine-generated"
     },
     "diagnosticExplorer.status.noDiagnostics.text": {
-      "text": "$(check) My Defragmenter 0-diagnostiek",
+      "text": "$(check) My Stoorbestuur 0-diagnostiek",
       "status": "machine-generated"
     },
     "diagnosticExplorer.tree.header.label": {

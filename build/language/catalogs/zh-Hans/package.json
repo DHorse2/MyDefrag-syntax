@@ -132,7 +132,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "应从“我的碎片整理工具”验证中排除的Glob模式"
+      "text": "要从“我的碎片整理程序”验证中排除的文件匹配模式"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
       "fallbackLocale": null,
@@ -181,7 +181,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "我的“磁盘碎片整理程序”扩展的详细程度级别。调试日志记录需要开启 mydfrg debug。"
+      "text": "我的“磁盘碎片整理程序”扩展的详细程度级别。调试日志记录需要开启 mydfrg.debugOn。"
     },
     "package.contributes.languages.aliases": {
       "fallbackLocale": null,
@@ -216,7 +216,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter 脚本语言的语法高亮"
+      "text": "我的存储管理 脚本语言的语法高亮"
     },
     "package.metadata.publisher": {
       "fallbackLocale": null,

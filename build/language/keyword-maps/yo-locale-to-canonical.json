@@ -1,82 +1,82 @@
 {
-  "Defragment": {
-    "canonical": "Defragment",
-    "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
-  "FastFill": {
-    "canonical": "FastFill",
-    "id": "fileAction.fastFill"
-  },
-  "FileActions": {
-    "canonical": "FileActions",
-    "id": "structure.fileActions"
-  },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
-    "canonical": "FileSelect",
-    "id": "structure.fileSelect"
-  },
-  "FragmentCount": {
-    "canonical": "FragmentCount",
-    "id": "volumeCondition.fragmentCount"
-  },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
-  },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
+  "Orúkọ": {
     "canonical": "Name",
     "id": "volumeCondition.name"
   },
-  "SetColor": {
-    "canonical": "SetColor",
-    "id": "setting.setColor"
+  "Orúkọ fáìlì": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
   },
-  "SetVariable": {
-    "canonical": "SetVariable",
-    "id": "setting.setVariable"
+  "Orúkọ Àkójọpọ̀": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
   },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
+  "Yíyan Fáìlì": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
   },
-  "SortByName": {
-    "canonical": "SortByName",
-    "id": "fileAction.sortByName"
+  "Yíyan Ìwọ̀n": {
+    "canonical": "VolumeSelect",
+    "id": "structure.volumeSelect"
   },
-  "VolumeActions": {
+  "Àmì": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "Àwọn Ìgbésẹ̀ Fáìlì": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
+  },
+  "Àwọn Ìgbésẹ̀ Ìwọ̀n": {
     "canonical": "VolumeActions",
     "id": "structure.volumeActions"
   },
-  "VolumeEnd": {
+  "Àwọ̀ Ṣẹ́ẹ̀tì": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
+  },
+  "Àìsí Àwọn Ìdìpọ̀": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "Àìsí àwọn fáìlì": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
+  },
+  "Ìkún Kíákíá": {
+    "canonical": "FastFill",
+    "id": "fileAction.fastFill"
+  },
+  "Ìtòjọ Nípa Orúkọ": {
+    "canonical": "SortByName",
+    "id": "fileAction.sortByName"
+  },
+  "Ìwọ̀n": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
+  },
+  "Ìwọ̀n Àkójọpọ̀": {
+    "canonical": "FragmentCount",
+    "id": "volumeCondition.fragmentCount"
+  },
+  "Ìyípadà Ṣẹ́ẹ̀tì": {
+    "canonical": "SetVariable",
+    "id": "setting.setVariable"
+  },
+  "Ìyọkúrò": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
+  },
+  "Òpin Fáìlì": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "Òpin Ìwọ̀n": {
     "canonical": "VolumeEnd",
     "id": "structure.volumeEnd"
   },
-  "VolumeSelect": {
-    "canonical": "VolumeSelect",
-    "id": "structure.volumeSelect"
+  "Ọ̀nà Kíkún": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
   }
 }

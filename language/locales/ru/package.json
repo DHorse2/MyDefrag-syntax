@@ -7,11 +7,11 @@
       "status": "machine-generated"
     },
     "package.description": {
-      "text": "Подсветка синтаксиса для языка сценариев «My Defragmenter»",
+      "text": "Подсветка синтаксиса для языка сценариев «Управление хранилищем»",
       "status": "machine-generated"
     },
     "package.metadata.description": {
-      "text": "Подсветка синтаксиса для языка сценариев «My Defragmenter»",
+      "text": "Подсветка синтаксиса для языка сценариев «Управление хранилищем»",
       "status": "machine-generated"
     },
     "package.metadata.publisher": {
@@ -19,7 +19,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.userDir.description": {
-      "text": "Каталог с пользовательскими данными программы «My Defragmenter».",
+      "text": "Каталог с пользовательскими данными программы «Управление хранилищем».",
       "status": "machine-generated"
     },
     "package.path.repository.url": {
@@ -31,7 +31,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
-      "text": "Каталог для файлов журнала программы «My Defragmenter».",
+      "text": "Каталог для файлов журнала программы «Управление хранилищем».",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.debugOn.description": {
@@ -39,7 +39,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
-      "text": "Уровень подробности расширения «My Defragmenter». Для ведения отладочного журнала необходимо включить параметр «mydfrg debug On».",
+      "text": "Уровень подробности расширения «Управление хранилищем». Для ведения отладочного журнала необходимо включить параметр «mydfrg.debugOn».",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
@@ -63,7 +63,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
-      "text": "Шаблоны Glob, которые следует исключить из проверки «Мой дефрагментатор»",
+      "text": "Шаблоны сопоставления файлов, которые следует исключить из проверки «Мой дефрагментатор»",
       "status": "machine-generated"
     },
     "package.contributes.languages.aliases": {

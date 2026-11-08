@@ -43,11 +43,16 @@ function parseCommandLine(argv = [], rootDir = ROOT) {
         retryBaseMs: 1000,
         systemicFailureLimit: 5,
         callsPerMinute: 30,
-        preflightOnly: false
+        preflightOnly: false,
+        useNormalized: true
     };
     for (const argument of argv) {
         if (argument === '--PreflightOnly') {
             options.preflightOnly = true;
+        } else if (argument === '--UseNormalized') {
+            options.useNormalized = true;
+        } else if (argument === '--UseCanonical' || argument === '--NoUseNormalized') {
+            options.useNormalized = false;
         } else if (argument.startsWith('--Report=')) {
             options.reportPath = argument.slice('--Report='.length).trim();
         } else if (argument.startsWith('--Locale=')) {
@@ -151,11 +156,13 @@ function collectFallbackWork(state, rootDir = ROOT, options = {}) {
                 });
                 continue;
             }
-            const sourceText = normalizeText(
-                canonicalEntry.text,
-                state.normalizedWords,
-                { preserveRuntimeSyntax: true }
-            );
+            const sourceText = options.useNormalized === false
+                ? canonicalEntry.text
+                : normalizeText(
+                    canonicalEntry.text,
+                    state.normalizedWords,
+                    { preserveRuntimeSyntax: true }
+                );
             work.push({
                 locale: locale.id,
                 component: canonicalEntry.component,
@@ -242,6 +249,7 @@ function renderSummary(summary) {
             ? summary.charactersConsumed.toLocaleString('en-US')
             : 'Unavailable'}`,
         `- Supported fallback entries planned this run: ${summary.plannedEntries}`,
+        `- English source: ${summary.englishSource || 'normalized'}`,
         `- Planned source characters this run: ${summary.plannedCharacters}`,
         `- Translation call rate limit: ${summary.callsPerMinute} per minute`,
         `- API call lines recorded across all runs: ${summary.totalReportCalls}`,
@@ -665,6 +673,7 @@ async function runTranslationUnlocked(options = {}) {
         remainingCharactersAtEnd: null,
         charactersConsumed: null,
         plannedEntries: supportedWork.length,
+        englishSource: options.useNormalized === false ? 'canonical' : 'normalized',
         plannedCharacters,
         callsPerMinute,
         totalReportCalls: sequence - 1,

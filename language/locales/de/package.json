@@ -7,11 +7,11 @@
       "status": "machine-generated"
     },
     "package.description": {
-      "text": "Syntaxhervorhebung für die Skriptsprache „My Defragmenter“",
+      "text": "Syntaxhervorhebung für die Skriptsprache „Meine Speicherverwaltung“",
       "status": "machine-generated"
     },
     "package.metadata.description": {
-      "text": "Syntaxhervorhebung für die Skriptsprache „My Defragmenter“",
+      "text": "Syntaxhervorhebung für die Skriptsprache „Meine Speicherverwaltung“",
       "status": "machine-generated"
     },
     "package.metadata.publisher": {
@@ -19,7 +19,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.userDir.description": {
-      "text": "Verzeichnis für die Benutzerdaten von „My Defragmenter“.",
+      "text": "Verzeichnis für die Benutzerdaten von „Meine Speicherverwaltung“.",
       "status": "machine-generated"
     },
     "package.path.repository.url": {
@@ -31,15 +31,15 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
-      "text": "Verzeichnis für die Protokolldateien von „My Defragmenter“.",
+      "text": "Verzeichnis für die Protokolldateien von „Meine Speicherverwaltung“.",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.debugOn.description": {
-      "text": "Debug-Protokollierung für die Erweiterung „My Defragmenter“ aktivieren.",
+      "text": "Fehlerprüfung-Protokollierung für die Erweiterung „Meine Speicherverwaltung“ aktivieren.",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
-      "text": "Die Ausführlichkeitsstufe meiner Defragmenter-Erweiterung. Für die Debug-Protokollierung muss „mydfrg debug On“ aktiviert sein.",
+      "text": "Die Ausführlichkeitsstufe der Erweiterung „Meine Speicherverwaltung“. Für die Fehlerprüfungs-Protokollierung muss „mydfrg.debugOn“ aktiviert sein.",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
@@ -63,7 +63,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
-      "text": "Glob-Muster, die bei der Überprüfung durch „Meine Defragmentierung“ ausgeschlossen werden sollen",
+      "text": "Dateiabgleichsmuster, die bei der Überprüfung durch „Meine Defragmentierung“ ausgeschlossen werden sollen",
       "status": "machine-generated"
     },
     "package.contributes.languages.aliases": {
@@ -131,7 +131,7 @@
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
-      "text": "Mein Defragmentierer: Diagnostik-Explorer schließen",
+      "text": "Mein Defragmentierer: Diagnostik-Browser schließen",
       "status": "machine-generated"
     }
   }

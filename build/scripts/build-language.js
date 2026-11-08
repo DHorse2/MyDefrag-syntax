@@ -8,7 +8,12 @@ const {
     DeepLTranslationService,
     createBuildTranslationSuggestions
 } = require('../language/translation/deepl-translation-service');
+const { GoogleTranslationService } = require('../language/translation/google-translation-service');
 const { normalizeText, validateSubstitutions } = require('../language/translation/text-normalizer');
+const {
+    buildNormalizedInputAudit,
+    renderNormalizedInputAuditMarkdown
+} = require('../language/translation/normalized-input-audit');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const VALID_STATUSES = new Set([
@@ -28,6 +33,86 @@ const VALID_DIAGNOSTIC_SEVERITIES = new Set([
 const EXPECTED_LOCALES = [
     'en'
 ];
+const VALID_TRANSLATION_PROVIDERS = new Set(['deepl', 'google', 'none']);
+
+function portablePath(value) {
+    return String(value || '').replaceAll('\\', '/');
+}
+
+function loadLanguageProjectManifest(rootDir) {
+    return readJson(rootDir, 'language/language-project.json');
+}
+
+function sourceRootBindingsFromEnvironment(environment = process.env) {
+    const serialized = environment.MDM_LOCALIZE_SOURCE_ROOTS;
+    if (!serialized) { return {}; }
+    let bindings;
+    try {
+        bindings = JSON.parse(serialized);
+    } catch (error) {
+        throw new Error(`MDM_LOCALIZE_SOURCE_ROOTS must be valid JSON: ${error.message}`);
+    }
+    if (!bindings || typeof bindings !== 'object' || Array.isArray(bindings)) {
+        throw new Error('MDM_LOCALIZE_SOURCE_ROOTS must be a JSON object keyed by source root ID.');
+    }
+    return bindings;
+}
+
+function migrationSourceIdentity(entry) {
+    const rootId = String(entry?.rootId || 'project');
+    return `${rootId}\0${portablePath(entry?.path).toLocaleLowerCase()}`;
+}
+
+function resolveMigrationSource(rootDir, state, entry, options = {}) {
+    const rootId = String(entry?.rootId || 'project');
+    const relativePath = portablePath(entry?.path).trim();
+    if (!relativePath || path.posix.isAbsolute(relativePath) || /^[A-Za-z]:\//u.test(relativePath)) {
+        throw new Error('path must be relative to its explicitly mapped source root');
+    }
+    const normalizedPath = path.posix.normalize(relativePath);
+    if (normalizedPath === '..' || normalizedPath.startsWith('../')) {
+        throw new Error('path escapes its explicitly mapped source root');
+    }
+    const definition = state.languageProject?.sourceRoots?.find((root) => root.id === rootId);
+    if (!definition) {
+        throw new Error(`references unknown source root ${rootId}`);
+    }
+    const binding = rootId === 'project'
+        ? { path: rootDir }
+        : state.sourceRootBindings?.[rootId];
+    if (!binding?.path) {
+        if (options.allowUnmapped === true && definition.required !== true) {
+            return {
+                rootId,
+                path: normalizedPath,
+                absolutePath: null,
+                displayPath: `${rootId}:${normalizedPath}`,
+                unmapped: true
+            };
+        }
+        throw new Error(`source root ${rootId} has no machine-local binding`);
+    }
+    const sourceRoot = path.resolve(binding.path);
+    const absolutePath = path.resolve(sourceRoot, ...normalizedPath.split('/'));
+    const lexicalRelative = path.relative(sourceRoot, absolutePath);
+    if (lexicalRelative.startsWith('..') || path.isAbsolute(lexicalRelative)) {
+        throw new Error(`path escapes source root ${rootId}`);
+    }
+    if (fs.existsSync(sourceRoot) && fs.existsSync(absolutePath)) {
+        const realRoot = fs.realpathSync.native(sourceRoot);
+        const realTarget = fs.realpathSync.native(absolutePath);
+        const realRelative = path.relative(realRoot, realTarget);
+        if (realRelative.startsWith('..') || path.isAbsolute(realRelative)) {
+            throw new Error(`path resolves outside source root ${rootId}`);
+        }
+    }
+    return {
+        rootId,
+        path: normalizedPath,
+        absolutePath,
+        displayPath: rootId === 'project' ? normalizedPath : `${rootId}:${normalizedPath}`
+    };
+}
 
 async function main(rootDir = ROOT, options = {}) {
     const command = parseCommandLine(
@@ -38,14 +123,18 @@ async function main(rootDir = ROOT, options = {}) {
         action,
         args,
         useNormalized,
+        translationProvider,
         allowFallbackReplacementKeys
     } = command;
     const progress = options.progress || ((message) => console.log(message));
-    if (useNormalized && !['build', 'report'].includes(action)) {
-        throw new Error('--UseNormalized is supported only by the build and report actions.');
+    if (!['build', 'report', 'build-component'].includes(action) && command.englishSourceWasSpecified) {
+        throw new Error('--UseNormalized and --UseCanonical are supported only by the build, report, and build-component actions.');
     }
     if (allowFallbackReplacementKeys.length > 0 && action !== 'build-component') {
         throw new Error('--AllowFallbackReplacement is supported only by the build-component action.');
+    }
+    if (translationProvider !== 'deepl' && !['build', 'report', 'build-component'].includes(action)) {
+        throw new Error('--TranslationProvider is supported only by the build, report, and build-component actions.');
     }
     if (['build', 'report'].includes(action)) {
         progress('Language build: loading and validating canonical data.');
@@ -55,6 +144,14 @@ async function main(rootDir = ROOT, options = {}) {
 
     if (action === 'validate') {
         printValidation(result);
+        process.exit(result.errors.length > 0 ? 1 : 0);
+    }
+
+    if (action === 'audit-normalized-inputs') {
+        const reportPaths = writeNormalizedInputAuditReports(result.normalizedInputAudit, rootDir);
+        printValidation(result);
+        console.log(`Normalized input audit JSON: ${path.relative(rootDir, reportPaths.jsonPath)}`);
+        console.log(`Normalized input audit list: ${path.relative(rootDir, reportPaths.markdownPath)}`);
         process.exit(result.errors.length > 0 ? 1 : 0);
     }
 
@@ -70,34 +167,53 @@ async function main(rootDir = ROOT, options = {}) {
         const missingLocales = Object.entries(missingEntryKeysByLocale)
             .filter(([localeId, keys]) => localeId !== 'en' && keys.length > 0)
             .map(([localeId]) => localeId);
+        const fallbackLocales = (state.locales.locales || [])
+            .map((locale) => locale.id)
+            .filter((localeId) => localeId !== 'en');
+        const translationMode = translationProvider === 'none'
+            ? (useNormalized ? 'normalized' : 'none')
+            : translationProvider;
         let translation;
-        if (useNormalized) {
-            printNormalizedPlan(missingLocales);
+        if (translationProvider === 'none' && useNormalized) {
+            printNormalizedPlan(fallbackLocales);
             translation = createNormalizedEnglishSuggestions(state, {
-                localeIds: missingLocales,
-                entryKeysByLocale: missingEntryKeysByLocale
+                localeIds: fallbackLocales
             });
+        } else if (translationProvider === 'none') {
+            printNoTranslationApiPlan(missingLocales);
+            translation = createNoTranslationApiSuggestions();
         } else {
-            const translator = options.translator || new DeepLTranslationService();
-            printTranslationPlan(translator, missingLocales);
+            const translator = createTranslationService(translationProvider, options);
+            printTranslationPlan(translator, missingLocales, null, { useNormalized });
             translation = await createBuildTranslationSuggestions(state, {
                 translator,
+                useNormalized,
                 localeIds: missingLocales,
                 entryKeysByLocale: missingEntryKeysByLocale,
                 onProgress: ({ localeId, missingCount }) => progress(
                     `Language build: translating ${missingCount} missing value(s) for ${localeId}.`
                 )
             });
+            if (useNormalized) {
+                translation = mergeTranslationSuggestions(
+                    createNormalizedEnglishSuggestions(state, {
+                        localeIds: fallbackLocales
+                    }),
+                    translation
+                );
+            }
         }
         progress('Language build: generating catalogs, maps, and reports.');
         const reports = buildLanguageOutputs(state, result, rootDir, {
             translationSuggestions: translation.suggestions,
             translationWarnings: translation.warnings,
             translationUsage: translation.usage,
-            translationMode: useNormalized ? 'normalized' : 'deepl'
+            translationAssignments: translation.assignments,
+            translationMode,
+            useNormalized
         });
         printWarnings(translation.warnings);
-        printSuggestionResult(translation, useNormalized);
+        printSuggestionResult(translation, translationMode);
         printBuildSummary(reports);
         return;
     }
@@ -114,34 +230,53 @@ async function main(rootDir = ROOT, options = {}) {
         const missingLocales = Object.entries(missingEntryKeysByLocale)
             .filter(([localeId, keys]) => localeId !== 'en' && keys.length > 0)
             .map(([localeId]) => localeId);
+        const fallbackLocales = (state.locales.locales || [])
+            .map((locale) => locale.id)
+            .filter((localeId) => localeId !== 'en');
+        const translationMode = translationProvider === 'none'
+            ? (useNormalized ? 'normalized' : 'none')
+            : translationProvider;
         let translation;
-        if (useNormalized) {
-            printNormalizedPlan(missingLocales);
+        if (translationProvider === 'none' && useNormalized) {
+            printNormalizedPlan(fallbackLocales);
             translation = createNormalizedEnglishSuggestions(state, {
-                localeIds: missingLocales,
-                entryKeysByLocale: missingEntryKeysByLocale
+                localeIds: fallbackLocales
             });
+        } else if (translationProvider === 'none') {
+            printNoTranslationApiPlan(missingLocales);
+            translation = createNoTranslationApiSuggestions();
         } else {
-            const translator = options.translator || new DeepLTranslationService();
-            printTranslationPlan(translator, missingLocales);
+            const translator = createTranslationService(translationProvider, options);
+            printTranslationPlan(translator, missingLocales, null, { useNormalized });
             translation = await createBuildTranslationSuggestions(state, {
                 translator,
+                useNormalized,
                 localeIds: missingLocales,
                 entryKeysByLocale: missingEntryKeysByLocale,
                 onProgress: ({ localeId, missingCount }) => progress(
                     `Language report: translating ${missingCount} missing value(s) for ${localeId}.`
                 )
             });
+            if (useNormalized) {
+                translation = mergeTranslationSuggestions(
+                    createNormalizedEnglishSuggestions(state, {
+                        localeIds: fallbackLocales
+                    }),
+                    translation
+                );
+            }
         }
         progress('Language report: generating catalogs, maps, and reports.');
         const reports = buildLanguageOutputs(state, result, rootDir, {
             translationSuggestions: translation.suggestions,
             translationWarnings: translation.warnings,
             translationUsage: translation.usage,
-            translationMode: useNormalized ? 'normalized' : 'deepl'
+            translationAssignments: translation.assignments,
+            translationMode,
+            useNormalized
         });
         printWarnings(translation.warnings);
-        printSuggestionResult(translation, useNormalized);
+        printSuggestionResult(translation, translationMode);
         writeHumanReadableReport(reports, rootDir);
         return;
     }
@@ -159,14 +294,39 @@ async function main(rootDir = ROOT, options = {}) {
                 localeIds: [localeId],
                 componentIds: [componentId]
             });
-            const translator = options.translator || new DeepLTranslationService();
-            printTranslationPlan(translator, [localeId], componentId);
-            const translation = await createBuildTranslationSuggestions(state, {
-                translator,
-                localeIds: [localeId],
-                componentId,
-                entryKeysByLocale: missingEntryKeysByLocale
-            });
+            const translationMode = translationProvider === 'none'
+                ? (useNormalized ? 'normalized' : 'none')
+                : translationProvider;
+            let translation;
+            if (translationProvider === 'none' && useNormalized) {
+                printNormalizedPlan([localeId]);
+                translation = createNormalizedEnglishSuggestions(state, {
+                    localeIds: [localeId],
+                    componentId
+                });
+            } else if (translationProvider === 'none') {
+                printNoTranslationApiPlan([localeId], componentId);
+                translation = createNoTranslationApiSuggestions();
+            } else {
+                const translator = createTranslationService(translationProvider, options);
+                printTranslationPlan(translator, [localeId], componentId, { useNormalized });
+                translation = await createBuildTranslationSuggestions(state, {
+                    translator,
+                    useNormalized,
+                    localeIds: [localeId],
+                    componentId,
+                    entryKeysByLocale: missingEntryKeysByLocale
+                });
+                if (useNormalized) {
+                    translation = mergeTranslationSuggestions(
+                        createNormalizedEnglishSuggestions(state, {
+                            localeIds: [localeId],
+                            componentId
+                        }),
+                        translation
+                    );
+                }
+            }
             const targeted = buildLocaleComponentOutput(
                 state,
                 result,
@@ -177,12 +337,14 @@ async function main(rootDir = ROOT, options = {}) {
                     translationSuggestions: translation.suggestions,
                     translationWarnings: translation.warnings,
                     translationUsage: translation.usage,
-                    translationMode: 'deepl',
+                    translationAssignments: translation.assignments,
+                    translationMode,
+                    useNormalized,
                     allowFallbackReplacementKeys
                 }
             );
             printWarnings(translation.warnings);
-            printTranslationResult(translation);
+            printSuggestionResult(translation, translationMode);
             console.log(`Language component build complete: ${targeted.locale}/${targeted.component}`);
             console.log(`Generated catalog: ${targeted.relativePath}`);
         } catch (error) {
@@ -204,12 +366,36 @@ function parseCommandLine(argv = [], environment = process.env) {
     // exposes it to the child only as npm_config_usenormalized=true. Honor that
     // form as well as the preferred `npm run language:build -- --UseNormalized`
     // form so a requested normalized build can never silently enter DeepL mode.
-    let useNormalized = /^(?:1|true|yes|on)$/iu.test(
-        String(environment.npm_config_usenormalized || '').trim()
-    );
-    for (const argument of argv) {
+    const configuredUseNormalized = String(environment.npm_config_usenormalized || '').trim();
+    let useNormalized = configuredUseNormalized
+        ? /^(?:1|true|yes|on)$/iu.test(configuredUseNormalized)
+        : true;
+    let englishSourceWasSpecified = Boolean(configuredUseNormalized);
+    let translationProvider = String(
+        environment.npm_config_translationprovider || 'deepl'
+    ).trim().toLocaleLowerCase();
+    for (let index = 0; index < argv.length; index += 1) {
+        const argument = argv[index];
         if (argument === '--UseNormalized') {
             useNormalized = true;
+            englishSourceWasSpecified = true;
+        } else if (argument === '--UseCanonical' || argument === '--NoUseNormalized') {
+            useNormalized = false;
+            englishSourceWasSpecified = true;
+        } else if (argument === '--TranslationProvider') {
+            index += 1;
+            translationProvider = String(argv[index] || '').trim().toLocaleLowerCase();
+            if (!translationProvider) {
+                throw new Error('--TranslationProvider requires deepl, google, or none.');
+            }
+        } else if (String(argument).startsWith('--TranslationProvider=')) {
+            translationProvider = String(argument)
+                .slice('--TranslationProvider='.length)
+                .trim()
+                .toLocaleLowerCase();
+            if (!translationProvider) {
+                throw new Error('--TranslationProvider requires deepl, google, or none.');
+            }
         } else if (String(argument).startsWith('--AllowFallbackReplacement=')) {
             const key = String(argument).slice('--AllowFallbackReplacement='.length).trim();
             if (!key) {
@@ -222,11 +408,63 @@ function parseCommandLine(argv = [], environment = process.env) {
             args.push(argument);
         }
     }
+    if (!VALID_TRANSLATION_PROVIDERS.has(translationProvider)) {
+        throw new Error(
+            `Unknown translation provider: ${translationProvider || '<missing>'}. `
+            + 'Expected deepl, google, or none.'
+        );
+    }
     return {
         action: args.shift() || 'build',
         args,
         useNormalized,
+        englishSourceWasSpecified,
+        translationProvider,
         allowFallbackReplacementKeys: sorted(Array.from(new Set(allowFallbackReplacementKeys)))
+    };
+}
+
+function createTranslationService(provider, options = {}) {
+    if (options.translators?.[provider]) { return options.translators[provider]; }
+    if (options.translator) { return options.translator; }
+    return provider === 'google'
+        ? new GoogleTranslationService({ environment: options.environment })
+        : new DeepLTranslationService({ environment: options.environment });
+}
+
+function createNoTranslationApiSuggestions() {
+    return {
+        suggestions: {},
+        assignments: {},
+        warnings: [],
+        usage: { apiCalls: 0, charactersPassed: 0 }
+    };
+}
+
+function mergeTranslationSuggestions(fallback, translated) {
+    const localeIds = new Set([
+        ...Object.keys(fallback?.suggestions || {}),
+        ...Object.keys(translated?.suggestions || {})
+    ]);
+    const suggestions = {};
+    for (const localeId of localeIds) {
+        suggestions[localeId] = {
+            ...(fallback?.suggestions?.[localeId] || {}),
+            ...(translated?.suggestions?.[localeId] || {})
+        };
+        if (Object.keys(suggestions[localeId]).length === 0) { delete suggestions[localeId]; }
+    }
+    return {
+        suggestions,
+        assignments: {
+            ...(fallback?.assignments || {}),
+            ...(translated?.assignments || {})
+        },
+        warnings: [
+            ...(fallback?.warnings || []),
+            ...(translated?.warnings || [])
+        ],
+        usage: translated?.usage || fallback?.usage || { apiCalls: 0, charactersPassed: 0 }
     };
 }
 
@@ -265,6 +503,7 @@ function createNormalizedEnglishSuggestions(state, options = {}) {
 
     return {
         suggestions,
+        assignments: {},
         warnings: [],
         usage: { apiCalls: 0, charactersPassed: 0 }
     };
@@ -324,6 +563,8 @@ function loadLanguageState(rootDir = ROOT) {
     const locales = readJson(rootDir, 'language/locales/locales.json');
     const localeSources = loadLocaleCatalogs(rootDir, components, locales);
     return {
+        languageProject: loadLanguageProjectManifest(rootDir),
+        sourceRootBindings: sourceRootBindingsFromEnvironment(),
         schemas: readJsonFiles(path.join(languageRoot, 'schema')),
         components,
         localeTemplates: readJson(rootDir, 'language/canonical/language-locales.json'),
@@ -439,12 +680,17 @@ function validateLanguageState(state, rootDir = ROOT) {
             if (typeof entry.path !== 'string') {
                 errors.push(`${label} path must be a string`);
             } else {
-                const resolvedPath = path.resolve(rootDir, entry.path);
-                const relativePath = path.relative(rootDir, resolvedPath);
-                if (path.isAbsolute(entry.path) || relativePath.startsWith('..') || path.isAbsolute(relativePath)) {
-                    errors.push(`${label} path must remain inside the repository root`);
+                try {
+                    resolveMigrationSource(rootDir, state, entry, { allowUnmapped: true });
+                } catch (error) {
+                    errors.push(`${label} ${error.message}`);
                 }
-                addUnique(inventoryPaths, entry.path.toLocaleLowerCase(), `migration inventory path ${entry.path}`, errors);
+                addUnique(
+                    inventoryPaths,
+                    migrationSourceIdentity(entry),
+                    `migration inventory path ${entry.rootId || 'project'}:${entry.path}`,
+                    errors
+                );
             }
             if (!componentIds.has(entry.component)) {
                 errors.push(`${label} references unknown component ${entry.component}`);
@@ -465,8 +711,8 @@ function validateLanguageState(state, rootDir = ROOT) {
                 requireFields(entry, ['path', 'text', 'status'], label, errors);
                 if (typeof entry.path !== 'string') {
                     errors.push(`${label} path must be a string`);
-                } else if (!inventoryPaths.has(entry.path.toLocaleLowerCase())) {
-                    errors.push(`${label} references a file outside the migration inventory: ${entry.path}`);
+                } else if (!inventoryPaths.has(migrationSourceIdentity(entry))) {
+                    errors.push(`${label} references a file outside the migration inventory: ${entry.rootId || 'project'}:${entry.path}`);
                 }
                 if (typeof entry.text !== 'string' || entry.text.length === 0) {
                     errors.push(`${label} text must be a non-empty string`);
@@ -474,11 +720,81 @@ function validateLanguageState(state, rootDir = ROOT) {
                 if (!['potential', 'review', 'rejected', 'code-edit', 'code-updated'].includes(entry.status)) {
                     errors.push(`${label} has invalid status ${entry.status}`);
                 }
+                if (entry.schemaVersion === 2 && (typeof entry.occurrenceId !== 'string' || entry.occurrenceId.length === 0)) {
+                    errors.push(`${label} schemaVersion 2 requires a non-empty occurrenceId`);
+                }
                 if (typeof entry.path === 'string' && typeof entry.text === 'string') {
                     addUnique(
                         candidateStatusIdentities,
-                        `${entry.path.toLocaleLowerCase()}\0${entry.text}`,
-                        `migration candidate status ${entry.path} / ${entry.text}`,
+                        entry.schemaVersion === 2
+                            ? `v2\0${entry.occurrenceId}`
+                            : `v1\0${migrationSourceIdentity(entry)}\0${entry.text}`,
+                        `migration candidate status ${entry.rootId || 'project'}:${entry.path} / ${entry.occurrenceId || entry.text}`,
+                        errors
+                    );
+                }
+            }
+        }
+
+        const candidateCatalogDrafts = migrationInventory.candidateCatalogDrafts;
+        if (candidateCatalogDrafts !== undefined && !Array.isArray(candidateCatalogDrafts)) {
+            errors.push('Migration inventory candidateCatalogDrafts must be an array');
+        } else {
+            const candidateDraftIdentities = new Set();
+            const candidateDraftKeys = new Set();
+            for (const [index, entry] of (candidateCatalogDrafts || []).entries()) {
+                const label = `migration candidate catalog draft ${index + 1}`;
+                if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
+                    errors.push(`${label} must contain candidate identity and catalog fields`);
+                    continue;
+                }
+                requireFields(
+                    entry,
+                    ['path', 'sourceLine', 'text', 'component', 'category', 'role', 'key'],
+                    label,
+                    errors
+                );
+                if (typeof entry.path !== 'string') {
+                    errors.push(`${label} path must be a string`);
+                } else {
+                    try {
+                        resolveMigrationSource(rootDir, state, entry, { allowUnmapped: true });
+                    } catch (error) {
+                        errors.push(`${label} ${error.message}`);
+                    }
+                }
+                if (!Number.isInteger(entry.sourceLine) || entry.sourceLine < 1) {
+                    errors.push(`${label} sourceLine must be a positive integer`);
+                }
+                if (typeof entry.text !== 'string' || entry.text.length === 0) {
+                    errors.push(`${label} text must be a non-empty string`);
+                }
+                if (!componentIds.has(entry.component)) {
+                    errors.push(`${label} references unknown component ${entry.component}`);
+                }
+                if (!categoryIds.has(entry.category)) {
+                    errors.push(`${label} references unknown category ${entry.category}`);
+                }
+                if (!roleIds.has(entry.role)) {
+                    errors.push(`${label} references unknown role ${entry.role}`);
+                }
+                if (!/^[a-z][A-Za-z0-9]*(\.[A-Za-z0-9_-]+)+$/.test(entry.key || '')) {
+                    errors.push(`${label} key ${entry.key} does not use a structured flat key`);
+                }
+                if (typeof entry.path === 'string' && Number.isInteger(entry.sourceLine)
+                    && typeof entry.text === 'string') {
+                    addUnique(
+                        candidateDraftIdentities,
+                        `${migrationSourceIdentity(entry)}\0${entry.text}`,
+                        `migration candidate catalog draft ${entry.rootId || 'project'}:${entry.path} / ${entry.text}`,
+                        errors
+                    );
+                }
+                if (typeof entry.key === 'string') {
+                    addUnique(
+                        candidateDraftKeys,
+                        entry.key,
+                        `migration candidate catalog draft key ${entry.key}`,
                         errors
                     );
                 }
@@ -604,11 +920,21 @@ function validateLanguageState(state, rootDir = ROOT) {
         }
     }
 
+    const normalizedInputAudit = buildNormalizedInputAudit(state, rootDir);
+    if (normalizedInputAudit.status === 'partial') {
+        warnings.push(
+            `Normalized input audit is partial: ${normalizedInputAudit.summary.occurrences} `
+            + `occurrence(s) remain in ${normalizedInputAudit.summary.filesWithMatches} `
+            + 'non-English locale source file(s).'
+        );
+    }
+
     return {
         errors,
         warnings,
         collisionReport,
-        catalogOutputs: catalogOutputs.locales
+        catalogOutputs: catalogOutputs.locales,
+        normalizedInputAudit
     };
 }
 
@@ -1074,23 +1400,35 @@ function mergeMissingLocaleComponentEntries(existingCatalog, generatedCatalog) {
     const addedKeys = Object.keys(generatedEntries)
         .filter((key) => !Object.prototype.hasOwnProperty.call(existingEntries, key))
         .sort();
+    const refreshedFallbackKeys = Object.keys(generatedEntries)
+        .filter((key) => (
+            existingEntries[key]?.fallbackLocale === 'en'
+            && generatedEntries[key]?.fallbackLocale === 'en'
+            && JSON.stringify(existingEntries[key]) !== JSON.stringify(generatedEntries[key])
+        ))
+        .sort();
 
     if (!existingCatalog) {
-        return { catalog: generatedCatalog, addedKeys };
+        return { catalog: generatedCatalog, addedKeys, refreshedFallbackKeys };
     }
-    if (addedKeys.length === 0) {
-        return { catalog: existingCatalog, addedKeys };
+    if (addedKeys.length === 0 && refreshedFallbackKeys.length === 0) {
+        return { catalog: existingCatalog, addedKeys, refreshedFallbackKeys };
     }
+    const refreshedFallbacks = Object.fromEntries(
+        refreshedFallbackKeys.map((key) => [key, generatedEntries[key]])
+    );
     return {
         catalog: {
             ...generatedCatalog,
             ...existingCatalog,
             entries: {
                 ...generatedEntries,
-                ...existingEntries
+                ...existingEntries,
+                ...refreshedFallbacks
             }
         },
-        addedKeys
+        addedKeys,
+        refreshedFallbackKeys
     };
 }
 
@@ -1104,6 +1442,13 @@ function mergeLocaleComponentCatalog(existingCatalog, generatedCatalog, options 
         const existingEntry = entries[key];
         if (!existingEntry) {
             entries[key] = generatedEntry;
+            continue;
+        }
+        if (existingEntry.fallbackLocale === 'en' && generatedEntry.fallbackLocale === 'en') {
+            entries[key] = {
+                ...existingEntry,
+                ...generatedEntry
+            };
             continue;
         }
         if (authoritativeKeys.has(key)
@@ -1186,13 +1531,15 @@ function collectMissingCatalogEntryKeys(state, rootDir = ROOT, options = {}) {
 
 function updateLocaleComponentCatalog(filePath, generatedCatalog) {
     const update = inspectLocaleComponentUpdate(filePath, generatedCatalog);
-    if (!update.existingCatalog || update.addedKeys.length > 0) {
+    if (!update.existingCatalog || update.addedKeys.length > 0 || update.refreshedFallbackKeys.length > 0) {
         writeJson(filePath, update.catalog);
     }
     return {
         entriesAdded: update.addedKeys.length,
+        fallbackEntriesRefreshed: update.refreshedFallbackKeys.length,
         fileCreated: !update.existingCatalog,
-        fileUpdated: Boolean(update.existingCatalog && update.addedKeys.length > 0)
+        fileUpdated: Boolean(update.existingCatalog
+            && (update.addedKeys.length > 0 || update.refreshedFallbackKeys.length > 0))
     };
 }
 
@@ -1414,6 +1761,7 @@ function buildLanguageOutputs(state, validationResult, rootDir = ROOT, options =
         const overrideKeywords = mapBy(localeCatalog.keywords || [], 'id');
 
         let entriesAdded = 0;
+        let fallbackEntriesRefreshed = 0;
         let componentFilesCreated = 0;
         let componentFilesUpdated = 0;
         if (!existingLocale || options.updateExistingCatalogs !== false) {
@@ -1423,6 +1771,7 @@ function buildLanguageOutputs(state, validationResult, rootDir = ROOT, options =
                     createLocaleComponentCatalog(state, locale.id, component, options)
                 );
                 entriesAdded += update.entriesAdded;
+                fallbackEntriesRefreshed += update.fallbackEntriesRefreshed;
                 componentFilesCreated += update.fileCreated ? 1 : 0;
                 componentFilesUpdated += update.fileUpdated ? 1 : 0;
             }
@@ -1437,6 +1786,7 @@ function buildLanguageOutputs(state, validationResult, rootDir = ROOT, options =
             }
         }
         catalogLocale.entriesAdded = entriesAdded;
+        catalogLocale.fallbackEntriesRefreshed = fallbackEntriesRefreshed;
         catalogLocale.componentFilesCreated = componentFilesCreated;
         catalogLocale.componentFilesUpdated = componentFilesUpdated;
 
@@ -1467,11 +1817,28 @@ function buildLanguageOutputs(state, validationResult, rootDir = ROOT, options =
                 ...(options.translationWarnings || [])
             ]
         },
-        translation: {
-            mode: options.translationMode === 'normalized' ? 'normalized' : 'deepl',
-            deepLApiCalls: options.translationUsage?.apiCalls || 0,
-            deepLCharactersPassed: options.translationUsage?.charactersPassed || 0
-        },
+        translation: (() => {
+            const mode = ['normalized', 'deepl', 'google', 'none'].includes(options.translationMode)
+                ? options.translationMode
+                : 'deepl';
+            const apiCalls = options.translationUsage?.apiCalls || 0;
+            const charactersPassed = options.translationUsage?.charactersPassed || 0;
+            const normalizedSubstitutionAssignments = options.translationAssignments || {};
+            return {
+                mode,
+                provider: translationProviderName(mode),
+                englishSource: options.useNormalized === false ? 'canonical' : 'normalized',
+                apiCalls,
+                sourceCharactersPassed: charactersPassed,
+                deepLApiCalls: mode === 'deepl' ? apiCalls : 0,
+                deepLCharactersPassed: mode === 'deepl' ? charactersPassed : 0,
+                googleApiCalls: mode === 'google' ? apiCalls : 0,
+                googleCharactersPassed: mode === 'google' ? charactersPassed : 0,
+                ...(Object.keys(normalizedSubstitutionAssignments).length > 0
+                    ? { normalizedSubstitutionAssignments }
+                    : {})
+            };
+        })(),
         persistedGeneratedTranslations,
         outputs: {
             catalogs: path.relative(rootDir, catalogsDir),
@@ -1485,6 +1852,7 @@ function buildLanguageOutputs(state, validationResult, rootDir = ROOT, options =
     writeJson(path.join(reportsDir, 'translation-completeness.json'), { locales: completeness });
     writeJson(path.join(reportsDir, 'keyword-collisions.json'), validationResult.collisionReport);
     writeJson(path.join(reportsDir, 'migration-report.json'), migrationReport);
+    writeNormalizedInputAuditReports(validationResult.normalizedInputAudit, rootDir);
 
     return {
         buildReport,
@@ -1679,19 +2047,46 @@ function createMigrationCatalogMatcher(state, relativePath) {
 function buildMigrationReport(state, rootDir = ROOT) {
     const files = state.components.migrationInventory?.scanFiles || [];
     const candidateStatuses = state.components.migrationInventory?.candidateStatuses || [];
-    const candidateStatusByIdentity = new Map(candidateStatuses.map((entry) => [
-        `${entry.path.toLocaleLowerCase()}\0${entry.text}`,
-        entry.status
-    ]));
+    const candidateStatusesBySourceText = new Map();
+    for (const entry of candidateStatuses) {
+        const identity = `${migrationSourceIdentity(entry)}\0${entry.text}`;
+        const matches = candidateStatusesBySourceText.get(identity) || [];
+        matches.push(entry);
+        candidateStatusesBySourceText.set(identity, matches);
+    }
+    const statusFor = (source, candidate) => {
+        const matches = candidateStatusesBySourceText.get(
+            `${migrationSourceIdentity(source)}\0${candidate.text}`
+        ) || [];
+        // The legacy report parser has no stable occurrence identity. Never fan
+        // one V2 decision out over duplicate source occurrences.
+        return matches.length === 1 ? matches[0].status : null;
+    };
     const items = [];
 
     for (const inventoryEntry of files) {
-        const relativePath = inventoryEntry.path;
+        let source;
+        try {
+            source = resolveMigrationSource(rootDir, state, inventoryEntry);
+        } catch (error) {
+            items.push({
+                rootId: inventoryEntry.rootId || 'project',
+                path: inventoryEntry.path,
+                file: `${inventoryEntry.rootId || 'project'}:${inventoryEntry.path}`,
+                component: inventoryEntry.component,
+                status: 'unmapped',
+                error: error.message
+            });
+            continue;
+        }
+        const relativePath = source.path;
         const component = inventoryEntry.component;
-        const absolutePath = path.join(rootDir, relativePath);
+        const absolutePath = source.absolutePath;
         if (!fs.existsSync(absolutePath)) {
             items.push({
-                file: relativePath,
+                rootId: source.rootId,
+                path: source.path,
+                file: source.displayPath,
                 component,
                 status: 'missing'
             });
@@ -1704,7 +2099,7 @@ function buildMigrationReport(state, rootDir = ROOT) {
             extractStringCandidates(text, { includeLocations: true }),
             text
         );
-        const catalogEntriesForCandidate = createMigrationCatalogMatcher(state, relativePath);
+        const catalogEntriesForCandidate = createMigrationCatalogMatcher(state, source.displayPath);
         const classifiedStrings = extractedStrings.map((candidate) => ({
             candidate,
             catalogEntries: catalogEntriesForCandidate(candidate)
@@ -1713,21 +2108,21 @@ function buildMigrationReport(state, rootDir = ROOT) {
             .filter(({ catalogEntries }) => catalogEntries.length === 0)
             .map(({ candidate }) => ({
                 ...reportableMigrationCandidate(candidate),
-                status: candidateStatusByIdentity.get(`${relativePath.toLocaleLowerCase()}\0${candidate.text}`) || 'potential'
+                status: statusFor(source, candidate) || 'potential'
             }));
         const catalogedStrings = classifiedStrings
             .filter(({ catalogEntries }) => catalogEntries.length > 0)
             .map(({ candidate, catalogEntries }) => ({
                 ...reportableMigrationCandidate(candidate),
-                status: ['code-edit', 'code-updated'].includes(
-                    candidateStatusByIdentity.get(`${relativePath.toLocaleLowerCase()}\0${candidate.text}`)
-                )
-                    ? candidateStatusByIdentity.get(`${relativePath.toLocaleLowerCase()}\0${candidate.text}`)
+                status: ['code-edit', 'code-updated'].includes(statusFor(source, candidate))
+                    ? statusFor(source, candidate)
                     : 'in-catalog',
                 catalogEntries
             }));
         items.push({
-            file: relativePath,
+            rootId: source.rootId,
+            path: source.path,
+            file: source.displayPath,
             component,
             status: 'scanned',
             candidateCount: candidates.length,
@@ -2098,6 +2493,15 @@ function writeText(filePath, value) {
     fs.writeFileSync(filePath, value, 'utf8');
 }
 
+function writeNormalizedInputAuditReports(audit, rootDir = ROOT) {
+    const reportsDir = path.join(rootDir, 'build', 'language', 'reports');
+    const jsonPath = path.join(reportsDir, 'normalized-input-audit.json');
+    const markdownPath = path.join(reportsDir, 'normalized-input-audit.md');
+    writeJson(jsonPath, audit);
+    writeText(markdownPath, renderNormalizedInputAuditMarkdown(audit));
+    return { jsonPath, markdownPath };
+}
+
 function ensureDirectory(dir) {
     fs.mkdirSync(dir, { recursive: true });
 }
@@ -2173,7 +2577,20 @@ function printValidation(result) {
             console.log(`- ${locale.locale}: ${locale.status} (${locale.path})`);
         }
     }
+    printNormalizedInputAudit(result.normalizedInputAudit);
     console.log(`Language validation: ${result.errors.length === 0 ? 'passed' : 'failed'} (${result.errors.length} error(s), ${result.warnings.length} warning(s))`);
+}
+
+function printNormalizedInputAudit(audit) {
+    if (!audit) { return; }
+    console.log(
+        `Normalized input audit: ${audit.status} `
+        + `(${audit.summary.occurrences} occurrence(s), ${audit.summary.filesWithMatches} file(s))`
+    );
+    for (const file of audit.files) {
+        const words = file.words.map((word) => `${word.input} (${word.count})`).join(', ');
+        console.log(`- ${file.file}: ${file.occurrenceCount} occurrence(s) [${words}]`);
+    }
 }
 
 function printWarnings(warnings = []) {
@@ -2182,7 +2599,7 @@ function printWarnings(warnings = []) {
     }
 }
 
-function printTranslationPlan(translator, localeIds = [], componentId = null) {
+function printTranslationPlan(translator, localeIds = [], componentId = null, options = {}) {
     const locales = localeIds.filter(Boolean);
     if (locales.length === 0) {
         console.log(
@@ -2199,29 +2616,37 @@ function printTranslationPlan(translator, localeIds = [], componentId = null) {
     if (!info.configured) {
         console.warn(
             `Warning: Translation API: ${info.provider || 'DeepL'} is not configured in this process; `
-            + `attempting ${scope} will use canonical English fallback.`
+            + `attempting ${scope} will use `
+            + `${options.useNormalized === false ? 'canonical' : 'normalized'} English fallback.`
         );
         return;
     }
     console.log(
         `Translation API: ${info.provider || 'DeepL'} configured via `
-        + `${info.credentialSource || 'environment'}; requesting missing values for ${scope}.`
+        + `${info.credentialSource || 'environment'}; requesting missing values for ${scope} `
+        + `using ${options.useNormalized === false ? 'canonical' : 'normalized'} English.`
     );
 }
 
-function printTranslationResult(translation) {
+function translationProviderName(mode) {
+    if (mode === 'google') { return 'Google Translate'; }
+    if (mode === 'deepl') { return 'DeepL'; }
+    return 'None';
+}
+
+function printTranslationResult(translation, mode) {
     const suggestionCount = Object.values(translation.suggestions || {})
         .reduce((total, suggestions) => total + Object.keys(suggestions || {}).length, 0);
     console.log(
         `Translation API result: ${suggestionCount} suggestion(s), `
         + `${(translation.warnings || []).length} warning(s).`
     );
-    printDeepLUsage(translation.usage);
+    printTranslationApiUsage(translationProviderName(mode), translation.usage);
 }
 
-function printDeepLUsage(usage = {}) {
+function printTranslationApiUsage(provider, usage = {}) {
     console.log(
-        `DeepL API usage: ${usage.apiCalls || 0} call(s), `
+        `${provider} API usage: ${usage.apiCalls || 0} call(s), `
         + `${usage.charactersPassed || 0} source character(s) passed.`
     );
 }
@@ -2230,20 +2655,33 @@ function printNormalizedPlan(localeIds = []) {
     const locales = localeIds.filter(Boolean);
     if (locales.length === 0) {
         console.log(
-            'Normalized English: not generated; no missing generated catalog entries. '
-            + 'Existing catalog entry keys were preserved.'
+            'Translation API: disabled; no non-English locales require normalized English fallbacks.'
         );
         return;
     }
     console.log(
-        `Normalized English: Translation API bypassed; generating normalized draft values for `
-        + `${locales.length} locale(s) with missing entries: ${locales.join(', ')}.`
+        `Translation API: disabled; generating or refreshing normalized English fallbacks for `
+        + `${locales.length} locale(s): ${locales.join(', ')}.`
     );
 }
 
-function printSuggestionResult(suggestions, useNormalized) {
-    if (!useNormalized) {
-        printTranslationResult(suggestions);
+function printNoTranslationApiPlan(localeIds = [], componentId = null) {
+    const locales = localeIds.filter(Boolean);
+    const scope = componentId && locales.length > 0
+        ? `${locales.join(', ')}/${componentId}`
+        : `${locales.length} locale(s)`;
+    console.log(
+        `Translation API: disabled; ${scope} will generate or refresh canonical English fallbacks.`
+    );
+}
+
+function printSuggestionResult(suggestions, mode) {
+    if (!['normalized', 'none'].includes(mode)) {
+        printTranslationResult(suggestions, mode);
+        return;
+    }
+    if (mode === 'none') {
+        console.log('Translation API result: disabled; 0 API call(s).');
         return;
     }
     const suggestionCount = Object.values(suggestions.suggestions || {})
@@ -2254,7 +2692,7 @@ function printSuggestionResult(suggestions, useNormalized) {
         `Normalized English result: ${suggestionCount} value(s), `
         + `${(suggestions.warnings || []).length} warning(s).`
     );
-    printDeepLUsage(suggestions.usage);
+    printTranslationApiUsage('Translation', suggestions.usage);
 }
 
 function printBuildSummary(reports) {
@@ -2293,8 +2731,14 @@ function formatHumanReadableReport(reports) {
     const validation = reports.buildReport.validation;
     const translation = reports.buildReport.translation || {
         mode: 'normalized',
+        provider: 'None',
+        englishSource: 'normalized',
+        apiCalls: 0,
+        sourceCharactersPassed: 0,
         deepLApiCalls: 0,
-        deepLCharactersPassed: 0
+        deepLCharactersPassed: 0,
+        googleApiCalls: 0,
+        googleCharactersPassed: 0
     };
     const persistedGeneratedTranslations = reports.buildReport.persistedGeneratedTranslations || [];
     const persistedGeneratedEntryCount = persistedGeneratedTranslations.reduce(
@@ -2311,8 +2755,14 @@ function formatHumanReadableReport(reports) {
         `Locales: ${reports.buildReport.locales.length}`,
         `Components: ${reports.buildReport.components.length}`,
         `Translation mode: ${translation.mode}`,
+        `English source: ${translation.englishSource || 'normalized'}`,
+        `Translation API provider: ${translation.provider || translationProviderName(translation.mode)}`,
+        `Translation API calls: ${translation.apiCalls || 0}`,
+        `Translation API source characters passed: ${translation.sourceCharactersPassed || 0}`,
         `DeepL API calls: ${translation.deepLApiCalls}`,
         `DeepL source characters passed: ${translation.deepLCharactersPassed}`,
+        `Google Translate API calls: ${translation.googleApiCalls || 0}`,
+        `Google Translate source characters passed: ${translation.googleCharactersPassed || 0}`,
         `Generated translations persisted: ${persistedGeneratedEntryCount} `
             + `across ${persistedGeneratedTranslations.length} locale component file(s)`,
         `Keyword collisions: ${collisions.length}`,
@@ -2478,12 +2928,16 @@ if (require.main === module) {
 
 module.exports = {
     DeepLTranslationService,
+    GoogleTranslationService,
     EXPECTED_LOCALES,
     VALID_DIAGNOSTIC_SEVERITIES,
     VALID_STATUSES,
     buildLanguageOutputs,
+    buildNormalizedInputAudit,
     buildLocaleComponentOutput,
     collectMissingCatalogEntryKeys,
+    createNoTranslationApiSuggestions,
+    createTranslationService,
     createMigrationCatalogMatcher,
     expandCatalogFormatCandidates,
     createBuildTranslationSuggestions,
@@ -2497,7 +2951,11 @@ module.exports = {
     buildMigrationReport,
     extractStringCandidates,
     loadLanguageState,
+    migrationSourceIdentity,
     main,
     parseCommandLine,
-    validateLanguageState
+    resolveMigrationSource,
+    sourceRootBindingsFromEnvironment,
+    validateLanguageState,
+    writeNormalizedInputAuditReports
 };

@@ -1,40 +1,30 @@
 {
-  "defaultMode": "annotated-expanded",
+  "defaultMode": "annotations-line-numbers",
   "modes": [
     {
-      "id": "annotated-expanded",
-      "description": "Current behavior: expanded source with generated include annotations and summary output.",
+      "id": "raw",
+      "description": "Executable expanded source without generated annotations, line numbers, or file headers.",
       "status": "approved"
     },
     {
-      "id": "code-only-expanded",
-      "description": "Expanded source without generated annotations.",
-      "status": "draft"
+      "id": "annotations",
+      "description": "Expanded source with generated annotations and no line-number columns or file headers.",
+      "status": "approved"
     },
     {
-      "id": "canonical-preview",
-      "description": "Canonical MyDefrag source view after future localized source translation.",
-      "status": "draft"
+      "id": "annotations-file-headers",
+      "description": "Annotated expanded source with a generated header before each source file.",
+      "status": "approved"
     },
     {
-      "id": "localized-preview",
-      "description": "Localized keyword rendering over canonical source semantics.",
-      "status": "draft"
+      "id": "annotations-line-numbers",
+      "description": "Annotated expanded source with merged and source line-number columns.",
+      "status": "approved"
     },
     {
-      "id": "bilingual-preview",
-      "description": "Canonical and localized source shown together for review.",
-      "status": "draft"
-    },
-    {
-      "id": "semantic-review-preview",
-      "description": "Semantic IDs, canonical spellings, and localized spellings for review.",
-      "status": "draft"
-    },
-    {
-      "id": "translation-difference-preview",
-      "description": "Diff-oriented preview for translation and keyword mapping changes.",
-      "status": "draft"
+      "id": "annotations-line-numbers-file-headers",
+      "description": "Annotated expanded source with line-number columns and a header before each source file.",
+      "status": "approved"
     }
   ]
 }

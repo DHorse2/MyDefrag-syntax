@@ -1,0 +1,54 @@
+{
+  "locale": "am",
+  "component": "extension",
+  "entries": {
+    "extension.command.configureFolders.title": {
+      "text": "የእኔ ማከማቻ አስተዳደር: አቃፊዎችን ያዋቅሩ",
+      "status": "machine-generated"
+    },
+    "extension.command.openPreview.title": {
+      "text": "ቅድመ እይታ ክፈት",
+      "status": "machine-generated"
+    },
+    "extension.command.openSettings.title": {
+      "text": "የእኔ ማከማቻ አስተዳደር: ቅንብሮችን ክፈት",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "ቀጣይ እጩ፡ ${dir}፣ እና ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "የስራ ቦታ ፍለጋ፡ ማንበብ አልተቻለም ${uri.toString()}: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.message.noActiveDocument.warning": {
+      "text": "ምንም የእኔ ማከማቻ አስተዳደር ሰነድ ገባሪ አይደለም።",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "የቅጥያ.js:ማንቃት:አማራጮች:ማዘጋጀት ከጅምር የተመለሰ ስህተት፡ ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.product.displayName": {
+      "text": "የእኔ ማከማቻ አስተዳደር ስክሪፕት (.MyDc / .MyD)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.fragment.text": {
+      "text": "የእኔ ማከማቻ አስተዳደር ክፍልፋይ (.mydc)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.script.text": {
+      "text": "የእኔ ማከማቻ አስተዳደር ስክሪፕት (.myd)",
+      "status": "machine-generated"
+    },
+    "extension.status.parser.unknown.text": {
+      "text": "የእኔ ማከማቻ አስተዳደር ያልታወቀ የሰነድ አይነት",
+      "status": "machine-generated"
+    },
+    "extension.window.channelName": {
+      "text": "የእኔ ማከማቻ አስተዳደር አገባብ",
+      "status": "machine-generated"
+    }
+  }
+}

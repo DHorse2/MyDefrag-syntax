@@ -13,133 +13,133 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Maak die diagnostiese filter skoon"
+      "text": "My Stoorbestuur: Maak die diagnostiese filter skoon"
     },
     "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Sluit Diagnostiese Verkenner"
+      "text": "My Stoorbestuur: Sluit Diagnostiese Verkenner"
     },
     "package.contributes.commands.mydfrg.diagnostics.filter.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Filterdiagnostiek"
+      "text": "My Stoorbestuur: Filterdiagnostiek"
     },
     "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenteerder: Merk diagnostiese foute as reggestel"
+      "text": "My Stoorbestuur: Merk diagnostiese foute as reggestel"
     },
     "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Ignoreer diagnostiek"
+      "text": "My Stoorbestuur: Ignoreer diagnostiek"
     },
     "package.contributes.commands.mydfrg.diagnostics.next.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenteerder: Volgende Diagnostiek"
+      "text": "My Stoorbestuur: Volgende Diagnostiek"
     },
     "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenteerder: Volgende Lêer"
+      "text": "My Stoorbestuur: Volgende Lêer"
     },
     "package.contributes.commands.mydfrg.diagnostics.previous.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Vorige diagnostiek"
+      "text": "My Stoorbestuur: Vorige diagnostiek"
     },
     "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Vernieuw diagnostiek"
+      "text": "My Stoorbestuur: Vernieuw diagnostiek"
     },
     "package.contributes.commands.mydfrg.diagnostics.reset.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Stel diagnostiese navigasie terug"
+      "text": "My Stoorbestuur: Stel diagnostiese navigasie terug"
     },
     "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Stuur diagnostiek na agent"
+      "text": "My Stoorbestuur: Stuur diagnostiese verslag na outomatiese assistent"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Wys diagnostiek as tabel"
+      "text": "My Stoorbestuur: Wys diagnostiek as tabel"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Wys diagnostiek as boom"
+      "text": "My Stoorbestuur: Wys diagnostiek as boom"
     },
     "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Slaan diagnostiek oor"
+      "text": "My Stoorbestuur: Slaan diagnostiek oor"
     },
     "package.contributes.commands.mydfrg.diagnostics.top.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Eerste diagnose"
+      "text": "My Stoorbestuur: Eerste diagnose"
     },
     "package.contributes.commands.title": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Open lêer by posisie"
+      "text": "Maak lêer by posisie oop"
     },
     "package.contributes.configuration.properties.mydfrg.debugOn.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Aktiveer foutopsporing vir die My Defragmenter-uitbreiding."
+      "text": "Aktiveer foutopsporing vir die My Stoorbestuur-uitbreiding."
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Glob-patrone om uit my Defragmenter-validering uit te sluit"
+      "text": "Lêer wat ooreenstem met patrone om uit My Stoorbestuur-validering uit te sluit"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Gids vir my Defragmenter-loglêers."
+      "text": "Gids vir My Stoorbestuur-loglêers."
     },
     "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
       "fallbackLocale": null,
@@ -174,28 +174,28 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Gids vir my Defragmenter-gebruiker se data."
+      "text": "Gids vir My Stoorbestuur-gebruiker se inligting."
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter-uitbreiding se verbositeitsvlak. Foutopsporingslogging vereis dat mydfrg debug aan is."
+      "text": "My Stoorbestuur-uitbreiding se verbositeitsvlak. Foutopsporingslogging vereis dat mydfrg.debugOn aan is."
     },
     "package.contributes.languages.aliases": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenteerder-skrif"
+      "text": "My Stoorbestuur-skrif"
     },
     "package.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Sintaksie-beklemtoning vir die My Defragmenter-skriptaal"
+      "text": "Sintaksie-beklemtoning vir die My Stoorbestuur-skriptaal"
     },
     "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
       "fallbackLocale": null,
@@ -209,14 +209,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenteerder"
+      "text": "My Stoorbestuur"
     },
     "package.metadata.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Sintaksie-beklemtoning vir die My Defragmenter-skriptaal"
+      "text": "Sintaksie-beklemtoning vir die My Stoorbestuur-skriptaal"
     },
     "package.metadata.publisher": {
       "fallbackLocale": null,

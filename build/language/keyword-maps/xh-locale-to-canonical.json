@@ -1,55 +1,67 @@
 {
-  "Defragment": {
-    "canonical": "Defragment",
-    "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
   "FastFill": {
     "canonical": "FastFill",
     "id": "fileAction.fastFill"
-  },
-  "FileActions": {
-    "canonical": "FileActions",
-    "id": "structure.fileActions"
-  },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
-    "canonical": "FileSelect",
-    "id": "structure.fileSelect"
   },
   "FragmentCount": {
     "canonical": "FragmentCount",
     "id": "volumeCondition.fragmentCount"
   },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
+  "HlelaNgegama": {
+    "canonical": "SortByName",
+    "id": "fileAction.sortByName"
   },
-  "Label": {
+  "Igama": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "Igama lefayile": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "Igama likavimba weefayili": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "Ilebhu el": {
     "canonical": "Label",
     "id": "volumeCondition.label"
   },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
+  "Indlela Egcweleyo": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "Isiphelo seFayile": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "Isiphelo seVolume": {
+    "canonical": "VolumeEnd",
+    "id": "structure.volumeEnd"
+  },
+  "Izenzo zeFayile": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
+  },
+  "Izenzo zeVolume": {
+    "canonical": "VolumeActions",
+    "id": "structure.volumeActions"
+  },
+  "Khetha iFayile": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
+  },
+  "Khetha iVolume": {
+    "canonical": "VolumeSelect",
+    "id": "structure.volumeSelect"
+  },
+  "Khupha iiFayile": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
+  },
+  "Khupha iiVolumes": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
   },
   "SetColor": {
     "canonical": "SetColor",
@@ -59,24 +71,12 @@
     "canonical": "SetVariable",
     "id": "setting.setVariable"
   },
-  "Size": {
+  "Ubungakanani": {
     "canonical": "Size",
     "id": "volumeCondition.size"
   },
-  "SortByName": {
-    "canonical": "SortByName",
-    "id": "fileAction.sortByName"
-  },
-  "VolumeActions": {
-    "canonical": "VolumeActions",
-    "id": "structure.volumeActions"
-  },
-  "VolumeEnd": {
-    "canonical": "VolumeEnd",
-    "id": "structure.volumeEnd"
-  },
-  "VolumeSelect": {
-    "canonical": "VolumeSelect",
-    "id": "structure.volumeSelect"
+  "Ukuqhawulwa": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
   }
 }

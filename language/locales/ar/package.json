@@ -7,11 +7,11 @@
       "status": "machine-generated"
     },
     "package.description": {
-      "text": "تمييز بناء الجملة في لغة البرمجة النصية «My Defragmenter»",
+      "text": "تمييز بناء الجملة في لغة البرمجة النصية «إدارة التخزين»",
       "status": "machine-generated"
     },
     "package.metadata.description": {
-      "text": "تمييز بناء الجملة في لغة البرمجة النصية «My Defragmenter»",
+      "text": "تمييز بناء الجملة في لغة البرمجة النصية «إدارة التخزين»",
       "status": "machine-generated"
     },
     "package.metadata.publisher": {
@@ -19,7 +19,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.userDir.description": {
-      "text": "الدليل الخاص ببيانات مستخدم «My Defragmenter».",
+      "text": "الدليل الخاص ببيانات مستخدم «إدارة التخزين».",
       "status": "machine-generated"
     },
     "package.path.repository.url": {
@@ -31,15 +31,15 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
-      "text": "المجلد الذي يحتوي على ملفات سجل أداة «My Defragmenter».",
+      "text": "المجلد الذي يحتوي على ملفات سجل أداة «إدارة التخزين».",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.debugOn.description": {
-      "text": "تمكين تسجيل أخطاء تصحيح ملحق «My Defragmenter».",
+      "text": "تمكين تسجيل أخطاء تصحيح ملحق «إدارة التخزين».",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
-      "text": "مستوى تفصيل ملحق «My Defragmenter». يتطلب تسجيل أخطاء التصحيح تشغيل خيار «mydfrg debug On».",
+      "text": "مستوى تفصيل ملحق «إدارة التخزين». يتطلب تسجيل أخطاء التصحيح تشغيل خيار «mydfrg.debugOn».",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
@@ -63,11 +63,11 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
-      "text": "أنماط Glob التي يجب استبعادها من عملية التحقق في «My Defragmenter»",
+      "text": "أنماط مطابقة الملفات التي يجب استبعادها من عملية التحقق في «إدارة التخزين»",
       "status": "machine-generated"
     },
     "package.contributes.languages.aliases": {
-      "text": "برنامج «Defragmenter» الخاص بي",
+      "text": "برنامج إدارة التخزين",
       "status": "machine-generated"
     },
     "package.contributes.commands.title": {
@@ -131,7 +131,7 @@
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
-      "text": "برنامج «My Defragmenter»: إغلاق «Diagnostics Explorer»",
+      "text": "برنامج «إدارة التخزين»: إغلاق «تقارير المشكلة المتصفح»",
       "status": "machine-generated"
     }
   }

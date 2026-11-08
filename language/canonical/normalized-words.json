@@ -1,7 +1,445 @@
 [
   {
     "input": "MyDefrag",
-    "output": "My Defragmenter"
+    "output": "My Storage Management",
+    "alternatives": [
+      "My Storage Manager",
+      "My Storage Tool",
+      "Storage Tool"
+    ]
+  },
+  {
+    "input": "Defragmenter",
+    "output": "Storage Manager",
+    "alternatives": [
+      "Storage Management Tool",
+      "Storage Tool"
+    ]
+  },
+  {
+    "input": "Open",
+    "output": "Show",
+    "alternatives": [
+      "Display",
+      "Access"
+    ]
+  },
+  {
+    "input": "activate",
+    "output": "enable",
+    "alternatives": [
+      "turn on",
+      "start"
+    ]
+  },
+  {
+    "input": "settings",
+    "output": "options",
+    "alternatives": [
+      "preferences",
+      "configuration choices"
+    ]
+  },
+  {
+    "input": "initialize",
+    "output": "prepare",
+    "alternatives": [
+      "set up",
+      "start"
+    ]
+  },
+  {
+    "input": "begin",
+    "output": "start",
+    "alternatives": [
+      "commence",
+      "opening point"
+    ]
+  },
+  {
+    "input": "end",
+    "output": "finish",
+    "alternatives": [
+      "completion",
+      "closing point"
+    ]
+  },
+  {
+    "input": "depth",
+    "output": "nesting level",
+    "alternatives": [
+      "hierarchy level",
+      "level"
+    ]
+  },
+  {
+    "input": "maintenance",
+    "output": "upkeep",
+    "alternatives": [
+      "care",
+      "servicing"
+    ]
+  },
+  {
+    "input": "stop",
+    "output": "halt",
+    "alternatives": [
+      "end",
+      "cancel"
+    ]
+  },
+  {
+    "input": "build",
+    "output": "creation process",
+    "alternatives": [
+      "generation",
+      "assembly"
+    ]
+  },
+  {
+    "input": "data",
+    "output": "information",
+    "alternatives": [
+      "stored information",
+      "records"
+    ]
+  },
+  {
+    "input": "English",
+    "output": "English language",
+    "alternatives": [
+      "language named English",
+      "English-language"
+    ]
+  },
+  {
+    "input": "folders",
+    "output": "directories",
+    "alternatives": [
+      "file groups",
+      "storage folders"
+    ]
+  },
+  {
+    "input": "fixed",
+    "output": "resolved",
+    "alternatives": [
+      "corrected",
+      "repaired"
+    ]
+  },
+  {
+    "input": "include",
+    "output": "included file",
+    "alternatives": [
+      "imported file",
+      "inclusion"
+    ]
+  },
+  {
+    "input": "template",
+    "output": "pattern model",
+    "alternatives": [
+      "document pattern",
+      "model"
+    ]
+  },
+  {
+    "input": "revert",
+    "output": "undo",
+    "alternatives": [
+      "reverse",
+      "restore previous"
+    ]
+  },
+  {
+    "input": "rollback",
+    "output": "restoration",
+    "alternatives": [
+      "reversal operation",
+      "undo operation"
+    ]
+  },
+  {
+    "input": "debug",
+    "output": "error checking",
+    "alternatives": [
+      "troubleshooting",
+      "problem diagnosis"
+    ]
+  },
+  {
+    "input": "mark",
+    "output": "label as",
+    "alternatives": [
+      "flag as",
+      "designate as"
+    ]
+  },
+  {
+    "input": "duplicate",
+    "output": "repeated",
+    "alternatives": [
+      "copied",
+      "two identical"
+    ]
+  },
+  {
+    "input": "builds",
+    "output": "creation processes",
+    "alternatives": [
+      "generations",
+      "assemblies"
+    ]
+  },
+  {
+    "input": "agent",
+    "output": "automated assistant",
+    "alternatives": [
+      "software assistant",
+      "assistant service"
+    ]
+  },
+  {
+    "input": "save",
+    "output": "save changes",
+    "alternatives": [
+      "record changes",
+      "persist changes"
+    ]
+  },
+  {
+    "input": "preload",
+    "output": "startup loader",
+    "alternatives": [
+      "initial loader",
+      "startup bridge"
+    ]
+  },
+  {
+    "input": "syntax",
+    "output": "grammar rules",
+    "alternatives": [
+      "language rules",
+      "writing rules"
+    ]
+  },
+  {
+    "input": "multiline",
+    "output": "multiple lines",
+    "alternatives": [
+      "several lines",
+      "more than one line"
+    ]
+  },
+  {
+    "input": "diagnostics",
+    "output": "problem reports",
+    "alternatives": [
+      "diagnostic reports",
+      "checks"
+    ]
+  },
+  {
+    "input": "explorer",
+    "output": "browser",
+    "alternatives": [
+      "viewer",
+      "navigation window"
+    ]
+  },
+  {
+    "input": "calls",
+    "output": "requests",
+    "alternatives": [
+      "operations",
+      "uses"
+    ]
+  },
+  {
+    "input": "preview",
+    "output": "preliminary view",
+    "alternatives": [
+      "sample view",
+      "advance view"
+    ]
+  },
+  {
+    "input": "logging",
+    "output": "activity recording",
+    "alternatives": [
+      "event recording",
+      "recording"
+    ]
+  },
+  {
+    "input": "variable",
+    "output": "changeable value",
+    "alternatives": [
+      "named value",
+      "value holder"
+    ]
+  },
+  {
+    "input": "window",
+    "output": "screen window",
+    "alternatives": [
+      "screen area",
+      "display window"
+    ]
+  },
+  {
+    "input": "artifact",
+    "output": "output file",
+    "alternatives": [
+      "generated file",
+      "saved output"
+    ]
+  },
+  {
+    "input": "candidate",
+    "output": "proposal",
+    "alternatives": [
+      "review item",
+      "item to review"
+    ]
+  },
+  {
+    "input": "candidates",
+    "output": "proposals",
+    "alternatives": [
+      "review items",
+      "items to review"
+    ]
+  },
+  {
+    "input": "canonical",
+    "output": "authoritative",
+    "alternatives": [
+      "reference",
+      "official"
+    ]
+  },
+  {
+    "input": "fallback",
+    "output": "alternate choice",
+    "alternatives": [
+      "backup choice",
+      "replacement choice"
+    ]
+  },
+  {
+    "input": "glob",
+    "output": "wildcard",
+    "alternatives": [
+      "wildcard pattern",
+      "file matching pattern"
+    ]
+  },
+  {
+    "input": "hook",
+    "output": "integration point",
+    "alternatives": [
+      "extension point",
+      "connection point"
+    ]
+  },
+  {
+    "input": "keywords",
+    "output": "key terms",
+    "alternatives": [
+      "important terms",
+      "index terms"
+    ]
+  },
+  {
+    "input": "locale",
+    "output": "language region",
+    "alternatives": [
+      "regional language setting",
+      "language setting"
+    ]
+  },
+  {
+    "input": "locales",
+    "output": "language regions",
+    "alternatives": [
+      "regional language settings",
+      "language settings"
+    ]
+  },
+  {
+    "input": "panel",
+    "output": "window section",
+    "alternatives": [
+      "screen section",
+      "side area"
+    ]
+  },
+  {
+    "input": "parser",
+    "output": "syntax analyzer",
+    "alternatives": [
+      "text analyzer",
+      "syntax reader",
+      "grammar checker"
+    ]
+  },
+  {
+    "input": "schema",
+    "output": "data structure",
+    "alternatives": [
+      "data format",
+      "structure definition"
+    ]
+  },
+  {
+    "input": "semantic",
+    "output": "meaning-based",
+    "alternatives": [
+      "meaning related",
+      "meaning focused"
+    ]
+  },
+  {
+    "input": "string",
+    "output": "text value",
+    "alternatives": [
+      "text item",
+      "text content"
+    ]
+  },
+  {
+    "input": "strings",
+    "output": "text values",
+    "alternatives": [
+      "text items",
+      "text content"
+    ]
+  },
+  {
+    "input": "syntactically",
+    "output": "structurally",
+    "alternatives": [
+      "by structure",
+      "according to structure"
+    ]
+  },
+  {
+    "input": "token",
+    "output": "text unit",
+    "alternatives": [
+      "text element",
+      "symbol"
+    ]
+  },
+  {
+    "input": "verbosity",
+    "output": "detail",
+    "alternatives": [
+      "detail amount",
+      "logging detail"
+    ]
   },
   {
     "input": "js",
@@ -34,5 +472,42 @@
   {
     "input": "kw",
     "output": "keyword"
+  },
+  {
+    "input": "API",
+    "output": "Application Programming Interface",
+    "alternatives": [
+      "Program Library"
+    ]
+  },
+  {
+    "input": "config",
+    "output": "configuration",
+    "alternatives": [
+      "setup"
+    ]
+  },
+  {
+    "input": "init",
+    "output": "initialization",
+    "alternatives": [
+      "initialize"
+    ]
+  },
+  {
+    "input": "ini",
+    "output": "initialization",
+    "alternatives": [
+      "initialize"
+    ]
+  },
+  {
+    "input": "MYDC",
+    "output": "My Storage Management",
+    "alternatives": [
+      "My Storage Manager",
+      "My Storage Tool",
+      "Storage Tool"
+    ]
   }
 ]

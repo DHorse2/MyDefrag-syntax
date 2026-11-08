@@ -163,6 +163,18 @@
     {
       "id": "debug",
       "description": "Debug information."
+    },
+    {
+      "id": "comment",
+      "description": "comments within code or documents creating context and/or describing objects and logic."
+    },
+    {
+      "id": "data",
+      "description": "Human readable data."
+    },
+    {
+      "id": "state",
+      "description": "State information."
     }
   ]
 }

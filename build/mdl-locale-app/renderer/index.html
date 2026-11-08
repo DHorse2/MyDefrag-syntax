@@ -17,6 +17,20 @@
             <p id="project-root" class="project-root"></p>
         </div>
         <div class="status-stack">
+            <div class="translator-api-toggles" role="group" aria-label="Translation API selection" title="Choose DeepL or Google Translate. Leave both unchecked to build without a translator API.">
+                <label class="translator-api-toggle" title="Use normalized English for generated fallbacks and automated translation input.">
+                    <input id="use-normalized" type="checkbox" checked aria-label="Use normalized English for fallbacks and automated translation">
+                    <span>Use normalized</span>
+                </label>
+                <label class="translator-api-toggle">
+                    <input id="use-deepl-api" type="checkbox" aria-label="Use DeepL API">
+                    <span>Use DeepL API</span>
+                </label>
+                <label class="translator-api-toggle">
+                    <input id="use-google-translate-api" type="checkbox" aria-label="Use Google Translate API">
+                    <span>Use Google Translate API</span>
+                </label>
+            </div>
             <span id="dirty-badge" class="badge clean">No unsaved changes</span>
             <span id="validation-badge" class="badge neutral">Not validated</span>
         </div>
@@ -76,7 +90,7 @@
                                     <label>Current locale value<textarea id="translation-text" rows="4" required></textarea></label>
                                 </div>
                                 <div class="api-translation-field translation-value-pane">
-                                    <label>Latest DeepL result<textarea id="api-translation-text" rows="4" readonly placeholder="Generate a translation from Current locale value"></textarea></label>
+                                    <label>Latest API result<textarea id="api-translation-text" rows="4" readonly placeholder="Generate a translation from Current locale value"></textarea></label>
                                     <p id="api-translation-status" class="field-help"></p>
                                 </div>
                             </div>

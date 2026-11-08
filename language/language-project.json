@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "projectId": "mdm-mydefrag-syntax",
+  "dataRoot": "language",
+  "buildRoot": "build/language",
+  "adapter": {
+    "path": "build/scripts/build-language.js",
+    "protocolVersion": 2
+  },
+  "sourceRoots": [
+    {
+      "id": "project",
+      "kind": "project",
+      "required": true,
+      "access": "transform"
+    },
+    {
+      "id": "mdm-localize",
+      "kind": "external",
+      "required": false,
+      "access": "transform"
+    }
+  ]
+}

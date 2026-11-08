@@ -15,7 +15,7 @@
       "status": "machine-generated"
     },
     "locales.accessibility.maintenanceActions.label": {
-      "text": "Opérations de maintenance",
+      "text": "Opérations de entretien",
       "status": "machine-generated"
     },
     "locales.accessibility.operationInProgress.label": {
@@ -123,7 +123,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "Sélectionnez le référentiel de syntaxe « My Defragmenter »",
+      "text": "Sélectionnez le référentiel de syntaxe « Gestion de mon stockage »",
       "status": "machine-generated"
     },
     "locales.dialog.unsavedLocaleChanges.title": {
@@ -147,7 +147,7 @@
       "status": "machine-generated"
     },
     "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
-      "text": "Générer une traduction à partir de la valeur actuelle de la locale",
+      "text": "Générer une traduction à partir de la valeur actuelle de la région linguistique",
       "status": "machine-generated"
     },
     "locales.input.keySourceTranslationStatus.placeholder": {
@@ -179,7 +179,7 @@
       "status": "machine-generated"
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "text": "Sélectionnez le référentiel contenant les fichiers de localisation de la langue / et la version / de cette langue.",
+      "text": "Choisissez le référentiel propriétaire de language/locales et build/language.",
       "status": "machine-generated"
     },
     "locales.message.componentRebuildFailed.text": {
@@ -195,11 +195,11 @@
       "status": "machine-generated"
     },
     "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
-      "text": "Le texte en anglais fait autorité et doit être mis à jour dans la section « Gestion des langues » de My Defragmenter.",
+      "text": "Le texte en anglais fait autorité et doit être mis à jour dans la section « Gestion des langues » de Gestion de mon stockage.",
       "status": "machine-generated"
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
-      "text": "Saisissez ou définissez la valeur de la locale actuelle avant de générer une traduction via l'API.",
+      "text": "Saisissez ou définissez la valeur de la région linguistique actuelle avant de générer une traduction via l'API.",
       "status": "machine-generated"
     },
     "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
@@ -223,11 +223,11 @@
       "status": "machine-generated"
     },
     "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
-      "text": "Les données de maintenance des paramètres régionaux n'ont pas été chargées.",
+      "text": "Les données de entretien des paramètres régionaux n'ont pas été chargées.",
       "status": "machine-generated"
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "text": "Ce n'est pas un référentiel de paramètres régionaux pour My Defragmenter. Manquant : {missing}",
+      "text": "Ce n'est pas un référentiel de paramètres régionaux pour Gestion de mon stockage. Manquant : {missing}",
       "status": "machine-generated"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {
@@ -311,7 +311,7 @@
       "status": "machine-generated"
     },
     "locales.progress.committingLocaleSourceChanges.status": {
-      "text": "Valider les modifications apportées au code source de la locale",
+      "text": "Valider les modifications apportées au code source de la région linguistique",
       "status": "machine-generated"
     },
     "locales.progress.preparingSave.status": {
@@ -379,7 +379,7 @@
       "status": "machine-generated"
     },
     "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
-      "text": "Deep L a remplacé la valeur actuelle de la locale. Appliquez la modification en mémoire pour la conserver.",
+      "text": "Deep L a remplacé la valeur actuelle de la région linguistique. Appliquez la modification en mémoire pour la conserver.",
       "status": "machine-generated"
     },
     "locales.ui.discardInMemoryTranslationChanges.text": {
@@ -395,7 +395,7 @@
       "status": "machine-generated"
     },
     "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
-      "text": "Générer une traduction à partir de la valeur actuelle de la locale. Le résultat remplace uniquement ce champ.",
+      "text": "Générer une traduction à partir de la valeur actuelle de la région linguistique. Le résultat remplace uniquement ce champ.",
       "status": "machine-generated"
     },
     "locales.ui.generatedValue.text": {
@@ -427,7 +427,7 @@
       "status": "machine-generated"
     },
     "locales.ui.rebuildingLocaleComponent.text": {
-      "text": "Reconstruction du composant « locale »",
+      "text": "Reconstruction du composant « région linguistique »",
       "status": "machine-generated"
     },
     "locales.ui.requestingADeeplTranslation.text": {

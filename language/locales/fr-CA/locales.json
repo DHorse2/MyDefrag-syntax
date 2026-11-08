@@ -95,7 +95,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.mydefragLocaleMaintenance.text": {
-      "text": "Maintenance de la configuration régionale de mon défragmenteur",
+      "text": "entretien de la configuration régionale de mon défragmenteur",
       "status": "machine-generated"
     },
     "locales.dialog.noFilesWillChange.text": {
@@ -123,7 +123,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "Sélectionnez le référentiel de syntaxe « My Defragmenter »",
+      "text": "Sélectionnez le référentiel de syntaxe « Gestion de mon stockage »",
       "status": "machine-generated"
     },
     "locales.dialog.unsavedLocaleChanges.title": {
@@ -179,7 +179,7 @@
       "status": "machine-generated"
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "text": "Choisissez le dépôt contenant les fichiers de localisation de la langue / et la langue de compilation /.",
+      "text": "Choisissez le référentiel propriétaire de language/locales et build/language.",
       "status": "machine-generated"
     },
     "locales.message.componentRebuildFailed.text": {
@@ -195,7 +195,7 @@
       "status": "machine-generated"
     },
     "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
-      "text": "Le texte anglais fait autorité et doit être mis à jour dans la section « Gestion des langues » de My Defragmenter.",
+      "text": "Le texte anglais fait autorité et doit être mis à jour dans la section « Gestion des langues » de Gestion de mon stockage.",
       "status": "machine-generated"
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
@@ -227,7 +227,7 @@
       "status": "machine-generated"
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "text": "Ce n'est pas un dépôt de paramètres régionaux pour My Defragmenter. Manquant : {missing}",
+      "text": "Ce n'est pas un dépôt de paramètres régionaux pour Gestion de mon stockage. Manquant : {missing}",
       "status": "machine-generated"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {
@@ -379,7 +379,7 @@
       "status": "machine-generated"
     },
     "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
-      "text": "Deep L a remplacé la valeur actuelle de la locale. Appliquez la modification en mémoire pour la conserver.",
+      "text": "Deep L a remplacé la valeur actuelle de la région linguistique. Appliquez la modification en mémoire pour la conserver.",
       "status": "machine-generated"
     },
     "locales.ui.discardInMemoryTranslationChanges.text": {

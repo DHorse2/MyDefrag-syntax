@@ -31,11 +31,11 @@ function registerIpcHandlers(options) {
     ipcMain.handle(CHANNELS.revert, safeHandler(() => service.revert()));
     ipcMain.handle(CHANNELS.validate, safeHandler(() => service.validate()));
     ipcMain.handle(CHANNELS.previewSave, safeHandler(() => service.previewSave()));
-    ipcMain.handle(CHANNELS.save, safeHandler((_payload, event) => (
-        service.save(progressReporter(event, 'save'))
+    ipcMain.handle(CHANNELS.save, safeHandler((payload, event) => (
+        service.save(payload, progressReporter(event, 'save'))
     )));
-    ipcMain.handle(CHANNELS.rebuild, safeHandler((_payload, event) => (
-        service.rebuild(progressReporter(event, 'rebuild'))
+    ipcMain.handle(CHANNELS.rebuild, safeHandler((payload, event) => (
+        service.rebuild(payload, progressReporter(event, 'rebuild'))
     )));
     ipcMain.handle(CHANNELS.cancelBuild, safeHandler(() => service.cancelBuild()));
     ipcMain.handle(CHANNELS.reload, safeHandler(async () => {

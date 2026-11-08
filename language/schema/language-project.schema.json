@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "language-project.schema.json",
+  "title": "Language Project Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "projectId", "dataRoot", "buildRoot", "adapter", "sourceRoots"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "projectId": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "dataRoot": { "type": "string", "minLength": 1 },
+    "buildRoot": { "type": "string", "minLength": 1 },
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "protocolVersion"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "protocolVersion": { "const": 2 }
+      }
+    },
+    "sourceRoots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "kind", "required", "access"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "kind": { "enum": ["project", "external"] },
+          "required": { "type": "boolean" },
+          "access": { "enum": ["read", "transform"] }
+        }
+      }
+    }
+  }
+}

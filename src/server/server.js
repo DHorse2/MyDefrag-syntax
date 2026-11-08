@@ -18,6 +18,8 @@ const path = require('path');
 const { URI } = require('vscode-languageserver/node');
 const { fileURLToPath, pathToFileURL } = require('url');
 const { start } = require('repl');
+const { getFilePathFromDocumentUri } = require('../shared/documentUri');
+const { createLanguageCatalog } = require('../shared/languageCatalog');
 console?.error('SERVER: modules loaded');
 const { tokenize, configureTokenizer } = require('./tokenizer');
 const { Parser, parseStates, configureParser } = require('./parser');
@@ -162,11 +164,17 @@ let workspaceRefreshTimer = null;
 let watchedFileRefreshTimer = null;
 let refreshSequence = 0;
 let refreshQueue = Promise.resolve();
+let catalog = createLanguageCatalog({ components: ['server'] });
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
 //#region Events for server - connection, documents
 connection.onInitialize(async (params) => {
-    console?.log(`server.js:connection.onInitialize: SERVER loading configuration`);
+    catalog = createLanguageCatalog({
+        locale: params.initializationOptions?.locale || 'en',
+        components: ['server']
+    });
+    const tMessage = catalog.format("server.log.console.log.serverJsConnectionOninitializeServerLoading.info").text;
+    console?.log(tMessage);
 
     // debugger;
 
@@ -467,7 +475,7 @@ function normalizeUri(uri) {
  * @returns {string} Filesystem path.
  */
 function getFilePathFromUri(uri) {
-    return fileURLToPath(normalizeUri(uri));
+    return getFilePathFromDocumentUri(uri);
 }
 
 /**
@@ -877,7 +885,7 @@ async function validateDocument(document, options = {}) {
     let documentVersion;
     const diagnostics = [];
     try { // ── Validate Document ─────────────────────────────────────────────────────────
-        const filePath = fileURLToPath(document.uri.toString());
+        const filePath = getFilePathFromUri(document.uri);
         currFilePath = filePath;
         const diagnosticLogContext = {
             fileName: path.basename(filePath),
@@ -989,9 +997,11 @@ async function validateDocument(document, options = {}) {
         if (!bestParser.atEof()) {
             t = bestParser.curr();
             if (bestParser.state === parseStates.SCRIPT_FRAGMENT) {
-                bestParser.warning(ini.severity.Warning, `Unexpected token '${t.value}' — fragment may be incomplete`, t);
+                const tMessage = catalog.format("server.data.validateDocument.t.value.unexpectedTokenTValueFragmentMay.message", { tValue: t.value }).text;
+                bestParser.warning(ini.severity.Warning, tMessage, t);
             } else {
-                bestParser.error(ini.severity.Error, `Unexpected token '${t.value}' — expected end of file`, t);
+                const tMessage = catalog.format("server.data.validateDocument.t.value.unexpectedTokenTValueExpectedEnd.message", { tValue: t.value }).text;
+                bestParser.error(ini.severity.Error, tMessage, t);
             }
         }
 
@@ -1003,12 +1013,12 @@ async function validateDocument(document, options = {}) {
 
         const parserState = bestParser
             ? `\nParser state: pos=${bestParser.pos}, token=${JSON.stringify(bestParser.peek?.() ?? null)}`
-            : `\nParser state: unavailable`;
+            : catalog.format("server.state.validateDocument.parserStateUnavailable.message").text;
 
         const message =
-            `server.js:validateDocument: Unexpected parser failure\n` +
-            `${err.name}: ${err.message}\n` +
-            `${err.stack || "(no stack available)"}` +
+            catalog.format("server.path.validateDocument.serverJsValidatedocumentUnexpectedParserFailure.structural").text +
+            catalog.format("server.diagnostic.validateDocument.err.name.errNameErrMessage.message", { errMessage: err.message, errName: err.name }).text +
+            (catalog.format("server.diagnostic.validateDocument.err.stack.data", { errStack: err.stack }).text || catalog.format("server.diagnostic.validateDocument.err.stack").text) +
             parserState;
 
         try {
@@ -1018,19 +1028,22 @@ async function validateDocument(document, options = {}) {
         try {
             logger?.err?.(err, message);
         } catch (logErr) {
-            console.error("logger.err failed:", logErr);
+            const tMessage = catalog.format("server.log.validateDocument.console.error.loggerErrFailed.error").text;
+            console.error(tMessage, logErr);
         }
 
         try {
             bestParser?.warningAtStart?.(
-                `Internal parser failure: ${err.name}: ${err.message}`
+                catalog.format("server.diagnostic.validateDocument.err.name.internalParserFailureErrNameErr.message", { errMessage: err.message, errName: err.name }).text
             );
         } catch (diagErr) {
-            console.error("warningAtStart failed:", diagErr);
+            const tMessage = catalog.format("server.log.validateDocument.console.error.warningatstartFailed.error").text;
+            console.error(tMessage, diagErr);
         }
     }
     // ─────────────────────────────────────────────────────────────────────────────────
-    logger.dbg(5, `validateDocument: Publish diagnostics`);
+    const tMessage2 = catalog.format("server.log.validateDocument.logger.dbg.PublishDiagnostics.message").text;
+    logger.dbg(5, tMessage2);
     const liveDocument = documents.get(document.uri);
     if (liveDocument && liveDocument.version !== documentVersion) {
         scheduleValidateDocument(liveDocument);
@@ -1055,7 +1068,8 @@ async function validateDocument(document, options = {}) {
         uri: document.uri,
         diagnostics
     });
-    logger.dbg(5, `validateDocument: Parsing completed`);
+    const tMessage = catalog.format("server.diagnostic.validateDocument.logger.dbg.ParsingCompleted.message").text;
+    logger.dbg(5, tMessage);
 }
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
@@ -1089,7 +1103,8 @@ async function scanAllFiles(folderUri, options = {}) {
     }
 
     if (util.isExcluded(relFolderPath, excludeConfig, logger)) {
-        logger.dbg(6, `scanAllFiles: Skipping excluded folder ${relFolderPath}`);
+        const tMessage = catalog.format("server.path.scanAllFiles.logger.dbg.scanallfilesSkippingExcludedFolderRelfolderpath.structural", { relFolderPath }).text;
+        logger.dbg(6, tMessage);
         return 0;
     }
 
@@ -1115,7 +1130,8 @@ async function scanAllFiles(folderUri, options = {}) {
         if (entry.isDirectory()) {
             // directory
             if (util.isExcluded(`${relPath}/`, excludeConfig, logger)) {
-                logger.dbg(6, `scanAllFiles: Skipping excluded folder ${relPath}`);
+                const tMessage = catalog.format("server.log.scanAllFiles.logger.dbg.scanallfilesSkippingExcludedFolderRelpath.structural", { relPath }).text;
+                logger.dbg(6, tMessage);
                 continue;
             }
             scannedFiles += await scanAllFiles(`${uri}/`, options);
@@ -1153,11 +1169,13 @@ async function scanAllFiles(folderUri, options = {}) {
 // ─────────────────────────────────────────────────────────────────────────────────
 
 connection.onCompletion(() => { // ToDo onCompletion
-    logger.dbg(6, 'server.js:onCompletion: MyDefrag server connection on Completion');
+    const tMessage = catalog.format("server.log.logger.dbg.serverJsOncompletionMydefragServerConnection.structural").text;
+    logger.dbg(6, tMessage);
     return [];
 });
 connection.onHover((params) => {
-    logger.dbg(6, 'server.js:onHover: MyDefrag server connection on Hover');
+    const tMessage = catalog.format("server.log.logger.dbg.serverJsOnhoverMydefragServerConnection.structural").text;
+    logger.dbg(6, tMessage);
     if (!hoverEnabled) {
         return null;
     }
@@ -1168,14 +1186,18 @@ connection.onHover((params) => {
 });
 connection.onInitialized(() => {
     // ─────────────────────────────────────────────────────────────────────────────────
-    logger.dbg(6, 'server.js:onInitialized: MyDefrag server Language Client entered initialized');
-    logger.dbg(6, 'server.js:onInitialized: Workspace scan deferred to file/configuration refresh');
-    logger.dbg(3, 'server.js:onInitialized: MyDefrag server Language Client initialized. Log test.');
+    const tMessage3 = catalog.format("server.log.logger.dbg.serverJsOninitializedMydefragServerLanguage.structural").text;
+    logger.dbg(6, tMessage3);
+    const tMessage2 = catalog.format("server.path.logger.dbg.serverJsOninitializedWorkspaceScanDeferred.structural").text;
+    logger.dbg(6, tMessage2);
+    const tMessage = catalog.format("server.path.logger.dbg.serverJsOninitializedMydefragServerLanguage.structural.server.js.onInitialized.MyDefrag").text;
+    logger.dbg(3, tMessage);
 });
 
 // Change File Watcher
 connection.onDidChangeWatchedFiles(async change => {
-    console?.log('server.js:onDidChangeWatchedFiles: MyDefrag server document watched On Did Change');
+    const tMessage = catalog.format("server.log.console.log.serverJsOndidchangewatchedfilesMydefragServerDocument.info").text;
+    console?.log(tMessage);
     if (change?.changes?.length) {
         scheduleWatchedFileRefresh(change.changes);
         return;

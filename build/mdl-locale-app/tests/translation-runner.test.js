@@ -7,12 +7,25 @@ const { spawnSync } = require('child_process');
 const test = require('node:test');
 const {
     acquireRunnerLock,
+    collectFallbackWork,
+    parseCommandLine,
     releaseRunnerLock,
     runTranslation
 } = require('../../scripts/translate-language-fallbacks');
 const { createFixture, readJson } = require('./helpers');
 
 function generateFixture(rootDir) {
+    const localeDir = path.join(rootDir, 'language/locales/am');
+    for (const name of fs.readdirSync(localeDir)) {
+        const sourcePath = path.join(localeDir, name);
+        if (path.extname(name).toLocaleLowerCase() !== '.json') { continue; }
+        const document = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
+        if (!document.entries || typeof document.entries !== 'object' || Array.isArray(document.entries)) {
+            continue;
+        }
+        document.entries = {};
+        fs.writeFileSync(sourcePath, `${JSON.stringify(document, null, 2)}\n`, 'utf8');
+    }
     const result = spawnSync(
         process.execPath,
         [path.join(rootDir, 'build/scripts/build-language.js'), 'build', '--UseNormalized'],
@@ -45,6 +58,24 @@ class StubDeepL {
         return typeof result === 'function' ? result(request) : result;
     }
 }
+
+test('runner defaults to normalized English and supports an explicit canonical source', (t) => {
+    const rootDir = createFixture(t);
+    generateFixture(rootDir);
+    const builder = require(path.join(rootDir, 'build/scripts/build-language.js'));
+    const state = builder.loadLanguageState(rootDir);
+    const normalized = collectFallbackWork(state, rootDir, { localeIds: ['am'] }).work;
+    const canonical = collectFallbackWork(state, rootDir, {
+        localeIds: ['am'],
+        useNormalized: false
+    }).work;
+    const key = 'extension.product.displayName';
+
+    assert.equal(parseCommandLine([], rootDir).useNormalized, true);
+    assert.equal(parseCommandLine(['--UseCanonical'], rootDir).useNormalized, false);
+    assert.match(normalized.find((item) => item.key === key).sourceText, /^My Storage Management /u);
+    assert.match(canonical.find((item) => item.key === key).sourceText, /^MyDefrag /u);
+});
 
 test('resumable runner logs each call, retries throttling, and persists immediately', async (t) => {
     const rootDir = createFixture(t);
@@ -116,7 +147,10 @@ test('runner skips targets absent from the live supported-language inventory', a
     assert.equal(result.status, 'completed');
     assert.equal(result.apiCalls, 0);
     assert.equal(result.unsupportedLocales[0].locale, 'am');
-    assert.equal(result.unsupportedLocales[0].entries, 623);
+    assert.equal(
+        result.unsupportedLocales[0].entries,
+        readJson(rootDir, 'language/canonical/component-catalog.json').entries.length
+    );
 });
 
 test('runner stops before a call that cannot fit in the reported quota', async (t) => {

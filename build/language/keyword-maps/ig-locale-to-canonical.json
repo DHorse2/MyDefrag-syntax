@@ -1,82 +1,82 @@
 {
+  "Aha": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "Aha faịlụ": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "Aha ndekọ": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "Akara": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
   "Defragment": {
     "canonical": "Defragment",
     "id": "fileAction.defragment"
   },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
+  "Ewepụ Faịlụ": {
     "canonical": "ExcludeFiles",
     "id": "script.excludeFiles"
   },
-  "ExcludeVolumes": {
+  "Ewepụ Mpịakọta": {
     "canonical": "ExcludeVolumes",
     "id": "script.excludeVolumes"
-  },
-  "FastFill": {
-    "canonical": "FastFill",
-    "id": "fileAction.fastFill"
   },
   "FileActions": {
     "canonical": "FileActions",
     "id": "structure.fileActions"
   },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
+  "HazieByAha": {
+    "canonical": "SortByName",
+    "id": "fileAction.sortByName"
   },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
+  "Họrọ faịlụ": {
     "canonical": "FileSelect",
     "id": "structure.fileSelect"
   },
-  "FragmentCount": {
-    "canonical": "FragmentCount",
-    "id": "volumeCondition.fragmentCount"
+  "Ngwa ngwa ngwa": {
+    "canonical": "FastFill",
+    "id": "fileAction.fastFill"
   },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
+  "Ngwụcha Faịlụ": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
   },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
+  "Nha": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
   },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
+  "Olu Họrọ": {
+    "canonical": "VolumeSelect",
+    "id": "structure.volumeSelect"
   },
-  "SetColor": {
-    "canonical": "SetColor",
-    "id": "setting.setColor"
+  "Olu Ọgwụgwụ": {
+    "canonical": "VolumeEnd",
+    "id": "structure.volumeEnd"
   },
   "SetVariable": {
     "canonical": "SetVariable",
     "id": "setting.setVariable"
   },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
+  "Setịpụrụ Agba": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
   },
-  "SortByName": {
-    "canonical": "SortByName",
-    "id": "fileAction.sortByName"
+  "Ọnụọgụ Fragment": {
+    "canonical": "FragmentCount",
+    "id": "volumeCondition.fragmentCount"
   },
-  "VolumeActions": {
+  "Ọrụ olu": {
     "canonical": "VolumeActions",
     "id": "structure.volumeActions"
   },
-  "VolumeEnd": {
-    "canonical": "VolumeEnd",
-    "id": "structure.volumeEnd"
-  },
-  "VolumeSelect": {
-    "canonical": "VolumeSelect",
-    "id": "structure.volumeSelect"
+  "Ụzọ zuru ezu": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
   }
 }

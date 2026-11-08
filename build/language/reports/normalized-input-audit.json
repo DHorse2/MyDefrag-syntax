@@ -1,0 +1,3050 @@
+{
+  "files": [
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Génereer API-vertaling"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "API-vertaling geweier"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "API-vertaling nie beskikbaar nie"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Kanonieke Engels is nie 'n API-vertaaldoelwit nie."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Voer of vul die huidige lokasiewaarde in voordat jy 'n API-vertaling genereer."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Génereer 'n API-vertaling voordat jy die waarde vervang."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "Api",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L is nie gekonfigureer nie. Stel Deepl Api in voordat jy die toepassing openingspunt."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Herformaat die huidige taalstreek-waarde en API-voorstel"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/af/locales.json",
+      "locale": "af",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L API-oproepe is vir hierdie herbou geaktiveer."
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Bevestiging van taalveranderings; Deep L API-oproepe is geaktiveer"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Bereiding van herbou met Deep L-API-oproepe geaktiveer"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Bereiding met Deep L-API-oproepe geaktiveer"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/af/translator.json",
+      "locale": "af",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "የDeepL API ጥሪዎች ለዚህ መልሶ ግንባታ ነቅተዋል"
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "የቋንቋ ለውጦችን ማረጋገጥ፤ የDeepL API ጥሪዎች ነቅተዋል"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "DeepL API ጥሪዎችን በማብራት መልሶ ግንባታ ማዘጋጀት"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "DeepL API ጥሪዎችን በማብራት መልሶ ግንባታ ማዘጋጀት"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/am/translator.json",
+      "locale": "am",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "إنشاء ترجمة واجهة برمجة التطبيقات (API)"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "تم رفض ترجمة واجهة برمجة التطبيقات (API)"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "ترجمة واجهة برمجة التطبيقات (API) غير متاحة"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "اللغة الإنجليزية القياسية ليست هدفًا لترجمة واجهة برمجة التطبيقات (API)."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "أدخل أو حدد قيمة الإعدادات المحلية الحالية قبل إنشاء ترجمة عبر واجهة برمجة التطبيقات (API)."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "قم بإنشاء ترجمة واجهة برمجة التطبيقات (API) قبل استبدال القيمة."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "Api",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "لم يتم تكوين Deep L. يرجى تكوين Deepl Api قبل تشغيل التطبيق."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "تعديل حجم قيمة الإعدادات المحلية الحالية واقتراح واجهة برمجة التطبيقات (API)"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/ar/locales.json",
+      "locale": "ar",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "API-Übersetzung generieren"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "API-Übersetzung abgelehnt"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "API-Übersetzung nicht verfügbar"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "„Kanonischer Englisch“ ist kein Ziel für API-Übersetzungen."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Geben Sie den Wert für die aktuelle Ländereinstellung ein oder füllen Sie das Feld aus, bevor Sie eine API-Übersetzung generieren."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Erstellen Sie eine API-Übersetzung, bevor Sie den Wert ersetzen."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L ist nicht konfiguriert. Richten Sie die Deepl-API ein, bevor Sie die Anwendung starten."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Anpassung des aktuellen Sprachregion-Werts und API-Vorschlag"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/de/locales.json",
+      "locale": "de",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Für diesen Neuaufbau sind Deep-L-API-Aufrufe aktiviert."
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Validierung von Sprachänderungen; Deep-L-API-Aufrufe sind aktiviert"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Vorbereitung des Neuaufbaus mit aktivierten Deep-L-API-Aufrufen"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Speichern mit aktivierten Deep-L-API-Aufrufen vorbereiten"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/de/translator.json",
+      "locale": "de",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Generar traducción de la API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Traducción de la API rechazada"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Traducción de la API no disponible"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "El inglés canónico no es un destino de traducción de la API."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Introduce o rellena el valor de la configuración regional actual antes de generar una traducción mediante la API."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Genera una traducción de la API antes de sustituir el valor."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L no está configurado. Configura la API de Deep L antes de iniciar la aplicación."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ajustar el valor actual de la configuración regional y sugerencia sobre la API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/es/locales.json",
+      "locale": "es",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Las llamadas a la API de Deep L están habilitadas para esta reconstrucción"
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Validación de los cambios de idioma; las llamadas a la API de Deep L están habilitadas"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Preparación de la reconstrucción con las llamadas a la API de Deep L habilitadas"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Preparación del guardado con las llamadas a la API de Deep L activadas"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/es/translator.json",
+      "locale": "es",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "تولید ترجمهٔ API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "مترجمی API رد شد"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "مترجم API در دسترس نیست"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "انگلیسی کانونیکال هدف ترجمهٔ API نیست."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "قبل از تولید ترجمهٔ API، مقدار فعلی منطقه زبانی را وارد یا پر کنید."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "قبل از جایگزینی مقدار، یک ترجمهٔ API تولید کنید."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "Api",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L پیکربندی نشده است. قبل از راه‌اندازی برنامه، Deepl Api را تنظیم کنید."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "تغییر اندازه مقدار منطقه زبانی فعلی و پیشنهاد API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/fa/locales.json",
+      "locale": "fa",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "فراخوانی‌های API دیپ ال برای این بازسازی فعال شده‌اند."
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "آماده‌سازی بازسازی با فعال بودن فراخوانی‌های API دیپ ال"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "آماده‌سازی ذخیره با فعال بودن فراخوانی‌های API دیپ ال"
+        }
+      ],
+      "entryCount": 3,
+      "file": "language/locales/fa/translator.json",
+      "locale": "fa",
+      "occurrenceCount": 3,
+      "words": [
+        {
+          "count": 3,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Générer la traduction de l'API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Traduction de l'API rejetée"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Traduction de l'API indisponible"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "L'anglais standard ne fait pas partie des langues cibles de traduction de l'API."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Saisissez ou définissez la valeur de la région linguistique actuelle avant de générer une traduction via l'API."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Générez une traduction de l'API avant de remplacer la valeur."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L n'est pas configuré. Configurez l'API Deepl avant de lancer l'application."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Modification de la valeur actuelle des paramètres régionaux et suggestion concernant l'API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/fr/locales.json",
+      "locale": "fr",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Les appels à l'API Deep L sont activés pour cette reconstruction"
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Validation des modifications apportées au langage ; les appels à l'API Deep L sont activés"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Préparation de la reconstruction avec les appels à l'API Deep L activés"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Préparation de la sauvegarde avec les appels à l'API Deep L activés"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/fr/translator.json",
+      "locale": "fr",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Générer la traduction de l'API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Traduction de l'API rejetée"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Traduction de l'API non disponible"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "L'anglais standard ne fait pas partie des langues cibles de l'API."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Entrez ou définissez la valeur de la configuration régionale actuelle avant de générer une traduction via l'API."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Générer une traduction de l'API avant de remplacer la valeur."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L n'est pas configuré. Configurez l'API Deepl avant de lancer l'application."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Modification de la valeur actuelle des paramètres régionaux et suggestion d'API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/fr-CA/locales.json",
+      "locale": "fr-CA",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Les appels à l'API Deep L sont activés pour cette reconstruction"
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Validation des modifications apportées au langage; les appels à l'API Deep L sont activés"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Préparation de la reconstruction avec les appels à l'API Deep L activés"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Préparation de la sauvegarde avec les appels à l'API Deep L activés"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/fr-CA/translator.json",
+      "locale": "fr-CA",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Samarda fassara ta API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "An ƙi fassara API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ba a samu fassara ta API ba"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "mai iko Turanci ba manufa ce ta fassara API ba."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Shigar ko cika ƙimar yankin halin yanzu kafin ƙirƙirar fassarar API."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Samarda fassarar API kafin maye gurbin ƙimar."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "Api",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L ba a saita ba. Saita Deepl Api kafin kaddamar da manhaja."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Daidaita girman ƙimar yankin na yanzu da shawarar API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/ha/locales.json",
+      "locale": "ha",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "An kunna kiran Deep L API don wannan sake ginawa."
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Tabbatar da canje-canjen harshe; an kunna kiran API na Deep L"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ana shirya sake ginawa tare da kunna kiran API na Deep L"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ana shirya ajiya yayin da aka kunna kiran API na Deep L"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/ha/translator.json",
+      "locale": "ha",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Mepụta ntụgharị API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "A jụrụ ntụgharị API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "A naghị enye ntụgharị API"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "ikike Asụsụ Bekee abụghị ebumnuche ntụgharị API."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Tinye ma ọ bụ jupụta uru mpaghara ugbu a tupu ịmepụta ntụgharị API."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Mepụta ntụgharị API tupu ị dochie uru ahụ."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "Api",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L enweghị nhazi. Tọọ Deepl Api tupu ịmalite ngwa ahụ."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Gbanwee nha uru mpaghara ugbu a na aro API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/ig/locales.json",
+      "locale": "ig",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "A kwadoro oku API Deep L maka imegharị a."
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Nnwale mgbanwe asụsụ; a kwadoro oku API Deep L"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Na-akwadebe imeghari na arịrịọ API Deep L gbanyere"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Na-akwadebe ịchekwa mgbe arịrịọ API Deep L gbanyere"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/ig/translator.json",
+      "locale": "ig",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Gerar tradução da API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Tradução da API rejeitada"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Tradução da API indisponível"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "O inglês canónico não é um destino de tradução da API."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Introduza ou preencha o valor da localização atual antes de gerar uma tradução da API."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Gere uma tradução da API antes de substituir o valor."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "O Deep L não está configurado. Defina a API do Deep L antes de iniciar a aplicação."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Redimensionar o valor atual da localização e sugestão de API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/pt/locales.json",
+      "locale": "pt",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "As chamadas à API do Deep L estão ativadas para esta reconstrução"
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Validação das alterações na linguagem; as chamadas à API do Deep L estão ativadas"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Preparar a recompilação com as chamadas à API do Deep L ativadas"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Preparar o «Guardar» com as chamadas à API do Deep L ativadas"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/pt/translator.json",
+      "locale": "pt",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Сгенерировать перевод API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Отказ в переводе API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Перевод API недоступен"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Стандартный английский язык не является целевым языком перевода API."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Перед генерацией перевода через API введите или заполните значение «Текущая локаль»."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Перед заменой значения сгенерируйте перевод API."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L не настроен. Перед запуском приложения необходимо настроить Deepl API."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Изменение размера текущего значения локали и предложение по API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/ru/locales.json",
+      "locale": "ru",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Для данной перекомпиляции включены вызовы API Deep L"
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Проверка изменений в языке; вызовы Deep L API включены"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Подготовка к пересборке с включенными вызовами Deep L API"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Подготовка к сохранению с включенными вызовами API Deep L"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/ru/translator.json",
+      "locale": "ru",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Tengeneza tafsiri ya API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ufasiri wa API umekataliwa"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Tafsiri ya API haipatikani"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Kiingereza cha kanoniki si lengo la tafsiri ya API."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ingiza au jaza thamani ya eneo la sasa kabla ya kutengeneza tafsiri ya API."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Tengeneza tafsiri ya API kabla ya kubadilisha thamani."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "Api",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L haijasetiwa. Weka Deepl Api kabla ya kuanzisha programu."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Badilisha ukubwa wa thamani ya eneo la sasa na pendekezo la API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/sw/locales.json",
+      "locale": "sw",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Miito ya API ya Deep L imewezeshwa kwa ujenzi upya huu."
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Kuthibitisha mabadiliko ya lugha; miito ya API ya Deep L imewezeshwa"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Kuandaa ujenzi upya huku miito ya API ya Deep L ikiwa imewasilishwa"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Kuandaa kuhifadhi huku wito za API za Deep L zikiwa zimewezeshwa"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/sw/translator.json",
+      "locale": "sw",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Yenza inguqulelo ye-API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Uguqulelo lwe-API alwamkelwanga"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Akukho uguqulelo lwe-API."
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "IsiNgesi esingumgangatho awusiso isiphumo sokuguqulela se-API."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Faka okanye uzalise ixabiso lendawo yangoku phambi kokuba wenze inguqulelo ye-API."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Yenzani uguqulelo lwe-API phambi kokuba nitshintshe ixabiso."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "Api",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "I-Deep L ayimiselwanga. Misa i-Deepl Api phambi kokuqalisa i-application."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Lungisa ngokutsha ixabiso lendawo yangoku kunye nesiphakamiso se-API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/xh/locales.json",
+      "locale": "xh",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ii-izicelo ze-Deep L API zivulweyo kolu kwakhiwa ngokutsha."
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ukuqinisekiswa kotshintsho lwolwimi; Izibizo ze-API ze-Deep L zivuliwe"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Kulungiselelwa ukwakha ngokutsha, izibizo ze-API ze-Deep L zivuliwe"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ukulungiselela ugcino nge-Deep L API izicelo zivuliwe"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/xh/translator.json",
+      "locale": "xh",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ṣẹ̀dá ìtumọ̀ API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Kò gba ìtumọ̀ API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ìtumọ̀ API kò sí"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Gẹ̀ẹ́sì alaṣẹ kìí ṣe àfojúsùn ìtumọ̀ API."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Tẹ tàbí kí o kún iye agbègbè lọ́wọ́lọ́wọ́ kí o tó ṣe ìtúmọ̀ API."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ṣẹ̀dá ìtumọ̀ API kí o tó rọ́pò iye náà."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Yí iye àgbègbè lọ́wọ́lọ́wọ́ àti àbá API padà"
+        }
+      ],
+      "entryCount": 7,
+      "file": "language/locales/yo/locales.json",
+      "locale": "yo",
+      "occurrenceCount": 7,
+      "words": [
+        {
+          "count": 7,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "A ti mú kí àwọn ìpè API DeepL ṣiṣẹ́ fún àtúnṣe yìí"
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ṣiṣedede awọn iyipada ede; Awọn ipe API DeepL ṣiṣẹ"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ṣíṣe àtúnṣe tó péye pẹ̀lú àwọn ìpè DeepL API tí a ti pa"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ń ṣe ìmúrasílẹ̀ ìfipamọ́ pẹ̀lú àwọn ìpè DeepL API tí a ṣiṣẹ́"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/yo/translator.json",
+      "locale": "yo",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "生成 API 翻译"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "API 翻译被拒绝"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "API 翻译不可用"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "标准英语不是 API 的翻译目标。"
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "在生成 API 翻译之前，请输入或填写“当前区域设置”的值。"
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "在替换该值之前，先生成 API 翻译。"
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Deep L 尚未配置。请在启动应用程序前设置 Deepl API。"
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "调整当前区域设置值及 API 建议"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/zh-Hans/locales.json",
+      "locale": "zh-Hans",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "此重建已启用 Deep L API 调用"
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "验证语言更改；已启用 Deep L API 调用"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "在启用 Deep L API 调用的情况下准备重建"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "在启用 Deep L API 调用时准备保存"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/zh-Hans/translator.json",
+      "locale": "zh-Hans",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.locales.action.generateApiTranslation.label.text",
+          "id": "locales.action.generateApiTranslation.label",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Khiqiza ukuguqulelwa kwe-API"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationRejected.text.text",
+          "id": "locales.message.apiTranslationRejected.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ukuhumusha kwe-API kwenqatshwe"
+        },
+        {
+          "field": "entries.locales.message.apiTranslationUnavailable.text.text",
+          "id": "locales.message.apiTranslationUnavailable.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Akutholakali ukuhumusha i-API"
+        },
+        {
+          "field": "entries.locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text.text",
+          "id": "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "IsiNgisi esisemthethweni asiyona inhloso yokuhumusha ye-API."
+        },
+        {
+          "field": "entries.locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text.text",
+          "id": "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Faka noma ugcwalise inani lesifunda samanje ngaphambi kokukhiqiza ukuhumusha kwe-API."
+        },
+        {
+          "field": "entries.locales.message.generateAnApiTranslationBeforeReplacingTheValue.text.text",
+          "id": "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Khiqiza ukuhumusha kwe-API ngaphambi kokushintsha inani."
+        },
+        {
+          "field": "entries.locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text.text",
+          "id": "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "I-Deep L ayihlelwanga. Setha i-Deepl API ngaphambi kokuqalisa uhlelo lokusebenza."
+        },
+        {
+          "field": "entries.locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text.text",
+          "id": "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ukuguqula usayizi wenani lendawo lamanje kanye nesiphakamiso se-API"
+        }
+      ],
+      "entryCount": 8,
+      "file": "language/locales/zu/locales.json",
+      "locale": "zu",
+      "occurrenceCount": 8,
+      "words": [
+        {
+          "count": 8,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    },
+    {
+      "entries": [
+        {
+          "field": "entries.translator.message.deeplApiCallsAreEnabledForThisRebuild.text.text",
+          "id": "translator.message.deeplApiCallsAreEnabledForThisRebuild.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Izicelo ze-API ze-Deep L sezivuliwe kulokhu kwakhiwa kabusha."
+        },
+        {
+          "field": "entries.translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text.text",
+          "id": "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ukuqinisekisa izinguquko zolimi; izicelo ze-API ze-Deep L sezivuliwe"
+        },
+        {
+          "field": "entries.translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Kulungiselelwa ukwakhiwa kabusha ngokuvula izicelo ze-API ze-Deep L"
+        },
+        {
+          "field": "entries.translator.ui.preparingSaveWithDeeplApiCallsEnabled.text.text",
+          "id": "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text",
+          "matches": [
+            {
+              "input": "API",
+              "matchedText": "API",
+              "output": "Application Programming Interface"
+            }
+          ],
+          "text": "Ukulungiselela ukulondoloza ngemibizo ye-API ye-Deep L esebenzayo"
+        }
+      ],
+      "entryCount": 4,
+      "file": "language/locales/zu/translator.json",
+      "locale": "zu",
+      "occurrenceCount": 4,
+      "words": [
+        {
+          "count": 4,
+          "input": "API",
+          "output": "Application Programming Interface"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "input": "MyDefrag",
+      "output": "My Storage Management"
+    },
+    {
+      "input": "Defragmenter",
+      "output": "Storage Manager"
+    },
+    {
+      "input": "Open",
+      "output": "Show"
+    },
+    {
+      "input": "activate",
+      "output": "enable"
+    },
+    {
+      "input": "settings",
+      "output": "options"
+    },
+    {
+      "input": "initialize",
+      "output": "prepare"
+    },
+    {
+      "input": "begin",
+      "output": "start"
+    },
+    {
+      "input": "end",
+      "output": "finish"
+    },
+    {
+      "input": "depth",
+      "output": "nesting level"
+    },
+    {
+      "input": "maintenance",
+      "output": "upkeep"
+    },
+    {
+      "input": "stop",
+      "output": "halt"
+    },
+    {
+      "input": "build",
+      "output": "creation process"
+    },
+    {
+      "input": "data",
+      "output": "information"
+    },
+    {
+      "input": "English",
+      "output": "English language"
+    },
+    {
+      "input": "folders",
+      "output": "directories"
+    },
+    {
+      "input": "fixed",
+      "output": "resolved"
+    },
+    {
+      "input": "include",
+      "output": "included file"
+    },
+    {
+      "input": "template",
+      "output": "pattern model"
+    },
+    {
+      "input": "revert",
+      "output": "undo"
+    },
+    {
+      "input": "rollback",
+      "output": "restoration"
+    },
+    {
+      "input": "debug",
+      "output": "error checking"
+    },
+    {
+      "input": "mark",
+      "output": "label as"
+    },
+    {
+      "input": "duplicate",
+      "output": "repeated"
+    },
+    {
+      "input": "builds",
+      "output": "creation processes"
+    },
+    {
+      "input": "agent",
+      "output": "automated assistant"
+    },
+    {
+      "input": "save",
+      "output": "save changes"
+    },
+    {
+      "input": "preload",
+      "output": "startup loader"
+    },
+    {
+      "input": "syntax",
+      "output": "grammar rules"
+    },
+    {
+      "input": "multiline",
+      "output": "multiple lines"
+    },
+    {
+      "input": "diagnostics",
+      "output": "problem reports"
+    },
+    {
+      "input": "explorer",
+      "output": "browser"
+    },
+    {
+      "input": "calls",
+      "output": "requests"
+    },
+    {
+      "input": "preview",
+      "output": "preliminary view"
+    },
+    {
+      "input": "logging",
+      "output": "activity recording"
+    },
+    {
+      "input": "variable",
+      "output": "changeable value"
+    },
+    {
+      "input": "window",
+      "output": "screen window"
+    },
+    {
+      "input": "artifact",
+      "output": "output file"
+    },
+    {
+      "input": "candidate",
+      "output": "proposal"
+    },
+    {
+      "input": "candidates",
+      "output": "proposals"
+    },
+    {
+      "input": "canonical",
+      "output": "authoritative"
+    },
+    {
+      "input": "fallback",
+      "output": "alternate choice"
+    },
+    {
+      "input": "glob",
+      "output": "wildcard"
+    },
+    {
+      "input": "hook",
+      "output": "integration point"
+    },
+    {
+      "input": "keywords",
+      "output": "key terms"
+    },
+    {
+      "input": "locale",
+      "output": "language region"
+    },
+    {
+      "input": "locales",
+      "output": "language regions"
+    },
+    {
+      "input": "panel",
+      "output": "window section"
+    },
+    {
+      "input": "parser",
+      "output": "syntax analyzer"
+    },
+    {
+      "input": "schema",
+      "output": "data structure"
+    },
+    {
+      "input": "semantic",
+      "output": "meaning-based"
+    },
+    {
+      "input": "string",
+      "output": "text value"
+    },
+    {
+      "input": "strings",
+      "output": "text values"
+    },
+    {
+      "input": "syntactically",
+      "output": "structurally"
+    },
+    {
+      "input": "token",
+      "output": "text unit"
+    },
+    {
+      "input": "verbosity",
+      "output": "detail"
+    },
+    {
+      "input": "js",
+      "output": "JavaScript"
+    },
+    {
+      "input": "char",
+      "output": "character"
+    },
+    {
+      "input": "pos",
+      "output": "position"
+    },
+    {
+      "input": "desc",
+      "output": "description"
+    },
+    {
+      "input": "prev",
+      "output": "previous"
+    },
+    {
+      "input": "Eof",
+      "output": "end of file"
+    },
+    {
+      "input": "dbg",
+      "output": "debug"
+    },
+    {
+      "input": "kw",
+      "output": "keyword"
+    },
+    {
+      "input": "API",
+      "output": "Application Programming Interface"
+    },
+    {
+      "input": "config",
+      "output": "configuration"
+    },
+    {
+      "input": "init",
+      "output": "initialization"
+    },
+    {
+      "input": "ini",
+      "output": "initialization"
+    },
+    {
+      "input": "MYDC",
+      "output": "My Storage Management"
+    }
+  ],
+  "schemaVersion": "1.0",
+  "scope": "Non-English authored locale entry and keyword text fields",
+  "source": "language/canonical/normalized-words.json",
+  "status": "partial",
+  "summary": {
+    "entriesScanned": 12444,
+    "entriesWithMatches": 190,
+    "filesScanned": 187,
+    "filesWithMatches": 32,
+    "localesScanned": 17,
+    "occurrences": 190
+  }
+}

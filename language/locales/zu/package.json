@@ -7,11 +7,11 @@
       "status": "machine-generated"
     },
     "package.description": {
-      "text": "Ukugqamisa isakhiwo solimi lokubhala i-My Defragmenter",
+      "text": "Ukugqamisa isakhiwo solimi lokubhala i-Ukuphathwa Kwesitoreji Sami",
       "status": "machine-generated"
     },
     "package.metadata.description": {
-      "text": "Ukugqamisa isakhiwo solimi lokubhala i-My Defragmenter",
+      "text": "Ukugqamisa isakhiwo solimi lokubhala i-Ukuphathwa Kwesitoreji Sami",
       "status": "machine-generated"
     },
     "package.metadata.publisher": {
@@ -19,7 +19,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.userDir.description": {
-      "text": "Uhlu lwemafayela lwedatha yomsebenzisi we-My Defragmenter.",
+      "text": "Uhlu lwemafayela lwedatha yomsebenzisi we-Ukuphathwa Kwesitoreji Sami.",
       "status": "machine-generated"
     },
     "package.path.repository.url": {
@@ -31,15 +31,15 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.logDir.description": {
-      "text": "Uhlu lwefayela lokurekhoda ze-My Defragmenter.",
+      "text": "Uhlu lwefayela lokurekhoda ze-Ukuphathwa Kwesitoreji Sami.",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.debugOn.description": {
-      "text": "Vumela ukurekhoda amaphutha kwesandiso se-My Defragmenter.",
+      "text": "Vumela ukurekhoda amaphutha kwesandiso se-Ukuphathwa Kwesitoreji Sami.",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
-      "text": "Izinga lokuningiliziwe lokuxazulula izingxenye zohlelo lwami. Ukuqopha amaphutha kudinga ukuthi i-mydfrg debug ivuliwe.",
+      "text": "Izinga lokuningiliziwe lokuxazulula izingxenye zohlelo lwami. Ukuqopha amaphutha kudinga ukuthi isilungiselelo se-mydfrg.debugOn sinikwe amandla.",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
@@ -63,7 +63,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
-      "text": "Amaphethini e-Glob okungafanele ahlanganiswe ekuqinisekisweni kwe-My Defragmenter",
+      "text": "Amaphethini afanayo wefayela okungafanele ahlanganiswe ekuqinisekisweni kwe-Ukuphathwa Kwesitoreji Sami",
       "status": "machine-generated"
     },
     "package.contributes.languages.aliases": {
@@ -75,63 +75,63 @@
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.next.title": {
-      "text": "I-Defragmenter yami: Ukuhlolwa okulandelayo",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Ukuhlolwa okulandelayo",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.previous.title": {
-      "text": "I-Defragmenter yami: Ukuhlolwa kwangaphambilini",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Ukuhlolwa kwangaphambilini",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.nextFile.title": {
-      "text": "I-Defragmenter yami: Ifayela elilandelayo",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Ifayela elilandelayo",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.fixedItem.title": {
-      "text": "I-Defragmenter yami: Ukuhlolwa kukaMark kulungisiwe",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Ukuhlolwa kukaMark kulungisiwe",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
-      "text": "I-Defragmenter yami: Unganaki Ukuhlola",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Unganaki Ukuhlola",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.skipItem.title": {
-      "text": "I-Defragmenter yami: Dlula ekuhloleni",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Dlula ekuhloleni",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
-      "text": "Umhlanganisi Wami: Thumela Ukuhlolwa ku-Agent",
+      "text": "Ukuphathwa Kwesitoreji Sami: Thumela Umbiko Wokuxilonga Kumsizi Ozenzekelayo",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.top.title": {
-      "text": "I-Defragmenter yami: Ukuhlolwa kokuqala",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Ukuhlolwa kokuqala",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.reset.title": {
-      "text": "I-Defragmenter yami: Seta kabusha ukuhamba kokuxilonga",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Seta kabusha ukuhamba kokuxilonga",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
-      "text": "I-Defragmenter yami: Vuselela Ukuhlolwa",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Vuselela Ukuhlolwa",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.filter.title": {
-      "text": "I-Defragmenter yami: Ukuhlunga kwezokuxilonga",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Ukuhlunga kwezokuxilonga",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.clearFilter.title": {
-      "text": "I-Defragmenter yami: Sula isihlungi sokuxilonga",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Sula isihlungi sokuxilonga",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
-      "text": "I-Defragmenter yami: Khombisa ukuhlolwa njengomuthi",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Khombisa ukuhlolwa njengomuthi",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
-      "text": "I-Defragmenter yami: Khombisa ukuhlolwa njengethebula",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Khombisa ukuhlolwa njengethebula",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
-      "text": "I-Defragmenter yami: Vala i-Diagnostics Explorer",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Vala i-imibiko yenkinga isiphequluli",
       "status": "machine-generated"
     }
   }

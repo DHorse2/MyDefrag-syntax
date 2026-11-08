@@ -15,7 +15,7 @@
       "status": "machine-generated"
     },
     "extension.message.noActiveDocument.warning": {
-      "text": "Es ist kein „My Defragmenter“-Dokument aktiv.",
+      "text": "Es ist kein „Meine Speicherverwaltung“-Dokument aktiv.",
       "status": "machine-generated"
     },
     "extension.product.displayName": {
@@ -35,7 +35,19 @@
       "status": "machine-generated"
     },
     "extension.window.channelName": {
-      "text": "Die Syntax meines Defragmentierungsprogramms",
+      "text": "Die Grammatikregeln meines Defragmentierungsprogramms",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "Nächster Kandidat: ${dir} und ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "searchWorkspace: ${uri.toString()} konnte nicht gelesen werden: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "extension.js:aktivieren:Optionen:Vorbereiten Fehler bei der Initialisierung: ${errResult.message}",
       "status": "machine-generated"
     }
   }

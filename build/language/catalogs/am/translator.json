@@ -2,3375 +2,4165 @@
   "component": "translator",
   "entries": {
     "translator.accessibility.allowDeeplCallsDuringSaveAndRebuild.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Allow DeepL calls during Save and Rebuild"
+      "status": "machine-generated",
+      "text": "በማስቀመጥ እና በመገንባት ጊዜ የDeepL ጥሪዎችን ይፍቀዱ"
     },
     "translator.accessibility.applicationNavigation.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Application navigation"
+      "status": "machine-generated",
+      "text": "የመተግበሪያ አሰሳ"
     },
     "translator.accessibility.buildCommandOutput.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Build command output"
+      "status": "machine-generated",
+      "text": "የግንባታ ትዕዛዝ ውጤት"
     },
     "translator.accessibility.candidateStatus.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status"
+      "status": "machine-generated",
+      "text": "የእጩ ሁኔታ"
+    },
+    "translator.accessibility.catalogRecordValue.label": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "recordKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገብ {recordKey}"
     },
     "translator.accessibility.closeOperationResult.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Close operation result"
+      "status": "machine-generated",
+      "text": "የክዋኔ ውጤት ዝጋ"
     },
     "translator.accessibility.closeValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "windowLabel"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Close {windowLabel}"
+      "status": "machine-generated",
+      "text": "{windowLabel} ዝጋ"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተጠናቀቁ የጅምር ደረጃዎች"
     },
     "translator.accessibility.componentAssignedToValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component assigned to {filePath}"
+      "status": "machine-generated",
+      "text": "ለ{filePath} የተመደበ አካል"
     },
     "translator.accessibility.componentDescription.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component description"
+      "status": "machine-generated",
+      "text": "የክፍል መግለጫ"
     },
     "translator.accessibility.componentForAddedMigrationFiles.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component for added migration files"
+      "status": "machine-generated",
+      "text": "ክፍል ለተጨማሪ የፍልሰት ፋይሎች"
     },
     "translator.accessibility.componentForScannedMigrationFile.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component for scanned migration file"
+      "status": "machine-generated",
+      "text": "የተቃኘ የፍልሰት ፋይል አካል"
     },
     "translator.accessibility.componentForScannedMigrationFiles.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component for scanned migration files"
+      "status": "machine-generated",
+      "text": "የተቃኙ የፍልሰት ፋይሎች አካል"
     },
     "translator.accessibility.componentIdentifier.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component identifier"
+      "status": "machine-generated",
+      "text": "የክፍሎች መለያ"
     },
     "translator.accessibility.defaultPreviewMode.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Default preview mode"
+      "status": "machine-generated",
+      "text": "ነባሪ የቅድመ እይታ ሁነታ"
     },
     "translator.accessibility.editCatalogRecordValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "entryKey"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit catalog record {entryKey}"
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገብን ያርትዑ {entryKey}"
+    },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "እጩዎችን በምድብ ያጣሩ"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "እጩዎችን በምድብ ያጣሩ"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "እጩዎችን በሚድል ያጣሩ"
     },
     "translator.accessibility.filterCandidatesByStatus.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filter candidates by status"
+      "status": "machine-generated",
+      "text": "እጩዎችን በሁኔታ ያጣሩ"
+    },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገቦችን በምድብ ያጣሩ"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገቦችን በክፍል ያጣሩ"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገቦችን በሚድል ያጣሩ"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገቦችን በሁኔታ ያጣሩ"
     },
     "translator.accessibility.filterMigrationSourceFiles.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የፍልሰት ምንጭ ፋይሎችን ያጣሩ"
+    },
+    "translator.accessibility.languageBuildOptions.label": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Filter migration source files"
+      "text": "Language creation process options"
     },
     "translator.accessibility.languageReportArtifactText.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact text"
+      "status": "machine-generated",
+      "text": "የቋንቋ ሪፖርት ቅርስ ጽሑፍ"
     },
     "translator.accessibility.localeTemplate.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale template"
+      "status": "machine-generated",
+      "text": "የአካባቢ አብነት"
     },
     "translator.accessibility.maximizeValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "windowLabel"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maximize {windowLabel}"
+      "status": "machine-generated",
+      "text": "{windowLabel}ን ከፍ አድርግ"
     },
     "translator.accessibility.migrationCandidatesForValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration candidates for {filePath}"
+      "status": "machine-generated",
+      "text": "የ{filePath} የፍልሰት እጩዎች"
     },
     "translator.accessibility.minimizeValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "windowLabel"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Minimize {windowLabel}"
+      "status": "machine-generated",
+      "text": "{windowLabel}ን አሳንስ"
     },
     "translator.accessibility.normalizedText.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Normalized text"
+      "status": "machine-generated",
+      "text": "መደበኛ ጽሑፍ"
     },
     "translator.accessibility.openValueAtLineValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath",
         "candidateLine"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open {filePath} at line {candidateLine}"
+      "status": "machine-generated",
+      "text": "በመስመር ላይ {filePath} ይክፈቱ {candidateLine}"
     },
     "translator.accessibility.operationInProgress.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Operation in progress"
+      "status": "machine-generated",
+      "text": "ክወና በሂደት ላይ"
+    },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "እጩዎችን በመስመር ይዘዙ"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገቦችን በምንጭ መስመር ይዘዙ"
     },
     "translator.accessibility.removeValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Remove {filePath}"
+      "status": "machine-generated",
+      "text": "{filePath} አስወግድ"
     },
     "translator.accessibility.runtimeComponent.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Runtime component"
+      "status": "machine-generated",
+      "text": "የማስኬጃ ጊዜ አካል"
     },
     "translator.accessibility.selectValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select {filePath}"
+      "status": "machine-generated",
+      "text": "{filePath}ን ምረጥ"
     },
     "translator.accessibility.selectedComponent.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected component"
+      "status": "machine-generated",
+      "text": "የተመረጠው አካል"
     },
     "translator.accessibility.showComponentsHome.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Show Components home"
+      "status": "machine-generated",
+      "text": "ክፍሎችን አሳይ መነሻ"
     },
     "translator.accessibility.suggestedKey.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተጠቆመ ቁልፍ"
+    },
+    "translator.accessibility.useNormalizedEnglishForFallbacksAndAutomatedTranslation.label": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Suggested key"
+      "text": "Use normalized English language for fallbacks and automated translation"
     },
     "translator.accessibility.viewMigrationCandidatesForValue.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View migration candidates for {filePath}"
+      "status": "machine-generated",
+      "text": "የ{filePath} የፍልሰት እጩዎችን ተመልከት"
     },
     "translator.accessibility.windowControls.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Window controls"
+      "status": "machine-generated",
+      "text": "መስኮት መቆጣጠሪያዎች"
     },
     "translator.action.componentCatalog.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog"
+      "status": "machine-generated",
+      "text": "የክፍሎች ካታሎግ"
     },
     "translator.action.diagnosticMessages.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic Messages"
+      "status": "machine-generated",
+      "text": "የምርመራ መልዕክቶች"
     },
     "translator.action.exit.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ውጣ"
+    },
+    "translator.action.normalizedWords.label": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Exit"
+      "text": "Normalized Words"
     },
     "translator.action.previewModes.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Preview Modes"
+      "status": "machine-generated",
+      "text": "የቅድመ እይታ ሁነታዎች"
     },
     "translator.action.rebuild.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Rebuild"
+      "status": "machine-generated",
+      "text": "ዳግም ግንባታ"
     },
     "translator.action.reloadData.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reload data"
+      "status": "machine-generated",
+      "text": "ውሂብ እንደገና ጫን"
     },
     "translator.action.revert.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Revert"
+      "status": "machine-generated",
+      "text": "መልሶ መልስ"
     },
     "translator.action.save.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save"
+      "status": "machine-generated",
+      "text": "አስቀምጥ"
     },
     "translator.action.semanticKeywords.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Semantic Keywords"
+      "status": "machine-generated",
+      "text": "የትርጉም ቁልፍ ቃላት"
     },
     "translator.action.stopBuild.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Stop build"
+      "status": "machine-generated",
+      "text": "ግንባታ አቁም"
     },
     "translator.action.validate.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validate"
+      "status": "machine-generated",
+      "text": "ማረጋገጫ"
     },
     "translator.dialog.addFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add files"
+      "status": "machine-generated",
+      "text": "ፋይሎችን አክል"
     },
     "translator.dialog.addMigrationSourceFiles.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add migration source files"
+      "status": "machine-generated",
+      "text": "የፍልሰት ምንጭ ፋይሎችን አክል"
     },
     "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Authored files under language/locales are always preserved."
+      "status": "machine-generated",
+      "text": "በlanguage/locales ስር የተፃፉ ፋይሎች ሁል ጊዜ ተጠብቀዋል።"
     },
     "translator.dialog.cancel.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Cancel"
+      "status": "machine-generated",
+      "text": "ሰርዝ"
     },
     "translator.dialog.close.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Close"
+      "status": "machine-generated",
+      "text": "ዝጋ"
     },
     "translator.dialog.componentCatalogAddRecord.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog Add Record"
+      "status": "machine-generated",
+      "text": "የክፍል ካታሎግ መዝገብ ያክሉ"
     },
     "translator.dialog.componentCatalogEditRecord.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog Edit Record"
+      "status": "machine-generated",
+      "text": "የክፍል ካታሎግ መዝገብ አርትዕ"
     },
     "translator.dialog.confirmAuthoritativeChanges.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Confirm authoritative changes"
+      "status": "machine-generated",
+      "text": "ተዓማኒነት ያላቸውን ለውጦች ያረጋግጡ"
     },
     "translator.dialog.deleteCatalogOnSave.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete catalog on Save"
+      "status": "machine-generated",
+      "text": "ካታሎግ ላይ ሰርዝ አስቀምጥ"
     },
     "translator.dialog.deleteGeneratedCatalogDataValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "catalogRemovals"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete generated catalog data: {catalogRemovals}"
+      "status": "machine-generated",
+      "text": "የመነጨውን የካታሎግ ውሂብ ሰርዝ፡ {catalogRemovals}"
     },
     "translator.dialog.deleteLocaleValue.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Delete locale {id}?"
+      "status": "machine-generated",
+      "text": "የአካባቢውን {id} ይሰርዙ?"
     },
     "translator.dialog.discardAndReload.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard and reload"
+      "status": "machine-generated",
+      "text": "ይጣሉ እና እንደገና ይጫኑ"
     },
     "translator.dialog.discardUnsavedChanges.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard unsaved changes?"
+      "status": "machine-generated",
+      "text": "ያልተቀመጡ ለውጦችን ያስወግዱ?"
     },
     "translator.dialog.draftReverted.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Draft reverted"
+      "status": "machine-generated",
+      "text": "ረቂቁ ተመልሷል"
     },
     "translator.dialog.exitWithoutSaving.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Exit without saving"
+      "status": "machine-generated",
+      "text": "ሳይቆጥቡ ይውጡ"
     },
     "translator.dialog.generatedLocaleCatalogsWillBePreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated locale catalogs will be preserved."
+      "status": "machine-generated",
+      "text": "የመነጩ የአካባቢ ካታሎጎች ይቀመጣሉ።"
     },
     "translator.dialog.keepCatalogRecommended.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Keep catalog (recommended)"
+      "status": "machine-generated",
+      "text": "ካታሎግን ያስቀምጡ (የሚመከር)"
     },
     "translator.dialog.languageBuildIsRunning.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language build is running"
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታ እየሰራ ነው"
     },
     "translator.dialog.languageRebuildFailed.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language rebuild failed"
+      "status": "machine-generated",
+      "text": "የቋንቋ መልሶ ግንባታ አልተሳካም"
     },
     "translator.dialog.languageRebuildSucceeded.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language rebuild succeeded"
+      "status": "machine-generated",
+      "text": "የቋንቋ መልሶ ግንባታ ተሳክቷል"
     },
     "translator.dialog.maximize.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maximize"
+      "status": "machine-generated",
+      "text": "ከፍተኛ ያድርጉት"
     },
     "translator.dialog.minimize.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Minimize"
+      "status": "machine-generated",
+      "text": "አሳንስ"
     },
     "translator.dialog.mydefragLanguageMaintenance.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "MyDefrag Language Maintenance"
+      "status": "machine-generated",
+      "text": "የእኔ ዴፍራግ ቋንቋ ጥገና"
     },
     "translator.dialog.noAuthoritativeFilesWillChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No authoritative files will change."
+      "status": "machine-generated",
+      "text": "ምንም ተዓማኒነት ያላቸው ፋይሎች አይለወጡም።"
     },
     "translator.dialog.noFilesWillChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files will change."
+      "status": "machine-generated",
+      "text": "ምንም ፋይሎች አይለወጡም።"
     },
     "translator.dialog.nothingToSave.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Nothing to save"
+      "status": "machine-generated",
+      "text": "ምንም የሚቀመጥ ነገር የለም"
     },
     "translator.dialog.returnToBuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Return to build"
+      "status": "machine-generated",
+      "text": "ወደ ግንባታው ይመለሱ"
     },
     "translator.dialog.revertFailed.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Revert failed"
+      "status": "machine-generated",
+      "text": "መመለስ አልተሳካም"
     },
     "translator.dialog.saveAndBuildSucceeded.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save and build succeeded"
+      "status": "machine-generated",
+      "text": "መቀመጥ እና መገንባት ተሳክቷል"
     },
     "translator.dialog.saveAndRebuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save and rebuild"
+      "status": "machine-generated",
+      "text": "መቀመጥ እና እንደገና መገንባት"
     },
     "translator.dialog.saveBlocked.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save blocked"
+      "status": "machine-generated",
+      "text": "መቀመጥ ታግዷል"
     },
     "translator.dialog.saveFailedAndWasRolledBack.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save failed and was rolled back"
+      "status": "machine-generated",
+      "text": "መቀመጥ አልተሳካም እና ተመልሶ ተሽከረከረ"
     },
     "translator.dialog.saveTheReportArtifactSeparately.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save the report artifact separately"
+      "status": "machine-generated",
+      "text": "የሪፖርቱን ቅርስ ለብቻው ያስቀምጡ"
     },
     "translator.dialog.scanFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan file"
+      "status": "machine-generated",
+      "text": "ፋይልን ይቃኙ"
     },
     "translator.dialog.scanFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan folder"
+      "status": "machine-generated",
+      "text": "አቃፊውን ይቃኙ"
     },
     "translator.dialog.scanMigrationSourceFile.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan migration source file"
+      "status": "machine-generated",
+      "text": "የፍልሰት ምንጭ ፋይልን ይቃኙ"
     },
     "translator.dialog.scanMigrationSourceFolder.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan migration source folder"
+      "status": "machine-generated",
+      "text": "የፍልሰት ምንጭ አቃፊን ይቃኙ"
     },
     "translator.dialog.selectTheMydefragSyntaxRepository.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select the MyDefrag-syntax repository"
+      "status": "machine-generated",
+      "text": "የእኔ ማከማቻ አስተዳደር-የሰዋሰው ደንቦች ማከማቻን ይምረጡ"
     },
     "translator.dialog.startingMydefragLanguageMaintenance.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Starting MyDefrag Language Maintenance"
+      "status": "machine-generated",
+      "text": "የእኔ ማከማቻ አስተዳደር ቋንቋ ጥገናን መጀመር"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The generated build/language/catalogs/{id} data will be kept by default."
+      "status": "machine-generated",
+      "text": "የፈጠረው build/language/catalogs/{id} ውሂብ በነባሪነት ይቀመጣል።"
     },
     "translator.dialog.unsavedLanguageChanges.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unsaved language changes"
+      "status": "machine-generated",
+      "text": "ያልተቀመጡ የቋንቋ ለውጦች"
     },
     "translator.dialog.valueFailed.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "title"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{title} failed"
+      "status": "machine-generated",
+      "text": "{title} አልተሳካም"
     },
     "translator.directive.language.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "locale"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
+      "status": "machine-generated",
       "text": "; @mydfrg-language {locale}"
     },
     "translator.heading.languageMaintenance.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language Maintenance"
+      "status": "machine-generated",
+      "text": "የቋንቋ ጥገና"
     },
     "translator.heading.languageOperation.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language operation"
+      "status": "machine-generated",
+      "text": "የቋንቋ ክወና"
     },
     "translator.heading.operationResult.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Operation result"
+      "status": "machine-generated",
+      "text": "የስራ ውጤት"
     },
     "translator.input.filterSourceFilePaths.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filter source file paths"
+      "status": "machine-generated",
+      "text": "የምንጭ ፋይል ዱካዎችን የማጣሪያ"
     },
     "translator.input.searchAllFields.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search all fields"
+      "status": "machine-generated",
+      "text": "ሁሉንም መስኮች ፈልግ"
     },
     "translator.input.searchComponentIdOrDescription.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search component ID or description"
+      "status": "machine-generated",
+      "text": "የክፍል መለያ ወይም መግለጫ ፈልግ"
     },
     "translator.input.searchComponents.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search components"
+      "status": "machine-generated",
+      "text": "ክፍሎችን ፈልግ"
     },
     "translator.input.searchValue.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionTitle"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search {definitionTitle}"
+      "status": "machine-generated",
+      "text": "ፈልግ {definitionTitle}"
+    },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የአሁኑ የምንጭ መስመር፣ የእጩ ጽሑፍ እና የካታሎግ ቁልፍ ያስፈልጋል።"
     },
     "translator.message.aLanguageBuildIsAlreadyRunning.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A language build is already running."
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታ አስቀድሞ እየሄደ ነው።"
     },
     "translator.message.aLineAwareVscodiumOrVsCodeInstallation.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A line-aware VSCodium or VS Code installation was not found; the source file was opened with its default application."
+      "status": "machine-generated",
+      "text": "መስመርን የሚያውቅ የVSCodium ወይም የVS ኮድ ጭነት አልተገኘም፤ የምንጭ ፋይሉ በነባሪ አፕሊኬሽኑ ተከፍቷል።"
     },
     "translator.message.aScannedSourcePathIsNotANormalized.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A scanned source path is not a normalized repository relative file path."
+      "status": "machine-generated",
+      "text": "የተቃኘ የምንጭ መንገድ መደበኛ የሆነ የማከማቻ-አንጻራዊ የፋይል ዱካ አይደለም።"
+    },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ትክክለኛ የፍልሰት ምንጭ ለውጥ ያስፈልጋል።"
     },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A valid MyDefrag-syntax repository was not selected."
+      "status": "machine-generated",
+      "text": "ትክክለኛ የእኔ ማከማቻ አስተዳደር-የሰዋሰው ደንቦች ማከማቻ አልተመረጠም።"
     },
     "translator.message.applicationFailedToStart.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Application failed to start"
+      "status": "machine-generated",
+      "text": "መተግበሪያው ሊጀመር አልቻለም"
+    },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ምንጩን ከመተካትዎ በፊት ይህንን የካታሎግ ቁልፍ በማስታወሻ ውስጥ ባለው ረቂቅ ላይ ይተግብሩ።"
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ራስ-ሰር መተካት የሚደገፈው ለ CommonJS .js እና .cjs ፋይሎች ብቻ ነው። JSON እና ሌሎች ቅርጸቶች ቅርጸት-ተኮር የአካባቢ ለውጥ ያስፈልጋቸዋል።"
     },
     "translator.message.buildCancelledByUser.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Build cancelled by user."
+      "status": "machine-generated",
+      "text": "ግንባታው በተጠቃሚ ተሰርዟል።"
     },
     "translator.message.buildProcessDidNotReportTerminationAfterCancellation.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Build process did not report termination after cancellation."
+      "status": "machine-generated",
+      "text": "የግንባታ ሂደቱ ከተሰረዘ በኋላ መቋረጡን ሪፖርት አላደረገም።"
     },
     "translator.message.candidateStatusRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status rejected"
+      "status": "machine-generated",
+      "text": "የእጩ ሁኔታ ውድቅ ተደርጓል"
     },
     "translator.message.candidateStatusUpdatedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate status updated in memory"
+      "status": "machine-generated",
+      "text": "የእጩ ሁኔታ በማህደረ ትውስታ ውስጥ ተዘምኗል"
     },
     "translator.message.catalogRecordAddedToInMemoryDraft.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog record added to in-memory draft"
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገብ በማህደረ ትውስታ ውስጥ ተጨምሯል"
     },
     "translator.message.catalogRecordIsNoLongerAvailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog record is no longer available"
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገብ ከአሁን በኋላ አይገኝም"
     },
     "translator.message.catalogRecordUpdatedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog record updated in memory"
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገብ በማህደረ ትውስታ ውስጥ ተዘምኗል"
+    },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ መስመር {candidateLine}. ይህንን እጩ ለማጠናቀቅ የምንጭ መስመሩን ያዘምኑ፤ አሰሳ አሁንም ይገኛል።"
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ ምንጭ አሁንም ዝማኔ ያስፈልገዋል"
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ ምንጮች አሁንም ዝማኔዎች ያስፈልጋቸዋል"
     },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Choose the repository that owns language/canonical and build/language."
+      "status": "machine-generated",
+      "text": "የlanguage/canonical እና build/languageን ማከማቻ ይምረጡ።"
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ውስብስብ የአብነት አገላለጾች ከመቀየሩ በፊት ከፓርሰር የተገኙ የቦታ መያዣ ማሰሪያዎችን ይፈልጋሉ።"
     },
     "translator.message.componentAddedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component added in memory"
+      "status": "machine-generated",
+      "text": "አካሉ በማህደረ ትውስታ ውስጥ ተጨምሯል"
     },
     "translator.message.componentAssignmentIsStaleRebuildRequired.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component assignment is stale; rebuild required."
+      "status": "machine-generated",
+      "text": "አካሉ ምደባ ጊዜው ያለፈበት ነው፤ እንደገና መገንባት ያስፈልጋል።"
     },
     "translator.message.componentChangeRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component change rejected"
+      "status": "machine-generated",
+      "text": "የክፍሉ ለውጥ ውድቅ ተደርጓል"
     },
     "translator.message.componentUpdatedInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component updated in memory"
+      "status": "machine-generated",
+      "text": "ክፍሉ በማህደረ ትውስታ ውስጥ ተዘምኗል"
     },
     "translator.message.deeplApiCallsAreEnabledForThisRebuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የDeepL API ጥሪዎች ለዚህ መልሶ ግንባታ ነቅተዋል"
+    },
+    "translator.message.deeplApiCallsUseValueEnglishForThis.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "DeepL API calls are enabled for this rebuild"
+      "text": "Deep L Application Programming Interface requests use {selectedBuildEnglishSource} English language for this rebuild"
     },
     "translator.message.deeplIsDisabledUsingNormalizedEnglish.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "DeepL ተሰናክሏል፤ መደበኛ እንግሊዝኛን በመጠቀም"
+    },
+    "translator.message.deeplIsDisabledUsingValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "DeepL is disabled; using normalized English"
+      "text": "Deep L is disabled; using {selectedBuildEnglishSource} English language fallbacks"
     },
     "translator.message.draftUpdated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Draft updated"
+      "status": "machine-generated",
+      "text": "ረቂቅ ተዘምኗል"
     },
     "translator.message.duplicateComponentIdValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "componentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Duplicate component id: {componentId}"
+      "status": "machine-generated",
+      "text": "የተባዛ የክፍሉ መለያ፡ {componentId}"
     },
     "translator.message.duplicateLocaleIdValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Duplicate locale id: {localeId}"
+      "status": "machine-generated",
+      "text": "የተባዛ የአካባቢ መለያ፡ {localeId}"
     },
     "translator.message.duplicateValueValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionIdentityKey",
         "identity"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Duplicate {definitionIdentityKey}: {identity}"
+      "status": "machine-generated",
+      "text": "የተባዛ {definitionIdentityKey}: {identity}"
+    },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ነባር የካታሎግ ቁልፎች እንደገና ሊሰየሙ አይችሉም። በምትኩ አዲስ መዝገብ ያክሉ።"
     },
     "translator.message.existingComponentIdentifiersCannotBeRenamed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing component identifiers cannot be renamed."
+      "status": "machine-generated",
+      "text": "ነባር የክፍሎች መለያ ስሞች እንደገና ሊሰየሙ አይችሉም።"
     },
     "translator.message.existingLocaleIdentifiersCannotBeRenamed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing locale identifiers cannot be renamed."
+      "status": "machine-generated",
+      "text": "ነባር የአካባቢያዊ መለያ መለያዎች እንደገና ሊሰየሙ አይችሉም።"
     },
     "translator.message.exitAndDiscardAllInMemoryChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Exit and discard all in-memory changes?"
+      "status": "machine-generated",
+      "text": "ሁሉንም የማህደረ ትውስታ ለውጦች ውጣና አስወግድ?"
     },
     "translator.message.forcingTheLanguageBuildProcessToStop.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Forcing the language build process to stop"
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታ ሂደቱን እንዲያቆም ማስገደድ"
     },
     "translator.message.generatedLocaleCatalogIsNotADirectoryValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "relativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated locale catalog is not a directory: {relativePath}"
+      "status": "machine-generated",
+      "text": "የተፈጠረው የአካባቢ ካታሎግ ማውጫ አይደለም፡ {relativePath}"
     },
     "translator.message.invalidComponentRequest.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid component request."
+      "status": "machine-generated",
+      "text": "ልክ ያልሆነ የክፍል ጥያቄ።"
     },
     "translator.message.invalidFileSelection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid file selection."
+      "status": "machine-generated",
+      "text": "ልክ ያልሆነ የፋይል ምርጫ።"
     },
     "translator.message.invalidLocaleIdentifierForCatalogRemovalValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale identifier for catalog removal: {localeId}"
+      "status": "machine-generated",
+      "text": "ካታሎግ ለማስወገድ ልክ ያልሆነ የአካባቢ መለያ፡ {localeId}"
     },
     "translator.message.invalidLocaleRequest.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale request."
+      "status": "machine-generated",
+      "text": "ልክ ያልሆነ የአካባቢ ጥያቄ።"
     },
     "translator.message.invalidLocaleStatusValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeStatus"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid locale status: {localeStatus}"
+      "status": "machine-generated",
+      "text": "ልክ ያልሆነ የአካባቢ ሁኔታ፡ {localeStatus}"
     },
     "translator.message.invalidRecordRequest.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid record request."
+      "status": "machine-generated",
+      "text": "ልክ ያልሆነ የመዝገብ ጥያቄ።"
     },
     "translator.message.invalidScannedFileSelection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid scanned file selection."
+      "status": "machine-generated",
+      "text": "ልክ ያልሆነ የተቃኘ የፋይል ምርጫ።"
     },
     "translator.message.languageBuildCancelled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language build cancelled"
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታ ተሰርዟል"
     },
     "translator.message.languageBuildCommandCompleted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language build command completed"
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታ ትዕዛዝ ተጠናቋል"
     },
     "translator.message.languageBuildCommandFailed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language build command failed"
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታ ትዕዛዝ አልተሳካም"
     },
     "translator.message.languageDataReloaded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language data reloaded"
+      "status": "machine-generated",
+      "text": "የቋንቋ ውሂብ እንደገና ተጭኗል"
     },
     "translator.message.languageMaintenanceDataHasNotBeenLoaded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language maintenance data has not been loaded."
+      "status": "machine-generated",
+      "text": "የቋንቋ ጥገና ውሂብ አልተጫነም።"
     },
     "translator.message.languageReportArtifactSaved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact saved"
+      "status": "machine-generated",
+      "text": "የቋንቋ ሪፖርት ቅርስ ተቀምጧል"
     },
     "translator.message.languageReportArtifactWasNotSaved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report artifact was not saved"
+      "status": "machine-generated",
+      "text": "የቋንቋ ሪፖርት ቅርስ አልተቀመጠም"
     },
     "translator.message.languageReportTextExceedsThe5000000.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report text exceeds the 5 000 000 character safety limit."
+      "status": "machine-generated",
+      "text": "የቋንቋ ሪፖርት ጽሑፍ ከ5,000,000 የቁምፊ ደህንነት ገደብ ይበልጣል።"
     },
     "translator.message.languageReportTextMustBeAString.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language report text must be a string."
+      "status": "machine-generated",
+      "text": "የቋንቋ ሪፖርት ጽሑፍ ሕብረቁምፊ መሆን አለበት።"
     },
     "translator.message.localeAdded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale added"
+      "status": "machine-generated",
+      "text": "የአካባቢው ታክሏል"
     },
     "translator.message.localeDeletedFromRegistry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale deleted from registry"
+      "status": "machine-generated",
+      "text": "ከመዝገብ ቤት ተሰርዟል"
     },
     "translator.message.localeDirectionMustBeLtrOrRtl.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale direction must be ltr or rtl."
+      "status": "machine-generated",
+      "text": "የአካባቢው አቅጣጫ ltr ወይም rtl መሆን አለበት።"
     },
     "translator.message.localeUpdated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale updated"
+      "status": "machine-generated",
+      "text": "አካባቢያዊ ተዘምኗል"
     },
     "translator.message.localeValueNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale {id} no longer exists."
+      "status": "machine-generated",
+      "text": "አካባቢያዊ {id} ከአሁን በኋላ የለም።"
     },
     "translator.message.migrationAssignmentRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration assignment rejected"
+      "status": "machine-generated",
+      "text": "የፍልሰት ምደባ ውድቅ ተደርጓል"
     },
     "translator.message.migrationCandidatesAreUnavailableBecauseTheReportStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "reportFileStatus"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration candidates are unavailable because the report status is {reportFileStatus}."
+      "status": "machine-generated",
+      "text": "የሪፖርቱ ሁኔታ {reportFileStatus} ስለሆነ የስደተኛ እጩዎች አይገኙም።"
     },
     "translator.message.migrationCandidatesUnavailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration candidates unavailable"
+      "status": "machine-generated",
+      "text": "የፍልሰት እጩዎች የሉም"
     },
     "translator.message.migrationComponentAssignmentUpdated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration component assignment updated"
+      "status": "machine-generated",
+      "text": "የፍልሰት አካል ምደባ ተዘምኗል"
     },
     "translator.message.migrationFileAdded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration file added"
+      "status": "machine-generated",
+      "text": "የፍልሰት ፋይል ታክሏል"
     },
     "translator.message.migrationFileAlreadyListed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration file already listed"
+      "status": "machine-generated",
+      "text": "የፍልሰት ፋይል አስቀድሞ ተዘርዝሯል"
     },
     "translator.message.migrationFileRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration file rejected"
+      "status": "machine-generated",
+      "text": "የፍልሰት ፋይል ውድቅ ተደርጓል"
     },
     "translator.message.migrationFileRemovalFailed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration file removal failed"
+      "status": "machine-generated",
+      "text": "የፍልሰት ፋይል ማስወገድ አልተሳካም"
     },
     "translator.message.migrationFileRemoved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration file removed"
+      "status": "machine-generated",
+      "text": "የፍልሰት ፋይል ተወግዷል"
     },
     "translator.message.migrationFilesAdded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration files added"
+      "status": "machine-generated",
+      "text": "የፍልሰት ፋይሎች ታክለዋል"
     },
     "translator.message.migrationFilesAlreadyListed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration files already listed"
+      "status": "machine-generated",
+      "text": "የፍልሰት ፋይሎች አስቀድመው ተዘርዝረዋል"
     },
     "translator.message.migrationFilesRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration files rejected"
+      "status": "machine-generated",
+      "text": "የፍልሰት ፋይሎች ውድቅ ተደርገዋል"
+    },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ባለብዙ መስመር ሕብረቁምፊ ምትክ በመጀመሪያው የትራንስፎርም መንጠቆ አይደገፍም።"
     },
     "translator.message.noApplicableSchemaIsAvailableForValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "viewName"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No applicable schema is available for {viewName}."
+      "status": "machine-generated",
+      "text": "ለ{viewName} ምንም የሚመለከተው ንድፍ የለም።"
     },
     "translator.message.noLanguageBuildIsRunning.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No language build is running."
+      "status": "machine-generated",
+      "text": "ምንም የቋንቋ ግንባታ አይሰራም።"
     },
     "translator.message.noNewFilesAdded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No new files added"
+      "status": "machine-generated",
+      "text": "አዲስ ፋይሎች አልተጨመሩም"
     },
     "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "missing"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Not a MyDefrag language repository. Missing: {missing}"
+      "status": "machine-generated",
+      "text": "የእኔ ማከማቻ አስተዳደር ቋንቋ ማከማቻ አይደለም። የጠፋ፡ {missing}"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "በፍልሰት ሪፖርቱ ውስጥ የለም፤ ​​እንደገና መገንባት ያስፈልጋል።"
+    },
+    "translator.message.onlyAnExistingNormalizedWordSubstitutionCanBe.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Not present in the migration report; rebuild required."
+      "text": "Only an existing normalized word substitution can be removed."
     },
     "translator.message.pathEscapesTheRepositoryRootValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "relativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Path escapes the repository root: {relativePath}"
+      "status": "machine-generated",
+      "text": "መንገዱ ከማከማቻ ስር ይወጣል፡ {relativePath}"
     },
     "translator.message.recordRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Record rejected"
+      "status": "machine-generated",
+      "text": "መዝገብ ውድቅ ተደርጓል"
+    },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ መስመሩን ከመተካትዎ በፊት የለውጥ ቅድመ እይታውን ያድሱ።"
     },
     "translator.message.reloadingWillDiscardAllInMemoryLanguageChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reloading will discard all in-memory language changes."
+      "status": "machine-generated",
+      "text": "ዳግም መጫን ሁሉንም የማህደረ ትውስታ ውስጥ የቋንቋ ለውጦችን ያስወግዳል።"
     },
     "translator.message.removeValueFromTheLocaleRegistry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Remove {id} from the locale registry?"
+      "status": "machine-generated",
+      "text": "{id} ከአካባቢያዊ መዝገብ ቤት ይወገድ?"
+    },
+    "translator.message.replacedLineValueInValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{previewLine} በ{previewPath} ውስጥ ተተክቷል።"
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "previewLine",
+        "previewPath",
+        "recoveryFiles"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{previewLine} በ{previewPath} ውስጥ ተተክቷል። ምትኬ ሊወገድ አልቻለም፡ {recoveryFiles}"
     },
     "translator.message.requiredLocaleValueCannotBeDeleted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "id"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Required locale {id} cannot be deleted."
+      "status": "machine-generated",
+      "text": "አስፈላጊ የአካባቢ {id} ሊሰረዝ አይችልም።"
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የመነጩ ፋይሎችን እና ዘላቂ የአካባቢ ምንጮችን ወደነበረበት መመለስ"
     },
     "translator.message.runningLanguageBuildCommand.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Running language build command"
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታ ትዕዛዝን በማስኬድ ላይ"
     },
     "translator.message.saveOrDiscardTheLanguageReportEditsBefore.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save or discard the Language Report edits before saving canonical language data."
+      "status": "machine-generated",
+      "text": "የቀኖናዊ ቋንቋ ውሂብ ከማስቀመጥዎ በፊት የቋንቋ ሪፖርት አርትዖቶችን ያስቀምጡ ወይም ያስወግዱ።"
     },
     "translator.message.saveOrRevertInMemoryChangesBeforeRebuilding.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save or revert in-memory changes before rebuilding."
+      "status": "machine-generated",
+      "text": "ከመገንባትዎ በፊት የማህደረ ትውስታ ለውጦችን ያስቀምጡ ወይም ይመልሱ።"
     },
     "translator.message.selectAValidComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a valid component."
+      "status": "machine-generated",
+      "text": "ትክክለኛ አካል ይምረጡ።"
     },
     "translator.message.selectAValidComponentBeforeAddingFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a valid component before adding files."
+      "status": "machine-generated",
+      "text": "ፋይሎችን ከማከልዎ በፊት ትክክለኛ አካል ይምረጡ።"
     },
     "translator.message.selectPotentialCandidateRejectedOrReview.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select Potential Candidate, Rejected, or Review."
+      "status": "machine-generated",
+      "text": "እምቅ እጩ ይምረጡ፣ ውድቅ ተደርጓል ወይም ይገምግሙ።"
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "እምቅ እጩ ይምረጡ፣ ይገምግሙ፣ ውድቅ ተደርጓል፣ የኮድ አርትዖት ያድርጉ ወይም ኮድ ተዘምኗል።"
     },
     "translator.message.selectedFileIsOutsideTheRepositoryRootValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "absolutePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected file is outside the repository root: {absolutePath}"
+      "status": "machine-generated",
+      "text": "የተመረጠው ፋይል ከማከማቻ ስርወ ውጭ ነው፡ {absolutePath}"
     },
     "translator.message.selectedFolderIsOutsideTheRepositoryRootValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "folderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected folder is outside the repository root: {folderPath}"
+      "status": "machine-generated",
+      "text": "የተመረጠው አቃፊ ከማከማቻ ስርወ ውጭ ነው፡ {folderPath}"
     },
     "translator.message.selectedPathIsNotAFileValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "absolutePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected path is not a file: {absolutePath}"
+      "status": "machine-generated",
+      "text": "የተመረጠው መንገድ ፋይል አይደለም፡ {absolutePath}"
     },
     "translator.message.selectedPathIsNotAFolderValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "folderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected path is not a folder: {folderPath}"
+      "status": "machine-generated",
+      "text": "የተመረጠው መንገድ አቃፊ አይደለም፡ {folderPath}"
     },
     "translator.message.sourceFileOpened.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ ፋይል ተከፍቷል"
+    },
+    "translator.message.sourceLineReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ መስመር ተተክቷል"
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ መስመር አልተተካም"
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ ምትክ አልነቃም።"
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ ምትክ ዝግጁ አይደለም።"
+    },
+    "translator.message.startingElectron.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ኤሌክትሮን በመጀመር ላይ..."
+    },
+    "translator.message.substitutionRemovalRejected.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Source file opened"
+      "text": "Substitution removal rejected"
+    },
+    "translator.message.substitutionRemovedFromInMemoryDraft.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Substitution removed from in memory draft"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ መለያው ትክክለኛ የጃቫስክሪፕት መለያ አይደለም።"
     },
     "translator.message.theCatalogRecordValueChangedOrNoLonger.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "recordKey"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The catalog record {recordKey} changed or no longer exists."
+      "status": "machine-generated",
+      "text": "የካታሎግ መዝገብ {recordKey} ተቀይሯል ወይም ከእንግዲህ የለም።"
     },
     "translator.message.theComponentChangedOrNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The component changed or no longer exists."
+      "status": "machine-generated",
+      "text": "ክፍሉ ተቀይሯል ወይም ከእንግዲህ የለም።"
     },
     "translator.message.theConfiguredLanguageBuilderDoesNotExposeExtractstringcandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The configured language builder does not expose extractStringCandidates."
+      "status": "machine-generated",
+      "text": "የተዋቀረው የቋንቋ ገንቢ የextractStringCandidatesን አያጋልጥም።"
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተዋቀረው ስካነር የእጩ ምንጭ ቦታዎችን ማቅረብ አይችልም።"
     },
     "translator.message.theLanguageBuildProcessCouldNotBeStopped.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The language build process could not be stopped."
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታ ሂደቱ ሊቆም አልቻለም።"
     },
     "translator.message.theLanguageReportChangedOnDiskReloadIt.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The language report changed on disk. Reload it before saving your edits."
+      "status": "machine-generated",
+      "text": "የቋንቋ ሪፖርቱ በዲስክ ላይ ተቀይሯል። አርትዖቶችዎን ከማስቀመጥዎ በፊት እንደገና ይጫኑት።"
     },
     "translator.message.theLocaleChangedOrNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The locale changed or no longer exists."
+      "status": "machine-generated",
+      "text": "አካባቢው ተቀይሯል ወይም ከእንግዲህ የለም።"
     },
     "translator.message.theMigrationCandidatesCouldNotBeReloaded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration candidates could not be reloaded."
+      "status": "machine-generated",
+      "text": "የፍልሰት እጩዎቹ እንደገና ሊጫኑ አልቻሉም።"
     },
     "translator.message.theMigrationFileIsNoLongerListed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration file is no longer listed."
+      "status": "machine-generated",
+      "text": "የፍልሰት ፋይሉ ከአሁን በኋላ አልተዘረዘረም።"
     },
     "translator.message.theMigrationReportComponentAssignmentIsStaleRebuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration report component assignment is stale. Rebuild the language outputs."
+      "status": "machine-generated",
+      "text": "የፍልሰት ሪፖርት ክፍል ምደባ ጊዜው ያለፈበት ነው። የቋንቋ ውጤቶቹን እንደገና ይገንቡ።"
     },
     "translator.message.theMigrationReportDoesNotContainThisFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration report does not contain this file. Rebuild the language outputs."
+      "status": "machine-generated",
+      "text": "የፍልሰት ሪፖርቱ ይህንን ፋይል አልያዘም። የቋንቋ ውጤቶቹን እንደገና ይገንቡ።"
     },
     "translator.message.theMigrationReportDoesNotIncludeCatalogFound.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration report does not include catalog-found strings. Rebuild the language outputs."
+      "status": "machine-generated",
+      "text": "የፍልሰት ሪፖርቱ በካታሎግ የተገኙ ሕብረቁምፊዎችን አያካትትም። የቋንቋ ውጤቶቹን እንደገና ይገንቡ።"
     },
     "translator.message.theMigrationReportIsMissingFullCandidateSource.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The migration report is missing full candidate source lines. Rebuild the language outputs."
+      "status": "machine-generated",
+      "text": "የፍልሰት ሪፖርቱ ሙሉ የእጩ ምንጭ መስመሮችን ይጎድለዋል። የቋንቋ ውጤቶቹን እንደገና ይገንቡ።"
     },
     "translator.message.theRecordChangedOrNoLongerExists.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The record changed or no longer exists."
+      "status": "machine-generated",
+      "text": "መዝገቡ ተቀይሯል ወይም ከአሁን በኋላ የለም።"
     },
     "translator.message.theRestrictedPreloadBridgeIsUnavailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The restricted preload bridge is unavailable."
+      "status": "machine-generated",
+      "text": "የተገደበው የቅድመ ጭነት ድልድይ አይገኝም።"
     },
     "translator.message.theScannedSourcePathIsNotANormalized.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The scanned source path is not a normalized repository-relative file path."
+      "status": "machine-generated",
+      "text": "የተቃኘው የምንጭ መንገድ መደበኛ የሆነ የማከማቻ-አንጻራዊ የፋይል ዱካ አይደለም።"
+    },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተመረጠው የካታሎግ ቁልፍ ይህንን የእጩ ጽሑፍ አልያዘም።"
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተመረጠው መስመር እና ጽሑፍ የአሁኑን የፍልሰት እጩ አይደሉም።"
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተመረጠው መስመር እና ጽሑፍ የአሁኑን የፍልሰት እጩ አይለዩም።"
     },
     "translator.message.theSelectedLineIsNotACurrentMigration.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The selected line is not a current migration candidate."
+      "status": "machine-generated",
+      "text": "የተመረጠው መስመር የአሁኑን የፍልሰት እጩ አይደለም።"
     },
     "translator.message.theSelectedLineIsNotACurrentReported.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The selected line is not a current reported migration string."
+      "status": "machine-generated",
+      "text": "የተመረጠው መስመር የአሁኑን የፍልሰት ሕብረቁምፊ ሪፖርት የተደረገበት አይደለም።"
+    },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተመረጠው የምንጭ መስመር የለውጥ ቅድመ እይታ ከተፈጠረ በኋላ ተለውጧል።"
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተመረጠው የምንጭ መስመር ከእንግዲህ የለም።"
     },
     "translator.message.theSelectedStringIsNoLongerACurrent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The selected string is no longer a current scanned migration candidate."
+      "status": "machine-generated",
+      "text": "የተመረጠው ሕብረቁምፊ አሁን ያለው የተቃኘ የፍልሰት እጩ አይደለም።"
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተመረጠው ሕብረቁምፊ በሪፖርት የተደረገበት የምንጭ መስመር ላይ አይገኝም።"
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተመረጠው ሕብረቁምፊ በምንጭ መስመሩ ላይ ከአንድ ጊዜ በላይ ይከሰታል፤ ትክክለኛ ክስተት ያስፈልጋል።"
     },
     "translator.message.theSelectedTextIsNoLongerACurrent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The selected text is no longer a current non catalog candidate."
+      "status": "machine-generated",
+      "text": "የተመረጠው ጽሑፍ አሁን ሪፖርት የተደረገበት እጩ አይደለም።"
+    },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "itemRelativePath"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ምንጩ ከመተካቱ በፊት ተቀይሯል፡ {itemRelativePath}"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጩ ፋይል የለውጥ ቅድመ እይታ ከተፈጠረ በኋላ ተቀይሯል። ለማደስ እጩውን እንደገና ይምረጡ።"
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጩ ፋይል ከመተካቱ በፊት ተቀይሯል። ለማደስ እጩውን እንደገና ይምረጡ።"
     },
     "translator.message.theSourceFileCouldNotBeOpened.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The source file could not be opened."
+      "status": "machine-generated",
+      "text": "የምንጩ ፋይል ሊከፈት አልቻለም።"
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የለውጥ ተለዋዋጭ ስሙ ትክክለኛ የጃቫስክሪፕት መለያ አይደለም።"
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "syntaxError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የተቀየረው ጃቫስክሪፕት በአገባብ መልኩ ትክክለኛ አይደለም፡ {syntaxError}"
     },
     "translator.message.unableToAddFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to add files."
+      "status": "machine-generated",
+      "text": "ፋይሎችን ማከል አልተቻለም።"
     },
     "translator.message.unableToAddTheScannedFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to add the scanned file."
+      "status": "machine-generated",
+      "text": "የተቃኘውን ፋይል ማከል አልተቻለም።"
     },
     "translator.message.unableToAddTheScannedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to add the scanned files."
+      "status": "machine-generated",
+      "text": "የተቃኙ ፋይሎችን ማከል አልተቻለም።"
     },
     "translator.message.unableToApplyLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to apply locale"
+      "status": "machine-generated",
+      "text": "አካባቢን መተግበር አልተቻለም"
     },
     "translator.message.unableToApplyTheComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to apply the component."
+      "status": "machine-generated",
+      "text": "ክፍሉን መተግበር አልተቻለም።"
     },
     "translator.message.unableToAssignTheComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to assign the component."
+      "status": "machine-generated",
+      "text": "ክፍሉን መመደብ አልተቻለም።"
     },
     "translator.message.unableToDeleteLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to delete locale"
+      "status": "machine-generated",
+      "text": "አካባቢን መሰረዝ አልተቻለም"
     },
     "translator.message.unableToLoadLanguageData.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to load language data."
+      "status": "machine-generated",
+      "text": "የቋንቋ ውሂብ መጫን አልተቻለም።"
     },
     "translator.message.unableToLoadMigrationCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to load migration candidates."
+      "status": "machine-generated",
+      "text": "የፍልሰት እጩዎችን መጫን አልተቻለም።"
     },
     "translator.message.unableToLoadTheLanguageReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to load the language report artifact."
+      "status": "machine-generated",
+      "text": "የቋንቋ ሪፖርት ቅርስ መጫን አልተቻለም።"
     },
     "translator.message.unableToOpenMigrationSource.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to open migration source"
+      "status": "machine-generated",
+      "text": "የፍልሰት ምንጭን መክፈት አልተቻለም"
     },
     "translator.message.unableToOpenValueValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "targetRelativePath",
         "error"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to open {targetRelativePath}: {error}"
+      "status": "machine-generated",
+      "text": "{targetRelativePath} መክፈት አልተቻለም: {error}"
     },
     "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "errorMessage"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to read build/language/reports/migration-report.json: {errorMessage}"
+      "status": "machine-generated",
+      "text": "build/language/reports/migration-report.jsonን ማንበብ አልተቻለም፡ {errorMessage}"
     },
     "translator.message.unableToRefreshCandidateCatalogStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to refresh candidate catalog status"
+      "status": "machine-generated",
+      "text": "የእጩ ካታሎግ ሁኔታን ማደስ አልተቻለም"
     },
     "translator.message.unableToRemoveTheFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to remove the file."
+      "status": "machine-generated",
+      "text": "ፋይሉን ማስወገድ አልተቻለም።"
     },
     "translator.message.unableToUpdateCandidateStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to update candidate status."
+      "status": "machine-generated",
+      "text": "የእጩ ሁኔታን ማዘመን አልተቻለም።"
+    },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የማህደረ ትውስታ ውስጥ ረቂቅ ማዘመን አልተቻለም።"
     },
     "translator.message.useALocaleIdentifierSuchAsEnFr.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use a locale identifier such as en, fr CA, or zh Hans."
+      "status": "machine-generated",
+      "text": "እንደ en፣ fr-CA ወይም zh-Hans ያሉ የአካባቢ መለያ ይጠቀሙ።"
     },
     "translator.message.useSaveReportArtifactInTheLanguageReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save report artifact in the Language Report view before saving canonical language data."
+      "status": "machine-generated",
+      "text": "የቀኖናዊ ቋንቋ ውሂብ ከማስቀመጥዎ በፊት የሪፖርት ቅሪቶችን በቋንቋ ሪፖርት እይታ ውስጥ ይጠቀሙ።"
     },
     "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save to persist the candidate status in language/canonical/components.json."
+      "status": "machine-generated",
+      "text": "በlanguage/canonical/components.json ውስጥ ያለውን የፕሮፖዛል ሁኔታ ለማስቀጠል አስቀምጥን ይጠቀሙ።"
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Save to persist the Component Catalog change."
+      "status": "machine-generated",
+      "text": "የክፍሉን ካታሎግ ለውጥ ለመቀጠል አስቀምጥን ይጠቀሙ።"
     },
     "translator.message.validatingLanguageChangesDeeplApiCallsAreEnabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validating language changes; DeepL API calls are enabled"
+      "status": "machine-generated",
+      "text": "የቋንቋ ለውጦችን ማረጋገጥ፤ የDeepL API ጥሪዎች ነቅተዋል"
     },
     "translator.message.validatingLanguageChangesDeeplIsDisabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የቋንቋ ለውጦችን ማረጋገጥ፤ DeepL ተሰናክሏል"
+    },
+    "translator.message.validatingLanguageChangesDeeplIsDisabledAndFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "Validating language changes; DeepL is disabled"
+      "text": "Validating language changes; Deep L is disabled and fallbacks use {selectedBuildEnglishSource} English language"
+    },
+    "translator.message.validatingLanguageChangesDeeplUsesValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "selectedBuildEnglishSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Validating language changes; Deep L uses {selectedBuildEnglishSource} English language"
     },
     "translator.message.validationResult.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validation result"
+      "status": "machine-generated",
+      "text": "የማረጋገጫ ውጤት"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "unresolvedCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{unresolvedCount} ካታሎግ የተደረገላቸው እጩ(ዎች) አሁንም የመጀመሪያውን የምንጭ ሕብረቁምፊ ይይዛሉ ወይም ሊረጋገጥ አልቻለም። መዝጊያው ያለ ተፈጻሚነት ይቀጥላል።"
     },
     "translator.message.valueIsNotAFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "lANGUAGE_REPORT_PATH"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{lANGUAGE_REPORT_PATH} is not a file."
+      "status": "machine-generated",
+      "text": "{lANGUAGE_REPORT_PATH} ፋይል አይደለም።"
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{detail}። አሰሳ ይቀጥላል፤ የምንጭ ዝማኔዎች ይመከራል ነገር ግን አይተገበሩም።"
     },
     "translator.message.valueWasWrittenDirectlyAFutureReportBuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultRelativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{resultRelativePath} was written directly. A future report build may replace these edits."
+      "status": "machine-generated",
+      "text": "{resultRelativePath} በቀጥታ ተጽፏል። የወደፊት የሪፖርት ግንባታ እነዚህን አርትዖቶች ሊተካ ይችላል።"
     },
     "translator.message.waitForTheBuildToFinishBeforeExiting.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Wait for the build to finish before exiting."
+      "status": "machine-generated",
+      "text": "ከመውጣትዎ በፊት ግንባታው እስኪጠናቀቅ ይጠብቁ።"
     },
     "translator.message.waitForTheLanguageBuildToFinishBefore.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Wait for the language build to finish before saving the report artifact."
+      "status": "machine-generated",
+      "text": "የሪፖርቱን ቅርስ ከማስቀመጥዎ በፊት የቋንቋ ግንባታው እስኪጠናቀቅ ይጠብቁ።"
     },
     "translator.message.waitingForTheLanguageBuildProcessToStop.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Waiting for the language build process to stop"
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታ ሂደቱ እስኪቆም ድረስ እየጠበቁ ነው"
     },
     "translator.message.writeValueAuthoritativeFileS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "normalizedCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Write {normalizedCount} authoritative file(s)?"
+      "status": "machine-generated",
+      "text": "{normalizedCount} ባለስልጣን ፋይል(ዎች) ይጻፉ?"
     },
     "translator.progress.capturingGeneratedFilesForRollback.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Capturing generated files for rollback"
+      "status": "machine-generated",
+      "text": "ለመመለስ የተፈጠሩ ፋይሎችን መያዝ"
     },
     "translator.progress.checkingGeneratedFileChanges.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Checking generated file changes"
+      "status": "machine-generated",
+      "text": "የተፈጠሩ የፋይል ለውጦችን ማረጋገጥ"
     },
     "translator.progress.committingLanguageChanges.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Committing language changes"
+      "status": "machine-generated",
+      "text": "የቋንቋ ለውጦችን ተግባራዊ ማድረግ"
     },
     "translator.progress.rebuildingLanguageOutputs.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Rebuilding language outputs"
+      "status": "machine-generated",
+      "text": "የቋንቋ ውጤቶችን እንደገና መገንባት"
     },
     "translator.progress.restoringAuthoritativeAndGeneratedFiles.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restoring authoritative and generated files"
+      "status": "machine-generated",
+      "text": "ተዓማኒነት ያላቸው እና የተፈጠሩ ፋይሎችን ወደነበረበት መመለስ"
     },
     "translator.progress.restoringFilesAfterAnError.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restoring files after an error"
+      "status": "machine-generated",
+      "text": "ከስህተት በኋላ ፋይሎችን ወደነበረበት መመለስ"
     },
     "translator.progress.restoringGeneratedFiles.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restoring generated files"
+      "status": "machine-generated",
+      "text": "የተፈጠሩ ፋይሎችን ወደነበረበት መመለስ"
     },
     "translator.progress.savingLanguageData.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Saving language data"
+      "status": "machine-generated",
+      "text": "የቋንቋ ውሂብን በማስቀመጥ ላይ"
     },
     "translator.progress.startingSaveAndRebuild.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Starting save and rebuild"
+      "status": "machine-generated",
+      "text": "ማስቀመጥ እና እንደገና መገንባት በመጀመር ላይ"
     },
     "translator.progress.stoppingLanguageBuild.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Stopping language build"
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታን በማቆም ላይ"
     },
     "translator.progress.unableToStartLanguageBuild.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unable to start language build"
+      "status": "machine-generated",
+      "text": "የቋንቋ ግንባታን መጀመር አልተቻለም"
     },
     "translator.progress.useStopBuildInTheProgressWindowThen.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Stop build in the progress window, then wait for rollback to complete before closing the application."
+      "status": "machine-generated",
+      "text": "በሂደቱ ውስጥ የማቆም ግንባታን ይጠቀሙ መስኮቱን ይክፈቱ እና ከዚያ መተግበሪያውን ከመዝጋትዎ በፊት መልሶ ማጫወት እስኪጠናቀቅ ይጠብቁ።"
     },
     "translator.progress.waitingForSaveConfirmation.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Waiting for save confirmation"
+      "status": "machine-generated",
+      "text": "ማረጋገጫ ለማስቀመጥ በመጠባበቅ ላይ"
     },
     "translator.progress.writingAuthoritativeLanguageFiles.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Writing authoritative language files"
+      "status": "machine-generated",
+      "text": "ተዓማኒነት ያላቸውን የቋንቋ ፋይሎች በመጻፍ ላይ"
     },
     "translator.ui.add1SelectedFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add 1 selected file"
+      "status": "machine-generated",
+      "text": "1 የተመረጠ ፋይል ያክሉ"
     },
     "translator.ui.addCategory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add category"
+      "status": "machine-generated",
+      "text": "ምድብ ያክሉ"
     },
     "translator.ui.addComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add component"
+      "status": "machine-generated",
+      "text": "ክፍል ያክሉ"
     },
     "translator.ui.addFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add files…"
+      "status": "machine-generated",
+      "text": "ፋይሎችን ያክሉ…"
     },
     "translator.ui.addLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add locale"
+      "status": "machine-generated",
+      "text": "አካባቢ ያክሉ"
     },
     "translator.ui.addRecord.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add record"
+      "status": "machine-generated",
+      "text": "መዝገብ ያክሉ"
     },
     "translator.ui.addRole.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add role"
+      "status": "machine-generated",
+      "text": "ሚና ያክሉ"
     },
     "translator.ui.addSelectedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add selected files"
+      "status": "machine-generated",
+      "text": "የተመረጡ ፋይሎችን ያክሉ"
     },
     "translator.ui.addToSourceFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add to source files"
+      "status": "machine-generated",
+      "text": "ወደ የምንጭ ፋይሎች ያክሉ"
     },
     "translator.ui.addValueSelectedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "count"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Add {count} selected files"
+      "status": "machine-generated",
+      "text": "የተመረጡ የ{count} ፋይሎችን ያክሉ"
     },
     "translator.ui.addedToSourceFilesUnderComponentValueSave.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "componentSelectValue"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Added to source files under component {componentSelectValue}. Save is still required."
+      "status": "machine-generated",
+      "text": "በ{componentSelectValue} ክፍል ስር ወደ የምንጭ ፋይሎች ታክሏል። ማስቀመጥ አሁንም ያስፈልጋል።"
     },
     "translator.ui.addedValueFileSUnderComponentValueSave.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultAddedFilesCount",
         "componentSelectValue"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Added {resultAddedFilesCount} file(s) under component {componentSelectValue}. Save is still required."
+      "status": "machine-generated",
+      "text": "በ{resultAddedFilesCount} ክፍል ስር የ{componentSelectValue} ፋይል(ዎች) ታክለዋል። ማስቀመጥ አሁንም ያስፈልጋል።"
     },
     "translator.ui.allCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All Candidates"
+      "status": "machine-generated",
+      "text": "ሁሉም እጩዎች"
     },
     "translator.ui.allCandidatesValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All candidates: {filePath}"
+      "status": "machine-generated",
+      "text": "ሁሉም እጩዎች፡ {filePath}"
     },
     "translator.ui.allCanonicalLocaleTemplatesAreAlreadyRegistered.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All canonical locale templates are already registered"
+      "status": "machine-generated",
+      "text": "ሁሉም ቀኖናዊ የአካባቢ አብነቶች አስቀድመው ተመዝግበዋል"
     },
     "translator.ui.allComponentDetails.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All component details"
+      "status": "machine-generated",
+      "text": "ሁሉም የክፍሎች ዝርዝሮች"
     },
     "translator.ui.allComponents.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All components"
+      "status": "machine-generated",
+      "text": "ሁሉም ክፍሎች"
     },
     "translator.ui.allComponentsNoComponentFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All components — no component filter"
+      "status": "machine-generated",
+      "text": "ሁሉም ክፍሎች — ምንም የክፍሎች ማጣሪያ የለም"
     },
     "translator.ui.allStatuses.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "All statuses"
+      "status": "machine-generated",
+      "text": "ሁሉም ሁኔታዎች"
     },
     "translator.ui.allowDeeplCalls.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የDeepL ጥሪዎችን ፍቀድ"
+    },
+    "translator.ui.allowSaveAndRebuildToCallDeeplFor.title": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Allow DeepL calls"
+      "text": "Allow save changes and Rebuild to call Deep L for missing translations."
     },
     "translator.ui.alreadyInSourceFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Already in source files"
+      "status": "machine-generated",
+      "text": "ቀድሞውኑ በምንጭ ፋይሎች ውስጥ ነው"
     },
     "translator.ui.alreadyListedUnderComponentValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileInventoryComponent"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Already listed under component {scannedFileInventoryComponent}."
+      "status": "machine-generated",
+      "text": "ቀድሞውኑ በ{scannedFileInventoryComponent} ክፍል ስር ተዘርዝሯል።"
     },
     "translator.ui.analyzingSourceContext.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Analyzing source context..."
+      "status": "machine-generated",
+      "text": "የምንጭ አውድ በመተንተን ላይ..."
     },
     "translator.ui.applyChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply changes"
+      "status": "machine-generated",
+      "text": "ለውጦችን ይተግብሩ"
     },
     "translator.ui.applyInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply in memory"
+      "status": "machine-generated",
+      "text": "በማህደረ ትውስታ ውስጥ ይተግብሩ"
     },
     "translator.ui.applyNormalizedText.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply normalized text"
+      "status": "machine-generated",
+      "text": "መደበኛ ጽሑፍን ይተግብሩ"
     },
     "translator.ui.applyToInMemoryDraft.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply to in-memory draft"
+      "status": "machine-generated",
+      "text": "በማህደረ ትውስታ ውስጥ ረቂቅ ላይ ይተግብሩ"
     },
     "translator.ui.assignNewFilesTo.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Assign new files to"
+      "status": "machine-generated",
+      "text": "አዲስ ፋይሎችን ለ ይመድቡ"
     },
     "translator.ui.assignSelectedFilesTo.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Assign selected files to"
+      "status": "machine-generated",
+      "text": "የተመረጡ ፋይሎችን ለ"
     },
     "translator.ui.assignToComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Assign to component"
+      "status": "machine-generated",
+      "text": "ለክፍሉ ይመድቡ"
     },
     "translator.ui.authoritativeFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Authoritative files"
+      "status": "machine-generated",
+      "text": "ፈቃድ ያላቸው ፋይሎች"
     },
     "translator.ui.availableComponents.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Available components"
+      "status": "machine-generated",
+      "text": "የሚገኙ ክፍሎች"
     },
     "translator.ui.badgeValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateDirty"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "badge {stateDirty}"
+      "status": "machine-generated",
+      "text": "ባጅ {stateDirty}"
     },
     "translator.ui.badgeValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationOk"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "badge {validationOk}"
+      "status": "machine-generated",
+      "text": "ባጅ {validationOk}"
     },
     "translator.ui.buildLanguageCatalogsValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
+      "status": "machine-generated",
       "text": "build/language/catalogs/{currentId}"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate decisions are saved with the migration inventory."
+      "status": "machine-generated",
+      "text": "የእጩ ውሳኔዎች ከዝውውር ክምችት ጋር ይቀመጣሉ።"
     },
     "translator.ui.candidateDetails.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Candidate Details"
+      "status": "machine-generated",
+      "text": "የእጩ ዝርዝሮች"
+    },
+    "translator.ui.candidateStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCodeUpdated"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የእጩ ሁኔታ፡ {cANDIDATE_STATUS_LABELSCodeUpdated}"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "cANDIDATE_STATUS_LABELSCandidateStatus"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የእጩ ሁኔታ፡ {cANDIDATE_STATUS_LABELSCandidateStatus}"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ ቁልፍ ያስፈልጋል"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "initialCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ ቁልፍ፡ {initialCatalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ ቁልፍ፡ {catalogKey}"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultCatalogKey"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ ቁልፍ፡ {resultCatalogKey}"
     },
     "translator.ui.catalogMatches.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog Matches"
+      "status": "machine-generated",
+      "text": "የካታሎግ ተዛማጆች"
     },
     "translator.ui.catalogOutputLocales.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog output locales"
+      "status": "machine-generated",
+      "text": "የካታሎግ ውጤት አካባቢዎች"
+    },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "candidateLine"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ለ{candidateLine} የመስመር ካታሎግ መዝገብ ታክሏል። ይህንን እጩ ለማጠናቀቅ የምንጭ መስመሩን ያዘምኑ፤ አሰሳ አሁንም ይገኛል።"
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "catalogStatuses"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ ሁኔታ፡ {catalogStatuses}"
     },
     "translator.ui.categories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Categories"
+      "status": "machine-generated",
+      "text": "ምድቦች"
+    },
+    "translator.ui.category.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ምድብ"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ-ምትክ መከላከያዎችን በመፈተሽ ላይ..."
     },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Choices mirror language/canonical/language locales.json. Registered locales remain visible but cannot be selected."
+      "status": "machine-generated",
+      "text": "ምርጫዎች መስታወት language/canonical/language-locales.json። የተመዘገቡ የቋንቋ ክልሎች አሁንም የሚታዩ ናቸው ነገር ግን ሊመረጡ አይችሉም።"
     },
     "translator.ui.chooseAComponentFromTheAuthoritativeComponentsJson.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Choose a component from the authoritative components.json inventory."
+      "status": "machine-generated",
+      "text": "ከባለስልጣን ክፍሎች ውስጥ አንድ አካል ይምረጡ.json ክምችት።"
     },
     "translator.ui.clear.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Clear"
+      "status": "machine-generated",
+      "text": "አጽዳ"
     },
     "translator.ui.clearEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Clear editor"
+      "status": "machine-generated",
+      "text": "አጽዳ አርታኢ"
     },
     "translator.ui.closeCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Close candidates"
+      "status": "machine-generated",
+      "text": "እጩዎችን ዝጋ"
     },
     "translator.ui.component.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component"
+      "status": "machine-generated",
+      "text": "አካል"
     },
     "translator.ui.componentCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog"
+      "status": "machine-generated",
+      "text": "አካል ካታሎግ"
     },
     "translator.ui.componentCatalogAndDiagnosticMessagesWillDisplayRecords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component Catalog and Diagnostic Messages will display records from every component."
+      "status": "machine-generated",
+      "text": "አካል ካታሎግ እና የምርመራ መልዕክቶች ከእያንዳንዱ አካል የተገኙ መዝገቦችን ያሳያሉ።"
     },
     "translator.ui.componentDetails.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component details"
+      "status": "machine-generated",
+      "text": "የክፍሎች ዝርዝሮች"
     },
     "translator.ui.componentSelection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component selection"
+      "status": "machine-generated",
+      "text": "የክፍሎች ምርጫ"
     },
     "translator.ui.components.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Components"
+      "status": "machine-generated",
+      "text": "ክፍሎች"
     },
     "translator.ui.coverageUnavailableValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultError"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Coverage unavailable: {resultError}"
+      "status": "machine-generated",
+      "text": "ሽፋን አይገኝም፡ {resultError}"
     },
     "translator.ui.coverageUnavailableValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileError"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Coverage unavailable: {fileError}"
+      "status": "machine-generated",
+      "text": "ሽፋን አይገኝም፡ {fileError}"
     },
     "translator.ui.deleteLocale.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "አካባቢን ሰርዝ"
+    },
+    "translator.ui.deleteSubstitution.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Delete locale"
+      "text": "Delete substitution"
+    },
+    "translator.ui.deleteTheNormalizedWordSubstitutionForValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "recordInput"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Delete the normalized word substitution for \"{recordInput}\"?"
     },
     "translator.ui.derivedFromTheSelectedCanonicalCatalogMessage.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Derived from the selected canonical catalog message."
+      "status": "machine-generated",
+      "text": "ከተመረጠው ቀኖናዊ የካታሎግ መልእክት የተወሰደ።"
     },
     "translator.ui.description.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Description"
+      "status": "machine-generated",
+      "text": "መግለጫ"
     },
     "translator.ui.detectedPlaceholdersValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "arrayFromNewSetNamesSort"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Detected placeholders: {arrayFromNewSetNamesSort}"
+      "status": "machine-generated",
+      "text": "የተገኙ የቦታ ያዥዎች፡ {arrayFromNewSetNamesSort}"
     },
     "translator.ui.diagnosticMessages.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Diagnostic Messages"
+      "status": "machine-generated",
+      "text": "የምርመራ መልዕክቶች"
     },
     "translator.ui.discardAllInMemoryChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard all in-memory changes?"
+      "status": "machine-generated",
+      "text": "ሁሉንም የማህደረ ትውስታ ለውጦች ይጣሉ?"
     },
     "translator.ui.discardUnsavedLanguageReportEditsAndReloadThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard unsaved Language Report edits and reload the artifact?"
+      "status": "machine-generated",
+      "text": "ያልተቀመጡ የቋንቋ አርትዖቶችን ሪፖርት ያድርጉ እና ቅርሱን እንደገና ይጫኑ?"
+    },
+    "translator.ui.durableLocaleFiles.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ዘላቂ የአካባቢያዊ ፋይሎች"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ዘላቂ የአካባቢያዊ ፋይሎች ተቀይረዋል"
     },
     "translator.ui.editAMatchingRecordHereWithoutLeavingAll.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit a matching record here without leaving All Candidates."
+      "status": "machine-generated",
+      "text": "ሁሉንም እጩዎች ሳይለቁ እዚህ ጋር የሚዛመደውን መዝገብ ያርትዑ።"
     },
     "translator.ui.editComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit component"
+      "status": "machine-generated",
+      "text": "ክፍሉን አርትዕ"
     },
     "translator.ui.editMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit migration inventory"
+      "status": "machine-generated",
+      "text": "የፍልሰት ክምችትን ያርትዑ"
     },
     "translator.ui.editRecord.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit record"
+      "status": "machine-generated",
+      "text": "መዝገብ አርትዕ"
     },
     "translator.ui.editValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "componentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit {componentId}"
+      "status": "machine-generated",
+      "text": "{componentId}"
     },
     "translator.ui.editValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Edit {currentId}"
+      "status": "machine-generated",
+      "text": "{currentId}"
     },
     "translator.ui.editingTheCurrentGeneratedReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Editing the current generated report."
+      "status": "machine-generated",
+      "text": "የአሁኑን የመነጨ ሪፖርት በማስተካከል ላይ።"
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የለውጥ ቅድመ እይታን ለመፍጠር የካታሎግ ቁልፍ ያስገቡ።"
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ነባር የካታሎግ ቁልፎች እንደገና መሰየም አይችሉም። ሌላ ቁልፍ ለመጠቀም አዲስ መዝገብ ያክሉ።"
     },
     "translator.ui.existingCategories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing Categories"
+      "status": "machine-generated",
+      "text": "ነባር ምድቦች"
     },
     "translator.ui.existingRoles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Existing Roles"
+      "status": "machine-generated",
+      "text": "ነባር ሚናዎች"
     },
     "translator.ui.filterStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filter status"
+      "status": "machine-generated",
+      "text": "የማጣሪያ ሁኔታ"
     },
     "translator.ui.filteredToComponentValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "selectedComponent"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Filtered to component: {selectedComponent}"
+      "status": "machine-generated",
+      "text": "ወደ አካል ተጣርቶ፡ {selectedComponent}"
     },
     "translator.ui.generatedArtifactManualEditsCanBeOverwrittenThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated artifact: manual edits can be overwritten the next time the language report is built."
+      "status": "machine-generated",
+      "text": "የተፈጠረ ቅርስ፡ በእጅ የሚደረጉ ማስተካከያዎች በሚቀጥለው ጊዜ የቋንቋ ሪፖርቱ ሲገነባ ሊተኩ ይችላሉ።"
     },
     "translator.ui.generatedCatalogValueWillBeDeletedWhenYou.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalog {currentId} will be deleted when you Save."
+      "status": "machine-generated",
+      "text": "የተፈጠረው ካታሎግ {currentId} ሲያስቀምጡ ይሰረዛል።"
     },
     "translator.ui.generatedCatalogValueWillBePreserved.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "currentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalog {currentId} will be preserved."
+      "status": "machine-generated",
+      "text": "የተፈጠረው ካታሎግ {currentId} ይቀመጣል።"
     },
     "translator.ui.generatedCatalogsDeleted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalogs deleted"
+      "status": "machine-generated",
+      "text": "የተፈጠረው ካታሎግ ተሰርዟል"
     },
     "translator.ui.generatedCatalogsScheduledForDeletion.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated catalogs scheduled for deletion"
+      "status": "machine-generated",
+      "text": "የመነጩ ካታሎጎች ለመሰረዝ ታቅደዋል"
     },
     "translator.ui.generatedFiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated files"
+      "status": "machine-generated",
+      "text": "የመነጩ ፋይሎች"
     },
     "translator.ui.generatedFilesChanged.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated files changed"
+      "status": "machine-generated",
+      "text": "የመነጩ ፋይሎች ተቀይረዋል"
     },
     "translator.ui.hideLeftPanel.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Hide left panel"
+      "status": "machine-generated",
+      "text": "የግራ ፓነልን ደብቅ"
+    },
+    "translator.ui.highestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ከፍተኛው መስመር መጀመሪያ"
     },
     "translator.ui.identifier.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Identifier"
+      "status": "machine-generated",
+      "text": "መለያ"
     },
     "translator.ui.inCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "In Catalog"
+      "status": "machine-generated",
+      "text": "በካታሎግ ውስጥ"
     },
     "translator.ui.inspectedValueFileSScannedValueAsText.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderInspectedFileCount",
         "scannedFolderScannedFileCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Inspected {scannedFolderInspectedFileCount} file(s); scanned {scannedFolderScannedFileCount} as text."
+      "status": "machine-generated",
+      "text": "{scannedFolderInspectedFileCount} ፋይል(ዎች) ተፈትሸዋል፤ {scannedFolderScannedFileCount} እንደ ጽሑፍ ተቃኝቷል።"
     },
     "translator.ui.invalidValueErrorS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationErrorsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Invalid ({validationErrorsCount} error(s))"
+      "status": "machine-generated",
+      "text": "ልክ ያልሆነ ({validationErrorsCount} ስህተት(ዎች))"
     },
     "translator.ui.join.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
+      "status": "machine-generated",
       "text": ").join(', ')}"
     },
     "translator.ui.languageReport.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Language Report"
+      "status": "machine-generated",
+      "text": "የቋንቋ ሪፖርት"
     },
     "translator.ui.leftToRightLtr.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Left to right (ltr)"
+      "status": "machine-generated",
+      "text": "ከግራ ወደ ቀኝ (ltr)"
+    },
+    "translator.ui.lineOrder.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የመስመር ቅደም ተከተል"
     },
     "translator.ui.lineValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "candidateLine"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Line {candidateLine}"
+      "status": "machine-generated",
+      "text": "የመስመር {candidateLine}"
     },
     "translator.ui.loadingLanguageReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Loading language report artifact."
+      "status": "machine-generated",
+      "text": "የቋንቋ ሪፖርት ቅርስ በመጫን ላይ…"
     },
     "translator.ui.loadingPotentialFoundCoverage.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Loading potential / found coverage…"
+      "status": "machine-generated",
+      "text": "የ/ ሽፋን አግኝቷል…"
     },
     "translator.ui.loadingProjectLanguageData.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Loading project language data..."
+      "status": "machine-generated",
+      "text": "የፕሮጀክት ቋንቋ ውሂብ በመጫን ላይ..."
+    },
+    "translator.ui.loadingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ትራንስ በመጫን ላይ ቅድመ እይታ..."
     },
     "translator.ui.locales.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locales"
+      "status": "machine-generated",
+      "text": "አካባቢዎች"
+    },
+    "translator.ui.lowestLineFirst.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ዝቅተኛው መስመር መጀመሪያ"
     },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains language/canonical/components.json → migrationInventory.scanFiles"
+      "status": "machine-generated",
+      "text": "language/canonical/components.json → migrationInventory.scanFiles"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains language/locales/locales.json. Deleting a locale preserves authored source files and keeps generated catalog data by default."
+      "status": "machine-generated",
+      "text": "language/locales/locales.jsonን ይጠብቃል። የቋንቋ ክልልን መሰረዝ የጸሐፊ ምንጭ ፋይሎችን ያቆያል እና የመነጨ የካታሎግ መረጃን በነባሪነት ያቆያል።"
     },
     "translator.ui.maintainsValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionFile"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintains {definitionFile}"
+      "status": "machine-generated",
+      "text": "{definitionFile}ን ይጠብቃል"
     },
     "translator.ui.migrationCoverageUnavailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "migration-coverage unavailable"
+      "status": "machine-generated",
+      "text": "የፍልሰት-ሽፋን አይገኝም"
     },
     "translator.ui.migrationCoverageValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "migration-coverage {fileCatalogedStringCount}"
+      "status": "machine-generated",
+      "text": "የፍልሰት-ሽፋን {fileCatalogedStringCount}"
     },
     "translator.ui.migrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration inventory"
+      "status": "machine-generated",
+      "text": "የፍልሰት ክምችት"
     },
     "translator.ui.migrationInventory.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration Inventory"
+      "status": "machine-generated",
+      "text": "የፍልሰት ክምችት"
     },
     "translator.ui.migrationInventoryEntries.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Migration inventory entries"
+      "status": "machine-generated",
+      "text": "የፍልሰት ክምችት ግቤቶች"
     },
     "translator.ui.nextLine.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Next (line)"
+      "status": "machine-generated",
+      "text": "ቀጣይ (መስመር)"
     },
     "translator.ui.no.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No"
+      "status": "machine-generated",
+      "text": "አይ"
     },
     "translator.ui.noCandidateStringsWereFoundInThisFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No candidate strings were found in this file."
+      "status": "machine-generated",
+      "text": "በዚህ ፋይል ውስጥ ምንም የእጩ ሕብረቁምፊዎች አልተገኙም።"
     },
     "translator.ui.noComponentMatchesTheSearch.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No component matches the search."
+      "status": "machine-generated",
+      "text": "ከፍለጋው ጋር የሚዛመድ ምንም አካል የለም።"
     },
     "translator.ui.noFileSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No file selected."
+      "status": "machine-generated",
+      "text": "ምንም ፋይል አልተመረጠም።"
     },
     "translator.ui.noFilesContainingCandidateStringsWereFoundIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files containing candidate strings were found in this folder."
+      "status": "machine-generated",
+      "text": "በዚህ አቃፊ ውስጥ የእጩ ሕብረቁምፊዎችን የያዙ ፋይሎች አልተገኙም።"
     },
     "translator.ui.noFilesMatchTheCurrentFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files match the current filter."
+      "status": "machine-generated",
+      "text": "ከአሁኑ ማጣሪያ ጋር የሚዛመዱ ፋይሎች የሉም።"
     },
     "translator.ui.noFolderSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No folder selected."
+      "status": "machine-generated",
+      "text": "ምንም አቃፊ አልተመረጠም።"
     },
     "translator.ui.noMigrationCandidatesWereReportedForThisFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No migration candidates were reported for this file."
+      "status": "machine-generated",
+      "text": "ለዚህ ፋይል ምንም የፍልሰት እጩዎች አልተዘገቡም።"
     },
     "translator.ui.noMigrationSourceFilesAreListed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No migration source files are listed."
+      "status": "machine-generated",
+      "text": "ምንም የፍልሰት ምንጭ ፋይሎች አልተዘረዘሩም።"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ከአሁኑ ማጣሪያዎች ጋር የሚዛመድ ቀጣይ እጩ የለም።"
     },
     "translator.ui.noNextCandidateMatchesTheCurrentStatusFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No next candidate matches the current status filter."
+      "status": "machine-generated",
+      "text": "ከአሁኑ ሁኔታ ማጣሪያ ጋር የሚዛመድ ቀጣይ እጩ የለም።"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ከአሁኑ ማጣሪያዎች ጋር የሚዛመድ የቀድሞ እጩ የለም።"
     },
     "translator.ui.noPreviousCandidateMatchesTheCurrentStatusFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No previous candidate matches the current status filter."
+      "status": "machine-generated",
+      "text": "ከአሁኑ የሁኔታ ማጣሪያ ጋር የሚዛመድ ቀዳሚ እጩ የለም።"
     },
     "translator.ui.noRecordsMatchTheCurrentFilters.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No records match the current filters."
+      "status": "machine-generated",
+      "text": "ከአሁኑ ማጣሪያዎች ጋር የሚዛመድ ምንም መዝገብ የለም።"
     },
     "translator.ui.noScanResultsAreAvailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No scan results are available."
+      "status": "machine-generated",
+      "text": "ምንም የፍተሻ ውጤቶች የሉም።"
     },
     "translator.ui.noStableSourceConstructWasFound.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No stable source construct was found."
+      "status": "machine-generated",
+      "text": "ምንም የተረጋጋ የምንጭ ግንባታ አልተገኘም።"
     },
     "translator.ui.noUnsavedChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No unsaved changes"
+      "status": "machine-generated",
+      "text": "ምንም ያልተቀመጡ ለውጦች የሉም"
     },
     "translator.ui.notSet.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(not set)"
+      "status": "machine-generated",
+      "text": "(አልተዘጋጀም)"
     },
     "translator.ui.notValidated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Not validated"
+      "status": "machine-generated",
+      "text": "አልተረጋገጠም"
     },
     "translator.ui.notes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Notes"
+      "status": "machine-generated",
+      "text": "ማስታወሻዎች"
     },
     "translator.ui.openComponentCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open component catalog"
+      "status": "machine-generated",
+      "text": "የክፍሉን ካታሎግ ክፈት"
     },
     "translator.ui.openDiagnosticMessages.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open diagnostic messages"
+      "status": "machine-generated",
+      "text": "የምርመራ መልዕክቶችን ክፈት"
     },
     "translator.ui.openPreviewModes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open preview modes"
+      "status": "machine-generated",
+      "text": "የቅድመ እይታ ሁነታዎችን ክፈት"
     },
     "translator.ui.openSemanticKeywords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open semantic keywords"
+      "status": "machine-generated",
+      "text": "የትርጉም ቁልፍ ቃላትን ክፈት"
     },
     "translator.ui.openSource.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Open source"
+      "status": "machine-generated",
+      "text": "ክፍት ምንጭ"
+    },
+    "translator.ui.original.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ኦሪጅናል"
     },
     "translator.ui.potentialCandidate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Potential Candidate"
+      "status": "machine-generated",
+      "text": "እምቅ እጩ"
     },
     "translator.ui.preparingNormalizedRebuildWithDeeplDisabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Preparing normalized rebuild with DeepL disabled"
+      "status": "machine-generated",
+      "text": "DeepL ተሰናክሎ መደበኛውን መልሶ ግንባታ ማዘጋጀት"
     },
     "translator.ui.preparingNormalizedSaveWithDeeplDisabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Preparing normalized save with DeepL disabled"
+      "status": "machine-generated",
+      "text": "DeepL ተሰናክሎ መደበኛውን መልሶ ማግኛ ማዘጋጀት"
     },
     "translator.ui.preparingRebuildWithDeeplApiCallsEnabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "DeepL API ጥሪዎችን በማብራት መልሶ ግንባታ ማዘጋጀት"
+    },
+    "translator.ui.preparingRebuildWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "Preparing rebuild with DeepL API calls enabled"
+      "text": "Preparing rebuild with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingRebuildWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing rebuild with {useNormalizedEnglish} English language fallbacks"
     },
     "translator.ui.preparingSaveWithDeeplApiCallsEnabled.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "DeepL API ጥሪዎችን በማብራት መልሶ ግንባታ ማዘጋጀት"
+    },
+    "translator.ui.preparingSaveWithDeeplUsingValueEnglish.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "Preparing save with DeepL API calls enabled"
+      "text": "Preparing save changes with Deep L using {useNormalizedEnglish} English language"
+    },
+    "translator.ui.preparingSaveWithValueEnglishFallbacks.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with {useNormalizedEnglish} English language fallbacks"
     },
     "translator.ui.previousLine.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Previous (line)"
+      "status": "machine-generated",
+      "text": "ቀዳሚ (መስመር)"
     },
     "translator.ui.recommendedCategories.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recommended Categories"
+      "status": "machine-generated",
+      "text": "የሚመከሩ ምድቦች"
     },
     "translator.ui.recommendedRoles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recommended Roles"
+      "status": "machine-generated",
+      "text": "የሚመከሩ ሚናዎች"
     },
     "translator.ui.recoveryFilesRetained.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recovery files retained"
+      "status": "machine-generated",
+      "text": "የመልሶ ማግኛ ፋይሎች ተይዘዋል"
     },
     "translator.ui.recursivelyInspectARepositoryFolderThenAddSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Recursively inspect a repository folder, then add selected candidate bearing files in one operation."
+      "status": "machine-generated",
+      "text": "የማከማቻ አቃፊን ደጋግመው ይመርምሩ፣ ከዚያም የተመረጡ እጩዎችን የያዙ ፋይሎችን በአንድ ክወና ውስጥ ያክሉ።"
     },
     "translator.ui.refreshingCatalogMatches.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Refreshing catalog matches."
+      "status": "machine-generated",
+      "text": "የካታሎግ ተዛማጆችን በማደስ ላይ..."
+    },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የለውጥ ቅድመ እይታን እንደገና በማመንጨት ላይ..."
     },
     "translator.ui.reject.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reject"
+      "status": "machine-generated",
+      "text": "ውድቅ አድርግ"
     },
     "translator.ui.reloadReportFromDisk.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reload report from disk"
+      "status": "machine-generated",
+      "text": "ሪፖርቱን ከዲስክ እንደገና ጫን"
     },
     "translator.ui.remove.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Remove"
+      "status": "machine-generated",
+      "text": "አስወግድ"
     },
     "translator.ui.removeValueFromTheMigrationInventory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Remove {filePath} from the migration inventory?"
+      "status": "machine-generated",
+      "text": "{filePath} ከፍልሰት ክምችት ይወገድ?"
+    },
+    "translator.ui.replaceLineInSource.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "በምንጭ ውስጥ ያለውን መስመር ይተኩ"
     },
     "translator.ui.repositoryMaintenanceTool.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Repository maintenance tool"
+      "status": "machine-generated",
+      "text": "የማከማቻ ጥገና መሳሪያ"
     },
     "translator.ui.requiredLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Required locale"
+      "status": "machine-generated",
+      "text": "የሚያስፈልግ አካባቢ"
     },
     "translator.ui.resizeCandidateListAndCandidateEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize candidate list and candidate editor"
+      "status": "machine-generated",
+      "text": "የእጩ ዝርዝር እና የእጩ አርታኢ መጠን ይቀይሩ"
     },
     "translator.ui.resizeLocaleListAndLocaleEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize locale list and locale editor"
+      "status": "machine-generated",
+      "text": "የአካባቢ ዝርዝር እና የአካባቢ አርታኢ መጠን ይቀይሩ"
     },
     "translator.ui.resizeValueListAndEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "definitionTitle"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize {definitionTitle} list and editor"
+      "status": "machine-generated",
+      "text": "የ{definitionTitle} ዝርዝር እና አርታኢ መጠን ቀይር"
     },
     "translator.ui.resizeWorkspaceAndOperationResults.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize workspace and operation results"
+      "status": "machine-generated",
+      "text": "የስራ ቦታ እና የአሠራር ውጤቶችን መጠን ቀይር"
+    },
+    "translator.ui.resolvingCatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የካታሎግ ቁልፍን በመፍታት ላይ..."
     },
     "translator.ui.restore.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restore"
+      "status": "machine-generated",
+      "text": "እነበረበት መልስ"
     },
     "translator.ui.restoringTheLastLoadedDraftAndValidatingIt.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restoring the last loaded draft and validating it"
+      "status": "machine-generated",
+      "text": "የመጨረሻውን የተጫነውን ረቂቅ ወደነበረበት መመለስ እና ማረጋገጥ"
     },
     "translator.ui.retry.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Retry"
+      "status": "machine-generated",
+      "text": "ዳግም ሞክር"
     },
     "translator.ui.revertingLanguageData.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reverting language data"
+      "status": "machine-generated",
+      "text": "የቋንቋ ውሂብን መመለስ"
     },
     "translator.ui.rightToLeftRtl.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Right to left (rtl)"
+      "status": "machine-generated",
+      "text": "ከቀኝ ወደ ግራ (rtl)"
+    },
+    "translator.ui.role.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ሚና"
     },
     "translator.ui.roles.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Roles"
+      "status": "machine-generated",
+      "text": "ሚናዎች"
     },
     "translator.ui.runtime.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Runtime"
+      "status": "machine-generated",
+      "text": "የስራ ጊዜ"
     },
     "translator.ui.saveReportArtifact.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save report artifact"
+      "status": "machine-generated",
+      "text": "የሪፖርት ቅርስ አስቀምጥ"
     },
     "translator.ui.scanFailedValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "resultError"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan failed: {resultError}"
+      "status": "machine-generated",
+      "text": "ቅኝት አልተሳካም፡ {resultError}"
     },
     "translator.ui.scanFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan file…"
+      "status": "machine-generated",
+      "text": "ፋይልን ቃኝ…"
     },
     "translator.ui.scanFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan folder."
+      "status": "machine-generated",
+      "text": "ፎልደር ቃኝ…"
     },
     "translator.ui.scanSourceFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source file"
+      "status": "machine-generated",
+      "text": "የምንጭ ፋይል ይቃኙ"
     },
     "translator.ui.scanSourceFileValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFilePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source file: {scannedFilePath}"
+      "status": "machine-generated",
+      "text": "የምንጭ ፋይል ይቃኙ፦ {scannedFilePath}"
     },
     "translator.ui.scanSourceFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source folder"
+      "status": "machine-generated",
+      "text": "የምንጭ አቃፊ ይቃኙ"
     },
     "translator.ui.scanSourceFolderValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scan source folder: {scannedFolderPath}"
+      "status": "machine-generated",
+      "text": "የምንጭ አቃፊ ይቃኙ፦ {scannedFolderPath}"
     },
     "translator.ui.scannedValueCandidateStringSWithoutChangingThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileExtractedCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scanned {scannedFileExtractedCount} candidate string(s) without changing the inventory."
+      "status": "machine-generated",
+      "text": "የክምችቱን ሳይቀይሩ የ{scannedFileExtractedCount} እጩ ሕብረቁምፊ(ዎች) ተቃኝተዋል።"
     },
     "translator.ui.scanningSelectedFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scanning selected file…"
+      "status": "machine-generated",
+      "text": "የተመረጠውን ፋይል በመቃኘት ላይ…"
     },
     "translator.ui.scanningSelectedFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scanning selected folder."
+      "status": "machine-generated",
+      "text": "የተመረጠውን አቃፊ በመቃኘት ላይ…"
     },
     "translator.ui.scope.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Scope"
+      "status": "machine-generated",
+      "text": "ስኮፕ"
     },
     "translator.ui.search.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search"
+      "status": "machine-generated",
+      "text": "ፈልግ"
     },
     "translator.ui.searchAndFilter.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search and filter"
+      "status": "machine-generated",
+      "text": "ፈልግ እና አጣራ"
     },
     "translator.ui.selectACategory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(select a category)"
+      "status": "machine-generated",
+      "text": "(ምድብ ይምረጡ)"
     },
     "translator.ui.selectAComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(select a component)"
+      "status": "machine-generated",
+      "text": "(ክፍል ይምረጡ)"
     },
     "translator.ui.selectAFileToDisplayEveryStringAccepted.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a file to display every string accepted by extractStringCandidates."
+      "status": "machine-generated",
+      "text": "በextractStringCandidates የተቀበሉትን እያንዳንዱን ሕብረቁምፊ ለማሳየት ፋይል ይምረጡ።"
     },
     "translator.ui.selectAFolderToFindFilesContainingCandidate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a folder to find files containing candidate strings."
+      "status": "machine-generated",
+      "text": "የእጩ ሕብረቁምፊዎችን የያዙ ፋይሎችን ለማግኘት አቃፊ ይምረጡ።"
     },
     "translator.ui.selectALocaleOrAddANewOne.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a locale or add a new one."
+      "status": "machine-generated",
+      "text": "አካባቢ ይምረጡ ወይም አዲስ ያክሉ።"
     },
     "translator.ui.selectALocaleTemplate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a locale template"
+      "status": "machine-generated",
+      "text": "የአካባቢ አብነት ይምረጡ"
     },
     "translator.ui.selectAReportedCandidateToReviewItsStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a reported candidate to review its status."
+      "status": "machine-generated",
+      "text": "ሁኔታውን ለመገምገም ሪፖርት የተደረገ እጩ ይምረጡ።"
     },
     "translator.ui.selectARole.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "(select a role)"
+      "status": "machine-generated",
+      "text": "(ሚና ይምረጡ)"
     },
     "translator.ui.selectASpecificComponentBeforeAddingARecord.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a specific component before adding a record."
+      "status": "machine-generated",
+      "text": "መዝገብ ከማከልዎ በፊት የተወሰነ አካል ይምረጡ።"
     },
     "translator.ui.selectAllNew.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select all new"
+      "status": "machine-generated",
+      "text": "ሁሉንም አዲስ ይምረጡ"
     },
     "translator.ui.selectFile.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select file…"
+      "status": "machine-generated",
+      "text": "ፋይል ይምረጡ…"
     },
     "translator.ui.selectFolder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select folder."
+      "status": "machine-generated",
+      "text": "አቃፊ ይምረጡ…"
     },
     "translator.ui.selectOneRepositoryFileToInspectWithoutAdding.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select one repository file to inspect without adding it to the source inventory."
+      "status": "machine-generated",
+      "text": "ወደ ምንጭ ክምችት ሳይጨምሩ ለመመርመር አንድ የማከማቻ ፋይል ይምረጡ።"
     },
     "translator.ui.selectedValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFilePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected: {scannedFilePath}"
+      "status": "machine-generated",
+      "text": "የተመረጠው፡ {scannedFilePath}"
     },
     "translator.ui.selectedValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderPath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected: {scannedFolderPath}"
+      "status": "machine-generated",
+      "text": "የተመረጠው፡ {scannedFolderPath}"
     },
     "translator.ui.semanticKeywords.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Semantic Keywords"
+      "status": "machine-generated",
+      "text": "የትርጉም ቁልፍ ቃላት"
     },
     "translator.ui.setPreviewDefault.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Set preview default"
+      "status": "machine-generated",
+      "text": "የቅድመ እይታ ነባሪውን ያዘጋጁ"
     },
     "translator.ui.showLeftPanel.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Show left panel"
+      "status": "machine-generated",
+      "text": "የግራ ፓነልን አሳይ"
     },
     "translator.ui.showingRecordsFromAllComponents.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Showing records from all components"
+      "status": "machine-generated",
+      "text": "ከሁሉም ክፍሎች የተገኙ መዝገቦችን በማሳየት ላይ"
     },
     "translator.ui.skippedValueFileOrFolderPathS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "skipped"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Skipped {skipped} file or folder path(s)."
+      "status": "machine-generated",
+      "text": "{skipped} ፋይል ወይም የአቃፊ ዱካ(ዎች) ተዘሏል።"
+    },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ ምትክ አይገኝም።"
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ መተካት የካታሎግ ቁልፍ ይፈልጋል።"
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ ትራንስፎርሜሽን ቅድመ እይታ"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "detail"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ ዝማኔ በመጠባበቅ ላይ ነው። {detail}። አሰሳ ቀጥሏል።"
     },
     "translator.ui.status.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Status"
+      "status": "machine-generated",
+      "text": "ሁኔታ"
     },
     "translator.ui.statusInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Status: In Catalog"
+      "status": "machine-generated",
+      "text": "ሁኔታ፡ በካታሎግ ውስጥ"
     },
     "translator.ui.stoppedAtTheValueFileSafetyLimit.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderLimitsMaximumFiles"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Stopped at the {scannedFolderLimitsMaximumFiles} file safety limit."
+      "status": "machine-generated",
+      "text": "በ{scannedFolderLimitsMaximumFiles}-ፋይል የደህንነት ገደብ ላይ ቆሟል።"
     },
     "translator.ui.textDirection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Text direction"
+      "status": "machine-generated",
+      "text": "የጽሑፍ አቅጣጫ"
     },
     "translator.ui.theInventoryIsUnchangedUntilSelectedFilesAre.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The inventory is unchanged until selected files are added."
+      "status": "machine-generated",
+      "text": "የተመረጡ ፋይሎች እስኪጨመሩ ድረስ ክምችቱ አልተቀየረም።"
     },
     "translator.ui.theReportDoesNotExistYetSavingWill.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The report does not exist yet. Saving will create it."
+      "status": "machine-generated",
+      "text": "ሪፖርቱ እስካሁን የለም። ማስቀመጥ ይፈጥርለታል።"
+    },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የምንጭ መስመሩ አልተተካም።"
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ይህ የአሁኑ ቁልፍ ክስተት አስቀድሞ ካታሎግ.format ይጠቀማል እና ምንም የምንጭ ለውጥ አያስፈልገውም።"
     },
     "translator.ui.thisLocaleIsRequiredByTheLanguageBuilder.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "This locale is required by the language builder."
+      "status": "machine-generated",
+      "text": "ይህ አካባቢ በቋንቋ ገንቢው ያስፈልጋል።"
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ይህ ቀዳሚ እጩ ለትንታኔ ተይዟል፤ የአሁኑ የምንጭ መስመር አስቀድሞ ካታሎግ .format ይጠቀማል።"
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultError"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "የለውጥ ቅድመ እይታ አይገኝም፡ {resultError}"
+    },
+    "translator.ui.transformed.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ተለውጧል"
     },
     "translator.ui.translationOrientedPreviewUsingCanonicalWordSubstitutions.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Translation-oriented preview using canonical word substitutions."
+      "status": "machine-generated",
+      "text": "ቀኖናዊ የቃላት ምትክን በመጠቀም በትርጉም ላይ ያተኮረ ቅድመ እይታ።"
     },
     "translator.ui.uncheckedBuildsUseNormalizedEnglishAndDoNot.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unchecked builds use normalized English and do not call DeepL."
+      "status": "machine-generated",
+      "text": "ያልተመረጡ ግንባታዎች መደበኛ እንግሊዝኛ ይጠቀማሉ እና DeepLን አይደውሉም።"
     },
     "translator.ui.unsavedChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unsaved changes"
+      "status": "machine-generated",
+      "text": "ያልተቀመጡ ለውጦች"
     },
     "translator.ui.unsavedChangesRemainInMemoryContinueToAnother.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "ያልተቀመጡ ለውጦች በማህደረ ትውስታ ውስጥ ይቀራሉ። ወደ ሌላ እይታ ይቀጥሉ?"
+    },
+    "translator.ui.useNormalized.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Unsaved changes remain in memory. Continue to another view?"
+      "text": "Use normalized"
+    },
+    "translator.ui.useNormalizedEnglishForGeneratedFallbacksAndAutomated.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for generated fallbacks and automated translation input."
     },
     "translator.ui.useSuggestedKey.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use suggested key"
+      "status": "machine-generated",
+      "text": "የተጠቆመውን ቁልፍ ተጠቀም"
     },
     "translator.ui.validValueWarningS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationWarningsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Valid ({validationWarningsCount} warning(s))"
+      "status": "machine-generated",
+      "text": "ትክክለኛ ({validationWarningsCount} ማስጠንቀቂያ(ዎች))"
     },
     "translator.ui.validationFailedWithValueErrorS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationErrorsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validation failed with {validationErrorsCount} error(s)."
+      "status": "machine-generated",
+      "text": "ማረጋገጫ በ{validationErrorsCount} ስህተት(ዎች) አልተሳካም።"
     },
     "translator.ui.validationListValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "kind"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "validation-list {kind}"
+      "status": "machine-generated",
+      "text": "የማረጋገጫ-ዝርዝር {kind}"
     },
     "translator.ui.validationPassedWithValueWarningS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "validationWarningsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validation passed with {validationWarningsCount} warning(s)."
+      "status": "machine-generated",
+      "text": "ማረጋገጫ በ{validationWarningsCount} ማስጠንቀቂያ(ዎች) አልፏል።"
     },
     "translator.ui.valueCandidateBearingFileSValuePotentialCandidate.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFolderCandidateFileCount",
         "scannedFolderCandidateCount",
         "scannedFolderCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFolderCandidateFileCount} candidate bearing file(s), {scannedFolderCandidateCount} potential candidate(s), {scannedFolderCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFolderCandidateFileCount} እጩ የያዘ ፋይል(ዎች)፣ {scannedFolderCandidateCount} ሊሆኑ የሚችሉ እጩ(ዎች)፣ {scannedFolderCatalogedStringCount} በካታሎግ ውስጥ ተገኝቷል"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileCandidateCount",
         "scannedFileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFileCandidateCount} non catalog candidate(s), {scannedFileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFileCandidateCount} ካታሎግ ያልሆኑ እጩ(ዎች)፣ {scannedFileCatalogedStringCount} በካታሎግ ውስጥ ተገኝቷል"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} non catalog candidate(s), {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} ካታሎግ ያልሆኑ እጩ(ዎች)፣ {fileCatalogedStringCount} በካታሎግ ውስጥ ተገኝቷል"
     },
     "translator.ui.valueNonCatalogCandidateSValueFoundIn.text3": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "candidateRowsLengthCatalogedCount",
         "catalogedCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{candidateRowsLengthCatalogedCount} non catalog candidate(s), {catalogedCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{candidateRowsLengthCatalogedCount} ካታሎግ ያልሆኑ እጩ(ዎች)፣ {catalogedCount} በካታሎግ ውስጥ ተገኝቷል"
     },
     "translator.ui.valueNonCatalogValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} non catalog {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} ካታሎግ ያልሆነ · {fileCatalogedStringCount} በካታሎግ ውስጥ ተገኝቷል"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "scannedFileCandidateCount",
         "scannedFileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{scannedFileCandidateCount} potential candidate(s), {scannedFileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{scannedFileCandidateCount} እምቅ እጩ(ዎች)፣ {scannedFileCatalogedStringCount} በካታሎግ ውስጥ ተገኝቷል"
     },
     "translator.ui.valuePotentialCandidateSValueFoundInCatalog.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential candidate(s), {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} እምቅ እጩ(ዎች)፣ {fileCatalogedStringCount} በካታሎግ ውስጥ ተገኝቷል"
     },
     "translator.ui.valuePotentialValueFoundInCatalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential · {fileCatalogedStringCount} found in catalog"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} እምቅ አቅም፣ {fileCatalogedStringCount} በካታሎግ ውስጥ ተገኝቷል"
     },
     "translator.ui.valuePotentialValueInCatalogValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "fileCandidateCount",
         "fileCatalogedStringCount",
         "inventoryText"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{fileCandidateCount} potential {fileCatalogedStringCount} in catalog{inventoryText}"
+      "status": "machine-generated",
+      "text": "{fileCandidateCount} እምቅ · {fileCatalogedStringCount} በካታሎግ ውስጥ {inventoryText}"
     },
     "translator.ui.valueRecordS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "recordsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{recordsCount} record(s)"
+      "status": "machine-generated",
+      "text": "{recordsCount} መዝገብ(ዎች)"
+    },
+    "translator.ui.valueRemaining.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryRemainingCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryRemainingCount} የቀረው"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "statusElapsedMsToFixed"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{statusElapsedMsToFixed} ሰከንዶች አልፈዋል"
     },
     "translator.ui.valueSourceFileS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "filesCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{filesCount} source file(s)"
+      "status": "machine-generated",
+      "text": "{filesCount} የምንጭ ፋይል(ዎች)"
+    },
+    "translator.ui.valueValueCompleted.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "summaryCompletedCount",
+        "summaryTotalCount"
+      ],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{summaryCompletedCount}/{summaryTotalCount} ተጠናቋል"
     },
     "translator.ui.view.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View"
+      "status": "machine-generated",
+      "text": "ይመልከቱ"
     },
     "translator.ui.viewCandidates.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "View candidates"
+      "status": "machine-generated",
+      "text": "እጩዎችን ይመልከቱ"
     },
     "translator.ui.viewHeadingDataViewToolbar.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "view-heading data-view-toolbar"
+      "status": "machine-generated",
+      "text": "የእይታ-ርዕስ የውሂብ-እይታ-የመሳሪያ አሞሌ"
     },
     "translator.ui.yes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Yes"
+      "status": "machine-generated",
+      "text": "አዎ"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

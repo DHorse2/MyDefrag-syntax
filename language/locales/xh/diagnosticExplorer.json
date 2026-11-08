@@ -3,15 +3,15 @@
   "component": "diagnosticExplorer",
   "entries": {
     "diagnosticExplorer.message.noCurrentDiagnostic.info": {
-      "text": "I-Defragmenter yam: Akukho uhlolo lwangoku.",
+      "text": "I-Ulawulo lwam lokugcina izinto yam: Akukho uhlolo lwangoku.",
       "status": "machine-generated"
     },
     "diagnosticExplorer.status.hasDiagnostics.text": {
-      "text": "$(warning) I-Defragmenter Yam {index} / {total}",
+      "text": "$(warning) I-Ulawulo lwam lokugcina izinto Yam {index} / {total}",
       "status": "machine-generated"
     },
     "diagnosticExplorer.status.noDiagnostics.text": {
-      "text": "$(check) Uhlolo lwe-Defragmenter 0",
+      "text": "$(check) Uhlolo lwe-Ulawulo lwam lokugcina izinto 0",
       "status": "machine-generated"
     },
     "diagnosticExplorer.tree.header.label": {

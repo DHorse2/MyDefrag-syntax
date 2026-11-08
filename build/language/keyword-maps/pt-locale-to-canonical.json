@@ -1,11 +1,27 @@
 {
-  "Defragment": {
+  "Caminho Completo": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "Classificar por Nome": {
+    "canonical": "SortByName",
+    "id": "fileAction.sortByName"
+  },
+  "Contagem de Fragmentos": {
+    "canonical": "FragmentCount",
+    "id": "volumeCondition.fragmentCount"
+  },
+  "Definir Cor": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
+  },
+  "Definir Variável": {
+    "canonical": "SetVariable",
+    "id": "setting.setVariable"
+  },
+  "Desfragmentar": {
     "canonical": "Defragment",
     "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
   },
   "ExcludeFiles": {
     "canonical": "ExcludeFiles",
@@ -15,10 +31,6 @@
     "canonical": "ExcludeVolumes",
     "id": "script.excludeVolumes"
   },
-  "FastFill": {
-    "canonical": "FastFill",
-    "id": "fileAction.fastFill"
-  },
   "FileActions": {
     "canonical": "FileActions",
     "id": "structure.fileActions"
@@ -27,23 +39,11 @@
     "canonical": "FileEnd",
     "id": "structure.fileEnd"
   },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
   "FileSelect": {
     "canonical": "FileSelect",
     "id": "structure.fileSelect"
   },
-  "FragmentCount": {
-    "canonical": "FragmentCount",
-    "id": "volumeCondition.fragmentCount"
-  },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
-  },
-  "Label": {
+  "Lab el": {
     "canonical": "Label",
     "id": "volumeCondition.label"
   },
@@ -51,21 +51,21 @@
     "canonical": "Name",
     "id": "volumeCondition.name"
   },
-  "SetColor": {
-    "canonical": "SetColor",
-    "id": "setting.setColor"
+  "Nome do Arquivo": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
   },
-  "SetVariable": {
-    "canonical": "SetVariable",
-    "id": "setting.setVariable"
+  "Nome do Diretório": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
   },
-  "Size": {
+  "Preenchimento Rápido": {
+    "canonical": "FastFill",
+    "id": "fileAction.fastFill"
+  },
+  "Tamanho": {
     "canonical": "Size",
     "id": "volumeCondition.size"
-  },
-  "SortByName": {
-    "canonical": "SortByName",
-    "id": "fileAction.sortByName"
   },
   "VolumeActions": {
     "canonical": "VolumeActions",

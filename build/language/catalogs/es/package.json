@@ -20,7 +20,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Mi Desfragmentador: Cerrar Diagnóstico Explorer"
+      "text": "Mi Desfragmentador: Cerrar Diagnóstico navegador"
     },
     "package.contributes.commands.mydfrg.diagnostics.filter.title": {
       "fallbackLocale": null,
@@ -34,7 +34,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Mi desfragmentador: «Mark Diagnostic» solucionado"
+      "text": "Mi gestión de almacenamiento: etiquetar diagnóstico como solucionado"
     },
     "package.contributes.commands.mydfrg.diagnostics.ignoreItem.title": {
       "fallbackLocale": null,
@@ -83,7 +83,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "My Defragmenter: Enviar diagnóstico al agente"
+      "text": "Gestión de almacenamiento: Enviar diagnóstico al agente"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
       "fallbackLocale": null,
@@ -125,7 +125,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Activar el registro de depuración de la extensión «My Defragmenter»."
+      "text": "Activar el registro de depuración de la extensión «Gestión de almacenamiento»."
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
       "fallbackLocale": null,
@@ -139,7 +139,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Directorio para los archivos de registro de My Defragmenter."
+      "text": "Directorio para los archivos de registro de Gestión de almacenamiento."
     },
     "package.contributes.configuration.properties.mydfrg.referenceContainsMacros.description": {
       "fallbackLocale": null,
@@ -174,14 +174,14 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Directorio de datos de usuario de My Defragmenter."
+      "text": "Directorio de datos de usuario de Gestión de almacenamiento."
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Nivel de detalle de la extensión «My Defragmenter». Para activar el registro de depuración, es necesario que la opción «mydfrg debug On» esté activada."
+      "text": "Nivel de detalle de la extensión «Gestión de almacenamiento». Para activar el registro de depuración, es necesario que la opción «mydfrg.debugOn» esté activada."
     },
     "package.contributes.languages.aliases": {
       "fallbackLocale": null,
@@ -195,7 +195,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Resaltado de sintaxis para el lenguaje de scripting «My Defragmenter»"
+      "text": "Resaltado de sintaxis para el lenguaje de scripting «Gestión de almacenamiento»"
     },
     "package.metadata.contributes.configuration.properties.mydfrg.fragmentParentLevel.description": {
       "fallbackLocale": null,
@@ -216,7 +216,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Resaltado de sintaxis para el lenguaje de scripting «My Defragmenter»"
+      "text": "Resaltado de sintaxis para el lenguaje de scripting «Gestión de almacenamiento»"
     },
     "package.metadata.publisher": {
       "fallbackLocale": null,

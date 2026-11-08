@@ -2,9 +2,12 @@
 
 const { LocaleCatalogRepository } = require('../repositories/locale-catalog-repository');
 const { LocaleCatalogValidator } = require('../validation/locale-catalog-validator');
-const { BuildIntegration } = require('../../mdl-language-app/services/build-integration');
+const { BuildIntegration } = require('../../shared/build-integration');
 const { DeepLTranslationService } = require('../../language/translation/deepl-translation-service');
+const { GoogleTranslationService } = require('../../language/translation/google-translation-service');
 const { normalizeText } = require('../../language/translation/text-normalizer');
+
+const TRANSLATION_PROVIDERS = new Set(['deepl', 'google', 'none']);
 
 function clone(value) {
     return JSON.parse(JSON.stringify(value));
@@ -19,13 +22,45 @@ function report(listener, progress) {
     }
 }
 
+function normalizeTranslationProvider(value, defaultProvider = 'none') {
+    const provider = String(value || defaultProvider).trim().toLocaleLowerCase();
+    if (!TRANSLATION_PROVIDERS.has(provider)) {
+        throw new Error(`Unknown translation provider: ${provider || '<missing>'}.`);
+    }
+    return provider;
+}
+
+function buildOptions(request = {}, localeId, componentId) {
+    const mode = normalizeTranslationProvider(request?.translationProvider);
+    const useNormalized = request?.useNormalized !== false;
+    return {
+        arguments: [
+            'build-component',
+            localeId,
+            componentId,
+            `--TranslationProvider=${mode}`,
+            useNormalized ? '--UseNormalized' : '--UseCanonical'
+        ],
+        mode: mode === 'none' ? (useNormalized ? 'normalized' : 'none') : mode,
+        translationProvider: mode,
+        englishSource: useNormalized ? 'normalized' : 'canonical'
+    };
+}
+
 class LocaleMaintenanceService {
     constructor(rootDir, options = {}) {
         this.rootDir = rootDir;
         this.builder = options.builder || require('../../scripts/build-language');
         this.repository = options.repository || new LocaleCatalogRepository(rootDir);
         this.buildIntegration = options.buildIntegration || new BuildIntegration(rootDir);
-        this.translator = options.translator || new DeepLTranslationService();
+        this.translators = {
+            deepl: options.translators?.deepl
+                || options.translator
+                || new DeepLTranslationService({ environment: options.environment }),
+            google: options.translators?.google
+                || options.googleTranslator
+                || new GoogleTranslationService({ environment: options.environment })
+        };
         this.state = null;
         this.validator = null;
         this.selectedLocale = null;
@@ -92,7 +127,16 @@ class LocaleMaintenanceService {
 
     snapshot() {
         this.ensureLoaded();
-        const apiTranslation = this.translator.info();
+        const apiTranslationProviders = Object.fromEntries(
+            Object.entries(this.translators).map(([id, translator]) => {
+                const info = translator.info();
+                return [id, {
+                    provider: info.provider,
+                    configured: Boolean(info.configured),
+                    credentialSource: info.credentialSource
+                }];
+            })
+        );
         const locale = (this.state.locales.locales || []).find((item) => item.id === this.selectedLocale);
         const component = (this.state.components.components || []).find((item) => item.id === this.selectedComponent);
         const rows = this.canonicalEntries().map((canonical) => {
@@ -131,7 +175,7 @@ class LocaleMaintenanceService {
             readOnlyReason: this.selectedLocale === 'en'
                 ? 'English text is canonical and must be maintained in MyDefrag Language Maintenance.'
                 : null,
-            apiTranslation: { configured: Boolean(apiTranslation.configured) },
+            apiTranslation: { providers: apiTranslationProviders },
             locales: clone(this.state.locales.locales || []),
             components: clone(this.state.components.components || []),
             statuses: Array.from(this.builder.VALID_STATUSES).sort(),
@@ -170,6 +214,15 @@ class LocaleMaintenanceService {
 
     async requestApiTranslation(payload = {}) {
         this.ensureLoaded();
+        const translationProvider = normalizeTranslationProvider(payload.translationProvider);
+        if (translationProvider === 'none') {
+            return {
+                ok: false,
+                stage: 'translation',
+                error: 'Select DeepL or Google Translate before generating an API translation.',
+                state: this.snapshot()
+            };
+        }
         if (this.selectedLocale === 'en') {
             return { ok: false, stage: 'translation', error: 'Canonical English is not an API translation target.' };
         }
@@ -177,16 +230,20 @@ class LocaleMaintenanceService {
         if (!canonical) {
             return { ok: false, stage: 'translation', error: `Unknown key for selected component: ${payload.key}` };
         }
-        const sourceText = String(payload.text || '').trim();
+        const useNormalized = payload.useNormalized !== false;
+        const sourceText = useNormalized
+            ? normalizeText(canonical.text, this.state.normalizedWords, { preserveRuntimeSyntax: true })
+            : canonical.text;
         if (!sourceText) {
             return {
                 ok: false,
                 stage: 'translation',
-                error: 'Enter or populate Current locale value before generating an API translation.',
+                error: 'The selected English source is empty and cannot be translated.',
                 state: this.snapshot()
             };
         }
-        const result = await this.translator.translateText({
+        const translator = this.translators[translationProvider];
+        const result = await translator.translateText({
             text: sourceText,
             targetLocale: this.selectedLocale,
             placeholders: canonical.placeholders || []
@@ -202,7 +259,9 @@ class LocaleMaintenanceService {
         return {
             ok: true,
             sourceText,
+            englishSource: useNormalized ? 'normalized' : 'canonical',
             translationText: result.text,
+            provider: result.provider,
             state: this.snapshot()
         };
     }
@@ -265,11 +324,25 @@ class LocaleMaintenanceService {
         return { validation, authoritativeFiles: changes.map((change) => change.relativePath) };
     }
 
-    async save(onProgress) {
+    async save(request = {}, onProgress) {
+        if (typeof request === 'function') {
+            onProgress = request;
+            request = {};
+        }
         const preview = this.previewSave();
         if (!preview.validation.ok) { return { ok: false, stage: 'validation', ...preview }; }
+        const selectedBuild = buildOptions(request, this.selectedLocale, this.selectedComponent);
         if (preview.authoritativeFiles.length === 0) {
-            return { ok: true, stage: 'unchanged', authoritativeFiles: [], generatedFiles: [], state: this.snapshot() };
+            return {
+                ok: true,
+                stage: 'unchanged',
+                buildMode: selectedBuild.mode,
+                translationProvider: selectedBuild.translationProvider,
+                englishSource: selectedBuild.englishSource,
+                authoritativeFiles: [],
+                generatedFiles: [],
+                state: this.snapshot()
+            };
         }
 
         const localeId = this.selectedLocale;
@@ -283,7 +356,7 @@ class LocaleMaintenanceService {
             report(onProgress, { phase: 'write', message: 'Writing authoritative locale files', cancellable: false });
             transaction = this.repository.beginTransaction(changes);
             const build = await this.buildIntegration.run(
-                ['build-component', localeId, componentId],
+                selectedBuild.arguments,
                 onProgress
             );
             if (!build.ok) {
@@ -294,6 +367,9 @@ class LocaleMaintenanceService {
                 return {
                     ok: false,
                     stage: 'build',
+                    buildMode: selectedBuild.mode,
+                    translationProvider: selectedBuild.translationProvider,
+                    englishSource: selectedBuild.englishSource,
                     authoritativeFiles: preview.authoritativeFiles,
                     generatedFiles: [],
                     build,
@@ -314,6 +390,9 @@ class LocaleMaintenanceService {
             return {
                 ok: true,
                 stage: 'complete',
+                buildMode: selectedBuild.mode,
+                translationProvider: selectedBuild.translationProvider,
+                englishSource: selectedBuild.englishSource,
                 authoritativeFiles: preview.authoritativeFiles,
                 generatedFiles,
                 durableLocaleFiles,
@@ -329,6 +408,9 @@ class LocaleMaintenanceService {
             return {
                 ok: false,
                 stage: 'write',
+                buildMode: selectedBuild.mode,
+                translationProvider: selectedBuild.translationProvider,
+                englishSource: selectedBuild.englishSource,
                 error: error.message,
                 authoritativeFiles: preview.authoritativeFiles,
                 generatedFiles: [],
@@ -347,17 +429,21 @@ class LocaleMaintenanceService {
         return this.load({ localeId: this.selectedLocale, componentId: this.selectedComponent });
     }
 
-    async rebuild(onProgress) {
+    async rebuild(request = {}, onProgress) {
+        if (typeof request === 'function') {
+            onProgress = request;
+            request = {};
+        }
         if (this.hasChanges()) {
             return { ok: false, stage: 'unsaved', error: 'Save or revert changes before rebuilding.' };
         }
-        const result = await this.buildIntegration.rebuildWithRollback([
-            'build-component',
-            this.selectedLocale,
-            this.selectedComponent
-        ], onProgress);
+        const selectedBuild = buildOptions(request, this.selectedLocale, this.selectedComponent);
+        const result = await this.buildIntegration.rebuildWithRollback(selectedBuild.arguments, onProgress);
         return {
             ...result,
+            buildMode: selectedBuild.mode,
+            translationProvider: selectedBuild.translationProvider,
+            englishSource: selectedBuild.englishSource,
             state: result.ok
                 ? this.load({
                     localeId: this.selectedLocale,
@@ -382,4 +468,8 @@ class LocaleMaintenanceService {
     }
 }
 
-module.exports = { LocaleMaintenanceService };
+module.exports = {
+    LocaleMaintenanceService,
+    buildOptions,
+    normalizeTranslationProvider
+};

@@ -1,82 +1,82 @@
 {
-  "Defragment": {
-    "canonical": "Defragment",
-    "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
-  "FastFill": {
-    "canonical": "FastFill",
-    "id": "fileAction.fastFill"
-  },
-  "FileActions": {
+  "Ayyukan Fayil": {
     "canonical": "FileActions",
     "id": "structure.fileActions"
   },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
-    "canonical": "FileSelect",
-    "id": "structure.fileSelect"
-  },
-  "FragmentCount": {
-    "canonical": "FragmentCount",
-    "id": "volumeCondition.fragmentCount"
-  },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
-  },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
-  },
-  "SetColor": {
-    "canonical": "SetColor",
-    "id": "setting.setColor"
-  },
-  "SetVariable": {
-    "canonical": "SetVariable",
-    "id": "setting.setVariable"
-  },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
-  },
-  "SortByName": {
-    "canonical": "SortByName",
-    "id": "fileAction.sortByName"
-  },
-  "VolumeActions": {
+  "Ayyukan Jumla": {
     "canonical": "VolumeActions",
     "id": "structure.volumeActions"
   },
-  "VolumeEnd": {
-    "canonical": "VolumeEnd",
-    "id": "structure.volumeEnd"
+  "Ba tare da Fayiloli ba": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
   },
-  "VolumeSelect": {
+  "Ba tare da Kundin ba": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "Cikakken Hanya Saukewa:": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "Defragment Saukewa:": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
+  },
+  "FastFill Saukewa:": {
+    "canonical": "FastFill",
+    "id": "fileAction.fastFill"
+  },
+  "FragmentCount Saukewa:": {
+    "canonical": "FragmentCount",
+    "id": "volumeCondition.fragmentCount"
+  },
+  "Girman Saukewa:": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
+  },
+  "Lakabi": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "RarrabaByName Saukewa:": {
+    "canonical": "SortByName",
+    "id": "fileAction.sortByName"
+  },
+  "SaitaLauni": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
+  },
+  "SaitaVariable Saukewa:": {
+    "canonical": "SetVariable",
+    "id": "setting.setVariable"
+  },
+  "Suna": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "Sunan directory Saukewa:": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "Sunan fayil Saukewa:": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "Zaɓin Fayil": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
+  },
+  "Zaɓin Jumla": {
     "canonical": "VolumeSelect",
     "id": "structure.volumeSelect"
+  },
+  "Ƙarshen Fayil": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "Ƙarshen Jumla": {
+    "canonical": "VolumeEnd",
+    "id": "structure.volumeEnd"
   }
 }

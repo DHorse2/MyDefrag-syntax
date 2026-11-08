@@ -1,0 +1,107 @@
+{
+  "locale": "ru",
+  "status": "native-review-required",
+  "entries": [],
+  "keywords": [
+    {
+      "id": "structure.volumeSelect",
+      "text": "Выбор громкости",
+      "status": "machine-generated"
+    },
+    {
+      "id": "structure.volumeActions",
+      "text": "Действия с громкостью",
+      "status": "machine-generated"
+    },
+    {
+      "id": "structure.volumeEnd",
+      "text": "Конец громкости",
+      "status": "machine-generated"
+    },
+    {
+      "id": "structure.fileSelect",
+      "text": "Выбор файла",
+      "status": "machine-generated"
+    },
+    {
+      "id": "structure.fileActions",
+      "text": "Действия с файлом",
+      "status": "machine-generated"
+    },
+    {
+      "id": "structure.fileEnd",
+      "text": "Конец файла",
+      "status": "machine-generated"
+    },
+    {
+      "id": "script.excludeVolumes",
+      "text": "Исключить тома",
+      "status": "machine-generated"
+    },
+    {
+      "id": "script.excludeFiles",
+      "text": "Исключить файлы",
+      "status": "machine-generated"
+    },
+    {
+      "id": "volumeCondition.name",
+      "text": "Имя",
+      "status": "machine-generated"
+    },
+    {
+      "id": "volumeCondition.label",
+      "text": "Лаборатория эль",
+      "status": "machine-generated"
+    },
+    {
+      "id": "volumeCondition.size",
+      "text": "Размер",
+      "status": "machine-generated"
+    },
+    {
+      "id": "volumeCondition.fragmentCount",
+      "text": "ФрагментКаунт",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileCondition.fileName",
+      "text": "Имя файла",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileCondition.directoryName",
+      "text": "Имя каталога",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileCondition.fullPath",
+      "text": "Полный Путь",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileAction.defragment",
+      "text": "Дефрагментация",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileAction.fastFill",
+      "text": "Быстрое заполнение",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileAction.sortByName",
+      "text": "Сортировать по имени",
+      "status": "machine-generated"
+    },
+    {
+      "id": "setting.setVariable",
+      "text": "Установить переменную",
+      "status": "machine-generated"
+    },
+    {
+      "id": "setting.setColor",
+      "text": "Установить цвет",
+      "status": "machine-generated"
+    }
+  ]
+}

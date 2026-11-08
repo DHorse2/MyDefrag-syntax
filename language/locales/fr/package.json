@@ -7,11 +7,11 @@
       "status": "machine-generated"
     },
     "package.description": {
-      "text": "Mise en évidence de la syntaxe pour le langage de script « My Defragmenter »",
+      "text": "Mise en évidence de la syntaxe pour le langage de script « Gestion de mon stockage »",
       "status": "machine-generated"
     },
     "package.metadata.description": {
-      "text": "Mise en évidence de la syntaxe pour le langage de script « My Defragmenter »",
+      "text": "Mise en évidence de la syntaxe pour le langage de script « Gestion de mon stockage »",
       "status": "machine-generated"
     },
     "package.metadata.publisher": {
@@ -19,7 +19,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.userDir.description": {
-      "text": "Répertoire contenant les données utilisateur de My Defragmenter.",
+      "text": "Répertoire contenant les données utilisateur de Gestion de mon stockage.",
       "status": "machine-generated"
     },
     "package.path.repository.url": {
@@ -35,11 +35,11 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.debugOn.description": {
-      "text": "Activer la journalisation de débogage de l'extension « My Defragmenter ».",
+      "text": "Activer la journalisation de débogage de l'extension « Gestion de mon stockage ».",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.verboseLevel.description": {
-      "text": "Niveau de détail de l'extension « Mon Défragmenteur ». La journalisation de débogage nécessite que l'option « mydfrg debug On » soit activée.",
+      "text": "Niveau de détail de l'extension « Mon Défragmenteur ». La journalisation de débogage nécessite que l'option « mydfrg.debugOn » soit activée.",
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.referenceRelativePathLevel.description": {
@@ -63,7 +63,7 @@
       "status": "machine-generated"
     },
     "package.contributes.configuration.properties.mydfrg.exclude.description": {
-      "text": "Modèles « Glob » à exclure de la validation de « My Defragmenter »",
+      "text": "Modèles de correspondance de fichiers à exclure de la validation de « Gestion de mon stockage »",
       "status": "machine-generated"
     },
     "package.contributes.languages.aliases": {
@@ -99,7 +99,7 @@
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.sendIt.title": {
-      "text": "Mon Défragmenteur : envoyer un rapport de diagnostic à l'agent",
+      "text": "Mon Défragmenteur : envoyer un rapport de diagnostic à l'assistant automatisé",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.top.title": {
@@ -111,7 +111,7 @@
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.refresh.title": {
-      "text": "Mon Défragmenteur : Actualiser les diagnostics",
+      "text": "Mon Défragmenteur : Actualiser les rapports de problèmes",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.filter.title": {
@@ -123,15 +123,15 @@
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTree.title": {
-      "text": "Mon Défragmenteur : Afficher les diagnostics sous forme d'arborescence",
+      "text": "Mon Défragmenteur : Afficher les rapports de problèmes sous forme d'arborescence",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.showTable.title": {
-      "text": "Mon défragmenteur : afficher les diagnostics sous forme de tableau",
+      "text": "Mon défragmenteur : afficher les rapports de problèmes sous forme de tableau",
       "status": "machine-generated"
     },
     "package.contributes.commands.mydfrg.diagnostics.closeView.title": {
-      "text": "Mon Défragmenteur : Fermer l'Explorateur de diagnostics",
+      "text": "Mon Défragmenteur : Fermer l'Explorateur de rapports de problèmes",
       "status": "machine-generated"
     }
   }

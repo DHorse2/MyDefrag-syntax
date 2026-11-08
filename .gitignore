@@ -8,6 +8,7 @@
 /.ollama/
 /.user/
 /.dependency-backup/
+/runs/
 
 # Local comparison output
 /dircmd.md
@@ -76,3 +77,32 @@ $RECYCLE.BIN/
 *.user
 *.userosscache
 *.sln.docstates
+
+# Local proprietary-work exclusions (2026-10-10)
+/.codex-remote-attachments/
+/.codex/sessions/
+/.codex/threads/
+.vs/
+node_modules/
+[Bb]in/
+[Oo]bj/
+[Tt]est[Rr]esults/
+__pycache__/
+*.pyc
+*.pdb
+*.binlog
+*.7z
+*.rar
+*.mdf
+*.ndf
+*.ldf
+*.sqlite
+*.sqlite3
+*.pfx
+*.p12
+*.key
+credentials.json
+secrets.json
+!credentials.example.json
+!secrets.example.json
+appsettings.*.local.json

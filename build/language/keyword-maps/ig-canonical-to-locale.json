@@ -1,122 +1,122 @@
 {
   "Defragment": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.defragment",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "Defragment"
   },
   "DirectoryName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.directoryName",
-    "status": "draft",
-    "text": "DirectoryName"
+    "status": "machine-generated",
+    "text": "Aha ndekọ"
   },
   "ExcludeFiles": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "script.excludeFiles",
-    "status": "draft",
-    "text": "ExcludeFiles"
+    "status": "machine-generated",
+    "text": "Ewepụ Faịlụ"
   },
   "ExcludeVolumes": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "script.excludeVolumes",
-    "status": "draft",
-    "text": "ExcludeVolumes"
+    "status": "machine-generated",
+    "text": "Ewepụ Mpịakọta"
   },
   "FastFill": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.fastFill",
-    "status": "draft",
-    "text": "FastFill"
+    "status": "machine-generated",
+    "text": "Ngwa ngwa ngwa"
   },
   "FileActions": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileActions",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "FileActions"
   },
   "FileEnd": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileEnd",
-    "status": "draft",
-    "text": "FileEnd"
+    "status": "machine-generated",
+    "text": "Ngwụcha Faịlụ"
   },
   "FileName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.fileName",
-    "status": "draft",
-    "text": "FileName"
+    "status": "machine-generated",
+    "text": "Aha faịlụ"
   },
   "FileSelect": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.fileSelect",
-    "status": "draft",
-    "text": "FileSelect"
+    "status": "machine-generated",
+    "text": "Họrọ faịlụ"
   },
   "FragmentCount": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.fragmentCount",
-    "status": "draft",
-    "text": "FragmentCount"
+    "status": "machine-generated",
+    "text": "Ọnụọgụ Fragment"
   },
   "FullPath": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileCondition.fullPath",
-    "status": "draft",
-    "text": "FullPath"
+    "status": "machine-generated",
+    "text": "Ụzọ zuru ezu"
   },
   "Label": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.label",
-    "status": "draft",
-    "text": "Label"
+    "status": "machine-generated",
+    "text": "Akara"
   },
   "Name": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.name",
-    "status": "draft",
-    "text": "Name"
+    "status": "machine-generated",
+    "text": "Aha"
   },
   "SetColor": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "setting.setColor",
-    "status": "draft",
-    "text": "SetColor"
+    "status": "machine-generated",
+    "text": "Setịpụrụ Agba"
   },
   "SetVariable": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "setting.setVariable",
-    "status": "draft",
+    "status": "machine-generated",
     "text": "SetVariable"
   },
   "Size": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "volumeCondition.size",
-    "status": "draft",
-    "text": "Size"
+    "status": "machine-generated",
+    "text": "Nha"
   },
   "SortByName": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "fileAction.sortByName",
-    "status": "draft",
-    "text": "SortByName"
+    "status": "machine-generated",
+    "text": "HazieByAha"
   },
   "VolumeActions": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeActions",
-    "status": "draft",
-    "text": "VolumeActions"
+    "status": "machine-generated",
+    "text": "Ọrụ olu"
   },
   "VolumeEnd": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeEnd",
-    "status": "draft",
-    "text": "VolumeEnd"
+    "status": "machine-generated",
+    "text": "Olu Ọgwụgwụ"
   },
   "VolumeSelect": {
-    "fallbackLocale": "en",
+    "fallbackLocale": null,
     "id": "structure.volumeSelect",
-    "status": "draft",
-    "text": "VolumeSelect"
+    "status": "machine-generated",
+    "text": "Olu Họrọ"
   }
 }

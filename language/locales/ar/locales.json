@@ -123,7 +123,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "حدد مستودع صيغ «My Defragmenter»",
+      "text": "حدد مستودع صيغ «إدارة التخزين»",
       "status": "machine-generated"
     },
     "locales.dialog.unsavedLocaleChanges.title": {
@@ -167,7 +167,7 @@
       "status": "machine-generated"
     },
     "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
-      "text": "لم يتم تحديد مستودع إعدادات لغة صالح لـ «My Defragmenter».",
+      "text": "لم يتم تحديد مستودع إعدادات لغة صالح لـ «إدارة التخزين».",
       "status": "machine-generated"
     },
     "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
@@ -179,7 +179,7 @@
       "status": "machine-generated"
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "text": "اختر المستودع الذي يحتوي على الإعدادات المحلية للغة /، وقم بإنشاء لغة /.",
+      "text": "اختر المستودع الذي يمتلك language/locales وbuild/language.",
       "status": "machine-generated"
     },
     "locales.message.componentRebuildFailed.text": {
@@ -195,7 +195,7 @@
       "status": "machine-generated"
     },
     "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
-      "text": "النص الإنجليزي هو النص المرجعي ويجب الحفاظ عليه في قسم «صيانة اللغة» في My Defragmenter.",
+      "text": "النص الإنجليزي هو النص المرجعي ويجب الحفاظ عليه في قسم «صيانة اللغة» في إدارة التخزين.",
       "status": "machine-generated"
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
@@ -227,7 +227,7 @@
       "status": "machine-generated"
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "text": "ليس مستودع الإعدادات الإقليمية لـ «My Defragmenter». مفقود: {missing}",
+      "text": "ليس مستودع الإعدادات الإقليمية لـ «إدارة التخزين». مفقود: {missing}",
       "status": "machine-generated"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {

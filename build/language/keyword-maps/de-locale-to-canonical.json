@@ -1,11 +1,11 @@
 {
-  "Defragment": {
+  "Dateiname": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "Defragmentieren": {
     "canonical": "Defragment",
     "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
   },
   "ExcludeFiles": {
     "canonical": "ExcludeFiles",
@@ -27,10 +27,6 @@
     "canonical": "FileEnd",
     "id": "structure.fileEnd"
   },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
   "FileSelect": {
     "canonical": "FileSelect",
     "id": "structure.fileSelect"
@@ -39,11 +35,11 @@
     "canonical": "FragmentCount",
     "id": "volumeCondition.fragmentCount"
   },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
+  "Größe": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
   },
-  "Label": {
+  "Lab el": {
     "canonical": "Label",
     "id": "volumeCondition.label"
   },
@@ -59,13 +55,17 @@
     "canonical": "SetVariable",
     "id": "setting.setVariable"
   },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
-  },
-  "SortByName": {
+  "Sortieren nach Name": {
     "canonical": "SortByName",
     "id": "fileAction.sortByName"
+  },
+  "Verzeichnisname": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "Vollständiger Pfad": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
   },
   "VolumeActions": {
     "canonical": "VolumeActions",

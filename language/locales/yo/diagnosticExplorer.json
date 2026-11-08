@@ -1,0 +1,22 @@
+{
+  "locale": "yo",
+  "component": "diagnosticExplorer",
+  "entries": {
+    "diagnosticExplorer.message.noCurrentDiagnostic.info": {
+      "text": "Ìṣàkóso Ìpamọ́ Mi: Kò sí àyẹ̀wò lọ́wọ́lọ́wọ́.",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.hasDiagnostics.text": {
+      "text": "$(warning) Ìṣàkóso Ìpamọ́ Mi {index}/{total}",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.status.noDiagnostics.text": {
+      "text": "$(check) Ìṣàkóso Ìpamọ́ Mi 0 àyẹ̀wò",
+      "status": "machine-generated"
+    },
+    "diagnosticExplorer.tree.header.label": {
+      "text": "Àwọn àyẹ̀wò: {current}/{eligible}/{all} ({remaining} tó kù, {remainingFiles}/{traversableFiles}/{totalFiles} awọn faili, awọn faili {fixed} ti a ti ṣatunṣe, a ko bikita {ignored}, a fo {skipped})",
+      "status": "machine-generated"
+    }
+  }
+}

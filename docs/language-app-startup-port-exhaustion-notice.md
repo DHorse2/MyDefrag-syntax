@@ -226,4 +226,4 @@ There is no automatic retention deletion.
 - [Instrumentation execution record](../runs/2026-08-11/20260811-2045_186fefbd_Implement-resilient-language-app-startup-diagnostics/execution-record.md)
 - [UDP capture script](../scripts/Capture-UdpPortExhaustion.ps1)
 - [Temporary monitor installer](../scripts/Install-UdpPortExhaustionMonitor.ps1)
-- [Language Maintenance app documentation](language-maintenance-app.md#startup-profile-and-diagnostics)
+- [MdmLocalize relocation notice](language-maintenance-app.md)

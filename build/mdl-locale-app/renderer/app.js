@@ -14,6 +14,9 @@ let selectedKey = null;
 
 const localeSelect = document.getElementById('locale-select');
 const componentSelect = document.getElementById('component-select');
+const useNormalizedCheckbox = document.getElementById('use-normalized');
+const deepLApiCheckbox = document.getElementById('use-deepl-api');
+const googleTranslateApiCheckbox = document.getElementById('use-google-translate-api');
 const searchInput = document.getElementById('search-input');
 const catalogBody = document.getElementById('catalog-body');
 const resultPanel = document.getElementById('result-panel');
@@ -58,12 +61,35 @@ let activeOperation = null;
 let progressStartedAt = 0;
 let progressTimer = null;
 let lastProgressMessage = '';
+let translationProvider = 'none';
+let useNormalizedEnglish = true;
 
 function option(value, label) {
     const element = document.createElement('option');
     element.value = value;
     element.textContent = label;
     return element;
+}
+
+function translationProviderLabel(provider = translationProvider) {
+    if (provider === 'deepl') { return 'DeepL'; }
+    if (provider === 'google') { return 'Google Translate'; }
+    return 'No translator API';
+}
+
+function selectedTranslationProviderInfo() {
+    return state?.apiTranslation?.providers?.[translationProvider] || null;
+}
+
+function setTranslationProvider(provider) {
+    translationProvider = provider;
+    deepLApiCheckbox.checked = provider === 'deepl';
+    googleTranslateApiCheckbox.checked = provider === 'google';
+    if (state) { renderEditor(); }
+}
+
+function buildRequest() {
+    return { translationProvider, useNormalized: useNormalizedEnglish };
 }
 
 function showResult(title, value) {
@@ -195,8 +221,10 @@ function renderTable() {
         const cells = [
             row.key,
             row.sourceText,
-            row.translated ? row.translationText : 'English fallback',
-            row.translated ? row.translationStatus : 'fallback'
+            row.translated ? row.translationText : sourceValue(row, useNormalizedEnglish),
+            row.translated
+                ? row.translationStatus
+                : `${useNormalizedEnglish ? 'normalized' : 'canonical'} fallback`
         ];
         cells.forEach((value, index) => {
             const cell = document.createElement('td');
@@ -228,19 +256,25 @@ function renderEditor() {
     document.getElementById('translation-notes').value = row?.notes || '';
     document.getElementById('editor-heading').textContent = row ? row.key : 'Select a catalog entry';
     const apiStatus = document.getElementById('api-translation-status');
+    const selectedProviderInfo = selectedTranslationProviderInfo();
     if (!row) {
         apiStatus.textContent = '';
     } else if (row.apiTranslationReady) {
         apiStatus.textContent = `${row.apiTranslationProvider} result ready. Apply in memory to retain Current locale value.`;
-    } else if (state.apiTranslation.configured) {
-        apiStatus.textContent = 'Generate a translation from Current locale value. The result replaces that field only.';
+    } else if (translationProvider === 'none') {
+        apiStatus.textContent = 'Select DeepL or Google Translate to generate an API translation.';
+    } else if (selectedProviderInfo?.configured) {
+        apiStatus.textContent = `Generate a ${translationProviderLabel()} translation from ${useNormalizedEnglish ? 'Normalized' : 'Canonical'} English. The result replaces Current locale value only.`;
     } else {
-        apiStatus.textContent = 'DeepL is not configured. Set DeeplApi before launching the application.';
+        apiStatus.textContent = `${translationProviderLabel()} is not configured. Set ${selectedProviderInfo?.credentialSource || 'its API key'} before launching the application.`;
     }
     for (const id of ['translation-text', 'translation-status', 'translation-notes', 'apply-button']) {
         document.getElementById(id).disabled = !row || state.readOnly;
     }
-    document.getElementById('request-api-button').disabled = !row || state.readOnly || !state.apiTranslation.configured;
+    document.getElementById('request-api-button').disabled = !row
+        || state.readOnly
+        || translationProvider === 'none'
+        || !selectedProviderInfo?.configured;
     document.getElementById('remove-button').disabled = !row || state.readOnly;
     document.getElementById('use-normalized-button').disabled = !row || state.readOnly;
 }
@@ -301,13 +335,16 @@ document.getElementById('use-normalized-button').addEventListener('click', () =>
 });
 
 document.getElementById('request-api-button').addEventListener('click', async () => {
-    const currentValue = document.getElementById('translation-text').value;
+    const row = state.rows.find((item) => item.key === selectedKey) || null;
+    const selectedSource = sourceValue(row, useNormalizedEnglish);
     const button = document.getElementById('request-api-button');
     button.disabled = true;
-    document.getElementById('api-translation-status').textContent = 'Requesting a DeepL translation…';
+    document.getElementById('api-translation-status').textContent =
+        `Requesting a ${translationProviderLabel()} translation…`;
     const result = await api.requestApiTranslation({
         key: selectedKey,
-        text: currentValue
+        translationProvider,
+        useNormalized: useNormalizedEnglish
     });
     button.disabled = false;
     if (!result.ok) {
@@ -315,7 +352,7 @@ document.getElementById('request-api-button').addEventListener('click', async ()
         showResult('API translation unavailable', result);
         return;
     }
-    if (!translationSourceMatches(currentValue, result.sourceText)) {
+    if (!translationSourceMatches(selectedSource, result.sourceText)) {
         const mismatch = {
             ok: false,
             stage: 'translation',
@@ -329,11 +366,15 @@ document.getElementById('request-api-button').addEventListener('click', async ()
     document.getElementById('api-translation-text').value = result.translationText;
     document.getElementById('translation-text').value = result.translationText;
     document.getElementById('api-translation-status').textContent =
-        'DeepL replaced Current locale value. Apply in memory to retain it.';
+        `${result.provider || translationProviderLabel()} replaced Current locale value. Apply in memory to retain it.`;
 });
 
 document.getElementById('save-button').addEventListener('click', async () => {
-    const outcome = await runProgressOperation('save', 'Saving locale component', 'Preparing save', async () => {
+    const providerLabel = translationProviderLabel();
+    const initialMessage = translationProvider === 'none'
+        ? 'Preparing save without a translator API'
+        : `Preparing save with ${providerLabel}`;
+    const outcome = await runProgressOperation('save', 'Saving locale component', initialMessage, async () => {
         const preview = await api.previewSave();
         if (!preview.validation.ok) { return { title: 'Save blocked by validation', result: preview }; }
         if (preview.authoritativeFiles.length > 0) {
@@ -342,7 +383,7 @@ document.getElementById('save-button').addEventListener('click', async () => {
             if (!confirmation.confirmed) { return { cancelled: true }; }
         }
         setProgressStatus('Starting save and component rebuild');
-        const result = await api.save();
+        const result = await api.save(buildRequest());
         return {
             title: result.ok ? 'Save and component build succeeded' : 'Save failed and was rolled back',
             result
@@ -368,11 +409,14 @@ document.getElementById('validate-button').addEventListener('click', async () =>
 });
 
 document.getElementById('rebuild-button').addEventListener('click', async () => {
+    const providerLabel = translationProviderLabel();
     const result = await runProgressOperation(
         'rebuild',
         'Rebuilding locale component',
-        'Preparing component rebuild',
-        () => api.rebuild()
+        translationProvider === 'none'
+            ? 'Preparing component rebuild without a translator API'
+            : `Preparing component rebuild with ${providerLabel}`,
+        () => api.rebuild(buildRequest())
     );
     if (result.ok && result.state) {
         state = result.state;
@@ -393,6 +437,19 @@ document.getElementById('reload-button').addEventListener('click', async () => {
 localeSelect.addEventListener('change', changeSelection);
 componentSelect.addEventListener('change', changeSelection);
 searchInput.addEventListener('input', renderTable);
+deepLApiCheckbox.addEventListener('change', () => {
+    setTranslationProvider(deepLApiCheckbox.checked ? 'deepl' : 'none');
+});
+googleTranslateApiCheckbox.addEventListener('change', () => {
+    setTranslationProvider(googleTranslateApiCheckbox.checked ? 'google' : 'none');
+});
+useNormalizedCheckbox.addEventListener('change', () => {
+    useNormalizedEnglish = useNormalizedCheckbox.checked;
+    if (state) {
+        renderTable();
+        renderEditor();
+    }
+});
 document.getElementById('exit-button').addEventListener('click', () => api.exit());
 document.getElementById('close-result').addEventListener('click', () => { resultPanel.hidden = true; });
 cancelBuildButton.addEventListener('click', async () => {
@@ -404,5 +461,6 @@ cancelBuildButton.addEventListener('click', async () => {
 progressDialog.addEventListener('cancel', (event) => event.preventDefault());
 api?.onProgress?.(handleProgress);
 
+setTranslationProvider('none');
 api.load().then((loaded) => { state = loaded; render(); })
     .catch((error) => showResult('Application failed to start', { error: error.message }));

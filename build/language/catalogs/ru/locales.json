@@ -36,6 +36,34 @@
       "status": "machine-generated",
       "text": "Операция в процессе выполнения"
     },
+    "locales.accessibility.translationApiSelection.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Translation Application Programming Interface selection"
+    },
+    "locales.accessibility.useDeeplApi.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use Deep L Application Programming Interface"
+    },
+    "locales.accessibility.useGoogleTranslateApi.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use Google Translate Application Programming Interface"
+    },
+    "locales.accessibility.useNormalizedEnglishForFallbacksAndAutomatedTranslation.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for fallbacks and automated translation"
+    },
     "locales.action.applyInMemory.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -272,7 +300,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Не был выбран действительный репозиторий локалей для My Defragmenter."
+      "text": "Не был выбран действительный репозиторий локалей для Управление хранилищем."
     },
     "locales.message.apiTranslationRejected.text": {
       "fallbackLocale": null,
@@ -316,7 +344,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Выберите репозиторий, в котором хранятся языковые локали /, и создайте языковую версию /."
+      "text": "Выберите репозиторий, которому принадлежат language/locales и build/language."
     },
     "locales.message.componentRebuildFailed.text": {
       "fallbackLocale": null,
@@ -344,7 +372,7 @@
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Английский текст является каноническим и должен поддерживаться в разделе «Языковое обслуживание» My Defragmenter."
+      "text": "Английский текст является каноническим и должен поддерживаться в разделе «Языковое обслуживание» Управление хранилищем."
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
       "fallbackLocale": null,
@@ -404,7 +432,7 @@
       ],
       "sourceStatus": "draft",
       "status": "machine-generated",
-      "text": "Это не репозиторий локалей для My Defragmenter. Отсутствует: {missing}"
+      "text": "Это не репозиторий локалей для Управление хранилищем. Отсутствует: {missing}"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {
       "fallbackLocale": null,
@@ -438,6 +466,13 @@
       "status": "machine-generated",
       "text": "Перед перекомпиляцией сохраните или отмените изменения."
     },
+    "locales.message.selectDeeplOrGoogleTranslateBeforeGeneratingAn.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select Deep L or Google Translate before generating an Application Programming Interface translation."
+    },
     "locales.message.selectedComponentRebuilt.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -465,6 +500,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Основной процесс использовал другое значение текущей локали. Перезапустите модуль обслуживания локалей и повторите попытку."
+    },
+    "locales.message.theSelectedEnglishSourceIsEmptyAndCannot.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The selected English language source is empty and cannot be translated."
     },
     "locales.message.translationRejected.text": {
       "fallbackLocale": null,
@@ -526,6 +568,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Неизвестная локаль: {documentLocale}"
+    },
+    "locales.message.unknownTranslationProviderValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "provider"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unknown translation provider: {provider}."
     },
     "locales.message.validationResult.text": {
       "fallbackLocale": null,
@@ -666,6 +717,13 @@
       "status": "machine-generated",
       "text": "Ключ каталога"
     },
+    "locales.ui.chooseDeeplOrGoogleTranslateLeaveBothUnchecked.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Choose Deep L or Google Translate. Leave both unchecked to creation process without a translator Application Programming Interface."
+    },
     "locales.ui.componentStrings.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -722,6 +780,16 @@
       "status": "machine-generated",
       "text": "Создать перевод на основе текущего значения локали. Результат заменит только это поле."
     },
+    "locales.ui.generateAValueTranslationFromValueEnglishThe.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "translationProviderLabel",
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generate a {translationProviderLabel} translation from {useNormalizedEnglish} English language. The result replaces Current language region value only."
+    },
     "locales.ui.generatedValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -731,12 +799,26 @@
       "status": "machine-generated",
       "text": "Создано: {stateGeneratedFile}"
     },
+    "locales.ui.googleTranslate.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Google Translate"
+    },
     "locales.ui.key.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Ключ"
+    },
+    "locales.ui.latestApiResult.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Latest Application Programming Interface result"
     },
     "locales.ui.latestDeeplResult.text": {
       "fallbackLocale": null,
@@ -773,6 +855,38 @@
       "status": "machine-generated",
       "text": "Подготовка к пересборке компонента"
     },
+    "locales.ui.preparingComponentRebuildWithValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "providerLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing component rebuild with {providerLabel}"
+    },
+    "locales.ui.preparingComponentRebuildWithoutATranslatorApi.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing component rebuild without a translator Application Programming Interface"
+    },
+    "locales.ui.preparingSaveWithValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "providerLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with {providerLabel}"
+    },
+    "locales.ui.preparingSaveWithoutATranslatorApi.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes without a translator Application Programming Interface"
+    },
     "locales.ui.rebuildingLocaleComponent.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -786,6 +900,15 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Запрос на перевод с помощью Deep L."
+    },
+    "locales.ui.requestingAValueTranslation.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "translationProviderLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Requesting a {translationProviderLabel} translation."
     },
     "locales.ui.requiredPlaceholders.text": {
       "fallbackLocale": null,
@@ -828,6 +951,13 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "Выберите запись из каталога"
+    },
+    "locales.ui.selectDeeplOrGoogleTranslateToGenerateAn.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select Deep L or Google Translate to generate an Application Programming Interface translation."
     },
     "locales.ui.sourceText.text": {
       "fallbackLocale": null,
@@ -901,6 +1031,20 @@
       "status": "machine-generated",
       "text": "Несохраненные изменения"
     },
+    "locales.ui.useNormalized.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized"
+    },
+    "locales.ui.useNormalizedEnglishForGeneratedFallbacksAndAutomated.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for generated fallbacks and automated translation input."
+    },
     "locales.ui.valid.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -916,6 +1060,34 @@
       "sourceStatus": "draft",
       "status": "machine-generated",
       "text": "{stateCompletenessFallback} Резервный вариант на английском языке"
+    },
+    "locales.ui.valueFallback.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{useNormalizedEnglish} alternate choice"
+    },
+    "locales.ui.valueIsNotConfiguredSetValueBeforeLaunching.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "translationProviderLabel",
+        "selectedProviderInfoCredentialSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{translationProviderLabel} is not configured. Set {selectedProviderInfoCredentialSource} before launching the application."
+    },
+    "locales.ui.valueReplacedCurrentLocaleValueApplyInMemory.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "resultProvider"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{resultProvider} replaced Current language region value. Apply in memory to retain it."
     },
     "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
       "fallbackLocale": null,

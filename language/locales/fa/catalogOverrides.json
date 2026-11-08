@@ -1,0 +1,107 @@
+{
+  "locale": "fa",
+  "status": "native-review-required",
+  "entries": [],
+  "keywords": [
+    {
+      "id": "structure.volumeSelect",
+      "text": "انتخاب حجم",
+      "status": "machine-generated"
+    },
+    {
+      "id": "structure.volumeActions",
+      "text": "اقدامات حجم",
+      "status": "machine-generated"
+    },
+    {
+      "id": "structure.volumeEnd",
+      "text": "پایان حجم",
+      "status": "machine-generated"
+    },
+    {
+      "id": "structure.fileSelect",
+      "text": "انتخاب فایل",
+      "status": "machine-generated"
+    },
+    {
+      "id": "structure.fileActions",
+      "text": "اقدامات فایل",
+      "status": "machine-generated"
+    },
+    {
+      "id": "structure.fileEnd",
+      "text": "پایان فایل",
+      "status": "machine-generated"
+    },
+    {
+      "id": "script.excludeVolumes",
+      "text": "حذف حجم‌ها",
+      "status": "machine-generated"
+    },
+    {
+      "id": "script.excludeFiles",
+      "text": "حذف فایل‌ها",
+      "status": "machine-generated"
+    },
+    {
+      "id": "volumeCondition.name",
+      "text": "نام",
+      "status": "machine-generated"
+    },
+    {
+      "id": "volumeCondition.label",
+      "text": "آزمایشگاه el",
+      "status": "machine-generated"
+    },
+    {
+      "id": "volumeCondition.size",
+      "text": "اندازه",
+      "status": "machine-generated"
+    },
+    {
+      "id": "volumeCondition.fragmentCount",
+      "text": "تعداد قطعات",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileCondition.fileName",
+      "text": "نام فایل",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileCondition.directoryName",
+      "text": "نام دایرکتوری",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileCondition.fullPath",
+      "text": "FullPath",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileAction.defragment",
+      "text": "یکپارچه سازی",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileAction.fastFill",
+      "text": "FastFill",
+      "status": "machine-generated"
+    },
+    {
+      "id": "fileAction.sortByName",
+      "text": "SortByName",
+      "status": "machine-generated"
+    },
+    {
+      "id": "setting.setVariable",
+      "text": "SetVariable",
+      "status": "machine-generated"
+    },
+    {
+      "id": "setting.setColor",
+      "text": "SetColor",
+      "status": "machine-generated"
+    }
+  ]
+}

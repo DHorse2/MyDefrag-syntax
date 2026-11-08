@@ -3,7 +3,7 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "text": "Defragmenter yangu: Sanidi folda",
+      "text": "Usimamizi Wangu wa Hifadhi yangu: Sanidi folda",
       "status": "machine-generated"
     },
     "extension.command.openPreview.title": {
@@ -11,31 +11,43 @@
       "status": "machine-generated"
     },
     "extension.command.openSettings.title": {
-      "text": "Defragmenter yangu: Fungua Mipangilio",
+      "text": "Usimamizi Wangu wa Hifadhi yangu: Fungua Mipangilio",
       "status": "machine-generated"
     },
     "extension.message.noActiveDocument.warning": {
-      "text": "Hapana, hati yangu ya My Defragmenter haiko hai.",
+      "text": "Hapana, hati yangu ya Usimamizi Wangu wa Hifadhi haiko hai.",
       "status": "machine-generated"
     },
     "extension.product.displayName": {
-      "text": "Skripti yangu ya Defragmenter (.MyDc / .MyD)",
+      "text": "Skripti yangu ya Usimamizi Wangu wa Hifadhi (.MyDc / .MyD)",
       "status": "machine-generated"
     },
     "extension.status.parser.fragment.text": {
-      "text": "Kipande changu cha Defragmenter (.mydc)",
+      "text": "Kipande changu cha Usimamizi Wangu wa Hifadhi (.mydc)",
       "status": "machine-generated"
     },
     "extension.status.parser.script.text": {
-      "text": "Skripti yangu ya Defragmenter (.myd)",
+      "text": "Skripti yangu ya Usimamizi Wangu wa Hifadhi (.myd)",
       "status": "machine-generated"
     },
     "extension.status.parser.unknown.text": {
-      "text": "Defragmenter yangu aina isiyojulikana ya hati",
+      "text": "Usimamizi Wangu wa Hifadhi yangu aina isiyojulikana ya hati",
       "status": "machine-generated"
     },
     "extension.window.channelName": {
-      "text": "Sintaksia yangu ya Defragmenter",
+      "text": "Sintaksia yangu ya Usimamizi Wangu wa Hifadhi",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "Mgombea anayefuata: ${dir}, na ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "tafutaNafasi ya Kazi: Haiwezi kusoma ${uri.toString()}: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "kiendelezi.js:wezesha:chaguzi:kuandaa Hitilafu iliyorejeshwa kutoka kwa uanzishaji: ${errResult.message}",
       "status": "machine-generated"
     }
   }

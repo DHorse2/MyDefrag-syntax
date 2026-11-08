@@ -1,0 +1,22 @@
+{
+  "locale": "am",
+  "component": "preview",
+  "entries": {
+    "preview.annotation.includeBegin.text": {
+      "text": "መጀመር [የመክተቻ ደረጃ:{depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.annotation.includeEnd.text": {
+      "text": "ጨርስ   [የመክተቻ ደረጃ:{depth}] {path}",
+      "status": "machine-generated"
+    },
+    "preview.report.includeFiles.heading": {
+      "text": "ፋይሎችን ያካትቱ። ({count} ፋይል(ዎች) ተሰርተዋል",
+      "status": "machine-generated"
+    },
+    "preview.warning.missingInclude.text": {
+      "text": "*** ማስጠንቀቂያ፡ የጎደሉት (\"{uri}\") ያካትታሉ ***",
+      "status": "machine-generated"
+    }
+  }
+}

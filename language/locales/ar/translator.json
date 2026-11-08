@@ -235,7 +235,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "حدد مستودع صيغ «My Defragmenter»",
+      "text": "حدد مستودع صيغ «إدارة التخزين»",
       "status": "machine-generated"
     },
     "translator.dialog.startingMydefragLanguageMaintenance.title": {
@@ -299,7 +299,7 @@
       "status": "machine-generated"
     },
     "translator.message.aValidMydefragSyntaxRepositoryWasNotSelected.text": {
-      "text": "لم يتم تحديد مستودع صيغ صالح لـ «My Defragmenter».",
+      "text": "لم يتم تحديد مستودع صيغ صالح لـ «إدارة التخزين».",
       "status": "machine-generated"
     },
     "translator.message.buildCancelledByUser.text": {
@@ -315,7 +315,7 @@
       "status": "machine-generated"
     },
     "translator.message.chooseTheRepositoryThatOwnsLanguageCanonicalAnd.text": {
-      "text": "اختر المستودع الذي يحتوي على اللغة / (النسخة القياسية) واللغة / (النسخة المُجمَّعة).",
+      "text": "اختر المستودع الذي يمتلك language/canonical وbuild/language.",
       "status": "machine-generated"
     },
     "translator.message.componentAddedInMemory.text": {
@@ -455,7 +455,7 @@
       "status": "machine-generated"
     },
     "translator.message.notAMydefragLanguageRepositoryMissingValue.text": {
-      "text": "ليس مستودع لغات لبرنامج «My Defragmenter». مفقود: {missing}",
+      "text": "ليس مستودع لغات لبرنامج «إدارة التخزين». مفقود: {missing}",
       "status": "machine-generated"
     },
     "translator.message.notPresentInTheMigrationReportRebuildRequired.text": {
@@ -591,7 +591,7 @@
       "status": "machine-generated"
     },
     "translator.message.unableToReadBuildLanguageReportsMigrationReport.text": {
-      "text": "تعذر قراءة ملف البناء /، تقرير اللغة /، تقرير /، تقرير الترحيل .json: {errorMessage}",
+      "text": "غير قادر على قراءة build/language/reports/migration-report.json: {errorMessage}",
       "status": "machine-generated"
     },
     "translator.message.unableToRemoveTheFile.text": {
@@ -891,7 +891,7 @@
       "status": "machine-generated"
     },
     "translator.ui.maintainsLanguageCanonicalComponentsJsonMigrationinventoryScanfiles.text": {
-      "text": "يحتفظ باللغة / المعيارية / المكونات .json → قائمة الترحيل .scanFiles",
+      "text": "يحافظ على language/canonical/components.json → migrationInventory.scanFiles",
       "status": "machine-generated"
     },
     "translator.ui.migrationCoverageUnavailable.text": {
@@ -1179,7 +1179,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.authoredFilesUnderLanguageLocalesAreAlwaysPreserved.text": {
-      "text": "يتم دائمًا الاحتفاظ بالملفات التي تم إنشاؤها ضمن الإعدادات المحلية للغة /.",
+      "text": "يتم الاحتفاظ دائمًا بالملفات المؤلفة ضمن language/locales.",
       "status": "machine-generated"
     },
     "translator.dialog.componentCatalogEditRecord.title": {
@@ -1223,7 +1223,7 @@
       "status": "machine-generated"
     },
     "translator.dialog.theGeneratedBuildLanguageCatalogsValueDataWill.text": {
-      "text": "سيتم الاحتفاظ بشكل افتراضي ببيانات «/» و«/» و«/» و«{id}» التي تم إنشاؤها.",
+      "text": "سيتم الاحتفاظ ببيانات build/language/catalogs/{id} التي تم إنشاؤها بشكل افتراضي.",
       "status": "machine-generated"
     },
     "translator.message.aScannedSourcePathIsNotANormalized.text": {
@@ -1391,7 +1391,7 @@
       "status": "machine-generated"
     },
     "translator.message.useSaveToPersistTheCandidateStatusIn.text": {
-      "text": "استخدم زر «حفظ» لتثبيت حالة المرشح في مكونات اللغة / والمعيارية / و.json.",
+      "text": "استخدم \"حفظ\" للاحتفاظ بحالة الاقتراح في language/canonical/components.json.",
       "status": "machine-generated"
     },
     "translator.message.useSaveToPersistTheComponentCatalogChange.text": {
@@ -1455,7 +1455,7 @@
       "status": "machine-generated"
     },
     "translator.ui.buildLanguageCatalogsValue.text": {
-      "text": "build / language / catalogs / {currentId}",
+      "text": "build/language/catalogs/{currentId}",
       "status": "machine-generated"
     },
     "translator.ui.candidateDecisionsAreSavedWithTheMigrationInventory.text": {
@@ -1467,7 +1467,7 @@
       "status": "machine-generated"
     },
     "translator.ui.choicesMirrorLanguageCanonicalLanguageLocalesJsonRegistered.text": {
-      "text": "خيارات «Mirror Language» / و«Canonical» / و«Language Locales» .json. تظل الإعدادات المحلية المسجلة مرئية ولكن لا يمكن اختيارها.",
+      "text": "تعكس الاختيارات language/canonical/language-locales.json. تظل مناطق اللغة المسجلة مرئية ولكن لا يمكن تحديدها.",
       "status": "machine-generated"
     },
     "translator.ui.clear.text": {
@@ -1555,7 +1555,7 @@
       "status": "machine-generated"
     },
     "translator.ui.maintainsLanguageLocalesLocalesJsonDeletingALocale.text": {
-      "text": "يحتفظ باللغة / والإعدادات المحلية / والإعدادات المحلية .json. ويؤدي حذف إعداد محلي ما إلى الاحتفاظ بملفات المصدر الأصلية والحفاظ على بيانات الكتالوج التي تم إنشاؤها بشكل افتراضي.",
+      "text": "يحافظ على language/locales/locales.json. يؤدي حذف منطقة لغة إلى الحفاظ على ملفات المصدر المؤلفة ويحتفظ بمعلومات الكتالوج التي تم إنشاؤها بشكل افتراضي.",
       "status": "machine-generated"
     },
     "translator.ui.nextLine.text": {
@@ -1752,6 +1752,350 @@
     },
     "translator.ui.view.text": {
       "text": "عرض",
+      "status": "machine-generated"
+    },
+    "translator.ui.inCatalog.text": {
+      "text": "في الكتالوج",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.catalogRecordValue.label": {
+      "text": "سجل الكتالوج {recordKey}",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.completedStartupPhases.label": {
+      "text": "اكتملت مراحل بدء التشغيل",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByCategory.label": {
+      "text": "تصفية المرشحين حسب الفئة",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByComponent.label": {
+      "text": "تصفية المرشحين حسب المكون",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCandidatesByRole.label": {
+      "text": "تصفية المرشحين حسب الدور",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByCategory.label": {
+      "text": "تصفية سجلات الكتالوج حسب الفئة",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByComponent.label": {
+      "text": "تصفية سجلات الكتالوج حسب المكون",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByRole.label": {
+      "text": "تصفية سجلات الكتالوج حسب الدور",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.filterCatalogRecordsByStatus.label": {
+      "text": "تصفية سجلات الكتالوج حسب الحالة",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.orderCandidatesByLine.label": {
+      "text": "ترتيب المرشحين حسب السطر",
+      "status": "machine-generated"
+    },
+    "translator.accessibility.orderCatalogRecordsBySourceLine.label": {
+      "text": "ترتيب سجلات الفهرس حسب سطر المصدر",
+      "status": "machine-generated"
+    },
+    "translator.message.aCurrentSourceLineCandidateTextAndCatalog.text": {
+      "text": "يلزم وجود سطر مصدر حالي، ونص مرشح، ومفتاح فهرس.",
+      "status": "machine-generated"
+    },
+    "translator.message.applyThisCatalogKeyToTheInMemory.text": {
+      "text": "طبّق مفتاح الفهرس هذا على المسودة الموجودة في الذاكرة قبل استبدال المصدر.",
+      "status": "machine-generated"
+    },
+    "translator.message.automaticReplacementIsSupportedOnlyForCommonjsJs.text": {
+      "text": "الاستبدال التلقائي مدعوم فقط لملفات CommonJS .js و.cjs. تتطلب ملفات JSON والتنسيقات الأخرى تحويل ترجمة خاص بالتنسيق.",
+      "status": "machine-generated"
+    },
+    "translator.message.aValidMigrationSourceTransformIsRequired.text": {
+      "text": "يلزم وجود تحويل مصدر ترحيل صالح.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedLineValueUpdateItsSourceLineTo.text": {
+      "text": "السطر المفهرس {candidateLine}. حدّث سطر المصدر لإكمال هذا العنصر؛ ولا يزال التنقل متاحًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedSourcesStillNeedUpdates.text": {
+      "text": "لا تزال المصادر المفهرسة بحاجة إلى تحديثات.",
+      "status": "machine-generated"
+    },
+    "translator.message.catalogedSourceStillNeedsAnUpdate.text": {
+      "text": "لا يزال المصدر المفهرس بحاجة إلى تحديث.",
+      "status": "machine-generated"
+    },
+    "translator.message.complexTemplateExpressionsRequireParserDerivedPlaceholderBindings.text": {
+      "text": "تتطلب تعبيرات القوالب المعقدة روابط عناصر نائبة مشتقة من المحلل قبل التحويل.",
+      "status": "machine-generated"
+    },
+    "translator.message.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "text": "لا يمكن إعادة تسمية مفاتيح الفهرس الحالية. أضف سجلًا جديدًا بدلًا من ذلك.",
+      "status": "machine-generated"
+    },
+    "translator.message.multilineStringReplacementIsNotSupportedByThe.text": {
+      "text": "لا يدعم خطاف التحويل الأولي استبدال السلاسل النصية متعددة الأسطر.",
+      "status": "machine-generated"
+    },
+    "translator.message.refreshTheTransformPreviewBeforeReplacingTheSource.text": {
+      "text": "قم بتحديث معاينة التحويل قبل استبدال سطر المصدر.",
+      "status": "machine-generated"
+    },
+    "translator.message.replacedLineValueInValue.text": {
+      "text": "تم استبدال السطر {previewLine} في {previewPath}.",
+      "status": "machine-generated"
+    },
+    "translator.message.replacedLineValueInValueABackupCould.text": {
+      "text": "تم استبدال السطر {previewLine} في {previewPath}. تعذر حذف النسخة الاحتياطية: {recoveryFiles}",
+      "status": "machine-generated"
+    },
+    "translator.message.restoringGeneratedFilesAndDurableLocaleSources.text": {
+      "text": "جارٍ استعادة الملفات المُنشأة ومصادر اللغة الدائمة",
+      "status": "machine-generated"
+    },
+    "translator.message.selectPotentialCandidateReviewRejectedCodeEditOr.text": {
+      "text": "اختر مرشحًا محتملاً، أو راجعه، أو رفضه، أو عدّله، أو حدّثه.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceLineReplaced.text": {
+      "text": "تم استبدال سطر المصدر",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceLineWasNotReplaced.text": {
+      "text": "لم يتم استبدال سطر المصدر",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceReplacementIsNotEnabled.text": {
+      "text": "استبدال المصدر غير مُفعّل.",
+      "status": "machine-generated"
+    },
+    "translator.message.sourceReplacementIsNotReady.text": {
+      "text": "استبدال المصدر غير جاهز.",
+      "status": "machine-generated"
+    },
+    "translator.message.startingElectron.text": {
+      "text": "بدء تشغيل Electron...",
+      "status": "machine-generated"
+    },
+    "translator.message.theCatalogIdentifierIsNotAValidJavascript.text": {
+      "text": "معرّف الكتالوج غير صالح كمعرّف JavaScript.",
+      "status": "machine-generated"
+    },
+    "translator.message.theConfiguredScannerCannotProvideCandidateSourceLocations.text": {
+      "text": "لا يمكن للماسح الضوئي المُكوّن توفير مواقع مصادر مُحتملة.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedCatalogKeyDoesNotContainThis.text": {
+      "text": "لا يحتوي مفتاح الكتالوج المُحدد على هذا النص المُحتمل.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineAndTextAreNotA.text": {
+      "text": "السطر والنص المُحددان ليسا من بين مواقع الترحيل المُبلغ عنها حاليًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedLineAndTextDoNotIdentify.text": {
+      "text": "لا يُحدد السطر والنص المُحددان أي موقع ترحيل مُحتمل حاليًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedSourceLineChangedAfterTheTransform.text": {
+      "text": "تغير سطر المصدر المُحدد بعد إنشاء معاينة التحويل.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedSourceLineNoLongerExists.text": {
+      "text": "لم يعد سطر المصدر المُحدد موجودًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringIsNoLongerPresentOn.text": {
+      "text": "السلسلة المحددة غير موجودة في سطر المصدر المُبلغ عنه.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSelectedStringOccursMoreThanOnceOn.text": {
+      "text": "تظهر السلسلة المحددة أكثر من مرة في سطر المصدر؛ يلزم تحديد موضعها بدقة.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceChangedBeforeItCouldBeReplaced.text": {
+      "text": "تم تغيير المصدر قبل إمكانية استبداله: {itemRelativePath}",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileChangedAfterTheTransformPreview.text": {
+      "text": "تم تغيير ملف المصدر بعد إنشاء معاينة التحويل. أعد تحديد الملف المرشح لتحديثه.",
+      "status": "machine-generated"
+    },
+    "translator.message.theSourceFileChangedBeforeReplacementReselectThe.text": {
+      "text": "تم تغيير ملف المصدر قبل الاستبدال. أعد تحديد الملف المرشح لتحديثه.",
+      "status": "machine-generated"
+    },
+    "translator.message.theTransformedJavascriptIsNotSyntacticallyValidValue.text": {
+      "text": "كود JavaScript المُحوَّل غير صالح نحويًا: {syntaxError}",
+      "status": "machine-generated"
+    },
+    "translator.message.theTransformVariableNameIsNotAValid.text": {
+      "text": "اسم متغير التحويل ليس مُعرِّف JavaScript صالحًا.",
+      "status": "machine-generated"
+    },
+    "translator.message.unableToUpdateTheInMemoryDraft.text": {
+      "text": "تعذر تحديث المسودة الموجودة في الذاكرة.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueCatalogedCandidateSStillContainTheirOriginal.text": {
+      "text": "{unresolvedCount}: لا تزال الملفات المرشحة المُفهرسة تحتوي على سلسلة المصدر الأصلية أو لم يتم التحقق منها. سيتم إغلاق الملف دون أي إجراءات إضافية.",
+      "status": "machine-generated"
+    },
+    "translator.message.valueNavigationWillContinueSourceUpdatesAreRecommended.text": {
+      "text": "{detail}: سيستمر التصفح؛ يُنصح بتحديث المصدر ولكن ليس إلزاميًا.",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateStatusValue.text": {
+      "text": "حالة الملف المرشح: {cANDIDATE_STATUS_LABELSCodeUpdated}",
+      "status": "machine-generated"
+    },
+    "translator.ui.candidateStatusValue.text2": {
+      "text": "حالة الملف المرشح: {cANDIDATE_STATUS_LABELSCandidateStatus}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyRequired.text": {
+      "text": "مفتاح الفهرس مطلوب",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text": {
+      "text": "مفتاح الفهرس: {initialCatalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text2": {
+      "text": "مفتاح الفهرس: {catalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogKeyValue.text3": {
+      "text": "مفتاح الفهرس: {resultCatalogKey}",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogRecordAddedForLineValueUpdateThe.text": {
+      "text": "تمت إضافة سجل الفهرس للسطر {candidateLine}. يُرجى تحديث سطر المصدر لإكمال هذا الطلب؛ مع إمكانية التنقل.",
+      "status": "machine-generated"
+    },
+    "translator.ui.catalogStatusValue.text": {
+      "text": "حالة الكتالوج: {catalogStatuses}",
+      "status": "machine-generated"
+    },
+    "translator.ui.category.text": {
+      "text": "الفئة",
+      "status": "machine-generated"
+    },
+    "translator.ui.checkingSourceReplacementSafeguards.text": {
+      "text": "جارٍ التحقق من ضمانات استبدال المصدر...",
+      "status": "machine-generated"
+    },
+    "translator.ui.durableLocaleFiles.text": {
+      "text": "ملفات اللغة الدائمة",
+      "status": "machine-generated"
+    },
+    "translator.ui.durableLocaleFilesChanged.text": {
+      "text": "تم تغيير ملفات اللغة الدائمة",
+      "status": "machine-generated"
+    },
+    "translator.ui.enterACatalogKeyToGenerateTheTransform.text": {
+      "text": "أدخل مفتاح الكتالوج لعرض معاينة التحويل.",
+      "status": "machine-generated"
+    },
+    "translator.ui.existingCatalogKeysCannotBeRenamedAddA.text": {
+      "text": "لا يمكن إعادة تسمية مفاتيح الكتالوج الموجودة. أضف سجلاً جديداً لاستخدام مفتاح آخر.",
+      "status": "machine-generated"
+    },
+    "translator.ui.highestLineFirst.text": {
+      "text": "السطر الأعلى أولاً",
+      "status": "machine-generated"
+    },
+    "translator.ui.lineOrder.text": {
+      "text": "ترتيب الأسطر",
+      "status": "machine-generated"
+    },
+    "translator.ui.loadingTransformPreview.text": {
+      "text": "جارٍ تحميل معاينة التحويل...",
+      "status": "machine-generated"
+    },
+    "translator.ui.lowestLineFirst.text": {
+      "text": "السطر الأدنى أولاً",
+      "status": "machine-generated"
+    },
+    "translator.ui.noNextCandidateMatchesTheCurrentFilters.text": {
+      "text": "لا يوجد مرشح تالٍ يطابق عوامل التصفية الحالية.",
+      "status": "machine-generated"
+    },
+    "translator.ui.noPreviousCandidateMatchesTheCurrentFilters.text": {
+      "text": "لا يوجد مرشح سابق يطابق عوامل التصفية الحالية.",
+      "status": "machine-generated"
+    },
+    "translator.ui.original.text": {
+      "text": "الأصلي",
+      "status": "machine-generated"
+    },
+    "translator.ui.regeneratingTransformPreview.text": {
+      "text": "إعادة إنشاء معاينة التحويل...",
+      "status": "machine-generated"
+    },
+    "translator.ui.replaceLineInSource.text": {
+      "text": "استبدال السطر في المصدر",
+      "status": "machine-generated"
+    },
+    "translator.ui.resolvingCatalogKey.text": {
+      "text": "جارٍ حلّ مفتاح الكتالوج...",
+      "status": "machine-generated"
+    },
+    "translator.ui.role.text": {
+      "text": "الدور",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceReplacementIsUnavailable.text": {
+      "text": "استبدال المصدر غير متاح.",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceReplacementRequiresACatalogKey.text": {
+      "text": "يتطلب استبدال المصدر مفتاح كتالوج.",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceTransformPreview.text": {
+      "text": "معاينة تحويل المصدر",
+      "status": "machine-generated"
+    },
+    "translator.ui.sourceUpdateRemainsPendingValueNavigationContinued.text": {
+      "text": "لا يزال تحديث المصدر معلقًا. {detail}. متابعة التنقل.",
+      "status": "machine-generated"
+    },
+    "translator.ui.theSourceLineWasNotReplaced.text": {
+      "text": "لم يتم استبدال سطر المصدر.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisCurrentKeyOccurrenceAlreadyUsesCatalogFormat.text": {
+      "text": "يستخدم هذا المفتاح الحالي بالفعل catalog.format ولا يحتاج إلى أي تحويل للمصدر.",
+      "status": "machine-generated"
+    },
+    "translator.ui.thisPriorCandidateIsRetainedForAnalysisThe.text": {
+      "text": "يُحتفظ بهذا المفتاح السابق لأغراض التحليل؛ ويستخدم سطر المصدر الحالي بالفعل catalog.format.",
+      "status": "machine-generated"
+    },
+    "translator.ui.transformed.text": {
+      "text": "تم التحويل",
+      "status": "machine-generated"
+    },
+    "translator.ui.transformPreviewUnavailableValue.text": {
+      "text": "معاينة التحويل غير متوفرة: {resultError}",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueRemaining.text": {
+      "text": "{summaryRemainingCount} المتبقي",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueSecondsElapsed.text": {
+      "text": "{statusElapsedMsToFixed} ثانية المنقضية",
+      "status": "machine-generated"
+    },
+    "translator.ui.valueValueCompleted.text": {
+      "text": "{summaryCompletedCount}/{summaryTotalCount} اكتمل",
       "status": "machine-generated"
     }
   }

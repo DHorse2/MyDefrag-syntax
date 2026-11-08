@@ -36,6 +36,34 @@
       "status": "draft",
       "text": "Operation in progress"
     },
+    "locales.accessibility.translationApiSelection.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Translation API selection"
+    },
+    "locales.accessibility.useDeeplApi.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use DeepL API"
+    },
+    "locales.accessibility.useGoogleTranslateApi.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use Google Translate API"
+    },
+    "locales.accessibility.useNormalizedEnglishForFallbacksAndAutomatedTranslation.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English for fallbacks and automated translation"
+    },
     "locales.action.applyInMemory.label": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -438,6 +466,13 @@
       "status": "draft",
       "text": "Save or revert changes before rebuilding."
     },
+    "locales.message.selectDeeplOrGoogleTranslateBeforeGeneratingAn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select DeepL or Google Translate before generating an API translation."
+    },
     "locales.message.selectedComponentRebuilt.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -465,6 +500,13 @@
       "sourceStatus": "draft",
       "status": "draft",
       "text": "The main process translated a different Current locale value. Restart Locale Maintenance and retry."
+    },
+    "locales.message.theSelectedEnglishSourceIsEmptyAndCannot.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "The selected English source is empty and cannot be translated."
     },
     "locales.message.translationRejected.text": {
       "fallbackLocale": null,
@@ -526,6 +568,15 @@
       "sourceStatus": "draft",
       "status": "draft",
       "text": "Unknown locale: {documentLocale}"
+    },
+    "locales.message.unknownTranslationProviderValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "provider"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Unknown translation provider: {provider}."
     },
     "locales.message.validationResult.text": {
       "fallbackLocale": null,
@@ -666,6 +717,13 @@
       "status": "draft",
       "text": "Catalog key"
     },
+    "locales.ui.chooseDeeplOrGoogleTranslateLeaveBothUnchecked.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Choose DeepL or Google Translate. Leave both unchecked to build without a translator API."
+    },
     "locales.ui.componentStrings.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -722,6 +780,16 @@
       "status": "draft",
       "text": "Generate a translation from Current locale value. The result replaces that field only."
     },
+    "locales.ui.generateAValueTranslationFromValueEnglishThe.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "translationProviderLabel",
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Generate a {translationProviderLabel} translation from {useNormalizedEnglish} English. The result replaces Current locale value only."
+    },
     "locales.ui.generatedValue.text": {
       "fallbackLocale": null,
       "placeholders": [
@@ -731,12 +799,26 @@
       "status": "draft",
       "text": "Generated: {stateGeneratedFile}"
     },
+    "locales.ui.googleTranslate.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Google Translate"
+    },
     "locales.ui.key.text": {
       "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
       "text": "Key"
+    },
+    "locales.ui.latestApiResult.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Latest API result"
     },
     "locales.ui.latestDeeplResult.text": {
       "fallbackLocale": null,
@@ -773,6 +855,38 @@
       "status": "draft",
       "text": "Preparing component rebuild"
     },
+    "locales.ui.preparingComponentRebuildWithValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "providerLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing component rebuild with {providerLabel}"
+    },
+    "locales.ui.preparingComponentRebuildWithoutATranslatorApi.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing component rebuild without a translator API"
+    },
+    "locales.ui.preparingSaveWithValue.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "providerLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save with {providerLabel}"
+    },
+    "locales.ui.preparingSaveWithoutATranslatorApi.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save without a translator API"
+    },
     "locales.ui.rebuildingLocaleComponent.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -786,6 +900,15 @@
       "sourceStatus": "draft",
       "status": "draft",
       "text": "Requesting a DeepL translation…"
+    },
+    "locales.ui.requestingAValueTranslation.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "translationProviderLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Requesting a {translationProviderLabel} translation…"
     },
     "locales.ui.requiredPlaceholders.text": {
       "fallbackLocale": null,
@@ -828,6 +951,13 @@
       "sourceStatus": "draft",
       "status": "draft",
       "text": "Select a catalog entry"
+    },
+    "locales.ui.selectDeeplOrGoogleTranslateToGenerateAn.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Select DeepL or Google Translate to generate an API translation."
     },
     "locales.ui.sourceText.text": {
       "fallbackLocale": null,
@@ -901,6 +1031,20 @@
       "status": "draft",
       "text": "Unsaved changes"
     },
+    "locales.ui.useNormalized.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized"
+    },
+    "locales.ui.useNormalizedEnglishForGeneratedFallbacksAndAutomated.title": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English for generated fallbacks and automated translation input."
+    },
     "locales.ui.valid.text": {
       "fallbackLocale": null,
       "placeholders": [],
@@ -916,6 +1060,34 @@
       "sourceStatus": "draft",
       "status": "draft",
       "text": "{stateCompletenessFallback} English fallback"
+    },
+    "locales.ui.valueFallback.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{useNormalizedEnglish} fallback"
+    },
+    "locales.ui.valueIsNotConfiguredSetValueBeforeLaunching.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "translationProviderLabel",
+        "selectedProviderInfoCredentialSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{translationProviderLabel} is not configured. Set {selectedProviderInfoCredentialSource} before launching the application."
+    },
+    "locales.ui.valueReplacedCurrentLocaleValueApplyInMemory.text": {
+      "fallbackLocale": null,
+      "placeholders": [
+        "resultProvider"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{resultProvider} replaced Current locale value. Apply in memory to retain it."
     },
     "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
       "fallbackLocale": null,

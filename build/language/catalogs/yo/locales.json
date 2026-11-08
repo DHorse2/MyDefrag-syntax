@@ -2,956 +2,1128 @@
   "component": "locales",
   "entries": {
     "locales.accessibility.buildCommandOutput.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Build command output"
+      "status": "machine-generated",
+      "text": "Kọ́ àkójọ àṣẹ"
     },
     "locales.accessibility.component.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component"
+      "status": "machine-generated",
+      "text": "Ẹ̀ka"
     },
     "locales.accessibility.locale.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale"
+      "status": "machine-generated",
+      "text": "Àgbègbè"
     },
     "locales.accessibility.maintenanceActions.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Maintenance actions"
+      "status": "machine-generated",
+      "text": "Àwọn ìgbésẹ̀ ìtọ́jú"
     },
     "locales.accessibility.operationInProgress.label": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Iṣẹ́ ń lọ lọ́wọ́"
+    },
+    "locales.accessibility.translationApiSelection.label": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Operation in progress"
+      "text": "Translation Application Programming Interface selection"
+    },
+    "locales.accessibility.useDeeplApi.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use Deep L Application Programming Interface"
+    },
+    "locales.accessibility.useGoogleTranslateApi.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use Google Translate Application Programming Interface"
+    },
+    "locales.accessibility.useNormalizedEnglishForFallbacksAndAutomatedTranslation.label": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for fallbacks and automated translation"
     },
     "locales.action.applyInMemory.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Apply in memory"
+      "status": "machine-generated",
+      "text": "Wíwà nínú ìrántí"
     },
     "locales.action.close.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Close"
+      "status": "machine-generated",
+      "text": "Ti pa"
     },
     "locales.action.exit.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Exit"
+      "status": "machine-generated",
+      "text": "Jáde"
     },
     "locales.action.generateApiTranslation.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generate API translation"
+      "status": "machine-generated",
+      "text": "Ṣẹ̀dá ìtumọ̀ API"
     },
     "locales.action.rebuildSelectedComponent.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Rebuild selected component"
+      "status": "machine-generated",
+      "text": "Túnṣe àkójọ tí a yàn"
     },
     "locales.action.reload.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reload"
+      "status": "machine-generated",
+      "text": "Àtúngbéjáde"
     },
     "locales.action.revert.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Revert"
+      "status": "machine-generated",
+      "text": "Àtúngbéjáde"
     },
     "locales.action.saveAndRebuild.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save and rebuild"
+      "status": "machine-generated",
+      "text": "Àfipamọ́ kí o sì tún un kọ́"
     },
     "locales.action.stopBuild.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Stop build"
+      "status": "machine-generated",
+      "text": "Dáwọ́ ìkọ́lé dúró"
     },
     "locales.action.useEnglishFallback.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use English fallback"
+      "status": "machine-generated",
+      "text": "Lò ìfàsẹ̀yìn Gẹ̀ẹ́sì"
     },
     "locales.action.useNormalizedEnglish.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Normalized English"
+      "status": "machine-generated",
+      "text": "Lò Gẹ̀ẹ́sì tí a ṣe déédéé"
     },
     "locales.action.validate.label": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validate"
+      "status": "machine-generated",
+      "text": "Fídí múlẹ̀"
     },
     "locales.dialog.cancel.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Cancel"
+      "status": "machine-generated",
+      "text": "Fagilé"
     },
     "locales.dialog.confirmLocaleSourceChanges.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Confirm locale source changes"
+      "status": "machine-generated",
+      "text": "Jẹ́rìí àwọn àyípadà orísun agbègbè"
     },
     "locales.dialog.discardAndReload.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard and reload"
+      "status": "machine-generated",
+      "text": "Jáwọ́ sílẹ̀ kí o sì tún un gbé sórí ayélujára"
     },
     "locales.dialog.discardUnsavedTranslations.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard unsaved translations?"
+      "status": "machine-generated",
+      "text": "Kó àwọn ìtumọ̀ tí a kò fipamọ́ dànù?"
     },
     "locales.dialog.exitWithoutSaving.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Exit without saving"
+      "status": "machine-generated",
+      "text": "Jáde láìfipamọ́"
     },
     "locales.dialog.localeComponentBuildIsRunning.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale component build is running"
+      "status": "machine-generated",
+      "text": "Ìkọ́pọ̀ ẹ̀yà ara agbègbè ń ṣiṣẹ́"
     },
     "locales.dialog.mydefragLocaleMaintenance.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "MyDefrag Locale Maintenance"
+      "status": "machine-generated",
+      "text": "Ìtọ́jú àgbègbè Ìṣàkóso Ìpamọ́ Mi"
     },
     "locales.dialog.noFilesWillChange.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No files will change."
+      "status": "machine-generated",
+      "text": "Kò sí àwọn fáìlì tí yóò yípadà."
     },
     "locales.dialog.returnToBuild.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Return to build"
+      "status": "machine-generated",
+      "text": "Pada sí ìkọ́pọ̀"
     },
     "locales.dialog.saveAndComponentBuildSucceeded.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save and component build succeeded"
+      "status": "machine-generated",
+      "text": "Fipamọ́ àti ìkọ́pọ̀ ẹ̀yà ara ṣe àṣeyọrí"
     },
     "locales.dialog.saveAndRebuildComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save and rebuild component"
+      "status": "machine-generated",
+      "text": "Fipamọ́ àti àtúntò ẹ̀yà ara"
     },
     "locales.dialog.saveBlockedByValidation.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save blocked by validation"
+      "status": "machine-generated",
+      "text": "Fipamọ́ dí nípasẹ̀ ìfìdí múlẹ̀"
     },
     "locales.dialog.saveFailedAndWasRolledBack.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Save failed and was rolled back"
+      "status": "machine-generated",
+      "text": "Fipamọ́ kùnà ó sì yí padà"
     },
     "locales.dialog.selectTheMydefragSyntaxRepository.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select the MyDefrag-syntax repository"
+      "status": "machine-generated",
+      "text": "Yan ibi ipamọ Ìṣàkóso Ìpamọ́ Mi-Gírámọ ofin"
     },
     "locales.dialog.unsavedLocaleChanges.title": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unsaved locale changes"
+      "status": "machine-generated",
+      "text": "Awọn iyipada agbegbe ti ko fipamọ"
     },
     "locales.heading.catalog.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog"
+      "status": "machine-generated",
+      "text": "Katalog"
     },
     "locales.heading.localeOperation.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale operation"
+      "status": "machine-generated",
+      "text": "Iṣiṣẹ agbegbe"
     },
     "locales.heading.operationResult.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Operation result"
+      "status": "machine-generated",
+      "text": "Abajade iṣẹ"
     },
     "locales.heading.selectALocaleAndComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Select a locale and component"
+      "status": "machine-generated",
+      "text": "Yan agbegbe ati apakan kan"
     },
     "locales.input.generateATranslationFromCurrentLocaleValue.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generate a translation from Current locale value"
+      "status": "machine-generated",
+      "text": "Ṣẹda itumọ lati iye agbegbe lọwọlọwọ"
     },
     "locales.input.keySourceTranslationStatus.placeholder": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Key, source, translation, status"
+      "status": "machine-generated",
+      "text": "Key, orisun, itumọ, ipo"
     },
     "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "A valid MyDefrag locale repository was not selected."
+      "status": "machine-generated",
+      "text": "A ko yan ibi ipamọ agbegbe Ìṣàkóso Ìpamọ́ Mi ti o wulo."
     },
     "locales.message.apiTranslationRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "API translation rejected"
+      "status": "machine-generated",
+      "text": "Kò gba ìtumọ̀ API"
     },
     "locales.message.apiTranslationUnavailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "API translation unavailable"
+      "status": "machine-generated",
+      "text": "Ìtumọ̀ API kò sí"
     },
     "locales.message.applicationFailedToStart.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Application failed to start"
+      "status": "machine-generated",
+      "text": "Ohun èlò kò lè bẹ̀rẹ̀"
     },
     "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Canonical English is not an API translation target."
+      "status": "machine-generated",
+      "text": "Gẹ̀ẹ́sì alaṣẹ kìí ṣe àfojúsùn ìtumọ̀ API."
     },
     "locales.message.catalogKeyBelongsToComponentValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "canonicalComponent"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Catalog key belongs to component {canonicalComponent}."
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ katalọgi jẹ́ ti ẹ̀yà ara {canonicalComponent}."
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Choose the repository that owns language/locales and build/language."
+      "status": "machine-generated",
+      "text": "Yan ibi ipamọ ti o ni language/locales ati build/language."
     },
     "locales.message.componentRebuildFailed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component rebuild failed"
+      "status": "machine-generated",
+      "text": "Àtúntò ẹ̀yà kùnà"
     },
     "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard or save changes before changing locale or component."
+      "status": "machine-generated",
+      "text": "Já àwọn àyípadà pamọ́ kí o tó yí agbègbè tàbí ẹ̀yà padà."
     },
     "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "English canonical text is read-only here."
+      "status": "machine-generated",
+      "text": "Ìwé àkójọpọ̀ èdè Gẹ̀ẹ́sì ni a kà níbí nìkan."
     },
     "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "English text is canonical and must be maintained in MyDefrag Language Maintenance."
+      "status": "machine-generated",
+      "text": "Ìwé àkójọpọ̀ èdè Gẹ̀ẹ́sì jẹ́ àkójọpọ̀ èdè tí a gbọ́dọ̀ tọ́jú nínú Ìṣàkóso Ìpamọ́ Mi Ìtọ́jú Èdè."
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Enter or populate Current locale value before generating an API translation."
+      "status": "machine-generated",
+      "text": "Tẹ tàbí kí o kún iye agbègbè lọ́wọ́lọ́wọ́ kí o tó ṣe ìtúmọ̀ API."
     },
     "locales.message.exitAndDiscardTheSelectedComponentTranslations.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Exit and discard the selected component translations?"
+      "status": "machine-generated",
+      "text": "Jáde kí o sì yọ àwọn ìtumọ̀ ẹ̀yà tí a yàn kúrò?"
     },
     "locales.message.generateAnApiTranslationBeforeReplacingTheValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generate an API translation before replacing the value."
+      "status": "machine-generated",
+      "text": "Ṣẹ̀dá ìtumọ̀ API kí o tó rọ́pò iye náà."
     },
     "locales.message.generatedLocaleCatalogIdentityMismatchInValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "relativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated locale catalog identity mismatch in {relativePath}:"
+      "status": "machine-generated",
+      "text": "Àìbáramu ìdánimọ̀ àdúgbò tí a ṣẹ̀dá nínú {relativePath}:"
     },
     "locales.message.generatedLocaleCatalogIsInvalid.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated locale catalog is invalid:"
+      "status": "machine-generated",
+      "text": "Àkójọpọ̀ àdúgbò tí a ṣẹ̀dá kò wúlò:"
     },
     "locales.message.generatedTranslationsMustBeAppliedBeforeTheyCan.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Generated translations must be applied before they can be removed from authored data."
+      "status": "machine-generated",
+      "text": "Àwọn ìtumọ̀ tí a ṣẹ̀dá gbọ́dọ̀ wà ní lílò kí a tó lè yọ wọ́n kúrò nínú dátà tí a ṣẹ̀dá."
     },
     "locales.message.localeMaintenanceDataHasNotBeenLoaded.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Locale maintenance data has not been loaded."
+      "status": "machine-generated",
+      "text": "A kò tíì gbé àwọn dátà ìtọ́jú agbègbè rù."
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "missing"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Not a MyDefrag locale repository. Missing: {missing}"
+      "status": "machine-generated",
+      "text": "Kìí ṣe ibi ìpamọ́ àgbègbè Ìṣàkóso Ìpamọ́ Mi. Àìsí: {missing}"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "relativePath"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Path escapes the repository root: {relativePath}"
+      "status": "machine-generated",
+      "text": "Ọ̀nà náà sá àsálà gbòǹgbò ibi ìpamọ́: {relativePath}"
     },
     "locales.message.placeholdersMustBeExactlyValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "expected"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Placeholders must be exactly: {expected}."
+      "status": "machine-generated",
+      "text": "Àwọn tí ó ní ibi ìpamọ́ gbọ́dọ̀ jẹ́ gangan: {expected}."
     },
     "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Reloading will discard changes to the selected locale component."
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe yóò yọ àwọn àyípadà sí apá agbègbè tí a yàn kúrò."
     },
     "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Fipamọ́ tàbí dá àwọn àyípadà padà kí a tó tún un kọ́."
+    },
+    "locales.message.selectDeeplOrGoogleTranslateBeforeGeneratingAn.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Save or revert changes before rebuilding."
+      "text": "Select Deep L or Google Translate before generating an Application Programming Interface translation."
     },
     "locales.message.selectedComponentRebuilt.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selected component rebuilt"
+      "status": "machine-generated",
+      "text": "A tún àwọn ẹ̀yà tí a yàn kọ́"
     },
     "locales.message.selectionFailed.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Selection failed"
+      "status": "machine-generated",
+      "text": "Àṣàyàn kùnà"
     },
     "locales.message.theLocaleComponentSchemaIsUnavailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "The locale component schema is unavailable."
+      "status": "machine-generated",
+      "text": "Àwòrán ẹ̀yà tí a yàn kò sí."
     },
     "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ìlànà pàtàkì túmọ̀ sí iye àgbègbè tí ó yàtọ̀. Tun bẹ̀rẹ̀ Ìtọ́jú àgbègbè kí o sì tún gbìyànjú."
+    },
+    "locales.message.theSelectedEnglishSourceIsEmptyAndCannot.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "The main process translated a different Current locale value. Restart Locale Maintenance and retry."
+      "text": "The selected English language source is empty and cannot be translated."
     },
     "locales.message.translationRejected.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Translation rejected"
+      "status": "machine-generated",
+      "text": "A kò gba ìtumọ̀ rẹ."
     },
     "locales.message.unknownCatalogKeyValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "key"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unknown catalog key: {key}"
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ àkójọpọ̀ tí a kò mọ̀: {key}"
     },
     "locales.message.unknownComponentValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "componentId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unknown component: {componentId}"
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ tí a kò mọ̀: {componentId}"
     },
     "locales.message.unknownComponentValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "documentComponent"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unknown component: {documentComponent}"
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ tí a kò mọ̀: {documentComponent}"
     },
     "locales.message.unknownKeyForSelectedComponentValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "payloadKey"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unknown key for selected component: {payloadKey}"
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ tí a kò mọ̀ fún ẹ̀ka tí a yàn: {payloadKey}"
     },
     "locales.message.unknownLocaleValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "localeId"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Unknown locale: {localeId}"
+      "status": "machine-generated",
+      "text": "Àgbègbè tí a kò mọ̀: {localeId}"
     },
     "locales.message.unknownLocaleValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "documentLocale"
       ],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àgbègbè tí a kò mọ̀: {documentLocale}"
+    },
+    "locales.message.unknownTranslationProviderValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "provider"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "Unknown locale: {documentLocale}"
+      "text": "Unknown translation provider: {provider}."
     },
     "locales.message.validationResult.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Validation result"
+      "status": "machine-generated",
+      "text": "Àbájáde ìfìdí múlẹ̀"
     },
     "locales.message.waitForTheBuildToFinishBeforeExiting.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Wait for the build to finish before exiting."
+      "status": "machine-generated",
+      "text": "Dúró títí ìkọ́lé náà yóò fi parí kí o tó jáde."
     },
     "locales.message.writeValueAuthoritativeFileS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "normalizedCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Write {normalizedCount} authoritative file(s)?"
+      "status": "machine-generated",
+      "text": "Kọ àwọn fáìlì àṣẹ {normalizedCount}?"
     },
     "locales.progress.capturingGeneratedFilesForRollback.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Capturing generated files for rollback"
+      "status": "machine-generated",
+      "text": "Gbígbà àwọn fáìlì tí a ṣẹ̀dá fún ìyípadà"
     },
     "locales.progress.checkingGeneratedFileChanges.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Checking generated file changes"
+      "status": "machine-generated",
+      "text": "Ṣíṣàyẹ̀wò àwọn àyípadà fáìlì tí a ṣẹ̀dá"
     },
     "locales.progress.committingLocaleSourceChanges.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Committing locale source changes"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe orísun àdúgbò"
     },
     "locales.progress.preparingSave.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Preparing save"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe ìpamọ́"
     },
     "locales.progress.restoringAuthoritativeAndGeneratedFiles.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restoring authoritative and generated files"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe àwọn fáìlì tí a ṣẹ̀dá àti tí a ṣẹ̀dá"
     },
     "locales.progress.restoringFilesAfterAnError.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Restoring files after an error"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àtúnṣe àwọn fáìlì lẹ́yìn àṣìṣe kan"
     },
     "locales.progress.savingLocaleComponent.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Saving locale component"
+      "status": "machine-generated",
+      "text": "Ṣíṣe àfikún àwọn fáìlì agbègbè"
     },
     "locales.progress.startingSaveAndComponentRebuild.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Starting save and component rebuild"
+      "status": "machine-generated",
+      "text": "Bẹ̀rẹ̀ sí ní fipamọ́ àti àtúntò àwọn fáìlì"
     },
     "locales.progress.stoppingComponentBuild.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Stopping component build"
+      "status": "machine-generated",
+      "text": "Dídá ìkọ́pọ̀ àwọn fáìlì dúró"
     },
     "locales.progress.useStopBuildInTheProgressWindowThen.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Use Stop build in the progress window, then wait for rollback to complete before closing the application."
+      "status": "machine-generated",
+      "text": "Lo ìdádúró ìkọ́pọ̀ nínú fèrèsé ìlọsíwájú, lẹ́yìn náà dúró kí ìyípadà náà parí kí o tó ti ìṣàfilọ́lẹ̀ náà."
     },
     "locales.progress.waitingForSaveConfirmation.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Waiting for save confirmation"
+      "status": "machine-generated",
+      "text": "N nduro fun ijẹrisi fifipamọ"
     },
     "locales.progress.writingAuthoritativeLocaleFiles.status": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Writing authoritative locale files"
+      "status": "machine-generated",
+      "text": "Ṣíṣe kíkọ àwọn fáìlì agbègbè tí ó ní àṣẹ"
     },
     "locales.ui.badgeValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateDirty"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "badge {stateDirty}"
+      "status": "machine-generated",
+      "text": "baaji {stateDirty}"
     },
     "locales.ui.badgeValue.text2": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateValidationOk"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "badge {stateValidationOk}"
+      "status": "machine-generated",
+      "text": "baaji {stateValidationOk}"
     },
     "locales.ui.canonicalEnglish.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Canonical English"
+      "status": "machine-generated",
+      "text": "Gẹ̀ẹ́sì alaṣẹ"
     },
     "locales.ui.catalogKey.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kọ́kọ́rọ́ katalọgi"
+    },
+    "locales.ui.chooseDeeplOrGoogleTranslateLeaveBothUnchecked.title": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Catalog key"
+      "text": "Choose Deep L or Google Translate. Leave both unchecked to creation process without a translator Application Programming Interface."
     },
     "locales.ui.componentStrings.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Component strings"
+      "status": "machine-generated",
+      "text": "Àwọn okùn èròjà"
     },
     "locales.ui.currentLocaleValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Current locale value"
+      "status": "machine-generated",
+      "text": "Iye agbègbè lọ́wọ́lọ́wọ́"
     },
     "locales.ui.deeplIsNotConfiguredSetDeeplapiBeforeLaunching.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "DeepL is not configured. Set DeeplApi before launching the application."
+      "status": "machine-generated",
+      "text": "A kò ṣètò Deepl. Ṣètò DeeplApi kí o tó bẹ̀rẹ̀ ìfilọ́lẹ̀ ohun èlò náà."
     },
     "locales.ui.deeplReplacedCurrentLocaleValueApplyInMemory.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "DeepL replaced Current locale value. Apply in memory to retain it."
+      "status": "machine-generated",
+      "text": "DeepL rọ́pò iye àgbègbè lọ́wọ́lọ́wọ́. Fi sínú ìrántí láti pa á mọ́."
     },
     "locales.ui.discardInMemoryTranslationChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard in-memory translation changes?"
+      "status": "machine-generated",
+      "text": "Já àwọn àyípadà ìtumọ̀ inú ìrántí nù?"
     },
     "locales.ui.discardUnsavedTranslationsAndChangeTheSelection.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Discard unsaved translations and change the selection?"
+      "status": "machine-generated",
+      "text": "Já àwọn ìtumọ̀ tí a kò fipamọ́ nù kí o sì yí àṣàyàn náà padà?"
     },
     "locales.ui.englishFallback.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "English fallback"
+      "status": "machine-generated",
+      "text": "Ìfàsẹ́yìn Gẹ̀ẹ́sì"
     },
     "locales.ui.generateATranslationFromCurrentLocaleValueThe.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ṣẹ̀dá ìtumọ̀ láti inú iye agbègbè lọ́wọ́lọ́wọ́. Àbájáde náà rọ́pò pápá yẹn nìkan."
+    },
+    "locales.ui.generateAValueTranslationFromValueEnglishThe.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "translationProviderLabel",
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "Generate a translation from Current locale value. The result replaces that field only."
+      "text": "Generate a {translationProviderLabel} translation from {useNormalizedEnglish} English language. The result replaces Current language region value only."
     },
     "locales.ui.generatedValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateGeneratedFile"
       ],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àgbéjáde: {stateGeneratedFile}"
+    },
+    "locales.ui.googleTranslate.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "Generated: {stateGeneratedFile}"
+      "text": "Google Translate"
     },
     "locales.ui.key.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Kókó"
+    },
+    "locales.ui.latestApiResult.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Key"
+      "text": "Latest Application Programming Interface result"
     },
     "locales.ui.latestDeeplResult.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Latest DeepL result"
+      "status": "machine-generated",
+      "text": "Àbájáde DeepL tuntun"
     },
     "locales.ui.noUnsavedChanges.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "No unsaved changes"
+      "status": "machine-generated",
+      "text": "Kò sí àwọn àyípadà tí a kò fipamọ́"
     },
     "locales.ui.normalizedEnglish.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Normalized English"
+      "status": "machine-generated",
+      "text": "Gẹ̀ẹ́sì tí a ṣe déédé"
     },
     "locales.ui.notValidated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Not validated"
+      "status": "machine-generated",
+      "text": "Kò jẹ́rìísí"
     },
     "locales.ui.preparingComponentRebuild.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ń ṣe àtúnṣe ẹ̀yà ara"
+    },
+    "locales.ui.preparingComponentRebuildWithValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "providerLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing component rebuild with {providerLabel}"
+    },
+    "locales.ui.preparingComponentRebuildWithoutATranslatorApi.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Preparing component rebuild"
+      "text": "Preparing component rebuild without a translator Application Programming Interface"
+    },
+    "locales.ui.preparingSaveWithValue.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "providerLabel"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes with {providerLabel}"
+    },
+    "locales.ui.preparingSaveWithoutATranslatorApi.text": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Preparing save changes without a translator Application Programming Interface"
     },
     "locales.ui.rebuildingLocaleComponent.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Rebuilding locale component"
+      "status": "machine-generated",
+      "text": "Àtúnṣe ẹ̀yà ara àdúgbò"
     },
     "locales.ui.requestingADeeplTranslation.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Ń béèrè fún ìtumọ̀ DeepL…"
+    },
+    "locales.ui.requestingAValueTranslation.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "translationProviderLabel"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "Requesting a DeepL translation…"
+      "text": "Requesting a {translationProviderLabel} translation."
     },
     "locales.ui.requiredPlaceholders.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Required placeholders"
+      "status": "machine-generated",
+      "text": "Àwọn olùgbé tí a nílò"
     },
     "locales.ui.resizeCurrentLocaleValueAndApiSuggestion.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize current locale value and API suggestion"
+      "status": "machine-generated",
+      "text": "Yí iye àgbègbè lọ́wọ́lọ́wọ́ àti àbá API padà"
     },
     "locales.ui.resizeLocaleCatalogAndTranslationEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Resize locale catalog and translation editor"
+      "status": "machine-generated",
+      "text": "Ṣe àtúnṣe ìwọ̀n àkójọpọ̀ àdúgbò àti olóòtú ìtumọ̀"
     },
     "locales.ui.reviewStatus.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Review status"
+      "status": "machine-generated",
+      "text": "Ipò àtúnyẹ̀wò"
     },
     "locales.ui.search.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Search"
+      "status": "machine-generated",
+      "text": "Ṣàwárí"
     },
     "locales.ui.selectACatalogEntry.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Yan ìkọsílẹ̀ àkójọpọ̀"
+    },
+    "locales.ui.selectDeeplOrGoogleTranslateToGenerateAn.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Select a catalog entry"
+      "text": "Select Deep L or Google Translate to generate an Application Programming Interface translation."
     },
     "locales.ui.sourceText.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Source text"
+      "status": "machine-generated",
+      "text": "Ọ̀rọ̀ orísun"
     },
     "locales.ui.sourceValue.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateAuthoritativeFile"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Source: {stateAuthoritativeFile}"
+      "status": "machine-generated",
+      "text": "Orísun: {stateAuthoritativeFile}"
     },
     "locales.ui.status.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Status"
+      "status": "machine-generated",
+      "text": "Ipò"
     },
     "locales.ui.structuredEditor.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Structured editor"
+      "status": "machine-generated",
+      "text": "Olóòtú ètò"
     },
     "locales.ui.translation.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Translation"
+      "status": "machine-generated",
+      "text": "Ìtumọ̀"
     },
     "locales.ui.translationScope.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Translation scope"
+      "status": "machine-generated",
+      "text": "Àkójọ ìtumọ̀"
     },
     "locales.ui.translationUnavailable.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Translation unavailable."
+      "status": "machine-generated",
+      "text": "Ìtumọ̀ kò sí."
     },
     "locales.ui.translatorDesktopTool.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Translator desktop tool"
+      "status": "machine-generated",
+      "text": "Ohun èlò ìṣiṣẹ́ olùtumọ̀"
     },
     "locales.ui.translatorNotes.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Translator notes"
+      "status": "machine-generated",
+      "text": "Àkíyèsí olùtumọ̀"
     },
     "locales.ui.unsavedChanges.text": {
+      "fallbackLocale": null,
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "Àwọn àyípadà tí a kò fipamọ́"
+    },
+    "locales.ui.useNormalized.text": {
       "fallbackLocale": "en",
       "placeholders": [],
       "sourceStatus": "draft",
       "status": "draft",
-      "text": "Unsaved changes"
+      "text": "Use normalized"
+    },
+    "locales.ui.useNormalizedEnglishForGeneratedFallbacksAndAutomated.title": {
+      "fallbackLocale": "en",
+      "placeholders": [],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "Use normalized English language for generated fallbacks and automated translation input."
     },
     "locales.ui.valid.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "Valid"
+      "status": "machine-generated",
+      "text": "Wúlò"
     },
     "locales.ui.valueEnglishFallback.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateCompletenessFallback"
       ],
       "sourceStatus": "draft",
+      "status": "machine-generated",
+      "text": "{stateCompletenessFallback} Èdè Gẹ̀ẹ́sì yiyan"
+    },
+    "locales.ui.valueFallback.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "useNormalizedEnglish"
+      ],
+      "sourceStatus": "draft",
       "status": "draft",
-      "text": "{stateCompletenessFallback} English fallback"
+      "text": "{useNormalizedEnglish} alternate choice"
+    },
+    "locales.ui.valueIsNotConfiguredSetValueBeforeLaunching.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "translationProviderLabel",
+        "selectedProviderInfoCredentialSource"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{translationProviderLabel} is not configured. Set {selectedProviderInfoCredentialSource} before launching the application."
+    },
+    "locales.ui.valueReplacedCurrentLocaleValueApplyInMemory.text": {
+      "fallbackLocale": "en",
+      "placeholders": [
+        "resultProvider"
+      ],
+      "sourceStatus": "draft",
+      "status": "draft",
+      "text": "{resultProvider} replaced Current language region value. Apply in memory to retain it."
     },
     "locales.ui.valueResultReadyApplyInMemoryToRetain.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "rowApiTranslationProvider"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{rowApiTranslationProvider} result ready. Apply in memory to retain Current locale value."
+      "status": "machine-generated",
+      "text": "{rowApiTranslationProvider} ti ṣetán. Fi sínú ìrántí láti pa iye agbègbè lọ́wọ́lọ́wọ́ mọ́."
     },
     "locales.ui.valueTotal.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateCompletenessTotal"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{stateCompletenessTotal} total"
+      "status": "machine-generated",
+      "text": "{stateCompletenessTotal} lápapọ̀"
     },
     "locales.ui.valueTranslated.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateCompletenessTranslated"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{stateCompletenessTranslated} translated"
+      "status": "machine-generated",
+      "text": "{stateCompletenessTranslated} tí a túmọ̀"
     },
     "locales.ui.valueValidationErrorS.text": {
-      "fallbackLocale": "en",
+      "fallbackLocale": null,
       "placeholders": [
         "stateValidationErrorsCount"
       ],
       "sourceStatus": "draft",
-      "status": "draft",
-      "text": "{stateValidationErrorsCount} validation error(s)"
+      "status": "machine-generated",
+      "text": "Àṣìṣe ìfìdíkalẹ̀ {stateValidationErrorsCount}"
     }
   },
   "generatedAt": "1970-01-01T00:00:00.000Z",

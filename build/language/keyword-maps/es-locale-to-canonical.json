@@ -1,82 +1,82 @@
 {
-  "Defragment": {
-    "canonical": "Defragment",
-    "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
-  "FastFill": {
-    "canonical": "FastFill",
-    "id": "fileAction.fastFill"
-  },
-  "FileActions": {
+  "Acciones de archivo": {
     "canonical": "FileActions",
     "id": "structure.fileActions"
   },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
-    "canonical": "FileSelect",
-    "id": "structure.fileSelect"
-  },
-  "FragmentCount": {
-    "canonical": "FragmentCount",
-    "id": "volumeCondition.fragmentCount"
-  },
-  "FullPath": {
-    "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
-  },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
-  },
-  "SetColor": {
-    "canonical": "SetColor",
-    "id": "setting.setColor"
-  },
-  "SetVariable": {
-    "canonical": "SetVariable",
-    "id": "setting.setVariable"
-  },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
-  },
-  "SortByName": {
-    "canonical": "SortByName",
-    "id": "fileAction.sortByName"
-  },
-  "VolumeActions": {
+  "Acciones de volumen": {
     "canonical": "VolumeActions",
     "id": "structure.volumeActions"
   },
-  "VolumeEnd": {
+  "Desfragmentar": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
+  },
+  "Establecer color": {
+    "canonical": "SetColor",
+    "id": "setting.setColor"
+  },
+  "Establecer valor cambiable": {
+    "canonical": "SetVariable",
+    "id": "setting.setVariable"
+  },
+  "Excluir archivos": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
+  },
+  "Excluir volúmenes": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "Fin de archivo": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "Fin de volumen": {
     "canonical": "VolumeEnd",
     "id": "structure.volumeEnd"
   },
-  "VolumeSelect": {
+  "FragmentoCount": {
+    "canonical": "FragmentCount",
+    "id": "volumeCondition.fragmentCount"
+  },
+  "Laboratorio el": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "Nombre": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "Nombre del archivo": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "Nombre del directorio": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "Ordenar por nombre": {
+    "canonical": "SortByName",
+    "id": "fileAction.sortByName"
+  },
+  "Ruta completa": {
+    "canonical": "FullPath",
+    "id": "fileCondition.fullPath"
+  },
+  "Selección de archivo": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
+  },
+  "Selección de volumen": {
     "canonical": "VolumeSelect",
     "id": "structure.volumeSelect"
+  },
+  "Tamaño": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
+  },
+  "relleno rápido": {
+    "canonical": "FastFill",
+    "id": "fileAction.fastFill"
   }
 }

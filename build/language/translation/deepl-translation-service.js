@@ -1,6 +1,10 @@
 'use strict';
 
-const { normalizeText, transformRuntimeSyntax } = require('./text-normalizer');
+const {
+    normalizeText,
+    normalizeTextVariants,
+    transformRuntimeSyntax
+} = require('./text-normalizer');
 
 const DEFAULT_PRO_ENDPOINT = 'https://api.deepl.com/v2/translate';
 const DEFAULT_FREE_ENDPOINT = 'https://api-free.deepl.com/v2/translate';
@@ -12,6 +16,71 @@ function extractPlaceholders(text) {
     return Array.from(String(text || '').matchAll(PLACEHOLDER_PATTERN), (match) => match[1])
         .filter((value, index, values) => values.indexOf(value) === index)
         .sort();
+}
+
+function escapeRegularExpression(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function retainedNormalizedSelections(text, selections) {
+    const value = String(text || '').normalize('NFKC');
+    return (selections || []).filter((selection) => {
+        const phrase = String(selection.output || '').trim();
+        if (!phrase) { return false; }
+        const expression = phrase
+            .split(/[\s\p{Pd}]+/u)
+            .filter(Boolean)
+            .map(escapeRegularExpression)
+            .join('[\\s\\p{Pd}]+');
+        return new RegExp(
+            `(?:^|[^\\p{L}\\p{N}])${expression}(?=$|[^\\p{L}\\p{N}])`,
+            'iu'
+        ).test(value);
+    });
+}
+
+function nextAlternativeVariantIndex(plan, retained) {
+    const current = plan.variants[plan.variantIndex];
+    const retainedInputs = new Set(retained.map((selection) => (
+        selection.input.normalize('NFKC').toLocaleLowerCase()
+    )));
+    const currentByInput = new Map(current.selections.map((selection) => [
+        selection.input.normalize('NFKC').toLocaleLowerCase(),
+        selection.choiceIndex
+    ]));
+    const maximumByInput = new Map(currentByInput);
+    for (const variant of plan.variants) {
+        for (const selection of variant.selections) {
+            const input = selection.input.normalize('NFKC').toLocaleLowerCase();
+            maximumByInput.set(
+                input,
+                Math.max(maximumByInput.get(input) || 0, selection.choiceIndex)
+            );
+        }
+    }
+    const desiredByInput = new Map(Array.from(currentByInput.entries()).map(([input, choiceIndex]) => [
+        input,
+        retainedInputs.has(input) && choiceIndex < maximumByInput.get(input)
+            ? choiceIndex + 1
+            : choiceIndex
+    ]));
+    if (Array.from(currentByInput.keys()).every((input) => (
+        desiredByInput.get(input) === currentByInput.get(input)
+    ))) {
+        return -1;
+    }
+    for (let index = plan.variantIndex + 1; index < plan.variants.length; index += 1) {
+        const candidate = plan.variants[index];
+        const candidateByInput = new Map(candidate.selections.map((selection) => [
+            selection.input.normalize('NFKC').toLocaleLowerCase(),
+            selection.choiceIndex
+        ]));
+        const matches = Array.from(desiredByInput.entries()).every(([input, choiceIndex]) => (
+            candidateByInput.get(input) === choiceIndex
+        ));
+        if (matches) { return index; }
+    }
+    return -1;
 }
 
 function escapeXml(value) {
@@ -405,7 +474,10 @@ async function createBuildTranslationSuggestions(state, options = {}) {
     const localeFilter = options.localeIds ? new Set(options.localeIds) : null;
     const entryKeysByLocale = options.entryKeysByLocale || null;
     const componentId = options.componentId || null;
+    const useNormalized = options.useNormalized !== false;
+    const fallbackLabel = useNormalized ? 'normalized English fallback' : 'canonical English fallback';
     const suggestions = {};
+    const assignments = {};
     const warnings = [];
     const usage = { apiCalls: 0, charactersPassed: 0 };
     const canonicalEntries = (state.catalog.entries || []).filter((entry) => (
@@ -423,95 +495,161 @@ async function createBuildTranslationSuggestions(state, options = {}) {
         ));
         if (missing.length === 0) { continue; }
         onProgress?.({ localeId: locale.id, missingCount: missing.length });
-        if (!translator.info().configured) {
+        const translatorInfo = translator.info();
+        if (!translatorInfo.configured) {
             warnings.push(
-                `API translation ${locale.id}: DeepL API is not configured; `
-                + `${missing.length} missing value(s) use canonical English fallback.`
+                `API translation ${locale.id}: ${translatorInfo.provider || 'Translation'} API is not configured; `
+                + `${missing.length} missing value(s) use ${fallbackLabel}.`
             );
             continue;
         }
 
-        const items = missing.map((entry) => ({
-            text: normalizeText(entry.text, state.normalizedWords, {
-                preserveRuntimeSyntax: true
-            }),
-            placeholders: entry.placeholders || []
-        }));
-        usage.apiCalls += 1;
-        usage.charactersPassed += items.reduce((total, item) => (
-            total + Array.from(String(item.text || '')).length
-        ), 0);
-
-        let response;
-        try {
-            response = await translator.translateTexts({
-                targetLocale: locale.id,
-                items
-            });
-        } catch (error) {
-            warnings.push(
-                `API translation ${locale.id}: request failed: ${error.message}. `
-                + `${missing.length} missing value(s) use canonical English fallback.`
-            );
-            continue;
-        }
-        if (!Array.isArray(response?.results) || response.results.length !== missing.length) {
-            warnings.push(
-                `API translation ${locale.id}: provider returned an unexpected result count; `
-                + `${missing.length} missing value(s) use canonical English fallback.`
-            );
-            continue;
-        }
+        const useGoogleAlternatives = useNormalized
+            && translatorInfo.provider === 'Google Translate';
+        const plans = missing.map((entry) => {
+            const normalized = useGoogleAlternatives
+                ? normalizeTextVariants(entry.text, state.normalizedWords, {
+                    preserveRuntimeSyntax: true
+                })
+                : {
+                    variants: [{
+                        text: useNormalized
+                            ? normalizeText(entry.text, state.normalizedWords, {
+                                preserveRuntimeSyntax: true
+                            })
+                            : entry.text,
+                        selections: []
+                    }],
+                    truncated: false
+                };
+            return {
+                entry,
+                variants: normalized.variants,
+                variantsTruncated: normalized.truncated,
+                variantIndex: 0
+            };
+        });
         const failures = [];
         suggestions[locale.id] = {};
-        response.results.forEach((result, index) => {
-            const entry = missing[index];
-            const expected = [...(entry.placeholders || [])].sort();
-            const actual = extractPlaceholders(result.text);
-            const usable = result.ok
-                && String(result.text || '').trim()
-                && expected.join('|') === actual.join('|');
-            if (usable) {
+        let pending = plans.map((_, index) => index);
+        while (pending.length > 0) {
+            const items = pending.map((planIndex) => {
+                const plan = plans[planIndex];
+                return {
+                    text: plan.variants[plan.variantIndex].text,
+                    placeholders: plan.entry.placeholders || []
+                };
+            });
+            usage.apiCalls += 1;
+            usage.charactersPassed += items.reduce((total, item) => (
+                total + Array.from(String(item.text || '')).length
+            ), 0);
+
+            let response;
+            try {
+                response = await translator.translateTexts({
+                    targetLocale: locale.id,
+                    items
+                });
+                if (Number.isInteger(response?.apiCalls) && response.apiCalls > 1) {
+                    usage.apiCalls += response.apiCalls - 1;
+                }
+            } catch (error) {
+                for (const planIndex of pending) {
+                    failures.push({
+                        key: plans[planIndex].entry.key,
+                        error: `request failed: ${error.message}.`
+                    });
+                }
+                break;
+            }
+            if (!Array.isArray(response?.results) || response.results.length !== pending.length) {
+                for (const planIndex of pending) {
+                    failures.push({
+                        key: plans[planIndex].entry.key,
+                        error: 'provider returned an unexpected result count;'
+                    });
+                }
+                break;
+            }
+
+            const retry = [];
+            response.results.forEach((result, responseIndex) => {
+                const planIndex = pending[responseIndex];
+                const plan = plans[planIndex];
+                const entry = plan.entry;
+                const variant = plan.variants[plan.variantIndex];
+                const expected = [...(entry.placeholders || [])].sort();
+                const actual = extractPlaceholders(result.text);
+                const usable = result.ok
+                    && String(result.text || '').trim()
+                    && expected.join('|') === actual.join('|');
+                if (!usable) {
+                    let error = result.error;
+                    if (result.ok && !String(result.text || '').trim()) {
+                        error = 'Unusable API translation: the result was empty.';
+                    } else if (result.ok) {
+                        error = `Unusable API translation: placeholders must be exactly ${expected.join(', ') || '(none)'}.`;
+                    }
+                    failures.push({ key: entry.key, error });
+                    return;
+                }
+
+                const retained = useGoogleAlternatives
+                    ? retainedNormalizedSelections(result.text, variant.selections)
+                    : [];
+                const nextIndex = retained.length > 0
+                    ? nextAlternativeVariantIndex(plan, retained)
+                    : -1;
+                if (nextIndex >= 0) {
+                    plan.variantIndex = nextIndex;
+                    retry.push(planIndex);
+                    return;
+                }
+
                 suggestions[locale.id][entry.key] = {
                     text: result.text,
                     status: 'machine-generated',
                     provider: result.provider
                 };
-            } else {
-                let error = result.error;
-                if (result.ok && !String(result.text || '').trim()) {
-                    error = 'Unusable API translation: the result was empty.';
-                } else if (result.ok) {
-                    error = `Unusable API translation: placeholders must be exactly ${expected.join(', ') || '(none)'}.`;
+                if (variant.selections.length > 0) {
+                    assignments[locale.id] ||= {};
+                    assignments[locale.id][entry.key] = variant.selections;
                 }
-                failures.push({
-                    key: entry.key,
-                    error
-                });
-            }
-        });
+                if (retained.length > 0) {
+                    const retainedOutputs = retained.map((selection) => selection.output).join(', ');
+                    warnings.push(
+                        `API translation ${locale.id}/${entry.key}: Google retained normalized English `
+                        + `after ordered alternatives (${retainedOutputs})`
+                        + `${plan.variantsTruncated ? ' within the variant limit' : ''}; native review is required.`
+                    );
+                }
+            });
+            pending = retry;
+        }
         if (Object.keys(suggestions[locale.id]).length === 0) { delete suggestions[locale.id]; }
         const distinctErrors = new Set(failures.map((failure) => failure.error));
         if (failures.length > 1 && distinctErrors.size === 1) {
             warnings.push(
                 `API translation ${locale.id}: ${failures[0].error} `
-                + `${failures.length} missing value(s) use canonical English fallback.`
+                + `${failures.length} missing value(s) use ${fallbackLabel}.`
             );
         } else {
             for (const failure of failures) {
                 warnings.push(
-                    `API translation ${locale.id}/${failure.key}: ${failure.error} Using canonical English fallback.`
+                    `API translation ${locale.id}/${failure.key}: ${failure.error} Using ${fallbackLabel}.`
                 );
             }
         }
     }
 
-    return { suggestions, warnings, usage };
+    return { suggestions, assignments, warnings, usage };
 }
 
 module.exports = {
     DeepLTranslationService,
     createBuildTranslationSuggestions,
+    retainedNormalizedSelections,
     extractPlaceholders,
     errorCategoryForStatus,
     endpointUrl,

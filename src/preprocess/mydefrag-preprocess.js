@@ -3,9 +3,7 @@
 // mydefrag-preprocess.js
 //#region Initialize Extension
 // Recursively resolves !include "..."! directives in MyDefrag scripts,
-// producing a merged output file with:
-//   - Two line-number columns on every content line
-//   - Single-line BEGIN / END annotations (not numbered) at each include boundary
+// producing either executable raw merged output or one of four annotated views.
 //
 // Usage:
 //   node mydefrag-preprocess.js <entryFile> [outputFile]
@@ -17,6 +15,13 @@ const fs = require("fs");
 const path = require('path');
 const console = require('console');
 const { pathToFileURL } = require('url');
+const {
+  DEFAULT_PREVIEW_MODE,
+  PREVIEW_MODES,
+  buildPreviewDocumentPath,
+  getPreviewExtension,
+  getPreviewMode
+} = require('./preview-options');
 // ─────────────────────────────────────────────────────────────────────────────────
 // Constants
 // ─────────────────────────────────────────────────────────────────────────────────
@@ -51,6 +56,8 @@ const PARENT_DIR = path.dirname(SCRIPT_DIR);
 const INCLUDE_RE = /!include\s+"([^"]+)"!/g;
 // Width of each numeric column (padded). Increase if you have >9999 lines.
 const COL_W = 6;
+let previewMode = getPreviewMode(DEFAULT_PREVIEW_MODE);
+const previewProblems = [];
 //
 const INI_PATH = path.join(PARENT_DIR, "..", "mydefrag-syntax.ini");
 // ─────────────────────────────────────────────────────────────────────────────────
@@ -86,13 +93,21 @@ if (iniErrors.length) { Logger.logArrayToConsole(logger, channelName, ini.severi
 function col(n) { return ("|" + String(n).padStart(COL_W - 2) + " "); } // formats string in a strand column
 // Empty column cell
 // const BLANK = " ".repeat(COL_W);
-const BLANK = col(" ");
 // Fully formatted source code line with columns. Format: 
 // TotalLines CurrentLine ..........SourceCodeText.................
-function contentLine(outLine, srcLine, text, indent = "") { return `${col(outLine)}${col(srcLine)}${indent}${text}\n`; } // formats a CODE content line
+function contentLine(outLine, srcLine, text, indent = "") {
+  const content = `${indent}${text}\n`;
+  return previewMode.lineNumbers
+    ? `${col(outLine)}${col(srcLine)}${content}`
+    : content;
+} // formats a CODE content line
 // Annotation text without line numbers in first two columns
 // function annotLine(indent, text) { return `${BLANK}${BLANK} ${indent}${text}\n`; } // formats an ANNOTATION
-function annotLine(indent, text) { return contentLine("", ">>>", text, indent); } // formats an ANNOTATION
+function annotLine(indent, text) {
+  return previewMode.lineNumbers
+    ? contentLine("", ">>>", text, indent)
+    : `>>> ${indent}${text}\n`;
+} // formats an ANNOTATION
 //#endregion
 // ─────────────────────────────────────────────────────────────────────────────────
 // Logical merged-line State helpers
@@ -128,7 +143,7 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
     iniErrors
   } = config);
   // const absPath = filePath;
-  const indent = " ".repeat(depth);
+  const indent = previewMode.executable ? "" : " ".repeat(depth);
 
   logger.dbg(0, `----`);
   logger.dbg(0, `  --- processFile called: depth=${depth} state.line=${state.line} state.open=${state.open} ---`);
@@ -139,9 +154,10 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
   if (stack.includes(filePath)) {
     const cycle = [...stack, filePath].map(p => path.basename(p)).join(" → ");
     const message = `ERROR: Circular include: ${cycle}`;
+    previewProblems.push(message);
     logger.info(null, null, null, null, null, message);
     logger.dbg(1, `  CIRCULAR INCLUDE DETECTED!!!`);
-    return { lines: [annotLine(indent, `*** ${message} ***`)], outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // CIRCULAR FILE REFERENCE
+    return { lines: previewMode.annotations ? [annotLine(indent, `*** ${message} ***`)] : [], outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // CIRCULAR FILE REFERENCE
   }
 
   const parentFile = parentFilePath ?? (stack.length > 0 ? stack[stack.length - 1] : filePath);
@@ -167,7 +183,8 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
     logger.dbg(0, `         At: ${parentUri}:${parentSrcLineNo}:${parentSrcColNo}`);
     logger.dbg(0, `         Continuing...`);
     logger.dbg(0, `    ERROR: FILE NOT FOUND!!!, returning error annotation`);
-    return { lines: [annotLine(indent, `*** WARNING: Missing include ("${missingUri}") ***`)], filePath, outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // FILE NOT FOUND
+    previewProblems.push(`Missing include: ${filePath}`);
+    return { lines: previewMode.annotations ? [annotLine(indent, `*** WARNING: Missing include ("${missingUri}") ***`)] : [], filePath, outStart: state.line + 1, outEnd: state.line, srcTotal: 0, hasFinalNewline: false, contributesPhysicalLine: false }; // FILE NOT FOUND
   }
   logger.dbg(7, `    File exists OK`);
   linkVisited.push(filePath);
@@ -213,6 +230,9 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
   // ── Walk source lines ─────────────────────────────────────────────────────
   // ────────────────────────────────────────────────────────────────────────
   let outLines = [];
+  if (previewMode.fileHeaders) {
+    outLines.push(annotLine(indent, `FILE [depth:${depth}] ${pathToFileURL(filePath).href}`));
+  }
   const outStart = state.line + 1;
   logger.dbg(8, `         outStart=${outStart}`);
   let srcIdx = 0;
@@ -233,12 +253,12 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
     if (match) {
       logger.dbg(8, `  rawLine="${rawLine.substring(0, 80)}"`);
       const srcColNo = match.index + 1;
-      // Ensure a logical merged line exists
-      ensureLineOpen(state);
-      logger.dbg(5, `         -> INCLUDE directive found "${match[1]}" on logical line ${state.line}`);
-
-      // Emit directive line itself
-      outLines.push(contentLine(state.line, srcLineNo, rawLine, indent));
+      if (previewMode.annotations) {
+        // Annotated views retain the directive for source review.
+        ensureLineOpen(state);
+        logger.dbg(5, `         -> INCLUDE directive found "${match[1]}" on logical line ${state.line}`);
+        outLines.push(contentLine(state.line, srcLineNo, rawLine, indent));
+      }
 
       // The include directive itself is a full physical line.
       // Child content therefore starts on NEXT logical merged line.
@@ -279,9 +299,12 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
         `  out:${child.outStart}-${child.outEnd}`
       );
 
-      logger.dbg(0, `         pushing beginAnnot + child.lines + endAnnot`);
-
-      outLines.push(beginAnnot, ...child.lines, endAnnot);
+      if (previewMode.annotations) {
+        logger.dbg(0, `         pushing beginAnnot + child.lines + endAnnot`);
+        outLines.push(beginAnnot, ...child.lines, endAnnot);
+      } else {
+        outLines.push(...child.lines);
+      }
 
       // IMPORTANT:
       // If child lacks final newline, the logical merged line remains open.
@@ -322,6 +345,46 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
 // ──────────────────────────────────────────────────────────────────────────
 // Main
 // ──────────────────────────────────────────────────────────────────────────
+function parseArguments(args) {
+  const result = {
+    entryFile: null,
+    outputFile: null,
+    writeToFile: false,
+    modeId: DEFAULT_PREVIEW_MODE,
+    config: {}
+  };
+  const positionals = [];
+
+  for (let index = 0; index < args.length; index++) {
+    const argument = args[index];
+    if (argument === '-w' || argument === '--write') {
+      result.writeToFile = true;
+      continue;
+    }
+    if (argument === '--mode') {
+      if (!args[index + 1]) throw new Error('--mode requires a preview mode.');
+      result.modeId = args[++index];
+      continue;
+    }
+    if (argument === '--config') {
+      if (!args[index + 1]) throw new Error('--config requires JSON.');
+      result.config = JSON.parse(args[++index]);
+      continue;
+    }
+    if (argument.startsWith('-')) {
+      throw new Error(`Unknown option: ${argument}`);
+    }
+    positionals.push(argument);
+  }
+
+  if (positionals.length > 2) {
+    throw new Error('Expected an entry file and optional output file.');
+  }
+  result.entryFile = positionals[0] || null;
+  result.outputFile = positionals[1] || null;
+  return result;
+}
+
 function main() {
   // ──────────────────────────────────────────────────────────────────────────
   // ---- Initialization ----
@@ -349,12 +412,13 @@ function main() {
       "",
       "  MyDefrag Script Preprocessor",
       "  ──────────────────────────────────────────────────────────────",
-      "  Usage:  node mydefrag-preprocess.js <entryFile> [outputFile] [-w]",
+      "  Usage:  node mydefrag-preprocess.js <entryFile> [outputFile] [--mode <mode>] [-w]",
       "",
       "  <entryFile>   Path to the root .MyDc script.",
       "  [outputFile]  Optional output path.",
       "                Defaults to <entryFileName>.merged.MyDc .",
       "  [-w]          Write the preview file to disk rather than memory.",
+      `  [--mode]      ${PREVIEW_MODES.map(mode => mode.id).join(', ')}`,
       "",
       "  Output columns per content line:",
       `  <CompiledScriptLine> <ActualFileScriptLine> <Content>`,
@@ -371,10 +435,16 @@ function main() {
 
   // ──────────────────────────────────────────────────────────────────────────
   // ---- File to prepare preview ----
-  const writeToFile = args.includes("-w");
-  // remove flags
-  const cleanArgs = args.filter(a => a !== "-w");
-  const entryFile = path.resolve(cleanArgs[0]);
+  let parsedArguments;
+  try {
+    parsedArguments = parseArguments(args);
+    previewMode = getPreviewMode(parsedArguments.modeId);
+  } catch (errResult) {
+    logger.err(errResult, `Invalid preview arguments: ${errResult.message}`);
+    process.exit(1);
+  }
+  const writeToFile = parsedArguments.writeToFile;
+  const entryFile = path.resolve(parsedArguments.entryFile);
 
   if (!fs.existsSync(entryFile)) {
     logger.err(null, `Entry file not found: ${entryFile}`);
@@ -384,16 +454,19 @@ function main() {
 
   // ──────────────────────────────────────────────────────────────────────────
   // Output File
-  const outputFile = cleanArgs[1]
-    ? path.resolve(cleanArgs[1])
-    : entryFile.replace(/(\.[^.]+)?$/, ".merged$1");
+  const outputFile = parsedArguments.outputFile
+    ? path.resolve(parsedArguments.outputFile)
+    : buildPreviewDocumentPath(entryFile, previewMode.id);
+  const expectedOutputExtension = getPreviewExtension(entryFile, previewMode.id);
+  if (path.extname(outputFile).toLowerCase() !== expectedOutputExtension) {
+    logger.err(null, `Preview mode '${previewMode.id}' requires the '${expectedOutputExtension}' output extension.`);
+    process.exit(1);
+  }
 
   // ──────────────────────────────────────────────────────────────────────────
   // Json Configuration Data (from extension.js)
-  const raw = process.argv.indexOf('--config');
-  const config = raw !== -1
-    ? JSON.parse(process.argv[raw + 1])
-    : {};
+  const extensionConfig = parsedArguments.config;
+  logger.dbg(8, `extensionConfig = ${JSON.stringify(extensionConfig)}`);
 
   // ──────────────────────────────────────────────────────────────────────────
   // Finished processing arguments
@@ -422,6 +495,13 @@ function main() {
   logger.dbg(0, `calling processFile on entry...`);
   const root = processFile(entryFile, [], linkVisited, linkVisitedMissing, 0, state, entryFile, 0, 1);
 
+  if (previewMode.executable && previewProblems.length > 0) {
+    for (const problem of previewProblems) {
+      logger.err(null, problem);
+    }
+    process.exit(1);
+  }
+
   logger.dbg(8, `processFile for source file returned:`);
   logger.dbg(8, `   root.outStart=${root.outStart}`);
   logger.dbg(8, `   root.outEnd=${root.outEnd}`);
@@ -436,20 +516,26 @@ function main() {
   const header = [
     `|${"═".repeat(72)}`,
     `|MyDefrag Preprocessor — Merged Output`,
+    `|Mode         : ${previewMode.label}`,
     `|Generated    : ${new Date().toISOString()}`,
     `|Entry        : ${entryUri}`,
     `|Output file  : ${outputFile}`,
     `|Output lines : ${state.line}  (logical merged lines)`,
-    `|${"<outLine>".padStart(COL_W)}${"<srcLine>".padStart(COL_W)} <content>`,
+    ...(previewMode.lineNumbers
+      ? [`|${"<outLine>".padStart(COL_W)}${"<srcLine>".padStart(COL_W)} <content>`]
+      : []),
     `|${"═".repeat(72)}`,
   ].join("\n");
   const headerOutput = [
     `|${"═".repeat(72)}`,
     `|MyDefrag Preprocessor — Merged Output`,
+    `|Mode       : ${previewMode.label}`,
     `|Generated  : ${new Date().toISOString()}`,
     `|Entry      : ${entryFile}`,
     `|Output lines: ${state.line}  (logical merged lines)`,
-    `|${"<outLine>".padStart(COL_W)}${"<srcLine>".padStart(COL_W)} <content>`,
+    ...(previewMode.lineNumbers
+      ? [`|${"<outLine>".padStart(COL_W)}${"<srcLine>".padStart(COL_W)} <content>`]
+      : []),
     `|${"═".repeat(72)}`,
   ].join("\n");
   // ──────────────────────────────────────────────────────────────────────────
@@ -481,11 +567,16 @@ function main() {
   const missingMapOutput = [];
   if (linkVisitedMissing.size > 0) {
     logger.dbg(8, `building missing file map (${linkVisitedMissing.size} files)`);
-    const SCRIPT_HEADER_LINES = 10; // Seen at top of output
     const MISSING_BLOCK_LINES = 3; // Number of line per detail output
-    const MISSING_HEADER_LINES = 5; // Number of lines in this header here.
-
-    const startLineOfCode = SCRIPT_HEADER_LINES + (linkVisitedMissing.size * MISSING_BLOCK_LINES) + MISSING_HEADER_LINES + linkVisitedMapLines.length;
+    const MISSING_HEADER_LINES = 5;
+    const headerLineCount = header.split(/\r?\n/).length;
+    const rootFileHeaderLines = previewMode.fileHeaders ? 1 : 0;
+    const startLineOfCode = headerLineCount +
+      (linkVisitedMissing.size * MISSING_BLOCK_LINES) +
+      MISSING_HEADER_LINES +
+      linkVisitedMapLines.length +
+      rootFileHeaderLines +
+      1;
 
     const message = [
       ``,
@@ -558,7 +649,9 @@ function main() {
 
   const body = root.lines.join("");
 
-  const fullOutput = header + footer + body;
+  const fullOutput = previewMode.executable
+    ? body
+    : `${header}\n${footer}${body}`;
 
   // ──────────────────────────────────────────────────────────────────────────
   // ── Write ─────────────────────────────────────────────────────────────────

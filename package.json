@@ -222,6 +222,31 @@
                 "title": "Open Preview"
             },
             {
+                "command": "mydfrg.openPreview.raw",
+                "title": "MyDefrag: Preview Raw (Executable)",
+                "shortTitle": "Raw (Executable)"
+            },
+            {
+                "command": "mydfrg.openPreview.annotations",
+                "title": "MyDefrag: Preview with Annotations",
+                "shortTitle": "Annotations"
+            },
+            {
+                "command": "mydfrg.openPreview.annotationsFileHeaders",
+                "title": "MyDefrag: Preview with Annotations and File Headers",
+                "shortTitle": "Annotations + File Headers"
+            },
+            {
+                "command": "mydfrg.openPreview.annotationsLineNumbers",
+                "title": "MyDefrag: Preview with Annotations and Line Numbers",
+                "shortTitle": "Annotations + Line Numbers"
+            },
+            {
+                "command": "mydfrg.openPreview.annotationsLineNumbersFileHeaders",
+                "title": "MyDefrag: Preview with Annotations, Line Numbers, and File Headers",
+                "shortTitle": "Annotations + Line Numbers + File Headers"
+            },
+            {
                 "command": "mydfrg.hover.disable",
                 "title": "MyDefrag: Turn Off Hover",
                 "icon": "$(eye)"
@@ -344,6 +369,12 @@
                 "title": "MyDefrag: Configure Folders"
             }
         ],
+        "submenus": [
+            {
+                "id": "mydfrg.preview",
+                "label": "Preview"
+            }
+        ],
         "menus": {
             "editor/title": [
                 {
@@ -374,16 +405,38 @@
             ],
             "editor/title/context": [
                 {
-                    "command": "mydfrg.openPreview",
+                    "submenu": "mydfrg.preview",
                     "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
                     "group": "navigation"
                 }
             ],
             "explorer/context": [
                 {
-                    "command": "mydfrg.openPreview",
+                    "submenu": "mydfrg.preview",
                     "when": "resourceExtname == .MyDc || resourceExtname == .MyD || resourceExtname == .mydc || resourceExtname == .myd || resourceExtname == .MYDC || resourceExtname == .MYD",
                     "group": "navigation"
+                }
+            ],
+            "mydfrg.preview": [
+                {
+                    "command": "mydfrg.openPreview.raw",
+                    "group": "1_preview@1"
+                },
+                {
+                    "command": "mydfrg.openPreview.annotations",
+                    "group": "1_preview@2"
+                },
+                {
+                    "command": "mydfrg.openPreview.annotationsFileHeaders",
+                    "group": "1_preview@3"
+                },
+                {
+                    "command": "mydfrg.openPreview.annotationsLineNumbers",
+                    "group": "1_preview@4"
+                },
+                {
+                    "command": "mydfrg.openPreview.annotationsLineNumbersFileHeaders",
+                    "group": "1_preview@5"
                 }
             ],
             "view/title": [
@@ -507,6 +560,11 @@
         "onLanguage:mydfrg",
         "onLanguage:bat",
         "onCommand:mydfrg.openPreview",
+        "onCommand:mydfrg.openPreview.raw",
+        "onCommand:mydfrg.openPreview.annotations",
+        "onCommand:mydfrg.openPreview.annotationsFileHeaders",
+        "onCommand:mydfrg.openPreview.annotationsLineNumbers",
+        "onCommand:mydfrg.openPreview.annotationsLineNumbersFileHeaders",
         "onCommand:mydfrg.hover.disable",
         "onCommand:mydfrg.hover.enable",
         "onCommand:mydfrg.wordPrediction.disable",
@@ -540,23 +598,22 @@
         "pack:vsix": "powershell -ExecutionPolicy Bypass -File ./scripts/pack-vsix.ps1",
         "publish:vsx": "powershell -ExecutionPolicy Bypass -File ./scripts/publish-vsx.ps1",
         "clean": "rimraf dist out .vscodeignore",
-        "inventory:comments": "node ./scripts/Inventory-CodeComments.cjs --write",
-        "inventory:documentation": "node ./scripts/Inventory-Documentation.cjs --write",
-        "inventory:logger": "node ./scripts/Inventory-LoggerStrings.cjs --write",
-        "inventory:master": "node ./scripts/Inventory-Master.cjs --write",
+        "inventory:comments": "node ./build/scripts/Inventory-CodeComments.cjs --write",
+        "inventory:documentation": "node ./build/scripts/Inventory-Documentation.cjs --write",
+        "inventory:logger": "node ./build/scripts/Inventory-LoggerStrings.cjs --write",
+        "inventory:master": "node ./build/scripts/Inventory-Master.cjs --write",
         "build": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1 -SkipInstall",
         "language:catalogs:apps": "node ./build/scripts/generate-electron-component-catalogs.js --write",
+        "language:candidate-drafts": "node ./build/scripts/generate-migration-candidate-drafts.js --write",
         "language:validate": "node ./build/scripts/build-language.js validate",
+        "language:audit-normalized-inputs": "node ./build/scripts/build-language.js audit-normalized-inputs",
         "language:build": "node ./build/scripts/build-language.js build",
         "language:report": "node ./build/scripts/build-language.js report",
         "language:translate-fallbacks": "node ./build/scripts/translate-language-fallbacks.js",
-        "language:app": "electron ./build/mdl-language-app/main/main.js --project-root .",
         "language:diagnostics:install": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1",
         "language:diagnostics:uninstall": "powershell -ExecutionPolicy Bypass -File ./scripts/Install-UdpPortExhaustionMonitor.ps1 -Uninstall",
-        "language:app:pack": "electron-builder --config build/mdl-language-app/electron-builder.yml --win dir",
-        "language:app:package": "electron-builder --config build/mdl-language-app/electron-builder.yml --win nsis",
-        "test:language-app": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageApp",
         "locale:app": "electron ./build/mdl-locale-app/main/main.js --project-root .",
+        "locale:app:debug": "electron --remote-debugging-port=9223 ./build/mdl-locale-app/main/main.js --project-root .",
         "locale:app:pack": "electron-builder --config build/mdl-locale-app/electron-builder.yml --win dir",
         "locale:app:package": "electron-builder --config build/mdl-locale-app/electron-builder.yml --win nsis",
         "test:locale-app": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LocaleApp",
@@ -567,7 +624,7 @@
         "test:ci": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Fast",
         "test:list": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -List",
         "prepare": "npm run build",
-        "enableNetwwork:local": "powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1",
+        "enableNetwork:local": "powershell -ExecutionPolicy Bypass -File ./scripts/enable-networkDrives.ps1",
         "listSymLinks:local": "powershell -ExecutionPolicy Bypass -File ./scripts/list-Win-SymLinks.ps1",
         "addVsCodiumToExplorer:local": "powershell -ExecutionPolicy Bypass -File ./scripts/add-VsCodium-ToExplorer.ps1"
     },

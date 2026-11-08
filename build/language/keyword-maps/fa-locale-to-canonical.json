@@ -1,55 +1,11 @@
 {
-  "Defragment": {
-    "canonical": "Defragment",
-    "id": "fileAction.defragment"
-  },
-  "DirectoryName": {
-    "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
-  },
-  "ExcludeFiles": {
-    "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
-  },
-  "ExcludeVolumes": {
-    "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
-  },
   "FastFill": {
     "canonical": "FastFill",
     "id": "fileAction.fastFill"
   },
-  "FileActions": {
-    "canonical": "FileActions",
-    "id": "structure.fileActions"
-  },
-  "FileEnd": {
-    "canonical": "FileEnd",
-    "id": "structure.fileEnd"
-  },
-  "FileName": {
-    "canonical": "FileName",
-    "id": "fileCondition.fileName"
-  },
-  "FileSelect": {
-    "canonical": "FileSelect",
-    "id": "structure.fileSelect"
-  },
-  "FragmentCount": {
-    "canonical": "FragmentCount",
-    "id": "volumeCondition.fragmentCount"
-  },
   "FullPath": {
     "canonical": "FullPath",
     "id": "fileCondition.fullPath"
-  },
-  "Label": {
-    "canonical": "Label",
-    "id": "volumeCondition.label"
-  },
-  "Name": {
-    "canonical": "Name",
-    "id": "volumeCondition.name"
   },
   "SetColor": {
     "canonical": "SetColor",
@@ -59,24 +15,68 @@
     "canonical": "SetVariable",
     "id": "setting.setVariable"
   },
-  "Size": {
-    "canonical": "Size",
-    "id": "volumeCondition.size"
-  },
   "SortByName": {
     "canonical": "SortByName",
     "id": "fileAction.sortByName"
   },
-  "VolumeActions": {
+  "آزمایشگاه el": {
+    "canonical": "Label",
+    "id": "volumeCondition.label"
+  },
+  "اقدامات حجم": {
     "canonical": "VolumeActions",
     "id": "structure.volumeActions"
   },
-  "VolumeEnd": {
+  "اقدامات فایل": {
+    "canonical": "FileActions",
+    "id": "structure.fileActions"
+  },
+  "انتخاب حجم": {
+    "canonical": "VolumeSelect",
+    "id": "structure.volumeSelect"
+  },
+  "انتخاب فایل": {
+    "canonical": "FileSelect",
+    "id": "structure.fileSelect"
+  },
+  "اندازه": {
+    "canonical": "Size",
+    "id": "volumeCondition.size"
+  },
+  "تعداد قطعات": {
+    "canonical": "FragmentCount",
+    "id": "volumeCondition.fragmentCount"
+  },
+  "حذف حجم‌ها": {
+    "canonical": "ExcludeVolumes",
+    "id": "script.excludeVolumes"
+  },
+  "حذف فایل‌ها": {
+    "canonical": "ExcludeFiles",
+    "id": "script.excludeFiles"
+  },
+  "نام": {
+    "canonical": "Name",
+    "id": "volumeCondition.name"
+  },
+  "نام دایرکتوری": {
+    "canonical": "DirectoryName",
+    "id": "fileCondition.directoryName"
+  },
+  "نام فایل": {
+    "canonical": "FileName",
+    "id": "fileCondition.fileName"
+  },
+  "پایان حجم": {
     "canonical": "VolumeEnd",
     "id": "structure.volumeEnd"
   },
-  "VolumeSelect": {
-    "canonical": "VolumeSelect",
-    "id": "structure.volumeSelect"
+  "پایان فایل": {
+    "canonical": "FileEnd",
+    "id": "structure.fileEnd"
+  },
+  "یکپارچه سازی": {
+    "canonical": "Defragment",
+    "id": "fileAction.defragment"
   }
 }

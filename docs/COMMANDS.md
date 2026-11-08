@@ -9,15 +9,21 @@ diagnostic-view menus. The extension does not define default keyboard shortcuts.
 
 | Command title | Command ID | Behavior |
 | --- | --- | --- |
-| Open Preview | `mydfrg.openPreview` | Opens a read-only expanded preview for the active MyDefrag document. |
+| Open Preview | `mydfrg.openPreview` | Opens an editable, unsaved expanded preview for the active MyDefrag document. |
+| MyDefrag: Preview Raw (Executable) | `mydfrg.openPreview.raw` | Opens merged executable source and enables language-server diagnostics. |
+| MyDefrag: Preview with Annotations | `mydfrg.openPreview.annotations` | Opens annotated output without line numbers or file headers. |
+| MyDefrag: Preview with Annotations and File Headers | `mydfrg.openPreview.annotationsFileHeaders` | Adds a source-file header before each expanded file. |
+| MyDefrag: Preview with Annotations and Line Numbers | `mydfrg.openPreview.annotationsLineNumbers` | Opens annotated output with merged and source line columns. |
+| MyDefrag: Preview with Annotations, Line Numbers, and File Headers | `mydfrg.openPreview.annotationsLineNumbersFileHeaders` | Enables annotations, both line columns, and source-file headers. |
 | Open File at Position | `mdm.openFileAtPosition` | Opens a file, line, and column supplied by a generated link. It is normally invoked from a document link. |
 | MyDefrag: Open Settings | `mydfrg.openSettings` | Opens editor settings filtered to this extension. |
 | MyDefrag: Configure Folders | `mydfrg.configureFolders` | Selects the user or log directory and saves the absolute path in workspace settings. |
 
 <!-- markdownlint-enable MD013 -->
 
-**Open Preview** is also available from the editor title and editor context
-menus for supported MyDefrag filename extensions.
+**Open Preview** remains available from the editor title. Editor and Explorer
+right-click menus show one **Preview** entry whose submenu contains the five
+preview variations.
 
 ## Diagnostic Commands
 

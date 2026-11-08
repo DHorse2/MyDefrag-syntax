@@ -3,7 +3,7 @@
   "component": "extension",
   "entries": {
     "extension.command.configureFolders.title": {
-      "text": "I-Defragmenter yami: Lungisa amafolda",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Lungisa amafolda",
       "status": "machine-generated"
     },
     "extension.command.openPreview.title": {
@@ -11,31 +11,43 @@
       "status": "machine-generated"
     },
     "extension.command.openSettings.title": {
-      "text": "I-Defragmenter yami: Vula Izilungiselelo",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami: Vula Izilungiselelo",
       "status": "machine-generated"
     },
     "extension.message.noActiveDocument.warning": {
-      "text": "Cha, idokhumenti yami ye-Defragmenter ayisebenzi.",
+      "text": "Cha, idokhumenti yami ye-Ukuphathwa Kwesitoreji Sami ayisebenzi.",
       "status": "machine-generated"
     },
     "extension.product.displayName": {
-      "text": "Isikripthi sami se-Defragmenter (.MyDc / .MyD)",
+      "text": "Isikripthi sami se-Ukuphathwa Kwesitoreji Sami (.MyDc / .MyD)",
       "status": "machine-generated"
     },
     "extension.status.parser.fragment.text": {
-      "text": "Ingcezu yami ye-Defragmenter (.mydc)",
+      "text": "Ingcezu yami ye-Ukuphathwa Kwesitoreji Sami (.mydc)",
       "status": "machine-generated"
     },
     "extension.status.parser.script.text": {
-      "text": "Isikripthi sami se-Defragmenter (.myd)",
+      "text": "Isikripthi sami se-Ukuphathwa Kwesitoreji Sami (.myd)",
       "status": "machine-generated"
     },
     "extension.status.parser.unknown.text": {
-      "text": "I-Defragmenter yami engaziwa uhlobo lwedokhumenti",
+      "text": "I-Ukuphathwa Kwesitoreji Sami yami engaziwa uhlobo lwedokhumenti",
       "status": "machine-generated"
     },
     "extension.window.channelName": {
       "text": "Isitayela sami sokuhlukanisa",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "Isicelo esilandelayo: ${dir}, kanye ne-${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "Indawo yokusesha: Ayikwazi ukufunda i-${uri.toString()}: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "extension.js:vumela:izinketho:lungiselela Iphutha elibuyiselwe ekuqalisweni: ${errResult.message}",
       "status": "machine-generated"
     }
   }

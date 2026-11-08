@@ -95,7 +95,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.mydefragLocaleMaintenance.text": {
-      "text": "Ulondolozo lweNdawo yam yokuCoca iDefragmenter",
+      "text": "Ulondolozo lweNdawo yam yokuCoca iUlawulo lwam lokugcina izinto",
       "status": "machine-generated"
     },
     "locales.dialog.noFilesWillChange.text": {
@@ -123,7 +123,7 @@
       "status": "machine-generated"
     },
     "locales.dialog.selectTheMydefragSyntaxRepository.title": {
-      "text": "Khetha isipaji se-syntax se-My Defragmenter",
+      "text": "Khetha isipaji se-imithetho yegrama se-Ulawulo lwam lokugcina izinto",
       "status": "machine-generated"
     },
     "locales.dialog.unsavedLocaleChanges.title": {
@@ -167,7 +167,7 @@
       "status": "machine-generated"
     },
     "locales.message.aValidMydefragLocaleRepositoryWasNotSelected.text": {
-      "text": "Akukhethwanga igcini yendawo ye-My Defragmenter esebenzayo.",
+      "text": "Akukhethwanga igcini yendawo ye-Ulawulo lwam lokugcina izinto esebenzayo.",
       "status": "machine-generated"
     },
     "locales.message.canonicalEnglishIsNotAnApiTranslationTarget.text": {
@@ -179,7 +179,7 @@
       "status": "machine-generated"
     },
     "locales.message.chooseTheRepositoryThatOwnsLanguageLocalesAnd.text": {
-      "text": "Khetha i-repository enezilungiselelo zolwimi lwe/, uze wakhe ulwimi lwe-/.",
+      "text": "Khetha indawo yokugcina engabanini language/locales kunye build/language.",
       "status": "machine-generated"
     },
     "locales.message.componentRebuildFailed.text": {
@@ -187,7 +187,7 @@
       "status": "machine-generated"
     },
     "locales.message.discardOrSaveChangesBeforeChangingLocaleOr.text": {
-      "text": "Khupha okanye ugcine utshintsho phambi kokutshintsha i-locale okanye i-component.",
+      "text": "Khupha okanye ugcine utshintsho phambi kokutshintsha i-ummandla wolwimi okanye i-component.",
       "status": "machine-generated"
     },
     "locales.message.englishCanonicalTextIsReadOnlyHere.text": {
@@ -195,7 +195,7 @@
       "status": "machine-generated"
     },
     "locales.message.englishTextIsCanonicalAndMustBeMaintained.text": {
-      "text": "Umbhalo wesiNgesi ngowemthetho kwaye kufuneka ugcinwe kwi-My Defragmenter Language Maintenance.",
+      "text": "Umbhalo wesiNgesi ngowemthetho kwaye kufuneka ugcinwe kwi-Ulawulo lwam lokugcina izinto Ukugcinwa kolwimi.",
       "status": "machine-generated"
     },
     "locales.message.enterOrPopulateCurrentLocaleValueBeforeGenerating.text": {
@@ -227,7 +227,7 @@
       "status": "machine-generated"
     },
     "locales.message.notAMydefragLocaleRepositoryMissingValue.text": {
-      "text": "Asiyoyiphakheji ye-My Defragmenter ye-locale. Iphosakele: {missing}",
+      "text": "Asiyoyiphakheji ye-Ulawulo lwam lokugcina izinto ye-ummandla wolwimi. Iphosakele: {missing}",
       "status": "machine-generated"
     },
     "locales.message.pathEscapesTheRepositoryRootValue.text": {
@@ -239,7 +239,7 @@
       "status": "machine-generated"
     },
     "locales.message.reloadingWillDiscardChangesToTheSelectedLocale.text": {
-      "text": "Ukulayisha kwakhona kuya kulahla utshintsho kwicandelo le-locale elikhethiweyo.",
+      "text": "Ukulayisha kwakhona kuya kulahla utshintsho kwicandelo le-ummandla wolwimi elikhethiweyo.",
       "status": "machine-generated"
     },
     "locales.message.saveOrRevertChangesBeforeRebuilding.text": {
@@ -259,7 +259,7 @@
       "status": "machine-generated"
     },
     "locales.message.theMainProcessTranslatedADifferentCurrentLocale.text": {
-      "text": "Inkqubo ephambili iguqulele ixabiso le-locale yangoku elahlukileyo. Qalisa ngokutsha uLondolozo lwe-Locale uze uphinde uzame.",
+      "text": "Inkqubo ephambili iguqulele ixabiso le-ummandla wolwimi yangoku elahlukileyo. Qalisa ngokutsha uLondolozo lwe-ummandla wolwimi uze uphinde uzame.",
       "status": "machine-generated"
     },
     "locales.message.translationRejected.text": {
@@ -339,7 +339,7 @@
       "status": "machine-generated"
     },
     "locales.progress.useStopBuildInTheProgressWindowThen.status": {
-      "text": "Sebenzisa i-'Stop build' kwi-window yenkqubela, uze ulinde ukuba i-rollback igqitywe phambi kokuba uvale i-application.",
+      "text": "Sebenzisa i-'nqumama inkqubo yokudala' kwi-ifestile yesikrini yenkqubela, uze ulinde ukuba i-ukubuyisela igqitywe phambi kokuba uvale i-application.",
       "status": "machine-generated"
     },
     "locales.progress.waitingForSaveConfirmation.status": {
@@ -347,7 +347,7 @@
       "status": "machine-generated"
     },
     "locales.progress.writingAuthoritativeLocaleFiles.status": {
-      "text": "Ukubhala iifayile ze-locale ezithembekileyo",
+      "text": "Ukubhala iifayile ze-ummandla wolwimi ezithembekileyo",
       "status": "machine-generated"
     },
     "locales.ui.canonicalEnglish.text": {
@@ -512,6 +512,14 @@
     },
     "locales.ui.valueValidationErrorS.text": {
       "text": "{stateValidationErrorsCount} Impazamo/iimpazamo zokuqinisekisa",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text": {
+      "text": "ibheji {stateDirty}",
+      "status": "machine-generated"
+    },
+    "locales.ui.badgeValue.text2": {
+      "text": "ibheji {stateValidationOk}",
       "status": "machine-generated"
     }
   }

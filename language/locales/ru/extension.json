@@ -15,7 +15,7 @@
       "status": "machine-generated"
     },
     "extension.message.noActiveDocument.warning": {
-      "text": "В данный момент не запущен ни один документ «My Defragmenter».",
+      "text": "В данный момент не запущен ни один документ «Управление хранилищем».",
       "status": "machine-generated"
     },
     "extension.product.displayName": {
@@ -36,6 +36,18 @@
     },
     "extension.window.channelName": {
       "text": "Синтаксис команды «Дефрагментатор»",
+      "status": "machine-generated"
+    },
+    "extension.log.findFileWalkingUp.logger.info.nextCandidateDirAndFilepath.info": {
+      "text": "Следующий кандидат: ${dir} и ${filePath}",
+      "status": "machine-generated"
+    },
+    "extension.log.searchWorkspace.uri.toString.searchworkspaceUnableToReadUriTostring.warning": {
+      "text": "searchWorkspace: Не удалось прочитать ${uri.toString()}: ${errResult.message}",
+      "status": "machine-generated"
+    },
+    "extension.path.activate.errResult.message.extensionJsActivateSettingsInitializeError.structural": {
+      "text": "extension.js:включить:варианты:подготовиться Ошибка, возвращенная при инициализации: ${errResult.message}",
       "status": "machine-generated"
     }
   }

@@ -36,10 +36,16 @@ Allowed review states are:
 
 3. Use MyDefrag Locale Maintenance to create permanent component files at
    `language/locales/<locale>/<component>.json`.
-4. Keep keyword overrides in `catalogOverrides.json`, or in
-   `catalogOverrides.sample.json` for representative samples, until a permanent
-   keyword-file workflow is defined.
-5. Add only translated keys or keywords that have actually been reviewed or
+4. Create or update the complete authored keyword file:
+
+   ```text
+   language/locales/<locale>/keywords.json
+   ```
+
+   Keep all 243 canonical semantic IDs. Use the canonical English text with
+   `fallbackLocale: "en"` and `status: "draft"` until a spelling is translated.
+   The 29 internal entries remain hidden and non-translatable.
+5. Add only translated keys or keyword spellings that have actually been reviewed or
    clearly marked. Accepted API translations are stored with
    `machine-generated` status and remain reviewable source assets.
 6. Run validation:
@@ -60,6 +66,9 @@ Allowed review states are:
    non-fallback generated translations under `language/locales/`. MyDefrag
    Locale Maintenance uses the non-destructive targeted component action after
    each accepted component save; neither action deletes generated directories.
+
+Do not put keyword spellings back into `catalogOverrides.json`; that aggregate
+is no longer a keyword authority.
 
 ## Catalog Entries
 

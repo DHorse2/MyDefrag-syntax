@@ -1,52 +1,76 @@
 {
+  "schemaVersion": 2,
+  "locale": "en",
   "keywords": [
     {
-      "id": "structure.volumeSelect",
-      "canonical": "VolumeSelect",
-      "category": "structure.volume",
-      "parent": "volume_block",
-      "description": "Begins volume selection conditions.",
-      "status": "approved"
+      "id": "keyword.any",
+      "canonical": "Any",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
     },
     {
-      "id": "structure.volumeActions",
-      "canonical": "VolumeActions",
-      "category": "structure.volume",
-      "parent": "volume_block",
-      "description": "Begins volume actions.",
-      "status": "approved"
+      "id": "keyword.maxruntime",
+      "canonical": "MaxRunTime",
+      "category": "syntax.keyword",
+      "parent": "any",
+      "description": "Canonical MyDefrag spelling for MaxRunTime.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
-      "id": "structure.volumeEnd",
-      "canonical": "VolumeEnd",
-      "category": "structure.volume",
-      "parent": "volume_block",
-      "description": "Ends a volume block.",
-      "status": "approved"
+      "id": "keyword.runscript",
+      "canonical": "RunScript",
+      "category": "syntax.keyword",
+      "parent": "any",
+      "description": "Canonical MyDefrag spelling for RunScript.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
-      "id": "structure.fileSelect",
-      "canonical": "FileSelect",
-      "category": "structure.file",
-      "parent": "file_block",
-      "description": "Begins file selection conditions.",
-      "status": "approved"
+      "id": "keyword.runprogram",
+      "canonical": "RunProgram",
+      "category": "syntax.keyword",
+      "parent": "any",
+      "description": "Canonical MyDefrag spelling for RunProgram.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
-      "id": "structure.fileActions",
-      "canonical": "FileActions",
-      "category": "structure.file",
-      "parent": "file_block",
-      "description": "Begins file actions.",
-      "status": "approved"
+      "id": "keyword.include",
+      "canonical": "Include",
+      "category": "syntax.keyword",
+      "parent": "any",
+      "description": "Canonical MyDefrag spelling for Include.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
-      "id": "structure.fileEnd",
-      "canonical": "FileEnd",
-      "category": "structure.file",
-      "parent": "file_block",
-      "description": "Ends a file block.",
-      "status": "approved"
+      "id": "keyword.script",
+      "canonical": "Script",
+      "category": "grammar.internal",
+      "parent": "script",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.description",
+      "canonical": "Description",
+      "category": "syntax.keyword",
+      "parent": "script",
+      "description": "Canonical MyDefrag spelling for Description.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "script.excludeVolumes",
@@ -54,7 +78,9 @@
       "category": "script.setting",
       "parent": "script",
       "description": "Defines volumes excluded from processing.",
-      "status": "reviewed"
+      "status": "reviewed",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "script.excludeFiles",
@@ -62,7 +88,423 @@
       "category": "script.setting",
       "parent": "script",
       "description": "Defines files excluded from processing.",
-      "status": "reviewed"
+      "status": "reviewed",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.volume-block",
+      "canonical": "Volume_block",
+      "category": "grammar.internal",
+      "parent": "script",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "structure.volumeSelect",
+      "canonical": "VolumeSelect",
+      "category": "structure.volume",
+      "parent": "volume_block",
+      "description": "Begins volume selection conditions.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "structure.volumeActions",
+      "canonical": "VolumeActions",
+      "category": "structure.volume",
+      "parent": "volume_block",
+      "description": "Begins volume actions.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "structure.volumeEnd",
+      "canonical": "VolumeEnd",
+      "category": "structure.volume",
+      "parent": "volume_block",
+      "description": "Ends a volume block.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.file-block",
+      "canonical": "File_block",
+      "category": "grammar.internal",
+      "parent": "volumeactions",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "structure.fileSelect",
+      "canonical": "FileSelect",
+      "category": "structure.file",
+      "parent": "file_block",
+      "description": "Begins file selection conditions.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "structure.fileActions",
+      "canonical": "FileActions",
+      "category": "structure.file",
+      "parent": "file_block",
+      "description": "Begins file actions.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "structure.fileEnd",
+      "canonical": "FileEnd",
+      "category": "structure.file",
+      "parent": "file_block",
+      "description": "Ends a file block.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.volume-condition",
+      "canonical": "Volume_condition",
+      "category": "grammar.internal",
+      "parent": "volumeselect",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.filesystem",
+      "canonical": "Filesystem",
+      "category": "grammar.internal",
+      "parent": "volumeactions",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.volume-action",
+      "canonical": "Volume_action",
+      "category": "grammar.internal",
+      "parent": "volumeactions",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.file-condition",
+      "canonical": "File_condition",
+      "category": "grammar.internal",
+      "parent": "fileselect",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.file-attribute",
+      "canonical": "File_attribute",
+      "category": "grammar.internal",
+      "parent": "fileselect",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.file-action",
+      "canonical": "File_action",
+      "category": "grammar.internal",
+      "parent": "file_actions",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.sort",
+      "canonical": "Sort",
+      "category": "grammar.internal",
+      "parent": "file_action",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.action-modifier",
+      "canonical": "Action_modifier",
+      "category": "grammar.internal",
+      "parent": "action_modifier",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.ui",
+      "canonical": "Ui",
+      "category": "grammar.internal",
+      "parent": "script",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.window-state",
+      "canonical": "Window_state",
+      "category": "grammar.internal",
+      "parent": "windowsize",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.finish-action",
+      "canonical": "Finish_action",
+      "category": "grammar.internal",
+      "parent": "whenfinished",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.priority",
+      "canonical": "Priority",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.runtime",
+      "canonical": "Runtime",
+      "category": "grammar.internal",
+      "parent": "script",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.setscreensaver",
+      "canonical": "SetScreenSaver",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for SetScreenSaver.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.settinginline",
+      "canonical": "SettingInline",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.conflict",
+      "canonical": "Conflict",
+      "category": "grammar.internal",
+      "parent": "batterypower",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.variable",
+      "canonical": "Variable",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.value",
+      "canonical": "Value",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.toggle",
+      "canonical": "Toggle",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.operator",
+      "canonical": "Operator",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.literal",
+      "canonical": "Literal",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.time",
+      "canonical": "Time",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.math",
+      "canonical": "Math",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.size-unit",
+      "canonical": "Size_unit",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.zone",
+      "canonical": "Zone",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.file-state",
+      "canonical": "File_state",
+      "category": "grammar.internal",
+      "parent": "any",
+      "description": "Internal parser grammar label; never emitted into MyDefrag source.",
+      "status": "approved",
+      "translatable": false,
+      "visible": false
+    },
+    {
+      "id": "keyword.mounted",
+      "canonical": "Mounted",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for Mounted.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.writable",
+      "canonical": "Writable",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for Writable.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.removable",
+      "canonical": "Removable",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for Removable.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.fixed",
+      "canonical": "Fixed",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "parents": [
+        "volume_condition",
+        "window_state"
+      ],
+      "description": "Canonical MyDefrag spelling for Fixed.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.remote",
+      "canonical": "Remote",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for Remote.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.cdrom",
+      "canonical": "Cdrom",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for Cdrom.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.ramdisk",
+      "canonical": "Ramdisk",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for Ramdisk.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "volumeCondition.name",
@@ -70,7 +512,9 @@
       "category": "volume.condition",
       "parent": "volume_condition",
       "description": "Matches a volume name or mount point.",
-      "status": "approved"
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "volumeCondition.label",
@@ -78,7 +522,9 @@
       "category": "volume.condition",
       "parent": "volume_condition",
       "description": "Matches a volume label.",
-      "status": "approved"
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "volumeCondition.size",
@@ -86,7 +532,9 @@
       "category": "volume.condition",
       "parent": "volume_condition",
       "description": "Matches volume size.",
-      "status": "approved"
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "volumeCondition.fragmentCount",
@@ -94,7 +542,149 @@
       "category": "volume.condition",
       "parent": "volume_condition",
       "description": "Matches volume fragment count.",
-      "status": "approved"
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.fragmentsize",
+      "canonical": "FragmentSize",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for FragmentSize.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.checkvolume",
+      "canonical": "CheckVolume",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for CheckVolume.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.commandlinevolumes",
+      "canonical": "CommandlineVolumes",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for CommandlineVolumes.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.numberbetween",
+      "canonical": "NumberBetween",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for NumberBetween.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.filesystemtype",
+      "canonical": "FileSystemType",
+      "category": "syntax.keyword",
+      "parent": "volume_condition",
+      "description": "Canonical MyDefrag spelling for FileSystemType.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.ntfs",
+      "canonical": "Ntfs",
+      "category": "syntax.keyword",
+      "parent": "filesystem",
+      "description": "Canonical MyDefrag spelling for Ntfs.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.fat",
+      "canonical": "Fat",
+      "category": "syntax.keyword",
+      "parent": "filesystem",
+      "description": "Canonical MyDefrag spelling for Fat.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.fat12",
+      "canonical": "Fat12",
+      "category": "syntax.keyword",
+      "parent": "filesystem",
+      "description": "Canonical MyDefrag spelling for Fat12.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.fat16",
+      "canonical": "Fat16",
+      "category": "syntax.keyword",
+      "parent": "filesystem",
+      "description": "Canonical MyDefrag spelling for Fat16.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.fat32",
+      "canonical": "Fat32",
+      "category": "syntax.keyword",
+      "parent": "filesystem",
+      "description": "Canonical MyDefrag spelling for Fat32.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.reclaimntfsreservedareas",
+      "canonical": "ReclaimNtfsReservedAreas",
+      "category": "syntax.keyword",
+      "parent": "volume_action",
+      "description": "Canonical MyDefrag spelling for ReclaimNtfsReservedAreas.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.makegap",
+      "canonical": "MakeGap",
+      "category": "syntax.keyword",
+      "parent": "volume_action",
+      "description": "Canonical MyDefrag spelling for MakeGap.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.dismountvolume",
+      "canonical": "DismountVolume",
+      "category": "syntax.keyword",
+      "parent": "volume_action",
+      "description": "Canonical MyDefrag spelling for DismountVolume.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.deletejournal",
+      "canonical": "DeleteJournal",
+      "category": "syntax.keyword",
+      "parent": "volume_action",
+      "description": "Canonical MyDefrag spelling for DeleteJournal.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "fileCondition.fileName",
@@ -102,7 +692,9 @@
       "category": "file.condition",
       "parent": "file_condition",
       "description": "Matches a file name.",
-      "status": "approved"
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "fileCondition.directoryName",
@@ -110,7 +702,19 @@
       "category": "file.condition",
       "parent": "file_condition",
       "description": "Matches a directory name.",
-      "status": "approved"
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.directorypath",
+      "canonical": "DirectoryPath",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for DirectoryPath.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "fileCondition.fullPath",
@@ -118,7 +722,349 @@
       "category": "file.condition",
       "parent": "file_condition",
       "description": "Matches a full path.",
-      "status": "approved"
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.fragmented",
+      "canonical": "Fragmented",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for Fragmented.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.averagefragmentsize",
+      "canonical": "AverageFragmentSize",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for AverageFragmentSize.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.largestfragmentsize",
+      "canonical": "LargestFragmentSize",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for LargestFragmentSize.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.smallestfragmentsize",
+      "canonical": "SmallestFragmentSize",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for SmallestFragmentSize.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.lastaccess",
+      "canonical": "LastAccess",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for LastAccess.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.lastaccessenabled",
+      "canonical": "LastAccessEnabled",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for LastAccessEnabled.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.lastchange",
+      "canonical": "LastChange",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for LastChange.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.creationdate",
+      "canonical": "CreationDate",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for CreationDate.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.importlistfrombootoptimize",
+      "canonical": "ImportListFromBootOptimize",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for ImportListFromBootOptimize.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.importlistfromfile",
+      "canonical": "ImportListFromFile",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for ImportListFromFile.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.importlistfromprogramhints",
+      "canonical": "ImportListFromProgramHints",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for ImportListFromProgramHints.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.largest",
+      "canonical": "Largest",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for Largest.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.smallest",
+      "canonical": "Smallest",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for Smallest.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.archive",
+      "canonical": "Archive",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Archive.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.compressed",
+      "canonical": "Compressed",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Compressed.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.directory",
+      "canonical": "Directory",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Directory.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.encrypted",
+      "canonical": "Encrypted",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Encrypted.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.hidden",
+      "canonical": "Hidden",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Hidden.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.nottobeindexed",
+      "canonical": "NotToBeIndexed",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for NotToBeIndexed.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.offline",
+      "canonical": "Offline",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Offline.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.readonly",
+      "canonical": "Readonly",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Readonly.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.sparse",
+      "canonical": "Sparse",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Sparse.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.system",
+      "canonical": "System",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for System.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.temporary",
+      "canonical": "Temporary",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Temporary.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.virtual",
+      "canonical": "Virtual",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Virtual.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.unmovable",
+      "canonical": "Unmovable",
+      "category": "syntax.keyword",
+      "parent": "file_attribute",
+      "description": "Canonical MyDefrag spelling for Unmovable.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.selectntfssystemfiles",
+      "canonical": "SelectNtfsSystemFiles",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for SelectNtfsSystemFiles.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.filelocation",
+      "canonical": "FileLocation",
+      "category": "syntax.keyword",
+      "parent": "file_condition",
+      "description": "Canonical MyDefrag spelling for FileLocation.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.beginoffile",
+      "canonical": "Beginoffile",
+      "category": "syntax.keyword",
+      "parent": "file_location",
+      "description": "Canonical MyDefrag spelling for Beginoffile.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.endoffile",
+      "canonical": "Endoffile",
+      "category": "syntax.keyword",
+      "parent": "file_location",
+      "description": "Canonical MyDefrag spelling for Endoffile.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.entirefile",
+      "canonical": "Entirefile",
+      "category": "syntax.keyword",
+      "parent": "file_location",
+      "description": "Canonical MyDefrag spelling for Entirefile.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.anypart",
+      "canonical": "Anypart",
+      "category": "syntax.keyword",
+      "parent": "file_location",
+      "description": "Canonical MyDefrag spelling for Anypart.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.anycompletefragment",
+      "canonical": "Anycompletefragment",
+      "category": "syntax.keyword",
+      "parent": "file_location",
+      "description": "Canonical MyDefrag spelling for Anycompletefragment.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.addgap",
+      "canonical": "AddGap",
+      "category": "syntax.keyword",
+      "parent": "file_action",
+      "description": "Canonical MyDefrag spelling for AddGap.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "fileAction.defragment",
@@ -126,7 +1072,9 @@
       "category": "file.action",
       "parent": "file_action",
       "description": "Defragments matching files.",
-      "status": "approved"
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "fileAction.fastFill",
@@ -134,7 +1082,49 @@
       "category": "file.action",
       "parent": "file_action",
       "description": "Moves files with fast fill behavior.",
-      "status": "approved"
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.forcedfill",
+      "canonical": "ForcedFill",
+      "category": "syntax.keyword",
+      "parent": "file_action",
+      "description": "Canonical MyDefrag spelling for ForcedFill.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.movedownfill",
+      "canonical": "MoveDownFill",
+      "category": "syntax.keyword",
+      "parent": "file_action",
+      "description": "Canonical MyDefrag spelling for MoveDownFill.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.movetoendofdisk",
+      "canonical": "MoveToEndOfDisk",
+      "category": "syntax.keyword",
+      "parent": "file_action",
+      "description": "Canonical MyDefrag spelling for MoveToEndOfDisk.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.moveuptozone",
+      "canonical": "MoveUpToZone",
+      "category": "syntax.keyword",
+      "parent": "file_action",
+      "description": "Canonical MyDefrag spelling for MoveUpToZone.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "fileAction.sortByName",
@@ -142,15 +1132,483 @@
       "category": "file.action.sort",
       "parent": "file_action",
       "description": "Sorts files by name.",
-      "status": "reviewed"
+      "status": "reviewed",
+      "translatable": true,
+      "visible": true
     },
     {
-      "id": "setting.setVariable",
-      "canonical": "SetVariable",
-      "category": "setting",
+      "id": "keyword.sortbysize",
+      "canonical": "SortBySize",
+      "category": "syntax.keyword",
+      "parent": "sort",
+      "description": "Canonical MyDefrag spelling for SortBySize.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.sortbylastaccess",
+      "canonical": "SortByLastAccess",
+      "category": "syntax.keyword",
+      "parent": "sort",
+      "description": "Canonical MyDefrag spelling for SortByLastAccess.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.sortbylastchange",
+      "canonical": "SortByLastChange",
+      "category": "syntax.keyword",
+      "parent": "sort",
+      "description": "Canonical MyDefrag spelling for SortByLastChange.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.sortbycreationdate",
+      "canonical": "SortByCreationDate",
+      "category": "syntax.keyword",
+      "parent": "sort",
+      "description": "Canonical MyDefrag spelling for SortByCreationDate.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.sortbynewestdate",
+      "canonical": "SortByNewestDate",
+      "category": "syntax.keyword",
+      "parent": "sort",
+      "description": "Canonical MyDefrag spelling for SortByNewestDate.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.sortbyimportsequence",
+      "canonical": "SortByImportSequence",
+      "category": "syntax.keyword",
+      "parent": "sort",
+      "description": "Canonical MyDefrag spelling for SortByImportSequence.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.placentfssystemfiles",
+      "canonical": "PlaceNtfsSystemFiles",
+      "category": "syntax.keyword",
+      "parent": "file_action",
+      "description": "Canonical MyDefrag spelling for PlaceNtfsSystemFiles.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.chunksize",
+      "canonical": "ChunkSize",
+      "category": "syntax.keyword",
+      "parent": "defragment",
+      "description": "Canonical MyDefrag spelling for ChunkSize.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.fast",
+      "canonical": "Fast",
+      "category": "syntax.keyword",
+      "parent": "defragment",
+      "description": "Canonical MyDefrag spelling for Fast.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.withshuffling",
+      "canonical": "WithShuffling",
+      "category": "syntax.keyword",
+      "parent": "fastfill",
+      "description": "Canonical MyDefrag spelling for WithShuffling.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.donotvacate",
+      "canonical": "Donotvacate",
+      "category": "syntax.keyword",
+      "parent": "addgap",
+      "description": "Canonical MyDefrag spelling for Donotvacate.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.ascending",
+      "canonical": "Ascending",
+      "category": "syntax.keyword",
+      "parent": "sort",
+      "description": "Canonical MyDefrag spelling for Ascending.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.descending",
+      "canonical": "Descending",
+      "category": "syntax.keyword",
+      "parent": "sort",
+      "description": "Canonical MyDefrag spelling for Descending.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.skipblock",
+      "canonical": "Skipblock",
+      "category": "syntax.keyword",
+      "parent": "sort",
+      "description": "Canonical MyDefrag spelling for Skipblock.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.language",
+      "canonical": "Language",
+      "category": "syntax.keyword",
+      "parent": "ui",
+      "description": "Canonical MyDefrag spelling for Language.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.title",
+      "canonical": "Title",
+      "category": "syntax.keyword",
+      "parent": "ui",
+      "description": "Canonical MyDefrag spelling for Title.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.windowsize",
+      "canonical": "WindowSize",
+      "category": "syntax.keyword",
+      "parent": "ui",
+      "description": "Canonical MyDefrag spelling for WindowSize.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.diskmapflip",
+      "canonical": "DiskmapFlip",
+      "category": "syntax.keyword",
+      "parent": "ui",
+      "description": "Canonical MyDefrag spelling for DiskmapFlip.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.statusbar",
+      "canonical": "StatusBar",
+      "category": "syntax.keyword",
+      "parent": "ui",
+      "description": "Canonical MyDefrag spelling for StatusBar.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.zoomlevel",
+      "canonical": "ZoomLevel",
+      "category": "syntax.keyword",
+      "parent": "ui",
+      "description": "Canonical MyDefrag spelling for ZoomLevel.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.message",
+      "canonical": "Message",
+      "category": "syntax.keyword",
+      "parent": "ui",
+      "description": "Canonical MyDefrag spelling for Message.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.status",
+      "canonical": "Status",
+      "category": "syntax.keyword",
+      "parent": "statusbar",
+      "description": "Canonical MyDefrag spelling for Status.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.path",
+      "canonical": "Path",
+      "category": "syntax.keyword",
+      "parent": "statusbar",
+      "description": "Canonical MyDefrag spelling for Path.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.mouseover",
+      "canonical": "Mouseover",
+      "category": "syntax.keyword",
+      "parent": "statusbar",
+      "description": "Canonical MyDefrag spelling for Mouseover.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.all",
+      "canonical": "All",
+      "category": "syntax.keyword",
+      "parent": "statusbar",
+      "parents": [
+        "statusbar",
+        "operator"
+      ],
+      "description": "Canonical MyDefrag spelling for All.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.minimized",
+      "canonical": "Minimized",
+      "category": "syntax.keyword",
+      "parent": "window_state",
+      "description": "Canonical MyDefrag spelling for Minimized.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.maximized",
+      "canonical": "Maximized",
+      "category": "syntax.keyword",
+      "parent": "window_state",
+      "description": "Canonical MyDefrag spelling for Maximized.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.invisible",
+      "canonical": "Invisible",
+      "category": "syntax.keyword",
+      "parent": "window_state",
+      "description": "Canonical MyDefrag spelling for Invisible.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.restore",
+      "canonical": "Restore",
+      "category": "syntax.keyword",
+      "parent": "window_state",
+      "description": "Canonical MyDefrag spelling for Restore.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.wait",
+      "canonical": "Wait",
+      "category": "syntax.keyword",
+      "parent": "finish_action",
+      "description": "Canonical MyDefrag spelling for Wait.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.exit",
+      "canonical": "Exit",
+      "category": "syntax.keyword",
+      "parent": "finish_action",
+      "description": "Canonical MyDefrag spelling for Exit.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.shutdown",
+      "canonical": "Shutdown",
+      "category": "syntax.keyword",
+      "parent": "finish_action",
+      "description": "Canonical MyDefrag spelling for Shutdown.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.hibernate",
+      "canonical": "Hibernate",
+      "category": "syntax.keyword",
+      "parent": "finish_action",
+      "description": "Canonical MyDefrag spelling for Hibernate.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.standby",
+      "canonical": "Standby",
+      "category": "syntax.keyword",
+      "parent": "finish_action",
+      "description": "Canonical MyDefrag spelling for Standby.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.reboot",
+      "canonical": "Reboot",
+      "category": "syntax.keyword",
+      "parent": "finish_action",
+      "description": "Canonical MyDefrag spelling for Reboot.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.warnusers",
+      "canonical": "Warnusers",
+      "category": "syntax.keyword",
+      "parent": "finish_action",
+      "description": "Canonical MyDefrag spelling for Warnusers.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.forced",
+      "canonical": "Forced",
+      "category": "syntax.keyword",
+      "parent": "finish_action",
+      "description": "Canonical MyDefrag spelling for Forced.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.off",
+      "canonical": "Off",
+      "category": "syntax.keyword",
+      "parent": "setscreensaver",
+      "description": "Canonical MyDefrag spelling for Off.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.reset",
+      "canonical": "Reset",
+      "category": "syntax.keyword",
+      "parent": "setscreensaver",
+      "description": "Canonical MyDefrag spelling for Reset.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.normal",
+      "canonical": "Normal",
+      "category": "syntax.keyword",
+      "parent": "priority",
+      "description": "Canonical MyDefrag spelling for Normal.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.belownormal",
+      "canonical": "Belownormal",
+      "category": "syntax.keyword",
+      "parent": "priority",
+      "description": "Canonical MyDefrag spelling for Belownormal.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.low",
+      "canonical": "Low",
+      "category": "syntax.keyword",
+      "parent": "priority",
+      "description": "Canonical MyDefrag spelling for Low.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.abovenormal",
+      "canonical": "Abovenormal",
+      "category": "syntax.keyword",
+      "parent": "priority",
+      "description": "Canonical MyDefrag spelling for Abovenormal.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.high",
+      "canonical": "High",
+      "category": "syntax.keyword",
+      "parent": "priority",
+      "description": "Canonical MyDefrag spelling for High.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.background",
+      "canonical": "Background",
+      "category": "syntax.keyword",
+      "parent": "priority",
+      "description": "Canonical MyDefrag spelling for Background.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.setting",
+      "canonical": "Setting",
+      "category": "syntax.keyword",
       "parent": "settingInline",
-      "description": "Sets a script variable.",
-      "status": "reviewed"
+      "description": "Canonical MyDefrag spelling for Setting.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.setfilecolor",
+      "canonical": "SetFileColor",
+      "category": "syntax.keyword",
+      "parent": "settingInline",
+      "description": "Canonical MyDefrag spelling for SetFileColor.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     },
     {
       "id": "setting.setColor",
@@ -158,7 +1616,829 @@
       "category": "setting",
       "parent": "settingInline",
       "description": "Sets a display color.",
-      "status": "reviewed"
+      "status": "reviewed",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.pause",
+      "canonical": "Pause",
+      "category": "syntax.keyword",
+      "parent": "any",
+      "description": "Canonical MyDefrag spelling for Pause.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.writelogfile",
+      "canonical": "WriteLogfile",
+      "category": "syntax.keyword",
+      "parent": "any",
+      "description": "Canonical MyDefrag spelling for WriteLogfile.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.appendlogfile",
+      "canonical": "AppendLogfile",
+      "category": "syntax.keyword",
+      "parent": "any",
+      "description": "Canonical MyDefrag spelling for AppendLogfile.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.debug",
+      "canonical": "Debug",
+      "category": "syntax.keyword",
+      "parent": "any",
+      "description": "Canonical MyDefrag spelling for Debug.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.slowdown",
+      "canonical": "Slowdown",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for Slowdown.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.whenfinished",
+      "canonical": "WhenFinished",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for WhenFinished.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.otherinstances",
+      "canonical": "OtherInstances",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for OtherInstances.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.batterypower",
+      "canonical": "BatteryPower",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for BatteryPower.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.setscreenpowersaver",
+      "canonical": "SetScreenPowerSaver",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for SetScreenPowerSaver.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.filemovechunksize",
+      "canonical": "FileMoveChunkSize",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for FileMoveChunkSize.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.ignorewraparoundfragmentation",
+      "canonical": "IgnoreWrapAroundFragmentation",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for IgnoreWrapAroundFragmentation.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.processpriority",
+      "canonical": "ProcessPriority",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for ProcessPriority.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.exittimeout",
+      "canonical": "Exittimeout",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for Exittimeout.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.exitiftimeout",
+      "canonical": "ExitIfTimeout",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for ExitIfTimeout.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.rememberunmovables",
+      "canonical": "RememberUnmovables",
+      "category": "syntax.keyword",
+      "parent": "runtime",
+      "description": "Canonical MyDefrag spelling for RememberUnmovables.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.empty",
+      "canonical": "Empty",
+      "category": "syntax.keyword",
+      "parent": "setcolor",
+      "description": "Canonical MyDefrag spelling for Empty.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.allocated",
+      "canonical": "Allocated",
+      "category": "syntax.keyword",
+      "parent": "setcolor",
+      "description": "Canonical MyDefrag spelling for Allocated.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.busyread",
+      "canonical": "Busyread",
+      "category": "syntax.keyword",
+      "parent": "setcolor",
+      "description": "Canonical MyDefrag spelling for Busyread.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.busywrite",
+      "canonical": "Busywrite",
+      "category": "syntax.keyword",
+      "parent": "setcolor",
+      "description": "Canonical MyDefrag spelling for Busywrite.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.text",
+      "canonical": "Text",
+      "category": "syntax.keyword",
+      "parent": "setcolor",
+      "description": "Canonical MyDefrag spelling for Text.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.ask",
+      "canonical": "Ask",
+      "category": "syntax.keyword",
+      "parent": "conflict",
+      "description": "Canonical MyDefrag spelling for Ask.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.allow",
+      "canonical": "Allow",
+      "category": "syntax.keyword",
+      "parent": "conflict",
+      "description": "Canonical MyDefrag spelling for Allow.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.kill",
+      "canonical": "Kill",
+      "category": "syntax.keyword",
+      "parent": "conflict",
+      "description": "Canonical MyDefrag spelling for Kill.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.movable",
+      "canonical": "Movable",
+      "category": "syntax.keyword",
+      "parent": "file_state",
+      "description": "Canonical MyDefrag spelling for Movable.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.selected",
+      "canonical": "Selected",
+      "category": "syntax.keyword",
+      "parent": "file_state",
+      "description": "Canonical MyDefrag spelling for Selected.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.processed",
+      "canonical": "Processed",
+      "category": "syntax.keyword",
+      "parent": "file_state",
+      "description": "Canonical MyDefrag spelling for Processed.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "setting.setVariable",
+      "canonical": "SetVariable",
+      "category": "setting",
+      "parent": "settingInline",
+      "description": "Sets a script variable.",
+      "status": "reviewed",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.setstatisticswindowtext",
+      "canonical": "SetStatisticsWindowText",
+      "category": "syntax.keyword",
+      "parent": "any",
+      "description": "Canonical MyDefrag spelling for SetStatisticsWindowText.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.or",
+      "canonical": "OR",
+      "category": "syntax.keyword",
+      "parent": "operator",
+      "description": "Canonical MyDefrag spelling for OR.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.and",
+      "canonical": "AND",
+      "category": "syntax.keyword",
+      "parent": "operator",
+      "description": "Canonical MyDefrag spelling for AND.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.not",
+      "canonical": "NOT",
+      "category": "syntax.keyword",
+      "parent": "operator",
+      "description": "Canonical MyDefrag spelling for NOT.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.yes",
+      "canonical": "Yes",
+      "category": "syntax.keyword",
+      "parent": "literal",
+      "description": "Canonical MyDefrag spelling for Yes.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.no",
+      "canonical": "No",
+      "category": "syntax.keyword",
+      "parent": "literal",
+      "description": "Canonical MyDefrag spelling for No.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.now",
+      "canonical": "Now",
+      "category": "syntax.keyword",
+      "parent": "time",
+      "description": "Canonical MyDefrag spelling for Now.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.ago",
+      "canonical": "Ago",
+      "category": "syntax.keyword",
+      "parent": "time",
+      "description": "Canonical MyDefrag spelling for Ago.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.time-unit",
+      "canonical": "Time_unit",
+      "category": "syntax.keyword",
+      "parent": "any",
+      "description": "Canonical MyDefrag spelling for Time_unit.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.year",
+      "canonical": "Year",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Year.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.years",
+      "canonical": "Years",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Years.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.month",
+      "canonical": "Month",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Month.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.months",
+      "canonical": "Months",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Months.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.week",
+      "canonical": "Week",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Week.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.weeks",
+      "canonical": "Weeks",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Weeks.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.day",
+      "canonical": "Day",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Day.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.days",
+      "canonical": "Days",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Days.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.hour",
+      "canonical": "Hour",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Hour.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.hours",
+      "canonical": "Hours",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Hours.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.minute",
+      "canonical": "Minute",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Minute.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.minutes",
+      "canonical": "Minutes",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Minutes.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.second",
+      "canonical": "Second",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Second.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.seconds",
+      "canonical": "Seconds",
+      "category": "syntax.keyword",
+      "parent": "time_unit",
+      "description": "Canonical MyDefrag spelling for Seconds.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.plus",
+      "canonical": "+",
+      "category": "syntax.keyword",
+      "parent": "math",
+      "description": "Canonical MyDefrag spelling for +.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.minus",
+      "canonical": "-",
+      "category": "syntax.keyword",
+      "parent": "math",
+      "description": "Canonical MyDefrag spelling for -.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.multiply",
+      "canonical": "*",
+      "category": "syntax.keyword",
+      "parent": "math",
+      "description": "Canonical MyDefrag spelling for *.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.divide",
+      "canonical": "/",
+      "category": "syntax.keyword",
+      "parent": "math",
+      "description": "Canonical MyDefrag spelling for /.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.rounddown",
+      "canonical": "Rounddown",
+      "category": "syntax.keyword",
+      "parent": "math",
+      "description": "Canonical MyDefrag spelling for Rounddown.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.roundup",
+      "canonical": "Roundup",
+      "category": "syntax.keyword",
+      "parent": "math",
+      "description": "Canonical MyDefrag spelling for Roundup.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.minimum",
+      "canonical": "Minimum",
+      "category": "syntax.keyword",
+      "parent": "math",
+      "description": "Canonical MyDefrag spelling for Minimum.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.maximum",
+      "canonical": "Maximum",
+      "category": "syntax.keyword",
+      "parent": "math",
+      "description": "Canonical MyDefrag spelling for Maximum.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.k",
+      "canonical": "K",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for K.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.m",
+      "canonical": "M",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for M.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.g",
+      "canonical": "G",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for G.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.t",
+      "canonical": "T",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for T.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.p",
+      "canonical": "P",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for P.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.e",
+      "canonical": "E",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for E.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.z",
+      "canonical": "Z",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Z.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.y",
+      "canonical": "Y",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Y.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.kb",
+      "canonical": "Kb",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Kb.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.mb",
+      "canonical": "Mb",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Mb.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.gb",
+      "canonical": "Gb",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Gb.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.tb",
+      "canonical": "Tb",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Tb.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.pb",
+      "canonical": "Pb",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Pb.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.eb",
+      "canonical": "Eb",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Eb.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.zb",
+      "canonical": "Zb",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Zb.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.yb",
+      "canonical": "Yb",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Yb.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.ki",
+      "canonical": "Ki",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Ki.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.mi",
+      "canonical": "Mi",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Mi.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.gi",
+      "canonical": "Gi",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Gi.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.ti",
+      "canonical": "Ti",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Ti.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.pi",
+      "canonical": "Pi",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Pi.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.ei",
+      "canonical": "Ei",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Ei.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.zi",
+      "canonical": "Zi",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Zi.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
+    },
+    {
+      "id": "keyword.yi",
+      "canonical": "Yi",
+      "category": "syntax.keyword",
+      "parent": "size_unit",
+      "description": "Canonical MyDefrag spelling for Yi.",
+      "status": "approved",
+      "translatable": true,
+      "visible": true
     }
   ]
 }

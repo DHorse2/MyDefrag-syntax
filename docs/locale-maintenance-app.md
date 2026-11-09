@@ -289,16 +289,17 @@ are restored in later sessions.
 ## Legacy Aggregate Migration
 
 `catalogOverrides.json` and `catalogOverrides.sample.json` remain supported for
-existing translations and keyword overrides. The app displays matching legacy
+existing component translations. The app displays matching legacy
 component entries. On the first saved edit for that component, it atomically:
 
 1. Writes `language/locales/<locale>/<component>.json`.
 2. Removes that component's entries from the legacy aggregate.
-3. Preserves unrelated component entries, keyword overrides, and other fields.
+3. Preserves unrelated component entries and other fields.
 
 This prevents one translation from existing in two authoritative locations.
-Keyword overrides remain in the aggregate format until a separate permanent
-keyword-file workflow is defined.
+Keyword spellings are authored separately in
+`language/locales/<locale>/keywords.json`; the aggregate format is not a
+keyword authority.
 
 ## Validation, Save, and Recovery
 

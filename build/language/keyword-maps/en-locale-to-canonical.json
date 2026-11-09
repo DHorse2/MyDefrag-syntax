@@ -1,82 +1,1946 @@
 {
+  "*": {
+    "canonical": "*",
+    "fallbackLocale": null,
+    "id": "keyword.multiply",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "+": {
+    "canonical": "+",
+    "fallbackLocale": null,
+    "id": "keyword.plus",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "-": {
+    "canonical": "-",
+    "fallbackLocale": null,
+    "id": "keyword.minus",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "/": {
+    "canonical": "/",
+    "fallbackLocale": null,
+    "id": "keyword.divide",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "AND": {
+    "canonical": "AND",
+    "fallbackLocale": null,
+    "id": "keyword.and",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Abovenormal": {
+    "canonical": "Abovenormal",
+    "fallbackLocale": null,
+    "id": "keyword.abovenormal",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Action_modifier": {
+    "canonical": "Action_modifier",
+    "fallbackLocale": null,
+    "id": "keyword.action-modifier",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "AddGap": {
+    "canonical": "AddGap",
+    "fallbackLocale": null,
+    "id": "keyword.addgap",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Ago": {
+    "canonical": "Ago",
+    "fallbackLocale": null,
+    "id": "keyword.ago",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "All": {
+    "canonical": "All",
+    "fallbackLocale": null,
+    "id": "keyword.all",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Allocated": {
+    "canonical": "Allocated",
+    "fallbackLocale": null,
+    "id": "keyword.allocated",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Allow": {
+    "canonical": "Allow",
+    "fallbackLocale": null,
+    "id": "keyword.allow",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Any": {
+    "canonical": "Any",
+    "fallbackLocale": null,
+    "id": "keyword.any",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Anycompletefragment": {
+    "canonical": "Anycompletefragment",
+    "fallbackLocale": null,
+    "id": "keyword.anycompletefragment",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Anypart": {
+    "canonical": "Anypart",
+    "fallbackLocale": null,
+    "id": "keyword.anypart",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "AppendLogfile": {
+    "canonical": "AppendLogfile",
+    "fallbackLocale": null,
+    "id": "keyword.appendlogfile",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Archive": {
+    "canonical": "Archive",
+    "fallbackLocale": null,
+    "id": "keyword.archive",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Ascending": {
+    "canonical": "Ascending",
+    "fallbackLocale": null,
+    "id": "keyword.ascending",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Ask": {
+    "canonical": "Ask",
+    "fallbackLocale": null,
+    "id": "keyword.ask",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "AverageFragmentSize": {
+    "canonical": "AverageFragmentSize",
+    "fallbackLocale": null,
+    "id": "keyword.averagefragmentsize",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Background": {
+    "canonical": "Background",
+    "fallbackLocale": null,
+    "id": "keyword.background",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "BatteryPower": {
+    "canonical": "BatteryPower",
+    "fallbackLocale": null,
+    "id": "keyword.batterypower",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Beginoffile": {
+    "canonical": "Beginoffile",
+    "fallbackLocale": null,
+    "id": "keyword.beginoffile",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Belownormal": {
+    "canonical": "Belownormal",
+    "fallbackLocale": null,
+    "id": "keyword.belownormal",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Busyread": {
+    "canonical": "Busyread",
+    "fallbackLocale": null,
+    "id": "keyword.busyread",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Busywrite": {
+    "canonical": "Busywrite",
+    "fallbackLocale": null,
+    "id": "keyword.busywrite",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Cdrom": {
+    "canonical": "Cdrom",
+    "fallbackLocale": null,
+    "id": "keyword.cdrom",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "CheckVolume": {
+    "canonical": "CheckVolume",
+    "fallbackLocale": null,
+    "id": "keyword.checkvolume",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "ChunkSize": {
+    "canonical": "ChunkSize",
+    "fallbackLocale": null,
+    "id": "keyword.chunksize",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "CommandlineVolumes": {
+    "canonical": "CommandlineVolumes",
+    "fallbackLocale": null,
+    "id": "keyword.commandlinevolumes",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Compressed": {
+    "canonical": "Compressed",
+    "fallbackLocale": null,
+    "id": "keyword.compressed",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Conflict": {
+    "canonical": "Conflict",
+    "fallbackLocale": null,
+    "id": "keyword.conflict",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "CreationDate": {
+    "canonical": "CreationDate",
+    "fallbackLocale": null,
+    "id": "keyword.creationdate",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Day": {
+    "canonical": "Day",
+    "fallbackLocale": null,
+    "id": "keyword.day",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Days": {
+    "canonical": "Days",
+    "fallbackLocale": null,
+    "id": "keyword.days",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Debug": {
+    "canonical": "Debug",
+    "fallbackLocale": null,
+    "id": "keyword.debug",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
   "Defragment": {
     "canonical": "Defragment",
-    "id": "fileAction.defragment"
+    "fallbackLocale": null,
+    "id": "fileAction.defragment",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "DeleteJournal": {
+    "canonical": "DeleteJournal",
+    "fallbackLocale": null,
+    "id": "keyword.deletejournal",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Descending": {
+    "canonical": "Descending",
+    "fallbackLocale": null,
+    "id": "keyword.descending",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Description": {
+    "canonical": "Description",
+    "fallbackLocale": null,
+    "id": "keyword.description",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Directory": {
+    "canonical": "Directory",
+    "fallbackLocale": null,
+    "id": "keyword.directory",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "DirectoryName": {
     "canonical": "DirectoryName",
-    "id": "fileCondition.directoryName"
+    "fallbackLocale": null,
+    "id": "fileCondition.directoryName",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "DirectoryPath": {
+    "canonical": "DirectoryPath",
+    "fallbackLocale": null,
+    "id": "keyword.directorypath",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "DiskmapFlip": {
+    "canonical": "DiskmapFlip",
+    "fallbackLocale": null,
+    "id": "keyword.diskmapflip",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "DismountVolume": {
+    "canonical": "DismountVolume",
+    "fallbackLocale": null,
+    "id": "keyword.dismountvolume",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Donotvacate": {
+    "canonical": "Donotvacate",
+    "fallbackLocale": null,
+    "id": "keyword.donotvacate",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "E": {
+    "canonical": "E",
+    "fallbackLocale": null,
+    "id": "keyword.e",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Eb": {
+    "canonical": "Eb",
+    "fallbackLocale": null,
+    "id": "keyword.eb",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Ei": {
+    "canonical": "Ei",
+    "fallbackLocale": null,
+    "id": "keyword.ei",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Empty": {
+    "canonical": "Empty",
+    "fallbackLocale": null,
+    "id": "keyword.empty",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Encrypted": {
+    "canonical": "Encrypted",
+    "fallbackLocale": null,
+    "id": "keyword.encrypted",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Endoffile": {
+    "canonical": "Endoffile",
+    "fallbackLocale": null,
+    "id": "keyword.endoffile",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Entirefile": {
+    "canonical": "Entirefile",
+    "fallbackLocale": null,
+    "id": "keyword.entirefile",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "ExcludeFiles": {
     "canonical": "ExcludeFiles",
-    "id": "script.excludeFiles"
+    "fallbackLocale": null,
+    "id": "script.excludeFiles",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "ExcludeVolumes": {
     "canonical": "ExcludeVolumes",
-    "id": "script.excludeVolumes"
+    "fallbackLocale": null,
+    "id": "script.excludeVolumes",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Exit": {
+    "canonical": "Exit",
+    "fallbackLocale": null,
+    "id": "keyword.exit",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "ExitIfTimeout": {
+    "canonical": "ExitIfTimeout",
+    "fallbackLocale": null,
+    "id": "keyword.exitiftimeout",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Exittimeout": {
+    "canonical": "Exittimeout",
+    "fallbackLocale": null,
+    "id": "keyword.exittimeout",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Fast": {
+    "canonical": "Fast",
+    "fallbackLocale": null,
+    "id": "keyword.fast",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "FastFill": {
     "canonical": "FastFill",
-    "id": "fileAction.fastFill"
+    "fallbackLocale": null,
+    "id": "fileAction.fastFill",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Fat": {
+    "canonical": "Fat",
+    "fallbackLocale": null,
+    "id": "keyword.fat",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Fat12": {
+    "canonical": "Fat12",
+    "fallbackLocale": null,
+    "id": "keyword.fat12",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Fat16": {
+    "canonical": "Fat16",
+    "fallbackLocale": null,
+    "id": "keyword.fat16",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Fat32": {
+    "canonical": "Fat32",
+    "fallbackLocale": null,
+    "id": "keyword.fat32",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "FileActions": {
     "canonical": "FileActions",
-    "id": "structure.fileActions"
+    "fallbackLocale": null,
+    "id": "structure.fileActions",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "FileEnd": {
     "canonical": "FileEnd",
-    "id": "structure.fileEnd"
+    "fallbackLocale": null,
+    "id": "structure.fileEnd",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "FileLocation": {
+    "canonical": "FileLocation",
+    "fallbackLocale": null,
+    "id": "keyword.filelocation",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "FileMoveChunkSize": {
+    "canonical": "FileMoveChunkSize",
+    "fallbackLocale": null,
+    "id": "keyword.filemovechunksize",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "FileName": {
     "canonical": "FileName",
-    "id": "fileCondition.fileName"
+    "fallbackLocale": null,
+    "id": "fileCondition.fileName",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "FileSelect": {
     "canonical": "FileSelect",
-    "id": "structure.fileSelect"
+    "fallbackLocale": null,
+    "id": "structure.fileSelect",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "FileSystemType": {
+    "canonical": "FileSystemType",
+    "fallbackLocale": null,
+    "id": "keyword.filesystemtype",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "File_action": {
+    "canonical": "File_action",
+    "fallbackLocale": null,
+    "id": "keyword.file-action",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "File_attribute": {
+    "canonical": "File_attribute",
+    "fallbackLocale": null,
+    "id": "keyword.file-attribute",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "File_block": {
+    "canonical": "File_block",
+    "fallbackLocale": null,
+    "id": "keyword.file-block",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "File_condition": {
+    "canonical": "File_condition",
+    "fallbackLocale": null,
+    "id": "keyword.file-condition",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "File_state": {
+    "canonical": "File_state",
+    "fallbackLocale": null,
+    "id": "keyword.file-state",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Filesystem": {
+    "canonical": "Filesystem",
+    "fallbackLocale": null,
+    "id": "keyword.filesystem",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Finish_action": {
+    "canonical": "Finish_action",
+    "fallbackLocale": null,
+    "id": "keyword.finish-action",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Fixed": {
+    "canonical": "Fixed",
+    "fallbackLocale": null,
+    "id": "keyword.fixed",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Forced": {
+    "canonical": "Forced",
+    "fallbackLocale": null,
+    "id": "keyword.forced",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "ForcedFill": {
+    "canonical": "ForcedFill",
+    "fallbackLocale": null,
+    "id": "keyword.forcedfill",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "FragmentCount": {
     "canonical": "FragmentCount",
-    "id": "volumeCondition.fragmentCount"
+    "fallbackLocale": null,
+    "id": "volumeCondition.fragmentCount",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "FragmentSize": {
+    "canonical": "FragmentSize",
+    "fallbackLocale": null,
+    "id": "keyword.fragmentsize",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Fragmented": {
+    "canonical": "Fragmented",
+    "fallbackLocale": null,
+    "id": "keyword.fragmented",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "FullPath": {
     "canonical": "FullPath",
-    "id": "fileCondition.fullPath"
+    "fallbackLocale": null,
+    "id": "fileCondition.fullPath",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "G": {
+    "canonical": "G",
+    "fallbackLocale": null,
+    "id": "keyword.g",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Gb": {
+    "canonical": "Gb",
+    "fallbackLocale": null,
+    "id": "keyword.gb",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Gi": {
+    "canonical": "Gi",
+    "fallbackLocale": null,
+    "id": "keyword.gi",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Hibernate": {
+    "canonical": "Hibernate",
+    "fallbackLocale": null,
+    "id": "keyword.hibernate",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Hidden": {
+    "canonical": "Hidden",
+    "fallbackLocale": null,
+    "id": "keyword.hidden",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "High": {
+    "canonical": "High",
+    "fallbackLocale": null,
+    "id": "keyword.high",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Hour": {
+    "canonical": "Hour",
+    "fallbackLocale": null,
+    "id": "keyword.hour",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Hours": {
+    "canonical": "Hours",
+    "fallbackLocale": null,
+    "id": "keyword.hours",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "IgnoreWrapAroundFragmentation": {
+    "canonical": "IgnoreWrapAroundFragmentation",
+    "fallbackLocale": null,
+    "id": "keyword.ignorewraparoundfragmentation",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "ImportListFromBootOptimize": {
+    "canonical": "ImportListFromBootOptimize",
+    "fallbackLocale": null,
+    "id": "keyword.importlistfrombootoptimize",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "ImportListFromFile": {
+    "canonical": "ImportListFromFile",
+    "fallbackLocale": null,
+    "id": "keyword.importlistfromfile",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "ImportListFromProgramHints": {
+    "canonical": "ImportListFromProgramHints",
+    "fallbackLocale": null,
+    "id": "keyword.importlistfromprogramhints",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Include": {
+    "canonical": "Include",
+    "fallbackLocale": null,
+    "id": "keyword.include",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Invisible": {
+    "canonical": "Invisible",
+    "fallbackLocale": null,
+    "id": "keyword.invisible",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "K": {
+    "canonical": "K",
+    "fallbackLocale": null,
+    "id": "keyword.k",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Kb": {
+    "canonical": "Kb",
+    "fallbackLocale": null,
+    "id": "keyword.kb",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Ki": {
+    "canonical": "Ki",
+    "fallbackLocale": null,
+    "id": "keyword.ki",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Kill": {
+    "canonical": "Kill",
+    "fallbackLocale": null,
+    "id": "keyword.kill",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "Label": {
     "canonical": "Label",
-    "id": "volumeCondition.label"
+    "fallbackLocale": null,
+    "id": "volumeCondition.label",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Language": {
+    "canonical": "Language",
+    "fallbackLocale": null,
+    "id": "keyword.language",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Largest": {
+    "canonical": "Largest",
+    "fallbackLocale": null,
+    "id": "keyword.largest",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "LargestFragmentSize": {
+    "canonical": "LargestFragmentSize",
+    "fallbackLocale": null,
+    "id": "keyword.largestfragmentsize",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "LastAccess": {
+    "canonical": "LastAccess",
+    "fallbackLocale": null,
+    "id": "keyword.lastaccess",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "LastAccessEnabled": {
+    "canonical": "LastAccessEnabled",
+    "fallbackLocale": null,
+    "id": "keyword.lastaccessenabled",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "LastChange": {
+    "canonical": "LastChange",
+    "fallbackLocale": null,
+    "id": "keyword.lastchange",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Literal": {
+    "canonical": "Literal",
+    "fallbackLocale": null,
+    "id": "keyword.literal",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Low": {
+    "canonical": "Low",
+    "fallbackLocale": null,
+    "id": "keyword.low",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "M": {
+    "canonical": "M",
+    "fallbackLocale": null,
+    "id": "keyword.m",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "MakeGap": {
+    "canonical": "MakeGap",
+    "fallbackLocale": null,
+    "id": "keyword.makegap",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Math": {
+    "canonical": "Math",
+    "fallbackLocale": null,
+    "id": "keyword.math",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "MaxRunTime": {
+    "canonical": "MaxRunTime",
+    "fallbackLocale": null,
+    "id": "keyword.maxruntime",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Maximized": {
+    "canonical": "Maximized",
+    "fallbackLocale": null,
+    "id": "keyword.maximized",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Maximum": {
+    "canonical": "Maximum",
+    "fallbackLocale": null,
+    "id": "keyword.maximum",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Mb": {
+    "canonical": "Mb",
+    "fallbackLocale": null,
+    "id": "keyword.mb",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Message": {
+    "canonical": "Message",
+    "fallbackLocale": null,
+    "id": "keyword.message",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Mi": {
+    "canonical": "Mi",
+    "fallbackLocale": null,
+    "id": "keyword.mi",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Minimized": {
+    "canonical": "Minimized",
+    "fallbackLocale": null,
+    "id": "keyword.minimized",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Minimum": {
+    "canonical": "Minimum",
+    "fallbackLocale": null,
+    "id": "keyword.minimum",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Minute": {
+    "canonical": "Minute",
+    "fallbackLocale": null,
+    "id": "keyword.minute",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Minutes": {
+    "canonical": "Minutes",
+    "fallbackLocale": null,
+    "id": "keyword.minutes",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Month": {
+    "canonical": "Month",
+    "fallbackLocale": null,
+    "id": "keyword.month",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Months": {
+    "canonical": "Months",
+    "fallbackLocale": null,
+    "id": "keyword.months",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Mounted": {
+    "canonical": "Mounted",
+    "fallbackLocale": null,
+    "id": "keyword.mounted",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Mouseover": {
+    "canonical": "Mouseover",
+    "fallbackLocale": null,
+    "id": "keyword.mouseover",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Movable": {
+    "canonical": "Movable",
+    "fallbackLocale": null,
+    "id": "keyword.movable",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "MoveDownFill": {
+    "canonical": "MoveDownFill",
+    "fallbackLocale": null,
+    "id": "keyword.movedownfill",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "MoveToEndOfDisk": {
+    "canonical": "MoveToEndOfDisk",
+    "fallbackLocale": null,
+    "id": "keyword.movetoendofdisk",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "MoveUpToZone": {
+    "canonical": "MoveUpToZone",
+    "fallbackLocale": null,
+    "id": "keyword.moveuptozone",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "NOT": {
+    "canonical": "NOT",
+    "fallbackLocale": null,
+    "id": "keyword.not",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "Name": {
     "canonical": "Name",
-    "id": "volumeCondition.name"
+    "fallbackLocale": null,
+    "id": "volumeCondition.name",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "No": {
+    "canonical": "No",
+    "fallbackLocale": null,
+    "id": "keyword.no",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Normal": {
+    "canonical": "Normal",
+    "fallbackLocale": null,
+    "id": "keyword.normal",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "NotToBeIndexed": {
+    "canonical": "NotToBeIndexed",
+    "fallbackLocale": null,
+    "id": "keyword.nottobeindexed",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Now": {
+    "canonical": "Now",
+    "fallbackLocale": null,
+    "id": "keyword.now",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Ntfs": {
+    "canonical": "Ntfs",
+    "fallbackLocale": null,
+    "id": "keyword.ntfs",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "NumberBetween": {
+    "canonical": "NumberBetween",
+    "fallbackLocale": null,
+    "id": "keyword.numberbetween",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "OR": {
+    "canonical": "OR",
+    "fallbackLocale": null,
+    "id": "keyword.or",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Off": {
+    "canonical": "Off",
+    "fallbackLocale": null,
+    "id": "keyword.off",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Offline": {
+    "canonical": "Offline",
+    "fallbackLocale": null,
+    "id": "keyword.offline",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Operator": {
+    "canonical": "Operator",
+    "fallbackLocale": null,
+    "id": "keyword.operator",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "OtherInstances": {
+    "canonical": "OtherInstances",
+    "fallbackLocale": null,
+    "id": "keyword.otherinstances",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "P": {
+    "canonical": "P",
+    "fallbackLocale": null,
+    "id": "keyword.p",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Path": {
+    "canonical": "Path",
+    "fallbackLocale": null,
+    "id": "keyword.path",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Pause": {
+    "canonical": "Pause",
+    "fallbackLocale": null,
+    "id": "keyword.pause",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Pb": {
+    "canonical": "Pb",
+    "fallbackLocale": null,
+    "id": "keyword.pb",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Pi": {
+    "canonical": "Pi",
+    "fallbackLocale": null,
+    "id": "keyword.pi",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "PlaceNtfsSystemFiles": {
+    "canonical": "PlaceNtfsSystemFiles",
+    "fallbackLocale": null,
+    "id": "keyword.placentfssystemfiles",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Priority": {
+    "canonical": "Priority",
+    "fallbackLocale": null,
+    "id": "keyword.priority",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "ProcessPriority": {
+    "canonical": "ProcessPriority",
+    "fallbackLocale": null,
+    "id": "keyword.processpriority",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Processed": {
+    "canonical": "Processed",
+    "fallbackLocale": null,
+    "id": "keyword.processed",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Ramdisk": {
+    "canonical": "Ramdisk",
+    "fallbackLocale": null,
+    "id": "keyword.ramdisk",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Readonly": {
+    "canonical": "Readonly",
+    "fallbackLocale": null,
+    "id": "keyword.readonly",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Reboot": {
+    "canonical": "Reboot",
+    "fallbackLocale": null,
+    "id": "keyword.reboot",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "ReclaimNtfsReservedAreas": {
+    "canonical": "ReclaimNtfsReservedAreas",
+    "fallbackLocale": null,
+    "id": "keyword.reclaimntfsreservedareas",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "RememberUnmovables": {
+    "canonical": "RememberUnmovables",
+    "fallbackLocale": null,
+    "id": "keyword.rememberunmovables",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Remote": {
+    "canonical": "Remote",
+    "fallbackLocale": null,
+    "id": "keyword.remote",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Removable": {
+    "canonical": "Removable",
+    "fallbackLocale": null,
+    "id": "keyword.removable",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Reset": {
+    "canonical": "Reset",
+    "fallbackLocale": null,
+    "id": "keyword.reset",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Restore": {
+    "canonical": "Restore",
+    "fallbackLocale": null,
+    "id": "keyword.restore",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Rounddown": {
+    "canonical": "Rounddown",
+    "fallbackLocale": null,
+    "id": "keyword.rounddown",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Roundup": {
+    "canonical": "Roundup",
+    "fallbackLocale": null,
+    "id": "keyword.roundup",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "RunProgram": {
+    "canonical": "RunProgram",
+    "fallbackLocale": null,
+    "id": "keyword.runprogram",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "RunScript": {
+    "canonical": "RunScript",
+    "fallbackLocale": null,
+    "id": "keyword.runscript",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Runtime": {
+    "canonical": "Runtime",
+    "fallbackLocale": null,
+    "id": "keyword.runtime",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Script": {
+    "canonical": "Script",
+    "fallbackLocale": null,
+    "id": "keyword.script",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Second": {
+    "canonical": "Second",
+    "fallbackLocale": null,
+    "id": "keyword.second",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Seconds": {
+    "canonical": "Seconds",
+    "fallbackLocale": null,
+    "id": "keyword.seconds",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SelectNtfsSystemFiles": {
+    "canonical": "SelectNtfsSystemFiles",
+    "fallbackLocale": null,
+    "id": "keyword.selectntfssystemfiles",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Selected": {
+    "canonical": "Selected",
+    "fallbackLocale": null,
+    "id": "keyword.selected",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "SetColor": {
     "canonical": "SetColor",
-    "id": "setting.setColor"
+    "fallbackLocale": null,
+    "id": "setting.setColor",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SetFileColor": {
+    "canonical": "SetFileColor",
+    "fallbackLocale": null,
+    "id": "keyword.setfilecolor",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SetScreenPowerSaver": {
+    "canonical": "SetScreenPowerSaver",
+    "fallbackLocale": null,
+    "id": "keyword.setscreenpowersaver",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SetScreenSaver": {
+    "canonical": "SetScreenSaver",
+    "fallbackLocale": null,
+    "id": "keyword.setscreensaver",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SetStatisticsWindowText": {
+    "canonical": "SetStatisticsWindowText",
+    "fallbackLocale": null,
+    "id": "keyword.setstatisticswindowtext",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "SetVariable": {
     "canonical": "SetVariable",
-    "id": "setting.setVariable"
+    "fallbackLocale": null,
+    "id": "setting.setVariable",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Setting": {
+    "canonical": "Setting",
+    "fallbackLocale": null,
+    "id": "keyword.setting",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SettingInline": {
+    "canonical": "SettingInline",
+    "fallbackLocale": null,
+    "id": "keyword.settinginline",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Shutdown": {
+    "canonical": "Shutdown",
+    "fallbackLocale": null,
+    "id": "keyword.shutdown",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "Size": {
     "canonical": "Size",
-    "id": "volumeCondition.size"
+    "fallbackLocale": null,
+    "id": "volumeCondition.size",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Size_unit": {
+    "canonical": "Size_unit",
+    "fallbackLocale": null,
+    "id": "keyword.size-unit",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Skipblock": {
+    "canonical": "Skipblock",
+    "fallbackLocale": null,
+    "id": "keyword.skipblock",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Slowdown": {
+    "canonical": "Slowdown",
+    "fallbackLocale": null,
+    "id": "keyword.slowdown",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Smallest": {
+    "canonical": "Smallest",
+    "fallbackLocale": null,
+    "id": "keyword.smallest",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SmallestFragmentSize": {
+    "canonical": "SmallestFragmentSize",
+    "fallbackLocale": null,
+    "id": "keyword.smallestfragmentsize",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Sort": {
+    "canonical": "Sort",
+    "fallbackLocale": null,
+    "id": "keyword.sort",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "SortByCreationDate": {
+    "canonical": "SortByCreationDate",
+    "fallbackLocale": null,
+    "id": "keyword.sortbycreationdate",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SortByImportSequence": {
+    "canonical": "SortByImportSequence",
+    "fallbackLocale": null,
+    "id": "keyword.sortbyimportsequence",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SortByLastAccess": {
+    "canonical": "SortByLastAccess",
+    "fallbackLocale": null,
+    "id": "keyword.sortbylastaccess",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SortByLastChange": {
+    "canonical": "SortByLastChange",
+    "fallbackLocale": null,
+    "id": "keyword.sortbylastchange",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "SortByName": {
     "canonical": "SortByName",
-    "id": "fileAction.sortByName"
+    "fallbackLocale": null,
+    "id": "fileAction.sortByName",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SortByNewestDate": {
+    "canonical": "SortByNewestDate",
+    "fallbackLocale": null,
+    "id": "keyword.sortbynewestdate",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "SortBySize": {
+    "canonical": "SortBySize",
+    "fallbackLocale": null,
+    "id": "keyword.sortbysize",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Sparse": {
+    "canonical": "Sparse",
+    "fallbackLocale": null,
+    "id": "keyword.sparse",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Standby": {
+    "canonical": "Standby",
+    "fallbackLocale": null,
+    "id": "keyword.standby",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Status": {
+    "canonical": "Status",
+    "fallbackLocale": null,
+    "id": "keyword.status",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "StatusBar": {
+    "canonical": "StatusBar",
+    "fallbackLocale": null,
+    "id": "keyword.statusbar",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "System": {
+    "canonical": "System",
+    "fallbackLocale": null,
+    "id": "keyword.system",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "T": {
+    "canonical": "T",
+    "fallbackLocale": null,
+    "id": "keyword.t",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Tb": {
+    "canonical": "Tb",
+    "fallbackLocale": null,
+    "id": "keyword.tb",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Temporary": {
+    "canonical": "Temporary",
+    "fallbackLocale": null,
+    "id": "keyword.temporary",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Text": {
+    "canonical": "Text",
+    "fallbackLocale": null,
+    "id": "keyword.text",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Ti": {
+    "canonical": "Ti",
+    "fallbackLocale": null,
+    "id": "keyword.ti",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Time": {
+    "canonical": "Time",
+    "fallbackLocale": null,
+    "id": "keyword.time",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Time_unit": {
+    "canonical": "Time_unit",
+    "fallbackLocale": null,
+    "id": "keyword.time-unit",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Title": {
+    "canonical": "Title",
+    "fallbackLocale": null,
+    "id": "keyword.title",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Toggle": {
+    "canonical": "Toggle",
+    "fallbackLocale": null,
+    "id": "keyword.toggle",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Ui": {
+    "canonical": "Ui",
+    "fallbackLocale": null,
+    "id": "keyword.ui",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Unmovable": {
+    "canonical": "Unmovable",
+    "fallbackLocale": null,
+    "id": "keyword.unmovable",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Value": {
+    "canonical": "Value",
+    "fallbackLocale": null,
+    "id": "keyword.value",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Variable": {
+    "canonical": "Variable",
+    "fallbackLocale": null,
+    "id": "keyword.variable",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Virtual": {
+    "canonical": "Virtual",
+    "fallbackLocale": null,
+    "id": "keyword.virtual",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "VolumeActions": {
     "canonical": "VolumeActions",
-    "id": "structure.volumeActions"
+    "fallbackLocale": null,
+    "id": "structure.volumeActions",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "VolumeEnd": {
     "canonical": "VolumeEnd",
-    "id": "structure.volumeEnd"
+    "fallbackLocale": null,
+    "id": "structure.volumeEnd",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   },
   "VolumeSelect": {
     "canonical": "VolumeSelect",
-    "id": "structure.volumeSelect"
+    "fallbackLocale": null,
+    "id": "structure.volumeSelect",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Volume_action": {
+    "canonical": "Volume_action",
+    "fallbackLocale": null,
+    "id": "keyword.volume-action",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Volume_block": {
+    "canonical": "Volume_block",
+    "fallbackLocale": null,
+    "id": "keyword.volume-block",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Volume_condition": {
+    "canonical": "Volume_condition",
+    "fallbackLocale": null,
+    "id": "keyword.volume-condition",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "Wait": {
+    "canonical": "Wait",
+    "fallbackLocale": null,
+    "id": "keyword.wait",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Warnusers": {
+    "canonical": "Warnusers",
+    "fallbackLocale": null,
+    "id": "keyword.warnusers",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Week": {
+    "canonical": "Week",
+    "fallbackLocale": null,
+    "id": "keyword.week",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Weeks": {
+    "canonical": "Weeks",
+    "fallbackLocale": null,
+    "id": "keyword.weeks",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "WhenFinished": {
+    "canonical": "WhenFinished",
+    "fallbackLocale": null,
+    "id": "keyword.whenfinished",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "WindowSize": {
+    "canonical": "WindowSize",
+    "fallbackLocale": null,
+    "id": "keyword.windowsize",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Window_state": {
+    "canonical": "Window_state",
+    "fallbackLocale": null,
+    "id": "keyword.window-state",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "WithShuffling": {
+    "canonical": "WithShuffling",
+    "fallbackLocale": null,
+    "id": "keyword.withshuffling",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Writable": {
+    "canonical": "Writable",
+    "fallbackLocale": null,
+    "id": "keyword.writable",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "WriteLogfile": {
+    "canonical": "WriteLogfile",
+    "fallbackLocale": null,
+    "id": "keyword.writelogfile",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Y": {
+    "canonical": "Y",
+    "fallbackLocale": null,
+    "id": "keyword.y",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Yb": {
+    "canonical": "Yb",
+    "fallbackLocale": null,
+    "id": "keyword.yb",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Year": {
+    "canonical": "Year",
+    "fallbackLocale": null,
+    "id": "keyword.year",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Years": {
+    "canonical": "Years",
+    "fallbackLocale": null,
+    "id": "keyword.years",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Yes": {
+    "canonical": "Yes",
+    "fallbackLocale": null,
+    "id": "keyword.yes",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Yi": {
+    "canonical": "Yi",
+    "fallbackLocale": null,
+    "id": "keyword.yi",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Z": {
+    "canonical": "Z",
+    "fallbackLocale": null,
+    "id": "keyword.z",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Zb": {
+    "canonical": "Zb",
+    "fallbackLocale": null,
+    "id": "keyword.zb",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Zi": {
+    "canonical": "Zi",
+    "fallbackLocale": null,
+    "id": "keyword.zi",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
+  },
+  "Zone": {
+    "canonical": "Zone",
+    "fallbackLocale": null,
+    "id": "keyword.zone",
+    "status": "approved",
+    "translatable": false,
+    "visible": false
+  },
+  "ZoomLevel": {
+    "canonical": "ZoomLevel",
+    "fallbackLocale": null,
+    "id": "keyword.zoomlevel",
+    "status": "approved",
+    "translatable": true,
+    "visible": true
   }
 }

@@ -2,7 +2,7 @@
     "name": "mydefrag-syntax",
     "displayName": "MyDefrag Script (.MyDc / .MyD)",
     "description": "Syntax highlighting for MyDefrag scripting language",
-    "version": "0.6.0",
+    "version": "0.8.0",
     "publisher": "macrodm",
     "repository": {
         "type": "git",
@@ -247,6 +247,46 @@
                 "shortTitle": "Annotations + Line Numbers + File Headers"
             },
             {
+                "command": "mydfrg.openPreview.canonical",
+                "title": "MyDefrag: Preview Canonical",
+                "shortTitle": "Canonical"
+            },
+            {
+                "command": "mydfrg.openPreview.localized",
+                "title": "MyDefrag: Preview Localized",
+                "shortTitle": "Localized"
+            },
+            {
+                "command": "mydfrg.openPreview.bilingual",
+                "title": "MyDefrag: Review Bilingual Localized and Canonical",
+                "shortTitle": "Bilingual"
+            },
+            {
+                "command": "mydfrg.openPreview.semantic",
+                "title": "MyDefrag: Review Semantic IDs",
+                "shortTitle": "Semantic IDs"
+            },
+            {
+                "command": "mydfrg.openPreview.differences",
+                "title": "MyDefrag: Review Localized and Canonical Differences",
+                "shortTitle": "Differences"
+            },
+            {
+                "command": "mydfrg.openPreview.terminology",
+                "title": "MyDefrag: Review Terminology",
+                "shortTitle": "Terminology"
+            },
+            {
+                "command": "mydfrg.openPreview.untranslated",
+                "title": "MyDefrag: Review Untranslated Tokens",
+                "shortTitle": "Untranslated Tokens"
+            },
+            {
+                "command": "mydfrg.openPreview.completeness",
+                "title": "MyDefrag: Review Translation Completeness",
+                "shortTitle": "Completeness"
+            },
+            {
                 "command": "mydfrg.hover.disable",
                 "title": "MyDefrag: Turn Off Hover",
                 "icon": "$(eye)"
@@ -437,6 +477,38 @@
                 {
                     "command": "mydfrg.openPreview.annotationsLineNumbersFileHeaders",
                     "group": "1_preview@5"
+                },
+                {
+                    "command": "mydfrg.openPreview.canonical",
+                    "group": "2_translation@1"
+                },
+                {
+                    "command": "mydfrg.openPreview.localized",
+                    "group": "2_translation@2"
+                },
+                {
+                    "command": "mydfrg.openPreview.bilingual",
+                    "group": "3_review@1"
+                },
+                {
+                    "command": "mydfrg.openPreview.semantic",
+                    "group": "3_review@2"
+                },
+                {
+                    "command": "mydfrg.openPreview.differences",
+                    "group": "3_review@3"
+                },
+                {
+                    "command": "mydfrg.openPreview.terminology",
+                    "group": "3_review@4"
+                },
+                {
+                    "command": "mydfrg.openPreview.untranslated",
+                    "group": "3_review@5"
+                },
+                {
+                    "command": "mydfrg.openPreview.completeness",
+                    "group": "3_review@6"
                 }
             ],
             "view/title": [
@@ -565,6 +637,14 @@
         "onCommand:mydfrg.openPreview.annotationsFileHeaders",
         "onCommand:mydfrg.openPreview.annotationsLineNumbers",
         "onCommand:mydfrg.openPreview.annotationsLineNumbersFileHeaders",
+        "onCommand:mydfrg.openPreview.canonical",
+        "onCommand:mydfrg.openPreview.localized",
+        "onCommand:mydfrg.openPreview.bilingual",
+        "onCommand:mydfrg.openPreview.semantic",
+        "onCommand:mydfrg.openPreview.differences",
+        "onCommand:mydfrg.openPreview.terminology",
+        "onCommand:mydfrg.openPreview.untranslated",
+        "onCommand:mydfrg.openPreview.completeness",
         "onCommand:mydfrg.hover.disable",
         "onCommand:mydfrg.hover.enable",
         "onCommand:mydfrg.wordPrediction.disable",
@@ -606,6 +686,7 @@
         "build": "powershell -ExecutionPolicy Bypass -File ./scripts/build-and-deploy.ps1 -SkipInstall",
         "language:catalogs:apps": "node ./build/scripts/generate-electron-component-catalogs.js --write",
         "language:candidate-drafts": "node ./build/scripts/generate-migration-candidate-drafts.js --write",
+        "language:keywords:migrate": "node ./build/scripts/generate-keyword-catalogs.js",
         "language:validate": "node ./build/scripts/build-language.js validate",
         "language:audit-normalized-inputs": "node ./build/scripts/build-language.js audit-normalized-inputs",
         "language:build": "node ./build/scripts/build-language.js build",

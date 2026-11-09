@@ -14,6 +14,8 @@ separate Node language-server process and a client-side preview processor.
 | Tokenizer and parser | `src/server/tokenizer.js`, `src/server/parser.js` | Convert source text into tokens and validate full-script or fragment structure. |
 | Language data | `src/server/languageData.js` | Canonical keywords, parent relationships, and metadata shared by parsing and editor assistance. |
 | Preview processor | `src/preprocess/mydefrag-preprocess.js` | Recursively expand includes and produce annotated merged output. |
+| Translation preview | `src/shared/sourceTranslation.js`, `src/shared/translationPreview.js` | Translate source through canonical syntax, expand translated includes, validate canonical output, and retain source mappings. |
+| Translation review | `src/shared/translationReview.js` | Render bilingual, semantic, difference, terminology, untranslated-token, and completeness views from the translation preview and keyword catalogs. |
 | Diagnostic navigation | `src/diagnostics/` | Load diagnostic snapshots, track review state, render the Explorer tree, and generate investigation prompts. |
 | Shared services | `src/shared/` | Resolve paths, load configuration, write logs, and load generated language catalogs. |
 | Completion modules | `src/completion/` | Build shared context and candidates for client inline and server standard completion. |
@@ -25,7 +27,7 @@ separate Node language-server process and a client-side preview processor.
 ```text
 VSCodium or VS Code
   -> extension host
-     -> client-side links, navigation, inline completion, and preview
+     -> client-side links, navigation, inline completion, preview, and review
      -> LanguageClient over IPC
         -> language server
            -> tokenizer
@@ -65,6 +67,8 @@ make the parser accept localized source keywords. See
 
 - The extension does not execute or distribute MyDefrag.
 - Preview expansion is separate from language-server validation.
+- Review documents are editable untitled plain text and cannot overwrite source
+  unless the developer explicitly saves a separate copy.
 - Diagnostic navigation does not replace or mutate the server's diagnostics.
 - MyDefrag Help and the BNF are reference inputs; runtime behavior belongs to
   the extension source and generated assets.

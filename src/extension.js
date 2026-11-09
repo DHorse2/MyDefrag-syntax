@@ -40,6 +40,11 @@ const {
 const { createHelpCommandTrust } = require('./shared/helpDocumentation');
 const { createFeatureToggleController } = require('./shared/featureToggles');
 const { createLanguageCatalog } = require('./shared/languageCatalog');
+const { buildTranslationPreview } = require('./shared/translationPreview');
+const {
+    REVIEW_VIEW_DEFINITIONS,
+    buildTranslationReview
+} = require('./shared/translationReview');
 const languageData = require('./server/languageData');
 const { CompletionPointProvider } = require('./completion/completionPointProvider');
 const { registerDiagnosticNavigation } = require('./diagnostics/registerDiagnosticNavigation');
@@ -1176,6 +1181,155 @@ async function activate(context) {
             uri => openPreview(uri, mode.id)
         )
     );
+    async function openTranslationPreview(uri, targetLocale, previewKind) {
+        const editor = vscode.window.activeTextEditor;
+        let sourceUri = uri || editor?.document.uri;
+        if (!sourceUri) {
+            vscode.window.showWarningMessage('No active MyDefrag document.');
+            return;
+        }
+        if (sourceUri.scheme === PREVIEW_SCHEME) {
+            const original = new URLSearchParams(sourceUri.query).get('source');
+            if (original) sourceUri = vscode.Uri.parse(original);
+        }
+
+        const result = buildTranslationPreview(sourceUri.fsPath, targetLocale, {
+            rootDir: path.resolve(__dirname, '..')
+        });
+        if (!result.ok) {
+            const detail = result.diagnostics.map(item => item.message).join('\n');
+            await vscode.window.showErrorMessage(`MyDefrag translation preview failed: ${detail}`);
+            return;
+        }
+        if (result.diagnostics.length > 0) {
+            const detail = result.diagnostics.map(item => item.message).join('\n');
+            await vscode.window.showWarningMessage(`MyDefrag translation preview: ${detail}`);
+        }
+
+        const sourceExtension = path.extname(sourceUri.path);
+        const stem = sourceUri.path.slice(0, -sourceExtension.length);
+        const suffix = previewKind === 'canonical'
+            ? 'canonical'
+            : `localized-${targetLocale}`;
+        const query = new URLSearchParams({
+            source: sourceUri.toString(),
+            translationPreview: previewKind,
+            targetLocale,
+            instance: `${Date.now()}-${previewDocumentSequence += 1}`
+        }).toString();
+        const previewUri = sourceUri.with({
+            scheme: PREVIEW_SCHEME,
+            path: `${stem}.preview-${suffix}${sourceExtension}`,
+            query,
+            fragment: ''
+        });
+        let document = await vscode.workspace.openTextDocument(previewUri);
+        document = await vscode.languages.setTextDocumentLanguage(document, 'mydfrg');
+        const edit = new vscode.WorkspaceEdit();
+        edit.insert(document.uri, new vscode.Position(0, 0), result.text);
+        if (!await vscode.workspace.applyEdit(edit)) {
+            throw new Error(`Unable to populate translation preview: ${document.uri.toString()}`);
+        }
+        await vscode.window.showTextDocument(document, vscode.ViewColumn.Active);
+    }
+
+    const previewCanonicalCommand = vscode.commands.registerCommand(
+        'mydfrg.openPreview.canonical',
+        uri => openTranslationPreview(uri, 'en', 'canonical')
+    );
+    async function selectTranslationLocale(placeHolder) {
+        const locales = JSON.parse(fs.readFileSync(
+            path.join(__dirname, '..', 'language', 'locales', 'locales.json'),
+            'utf8'
+        )).locales;
+        const previous = context.workspaceState.get('mydfrg.translationPreview.lastLocale', 'en');
+        const localeItems = locales.map(locale => ({
+            label: `${locale.nativeName} (${locale.id})`,
+            description: `${locale.englishName} · ${locale.status}`,
+            locale: locale.id
+        }));
+        const previousIndex = localeItems.findIndex(item => item.locale === previous);
+        if (previousIndex > 0) {
+            localeItems.unshift(localeItems.splice(previousIndex, 1)[0]);
+        }
+        const selected = await vscode.window.showQuickPick(
+            localeItems,
+            { placeHolder, matchOnDescription: true }
+        );
+        if (!selected) return null;
+        await context.workspaceState.update('mydfrg.translationPreview.lastLocale', selected.locale);
+        return selected.locale;
+    }
+    const previewLocalizedCommand = vscode.commands.registerCommand(
+        'mydfrg.openPreview.localized',
+        async uri => {
+            const selectedLocale = await selectTranslationLocale(
+                'Choose the localized MyDefrag preview language'
+            );
+            if (!selectedLocale) return;
+            await openTranslationPreview(uri, selectedLocale, 'localized');
+        }
+    );
+    async function openTranslationReview(uri, targetLocale, viewKind) {
+        const editor = vscode.window.activeTextEditor;
+        let sourceUri = uri || editor?.document.uri;
+        if (!sourceUri) {
+            vscode.window.showWarningMessage('No active MyDefrag document.');
+            return;
+        }
+        if (sourceUri.scheme === PREVIEW_SCHEME) {
+            const original = new URLSearchParams(sourceUri.query).get('source');
+            if (original) sourceUri = vscode.Uri.parse(original);
+        }
+
+        const result = buildTranslationReview(sourceUri.fsPath, targetLocale, viewKind, {
+            rootDir: path.resolve(__dirname, '..')
+        });
+        if (!result.ok) {
+            const detail = result.diagnostics.map(item => item.message).join('\n');
+            await vscode.window.showErrorMessage(`MyDefrag translation review failed: ${detail}`);
+            return;
+        }
+        if (result.diagnostics.length > 0) {
+            const detail = result.diagnostics.map(item => item.message).join('\n');
+            await vscode.window.showWarningMessage(`MyDefrag translation review: ${detail}`);
+        }
+
+        const sourceExtension = path.extname(sourceUri.path);
+        const stem = sourceUri.path.slice(0, -sourceExtension.length);
+        const query = new URLSearchParams({
+            source: sourceUri.toString(),
+            translationReview: viewKind,
+            targetLocale,
+            instance: `${Date.now()}-${previewDocumentSequence += 1}`
+        }).toString();
+        const reviewUri = sourceUri.with({
+            scheme: PREVIEW_SCHEME,
+            path: `${stem}.review-${viewKind}-${targetLocale}.txt`,
+            query,
+            fragment: ''
+        });
+        let document = await vscode.workspace.openTextDocument(reviewUri);
+        document = await vscode.languages.setTextDocumentLanguage(document, 'plaintext');
+        const edit = new vscode.WorkspaceEdit();
+        edit.insert(document.uri, new vscode.Position(0, 0), result.text);
+        if (!await vscode.workspace.applyEdit(edit)) {
+            throw new Error(`Unable to populate translation review: ${document.uri.toString()}`);
+        }
+        await vscode.window.showTextDocument(document, vscode.ViewColumn.Active);
+    }
+    const translationReviewCommands = REVIEW_VIEW_DEFINITIONS.map(view =>
+        vscode.commands.registerCommand(
+            view.command,
+            async uri => {
+                const targetLocale = await selectTranslationLocale(
+                    `Choose the ${view.label.toLocaleLowerCase('en')} target language`
+                );
+                if (!targetLocale) return;
+                await openTranslationReview(uri, targetLocale, view.id);
+            }
+        )
+    );
     // ─────────────────────────────────────────────────────────────────────────────────
     // Register Diagnostic Explorer
     const diagnosticNavigation = registerDiagnosticNavigation(context);
@@ -1303,6 +1457,8 @@ async function activate(context) {
     context.subscriptions.push(batLinkProvider);
     context.subscriptions.push(openPreviewCommand);
     context.subscriptions.push(...previewModeCommands);
+    context.subscriptions.push(previewCanonicalCommand, previewLocalizedCommand);
+    context.subscriptions.push(...translationReviewCommands);
     context.subscriptions.push(openCmd);
     context.subscriptions.push(configureFolders);
     context.subscriptions.push(openSettings);

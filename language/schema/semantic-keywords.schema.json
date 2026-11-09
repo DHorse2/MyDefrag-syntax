@@ -3,9 +3,17 @@
   "title": "MyDefrag semantic keyword definitions",
   "type": "object",
   "required": [
+    "schemaVersion",
+    "locale",
     "keywords"
   ],
   "properties": {
+    "schemaVersion": {
+      "const": 2
+    },
+    "locale": {
+      "const": "en"
+    },
     "keywords": {
       "type": "array",
       "items": {
@@ -15,7 +23,9 @@
           "canonical",
           "category",
           "parent",
-          "status"
+          "status",
+          "translatable",
+          "visible"
         ],
         "properties": {
           "id": {
@@ -35,6 +45,12 @@
           },
           "status": {
             "$ref": "translation-status.schema.json#/definitions/reviewState"
+          },
+          "translatable": {
+            "type": "boolean"
+          },
+          "visible": {
+            "type": "boolean"
           }
         }
       }

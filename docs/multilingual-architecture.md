@@ -17,7 +17,10 @@
 
 ## Purpose
 
-MyDefrag Syntax now has a repository-owned multilingual foundation. The first phase is intentionally additive: it defines language metadata, catalog schemas, semantic keyword identities, generated runtime catalogs, and validation reports without changing current extension, server, parser, preview, diagnostic, or packaging behavior.
+MyDefrag Syntax has a repository-owned multilingual foundation and a
+non-destructive keyword translation runtime. The parser still consumes
+canonical syntax; localized files are translated only in memory for hover and
+generated preview documents.
 
 The extension remains a standalone VSCodium and VS Code product. It does not require TaylorDo, MCP, Rust services, cloud localization services, online translation APIs, or a database for ordinary operation.
 
@@ -57,11 +60,22 @@ merged additively into these permanent component sources. Generated files under
 `build/language/catalogs/` remain derived and must not be hand-edited; they are
 never the sole durable copy of a translation.
 
+Keyword spellings are separate authored assets:
+
+```text
+language/canonical/semantic-keywords.json
+language/locales/<locale>/keywords.json
+```
+
+Every file contains the same 243 semantic IDs. The 214 source-visible entries
+are translatable; 29 parser-only grammar labels are retained for identity
+completeness with `translatable: false` and `visible: false`.
+
 ## Canonical Versus Localized Source
 
 The parser continues to consume canonical MyDefrag syntax. This phase does not make the parser multilingual.
 
-The intended future pipeline is:
+The implemented preview pipeline is:
 
 ```text
 localized source
@@ -73,6 +87,9 @@ localized source
 ```
 
 User string literals and user-authored comments remain unchanged by keyword translation.
+Paths, macros, include expressions, project variables, whitespace, and line
+endings are also protected. Translation returns text, diagnostics, source
+mappings, and statistics; a failed conversion returns the original text.
 
 ## Component Catalog Loading
 
@@ -116,6 +133,11 @@ Each keyword has a stable semantic ID separate from rendered spelling:
 
 Generated keyword maps enforce one preferred generated spelling per semantic keyword per locale. Duplicate locale spellings are build errors because generated output must be deterministic.
 
+The standalone runtime is `src/shared/sourceTranslation.js`. It matches Unicode
+and multiword spellings longest-first after NFC and locale-aware case
+normalization. Locale-to-locale conversion always passes through canonical
+English.
+
 Input aliases are a future feature. They should not change generated output determinism.
 
 ## Generated And User-Authored Comments
@@ -131,7 +153,17 @@ preview.annotation.includeEnd.text
 
 ## Preview Mode Model
 
-The annotated expanded preview with line numbers remains the default mode.
+The annotated expanded preview with line numbers remains the default original
+mode. Version 0.7 added two independent commands:
+
+- `MyDefrag: Preview Canonical`
+- `MyDefrag: Preview Localized`
+
+Both open editable untitled documents and never save, apply, or overwrite the
+source. Localized preview offers all 18 registered locales and remembers the
+last workspace selection. Each included file is translated before expansion;
+root locale inheritance and child overrides are preserved, while expanded
+output contains one target-language directive.
 
 The declarative mode inventory is in:
 
@@ -139,10 +171,25 @@ The declarative mode inventory is in:
 language/canonical/preview-modes.json
 ```
 
-The inventory defines the five implemented preview variations: raw executable
+The inventory defines the five original preview variations: raw executable
 output and four annotated combinations with optional line numbers and file
 headers. The raw view keeps an executable extension for language-server
 diagnostics; annotated views use `.mydd` or `.mydcd`.
+
+Version 0.8 adds six non-executable review views:
+
+- Bilingual localized and canonical lines.
+- Semantic IDs paired with localized source.
+- Localized and canonical differences.
+- Full terminology with source-use evidence.
+- Untranslated and fallback tokens.
+- Catalog and source completeness.
+
+All six reuse `src/shared/translationPreview.js` and therefore share the same
+canonical translation, include expansion, validation, diagnostics, and source
+mappings. `src/shared/translationReview.js` only renders review text. Review
+documents use editable untitled plain text and cannot be sent to the MyDefrag
+language server as executable code.
 
 ## Project-Scoped Variable Translation
 

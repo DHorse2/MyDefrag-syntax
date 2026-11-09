@@ -838,6 +838,15 @@ function validateLanguageState(state, rootDir = ROOT) {
         addUnique(keywordIds, keyword.id, `keyword id ${keyword.id}`, errors);
         addUnique(keywordCanonicals, normalizeToken(keyword.canonical), `canonical keyword ${keyword.canonical}`, errors);
     }
+    if (keywordIds.size !== 243) {
+        errors.push(`Canonical keyword inventory must contain 243 unique entries; found ${keywordIds.size}`);
+    }
+    const visibleKeywordCount = (state.keywords.keywords || []).filter(
+        keyword => keyword.visible !== false && keyword.translatable !== false
+    ).length;
+    if (visibleKeywordCount !== 214) {
+        errors.push(`Canonical keyword inventory must contain 214 visible translatable entries; found ${visibleKeywordCount}`);
+    }
 
     for (const diagnostic of state.diagnostics.diagnostics || []) {
         requireFields(diagnostic, ['code', 'component', 'severity', 'messageKey', 'status'], `diagnostic:${diagnostic.code || '<missing>'}`, errors);
@@ -889,7 +898,14 @@ function validateLanguageState(state, rootDir = ROOT) {
         if (!localeIds.has(localeId)) {
             errors.push(`Locale catalog exists for unknown locale ${localeId}`);
         }
-        validateLocaleCatalog(localeId, localeCatalog, catalogByKey, keywordIds, errors, warnings);
+        validateLocaleCatalog(
+            localeId,
+            localeCatalog,
+            catalogByKey,
+            new Map((state.keywords.keywords || []).map(keyword => [keyword.id, keyword])),
+            errors,
+            warnings
+        );
     }
 
     for (const [localeId, componentCatalogs] of Object.entries(state.localeComponentCatalogs || {})) {
@@ -1874,11 +1890,21 @@ function buildKeywordMaps(localeId, canonicalKeywords, overrideKeywords) {
             id: keyword.id,
             text: rendered,
             status: override?.status || (localeId === 'en' ? keyword.status : 'draft'),
-            fallbackLocale: override ? null : (localeId === 'en' ? null : 'en')
+            fallbackLocale: Object.prototype.hasOwnProperty.call(override || {}, 'fallbackLocale')
+                ? override.fallbackLocale
+                : (override ? null : (localeId === 'en' ? null : 'en')),
+            translatable: keyword.translatable !== false,
+            visible: keyword.visible !== false
         };
         localeToCanonical[rendered] = {
             id: keyword.id,
-            canonical: keyword.canonical
+            canonical: keyword.canonical,
+            status: override?.status || (localeId === 'en' ? keyword.status : 'draft'),
+            fallbackLocale: Object.prototype.hasOwnProperty.call(override || {}, 'fallbackLocale')
+                ? override.fallbackLocale
+                : (override ? null : (localeId === 'en' ? null : 'en')),
+            translatable: keyword.translatable !== false,
+            visible: keyword.visible !== false
         };
     }
 
@@ -2281,7 +2307,8 @@ function extractStringCandidates(text, options = {}) {
     return candidates;
 }
 
-function validateLocaleCatalog(localeId, localeCatalog, catalogByKey, keywordIds, errors, warnings) {
+function validateLocaleCatalog(localeId, localeCatalog, catalogByKey, keywordsById, errors, warnings) {
+    const keywordIds = new Set(keywordsById.keys());
     if (localeCatalog.locale !== localeId) {
         errors.push(`Locale catalog ${localeId} has mismatched locale field ${localeCatalog.locale}`);
     }
@@ -2304,6 +2331,7 @@ function validateLocaleCatalog(localeId, localeCatalog, catalogByKey, keywordIds
         addUnique(entryKeys, entry.key, `locale ${localeId} catalog key ${entry.key}`, errors);
     }
 
+    const localeKeywordIds = new Set();
     for (const keyword of localeCatalog.keywords || []) {
         requireFields(keyword, ['id', 'text', 'status'], `locale:${localeId}:keyword:${keyword.id || '<missing>'}`, errors);
         if (!keywordIds.has(keyword.id)) {
@@ -2311,6 +2339,34 @@ function validateLocaleCatalog(localeId, localeCatalog, catalogByKey, keywordIds
         }
         if (!VALID_STATUSES.has(keyword.status)) {
             errors.push(`Locale ${localeId} keyword ${keyword.id} has invalid status ${keyword.status}`);
+        }
+        addUnique(localeKeywordIds, keyword.id, `locale ${localeId} keyword id ${keyword.id}`, errors);
+        if (localeId !== 'en' && keyword.fallbackLocale === undefined) {
+            errors.push(`Locale ${localeId} keyword ${keyword.id} must declare fallbackLocale`);
+        }
+        const canonicalKeyword = keywordsById.get(keyword.id);
+        if (canonicalKeyword) {
+            if (keyword.translatable !== canonicalKeyword.translatable
+                || keyword.visible !== canonicalKeyword.visible) {
+                errors.push(`Locale ${localeId} keyword ${keyword.id} visibility flags do not match canonical metadata`);
+            }
+            if (localeId === 'en' && keyword.fallbackLocale !== null) {
+                errors.push(`English keyword ${keyword.id} cannot declare a fallback locale`);
+            }
+            if (localeId !== 'en' && ![null, 'en'].includes(keyword.fallbackLocale)) {
+                errors.push(`Locale ${localeId} keyword ${keyword.id} fallbackLocale must be null or en`);
+            }
+            if (keyword.fallbackLocale === 'en' && keyword.text !== canonicalKeyword.canonical) {
+                errors.push(`Locale ${localeId} keyword ${keyword.id} English fallback text must match ${canonicalKeyword.canonical}`);
+            }
+        }
+    }
+    if (localeKeywordIds.size !== keywordIds.size) {
+        errors.push(`Locale ${localeId} keyword catalog must contain all ${keywordIds.size} entries; found ${localeKeywordIds.size}`);
+    }
+    for (const keywordId of keywordIds) {
+        if (!localeKeywordIds.has(keywordId)) {
+            errors.push(`Locale ${localeId} keyword catalog is missing ${keywordId}`);
         }
     }
 
@@ -2443,6 +2499,16 @@ function loadLocaleCatalogs(
         } else {
             catalogs[name] = emptyLocaleCatalog(name);
         }
+
+        const keywordsPath = path.join(fullPath, 'keywords.json');
+        if (!fs.existsSync(keywordsPath)) {
+            throw new Error(`Locale keyword catalog is missing for ${name}: language/locales/${name}/keywords.json`);
+        }
+        const keywordDocument = readJson(rootDir, path.relative(rootDir, keywordsPath));
+        if (keywordDocument.locale !== name) {
+            throw new Error(`Locale keyword catalog ${name} has mismatched locale ${keywordDocument.locale}`);
+        }
+        catalogs[name].keywords = keywordDocument.keywords || [];
 
         components[name] = {};
         for (const componentId of componentIds) {

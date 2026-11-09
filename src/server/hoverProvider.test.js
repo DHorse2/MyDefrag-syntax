@@ -78,3 +78,46 @@ test('hover recognizes the punctuation-led include directive and displays exact 
 test('hover returns null for words without a Help mapping', () => {
     assert.equal(hoverFor('NotAKeyword()', 'NotAKeyword'), null);
 });
+
+test('hover recognizes localized Unicode multiword phrases and shows canonical Help', () => {
+    const source = [
+        '// @mydfrg-language fr-CA',
+        'Sélection de volume',
+        '  Taille(0, 100)',
+        'Actions sur le volume',
+        'Fin de volume'
+    ].join('\n');
+    const hover = hoverFor(source, 'Sélection de volume');
+
+    assert.ok(hover);
+    assert.match(hover.contents.value, /Localized keyword.*Sélection de volume/);
+    assert.match(hover.contents.value, /Canonical MyDefrag.*VolumeSelect/);
+    assert.match(hover.contents.value, /machine-generated/);
+    assert.match(hover.contents.value, /Scripts \\- VolumeSelect/);
+    assert.equal(source.slice(
+        TextDocument.create('file:///sample.MyD', 'mydfrg', 1, source).offsetAt(hover.range.start),
+        TextDocument.create('file:///sample.MyD', 'mydfrg', 1, source).offsetAt(hover.range.end)
+    ), 'Sélection de volume');
+});
+
+test('hover identifies English fallback status in a localized document', () => {
+    const hover = hoverFor([
+        '// @mydfrg-language fr-CA',
+        'Sélection de volume',
+        '  Mounted(Yes)',
+        'Actions sur le volume',
+        'Fin de volume'
+    ].join('\n'), 'Mounted');
+
+    assert.ok(hover);
+    assert.match(hover.contents.value, /Canonical MyDefrag.*Mounted/);
+    assert.match(hover.contents.value, /English fallback from en/);
+    assert.match(hover.contents.value, /VolumeBoolean \\- Mounted/);
+});
+
+test('hover excludes internal grammar labels even with a valid directive', () => {
+    assert.equal(hoverFor([
+        '// @mydfrg-language fr-CA',
+        'volume_block'
+    ].join('\n'), 'volume_block'), null);
+});

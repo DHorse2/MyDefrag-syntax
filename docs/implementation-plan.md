@@ -16,8 +16,8 @@
   - [V050-04 - Reconcile Documentation And Trackers](#v050-04---reconcile-documentation-and-trackers)
   - [V050-05 - Qualify And Package Version 0.5.0](#v050-05---qualify-and-package-version-050)
 - [Version 0.6.0 - Editor Intelligence](#version-060---editor-intelligence)
-- [Version 0.7.0 - Canonical Language Translation](#version-070---canonical-language-translation)
-- [Version 0.8.0 - Preview Language Workbench](#version-080---preview-language-workbench)
+- [Version 0.7.0 - Non-Destructive Keyword Translation](#version-070---non-destructive-keyword-translation)
+- [Version 0.8.0 - Translation Review Workbench](#version-080---translation-review-workbench)
 - [Version 0.9.0 - Localization And Compatibility Qualification](#version-090---localization-and-compatibility-qualification)
 - [Version 1.0.0 - Public Release](#version-100---public-release)
 - [Version 1.1.0 And Later](#version-110-and-later)
@@ -30,17 +30,22 @@
 
 ## Document Control
 
+<!-- markdownlint-disable MD013 -->
+
 | Field | Value |
 | --- | --- |
-| Document version | 1.3.0 |
+| Document version | 1.6.0 |
 | Status | Current working implementation plan |
 | Baseline date | 2026-11-08 |
 | Project | MyDefrag Syntax |
 | Project root | `D:\Script\MyDefrag-syntax` |
-| Current source version | 0.6.0 |
-| Installed VSCodium extension | `macrodm.mydefrag-syntax@0.6.0` |
-| Version authority | 0.6.0 is repository fact; later assignments remain proposals |
-| Supersedes | No prior consolidated implementation plan |
+| Current source version | 0.8.0 |
+| Installed VSCodium extension | `macrodm.mydefrag-syntax@0.6.0` in the primary profile |
+| Last packaged-host VSCodium smoke | `macrodm.mydefrag-syntax@0.7.0` in an isolated profile |
+| Version authority | 0.8.0 is the implemented working-tree target; 0.9.0 and later remain proposals |
+| Supersedes | Earlier revisions of this file; no competing consolidated plan |
+
+<!-- markdownlint-enable MD013 -->
 
 The stable filename is intentional. Future revisions should update the document
 version and baseline date instead of creating competing plan files.
@@ -61,6 +66,8 @@ execution.
 
 ## Status Language
 
+<!-- markdownlint-disable MD013 -->
+
 | Status | Meaning |
 | --- | --- |
 | Verified | Observed in the repository or reproduced on 2026-11-08 |
@@ -70,30 +77,40 @@ execution.
 | Blocked | Cannot pass its gate until a named defect or decision is resolved |
 | Out of scope | Owned by another project or intentionally excluded from this plan |
 
+<!-- markdownlint-enable MD013 -->
+
 ## Current Baseline
+
+<!-- markdownlint-disable MD013 -->
 
 | Area | Verified status | Consequence |
 | --- | --- | --- |
 | Task queue | Idle; zero queued tasks | This plan is an ad hoc authorized document, not a consumed queue task |
-| Git branch | `main` at `b0c970bc`; one commit ahead of `origin/main` | The local 0.5.0 release commit has not been pushed |
-| Working tree | The current diff is the scoped 0.6.0 editor-intelligence implementation | The 0.5.0 baseline is recoverable in `b0c970bc` |
+| Git branch | `main` at `26455349`, zero commits ahead of or behind `origin/main` | No commit or push is authorized by this plan update |
+| Working tree | 99 entries: 73 tracked modifications and 26 untracked paths for the layered 0.7.0 keyword-translation and 0.8.0 review-workbench implementations | Preserve this scope and classify generated inputs and outputs before staging |
 | Prior broad diff | The former 426-entry working tree is contained in `8ebf3b77` | New work no longer overlaps an uncommitted repository-wide diff |
-| Product version | `package.json` declares 0.6.0 | 0.6.0 is the active editor-intelligence target |
-| Installed extension | VSCodium has 0.6.0 installed from the exact inspected VSIX | Isolated packaged-host activation and language-server smoke passed with zero targeted runtime errors |
-| Focused extension tests | 17 of 17 passed | Preview, manifest, server, and URI checks passed in the focused lane |
+| Product version | Both package manifests declare 0.8.0 | 0.8.0 is the active review-workbench target |
+| Primary installed extension | VSCodium 1.135.06055 x64 reports `macrodm.mydefrag-syntax@0.6.0` | Source, current package, and the primary installed profile intentionally differ until installation is authorized |
+| Packaged-host smoke | An isolated VSCodium profile qualified 0.7.0 from its exact inspected VSIX | 0.8.0 was packaged and inspected but not installed because installation was not authorized |
+| Focused translation tests | 30 of 30 passed | Catalog, translation, preview, hover, and manifest behavior passed |
+| Focused 0.8.0 review tests | 18 of 18 passed | Translation preview, all six review renderers, and the thirteen-command manifest passed |
 | Editor-intelligence tests | 10 of 10 passed | Completion, directive actions, stale-edit rejection, and live LSP ownership pass the dedicated harness lane |
-| Complete 0.6.0 source gate | 339 of 339 named tests passed across 149 executions | All 16 syntax, function, language, app, and coverage checks passed |
-| Node coverage | 76.82% lines, 60.58% branches, 67.86% functions | The new completion and directive modules have 93.10-100% line coverage and 100% function coverage |
+| Complete 0.8.0 source gate | 378 of 378 named tests passed across 159 executions | All 16 syntax, function, language, app, and coverage checks passed |
+| Node coverage | 79.55% lines, 63.92% branches, 73.64% functions | The new review renderer has 98.08% line, 89.00% branch, and 100% function coverage |
 | Locale Maintenance tests | 67 of 67 passed | Runtime-syntax protection is repaired |
-| JavaScript syntax checks | 11 of 11 passed | The checked changed entry points are syntactically valid |
+| JavaScript syntax checks | 101 of 101 passed | Extension, language-app, tooling, and test JavaScript parsed successfully |
 | Language validation | Passed with zero errors and one warning | Normalized-input cleanup remains open |
-| Localization data | 18 locales and 10 components | The multilingual foundation exists |
+| Localization data | 18 locales, 10 components, and 243 keyword IDs per locale | 214 entries are source-visible and 29 internal grammar labels are hidden |
 | Non-English approval | 14 locales require native review; 3 are draft | No non-English locale is release-approved |
 | Generated localization | 12,098 machine-generated and 1,649 fallback entries | Human review and fallback reduction remain material work |
-| Normalized-input audit | 191 occurrences in 32 files | The audit remains partial; the corrected runtime-token boundary exposes one additional `data` occurrence |
+| Normalized-input audit | The latest validation gate reported 191 occurrences in 32 files; the retained JSON snapshot still records 190 | The audit remains partial and the generated report discrepancy must be reconciled before release |
 | Help review | 142 converted topics are marked pending | Conversion exists, but independent review is unfinished |
-| Historical 0.5.0 package qualification | The generic artifact path held 0.5.0 at qualification time and now holds 0.6.0 | 0.5.0 was 2,509,402 bytes with SHA-256 `715665186F261F395A94275413224665989B810828C3AC721591CF9ADB820853` |
+| Historical 0.5.0 package qualification | The generic artifact path held 0.5.0 at qualification time and has since been replaced | 0.5.0 was 2,509,402 bytes with SHA-256 `715665186F261F395A94275413224665989B810828C3AC721591CF9ADB820853` |
 | 0.6.0 packaged artifact | `artifacts\mydefrag-syntax-0.6.0-Release.vsix` | 2,513,966 bytes; 1,521 files; SHA-256 `763D7CFF4C196601BDA2AE33B4987FB6115E7756A78102AD06BBB9BB375C7BCD` |
+| Historical 0.7.0 package qualification | The generic artifact path held 0.7.0 at qualification time and now holds 0.8.0 | 2,722,312 bytes; 1,578 files; SHA-256 `F0F3AFA2870A2A8DEA700700C990B9528891E5813E1646D3442E25004BCA24B9` |
+| 0.8.0 packaged artifact | `artifacts\mydefrag-syntax-Release.vsix` | 2,726,131 bytes; 1,579 files; SHA-256 `C13017B0571F140B4EBF7D1FA47C820C88B0E519C3085E58B8165CC474298932` |
+
+<!-- markdownlint-enable MD013 -->
 
 ## Product And Repository Boundaries
 
@@ -124,34 +141,48 @@ than fixed through duplicated code here.
 
 ## Version Strategy
 
-Version 0.6.0 is currently declared by the repository. Later version targets
-remain proposed sequencing boundaries and may be split or combined after
-review.
+Version 0.8.0 is currently declared by the repository working tree. The 0.5.0
+through 0.8.0 assignments are implemented history or current fact. Version
+0.9.0 and later remain proposed sequencing boundaries and may be split or
+combined after review.
 
-| Proposed target | Theme | Entry condition | Exit condition |
-| --- | --- | --- | --- |
-| 0.5.0 | Stabilization and integration | Current dirty working tree | Clean required tests, reconciled scope, fresh verified VSIX |
-| 0.6.0 | Editor intelligence | 0.5.0 qualified | LSP completion and safe code-action foundation qualified |
-| 0.7.0 | Canonical language translation | Stable editor contracts | Deterministic localized-to-canonical conversion qualified |
-| 0.8.0 | Preview language workbench | Translation service qualified | Canonical, localized, bilingual, semantic, and difference previews qualified |
-| 0.9.0 | Localization and compatibility qualification | Feature-complete pre-release | Native-review, project-symbol, compatibility, and low-resource gates resolved |
-| 1.0.0 | Public release | Release candidate accepted | Documentation, package, install, and publication gates complete |
-| 1.1.0+ | Post-release evolution | 1.0.0 released | Feedback-driven maintenance and approved enhancements |
+<!-- markdownlint-disable MD013 -->
+
+| Target | Theme | Current status | Entry condition | Exit condition |
+| --- | --- | --- | --- | --- |
+| 0.5.0 | Stabilization and integration | Completed and qualified | Broad uncommitted baseline | Clean required tests, reconciled scope, fresh verified VSIX |
+| 0.6.0 | Editor intelligence | Completed and qualified | 0.5.0 qualified | LSP completion and safe code-action foundation qualified |
+| 0.7.0 | Non-destructive keyword translation | Implemented; source, package, and isolated-host qualified | Stable editor contracts | Canonical and selected-locale previews plus bilingual hover qualified |
+| 0.8.0 | Translation review workbench | Implemented; source and package qualified, packaged-host smoke pending | Translation service qualified | Review views qualify in source/package gates and the exact VSIX passes the isolated-host workflow matrix |
+| 0.9.0 | Localization and compatibility qualification | Proposed | 0.8.0 worktree recoverable and exact package qualified in an authorized host | Native-review, project-symbol, compatibility, and low-resource gates resolved |
+| 1.0.0 | Public release | Planned; not release-ready | Release candidate accepted | Documentation, package, install, and publication gates complete |
+| 1.1.0+ | Post-release evolution | Proposed | 1.0.0 released | Feedback-driven maintenance and approved enhancements |
+
+<!-- markdownlint-enable MD013 -->
 
 ## Implementation Order
 
 Work should proceed in this order:
 
-1. Preserve and classify the current working tree.
-2. Repair the two reproducible Locale Maintenance test failures.
-3. Correct entry-root include resolution and add regression coverage.
-4. Reconcile stale documentation, trackers, generated outputs, and project
-   ownership.
-5. Run the complete 0.5.0 source gate.
-6. Build and inspect the exact 0.5.0 VSIX.
-7. Install and smoke-test the VSIX only when installation is authorized.
-8. Commit or publish only after explicit authorization.
-9. Start 0.6.0 feature work only after the 0.5.0 baseline is recoverable.
+1. Preserve and classify the current 99-entry 0.7.0 and 0.8.0 working-tree
+   scope, including authoritative language inputs and generated outputs.
+2. Reconcile the multilingual roadmap checkboxes and the 191-versus-190
+   normalized-input report discrepancy without regenerating unrelated output.
+3. Install and smoke-test the exact 0.8.0 VSIX in an isolated VSCodium profile
+   only after installation is explicitly authorized.
+4. Approve the 0.7.0 and 0.8.0 staging and checkpoint strategy before starting
+   overlapping 0.9.0 implementation; commit and push remain separate approval
+   boundaries.
+5. Approve or revise the 0.9.0 boundary, release-target locales, Help-review
+   gate, and authoritative issue tracker.
+6. Implement the remaining safe source-conversion actions, project symbol
+   indexing, and collision-safe variable translation.
+7. Generate and validate the French (Quebec) TaylorDo source tree without
+   crossing the TaylorDo runtime-ownership boundary.
+8. Complete native-review, normalized-input, Unicode, right-to-left,
+   compatibility, offline, and low-resource qualification.
+9. Run the full 0.9.0 source and package gates, then select 1.0.0 release work
+   from retained evidence.
 
 ## Version 0.5.0 - Stabilization And Integration
 
@@ -461,9 +492,9 @@ Implementation evidence:
 - All eight VSCodium processes started for the packaged-host smoke were closed;
   no VSCodium process remained afterward.
 
-## Version 0.7.0 - Canonical Language Translation
+## Version 0.7.0 - Non-Destructive Keyword Translation
 
-Status: Proposed from the existing multilingual roadmap.
+Status: Implemented.
 
 Objectives:
 
@@ -475,6 +506,9 @@ Objectives:
 - Preserve strings, comments, paths, macros, formatting, include relationships,
   and source mappings.
 - Reject ambiguous or colliding keyword translations.
+- Provide `MyDefrag: Preview Canonical` and `MyDefrag: Preview Localized` as
+  editable generated documents without changing source.
+- Provide bilingual localized/canonical hover with review or fallback status.
 
 Acceptance criteria:
 
@@ -483,15 +517,38 @@ Acceptance criteria:
 - No translation path uses unrestricted global search and replace.
 - Unsupported or ambiguous input produces evidence-based diagnostics without
   modifying source.
+- Every registered locale has a complete 243-entry keyword file: 214 visible
+  source keywords and 29 hidden internal grammar labels.
+- Included files inherit the root locale unless they declare one valid local
+  override; child directives are consumed in expanded output.
 
-## Version 0.8.0 - Preview Language Workbench
+Validation evidence:
 
-Status: Proposed from the existing multilingual roadmap.
+- `npm run language:validate`: passed with zero errors and the existing
+  normalized-input warning.
+- `npm run test:all`: all 368 named tests passed across 156 executions and all
+  16 selected checks.
+- `npm run pack:vsix`: produced a 2,722,312-byte package with 1,578 entries;
+  both embedded manifests declare 0.7.0.
+- Package inspection confirmed runtime keyword maps, the translation service,
+  the translation preview service, and locale registry are included; tests and
+  `package-lock.json` are excluded.
+- An isolated VSCodium profile installed `macrodm.mydefrag-syntax@0.7.0`,
+  activated it on `onLanguage:mydfrg`, initialized the language server, and
+  produced zero targeted extension errors. Evidence is under
+  `artifacts\vscodium-smoke-0.7.0\run-20261108-190759\profile\logs`.
+- The packaged artifact SHA-256 is
+  `F0F3AFA2870A2A8DEA700700C990B9528891E5813E1646D3442E25004BCA24B9`.
 
-Retain the five current preview variations and add separate semantic purposes:
+## Version 0.8.0 - Translation Review Workbench
 
-- Canonical executable preview.
-- Localized preview.
+Status: Implemented and source/package qualified. Installation and the
+packaged-host workflow matrix remain open because installation was not
+authorized.
+
+Retain the five original preview variations and the 0.7 canonical and localized
+previews, then add separate review purposes:
+
 - Bilingual localized and canonical preview.
 - Semantic-ID preview.
 - Difference preview.
@@ -507,12 +564,55 @@ Acceptance criteria:
 - Preview modes use the same canonical translation service as source conversion.
 - Missing and circular includes remain visible and testable.
 
+Implementation evidence:
+
+- The single Preview submenu now exposes thirteen commands: five original
+  include views, two executable translation previews, and six non-executable
+  review views.
+- Bilingual, semantic-ID, and difference output retains source file, line, and
+  column evidence where a mapping exists. Terminology rows retain first-use
+  locations, and generated-only review content is labeled.
+- Terminology and untranslated-token views use all 214 visible, translatable
+  entries for the selected locale. Completeness reports catalog status,
+  fallback use, and expanded-source coverage.
+- Missing and circular include directives remain in executable output with
+  stable diagnostics; no generated comment annotations are inserted.
+- The focused translation-preview, review, and manifest command passed all 18
+  named tests.
+- `npm run test:all` passed all 378 named tests across 159 executions and all
+  16 selected checks.
+- `npm run language:validate` passed with zero errors and the existing partial
+  normalized-input warning for 191 occurrences in 32 files.
+- `npm run pack:vsix` produced a 2,726,131-byte package with 1,579 entries.
+  Package inspection confirmed version 0.8.0 in both manifests, included
+  `src/shared/translationReview.js`, and excluded tests and `package-lock.json`.
+- The packaged artifact SHA-256 is
+  `C13017B0571F140B4EBF7D1FA47C820C88B0E519C3085E58B8165CC474298932`.
+- Installation and packaged-host runtime smoke were not run because this task
+  did not authorize installation.
+
 ## Version 0.9.0 - Localization And Compatibility Qualification
 
 Status: Proposed pre-release qualification.
 
+Entry state:
+
+- The 0.8.0 source and package gates pass, but the exact 0.8.0 VSIX has not been
+  installed or exercised in a packaged host.
+- The 0.7.0 and 0.8.0 implementation remains an uncommitted 99-entry working
+  tree and must be made recoverable before overlapping feature work begins.
+- The multilingual roadmap still marks implemented Phase 3 conversion tasks as
+  incomplete, and the normalized-input gate and retained JSON report disagree
+  by one occurrence.
+
 Objectives:
 
+- Qualify the exact 0.8.0 package in an isolated VSCodium profile after explicit
+  installation authorization.
+- Reconcile roadmap, tracker, generated-report, and user-documentation claims
+  against the implemented 0.8.0 behavior.
+- Add deterministic source conversion actions only after preview output and
+  diagnostics prove the proposed edit is safe.
 - Build declaration and reference indexing for project-scoped variables.
 - Assign stable symbol identities and translate declarations and references
   without collisions.
@@ -527,8 +627,34 @@ Objectives:
 - Test Windows 8+ compatibility, offline operation, low-memory operation, and
   component-only catalog loading.
 
+Implementation sequence:
+
+1. Protect the current working-tree baseline and separate authored language
+   inputs, generated keyword files, runtime maps, source, tests, and documents
+   into reviewable groups.
+2. With installation authorization, install the exact hashed 0.8.0 VSIX in an
+   isolated profile and exercise activation, diagnostics, hover, all thirteen
+   Preview submenu commands, and missing and circular include behavior.
+3. Reconcile the canonical multilingual roadmap, feature and installation
+   guides, trackers, and generated audit summaries with the validated package.
+4. Implement preview-backed file conversion actions and safe project symbol
+   indexing before enabling declaration and reference rewrites.
+5. Generate the French (Quebec) TaylorDo tree as a reviewable output, validate
+   canonical round-trip behavior, and leave real TaylorDo execution to its
+   owning project.
+6. Resolve or explicitly defer fallback, machine-generated, normalized-input,
+   native-review, Unicode, right-to-left, compatibility, offline, and
+   low-resource findings.
+7. Re-run the full source, package-inventory, package, and packaged-host gates
+   on one exact candidate.
+
 Acceptance criteria:
 
+- The exact 0.8.0 package passes the authorized isolated-host workflow matrix
+  before 0.9.0 feature work begins; without installation authorization, the
+  0.9.0 entry gate remains pending rather than waived.
+- Active roadmaps and generated reports agree with current implementation and
+  validation results.
 - Release-target locales have an explicit approved or deferred status.
 - Variable translation preserves declaration/reference identity across includes.
 - Canonical output remains the only execution target supplied to MyDefrag.
@@ -585,6 +711,8 @@ as a commitment before 1.0 is released.
 
 ## Validation Gates
 
+<!-- markdownlint-disable MD013 -->
+
 | Gate | Required command or activity | Required result |
 | --- | --- | --- |
 | JavaScript syntax | `npm run test:scripts` | Zero syntax failures |
@@ -599,6 +727,8 @@ as a commitment before 1.0 is released.
 | VSIX package | `npm run pack:vsix` | Exact expected artifact exists and is fresh |
 | Development Host | Run Extension configuration | Activation and editor workflows pass |
 | Packaged host | Install exact VSIX | Installed version and smoke workflows pass |
+
+<!-- markdownlint-enable MD013 -->
 
 Tests that write reports or generated outputs must be run only after the
 working-tree baseline is captured. Any post-test change must be classified as
@@ -631,40 +761,46 @@ Release evidence must identify:
 
 ## Risks And Controls
 
+<!-- markdownlint-disable MD013 -->
+
 | Risk | Current evidence | Control |
 | --- | --- | --- |
-| Loss of uncommitted work | 426 Git status entries | Inventory and classify before staging, moving, or deleting |
-| Generated-source confusion | Large language catalog and report diffs | Identify authoritative inputs and reproduce outputs |
+| Loss of uncommitted work | 99 Git status entries: 73 tracked modifications and 26 untracked paths | Preserve the current baseline and classify every path before staging, moving, or deleting |
+| Generated-source confusion | 18 locale keyword files and 36 runtime maps are generated from canonical inputs and locale overrides | Stage authoritative inputs, generator changes, and reproducible outputs as one reviewed unit |
 | Cross-project duplication | Language Maintenance moved to `D:\MdmLocalize` | Route application-owned issues to one project |
-| False preview paths | Child-directory include rebasing | Preserve immutable entry root and add nested fixtures |
-| Translation corruption | Two runtime-syntax protection failures | Share token contract and require exact restoration |
+| Include-resolution regression | Entry-root preservation now passes nested mixed-extension fixtures | Retain immutable entry-root tests in every preview and translation gate |
+| Translation corruption | Runtime-syntax protection now passes all 67 Locale Maintenance tests | Keep one shared token contract and require exact restoration and round-trip tests |
 | Unreviewed localization | 12,098 machine-generated entries | Native-review status and release-target criteria |
-| Stale plans | Implemented features remain unchecked in older plans | Reconcile facts before scheduling later versions |
-| Incomplete runtime proof | Process entry points lack packaged-host coverage | Add Extension Host and installed-VSIX lanes |
+| Roadmap drift | The multilingual Phase 3 task list still marks implemented conversion work incomplete | Reconcile active checklists against source and retained test evidence before 0.9.0 starts |
+| Generated-report drift | Latest validation reports 191 normalized-input occurrences while retained JSON records 190 | Regenerate from the authoritative inputs, review the one-item delta, and retain matching evidence |
+| Installed-version skew | Source and package are 0.8.0, the primary profile is 0.6.0, and the latest isolated-host smoke is 0.7.0 | Qualify the exact 0.8.0 VSIX in an isolated profile after explicit installation authorization |
 | Documentation overclaim | Converted Help has 142 pending reviews | Separate conversion from independent review |
 | Line-ending churn | Git reports widespread LF-to-CRLF warnings | Review attributes and avoid unrelated normalization |
 | Unauthorized publication | Publish scripts and credentials can affect external systems | Require explicit approval for GitHub or Open VSX writes |
+
+<!-- markdownlint-enable MD013 -->
 
 ## Decisions Required
 
 The following decisions are required before the proposed version map becomes a
 release commitment:
 
-1. Approve or revise the proposed 0.6.0 through 0.9.0 version boundaries.
-2. Decide whether LSP completion is server-owned, client-owned, or deliberately
-   split by capability.
-3. Define which locales must be native-reviewed for 1.0.0.
-4. Decide whether review of all 142 converted Help topics blocks 1.0.0.
-5. Select the authoritative issue tracker after `ToDo.txt` ownership triage.
-6. Approve the staging and commit grouping for the current working tree.
-7. Authorize installation, Git commit, Git push, GitHub release, and Open VSX
+1. Approve or revise the proposed 0.9.0 version boundary.
+2. Define which locales must be native-reviewed for 1.0.0.
+3. Decide whether review of all 142 converted Help topics blocks 1.0.0.
+4. Select the authoritative issue tracker after `ToDo.txt` ownership triage.
+5. Approve the staging and checkpoint grouping for the current 0.7.0 and 0.8.0
+   working tree.
+6. Authorize isolated installation and packaged-host smoke of the exact 0.8.0
+   VSIX when that gate should run.
+7. Authorize Git commit, Git push, GitHub release, and Open VSX
    publication separately when those actions are desired.
 
 ## Completion Definition
 
 This implementation program is complete when:
 
-- The current 0.5.0 working tree has been reconciled and qualified.
+- The current release working tree has been reconciled and qualified.
 - Every shipped version passes its defined source and packaged-host gates.
 - Versioned scope, documentation, package contents, and installed behavior agree.
 - Localization status distinguishes approved, native-review-required, draft,
@@ -684,11 +820,16 @@ This plan was built from the following current project evidence:
 - [`MyDefrag-syntax ToDo.md`](<../MyDefrag-syntax ToDo.md>)
 - [`MyDefrag-Multilingual-Feature-Project.md`](../MyDefrag-Multilingual-Feature-Project.md)
 - [`testing.md`](testing.md)
-- [`FEATURES.md`](FEATURES.md)
-- [`INSTALL.md`](INSTALL.md)
+- [`features.md`](features.md)
+- [`install.md`](install.md)
 - [`REVIEW-INDEX.md`](<MyDefrag Help/REVIEW-INDEX.md>)
 - [`mydefrag-preprocess.js`](../src/preprocess/mydefrag-preprocess.js)
 - [`server.js`](../src/server/server.js)
+- [`sourceTranslation.js`](../src/shared/sourceTranslation.js)
+- [`translationPreview.js`](../src/shared/translationPreview.js)
+- [`translationReview.js`](../src/shared/translationReview.js)
 - [`translation-completeness.json`](../build/language/reports/translation-completeness.json)
 - [`normalized-input-audit.json`](../build/language/reports/normalized-input-audit.json)
 - [2026-11-08 development-status execution record](../.AI/runs/2026-11-07/Ad-hoc-prompt_20261107-1837_6ed0c0d9/execution-record.md)
+- [2026-11-08 version 0.7.0 execution record](../.AI/runs/2026-11-08/Implement-the-proposed-plan_20261108-1951_fbd90970/execution-record.md)
+- [2026-11-08 version 0.8.0 execution record](../.AI/runs/2026-11-08/Ad-hoc-prompt_20261108-2035_bd326cde/execution-record.md)

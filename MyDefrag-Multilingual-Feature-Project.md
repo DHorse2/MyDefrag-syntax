@@ -92,8 +92,8 @@ Verified against the repository on 2026-11-08:
 | Components | 10 canonical components: diagnostic explorer, docs, extension, locales, package, parser, preview, server, tooling, and translator |
 | Keyword maps | 36 generated canonical-to-locale and locale-to-canonical maps |
 | French (Quebec) | `fr-CA` metadata, component catalogs, generated catalogs, and runtime coverage exist; native review remains required |
-| Preview | Five include-expansion rendering variants exist: one raw executable view and four annotation combinations |
-| Preview language workbench | Canonical, localized, bilingual, semantic, and difference language views remain planned; the five current rendering variants do not claim those semantics |
+| Preview | Thirteen views exist: five include-expansion variants, two executable translation previews, and six non-executable translation-review views |
+| Preview language workbench | Canonical, localized, bilingual, semantic, difference, terminology, untranslated-token, and completeness views are implemented as editable untitled documents |
 | Translation report | 14 non-English locales require native review, 3 are draft, 1,649 entries use fallback text, and 12,098 are machine-generated |
 | Help review | All 142 converted Help topics remain `pending` in `docs\MyDefrag Help\REVIEW-INDEX.md` |
 
@@ -380,6 +380,13 @@ Required preview modes include:
 | Difference | Source compared with translated or canonical output |
 
 The existing annotated mode remains useful, but some modes must open code only.
+
+Version 0.7 implements the Canonical and Localized rows as editable generated
+documents. They use complete 243-entry per-locale keyword catalogs, validate
+canonical output before display, translate includes before expansion, and never
+write back to `.MyD` or `.MyDc` source. Version 0.8 implements Bilingual,
+Semantic, Difference, Terminology, Untranslated Tokens, and Completeness as
+non-executable review views with source tracing where practical.
 
 This enables additional linguistic features:
 
@@ -759,8 +766,8 @@ Goals:
 
 ### Phase 4 — Preview Language Workbench
 
-Status: Partially implemented. Raw and annotated include-expansion views exist;
-the language-conversion and linguistic-review views below remain planned.
+Status: Implemented for include expansion, executable translation previews, and
+the six translation-review views.
 
 Goals:
 
@@ -904,11 +911,11 @@ Status: Partially implemented.
 Status: Partially implemented.
 
 - [x] Add the raw executable, code-only preview mode.
-- [ ] Add canonical preview mode.
-- [ ] Add localized preview mode.
-- [ ] Add bilingual preview mode.
-- [ ] Add semantic and difference preview modes.
-- [ ] Add terminology, untranslated-token, and completeness review features.
+- [x] Add canonical preview mode.
+- [x] Add localized preview mode.
+- [x] Add bilingual preview mode.
+- [x] Add semantic and difference preview modes.
+- [x] Add terminology, untranslated-token, and completeness review features.
 
 ### Phase 5 Tasks — Code Actions and Fix All
 

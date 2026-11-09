@@ -6,7 +6,7 @@ const patterns = [
     'artifacts', 'data', 'runs', 'Status',
     'doc', 'lib', 'coverage', 'dist', 'out', 'tmp', 'temp',
     'build/mdl-locale-app', 'build/scripts', 'build/shared',
-    'build/language/keyword-maps', 'build/language/reports',
+    'build/language/reports',
     'build/language/translation', 'build/language/variable-maps',
     'build/language/*.md', 'build/language/*.zip',
     'docs/**',

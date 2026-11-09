@@ -29,11 +29,13 @@ test('VSIX packaging keeps runtime assets and excludes local build evidence', ()
     assert.equal(ignorePatterns.has('**/*.test.js'), true);
     assert.equal(ignorePatterns.has('build/mdl-locale-app'), true);
     assert.equal(ignorePatterns.has('build/language/reports'), true);
+    assert.equal(ignorePatterns.has('build/language/keyword-maps'), false);
     assert.equal(ignorePatterns.has('!docs/MyDefrag Help/**'), true);
     assert.equal(ignorePatterns.has('node_modules'), false);
 
     for (const runtimePath of [
         'build/language/catalogs/en/extension.json',
+        'build/language/keyword-maps/en-canonical-to-locale.json',
         'docs/MyDefrag Help/language/Scripts/Macros.md',
         'node_modules/vscode-languageclient/node.js',
         'snippets/mydfrg.code-snippets',
@@ -93,13 +95,21 @@ test('menu command references resolve to contributed commands', () => {
     }
 });
 
-test('Preview occupies one context-menu line and exposes five submenu variants', () => {
+test('Preview occupies one context-menu line and exposes thirteen submenu variants', () => {
     const previewCommands = [
         'mydfrg.openPreview.raw',
         'mydfrg.openPreview.annotations',
         'mydfrg.openPreview.annotationsFileHeaders',
         'mydfrg.openPreview.annotationsLineNumbers',
-        'mydfrg.openPreview.annotationsLineNumbersFileHeaders'
+        'mydfrg.openPreview.annotationsLineNumbersFileHeaders',
+        'mydfrg.openPreview.canonical',
+        'mydfrg.openPreview.localized',
+        'mydfrg.openPreview.bilingual',
+        'mydfrg.openPreview.semantic',
+        'mydfrg.openPreview.differences',
+        'mydfrg.openPreview.terminology',
+        'mydfrg.openPreview.untranslated',
+        'mydfrg.openPreview.completeness'
     ];
     const submenu = manifest.contributes.submenus.find(item => item.id === 'mydfrg.preview');
     assert.deepEqual(submenu, { id: 'mydfrg.preview', label: 'Preview' });
@@ -127,7 +137,15 @@ test('Preview occupies one context-menu line and exposes five submenu variants',
             'Annotations',
             'Annotations + File Headers',
             'Annotations + Line Numbers',
-            'Annotations + Line Numbers + File Headers'
+            'Annotations + Line Numbers + File Headers',
+            'Canonical',
+            'Localized',
+            'Bilingual',
+            'Semantic IDs',
+            'Differences',
+            'Terminology',
+            'Untranslated Tokens',
+            'Completeness'
         ]
     );
 });

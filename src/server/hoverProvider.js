@@ -9,8 +9,35 @@ const {
     createHelpCommandUri,
     renderHelpMarkdown
 } = require('../shared/helpDocumentation');
+const {
+    findKeywordAtOffset,
+    inspectDirective,
+    loadTranslationIndex,
+    translateSource
+} = require('../shared/sourceTranslation');
 
 const DEFAULT_EXTENSION_ROOT = path.resolve(__dirname, '..', '..');
+let defaultTranslationIndex;
+
+function getTranslationIndex(options) {
+    if (options.translationIndex) return options.translationIndex;
+    defaultTranslationIndex ||= loadTranslationIndex({ rootDir: options.extensionRoot || DEFAULT_EXTENSION_ROOT });
+    return defaultTranslationIndex;
+}
+
+function localizedKeywordAtPosition(document, position, options) {
+    const text = document.getText();
+    const index = getTranslationIndex(options);
+    if (index.errors.length > 0) return null;
+    const localeIds = new Map(index.localeRegistry.map(locale => [locale.id.toLocaleLowerCase('en'), locale.id]));
+    const directive = inspectDirective(text, localeIds);
+    if (directive.error) return null;
+    return {
+        keyword: findKeywordAtOffset(text, document.offsetAt(position), directive.locale, index),
+        locale: directive.locale,
+        index
+    };
+}
 
 /**
  * Build an LSP hover from the converted MyDefrag Help page for the word under
@@ -24,12 +51,30 @@ const DEFAULT_EXTENSION_ROOT = path.resolve(__dirname, '..', '..');
 function provideHelpHover(document, position, options = {}) {
     if (!document || !position) return null;
 
-    const word = wordAtPosition(document, position);
+    const localized = localizedKeywordAtPosition(document, position, options);
+    const word = localized?.keyword || wordAtPosition(document, position);
     if (!word) return null;
 
-    const context = inferHelpContext(document.getText(), document.offsetAt(position), word.text);
-    let helpDocuments = getKeywordHelpDocuments(word.text, context);
-    const predefined = isPredefinedIdentifier(word.text);
+    const canonicalText = localized?.keyword?.canonical || word.text;
+    let contextText = document.getText();
+    let contextOffset = document.offsetAt(position);
+    if (localized?.keyword) {
+        const canonicalDocument = translateSource(contextText, {
+            index: localized.index,
+            targetLocale: 'en',
+            sourceUri: document.uri
+        });
+        const mapped = canonicalDocument.mappings.find(mapping =>
+            mapping.input.start === word.start && mapping.input.end === word.end
+        );
+        if (canonicalDocument.ok && mapped) {
+            contextText = canonicalDocument.text;
+            contextOffset = mapped.output.start;
+        }
+    }
+    const context = inferHelpContext(contextText, contextOffset, canonicalText);
+    let helpDocuments = getKeywordHelpDocuments(canonicalText, context);
+    const predefined = isPredefinedIdentifier(canonicalText);
 
     if (predefined) {
         helpDocuments = [{
@@ -39,14 +84,20 @@ function provideHelpHover(document, position, options = {}) {
         }];
     }
 
-    if (helpDocuments.length === 0) return null;
-
-    const value = renderHelpMarkdown(helpDocuments, {
+    const helpValue = renderHelpMarkdown(helpDocuments, {
         extensionRoot: options.extensionRoot || DEFAULT_EXTENSION_ROOT,
         linkForPage(page) {
             return createHelpCommandUri(page.path);
         }
     });
+    const localizedValue = localized?.keyword
+        ? [
+            `**Localized keyword:** \`${word.text}\` (${localized.locale})`,
+            `**Canonical MyDefrag:** \`${canonicalText}\``,
+            `**Translation status:** ${word.fallbackLocale ? `English fallback from ${word.fallbackLocale}` : word.status}`
+        ].join('  \n')
+        : '';
+    const value = [localizedValue, helpValue].filter(Boolean).join('\n\n---\n\n');
     if (!value) return null;
 
     return {

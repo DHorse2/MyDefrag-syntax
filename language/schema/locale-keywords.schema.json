@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MyDefrag authored locale keyword catalog",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "locale",
+    "status",
+    "keywords"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 2
+    },
+    "locale": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "translation-status.schema.json#/definitions/reviewState"
+    },
+    "keywords": {
+      "type": "array",
+      "minItems": 243,
+      "maxItems": 243,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "status",
+          "fallbackLocale",
+          "translatable",
+          "visible"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "$ref": "translation-status.schema.json#/definitions/reviewState"
+          },
+          "fallbackLocale": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "translatable": {
+            "type": "boolean"
+          },
+          "visible": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

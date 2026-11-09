@@ -1,122 +1,1946 @@
 {
+  "*": {
+    "fallbackLocale": null,
+    "id": "keyword.multiply",
+    "status": "approved",
+    "text": "*",
+    "translatable": true,
+    "visible": true
+  },
+  "+": {
+    "fallbackLocale": null,
+    "id": "keyword.plus",
+    "status": "approved",
+    "text": "+",
+    "translatable": true,
+    "visible": true
+  },
+  "-": {
+    "fallbackLocale": null,
+    "id": "keyword.minus",
+    "status": "approved",
+    "text": "-",
+    "translatable": true,
+    "visible": true
+  },
+  "/": {
+    "fallbackLocale": null,
+    "id": "keyword.divide",
+    "status": "approved",
+    "text": "/",
+    "translatable": true,
+    "visible": true
+  },
+  "AND": {
+    "fallbackLocale": null,
+    "id": "keyword.and",
+    "status": "approved",
+    "text": "AND",
+    "translatable": true,
+    "visible": true
+  },
+  "Abovenormal": {
+    "fallbackLocale": null,
+    "id": "keyword.abovenormal",
+    "status": "approved",
+    "text": "Abovenormal",
+    "translatable": true,
+    "visible": true
+  },
+  "Action_modifier": {
+    "fallbackLocale": null,
+    "id": "keyword.action-modifier",
+    "status": "approved",
+    "text": "Action_modifier",
+    "translatable": false,
+    "visible": false
+  },
+  "AddGap": {
+    "fallbackLocale": null,
+    "id": "keyword.addgap",
+    "status": "approved",
+    "text": "AddGap",
+    "translatable": true,
+    "visible": true
+  },
+  "Ago": {
+    "fallbackLocale": null,
+    "id": "keyword.ago",
+    "status": "approved",
+    "text": "Ago",
+    "translatable": true,
+    "visible": true
+  },
+  "All": {
+    "fallbackLocale": null,
+    "id": "keyword.all",
+    "status": "approved",
+    "text": "All",
+    "translatable": true,
+    "visible": true
+  },
+  "Allocated": {
+    "fallbackLocale": null,
+    "id": "keyword.allocated",
+    "status": "approved",
+    "text": "Allocated",
+    "translatable": true,
+    "visible": true
+  },
+  "Allow": {
+    "fallbackLocale": null,
+    "id": "keyword.allow",
+    "status": "approved",
+    "text": "Allow",
+    "translatable": true,
+    "visible": true
+  },
+  "Any": {
+    "fallbackLocale": null,
+    "id": "keyword.any",
+    "status": "approved",
+    "text": "Any",
+    "translatable": false,
+    "visible": false
+  },
+  "Anycompletefragment": {
+    "fallbackLocale": null,
+    "id": "keyword.anycompletefragment",
+    "status": "approved",
+    "text": "Anycompletefragment",
+    "translatable": true,
+    "visible": true
+  },
+  "Anypart": {
+    "fallbackLocale": null,
+    "id": "keyword.anypart",
+    "status": "approved",
+    "text": "Anypart",
+    "translatable": true,
+    "visible": true
+  },
+  "AppendLogfile": {
+    "fallbackLocale": null,
+    "id": "keyword.appendlogfile",
+    "status": "approved",
+    "text": "AppendLogfile",
+    "translatable": true,
+    "visible": true
+  },
+  "Archive": {
+    "fallbackLocale": null,
+    "id": "keyword.archive",
+    "status": "approved",
+    "text": "Archive",
+    "translatable": true,
+    "visible": true
+  },
+  "Ascending": {
+    "fallbackLocale": null,
+    "id": "keyword.ascending",
+    "status": "approved",
+    "text": "Ascending",
+    "translatable": true,
+    "visible": true
+  },
+  "Ask": {
+    "fallbackLocale": null,
+    "id": "keyword.ask",
+    "status": "approved",
+    "text": "Ask",
+    "translatable": true,
+    "visible": true
+  },
+  "AverageFragmentSize": {
+    "fallbackLocale": null,
+    "id": "keyword.averagefragmentsize",
+    "status": "approved",
+    "text": "AverageFragmentSize",
+    "translatable": true,
+    "visible": true
+  },
+  "Background": {
+    "fallbackLocale": null,
+    "id": "keyword.background",
+    "status": "approved",
+    "text": "Background",
+    "translatable": true,
+    "visible": true
+  },
+  "BatteryPower": {
+    "fallbackLocale": null,
+    "id": "keyword.batterypower",
+    "status": "approved",
+    "text": "BatteryPower",
+    "translatable": true,
+    "visible": true
+  },
+  "Beginoffile": {
+    "fallbackLocale": null,
+    "id": "keyword.beginoffile",
+    "status": "approved",
+    "text": "Beginoffile",
+    "translatable": true,
+    "visible": true
+  },
+  "Belownormal": {
+    "fallbackLocale": null,
+    "id": "keyword.belownormal",
+    "status": "approved",
+    "text": "Belownormal",
+    "translatable": true,
+    "visible": true
+  },
+  "Busyread": {
+    "fallbackLocale": null,
+    "id": "keyword.busyread",
+    "status": "approved",
+    "text": "Busyread",
+    "translatable": true,
+    "visible": true
+  },
+  "Busywrite": {
+    "fallbackLocale": null,
+    "id": "keyword.busywrite",
+    "status": "approved",
+    "text": "Busywrite",
+    "translatable": true,
+    "visible": true
+  },
+  "Cdrom": {
+    "fallbackLocale": null,
+    "id": "keyword.cdrom",
+    "status": "approved",
+    "text": "Cdrom",
+    "translatable": true,
+    "visible": true
+  },
+  "CheckVolume": {
+    "fallbackLocale": null,
+    "id": "keyword.checkvolume",
+    "status": "approved",
+    "text": "CheckVolume",
+    "translatable": true,
+    "visible": true
+  },
+  "ChunkSize": {
+    "fallbackLocale": null,
+    "id": "keyword.chunksize",
+    "status": "approved",
+    "text": "ChunkSize",
+    "translatable": true,
+    "visible": true
+  },
+  "CommandlineVolumes": {
+    "fallbackLocale": null,
+    "id": "keyword.commandlinevolumes",
+    "status": "approved",
+    "text": "CommandlineVolumes",
+    "translatable": true,
+    "visible": true
+  },
+  "Compressed": {
+    "fallbackLocale": null,
+    "id": "keyword.compressed",
+    "status": "approved",
+    "text": "Compressed",
+    "translatable": true,
+    "visible": true
+  },
+  "Conflict": {
+    "fallbackLocale": null,
+    "id": "keyword.conflict",
+    "status": "approved",
+    "text": "Conflict",
+    "translatable": false,
+    "visible": false
+  },
+  "CreationDate": {
+    "fallbackLocale": null,
+    "id": "keyword.creationdate",
+    "status": "approved",
+    "text": "CreationDate",
+    "translatable": true,
+    "visible": true
+  },
+  "Day": {
+    "fallbackLocale": null,
+    "id": "keyword.day",
+    "status": "approved",
+    "text": "Day",
+    "translatable": true,
+    "visible": true
+  },
+  "Days": {
+    "fallbackLocale": null,
+    "id": "keyword.days",
+    "status": "approved",
+    "text": "Days",
+    "translatable": true,
+    "visible": true
+  },
+  "Debug": {
+    "fallbackLocale": null,
+    "id": "keyword.debug",
+    "status": "approved",
+    "text": "Debug",
+    "translatable": true,
+    "visible": true
+  },
   "Defragment": {
     "fallbackLocale": null,
     "id": "fileAction.defragment",
     "status": "approved",
-    "text": "Defragment"
+    "text": "Defragment",
+    "translatable": true,
+    "visible": true
+  },
+  "DeleteJournal": {
+    "fallbackLocale": null,
+    "id": "keyword.deletejournal",
+    "status": "approved",
+    "text": "DeleteJournal",
+    "translatable": true,
+    "visible": true
+  },
+  "Descending": {
+    "fallbackLocale": null,
+    "id": "keyword.descending",
+    "status": "approved",
+    "text": "Descending",
+    "translatable": true,
+    "visible": true
+  },
+  "Description": {
+    "fallbackLocale": null,
+    "id": "keyword.description",
+    "status": "approved",
+    "text": "Description",
+    "translatable": true,
+    "visible": true
+  },
+  "Directory": {
+    "fallbackLocale": null,
+    "id": "keyword.directory",
+    "status": "approved",
+    "text": "Directory",
+    "translatable": true,
+    "visible": true
   },
   "DirectoryName": {
     "fallbackLocale": null,
     "id": "fileCondition.directoryName",
     "status": "approved",
-    "text": "DirectoryName"
+    "text": "DirectoryName",
+    "translatable": true,
+    "visible": true
+  },
+  "DirectoryPath": {
+    "fallbackLocale": null,
+    "id": "keyword.directorypath",
+    "status": "approved",
+    "text": "DirectoryPath",
+    "translatable": true,
+    "visible": true
+  },
+  "DiskmapFlip": {
+    "fallbackLocale": null,
+    "id": "keyword.diskmapflip",
+    "status": "approved",
+    "text": "DiskmapFlip",
+    "translatable": true,
+    "visible": true
+  },
+  "DismountVolume": {
+    "fallbackLocale": null,
+    "id": "keyword.dismountvolume",
+    "status": "approved",
+    "text": "DismountVolume",
+    "translatable": true,
+    "visible": true
+  },
+  "Donotvacate": {
+    "fallbackLocale": null,
+    "id": "keyword.donotvacate",
+    "status": "approved",
+    "text": "Donotvacate",
+    "translatable": true,
+    "visible": true
+  },
+  "E": {
+    "fallbackLocale": null,
+    "id": "keyword.e",
+    "status": "approved",
+    "text": "E",
+    "translatable": true,
+    "visible": true
+  },
+  "Eb": {
+    "fallbackLocale": null,
+    "id": "keyword.eb",
+    "status": "approved",
+    "text": "Eb",
+    "translatable": true,
+    "visible": true
+  },
+  "Ei": {
+    "fallbackLocale": null,
+    "id": "keyword.ei",
+    "status": "approved",
+    "text": "Ei",
+    "translatable": true,
+    "visible": true
+  },
+  "Empty": {
+    "fallbackLocale": null,
+    "id": "keyword.empty",
+    "status": "approved",
+    "text": "Empty",
+    "translatable": true,
+    "visible": true
+  },
+  "Encrypted": {
+    "fallbackLocale": null,
+    "id": "keyword.encrypted",
+    "status": "approved",
+    "text": "Encrypted",
+    "translatable": true,
+    "visible": true
+  },
+  "Endoffile": {
+    "fallbackLocale": null,
+    "id": "keyword.endoffile",
+    "status": "approved",
+    "text": "Endoffile",
+    "translatable": true,
+    "visible": true
+  },
+  "Entirefile": {
+    "fallbackLocale": null,
+    "id": "keyword.entirefile",
+    "status": "approved",
+    "text": "Entirefile",
+    "translatable": true,
+    "visible": true
   },
   "ExcludeFiles": {
     "fallbackLocale": null,
     "id": "script.excludeFiles",
     "status": "approved",
-    "text": "ExcludeFiles"
+    "text": "ExcludeFiles",
+    "translatable": true,
+    "visible": true
   },
   "ExcludeVolumes": {
     "fallbackLocale": null,
     "id": "script.excludeVolumes",
     "status": "approved",
-    "text": "ExcludeVolumes"
+    "text": "ExcludeVolumes",
+    "translatable": true,
+    "visible": true
+  },
+  "Exit": {
+    "fallbackLocale": null,
+    "id": "keyword.exit",
+    "status": "approved",
+    "text": "Exit",
+    "translatable": true,
+    "visible": true
+  },
+  "ExitIfTimeout": {
+    "fallbackLocale": null,
+    "id": "keyword.exitiftimeout",
+    "status": "approved",
+    "text": "ExitIfTimeout",
+    "translatable": true,
+    "visible": true
+  },
+  "Exittimeout": {
+    "fallbackLocale": null,
+    "id": "keyword.exittimeout",
+    "status": "approved",
+    "text": "Exittimeout",
+    "translatable": true,
+    "visible": true
+  },
+  "Fast": {
+    "fallbackLocale": null,
+    "id": "keyword.fast",
+    "status": "approved",
+    "text": "Fast",
+    "translatable": true,
+    "visible": true
   },
   "FastFill": {
     "fallbackLocale": null,
     "id": "fileAction.fastFill",
     "status": "approved",
-    "text": "FastFill"
+    "text": "FastFill",
+    "translatable": true,
+    "visible": true
+  },
+  "Fat": {
+    "fallbackLocale": null,
+    "id": "keyword.fat",
+    "status": "approved",
+    "text": "Fat",
+    "translatable": true,
+    "visible": true
+  },
+  "Fat12": {
+    "fallbackLocale": null,
+    "id": "keyword.fat12",
+    "status": "approved",
+    "text": "Fat12",
+    "translatable": true,
+    "visible": true
+  },
+  "Fat16": {
+    "fallbackLocale": null,
+    "id": "keyword.fat16",
+    "status": "approved",
+    "text": "Fat16",
+    "translatable": true,
+    "visible": true
+  },
+  "Fat32": {
+    "fallbackLocale": null,
+    "id": "keyword.fat32",
+    "status": "approved",
+    "text": "Fat32",
+    "translatable": true,
+    "visible": true
   },
   "FileActions": {
     "fallbackLocale": null,
     "id": "structure.fileActions",
     "status": "approved",
-    "text": "FileActions"
+    "text": "FileActions",
+    "translatable": true,
+    "visible": true
   },
   "FileEnd": {
     "fallbackLocale": null,
     "id": "structure.fileEnd",
     "status": "approved",
-    "text": "FileEnd"
+    "text": "FileEnd",
+    "translatable": true,
+    "visible": true
+  },
+  "FileLocation": {
+    "fallbackLocale": null,
+    "id": "keyword.filelocation",
+    "status": "approved",
+    "text": "FileLocation",
+    "translatable": true,
+    "visible": true
+  },
+  "FileMoveChunkSize": {
+    "fallbackLocale": null,
+    "id": "keyword.filemovechunksize",
+    "status": "approved",
+    "text": "FileMoveChunkSize",
+    "translatable": true,
+    "visible": true
   },
   "FileName": {
     "fallbackLocale": null,
     "id": "fileCondition.fileName",
     "status": "approved",
-    "text": "FileName"
+    "text": "FileName",
+    "translatable": true,
+    "visible": true
   },
   "FileSelect": {
     "fallbackLocale": null,
     "id": "structure.fileSelect",
     "status": "approved",
-    "text": "FileSelect"
+    "text": "FileSelect",
+    "translatable": true,
+    "visible": true
+  },
+  "FileSystemType": {
+    "fallbackLocale": null,
+    "id": "keyword.filesystemtype",
+    "status": "approved",
+    "text": "FileSystemType",
+    "translatable": true,
+    "visible": true
+  },
+  "File_action": {
+    "fallbackLocale": null,
+    "id": "keyword.file-action",
+    "status": "approved",
+    "text": "File_action",
+    "translatable": false,
+    "visible": false
+  },
+  "File_attribute": {
+    "fallbackLocale": null,
+    "id": "keyword.file-attribute",
+    "status": "approved",
+    "text": "File_attribute",
+    "translatable": false,
+    "visible": false
+  },
+  "File_block": {
+    "fallbackLocale": null,
+    "id": "keyword.file-block",
+    "status": "approved",
+    "text": "File_block",
+    "translatable": false,
+    "visible": false
+  },
+  "File_condition": {
+    "fallbackLocale": null,
+    "id": "keyword.file-condition",
+    "status": "approved",
+    "text": "File_condition",
+    "translatable": false,
+    "visible": false
+  },
+  "File_state": {
+    "fallbackLocale": null,
+    "id": "keyword.file-state",
+    "status": "approved",
+    "text": "File_state",
+    "translatable": false,
+    "visible": false
+  },
+  "Filesystem": {
+    "fallbackLocale": null,
+    "id": "keyword.filesystem",
+    "status": "approved",
+    "text": "Filesystem",
+    "translatable": false,
+    "visible": false
+  },
+  "Finish_action": {
+    "fallbackLocale": null,
+    "id": "keyword.finish-action",
+    "status": "approved",
+    "text": "Finish_action",
+    "translatable": false,
+    "visible": false
+  },
+  "Fixed": {
+    "fallbackLocale": null,
+    "id": "keyword.fixed",
+    "status": "approved",
+    "text": "Fixed",
+    "translatable": true,
+    "visible": true
+  },
+  "Forced": {
+    "fallbackLocale": null,
+    "id": "keyword.forced",
+    "status": "approved",
+    "text": "Forced",
+    "translatable": true,
+    "visible": true
+  },
+  "ForcedFill": {
+    "fallbackLocale": null,
+    "id": "keyword.forcedfill",
+    "status": "approved",
+    "text": "ForcedFill",
+    "translatable": true,
+    "visible": true
   },
   "FragmentCount": {
     "fallbackLocale": null,
     "id": "volumeCondition.fragmentCount",
     "status": "approved",
-    "text": "FragmentCount"
+    "text": "FragmentCount",
+    "translatable": true,
+    "visible": true
+  },
+  "FragmentSize": {
+    "fallbackLocale": null,
+    "id": "keyword.fragmentsize",
+    "status": "approved",
+    "text": "FragmentSize",
+    "translatable": true,
+    "visible": true
+  },
+  "Fragmented": {
+    "fallbackLocale": null,
+    "id": "keyword.fragmented",
+    "status": "approved",
+    "text": "Fragmented",
+    "translatable": true,
+    "visible": true
   },
   "FullPath": {
     "fallbackLocale": null,
     "id": "fileCondition.fullPath",
     "status": "approved",
-    "text": "FullPath"
+    "text": "FullPath",
+    "translatable": true,
+    "visible": true
+  },
+  "G": {
+    "fallbackLocale": null,
+    "id": "keyword.g",
+    "status": "approved",
+    "text": "G",
+    "translatable": true,
+    "visible": true
+  },
+  "Gb": {
+    "fallbackLocale": null,
+    "id": "keyword.gb",
+    "status": "approved",
+    "text": "Gb",
+    "translatable": true,
+    "visible": true
+  },
+  "Gi": {
+    "fallbackLocale": null,
+    "id": "keyword.gi",
+    "status": "approved",
+    "text": "Gi",
+    "translatable": true,
+    "visible": true
+  },
+  "Hibernate": {
+    "fallbackLocale": null,
+    "id": "keyword.hibernate",
+    "status": "approved",
+    "text": "Hibernate",
+    "translatable": true,
+    "visible": true
+  },
+  "Hidden": {
+    "fallbackLocale": null,
+    "id": "keyword.hidden",
+    "status": "approved",
+    "text": "Hidden",
+    "translatable": true,
+    "visible": true
+  },
+  "High": {
+    "fallbackLocale": null,
+    "id": "keyword.high",
+    "status": "approved",
+    "text": "High",
+    "translatable": true,
+    "visible": true
+  },
+  "Hour": {
+    "fallbackLocale": null,
+    "id": "keyword.hour",
+    "status": "approved",
+    "text": "Hour",
+    "translatable": true,
+    "visible": true
+  },
+  "Hours": {
+    "fallbackLocale": null,
+    "id": "keyword.hours",
+    "status": "approved",
+    "text": "Hours",
+    "translatable": true,
+    "visible": true
+  },
+  "IgnoreWrapAroundFragmentation": {
+    "fallbackLocale": null,
+    "id": "keyword.ignorewraparoundfragmentation",
+    "status": "approved",
+    "text": "IgnoreWrapAroundFragmentation",
+    "translatable": true,
+    "visible": true
+  },
+  "ImportListFromBootOptimize": {
+    "fallbackLocale": null,
+    "id": "keyword.importlistfrombootoptimize",
+    "status": "approved",
+    "text": "ImportListFromBootOptimize",
+    "translatable": true,
+    "visible": true
+  },
+  "ImportListFromFile": {
+    "fallbackLocale": null,
+    "id": "keyword.importlistfromfile",
+    "status": "approved",
+    "text": "ImportListFromFile",
+    "translatable": true,
+    "visible": true
+  },
+  "ImportListFromProgramHints": {
+    "fallbackLocale": null,
+    "id": "keyword.importlistfromprogramhints",
+    "status": "approved",
+    "text": "ImportListFromProgramHints",
+    "translatable": true,
+    "visible": true
+  },
+  "Include": {
+    "fallbackLocale": null,
+    "id": "keyword.include",
+    "status": "approved",
+    "text": "Include",
+    "translatable": true,
+    "visible": true
+  },
+  "Invisible": {
+    "fallbackLocale": null,
+    "id": "keyword.invisible",
+    "status": "approved",
+    "text": "Invisible",
+    "translatable": true,
+    "visible": true
+  },
+  "K": {
+    "fallbackLocale": null,
+    "id": "keyword.k",
+    "status": "approved",
+    "text": "K",
+    "translatable": true,
+    "visible": true
+  },
+  "Kb": {
+    "fallbackLocale": null,
+    "id": "keyword.kb",
+    "status": "approved",
+    "text": "Kb",
+    "translatable": true,
+    "visible": true
+  },
+  "Ki": {
+    "fallbackLocale": null,
+    "id": "keyword.ki",
+    "status": "approved",
+    "text": "Ki",
+    "translatable": true,
+    "visible": true
+  },
+  "Kill": {
+    "fallbackLocale": null,
+    "id": "keyword.kill",
+    "status": "approved",
+    "text": "Kill",
+    "translatable": true,
+    "visible": true
   },
   "Label": {
     "fallbackLocale": null,
     "id": "volumeCondition.label",
     "status": "approved",
-    "text": "Label"
+    "text": "Label",
+    "translatable": true,
+    "visible": true
+  },
+  "Language": {
+    "fallbackLocale": null,
+    "id": "keyword.language",
+    "status": "approved",
+    "text": "Language",
+    "translatable": true,
+    "visible": true
+  },
+  "Largest": {
+    "fallbackLocale": null,
+    "id": "keyword.largest",
+    "status": "approved",
+    "text": "Largest",
+    "translatable": true,
+    "visible": true
+  },
+  "LargestFragmentSize": {
+    "fallbackLocale": null,
+    "id": "keyword.largestfragmentsize",
+    "status": "approved",
+    "text": "LargestFragmentSize",
+    "translatable": true,
+    "visible": true
+  },
+  "LastAccess": {
+    "fallbackLocale": null,
+    "id": "keyword.lastaccess",
+    "status": "approved",
+    "text": "LastAccess",
+    "translatable": true,
+    "visible": true
+  },
+  "LastAccessEnabled": {
+    "fallbackLocale": null,
+    "id": "keyword.lastaccessenabled",
+    "status": "approved",
+    "text": "LastAccessEnabled",
+    "translatable": true,
+    "visible": true
+  },
+  "LastChange": {
+    "fallbackLocale": null,
+    "id": "keyword.lastchange",
+    "status": "approved",
+    "text": "LastChange",
+    "translatable": true,
+    "visible": true
+  },
+  "Literal": {
+    "fallbackLocale": null,
+    "id": "keyword.literal",
+    "status": "approved",
+    "text": "Literal",
+    "translatable": false,
+    "visible": false
+  },
+  "Low": {
+    "fallbackLocale": null,
+    "id": "keyword.low",
+    "status": "approved",
+    "text": "Low",
+    "translatable": true,
+    "visible": true
+  },
+  "M": {
+    "fallbackLocale": null,
+    "id": "keyword.m",
+    "status": "approved",
+    "text": "M",
+    "translatable": true,
+    "visible": true
+  },
+  "MakeGap": {
+    "fallbackLocale": null,
+    "id": "keyword.makegap",
+    "status": "approved",
+    "text": "MakeGap",
+    "translatable": true,
+    "visible": true
+  },
+  "Math": {
+    "fallbackLocale": null,
+    "id": "keyword.math",
+    "status": "approved",
+    "text": "Math",
+    "translatable": false,
+    "visible": false
+  },
+  "MaxRunTime": {
+    "fallbackLocale": null,
+    "id": "keyword.maxruntime",
+    "status": "approved",
+    "text": "MaxRunTime",
+    "translatable": true,
+    "visible": true
+  },
+  "Maximized": {
+    "fallbackLocale": null,
+    "id": "keyword.maximized",
+    "status": "approved",
+    "text": "Maximized",
+    "translatable": true,
+    "visible": true
+  },
+  "Maximum": {
+    "fallbackLocale": null,
+    "id": "keyword.maximum",
+    "status": "approved",
+    "text": "Maximum",
+    "translatable": true,
+    "visible": true
+  },
+  "Mb": {
+    "fallbackLocale": null,
+    "id": "keyword.mb",
+    "status": "approved",
+    "text": "Mb",
+    "translatable": true,
+    "visible": true
+  },
+  "Message": {
+    "fallbackLocale": null,
+    "id": "keyword.message",
+    "status": "approved",
+    "text": "Message",
+    "translatable": true,
+    "visible": true
+  },
+  "Mi": {
+    "fallbackLocale": null,
+    "id": "keyword.mi",
+    "status": "approved",
+    "text": "Mi",
+    "translatable": true,
+    "visible": true
+  },
+  "Minimized": {
+    "fallbackLocale": null,
+    "id": "keyword.minimized",
+    "status": "approved",
+    "text": "Minimized",
+    "translatable": true,
+    "visible": true
+  },
+  "Minimum": {
+    "fallbackLocale": null,
+    "id": "keyword.minimum",
+    "status": "approved",
+    "text": "Minimum",
+    "translatable": true,
+    "visible": true
+  },
+  "Minute": {
+    "fallbackLocale": null,
+    "id": "keyword.minute",
+    "status": "approved",
+    "text": "Minute",
+    "translatable": true,
+    "visible": true
+  },
+  "Minutes": {
+    "fallbackLocale": null,
+    "id": "keyword.minutes",
+    "status": "approved",
+    "text": "Minutes",
+    "translatable": true,
+    "visible": true
+  },
+  "Month": {
+    "fallbackLocale": null,
+    "id": "keyword.month",
+    "status": "approved",
+    "text": "Month",
+    "translatable": true,
+    "visible": true
+  },
+  "Months": {
+    "fallbackLocale": null,
+    "id": "keyword.months",
+    "status": "approved",
+    "text": "Months",
+    "translatable": true,
+    "visible": true
+  },
+  "Mounted": {
+    "fallbackLocale": null,
+    "id": "keyword.mounted",
+    "status": "approved",
+    "text": "Mounted",
+    "translatable": true,
+    "visible": true
+  },
+  "Mouseover": {
+    "fallbackLocale": null,
+    "id": "keyword.mouseover",
+    "status": "approved",
+    "text": "Mouseover",
+    "translatable": true,
+    "visible": true
+  },
+  "Movable": {
+    "fallbackLocale": null,
+    "id": "keyword.movable",
+    "status": "approved",
+    "text": "Movable",
+    "translatable": true,
+    "visible": true
+  },
+  "MoveDownFill": {
+    "fallbackLocale": null,
+    "id": "keyword.movedownfill",
+    "status": "approved",
+    "text": "MoveDownFill",
+    "translatable": true,
+    "visible": true
+  },
+  "MoveToEndOfDisk": {
+    "fallbackLocale": null,
+    "id": "keyword.movetoendofdisk",
+    "status": "approved",
+    "text": "MoveToEndOfDisk",
+    "translatable": true,
+    "visible": true
+  },
+  "MoveUpToZone": {
+    "fallbackLocale": null,
+    "id": "keyword.moveuptozone",
+    "status": "approved",
+    "text": "MoveUpToZone",
+    "translatable": true,
+    "visible": true
+  },
+  "NOT": {
+    "fallbackLocale": null,
+    "id": "keyword.not",
+    "status": "approved",
+    "text": "NOT",
+    "translatable": true,
+    "visible": true
   },
   "Name": {
     "fallbackLocale": null,
     "id": "volumeCondition.name",
     "status": "approved",
-    "text": "Name"
+    "text": "Name",
+    "translatable": true,
+    "visible": true
+  },
+  "No": {
+    "fallbackLocale": null,
+    "id": "keyword.no",
+    "status": "approved",
+    "text": "No",
+    "translatable": true,
+    "visible": true
+  },
+  "Normal": {
+    "fallbackLocale": null,
+    "id": "keyword.normal",
+    "status": "approved",
+    "text": "Normal",
+    "translatable": true,
+    "visible": true
+  },
+  "NotToBeIndexed": {
+    "fallbackLocale": null,
+    "id": "keyword.nottobeindexed",
+    "status": "approved",
+    "text": "NotToBeIndexed",
+    "translatable": true,
+    "visible": true
+  },
+  "Now": {
+    "fallbackLocale": null,
+    "id": "keyword.now",
+    "status": "approved",
+    "text": "Now",
+    "translatable": true,
+    "visible": true
+  },
+  "Ntfs": {
+    "fallbackLocale": null,
+    "id": "keyword.ntfs",
+    "status": "approved",
+    "text": "Ntfs",
+    "translatable": true,
+    "visible": true
+  },
+  "NumberBetween": {
+    "fallbackLocale": null,
+    "id": "keyword.numberbetween",
+    "status": "approved",
+    "text": "NumberBetween",
+    "translatable": true,
+    "visible": true
+  },
+  "OR": {
+    "fallbackLocale": null,
+    "id": "keyword.or",
+    "status": "approved",
+    "text": "OR",
+    "translatable": true,
+    "visible": true
+  },
+  "Off": {
+    "fallbackLocale": null,
+    "id": "keyword.off",
+    "status": "approved",
+    "text": "Off",
+    "translatable": true,
+    "visible": true
+  },
+  "Offline": {
+    "fallbackLocale": null,
+    "id": "keyword.offline",
+    "status": "approved",
+    "text": "Offline",
+    "translatable": true,
+    "visible": true
+  },
+  "Operator": {
+    "fallbackLocale": null,
+    "id": "keyword.operator",
+    "status": "approved",
+    "text": "Operator",
+    "translatable": false,
+    "visible": false
+  },
+  "OtherInstances": {
+    "fallbackLocale": null,
+    "id": "keyword.otherinstances",
+    "status": "approved",
+    "text": "OtherInstances",
+    "translatable": true,
+    "visible": true
+  },
+  "P": {
+    "fallbackLocale": null,
+    "id": "keyword.p",
+    "status": "approved",
+    "text": "P",
+    "translatable": true,
+    "visible": true
+  },
+  "Path": {
+    "fallbackLocale": null,
+    "id": "keyword.path",
+    "status": "approved",
+    "text": "Path",
+    "translatable": true,
+    "visible": true
+  },
+  "Pause": {
+    "fallbackLocale": null,
+    "id": "keyword.pause",
+    "status": "approved",
+    "text": "Pause",
+    "translatable": true,
+    "visible": true
+  },
+  "Pb": {
+    "fallbackLocale": null,
+    "id": "keyword.pb",
+    "status": "approved",
+    "text": "Pb",
+    "translatable": true,
+    "visible": true
+  },
+  "Pi": {
+    "fallbackLocale": null,
+    "id": "keyword.pi",
+    "status": "approved",
+    "text": "Pi",
+    "translatable": true,
+    "visible": true
+  },
+  "PlaceNtfsSystemFiles": {
+    "fallbackLocale": null,
+    "id": "keyword.placentfssystemfiles",
+    "status": "approved",
+    "text": "PlaceNtfsSystemFiles",
+    "translatable": true,
+    "visible": true
+  },
+  "Priority": {
+    "fallbackLocale": null,
+    "id": "keyword.priority",
+    "status": "approved",
+    "text": "Priority",
+    "translatable": false,
+    "visible": false
+  },
+  "ProcessPriority": {
+    "fallbackLocale": null,
+    "id": "keyword.processpriority",
+    "status": "approved",
+    "text": "ProcessPriority",
+    "translatable": true,
+    "visible": true
+  },
+  "Processed": {
+    "fallbackLocale": null,
+    "id": "keyword.processed",
+    "status": "approved",
+    "text": "Processed",
+    "translatable": true,
+    "visible": true
+  },
+  "Ramdisk": {
+    "fallbackLocale": null,
+    "id": "keyword.ramdisk",
+    "status": "approved",
+    "text": "Ramdisk",
+    "translatable": true,
+    "visible": true
+  },
+  "Readonly": {
+    "fallbackLocale": null,
+    "id": "keyword.readonly",
+    "status": "approved",
+    "text": "Readonly",
+    "translatable": true,
+    "visible": true
+  },
+  "Reboot": {
+    "fallbackLocale": null,
+    "id": "keyword.reboot",
+    "status": "approved",
+    "text": "Reboot",
+    "translatable": true,
+    "visible": true
+  },
+  "ReclaimNtfsReservedAreas": {
+    "fallbackLocale": null,
+    "id": "keyword.reclaimntfsreservedareas",
+    "status": "approved",
+    "text": "ReclaimNtfsReservedAreas",
+    "translatable": true,
+    "visible": true
+  },
+  "RememberUnmovables": {
+    "fallbackLocale": null,
+    "id": "keyword.rememberunmovables",
+    "status": "approved",
+    "text": "RememberUnmovables",
+    "translatable": true,
+    "visible": true
+  },
+  "Remote": {
+    "fallbackLocale": null,
+    "id": "keyword.remote",
+    "status": "approved",
+    "text": "Remote",
+    "translatable": true,
+    "visible": true
+  },
+  "Removable": {
+    "fallbackLocale": null,
+    "id": "keyword.removable",
+    "status": "approved",
+    "text": "Removable",
+    "translatable": true,
+    "visible": true
+  },
+  "Reset": {
+    "fallbackLocale": null,
+    "id": "keyword.reset",
+    "status": "approved",
+    "text": "Reset",
+    "translatable": true,
+    "visible": true
+  },
+  "Restore": {
+    "fallbackLocale": null,
+    "id": "keyword.restore",
+    "status": "approved",
+    "text": "Restore",
+    "translatable": true,
+    "visible": true
+  },
+  "Rounddown": {
+    "fallbackLocale": null,
+    "id": "keyword.rounddown",
+    "status": "approved",
+    "text": "Rounddown",
+    "translatable": true,
+    "visible": true
+  },
+  "Roundup": {
+    "fallbackLocale": null,
+    "id": "keyword.roundup",
+    "status": "approved",
+    "text": "Roundup",
+    "translatable": true,
+    "visible": true
+  },
+  "RunProgram": {
+    "fallbackLocale": null,
+    "id": "keyword.runprogram",
+    "status": "approved",
+    "text": "RunProgram",
+    "translatable": true,
+    "visible": true
+  },
+  "RunScript": {
+    "fallbackLocale": null,
+    "id": "keyword.runscript",
+    "status": "approved",
+    "text": "RunScript",
+    "translatable": true,
+    "visible": true
+  },
+  "Runtime": {
+    "fallbackLocale": null,
+    "id": "keyword.runtime",
+    "status": "approved",
+    "text": "Runtime",
+    "translatable": false,
+    "visible": false
+  },
+  "Script": {
+    "fallbackLocale": null,
+    "id": "keyword.script",
+    "status": "approved",
+    "text": "Script",
+    "translatable": false,
+    "visible": false
+  },
+  "Second": {
+    "fallbackLocale": null,
+    "id": "keyword.second",
+    "status": "approved",
+    "text": "Second",
+    "translatable": true,
+    "visible": true
+  },
+  "Seconds": {
+    "fallbackLocale": null,
+    "id": "keyword.seconds",
+    "status": "approved",
+    "text": "Seconds",
+    "translatable": true,
+    "visible": true
+  },
+  "SelectNtfsSystemFiles": {
+    "fallbackLocale": null,
+    "id": "keyword.selectntfssystemfiles",
+    "status": "approved",
+    "text": "SelectNtfsSystemFiles",
+    "translatable": true,
+    "visible": true
+  },
+  "Selected": {
+    "fallbackLocale": null,
+    "id": "keyword.selected",
+    "status": "approved",
+    "text": "Selected",
+    "translatable": true,
+    "visible": true
   },
   "SetColor": {
     "fallbackLocale": null,
     "id": "setting.setColor",
     "status": "approved",
-    "text": "SetColor"
+    "text": "SetColor",
+    "translatable": true,
+    "visible": true
+  },
+  "SetFileColor": {
+    "fallbackLocale": null,
+    "id": "keyword.setfilecolor",
+    "status": "approved",
+    "text": "SetFileColor",
+    "translatable": true,
+    "visible": true
+  },
+  "SetScreenPowerSaver": {
+    "fallbackLocale": null,
+    "id": "keyword.setscreenpowersaver",
+    "status": "approved",
+    "text": "SetScreenPowerSaver",
+    "translatable": true,
+    "visible": true
+  },
+  "SetScreenSaver": {
+    "fallbackLocale": null,
+    "id": "keyword.setscreensaver",
+    "status": "approved",
+    "text": "SetScreenSaver",
+    "translatable": true,
+    "visible": true
+  },
+  "SetStatisticsWindowText": {
+    "fallbackLocale": null,
+    "id": "keyword.setstatisticswindowtext",
+    "status": "approved",
+    "text": "SetStatisticsWindowText",
+    "translatable": true,
+    "visible": true
   },
   "SetVariable": {
     "fallbackLocale": null,
     "id": "setting.setVariable",
     "status": "approved",
-    "text": "SetVariable"
+    "text": "SetVariable",
+    "translatable": true,
+    "visible": true
+  },
+  "Setting": {
+    "fallbackLocale": null,
+    "id": "keyword.setting",
+    "status": "approved",
+    "text": "Setting",
+    "translatable": true,
+    "visible": true
+  },
+  "SettingInline": {
+    "fallbackLocale": null,
+    "id": "keyword.settinginline",
+    "status": "approved",
+    "text": "SettingInline",
+    "translatable": false,
+    "visible": false
+  },
+  "Shutdown": {
+    "fallbackLocale": null,
+    "id": "keyword.shutdown",
+    "status": "approved",
+    "text": "Shutdown",
+    "translatable": true,
+    "visible": true
   },
   "Size": {
     "fallbackLocale": null,
     "id": "volumeCondition.size",
     "status": "approved",
-    "text": "Size"
+    "text": "Size",
+    "translatable": true,
+    "visible": true
+  },
+  "Size_unit": {
+    "fallbackLocale": null,
+    "id": "keyword.size-unit",
+    "status": "approved",
+    "text": "Size_unit",
+    "translatable": false,
+    "visible": false
+  },
+  "Skipblock": {
+    "fallbackLocale": null,
+    "id": "keyword.skipblock",
+    "status": "approved",
+    "text": "Skipblock",
+    "translatable": true,
+    "visible": true
+  },
+  "Slowdown": {
+    "fallbackLocale": null,
+    "id": "keyword.slowdown",
+    "status": "approved",
+    "text": "Slowdown",
+    "translatable": true,
+    "visible": true
+  },
+  "Smallest": {
+    "fallbackLocale": null,
+    "id": "keyword.smallest",
+    "status": "approved",
+    "text": "Smallest",
+    "translatable": true,
+    "visible": true
+  },
+  "SmallestFragmentSize": {
+    "fallbackLocale": null,
+    "id": "keyword.smallestfragmentsize",
+    "status": "approved",
+    "text": "SmallestFragmentSize",
+    "translatable": true,
+    "visible": true
+  },
+  "Sort": {
+    "fallbackLocale": null,
+    "id": "keyword.sort",
+    "status": "approved",
+    "text": "Sort",
+    "translatable": false,
+    "visible": false
+  },
+  "SortByCreationDate": {
+    "fallbackLocale": null,
+    "id": "keyword.sortbycreationdate",
+    "status": "approved",
+    "text": "SortByCreationDate",
+    "translatable": true,
+    "visible": true
+  },
+  "SortByImportSequence": {
+    "fallbackLocale": null,
+    "id": "keyword.sortbyimportsequence",
+    "status": "approved",
+    "text": "SortByImportSequence",
+    "translatable": true,
+    "visible": true
+  },
+  "SortByLastAccess": {
+    "fallbackLocale": null,
+    "id": "keyword.sortbylastaccess",
+    "status": "approved",
+    "text": "SortByLastAccess",
+    "translatable": true,
+    "visible": true
+  },
+  "SortByLastChange": {
+    "fallbackLocale": null,
+    "id": "keyword.sortbylastchange",
+    "status": "approved",
+    "text": "SortByLastChange",
+    "translatable": true,
+    "visible": true
   },
   "SortByName": {
     "fallbackLocale": null,
     "id": "fileAction.sortByName",
     "status": "approved",
-    "text": "SortByName"
+    "text": "SortByName",
+    "translatable": true,
+    "visible": true
+  },
+  "SortByNewestDate": {
+    "fallbackLocale": null,
+    "id": "keyword.sortbynewestdate",
+    "status": "approved",
+    "text": "SortByNewestDate",
+    "translatable": true,
+    "visible": true
+  },
+  "SortBySize": {
+    "fallbackLocale": null,
+    "id": "keyword.sortbysize",
+    "status": "approved",
+    "text": "SortBySize",
+    "translatable": true,
+    "visible": true
+  },
+  "Sparse": {
+    "fallbackLocale": null,
+    "id": "keyword.sparse",
+    "status": "approved",
+    "text": "Sparse",
+    "translatable": true,
+    "visible": true
+  },
+  "Standby": {
+    "fallbackLocale": null,
+    "id": "keyword.standby",
+    "status": "approved",
+    "text": "Standby",
+    "translatable": true,
+    "visible": true
+  },
+  "Status": {
+    "fallbackLocale": null,
+    "id": "keyword.status",
+    "status": "approved",
+    "text": "Status",
+    "translatable": true,
+    "visible": true
+  },
+  "StatusBar": {
+    "fallbackLocale": null,
+    "id": "keyword.statusbar",
+    "status": "approved",
+    "text": "StatusBar",
+    "translatable": true,
+    "visible": true
+  },
+  "System": {
+    "fallbackLocale": null,
+    "id": "keyword.system",
+    "status": "approved",
+    "text": "System",
+    "translatable": true,
+    "visible": true
+  },
+  "T": {
+    "fallbackLocale": null,
+    "id": "keyword.t",
+    "status": "approved",
+    "text": "T",
+    "translatable": true,
+    "visible": true
+  },
+  "Tb": {
+    "fallbackLocale": null,
+    "id": "keyword.tb",
+    "status": "approved",
+    "text": "Tb",
+    "translatable": true,
+    "visible": true
+  },
+  "Temporary": {
+    "fallbackLocale": null,
+    "id": "keyword.temporary",
+    "status": "approved",
+    "text": "Temporary",
+    "translatable": true,
+    "visible": true
+  },
+  "Text": {
+    "fallbackLocale": null,
+    "id": "keyword.text",
+    "status": "approved",
+    "text": "Text",
+    "translatable": true,
+    "visible": true
+  },
+  "Ti": {
+    "fallbackLocale": null,
+    "id": "keyword.ti",
+    "status": "approved",
+    "text": "Ti",
+    "translatable": true,
+    "visible": true
+  },
+  "Time": {
+    "fallbackLocale": null,
+    "id": "keyword.time",
+    "status": "approved",
+    "text": "Time",
+    "translatable": false,
+    "visible": false
+  },
+  "Time_unit": {
+    "fallbackLocale": null,
+    "id": "keyword.time-unit",
+    "status": "approved",
+    "text": "Time_unit",
+    "translatable": true,
+    "visible": true
+  },
+  "Title": {
+    "fallbackLocale": null,
+    "id": "keyword.title",
+    "status": "approved",
+    "text": "Title",
+    "translatable": true,
+    "visible": true
+  },
+  "Toggle": {
+    "fallbackLocale": null,
+    "id": "keyword.toggle",
+    "status": "approved",
+    "text": "Toggle",
+    "translatable": false,
+    "visible": false
+  },
+  "Ui": {
+    "fallbackLocale": null,
+    "id": "keyword.ui",
+    "status": "approved",
+    "text": "Ui",
+    "translatable": false,
+    "visible": false
+  },
+  "Unmovable": {
+    "fallbackLocale": null,
+    "id": "keyword.unmovable",
+    "status": "approved",
+    "text": "Unmovable",
+    "translatable": true,
+    "visible": true
+  },
+  "Value": {
+    "fallbackLocale": null,
+    "id": "keyword.value",
+    "status": "approved",
+    "text": "Value",
+    "translatable": false,
+    "visible": false
+  },
+  "Variable": {
+    "fallbackLocale": null,
+    "id": "keyword.variable",
+    "status": "approved",
+    "text": "Variable",
+    "translatable": false,
+    "visible": false
+  },
+  "Virtual": {
+    "fallbackLocale": null,
+    "id": "keyword.virtual",
+    "status": "approved",
+    "text": "Virtual",
+    "translatable": true,
+    "visible": true
   },
   "VolumeActions": {
     "fallbackLocale": null,
     "id": "structure.volumeActions",
     "status": "approved",
-    "text": "VolumeActions"
+    "text": "VolumeActions",
+    "translatable": true,
+    "visible": true
   },
   "VolumeEnd": {
     "fallbackLocale": null,
     "id": "structure.volumeEnd",
     "status": "approved",
-    "text": "VolumeEnd"
+    "text": "VolumeEnd",
+    "translatable": true,
+    "visible": true
   },
   "VolumeSelect": {
     "fallbackLocale": null,
     "id": "structure.volumeSelect",
     "status": "approved",
-    "text": "VolumeSelect"
+    "text": "VolumeSelect",
+    "translatable": true,
+    "visible": true
+  },
+  "Volume_action": {
+    "fallbackLocale": null,
+    "id": "keyword.volume-action",
+    "status": "approved",
+    "text": "Volume_action",
+    "translatable": false,
+    "visible": false
+  },
+  "Volume_block": {
+    "fallbackLocale": null,
+    "id": "keyword.volume-block",
+    "status": "approved",
+    "text": "Volume_block",
+    "translatable": false,
+    "visible": false
+  },
+  "Volume_condition": {
+    "fallbackLocale": null,
+    "id": "keyword.volume-condition",
+    "status": "approved",
+    "text": "Volume_condition",
+    "translatable": false,
+    "visible": false
+  },
+  "Wait": {
+    "fallbackLocale": null,
+    "id": "keyword.wait",
+    "status": "approved",
+    "text": "Wait",
+    "translatable": true,
+    "visible": true
+  },
+  "Warnusers": {
+    "fallbackLocale": null,
+    "id": "keyword.warnusers",
+    "status": "approved",
+    "text": "Warnusers",
+    "translatable": true,
+    "visible": true
+  },
+  "Week": {
+    "fallbackLocale": null,
+    "id": "keyword.week",
+    "status": "approved",
+    "text": "Week",
+    "translatable": true,
+    "visible": true
+  },
+  "Weeks": {
+    "fallbackLocale": null,
+    "id": "keyword.weeks",
+    "status": "approved",
+    "text": "Weeks",
+    "translatable": true,
+    "visible": true
+  },
+  "WhenFinished": {
+    "fallbackLocale": null,
+    "id": "keyword.whenfinished",
+    "status": "approved",
+    "text": "WhenFinished",
+    "translatable": true,
+    "visible": true
+  },
+  "WindowSize": {
+    "fallbackLocale": null,
+    "id": "keyword.windowsize",
+    "status": "approved",
+    "text": "WindowSize",
+    "translatable": true,
+    "visible": true
+  },
+  "Window_state": {
+    "fallbackLocale": null,
+    "id": "keyword.window-state",
+    "status": "approved",
+    "text": "Window_state",
+    "translatable": false,
+    "visible": false
+  },
+  "WithShuffling": {
+    "fallbackLocale": null,
+    "id": "keyword.withshuffling",
+    "status": "approved",
+    "text": "WithShuffling",
+    "translatable": true,
+    "visible": true
+  },
+  "Writable": {
+    "fallbackLocale": null,
+    "id": "keyword.writable",
+    "status": "approved",
+    "text": "Writable",
+    "translatable": true,
+    "visible": true
+  },
+  "WriteLogfile": {
+    "fallbackLocale": null,
+    "id": "keyword.writelogfile",
+    "status": "approved",
+    "text": "WriteLogfile",
+    "translatable": true,
+    "visible": true
+  },
+  "Y": {
+    "fallbackLocale": null,
+    "id": "keyword.y",
+    "status": "approved",
+    "text": "Y",
+    "translatable": true,
+    "visible": true
+  },
+  "Yb": {
+    "fallbackLocale": null,
+    "id": "keyword.yb",
+    "status": "approved",
+    "text": "Yb",
+    "translatable": true,
+    "visible": true
+  },
+  "Year": {
+    "fallbackLocale": null,
+    "id": "keyword.year",
+    "status": "approved",
+    "text": "Year",
+    "translatable": true,
+    "visible": true
+  },
+  "Years": {
+    "fallbackLocale": null,
+    "id": "keyword.years",
+    "status": "approved",
+    "text": "Years",
+    "translatable": true,
+    "visible": true
+  },
+  "Yes": {
+    "fallbackLocale": null,
+    "id": "keyword.yes",
+    "status": "approved",
+    "text": "Yes",
+    "translatable": true,
+    "visible": true
+  },
+  "Yi": {
+    "fallbackLocale": null,
+    "id": "keyword.yi",
+    "status": "approved",
+    "text": "Yi",
+    "translatable": true,
+    "visible": true
+  },
+  "Z": {
+    "fallbackLocale": null,
+    "id": "keyword.z",
+    "status": "approved",
+    "text": "Z",
+    "translatable": true,
+    "visible": true
+  },
+  "Zb": {
+    "fallbackLocale": null,
+    "id": "keyword.zb",
+    "status": "approved",
+    "text": "Zb",
+    "translatable": true,
+    "visible": true
+  },
+  "Zi": {
+    "fallbackLocale": null,
+    "id": "keyword.zi",
+    "status": "approved",
+    "text": "Zi",
+    "translatable": true,
+    "visible": true
+  },
+  "Zone": {
+    "fallbackLocale": null,
+    "id": "keyword.zone",
+    "status": "approved",
+    "text": "Zone",
+    "translatable": false,
+    "visible": false
+  },
+  "ZoomLevel": {
+    "fallbackLocale": null,
+    "id": "keyword.zoomlevel",
+    "status": "approved",
+    "text": "ZoomLevel",
+    "translatable": true,
+    "visible": true
   }
 }

@@ -200,6 +200,8 @@ snapshot for one invocation.
   `language/canonical/project-variable-map.example.json`
 - `locales` <- `language/locales/locales.json`
 - `localeCatalogs` <- locale subdirectories under `language/locales/`
+- `localeCatalogs[].keywords` <-
+  `language/locales/<locale>/keywords.json`
 - `localeComponentCatalogs` <- permanent sparse component files under
   `language/locales/<locale>/<component>.json`
 
@@ -454,6 +456,10 @@ The main relationships enforced by the script are:
 - Locale component entries must belong to the selected canonical component.
 - Locale translation placeholders must exactly match canonical placeholders.
 - Locale keyword IDs must exist in the semantic keyword inventory.
+- The canonical inventory must contain exactly 243 unique IDs, including 214
+  visible/translatable entries and 29 hidden/non-translatable grammar labels.
+- Every registered locale keyword file must contain the same 243 IDs and every
+  non-English entry must explicitly declare its English fallback state.
 - Review statuses must belong to `VALID_STATUSES`.
 - Normalized-word rules must be an array of non-empty `input` and `output`
   strings with case-insensitively unique inputs and no unsupported fields.
@@ -485,6 +491,9 @@ build/language/
   reports/normalized-input-audit.md
   reports/translation-completeness.json
 ```
+
+Keyword maps are packaged runtime assets. Reports remain build evidence and
+are excluded from the extension package.
 
 Before either generation action, the builder checks every registered locale
 below `build/language/catalogs/`:

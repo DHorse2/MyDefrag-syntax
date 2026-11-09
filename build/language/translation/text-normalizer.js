@@ -14,7 +14,7 @@
     const STRUCTURAL_SEPARATOR_PATTERN = /[_\-\u2010-\u2015\u00b7\u2022]+/gu;
     const TIGHT_PUNCTUATION_PATTERN = /[.:,;!?]+(?=\S)/gu;
     const URL_AT_START_PATTERN = /^(?:https?|file):\/\/[^\s<>"']+/iu;
-    const PATH_AT_START_PATTERN = /^(?:(?:[A-Za-z]:)?[\\/](?:[A-Za-z0-9_{}.-]+[\\/])*[A-Za-z0-9_{}.-]+|(?:[A-Za-z0-9_{}.-]+[\\/])+[A-Za-z0-9_{}.-]+)/u;
+    const PATH_AT_START_PATTERN = /^(?:(?:[A-Za-z]:)?[\\/](?:[A-Za-z0-9_.-]+[\\/])*[A-Za-z0-9_.-]+|(?:[A-Za-z0-9_.-]+[\\/])+[A-Za-z0-9_.-]+)/u;
     const CODICON_AT_START_PATTERN = /^\$\([A-Za-z0-9_-]+\)/u;
     const PLACEHOLDER_AT_START_PATTERN = /^\{[A-Za-z_][A-Za-z0-9_]*\}/u;
     const EXTENSION_AT_START_PATTERN = /^\.[A-Za-z][A-Za-z0-9]{0,15}\b/u;

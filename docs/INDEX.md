@@ -46,4 +46,4 @@ MyDefrag program.
 - [Documentation status](documentation-todo.md)
 - [Project assessment](MyDefrag%20Project%20Assessment.md)
 - [HDD global report](HDD%20Global%20Report.md)
-- [Multilingual feature project](MyDefrag-Multilingual-Feature-Project.md)
+- [Multilingual feature project](../MyDefrag-Multilingual-Feature-Project.md)

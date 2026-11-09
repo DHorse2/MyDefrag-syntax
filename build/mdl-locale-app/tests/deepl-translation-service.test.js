@@ -50,6 +50,13 @@ test('protects runtime syntax through ignored XML tags', () => {
         ok: true,
         text: '$(check) {index}/{total} (.MyDc) https://example.com/a-b.js ${uri.toString()}'
     });
+
+    const adjacent = protectRuntimeSyntax('{first}{second}$(check)');
+    assert.deepEqual(adjacent.placeholders, ['{first}', '{second}', '$(check)']);
+    assert.deepEqual(restorePlaceholders(adjacent.protectedText, adjacent.placeholders), {
+        ok: true,
+        text: '{first}{second}$(check)'
+    });
 });
 
 test('posts translation text with header authentication and preserves placeholders', async () => {

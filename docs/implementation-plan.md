@@ -32,13 +32,13 @@
 
 | Field | Value |
 | --- | --- |
-| Document version | 1.0.0 |
+| Document version | 1.2.0 |
 | Status | Current working implementation plan |
 | Baseline date | 2026-11-08 |
 | Project | MyDefrag Syntax |
 | Project root | `D:\Script\MyDefrag-syntax` |
 | Current source version | 0.5.0 |
-| Installed VSCodium extension | `macrodm.mydefrag-syntax@0.4.0` |
+| Installed VSCodium extension | `macrodm.mydefrag-syntax@0.5.0` |
 | Version authority | 0.5.0 is repository fact; later assignments are proposals |
 | Supersedes | No prior consolidated implementation plan |
 
@@ -75,21 +75,21 @@ execution.
 | Area | Verified status | Consequence |
 | --- | --- | --- |
 | Task queue | Idle; zero queued tasks | This plan is an ad hoc authorized document, not a consumed queue task |
-| Git branch | `main` at `9d3fd098`; zero commits ahead or behind `origin/main` | All newer work exists only in the working tree |
-| Working tree | 369 tracked changes and 57 untracked entries, including this plan and its index link | Reconciliation is the first implementation gate |
-| Diff size | 79,490 added and 34,385 deleted lines across 369 tracked files | Broad review and scoped staging are required |
+| Git branch | `main` at `8ebf3b77`; zero commits ahead or behind `origin/main` | The multilingual checkpoint commit is synchronized |
+| Working tree | Clean immediately after `8ebf3b77`; the current diff is the scoped 0.5.0 stabilization implementation | The prior broad worktree has been checkpointed |
+| Prior broad diff | The former 426-entry working tree is contained in `8ebf3b77` | New work no longer overlaps an uncommitted repository-wide diff |
 | Product version | `package.json` declares 0.5.0 | 0.5.0 is the active stabilization target |
-| Installed extension | VSCodium has 0.4.0 installed | Current source behavior is not proven in the installed host |
+| Installed extension | VSCodium has 0.5.0 installed from the exact inspected VSIX | Baseline packaged-host activation and language-server smoke passed |
 | Focused extension tests | 17 of 17 passed | Preview, manifest, server, and URI checks passed in the focused lane |
-| Locale Maintenance tests | 65 of 67 passed | Two runtime-syntax protection tests block a clean application gate |
+| Locale Maintenance tests | 67 of 67 passed | Runtime-syntax protection is repaired |
 | JavaScript syntax checks | 11 of 11 passed | The checked changed entry points are syntactically valid |
 | Language validation | Passed with zero errors and one warning | Normalized-input cleanup remains open |
 | Localization data | 18 locales and 10 components | The multilingual foundation exists |
 | Non-English approval | 14 locales require native review; 3 are draft | No non-English locale is release-approved |
 | Generated localization | 12,098 machine-generated and 1,649 fallback entries | Human review and fallback reduction remain material work |
-| Normalized-input audit | 190 occurrences in 32 files | The audit remains partial |
+| Normalized-input audit | 191 occurrences in 32 files | The audit remains partial; the corrected runtime-token boundary exposes one additional `data` occurrence |
 | Help review | 142 converted topics are marked pending | Conversion exists, but independent review is unfinished |
-| Packaged artifact | Current pack script targets `artifacts\mydefrag-syntax-Release.vsix` | A fresh 0.5.0 artifact must be built and verified |
+| Packaged artifact | Fresh 0.5.0 VSIX at `artifacts\mydefrag-syntax-Release.vsix` | 2,509,402 bytes; SHA-256 `715665186F261F395A94275413224665989B810828C3AC721591CF9ADB820853` |
 
 ## Product And Repository Boundaries
 
@@ -153,6 +153,9 @@ Work should proceed in this order:
 
 ### V050-01 - Reconcile The Working Tree
 
+Status: Completed by checkpoint commit `8ebf3b77`. The branch was clean and
+synchronized before the scoped stabilization implementation began.
+
 Objective: turn the current broad, uncommitted state into reviewable ownership
 and delivery units without losing user work.
 
@@ -180,6 +183,10 @@ Acceptance criteria:
 - A staging plan exists before any commit is requested.
 
 ### V050-02 - Repair Runtime-Syntax Protection
+
+Status: Completed. Placeholder-shaped path segments no longer collapse
+`{index}/{total}` into one path token, adjacent tokens retain order, and all 67
+Locale Maintenance tests pass.
 
 Objective: restore the complete Locale Maintenance test gate.
 
@@ -210,6 +217,10 @@ Acceptance criteria:
   pass.
 
 ### V050-03 - Preserve The Entry Root During Include Expansion
+
+Status: Completed. Recursive include resolution now retains the launched entry
+directory, with raw and annotated regression coverage for `.MyD`, `.MyDc`,
+`.MyDs`, `.txt`, and an arbitrary `.fragment` target.
 
 Objective: make preview include resolution match the established `.MyD` entry
 model.
@@ -248,6 +259,11 @@ Acceptance criteria:
 
 ### V050-04 - Reconcile Documentation And Trackers
 
+Status: Completed. Application issues moved to the MdmLocalize tracker, the
+repository-owned report issue is fixed, hover and Help-review documentation is
+current, and the duplicate multilingual roadmap filename now redirects to one
+canonical roadmap.
+
 Objective: make current documentation describe the implemented repository and
 its actual ownership boundaries.
 
@@ -275,6 +291,10 @@ Acceptance criteria:
 
 ### V050-05 - Qualify And Package Version 0.5.0
 
+Status: Source and package qualification completed. The exact VSIX is installed
+in VSCodium and the baseline packaged-host activation smoke passed. The broader
+interactive workflow matrix below remains open.
+
 Objective: prove the reconciled source and create one exact, inspectable VSIX.
 
 Run the following from `D:\Script\MyDefrag-syntax`:
@@ -301,7 +321,8 @@ Expected results:
 - VSIX contents include the declared runtime entry points, grammar, snippets,
   language catalogs, and required dependencies.
 
-When installation is explicitly authorized, run:
+With installation explicitly authorized, the exact artifact was installed
+using:
 
 ```powershell
 codium --install-extension .\artifacts\mydefrag-syntax-Release.vsix --force
@@ -326,6 +347,47 @@ Complete an Extension Development Host and packaged-host smoke test covering:
 
 Publishing to GitHub or Open VSX is not part of the 0.5.0 qualification command
 set and requires separate approval.
+
+Qualification evidence captured on 2026-11-08:
+
+- `npm run language:validate`: passed with zero errors and one documented
+  warning for 191 normalized-input occurrences in 32 files. Ownership remains
+  with MyDefrag Syntax locale data, maintained through MdmLocalize.
+- `npm run test:fast`: 188 named tests passed across all 12 selected checks.
+- `npm run test:all`: 317 named tests passed across all 15 checks, including
+  JavaScript syntax, PowerShell syntax, coverage, language, application, and
+  report gates.
+- `npm run test:manifest`: 14 named tests passed, including the VSIX runtime
+  asset and exclusion contract.
+- `git diff --check`: no whitespace errors; Git reported only reviewed
+  LF-to-CRLF conversion warnings.
+- `npm run pack:vsix`: created a 2,509,402-byte 0.5.0 package containing 1,519
+  entries. The package includes the extension entry point, grammar, snippets,
+  English and `fr-CA` catalogs, converted hover Help, and
+  `vscode-languageclient`; it contains no `artifacts` subtree or workspace test
+  modules. All five declared runtime dependency packages are present.
+- VSCE emitted a non-blocking bundling/performance recommendation for the 1,519
+  files and 354 JavaScript files. Future package-size optimization belongs to
+  the MyDefrag Syntax package component; it does not invalidate this artifact.
+- Package SHA-256:
+  `715665186F261F395A94275413224665989B810828C3AC721591CF9ADB820853`.
+- The first packaged-host smoke exposed and stopped on
+  `server.js:onInitialize: ... uiLocale is not defined`. The unused assignment
+  was removed and the server integration lane now rejects initialization
+  errors.
+- `codium --list-extensions --show-versions` reports
+  `macrodm.mydefrag-syntax@0.5.0` after forced installation from the inspected
+  VSIX.
+- The repeated isolated-profile smoke activated on `onLanguage:mydfrg`,
+  initialized the extension, registered providers, started the language
+  client, opened the `.MyD` fixture, and observed the packaged server process.
+  The extension and language-client logs contained no targeted runtime errors,
+  and all VSCodium processes were closed after the run.
+- Packaged-host logs are retained under
+  `artifacts\vscodium-smoke-0.5.0\run-fixed-20261108-161212\profile\logs`.
+- This is baseline host coverage. Interactive verification of both language
+  extensions, diagnostics, hover, all five preview modes, and include-error UI
+  remains part of the extended smoke matrix above.
 
 ## Version 0.6.0 - Editor Intelligence
 
@@ -409,7 +471,7 @@ Objectives:
   keeping TaylorDo execution ownership outside this repository.
 - Reduce the current 1,649 fallback entries and review the 12,098
   machine-generated entries.
-- Resolve the 190 normalized-input audit occurrences.
+- Resolve the 191 normalized-input audit occurrences.
 - Obtain native review for release-target locales.
 - Validate right-to-left, combining-mark, capitalization, punctuation, and
   Unicode behavior.

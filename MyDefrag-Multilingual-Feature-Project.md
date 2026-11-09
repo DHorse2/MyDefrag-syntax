@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Purpose](#purpose)
+- [Current Implementation Snapshot](#current-implementation-snapshot)
 - [Product Context](#product-context)
   - [MyDefrag Syntax Extension](#mydefrag-syntax-extension)
   - [TaylorDo](#taylordo)
@@ -80,6 +81,24 @@ Many human languages
 → one canonical semantic model
 → one validated MyDefrag execution language
 ```
+
+## Current Implementation Snapshot
+
+Verified against the repository on 2026-11-08:
+
+| Area | Current evidence |
+| --- | --- |
+| Locales | 18 authored locale directories and 18 generated locale outputs |
+| Components | 10 canonical components: diagnostic explorer, docs, extension, locales, package, parser, preview, server, tooling, and translator |
+| Keyword maps | 36 generated canonical-to-locale and locale-to-canonical maps |
+| French (Quebec) | `fr-CA` metadata, component catalogs, generated catalogs, and runtime coverage exist; native review remains required |
+| Preview | Five include-expansion rendering variants exist: one raw executable view and four annotation combinations |
+| Preview language workbench | Canonical, localized, bilingual, semantic, and difference language views remain planned; the five current rendering variants do not claim those semantics |
+| Translation report | 14 non-English locales require native review, 3 are draft, 1,649 entries use fallback text, and 12,098 are machine-generated |
+| Help review | All 142 converted Help topics remain `pending` in `docs\MyDefrag Help\REVIEW-INDEX.md` |
+
+This snapshot distinguishes current repository facts from the historical Phase
+1 completion summary retained later in this document.
 
 ## Product Context
 
@@ -701,6 +720,8 @@ Goals:
 
 ### Phase 2 — Locale Expansion and Translation Supply Tables
 
+Status: In progress.
+
 Goals:
 
 - Expand locale samples
@@ -730,6 +751,9 @@ Goals:
 - Add source-language directive support
 
 ### Phase 4 — Preview Language Workbench
+
+Status: Partially implemented. Raw and annotated include-expansion views exist;
+the language-conversion and linguistic-review views below remain planned.
 
 Goals:
 
@@ -838,10 +862,10 @@ Status: Completed.
 
 ### Phase 2 Tasks — Locale Expansion and Translation Supply Tables
 
-Status: Next.
+Status: In progress.
 
-- [ ] Add explicit `fr-CA` locale metadata distinct from generic `fr`.
-- [ ] Add the first French (Quebec) sample catalog.
+- [x] Add explicit `fr-CA` locale metadata distinct from generic `fr`.
+- [x] Add the first French (Quebec) sample catalog.
 - [ ] Change the runtime locale test from Mandarin to French (Quebec).
 - [ ] Change translation examples and sample variable-map targets to `fr-CA`.
 - [ ] Expand the locale sample set and review metadata.
@@ -866,9 +890,9 @@ Status: Planned.
 
 ### Phase 4 Tasks — Preview Language Workbench
 
-Status: Planned.
+Status: Partially implemented.
 
-- [ ] Add code-only preview mode.
+- [x] Add the raw executable, code-only preview mode.
 - [ ] Add canonical preview mode.
 - [ ] Add localized preview mode.
 - [ ] Add bilingual preview mode.
@@ -977,7 +1001,7 @@ docs/translation-contributing.md
 
 ### Generated Outputs
 
-The first phase generated:
+At Phase 1 completion, the project generated:
 
 - 13 locale outputs
 - 8 component catalogs
@@ -1045,6 +1069,7 @@ The first phase successfully established the multilingual foundation without
 changing current parser, server, extension, preview, diagnostic, or packaging
 behavior.
 
-The next phase can now focus first on the explicit `fr-CA` locale, a French
-(Quebec) sample catalog and runtime test, translation supply tables, terminology
-review, and preparation for canonical keyword translation.
+The explicit `fr-CA` locale and its sample catalogs now exist. Remaining Phase
+2 work includes making French (Quebec) the primary runtime sample, finishing
+translation supply tables and evidence, obtaining native terminology review,
+and preparing for canonical keyword translation.

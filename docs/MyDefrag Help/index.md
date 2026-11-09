@@ -2,6 +2,22 @@
 
 Converted from the MyDefrag Help HTML source.
 
+Conversion preserves the source material but is not independent content
+approval. The [conversion review index](REVIEW-INDEX.md) currently retains all
+142 topics as `pending` until each topic is reviewed against its source HTML.
+
+## Table of Contents
+
+- [Main documents](#main-documents)
+- [Language reference](#language-reference)
+  - [Scripts](#scripts)
+  - [Settings](#settings)
+  - [VolumeBoolean](#volumeboolean)
+  - [VolumeActions](#volumeactions)
+  - [FileBoolean](#fileboolean)
+  - [FileActions](#fileactions)
+  - [Misc](#misc)
+
 ## Main documents
 
 - [Intro](manual/Intro.md)

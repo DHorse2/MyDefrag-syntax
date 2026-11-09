@@ -41,6 +41,13 @@ test('protects and restores runtime syntax through no-translate HTML spans', () 
         ok: true,
         text: '$(check) {index}/{total} (.MyDc) https://example.com/a-b.js ${uri.toString()}'
     });
+
+    const adjacent = protectRuntimeSyntaxForGoogle('{first}{second}$(check)');
+    assert.deepEqual(adjacent.placeholders, ['{first}', '{second}', '$(check)']);
+    assert.deepEqual(
+        restoreRuntimeSyntaxFromGoogle(adjacent.protectedText, adjacent.placeholders),
+        { ok: true, text: '{first}{second}$(check)' }
+    );
 });
 
 test('posts Basic v2 translation requests and preserves placeholders', async () => {

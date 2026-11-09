@@ -16,6 +16,21 @@ function copyFixture(rootDir) {
     fs.cpSync(path.join(SOURCE_ROOT, 'language'), path.join(rootDir, 'language'), { recursive: true });
     fs.copyFileSync(path.join(SOURCE_ROOT, 'package.json'), path.join(rootDir, 'package.json'));
 
+    const normalizedInputFixturePath = path.join(
+        rootDir,
+        'language',
+        'locales',
+        'yo',
+        'extension.json'
+    );
+    const normalizedInputFixture = JSON.parse(fs.readFileSync(normalizedInputFixturePath, 'utf8'));
+    normalizedInputFixture.entries['extension.product.displayName'].text = 'MyDefrag Syntax';
+    fs.writeFileSync(
+        normalizedInputFixturePath,
+        `${JSON.stringify(normalizedInputFixture, null, 2)}\n`,
+        'utf8'
+    );
+
     const components = JSON.parse(fs.readFileSync(
         path.join(rootDir, 'language', 'canonical', 'components.json'),
         'utf8'
@@ -210,6 +225,8 @@ try {
     assert.match(report, /KEYWORD COLLISIONS\r?\n-+\r?\nNone\./);
     assert.match(report, /MIGRATION CANDIDATE INVENTORY/);
     assert.match(report, /src\/server\/parser\.js \[parser\]/);
+    assert.match(report, /^File name: src\/server\/parser\.js$/m);
+    assert.doesNotMatch(report, /^src\/server\/parser\.js\r?$/m);
     assert.match(report, /Component: parser/);
     assert.match(report, /Non-catalog candidates: \d+/);
     assert.match(report, /Line \d+ \[(?:potential|review|rejected|code-edit|code-updated|in-catalog)\]:/);

@@ -2843,7 +2843,8 @@ function formatHumanReadableReport(reports) {
     );
 
     for (const file of migrationFiles) {
-        lines.push('', file.file, '-'.repeat(file.file.length), `Component: ${file.component}`, `Status: ${file.status}`);
+        const fileLabel = `File name: ${file.file}`;
+        lines.push('', fileLabel, '-'.repeat(fileLabel.length), `Component: ${file.component}`, `Status: ${file.status}`);
 
         if (file.status !== 'scanned') {
             continue;

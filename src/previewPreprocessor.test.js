@@ -33,6 +33,34 @@ function createFixture() {
     return { fixtureRoot, entryFile };
 }
 
+function createNestedRootFixture() {
+    const fixtureRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'mydfrg-preview-root-'));
+    const entryFile = path.join(fixtureRoot, 'main.MyD');
+    const settingsRoot = path.join(fixtureRoot, 'Settings');
+    fs.mkdirSync(settingsRoot);
+    fs.writeFileSync(
+        entryFile,
+        ['RunAll()', '!include "Settings/child.MyDc"!', ''].join('\r\n'),
+        'utf8'
+    );
+    fs.writeFileSync(
+        path.join(settingsRoot, 'child.MyDc'),
+        [
+            'VolumeSelect',
+            '!include "common.MyDs"!',
+            '!include "notes.txt"!',
+            '!include "extra.fragment"!',
+            'VolumeActions',
+            ''
+        ].join('\r\n'),
+        'utf8'
+    );
+    fs.writeFileSync(path.join(fixtureRoot, 'common.MyDs'), 'CommonSettings\r\n', 'utf8');
+    fs.writeFileSync(path.join(fixtureRoot, 'notes.txt'), 'TextSettings\r\n', 'utf8');
+    fs.writeFileSync(path.join(fixtureRoot, 'extra.fragment'), 'CustomSettings\r\n', 'utf8');
+    return { fixtureRoot, entryFile };
+}
+
 function runPreview(entryFile, modeId) {
     return spawnSync(
         process.execPath,
@@ -107,6 +135,27 @@ test('annotation variants independently control line numbers and file headers', 
     assert.doesNotMatch(numbers.stdout, /FILE \[depth:0\]/);
     assert.match(all.stdout, /<outLine>/);
     assert.match(all.stdout, /FILE \[depth:0\]/);
+});
+
+test('nested includes retain the launched entry root in raw and annotated previews', t => {
+    const { fixtureRoot, entryFile } = createNestedRootFixture();
+    t.after(() => fs.rmSync(fixtureRoot, { recursive: true, force: true }));
+
+    const raw = runPreview(entryFile, 'raw');
+    const annotated = runPreview(entryFile, 'annotations-line-numbers-file-headers');
+
+    for (const result of [raw, annotated]) {
+        assert.equal(result.status, 0, result.stderr);
+        assert.match(result.stdout, /CommonSettings/);
+        assert.match(result.stdout, /TextSettings/);
+        assert.match(result.stdout, /CustomSettings/);
+        assert.doesNotMatch(result.stdout, /Missing include|Settings[\\/]Settings/);
+    }
+    assert.doesNotMatch(raw.stdout, /!include|BEGIN|>>>/);
+    assert.match(annotated.stdout, /BEGIN \[depth:2\]/);
+    assert.match(annotated.stdout, /common\.MyDs/);
+    assert.match(annotated.stdout, /notes\.txt/);
+    assert.match(annotated.stdout, /extra\.fragment/);
 });
 
 test('raw previews are selected for language-server validation', () => {

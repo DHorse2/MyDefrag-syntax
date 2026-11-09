@@ -1,64 +1,84 @@
-###############################################################################
-# Development
-###############################################################################
-
-.vscode/**
-.AI/**
-.cline/**
-.codex/**
-.ollama/**
-.user/**
-build/scripts/Inventory-*.cjs
-runs/**
-
-###############################################################################
-# Build artifacts
-###############################################################################
-
-artifacts/**
-dist/**
-out/**
-coverage/**
+.agents
+.AI
+.cline
+.clinerules
+.codex
+.dependency-backup
+.git
+.github
+.obsidian
+.ollama
+.user
+.vscode
+.vs
+.idea
+artifacts
+data
+runs
+Status
+doc
+lib
+coverage
+dist
+out
+tmp
+temp
+build/mdl-locale-app
+build/scripts
+build/shared
+build/language/keyword-maps
+build/language/reports
+build/language/translation
+build/language/variable-maps
+build/language/*.md
+build/language/*.zip
+docs/**
+!docs/MyDefrag Help/
+!docs/MyDefrag Help/**
+scripts
+.turbo
+.parcel-cache
+.yalc
+*.bat
+*.cmd
+*.bak
+*.tmp
+*.zip
 *.vsix
-
-###############################################################################
-# Dependencies
-###############################################################################
-
-
-###############################################################################
-# Source control
-###############################################################################
-
-.git/**
-.github/**
+*.lnk
+temp.txt
+*.temp
+*.orig
+*.code-workspace
+*.log
+package-lock.json
+package(1).json
+yarn.lock
+*.map
+*.tsbuildinfo
+**/*.test.js
 .gitignore
 .gitattributes
-
-###############################################################################
-# Temporary / Backup
-###############################################################################
-
-Backup/**
-Archive/**
-Download/**
-GithubIo/**
-*.tmp
-*.temp
-*.bak
-*.orig
+.markdownlint.json
+Backup
+Archive
+Download
+GithubIo
 tree.data
-
-###############################################################################
-# Editor files
-###############################################################################
-
-*.code-workspace
 Thumbs.db
 Desktop.ini
-
-###############################################################################
-# Logs
-###############################################################################
-
-*.log
+cd
+Code Prompts, current functions list - 2026 Aug 12.txt
+debugger_analysis.md
+Debugging Windows Service Procedure.md
+dircmd.md
+directories list.md
+File Tree - MyDefrag-syntax.md
+findstr.txt
+MyDefrag-Command-Cheatsheet.html
+MyDefrag-Multilingual-Feature-Project.md
+MyDefrag-Multilingual-Feature-ProjectVs0.0.md
+MyDefrag-syntax ToDo.md
+pace directories*
+Tag-Library.md
+ToDo.txt

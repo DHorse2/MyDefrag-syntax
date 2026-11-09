@@ -32,7 +32,7 @@ assert.strictEqual(
         depth: 2,
         path: 'file:///D:/Example/MyScript.MyD'
     }).text,
-    'BEGIN [depth 2] file:///D:/Example/MyScript.MyD'
+    '开始 [嵌套级别 2] file:///D:/Example/MyScript.MyD'
 );
 
 const missing = catalog.format('preview.annotation.includeBegin.text', {

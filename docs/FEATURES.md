@@ -55,10 +55,14 @@ the MyDefrag program.
 ## Current Boundaries
 
 - The extension does not install, configure, or execute MyDefrag itself.
-- LSP hover and list-completion handlers currently return no content. Snippets
-  and the client-side inline completion provider supply completion assistance.
+- LSP hover is implemented from the converted MyDefrag Help corpus and can be
+  enabled or disabled from the editor. LSP list completion remains an empty
+  stub; snippets and the client-side inline completion provider supply
+  completion assistance.
 - Preview is an editor document; it does not replace the source or write a
   merged script unless the standalone preprocessor is run with its write
   option.
 - Converted MyDefrag Help is reference material and may describe behavior of
-  the original MyDefrag application rather than the extension.
+  the original MyDefrag application rather than the extension. Conversion does
+  not imply independent review; all 142 topics remain pending in the
+  [Help review index](MyDefrag%20Help/REVIEW-INDEX.md).

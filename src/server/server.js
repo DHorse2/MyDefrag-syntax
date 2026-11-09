@@ -188,11 +188,6 @@ connection.onInitialize(async (params) => {
     try { // ---- Initialization ----
         //                    OR THIS:
         try { // Ini Init Config
-            // Language
-            uiLocale =
-                params.initializationOptions?.locale ||
-                params.locale ||
-                'en';
             // Workspace folders
             // console?.log(JSON.stringify(params.capabilities, null, 2));
             try {

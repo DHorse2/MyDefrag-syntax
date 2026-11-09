@@ -125,7 +125,7 @@ function ensureLineOpen(state) {
 // ─────────────────────────────────────────────────────────────────────────────────
 // Core processor
 // ─────────────────────────────────────────────────────────────────────────────────
-function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, state, parentFilePath = null, parentSrcLineNo = 0, parentSrcColNo = 1) {
+function processFile(filePath, entryRoot, stack, linkVisited, linkVisitedMissing, depth, state, parentFilePath = null, parentSrcLineNo = 0, parentSrcColNo = 1) {
   // const SCRIPT_DIR = __dirname;
   // const PARENT_DIR = path.dirname(SCRIPT_DIR);
   // const INI_PATH = path.join(PARENT_DIR, "mydefrag-syntax.ini");
@@ -148,6 +148,7 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
   logger.dbg(0, `----`);
   logger.dbg(0, `  --- processFile called: depth=${depth} state.line=${state.line} state.open=${state.open} ---`);
   logger.dbg(0, `    filePath="${filePath}"`);
+  logger.dbg(0, `    entryRoot="${entryRoot}"`);
   logger.dbg(4, `    stack=[${stack.join(", ")}]`);
 
   // ── Circular include guard ────────────────────────────────────────────────
@@ -164,11 +165,6 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
   const parentUri = pathToFileURL(parentFile).href;
   const missingUri = pathToFileURL(filePath).href;
   const parentUriWithLine = `${parentUri}:${parentSrcLineNo}:${parentSrcColNo}`;
-  let match = ["", ""];
-  const includeDir = path.dirname(filePath);
-  const includePath = match[1]
-  const includePathResolved = path.resolve(includeDir, includePath);
-  const includePathResolvedUri = pathToFileURL(includePathResolved).href;
 
   logger.dbg(5, "parentFilePath =", parentFilePath);
   logger.dbg(5, "filePath =", filePath);
@@ -272,15 +268,15 @@ function processFile(filePath, stack, linkVisited, linkVisitedMissing, depth, st
       // state.open = contributesPhysicalLine;
 
       const includePath = match[1];
-      const includePathResolved = path.resolve(includeDir, includePath);
+      const includePathResolved = path.resolve(entryRoot, includePath);
       const includePathResolvedUri = pathToFileURL(includePathResolved).href;
 
-      logger.dbg(8, `         includeDir="${includeDir}"`);
+      logger.dbg(8, `         entryRoot="${entryRoot}"`);
       logger.dbg(5, `         includePathResolved="${includePathResolved}"`);
       logger.dbg(5, `         recursing into child depth=${depth + 1}, hasFileNewLine=${hasFinalNewline}`);
 
       // RECURSE Process child file
-      const child = processFile(includePathResolved, [...stack, filePath], linkVisited, linkVisitedMissing, depth + 1, state, filePath, srcLineNo, srcColNo);
+      const child = processFile(includePathResolved, entryRoot, [...stack, filePath], linkVisited, linkVisitedMissing, depth + 1, state, filePath, srcLineNo, srcColNo);
       logger.dbg(8, `         child returned: outStart=${child.outStart}, outEnd=${child.outEnd}, child.srcTotal=${child.srcTotal}, child.hasFinalNewline=${child.hasFinalNewline}`);
 
       // BEGIN annotation — inserted before child lines
@@ -493,7 +489,8 @@ function main() {
   // ──────────────────────────────────────────────────────────────────────────
   // ── Process File ──────────────────────────────────────────────────────────
   logger.dbg(0, `calling processFile on entry...`);
-  const root = processFile(entryFile, [], linkVisited, linkVisitedMissing, 0, state, entryFile, 0, 1);
+  const entryRoot = path.dirname(entryFile);
+  const root = processFile(entryFile, entryRoot, [], linkVisited, linkVisitedMissing, 0, state, entryFile, 0, 1);
 
   if (previewMode.executable && previewProblems.length > 0) {
     for (const problem of previewProblems) {

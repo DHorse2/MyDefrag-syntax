@@ -18,6 +18,31 @@ test('extension manifest has a loadable CommonJS entry point', () => {
     assert.match(manifest.engines.vscode, /^\^1\./);
 });
 
+test('VSIX packaging keeps runtime assets and excludes local build evidence', () => {
+    const ignorePatterns = new Set(fs.readFileSync(
+        path.join(projectRoot, '.vscodeignore'),
+        'utf8'
+    ).split(/\r?\n/u).filter(Boolean));
+
+    assert.equal(ignorePatterns.has('artifacts'), true);
+    assert.equal(ignorePatterns.has('.AI'), true);
+    assert.equal(ignorePatterns.has('**/*.test.js'), true);
+    assert.equal(ignorePatterns.has('build/mdl-locale-app'), true);
+    assert.equal(ignorePatterns.has('build/language/reports'), true);
+    assert.equal(ignorePatterns.has('!docs/MyDefrag Help/**'), true);
+    assert.equal(ignorePatterns.has('node_modules'), false);
+
+    for (const runtimePath of [
+        'build/language/catalogs/en/extension.json',
+        'docs/MyDefrag Help/language/Scripts/Macros.md',
+        'node_modules/vscode-languageclient/node.js',
+        'snippets/mydfrg.code-snippets',
+        'syntaxes/mydfrg.tmLanguage.json'
+    ]) {
+        assert.equal(fs.existsSync(path.join(projectRoot, runtimePath)), true, runtimePath);
+    }
+});
+
 test('manifest registers MyDefrag language identifiers and extensions', () => {
     const language = manifest.contributes.languages.find(item => item.id === 'mydfrg');
 

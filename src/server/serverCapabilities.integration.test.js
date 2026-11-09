@@ -70,6 +70,12 @@ test('language server does not advertise client-side definition or reference pro
     await connection.sendRequest('shutdown');
     connection.sendNotification('exit');
     await serverExit;
+
+    assert.doesNotMatch(
+        stderr,
+        /server\.js:onInitialize: Error returned from initialization/,
+        stderr
+    );
 });
 
 test('language server validates executable raw preview documents', async (t) => {
@@ -108,19 +114,6 @@ test('language server validates executable raw preview documents', async (t) => 
                 mydfrgExcludes: [],
                 fileExcludes: {},
                 searchExcludes: {}
-            },
-            config: {
-                source: 'Raw preview validation integration test',
-                iniData: {},
-                isDebugOn: false,
-                verboseLevel: 0,
-                isLogOn: false,
-                referenceRelativePathLevel: 2,
-                referenceContainsMacrosLevel: 3,
-                referenceFileFoundLevel: 3,
-                referenceFileNotFoundLevel: 1,
-                fragmentParentLevel: 4,
-                iniErrors: []
             }
         }
     });

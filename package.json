@@ -2,7 +2,7 @@
     "name": "mydefrag-syntax",
     "displayName": "MyDefrag Script (.MyDc / .MyD)",
     "description": "Syntax highlighting for MyDefrag scripting language",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "publisher": "macrodm",
     "repository": {
         "type": "git",
@@ -583,6 +583,7 @@
         "test:tokenizer": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Tokenizer",
         "test:language-data": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite LanguageData",
         "test:completion": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Completion",
+        "test:editor-intelligence": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite EditorIntelligence",
         "test:shared": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Shared",
         "test:utilities": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Utilities",
         "test:diagnostics": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/Test-MyDefragSyntax.ps1 -Suite Diagnostics",

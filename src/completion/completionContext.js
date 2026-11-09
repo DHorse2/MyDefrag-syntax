@@ -121,14 +121,14 @@ function getParentHint(contextLines) {
 }
 
 /**
- * Builds a bounded, line-oriented completion context for inline completions.
+ * Builds a bounded completion context from document lines.
  *
- * @param {object} document VS Code text document.
- * @param {object} position VS Code position.
+ * @param {string[]} lines Complete document lines.
+ * @param {{ line: number, character: number }} position Cursor position.
  * @returns {object} Lightweight completion context.
  */
-function getCompletionContext(document, position) {
-    const lineText = document.lineAt(position.line).text;
+function getCompletionContextFromLines(lines, position) {
+    const lineText = lines[position.line] ?? '';
     const linePrefix = lineText.slice(0, position.character);
     const { typed, wordStartCharacter } = getTypedFragment(linePrefix);
     const precedingText = linePrefix.slice(0, wordStartCharacter);
@@ -137,7 +137,7 @@ function getCompletionContext(document, position) {
     const contextLines = [];
 
     for (let line = startLine; line < position.line; line++) {
-        contextLines.push(document.lineAt(line).text);
+        contextLines.push(lines[line] ?? '');
     }
     contextLines.push(linePrefix);
 
@@ -165,6 +165,39 @@ function getCompletionContext(document, position) {
     };
 }
 
+/**
+ * Builds completion context from plain text for language-server requests.
+ *
+ * @param {string} text Complete document text.
+ * @param {{ line: number, character: number }} position LSP position.
+ * @returns {object} Lightweight completion context.
+ */
+function getCompletionContextFromText(text, position) {
+    return getCompletionContextFromLines(String(text ?? '').split(/\r?\n/), position);
+}
+
+/**
+ * Builds a bounded, line-oriented completion context for inline completions.
+ *
+ * @param {object} document VS Code text document.
+ * @param {object} position VS Code position.
+ * @returns {object} Lightweight completion context.
+ */
+function getCompletionContext(document, position) {
+    if (typeof document?.lineAt === 'function') {
+        const lines = [];
+        const startLine = Math.max(0, position.line - MAX_CONTEXT_LINES);
+        for (let line = startLine; line <= position.line; line++) {
+            lines[line] = document.lineAt(line).text;
+        }
+        return getCompletionContextFromLines(lines, position);
+    }
+
+    return getCompletionContextFromText(document?.getText?.() ?? '', position);
+}
+
 module.exports = {
-    getCompletionContext
+    getCompletionContext,
+    getCompletionContextFromLines,
+    getCompletionContextFromText
 };

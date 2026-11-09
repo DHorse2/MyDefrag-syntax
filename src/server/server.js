@@ -6,6 +6,7 @@ console?.error('SERVER: entered server.js');
 // debugger;
 const {
     createConnection,
+    CodeActionKind,
     TextDocuments,
     DiagnosticSeverity,
     ProposedFeatures,
@@ -24,6 +25,7 @@ console?.error('SERVER: modules loaded');
 const { tokenize, configureTokenizer } = require('./tokenizer');
 const { Parser, parseStates, configureParser } = require('./parser');
 const { provideHelpHover } = require('./hoverProvider');
+const languageData = require('./languageData');
 const {
     KEYWORDS,
     KEYWORDS_MAP,
@@ -38,7 +40,15 @@ const {
 
     PREDEFINED_IDENT,
     isPredefinedIdentifier,
-} = require('./languageData');
+} = languageData;
+const { provideServerCompletions } = require('./completionProvider');
+const {
+    FIX_ALL_KIND,
+    analyzeSourceLanguageDirective,
+    provideSourceLanguageCodeActions
+} = require('./sourceLanguageDirective');
+const sourceLocaleRegistry = require('../../language/locales/locales.json');
+const SUPPORTED_SOURCE_LOCALES = sourceLocaleRegistry.locales || [];
 const channelName = 'MyDefrag Issues';
 const isServer = true;
 var Options;
@@ -281,8 +291,11 @@ connection.onInitialize(async (params) => {
     return {
         capabilities: {
             textDocumentSync: TextDocumentSyncKind.Incremental,
-            completionProvider: { resolveProvider: true },
+            completionProvider: { resolveProvider: false },
             hoverProvider: true,
+            codeActionProvider: {
+                codeActionKinds: [CodeActionKind.QuickFix, FIX_ALL_KIND]
+            },
         }
     };
 });
@@ -879,6 +892,7 @@ async function validateDocument(document, options = {}) {
     let t = null;
     let documentVersion;
     const diagnostics = [];
+    const text = document.getText();
     try { // ── Validate Document ─────────────────────────────────────────────────────────
         const filePath = getFilePathFromUri(document.uri);
         currFilePath = filePath;
@@ -889,7 +903,6 @@ async function validateDocument(document, options = {}) {
         const ext = path.extname(filePath).toLowerCase();
         const isMyDefragDocument = document.languageId === 'mydfrg';
         documentVersion = document.version;
-        const text = document.getText();
         logger.dbg(5, `validateDocument: `);
         logger.dbg(5, `validateDocument: MYDC SERVER ACTIVATED`);
         logger.dbg(3, `validateDocument: for ${filePath}`);
@@ -1052,7 +1065,9 @@ async function validateDocument(document, options = {}) {
             message: errResult.message,
             source: 'MyDefrag',
         });
-    }    //ParserState Send Notification to extension.js
+    }
+    diagnostics.push(...analyzeSourceLanguageDirective(text, SUPPORTED_SOURCE_LOCALES));
+    //ParserState Send Notification to extension.js
     currentDiagnosticsByUri.set(document.uri, diagnostics);
     if (options.writeSnapshot !== false) {
         writeDiagnosticsSnapshot('validate', document.uri, parserState);
@@ -1160,13 +1175,29 @@ async function scanAllFiles(folderUri, options = {}) {
 // MyDefrag pre-defined variables.
 //#region connection Management. .Parse 
 //  On Completion and Hover ──────────────────────────────────────────────────────
-// Completion remains a stub; hover is backed by the converted Help corpus.
+// Standard completions share the client inline-completion language data. Hover
+// is backed by the converted Help corpus.
 // ─────────────────────────────────────────────────────────────────────────────────
 
-connection.onCompletion(() => { // ToDo onCompletion
+connection.onCompletion((params) => {
     const tMessage = catalog.format("server.log.logger.dbg.serverJsOncompletionMydefragServerConnection.structural").text;
     logger.dbg(6, tMessage);
-    return [];
+    const document = documents.get(params.textDocument.uri);
+    return provideServerCompletions(document, params.position, languageData);
+});
+connection.onCodeAction((params) => {
+    const document = documents.get(params.textDocument.uri);
+    if (!document) {
+        return [];
+    }
+
+    return provideSourceLanguageCodeActions({
+        uri: document.uri,
+        text: document.getText(),
+        contextDiagnostics: params.context?.diagnostics || [],
+        supportedLocales: SUPPORTED_SOURCE_LOCALES,
+        only: params.context?.only
+    });
 });
 connection.onHover((params) => {
     const tMessage = catalog.format("server.log.logger.dbg.serverJsOnhoverMydefragServerConnection.structural").text;

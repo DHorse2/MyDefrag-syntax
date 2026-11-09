@@ -13,11 +13,12 @@ test runner for JavaScript assertions.
 | `npm test` | Fast developer gate |
 | `npm run test:all` | Syntax, extension functions, language tooling, both apps, and coverage |
 | `npm run test:extension` | All function-oriented extension and language-server module tests |
-| `npm run test:server` | Language data, parser, and tokenizer |
+| `npm run test:server` | Language data, parser, tokenizer, and editor intelligence |
 | `npm run test:parser` | Parser only |
 | `npm run test:tokenizer` | Tokenizer only |
 | `npm run test:language-data` | Language keyword data only |
 | `npm run test:completion` | Completion context, selection, templates, and provider |
+| `npm run test:editor-intelligence` | Server completion, source-language actions, and live LSP ownership |
 | `npm run test:diagnostics` | Diagnostic state, navigation, tree, and keyword lookup |
 | `npm run test:manifest` | Extension manifest, language, grammar, command, menu, and setting references |
 | `npm run test:apps` | Language Maintenance and Locale Maintenance apps |

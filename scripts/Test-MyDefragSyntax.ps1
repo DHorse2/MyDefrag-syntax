@@ -10,6 +10,7 @@ param(
         'Tokenizer',
         'LanguageData',
         'Completion',
+        'EditorIntelligence',
         'Shared',
         'Utilities',
         'Diagnostics',
@@ -578,6 +579,17 @@ $completionTests = @(
     Get-ChildItem -LiteralPath (Join-Path $projectRoot 'src\completion') -File -Filter '*.test.js' |
         Sort-Object FullName
 )
+$editorIntelligenceTests = @(
+    $serverTests |
+        Where-Object {
+            $_.Name -in @(
+                'completionProvider.test.js',
+                'sourceLanguageDirective.test.js',
+                'serverEditorIntelligence.integration.test.js'
+            )
+        } |
+        Sort-Object FullName
+)
 $sharedTests = @(
     Get-ChildItem -LiteralPath (Join-Path $projectRoot 'src\shared') -File -Filter '*.test.js' |
         Sort-Object FullName
@@ -686,6 +698,16 @@ $checks = [ordered]@{
         ReportDomain = 'Extension'
         Description = 'Run completion context, selection, template, and provider function tests.'
         Action = { Invoke-NodeTestFiles -Check 'CompletionUnit' -Files $script:completionTests }
+    }
+    EditorIntelligence = @{
+        Group = 'EditorIntelligence'
+        ReportDomain = 'Server'
+        Description = 'Run server completion, source-language action, and live LSP integration tests.'
+        Action = {
+            Invoke-NodeTestFiles `
+                -Check 'EditorIntelligence' `
+                -Files $script:editorIntelligenceTests
+        }
     }
     SharedUnit = @{
         Group = 'Shared'
@@ -818,6 +840,7 @@ $selectedGroups = @(
                 'Parser'
                 'Tokenizer'
                 'Completion'
+                'EditorIntelligence'
                 'Shared'
                 'Utilities'
                 'Diagnostics'
@@ -833,6 +856,7 @@ $selectedGroups = @(
                 'Parser'
                 'Tokenizer'
                 'Completion'
+                'EditorIntelligence'
                 'Shared'
                 'Utilities'
                 'Diagnostics'
@@ -846,12 +870,14 @@ $selectedGroups = @(
                 'LanguageData'
                 'Parser'
                 'Tokenizer'
+                'EditorIntelligence'
             }
             { $_ -in @('Core', 'Extension') } {
                 'LanguageData'
                 'Parser'
                 'Tokenizer'
                 'Completion'
+                'EditorIntelligence'
                 'Shared'
                 'Utilities'
                 'Diagnostics'

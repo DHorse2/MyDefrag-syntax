@@ -226,7 +226,7 @@
       "component": "translator",
       "category": "directive",
       "role": "syntax",
-      "text": "; @mydfrg-language {locale}",
+      "text": "// @mydfrg-language {locale}",
       "placeholders": [
         "locale"
       ],

@@ -12,6 +12,8 @@ the MyDefrag program.
   actions, settings, values, and functions.
 - Context-aware inline completion based on the extension's canonical language
   data.
+- Context-aware standard completion from the language server, with typed-case
+  preservation, parameter templates, and block-aware ordering.
 
 ## Navigation
 
@@ -31,6 +33,9 @@ the MyDefrag program.
   scanning.
 - Link diagnostics have configurable severity for missing targets, targets
   found through parent folders, execution-time macros, and successful links.
+- Source-language directives are validated against the registered locales.
+  Quick fixes can add or correct a directive, remove duplicates, or safely fix
+  all directive issues in the current document.
 
 ## Preview
 
@@ -56,9 +61,9 @@ the MyDefrag program.
 
 - The extension does not install, configure, or execute MyDefrag itself.
 - LSP hover is implemented from the converted MyDefrag Help corpus and can be
-  enabled or disabled from the editor. LSP list completion remains an empty
-  stub; snippets and the client-side inline completion provider supply
-  completion assistance.
+  enabled or disabled from the editor. Standard LSP completion is server-owned;
+  snippets and the client-side inline completion provider remain separate and
+  available.
 - Preview is an editor document; it does not replace the source or write a
   merged script unless the standalone preprocessor is run with its write
   option.

@@ -3,7 +3,10 @@
 const assert = require('node:assert/strict');
 const test = require('node:test');
 
-const { getCompletionContext } = require('./completionContext');
+const {
+    getCompletionContext,
+    getCompletionContextFromText
+} = require('./completionContext');
 
 function document(lines, languageId = 'mydfrg') {
     return {
@@ -78,4 +81,16 @@ test('completion context treats a preceding Sort keyword as sort context', () =>
 
     assert.equal(context.parentHint, 'sort');
     assert.deepEqual(context.allowedParents, ['sort']);
+});
+
+test('plain-text completion context supports language-server documents', () => {
+    const context = getCompletionContextFromText(
+        'VolumeSelect\r\n    Mou',
+        { line: 1, character: 7 }
+    );
+
+    assert.equal(context.typed, 'Mou');
+    assert.equal(context.wordStartCharacter, 4);
+    assert.equal(context.parentHint, 'volume_condition');
+    assert.deepEqual(context.allowedParents, ['volume_condition']);
 });

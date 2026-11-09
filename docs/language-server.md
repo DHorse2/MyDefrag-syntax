@@ -42,12 +42,17 @@ See [Settings](settings.md) for public options.
 
 ## Capabilities
 
-The server advertises incremental synchronization, completion, hover,
-definition, and references. Hover resolves contextual entries from the
-converted MyDefrag Help corpus and returns Markdown with an **Open full
-MyDefrag Help** command link. It returns `null` when hover is disabled or no
-mapped Help entry exists. Server completion remains a stub that returns an
-empty list.
+The server advertises incremental synchronization, standard completion, hover,
+and code actions. Hover resolves contextual entries from the converted
+MyDefrag Help corpus and returns Markdown with an **Open full MyDefrag Help**
+command link. It returns `null` when hover is disabled or no mapped Help entry
+exists. Standard completion returns context-first canonical keywords, preserves
+typed casing, and supplies deterministic parameter templates.
+
+Source-language diagnostics and code actions use the canonical directive
+`// @mydfrg-language <locale>`. Quick fixes are restricted to the requesting
+document. The namespaced `source.fixAll.mydfrgLanguage` action combines only
+safe directive additions, corrections, and duplicate removals.
 
 The extension host separately supplies:
 

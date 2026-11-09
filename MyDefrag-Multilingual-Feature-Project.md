@@ -401,19 +401,26 @@ Documents may declare their source language using an extension-owned directive.
 Example:
 
 ```text
-; @mydfrg-language fr-CA
+// @mydfrg-language fr-CA
 ```
 
-The directive must not conflict with MyDefrag runtime syntax.
+The canonical form uses `//`, which is a MyDefrag runtime comment. The
+extension also accepts `#`, `--`, and `REM` line-comment forms and validates the
+locale against `language/locales/locales.json`. The older semicolon example is
+invalid MyDefrag comment syntax and receives a corrective action.
 
-Future code actions should include:
+Implemented code actions include:
 
 - Add missing directive
 - Correct invalid directive
+- Remove duplicate directives
+- Apply safe document-scoped Fix All for directive issues
+
+Future code actions should include:
+
 - Normalize translated keywords
 - Convert to canonical source
 - Convert to another language
-- Apply Fix All where supported
 
 ### Translation Between Languages
 
@@ -768,6 +775,10 @@ Goals:
 
 ### Phase 5 — Code Actions and Fix All
 
+Status: Partially implemented. Source-language directive quick fixes and safe
+document-scoped Fix All are implemented; translation and workspace actions
+remain planned.
+
 Goals:
 
 - Add missing language directive
@@ -879,12 +890,12 @@ Status: In progress.
 
 ### Phase 3 Tasks — Canonical Keyword Translation
 
-Status: Planned.
+Status: Partially implemented.
 
 - [ ] Integrate generated keyword maps into a syntax-aware translation service.
 - [ ] Add locale-to-canonical source conversion.
 - [ ] Add canonical-to-locale source rendering.
-- [ ] Add source-language directive detection and validation.
+- [x] Add source-language directive detection and validation.
 - [ ] Enforce unambiguous keyword mapping during conversion.
 - [ ] Preserve strings, comments, paths, includes, and formatting.
 
@@ -901,12 +912,13 @@ Status: Partially implemented.
 
 ### Phase 5 Tasks — Code Actions and Fix All
 
-Status: Planned.
+Status: Partially implemented.
 
-- [ ] Add actions for missing or invalid source-language directives.
+- [x] Add actions for missing or invalid source-language directives.
 - [ ] Add localized-keyword normalization actions.
 - [ ] Add file conversion to canonical or selected-language source.
-- [ ] Add safe workspace-level and Fix All operations.
+- [x] Add safe document-scoped Fix All for source-language directives.
+- [ ] Add safe workspace-level operations.
 
 ### Phase 6 Tasks — Variable Translation and Symbol Harvesting
 

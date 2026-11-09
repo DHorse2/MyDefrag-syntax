@@ -32,14 +32,14 @@
 
 | Field | Value |
 | --- | --- |
-| Document version | 1.2.0 |
+| Document version | 1.3.0 |
 | Status | Current working implementation plan |
 | Baseline date | 2026-11-08 |
 | Project | MyDefrag Syntax |
 | Project root | `D:\Script\MyDefrag-syntax` |
-| Current source version | 0.5.0 |
-| Installed VSCodium extension | `macrodm.mydefrag-syntax@0.5.0` |
-| Version authority | 0.5.0 is repository fact; later assignments are proposals |
+| Current source version | 0.6.0 |
+| Installed VSCodium extension | `macrodm.mydefrag-syntax@0.6.0` |
+| Version authority | 0.6.0 is repository fact; later assignments remain proposals |
 | Supersedes | No prior consolidated implementation plan |
 
 The stable filename is intentional. Future revisions should update the document
@@ -75,12 +75,15 @@ execution.
 | Area | Verified status | Consequence |
 | --- | --- | --- |
 | Task queue | Idle; zero queued tasks | This plan is an ad hoc authorized document, not a consumed queue task |
-| Git branch | `main` at `8ebf3b77`; zero commits ahead or behind `origin/main` | The multilingual checkpoint commit is synchronized |
-| Working tree | Clean immediately after `8ebf3b77`; the current diff is the scoped 0.5.0 stabilization implementation | The prior broad worktree has been checkpointed |
+| Git branch | `main` at `b0c970bc`; one commit ahead of `origin/main` | The local 0.5.0 release commit has not been pushed |
+| Working tree | The current diff is the scoped 0.6.0 editor-intelligence implementation | The 0.5.0 baseline is recoverable in `b0c970bc` |
 | Prior broad diff | The former 426-entry working tree is contained in `8ebf3b77` | New work no longer overlaps an uncommitted repository-wide diff |
-| Product version | `package.json` declares 0.5.0 | 0.5.0 is the active stabilization target |
-| Installed extension | VSCodium has 0.5.0 installed from the exact inspected VSIX | Baseline packaged-host activation and language-server smoke passed |
+| Product version | `package.json` declares 0.6.0 | 0.6.0 is the active editor-intelligence target |
+| Installed extension | VSCodium has 0.6.0 installed from the exact inspected VSIX | Isolated packaged-host activation and language-server smoke passed with zero targeted runtime errors |
 | Focused extension tests | 17 of 17 passed | Preview, manifest, server, and URI checks passed in the focused lane |
+| Editor-intelligence tests | 10 of 10 passed | Completion, directive actions, stale-edit rejection, and live LSP ownership pass the dedicated harness lane |
+| Complete 0.6.0 source gate | 339 of 339 named tests passed across 149 executions | All 16 syntax, function, language, app, and coverage checks passed |
+| Node coverage | 76.82% lines, 60.58% branches, 67.86% functions | The new completion and directive modules have 93.10-100% line coverage and 100% function coverage |
 | Locale Maintenance tests | 67 of 67 passed | Runtime-syntax protection is repaired |
 | JavaScript syntax checks | 11 of 11 passed | The checked changed entry points are syntactically valid |
 | Language validation | Passed with zero errors and one warning | Normalized-input cleanup remains open |
@@ -89,7 +92,8 @@ execution.
 | Generated localization | 12,098 machine-generated and 1,649 fallback entries | Human review and fallback reduction remain material work |
 | Normalized-input audit | 191 occurrences in 32 files | The audit remains partial; the corrected runtime-token boundary exposes one additional `data` occurrence |
 | Help review | 142 converted topics are marked pending | Conversion exists, but independent review is unfinished |
-| Packaged artifact | Fresh 0.5.0 VSIX at `artifacts\mydefrag-syntax-Release.vsix` | 2,509,402 bytes; SHA-256 `715665186F261F395A94275413224665989B810828C3AC721591CF9ADB820853` |
+| Historical 0.5.0 package qualification | The generic artifact path held 0.5.0 at qualification time and now holds 0.6.0 | 0.5.0 was 2,509,402 bytes with SHA-256 `715665186F261F395A94275413224665989B810828C3AC721591CF9ADB820853` |
+| 0.6.0 packaged artifact | `artifacts\mydefrag-syntax-0.6.0-Release.vsix` | 2,513,966 bytes; 1,521 files; SHA-256 `763D7CFF4C196601BDA2AE33B4987FB6115E7756A78102AD06BBB9BB375C7BCD` |
 
 ## Product And Repository Boundaries
 
@@ -120,9 +124,9 @@ than fixed through duplicated code here.
 
 ## Version Strategy
 
-Only version 0.5.0 is currently declared by the repository. The remaining
-version targets are proposed sequencing boundaries and may be split or combined
-after review.
+Version 0.6.0 is currently declared by the repository. Later version targets
+remain proposed sequencing boundaries and may be split or combined after
+review.
 
 | Proposed target | Theme | Entry condition | Exit condition |
 | --- | --- | --- | --- |
@@ -391,7 +395,8 @@ Qualification evidence captured on 2026-11-08:
 
 ## Version 0.6.0 - Editor Intelligence
 
-Status: Proposed.
+Status: Implemented and source/package/installed-host qualified. VSCodium has
+the exact inspected 0.6.0 VSIX installed.
 
 Objectives:
 
@@ -412,6 +417,50 @@ Acceptance criteria:
   document or workspace scope.
 - Fix All is offered only for operations proven safe when combined.
 
+Implementation contract:
+
+- The server owns standard LSP completion and returns context-first keyword
+  edits from the same canonical language data used by editor assistance.
+- The extension host retains inline ghost-text prediction, and snippets remain
+  available independently.
+- The canonical source-language directive is
+  `// @mydfrg-language <locale>`. The `//`, `#`, `--`, and `REM` line-comment
+  forms are accepted because MyDefrag treats them as comments. The older
+  semicolon example is diagnosed and corrected because semicolon is not a
+  MyDefrag comment delimiter.
+- Locale identifiers are checked against `language/locales/locales.json`,
+  including canonical case.
+- Missing directives produce a hint. Invalid syntax, unknown or incorrectly
+  cased locales, and duplicate directives produce warnings.
+- Quick fixes edit only the requesting document. The namespaced
+  `source.fixAll.mydfrgLanguage` action recomputes current document state and
+  combines only deterministic directive corrections.
+
+Implementation evidence:
+
+- `npm run test:editor-intelligence`: 10 of 10 named tests passed.
+- The live JSON-RPC integration test verifies advertised completion and code
+  action capabilities, a `Mounted(yes)` completion edit, the missing-directive
+  diagnostic, and the URI-scoped quick fix.
+- Reapplying a missing-directive fix produces a document with no remaining
+  directive diagnostic; Fix All is also covered for invalid-plus-duplicate
+  input.
+- `npm run test:all`: all 339 named tests passed across 149 executions and all
+  16 selected checks.
+- `npm run pack:vsix`: built a 2,513,966-byte package containing 1,521 files.
+  Both embedded manifests declare 0.6.0; the required completion and directive
+  modules are present; test files and `package-lock.json` are absent.
+- The exact versioned artifact SHA-256 is
+  `763D7CFF4C196601BDA2AE33B4987FB6115E7756A78102AD06BBB9BB375C7BCD`.
+- Forced installation completed and `codium --list-extensions --show-versions`
+  reports `macrodm.mydefrag-syntax@0.6.0`.
+- A fresh isolated profile and extension store activated the packaged extension
+  on `onLanguage:mydfrg`, initialized the packaged language server, and produced
+  zero targeted runtime errors. Evidence is retained under
+  `artifacts\vscodium-smoke-0.6.0\run-20261108-1824\profile\logs`.
+- All eight VSCodium processes started for the packaged-host smoke were closed;
+  no VSCodium process remained afterward.
+
 ## Version 0.7.0 - Canonical Language Translation
 
 Status: Proposed from the existing multilingual roadmap.
@@ -421,8 +470,8 @@ Objectives:
 - Integrate generated keyword maps into a syntax-aware translation service.
 - Convert localized source to canonical MyDefrag source.
 - Render canonical source into a selected supported locale.
-- Detect and validate `; @mydfrg-language <locale>` or the final approved
-  directive syntax.
+- Consume the approved `// @mydfrg-language <locale>` directive in the
+  translation service.
 - Preserve strings, comments, paths, macros, formatting, include relationships,
   and source mappings.
 - Reject ambiguous or colliding keyword translations.

@@ -114,5 +114,7 @@ function buildInlineCompletion({ typed, contextInfo, keywords }) {
 }
 
 module.exports = {
-    buildInlineCompletion
+    applyTypedCasing,
+    buildInlineCompletion,
+    isInlineKeyword
 };

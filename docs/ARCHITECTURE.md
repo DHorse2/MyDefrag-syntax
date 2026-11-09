@@ -10,13 +10,13 @@ separate Node language-server process and a client-side preview processor.
 | Component | Primary files | Responsibility |
 | --- | --- | --- |
 | Extension host | `src/extension.js` | Activation, settings, links, variable navigation, inline completion, preview registration, status items, and language-client startup. |
-| Language server | `src/server/server.js` | Document synchronization, workspace refresh, parsing, diagnostics, snapshots, and server notifications. |
+| Language server | `src/server/server.js` | Document synchronization, workspace refresh, parsing, diagnostics, standard completion, code actions, snapshots, and server notifications. |
 | Tokenizer and parser | `src/server/tokenizer.js`, `src/server/parser.js` | Convert source text into tokens and validate full-script or fragment structure. |
 | Language data | `src/server/languageData.js` | Canonical keywords, parent relationships, and metadata shared by parsing and editor assistance. |
 | Preview processor | `src/preprocess/mydefrag-preprocess.js` | Recursively expand includes and produce annotated merged output. |
 | Diagnostic navigation | `src/diagnostics/` | Load diagnostic snapshots, track review state, render the Explorer tree, and generate investigation prompts. |
 | Shared services | `src/shared/` | Resolve paths, load configuration, write logs, and load generated language catalogs. |
-| Completion modules | `src/completion/` | Build context-aware inline completion candidates. |
+| Completion modules | `src/completion/` | Build shared context and candidates for client inline and server standard completion. |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -25,12 +25,12 @@ separate Node language-server process and a client-side preview processor.
 ```text
 VSCodium or VS Code
   -> extension host
-     -> client-side links, navigation, completion, and preview
+     -> client-side links, navigation, inline completion, and preview
      -> LanguageClient over IPC
         -> language server
            -> tokenizer
            -> parser and language data
-           -> diagnostics and compact snapshot
+           -> diagnostics, standard completion, code actions, and compact snapshot
      -> Diagnostic Explorer reads the snapshot
 ```
 
